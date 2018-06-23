@@ -1,0 +1,135 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{FRSTS98}
+
+\bibitem[AB01]{AnchoucheBiswas}
+Boudjemaa Anchouche and Indranil Biswas.
+\newblock Einstein-{H}ermitian connections on polystable principal bundles over
+  a compact {K}\"ahler manifold.
+\newblock {\em Amer. J. Math.}, 123(2):207--228, 2001.
+
+\bibitem[Bot95]{Bottacin}
+Francesco Bottacin.
+\newblock Symplectic geometry on moduli spaces of stable pairs.
+\newblock {\em Ann. Sci. \'Ecole Norm. Sup. (4)}, 28(4):391--433, 1995.
+
+\bibitem[CH10]{CharbonneauHurtubise}
+Beno\^it Charbonneau and Jacques Hurtubise.
+\newblock Singular {Hermitian-Einstein} monopoles on the product of a circle
+  and a {Riemann} surface.
+\newblock {\em Int. Math. Res. Not.}, 2011(1):175--216, 2010.
+
+\bibitem[CK98]{CherkisKapustin1}
+Sergey~A Cherkis and Anton Kapustin.
+\newblock Singular monopoles and supersymmetric gauge theories in three
+  dimensions.
+\newblock {\em Nuclear Physics B}, 525(1-2):215--234, 1998.
+
+\bibitem[CK02]{CherkisKapustin3}
+Sergey Cherkis and Anton Kapustin.
+\newblock {Hyper-K\"ahler} metrics from periodic monopoles.
+\newblock {\em Physical Review D}, 65(8):084015, 2002.
+
+\bibitem[CPT{\etalchar{+}}17]{CPTVV}
+Damien Calaque, Tony Pantev, Bertrand To{\"e}n, Michel Vaqui{\'e}, and Gabriele
+  Vezzosi.
+\newblock Shifted {Poisson} structures and deformation quantization.
+\newblock {\em Journal of Topology}, 10(2):483--584, 2017.
+
+\bibitem[DP10]{DonagiPantev}
+Ron Donagi and Tony Pantev.
+\newblock Lectures on the geometric {Langlands} conjecture and non-abelian
+  {Hodge} theory.
+\newblock {\em Second International School on Geometry and Physics Geometric
+  Langlands and Gauge Theory}, page 129, 2010.
+
+\bibitem[EV98]{EtingofVarchenko}
+Pavel Etingof and Alexander Varchenko.
+\newblock Geometry and classification of solutions of the classical dynamical
+  {Y}ang-{B}axter equation.
+\newblock {\em Comm. Math. Phys.}, 192(1):77--120, 1998.
+
+\bibitem[Fos16]{FoscoloDef}
+Lorenzo Foscolo.
+\newblock Deformation theory of periodic monopoles (with singularities).
+\newblock {\em Comm. Math. Phys.}, 341(1):351--390, 2016.
+
+\bibitem[FRSTS98]{FrenkelReshetikhinSTS}
+Edward Frenkel, Nicolai Reshetikhin, and Michel Semenov-Tian-Shansky.
+\newblock {Drinfeld--Sokolov} reduction for difference operators and
+  deformations of-{$\mc W$}algebras $i$. the case of {Virasoro} algebra.
+\newblock {\em Communications in mathematical physics}, 192(3):605--629, 1998.
+
+\bibitem[Gro57]{GrothendieckSphere}
+Alexander Grothendieck.
+\newblock Sur la classification des fibr\'es holomorphes sur la sph\`ere de
+  {R}iemann.
+\newblock {\em Amer. J. Math.}, 79:121--138, 1957.
+
+\bibitem[Hen15]{Hennion}
+Benjamin Hennion.
+\newblock {\em Formal loops and tangent {Lie} algebras}.
+\newblock PhD thesis, Universit\'e de Montpellier, 2015.
+
+\bibitem[HM02]{HurtubiseMarkman}
+Jacques Hurtubise and Eyal Markman.
+\newblock Elliptic {Sklyanin} integrable systems for arbitrary reductive
+  groups.
+\newblock {\em Advances in Theoretical and Mathematical Physics},
+  6(5):873--978, 2002.
+
+\bibitem[Moc17]{Mochizuki}
+Takuro Mochizuki.
+\newblock Periodic monopoles and difference modules.
+\newblock {\em arXiv preprint arXiv:1712.08981}, 2017.
+
+\bibitem[MS16]{MelaniSafronov1}
+Valerio Melani and Pavel Safronov.
+\newblock Derived coisotropic structures.
+\newblock {\em arXiv preprint arXiv:1608.01482}, 2016.
+
+\bibitem[MS17]{MelaniSafronov2}
+Valerio Melani and Pavel Safronov.
+\newblock Derived coisotropic structures {II}: stacks and quantization.
+\newblock {\em arXiv preprint arXiv:1704.03201}, 2017.
+
+\bibitem[PR01]{PolishchukRothstein}
+Alexander Polishchuk and Mitchell Rothstein.
+\newblock Fourier transform for {$D$}-algebras, {I}.
+\newblock {\em Duke Mathematical Journal}, 109(1):123--146, 2001.
+
+\bibitem[PTVV13]{PTVV}
+Tony Pantev, Bertrand To{\"e}n, Michel Vaqui{\'e}, and Gabriele Vezzosi.
+\newblock Shifted symplectic structures.
+\newblock {\em Publications math{\'e}matiques de l'IH{\'E}S}, 117(1):271--328,
+  2013.
+
+\bibitem[Sha16]{Shapiro}
+Alexander Shapiro.
+\newblock Poisson geometry of monic matrix polynomials.
+\newblock {\em Int. Math. Res. Not.}, (17):5427--5453, 2016.
+
+\bibitem[Smi15]{Smith}
+Benjamin~H Smith.
+\newblock Singular {$G$}-monopoles on {$S^1 \times \Sigma$}.
+\newblock {\em arXiv preprint arXiv:1501.03337}, 2015.
+
+\bibitem[Spa16]{Spaide}
+Theodore Spaide.
+\newblock Shifted symplectic and {Poisson} structures on spaces of framed maps.
+\newblock {\em arXiv preprint arXiv:1607.03807}, 2016.
+
+\bibitem[STSS98]{STSSevostyanov}
+Michel Semenov-Tian-Shansky and Alexey Sevostyanov.
+\newblock {Drinfeld--Sokolov} reduction for difference operators and
+  deformations of {$\mc W$}-algebras {II}. the general semisimple case.
+\newblock {\em Communications in mathematical physics}, 192(3):631--647, 1998.
+
+\bibitem[Zhu17]{Zhu}
+Xinwen Zhu.
+\newblock An introduction to affine {G}rassmannians and the geometric {S}atake
+  equivalence.
+\newblock In {\em Geometry of moduli spaces and representation theory},
+  volume~24 of {\em IAS/Park City Math. Ser.}, pages 59--154. Amer. Math. Soc.,
+  Providence, RI, 2017.
+
+\end{thebibliography}

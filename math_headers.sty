@@ -1,0 +1,302 @@
+\usepackage[top=2.5cm, bottom=2.1cm,left=2cm,right=2cm,footnotesep=20pt]{geometry}
+\usepackage{amsmath, amsthm, amssymb}
+%\usepackage{lmodern}
+%\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage[all, cmtip]{xy}
+\usepackage[titletoc,title]{appendix}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{slashed} %For Dirac operators and gamma matrix nonsense
+\usepackage{xfrac}
+%\usepackage{feynmf}
+\usepackage{caption}
+\usepackage{subcaption}
+%\usepackage{framed}
+%\usepackage{wrapfig}
+%\usepackage{enumitem}
+%\usepackage{parskip}
+\usepackage{eucal}
+\usepackage{verbatim}
+%\usepackage[backend=bibtex,
+%           isbn=false,
+%          doi=false,
+%         maxbibnames=5,
+%        firstinits=true,
+%       style=alphabetic,
+%      citestyle=alphabetic]{biblatex}
+%\renewbibmacro{in:}{}
+\usepackage{enumerate}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing,decorations.markings}
+\usepackage[pdftex, bookmarks=true, linkbordercolor={0 0 1}]{hyperref}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\theoremstyle{definition} \newtheorem{definition}{Definition}[section]
+
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{prop}[definition]{Proposition}
+\newtheorem{conjecture}[definition]{Conjecture}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{construction}[definition]{Construction}
+\newtheorem{observation}[definition]{Observation}
+\newtheorem{assumption}[definition]{Assumption}
+\newtheorem*{nonum}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{claim}{Claim}
+\newtheorem*{subclaim}{Subclaim}
+\newtheorem*{fact}{Fact}
+\newtheorem*{problem}{Problem}
+\newtheorem*{ack}{Acknowledgements}
+
+\theoremstyle{definition} \newtheorem{remark}[definition]{Remark}
+\theoremstyle{definition} \newtheorem{remarks}[definition]{Remarks}
+\theoremstyle{definition} \newtheorem{question}[definition]{Question}
+\theoremstyle{definition} \newtheorem*{note}{Note}
+\theoremstyle{definition} \newtheorem{example}[definition]{Example}
+\theoremstyle{definition} \newtheorem{examples}[definition]{Examples}
+
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\DD}{\mathbb{D}}
+\newcommand{\GG}{\mathbb{G}}
+\newcommand{\bD}{\boldsymbol{D}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\II}{\mathcal{I}}
+
+\newcommand{\dd}{\partial}
+\newcommand{\dbar}{\overline{\partial}}
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\gg}{\mathfrak{g}}
+\newcommand{\hh}{\mathfrak{h}}
+
+\newcommand{\gl}{\mathfrak{gl}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\newcommand{\so}{\mathfrak{so}}
+\renewcommand{\sp}{\mathfrak{sp}}
+\newcommand{\su}{\mathfrak{su}}
+\newcommand{\osp}{\mathfrak{osp}}
+\newcommand{\sugra}{\mathfrak{sugra}}
+
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\spin}{\mathrm{Spin}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\pin}{\mathrm{Pin}}
+\newcommand{\Pin}{\mathrm{Pin}}
+\newcommand{\PGL}{\mathrm{PGL}}
+\newcommand{\PSL}{\mathrm{PSL}}
+\newcommand{\PSO}{\mathrm{PSO}}
+\newcommand{\PSU}{\mathrm{PSU}}
+\newcommand{\OSp}{\mathrm{OSp}}
+
+\newcommand{\A}{\, \forall \ }
+\newcommand{\E}{\, \exists \ }
+\newcommand{\UE}{\, \exists! \ }
+\newcommand{\bs}{\ \backslash \ }
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\from}{\leftarrow}
+\newcommand{\divides}{\ \big| \ }
+\newcommand{\ndivides}{\not\big| \ }
+\newcommand{\iso}{\cong}
+\newcommand{\niso}{\ncong}
+\newcommand{\sub}{\subseteq}
+\newcommand{\surj}{\twoheadrightarrow}
+\newcommand{\inj}{\hookrightarrow}
+\newcommand{\dirlim}{\varinjlim}
+\newcommand{\invlim}{\varprojlim}
+\newcommand{\ad}{/ \!_{\mathrm{ad}} \,}
+
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\bo}[1]{\boldsymbol{#1}}
+\newcommand{\mr}[1]{\mathrm{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\mf}[1]{\mathfrak{#1}}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\ul}[1]{\underline{#1}}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\sd}[1]{\slashed{#1}}
+\newcommand{\pmat}[1]{\begin{pmatrix}#1\end{pmatrix}}
+
+\newcommand{\lmod}[1]{{}_{#1} \!\!\!\! \mod}
+\newcommand{\ppsi}{{}^p\psi}
+\newcommand{\pphi}{{}^p\phi}
+\newcommand{\pdl}{{}^pD_c^{\le 0}} %Perverse t structure
+\newcommand{\pdr}{{}^pD_c^{\ge 0}}
+\newcommand{\ptl}{{}^p\tau^{\le 0}}
+\newcommand{\ptr}{{}^p\tau^{\ge 0}}
+
+\newcommand{\Hom}{\mathcal{H}om}
+\renewcommand{\hom}{\operatorname{Hom}}
+\newcommand{\Der}{\mathcal{D}er}
+\DeclareMathOperator{\der}{Der}
+\newcommand{\End}{\mathcal{E}nd}
+\DeclareMathOperator{\eend}{End}
+\DeclareMathOperator{\spec}{Spec}
+\DeclareMathOperator{\perm}{Perm}
+\DeclareMathOperator{\aut}{Aut}
+\DeclareMathOperator{\Out}{Out}
+\DeclareMathOperator{\ch}{Ch}
+\DeclareMathOperator{\tr}{Tr}
+\DeclareMathOperator{\ext}{Ext}
+\newcommand{\Ext}{\mathcal{E}xt}
+\DeclareMathOperator{\tor}{Tor}
+\DeclareMathOperator{\gal}{Gal}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\soc}{soc}
+\DeclareMathOperator{\ann}{Ann}
+\DeclareMathOperator{\mat}{Mat}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\gr}{gr}
+\DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\tot}{Tot}
+\DeclareMathOperator{\lie}{Lie}
+\DeclareMathOperator{\conn}{Conn}
+\DeclareMathOperator{\Mod}{Mod}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\loc}{Loc}
+\DeclareMathOperator{\bun}{Bun}
+\DeclareMathOperator{\higgs}{Higgs}
+\DeclareMathOperator{\perv}{Perv}
+\DeclareMathOperator{\vect}{Vect}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\res}{res} %lower case: residue.
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\stab}{Stab}
+\DeclareMathOperator{\Fl}{Fl}
+\DeclareMathOperator{\rep}{Rep}
+\DeclareMathOperator{\dens}{Dens}
+\DeclareMathOperator{\sym}{Sym}
+\DeclareMathOperator{\symc}{ \widehat{Sym}}
+\DeclareMathOperator{\fun}{Fun}
+\DeclareMathOperator{\dist}{Dist}
+\DeclareMathOperator{\pt}{pt}
+\DeclareMathOperator{\alg}{Alg}
+\DeclareMathOperator{\perf}{Perf}
+\DeclareMathOperator{\bord}{Bord}
+\DeclareMathOperator{\cob}{Cob}
+\DeclareMathOperator{\QC}{QC}
+\DeclareMathOperator{\coh}{Coh}
+\DeclareMathOperator{\indcoh}{IndCoh}
+\DeclareMathOperator{\PV}{PV}
+\DeclareMathOperator{\maps}{Maps}
+\DeclareMathOperator{\hol}{Hol}
+\DeclareMathOperator{\open}{Open}
+\DeclareMathOperator{\zar}{\mathcal{Z}ar}
+\DeclareMathOperator{\DK}{DK}
+\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\ob}{Ob}
+\DeclareMathOperator{\mor}{Mor}
+\DeclareMathOperator{\ev}{ev}
+\DeclareMathOperator{\coev}{coev}
+\DeclareMathOperator{\qcoh}{QCoh}
+\DeclareMathOperator{\crit}{Crit}
+\DeclareMathOperator{\dcrit}{dCrit}
+\DeclareMathOperator{\dvol}{dvol}
+\DeclareMathOperator{\colim}{colim}
+\DeclareMathOperator{\holim}{holim}
+\DeclareMathOperator{\hocolim}{hocolim}
+\DeclareMathOperator{\EOM}{EOM}
+\newcommand{\vac}{\mc{V} \text{ac}}
+\newcommand{\del}{\partial}
+\def\d{{\rm d}}
+\newcommand{\Obs}{\mathrm{Obs}}
+\newcommand{\IC}{\mathrm{IndCoh}}
+\renewcommand{\flat}{\mathrm{Flat}}
+\newcommand{\arth}{\mathrm{Arth}}
+\newcommand{\sing}{\mathrm{Sing}}
+\newcommand{\ISO}{\mathrm{ISO}}
+\newcommand{\umap}{\mathul{\mathrm{Map}}}
+\newcommand{\obscl}{\mathrm{Obs}^{\mathrm{cl}}}
+\newcommand{\obsq}{\mathrm{Obs}^{\mathrm{q}}}
+\newcommand{\obssm}{\mathrm{Obs}^{\mathrm{sm}}}
+\newcommand{\obssmcl}{\mathrm{Obs}^{\mathrm{sm,cl}}}
+\newcommand{\obs}{\mathrm{Obs}}
+\newcommand{\tcl}{\tau \mathrm{cl}}
+\newcommand{\Res}[2]{\text{Res}^{#1}_{#2}} %restriction functor
+\newcommand{\Ind}[2]{\text{Ind}_{#1}^{#2}} %note the order difference.  Source first, then target.
+\newcommand{\coInd}[2]{\text{coInd}_{#1}^{#2}}
+\newcommand{\HH}{\mathrm{HH}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\dr}{\mathrm{dR}}
+\newcommand{\man}{\mathrm{Man}}
+\newcommand{\col}{\mathrm{col}}
+\newcommand{\disk}{\mathrm{Disk}}
+\newcommand{\pdisk}{\mathrm{PDisk}}
+\newcommand{\dR}{\mathrm{dR}}
+
+%Categories
+\newcommand{\cat}{\mathrm{Cat}}
+\newcommand{\oocat}{\infty \mathrm{Cat}}
+\newcommand{\grp}{\mathrm{Grp}}
+\newcommand{\gpd}{\mathrm{Gpd}}
+\newcommand{\oogpd}{\infty \mathrm{Gpd}}
+\newcommand{\set}{\mathrm{Set}}
+\newcommand{\sset}{\mathrm{sSet}}
+\newcommand{\ring}{\mathrm{Ring}}
+\newcommand{\cring}{\mathrm{cRing}}
+\newcommand{\art}{\mathrm{Art}}
+\newcommand{\dga}{\mathrm{dga}}
+\newcommand{\cdga}{\mathrm{cdga}}
+\newcommand{\Top}{\mathrm{Top}}
+\newcommand{\dst}{\mathrm{dSt}}
+
+\newcommand{\todo}[1]{(\textcolor{red}{TODO: #1})}
+%\newcommand{\todo}[1]{}
+\newcommand{\chris}[1]{(\textcolor{red}{Chris: #1})}
+\newcommand{\phil}[1]{(\textcolor{blue}{Phil: #1})}
+
+
+\headheight 0.5cm
+\headsep 0.5cm
+\footskip 0.75cm
+
+\fancyhead[R]{\textsf{Section \nouppercase{\leftmark}}}
+\fancyhead[L]{\textsf{\textbf{\thepage}}}
+
+\fancypagestyle{bib}{
+  \fancyhf{}
+  \fancyhead[R]{\textsf{\nouppercase{\leftmark}}}
+  \fancyhead[L]{\textsf{\textbf{\thepage}}}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{11pt}
+
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+  \OLDthebibliography{#1}
+  \setlength{\parskip}{0pt}
+  \setlength{\itemsep}{4pt plus 0.3ex}
+}
+
+% This is a hack to make Feynmf work correctly.
+% http://tex.stackexchange.com/questions/20241/how-to-use-kile-with-feynmf-or-feynmp
+% Call pdflatex with the flag ``-shell-escape''.
+%\makeatletter
+%\def\endfmffile{%
+%  \fmfcmd{\p@rcent\space the end.^^J%
+%          end.^^J%
+%          endinput;}%
+%  \if@fmfio
+%    \immediate\closeout\@outfmf
+%  \fi
+%  \ifnum\pdfshellescape=\@ne
+%    \immediate\write18{mf "\noexpand\mode:=localfont;input \thefmffile"}%
+%  \fi}
+%\makeatother
