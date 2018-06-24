@@ -1,6 +1,6 @@
 \documentclass[10pt, oneside]{article}
 
-\input ../math_headers.sty
+\input math_headers.sty
 
 \title{Multiplicative Hitchin Systems and Supersymmetric Gauge Theory}
 \author{Chris Elliott \and Vasily Pestun}
@@ -29,7 +29,7 @@
 \end{abstract}
 
 \section{Introduction}
-\chris{There are a lot of notes in red: that just indicates that there are a lot of arguments that are only partially written.  They're notes for myself.  Testing git here.}
+\chris{There are a lot of notes in red: that just indicates that there are a lot of arguments that are only partially written.  They're notes for myself.}
 
 \section{Multiplicative Higgs Bundles and $q$-Connections}
 We'll begin with an abstract definition of the moduli spaces we'll investigate in this paper using the language of derived algebraic geometry.
@@ -317,7 +317,13 @@ Note that the right-hand side is the derivative at $\mc A$ of the map $B_i \maps
 \end{proof}
 
 \section{Symplectic Structures}
-From now on we'll exclusively study the rational situation where $C = \bb{CP}^1$ and we fix a framing point $c = \infty$.  We begin by briefly discussing the holomorphic symplectic structure on the moduli space of periodic monopoles on $\bb{CP}^1$ following the analysis of Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin3}.  This structure arises from the description we gave as a hyperk\"ahler quotient.  To describe it specifically, let $\delta^{(1)} \mc A$ and $\delta^{(2)} \mc A$ be two tangent vectors at $(\bo P, \mc A)$ to the moduli space of monopoles.  Choose representatives for these two tangent vectors of the form $\alpha_i$ and $\alpha'_i$ respectively  in the \v Cech resolution we described above.  Then we can write the holomorphic symplectic form coming from the hyperk\"ahler reduction in terms of the symplectic pairing on the infinite-dimensional vector space $\mc V$, which is given by the Killing form on $\gg$ along with the wedge pairing of differential forms.  So summing over the local patches in our \v Cech resolution we can write it as.
+From now on we'll exclusively study the rational situation where $C = \bb{CP}^1$ and we fix a framing point $c = \infty$.  
+
+\subsection{The Example of $\GL_2$}
+\chris{Ultimately we might move this, but we should probably include a discussion of what happens for $\GL_2$ before or in parallel to discussing the general story.}
+
+\subsection{Symplectic Structures for General $G$}
+We begin the more anstract general analysis by briefly discussing the holomorphic symplectic structure on the moduli space of periodic monopoles on $\bb{CP}^1$ following the analysis of Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin3}.  This structure arises from the description we gave as a hyperk\"ahler quotient.  To describe it specifically, let $\delta^{(1)} \mc A$ and $\delta^{(2)} \mc A$ be two tangent vectors at $(\bo P, \mc A)$ to the moduli space of monopoles.  Choose representatives for these two tangent vectors of the form $\alpha_i$ and $\alpha'_i$ respectively  in the \v Cech resolution we described above.  Then we can write the holomorphic symplectic form coming from the hyperk\"ahler reduction in terms of the symplectic pairing on the infinite-dimensional vector space $\mc V$, which is given by the Killing form on $\gg$ along with the wedge pairing of differential forms.  So summing over the local patches in our \v Cech resolution we can write it as.
 \[\omega(\delta^{(1)} \mc A, \delta^{(2)} \mc A) = \sum_{i=1}^k \int_{U_i} \kappa(\alpha_i \wedge \alpha'_i) \d z.\]
 \chris{todo: fix this expression}
 
@@ -390,8 +396,9 @@ where we use the Killing form to identify $\beta'_i$ with a $\gg^*$-valued form.
 The formula given above is saying that the Poisson bivector -- viewed as a map $\pi \colon \bb L_{(P,\phi)} \to \bb T_{(P,\phi)}$ -- acts in degree $-1$ by identifying $\gg$ with $\gg^*$ then applying the map $\mr{ad}_\phi^*$.  Recall that to describe the Poisson bivector we must locally on $U_i$ describe the sum
 \[\lambda = f_1^*(\mu_1) + f_2^*(\mu_2) + \eta
 \]
-where $\eta$ is a potential for the pullback $(f_1 \circ g)^*\nu$.  The Lagrangian structure $\mu_1$ on the diagonal is 0, and the Lagrangian structure $\mu_2$ vanishes upon restriction to the open set $U_i$ since the map $\bun_G^{\fr}(\bb{CP}^1 \bs D) \to \bun_G^{\fr}(\bb{CP}^1 \bs D)^2 \times_{BLG^{2k}} BLG^{k}$ becomes an isomorphism after restricting to a formal neighbourhood of $z_i$ \chris{justify the difference between a formal neighbourhood and a contractible analytic neighbourhood here}.  We must therefore find a local potential for $(f_1 \circ g)^*\nu$ where $\nu$ is the structure from Lemma \ref{restriction_Lagn_lemma}.  On the cotangent complex, the pullback $g^*$ acts by the dual to the map \chris{gives $\ad^*_\phi$ after precomposing with the dual to the projection...}
+where $\eta$ is a potential for the pullback $(f_1 \circ g)^*\nu$.  The Lagrangian structure $\mu_1$ on the diagonal is 0, and the Lagrangian structure $\mu_2$ vanishes upon restriction to the open set $U_i$ since the map $\bun_G^{\fr}(\bb{CP}^1 \bs D) \to \bun_G^{\fr}(\bb{CP}^1 \bs D)^2 \times_{BLG^{2k}} BLG^{k}$ becomes an isomorphism after restricting to a formal neighbourhood of $z_i$ \chris{justify the difference between a formal neighbourhood and a contractible analytic neighbourhood here}.  We must therefore find a local potential for $(f_1 \circ g)^*\nu$ where $\nu$ is the structure from Lemma \ref{restriction_Lagn_lemma}.  On the cotangent complex, the pullback $g^*$ acts by the dual to the $q$-twisted diagonal map $\gg[[z]] \to \gg(\!(z)\!)^2$.  The pullback $(f_1 \circ g)^*$ acts by the projection map $\gg^*(\!(z)\!)^2 \to \Ad(\phi)^*|_{\bb D^\times}$ onto formal local section of the bundle $\Ad(\phi)^*$.
 
+We obtain a potential for the image of the residue pairing $\nu$ under this pullback as follows. \chris{todo: complete.  We end up with the residue pairing on $\Ad(\phi)^*$, and we'll get a potential by applying $\ad_\phi^*$ to one of the two factors.  Can write it down as in the lemma above.}
 \end{proof}
 
 \chris{correct the below proposition.}
@@ -462,6 +469,9 @@ If we equip $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ with the complex
 \chris{comment on the holomorphic symplectic structure vs the one discussed above.}
 
 \chris{comment on the example of the Nahm transform.}
+
+\section{Quantization and Yangians}
+\chris{We're still discussing how this story goes.}
 
 \section{Duality}
 \chris{For a first draft I'm inserting some notes I prepared for a talk.  Todo: talk about motivation and the content we discussed regarding non-simply-laced groups}
