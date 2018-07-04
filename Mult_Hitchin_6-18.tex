@@ -244,7 +244,7 @@ The cochain complex $\mc F'_{(\bo P,\mc A)}(U_i)$ is the tangent complex to the 
 Now let's consider the tangent complex to the moduli space of $q$-connections.  For the arguments in this article we'll only need to carefully consider the case $q=\id$ of multiplicative Higgs bundles, but we'll include some remarks regarding the more general case.  In this case the calculation was performed by Bottacin \cite{Bottacin}, see also \cite[Section 4]{HurtubiseMarkman}. Fix a multiplicative Higgs bundle $(P,\phi)$ on $C$.  We consider the sheaf of cochain complexes on $C$
 \[\mc F_{(P,\phi)} = (\gg_P[1] \overset {\ad_\phi} {\to} \gg_P(D))\]
 in degrees $-1$ and 0 with differential given by the adjoint action of $\phi$.  More precisely let $L_\phi$ and $R_\phi$ be the bundle maps $\gg_P \to \gg_P$ obtained as the derivative of left- and right-multiplication.  Then $\ad_\phi = L_\phi - R_\phi$.  We can alternatively phrase this, as in \cite[Section 4]{HurtubiseMarkman}, as follows.  Define $\Ad(\phi)$ to be the vector bundle
-\[\Ad(\phi) = (\gg_P \oplus \gg_P)/\{(X, \phi X \phi^{-1}): X \in \gg_P\}.\]
+\[\Ad(\phi) = (\gg_P \oplus \gg_P)/\{(X, -\phi X \phi^{-1}): X \in \gg_P\}.\]
 Then we can write $\mc F$ as the sheaf of complexes
 \[\mc F_{(P,\phi)} = (\gg_P[1] \overset {\ad_\phi} {\to} \Ad(\phi))\]
 where now $\ad_\phi$ is just the map $X \mapsto [(X,-X)]$.
@@ -415,20 +415,20 @@ The symplectic form on the moduli space of $q$-connections can be written in the
 &= \sum_{i=1}^d \langle (\alpha_i)|_{U^\times_i}, (\mr{ad}_\phi^*)^{-1}(\mr{ad}_\phi^{-1}(\alpha_i')|_{U^\times_i}) \rangle.
 \end{align*}
 
-We can compute the composite operator $(\mr{ad}_\phi^*)^{-1}\mr{ad}_\phi^{-1}$ on $\gg_P(1)(U^\times_i) \iso \gg((z))$.  It's given by the inverse of the operator $\alpha \mapsto \alpha - \phi \alpha \phi^{-1}$.  Call this operator $1 - A_\phi$.  Then $(1-A_\phi)^{-1} = 1 + A_\phi + A_\phi^2 + \cdots$.  After applying our gauge transformation above the remaining degree of freedom in $\alpha_i$ is its $z^{-1}$ term.  Each time we apply $A$ it raises the order in $z$ of this term by one, so only the linear summand $A_\phi$ of $(1-A_\phi)^{-1}$ contributes to the residue pairing.  We therefore get
+We can compute the composite operator $(\mr{ad}_\phi^*)^{-1}\mr{ad}_\phi^{-1}$ on $\gg_P(1)(U^\times_i) \iso \gg((z))$.  It's given by the inverse of the operator $\alpha \mapsto - \alpha - \phi^{-1} \alpha \phi$.  Call this operator $-(1 + A_\phi)$.  Then $(1+A_\phi)^{-1} = 1 - A_\phi + A_\phi^2 + \cdots$.  After applying our gauge transformation above the remaining degree of freedom in $\alpha_i$ is its $z^{-1}$ term.  Each time we apply $A$ it raises the order in $z$ of this term by one, so only the linear summand $A_\phi$ of $-(1+A_\phi)^{-1}$ contributes to the residue pairing.  We therefore get
 \begin{align*}
-\omega(\delta \phi, \delta \phi') &= \sum_{i=1}^d \langle (\alpha_i)|_{U^\times_i}, (1-A_\phi)^{-1}(\alpha_i')|_{U^\times_i} \rangle\\
-&= \sum_{i=1}^d \langle (\alpha_i)|_{U^\times_i}, (\phi \alpha_i' \phi^{-1})|_{U^\times_i}\rangle.
+\omega(\delta \phi, \delta \phi') &= \sum_{i=1}^d \langle (\alpha_i)|_{U^\times_i}, (-1-A_\phi)^{-1}(\alpha_i')|_{U^\times_i} \rangle\\
+&= \sum_{i=1}^d \langle (\alpha_i)|_{U^\times_i}, (\phi^{-1} \alpha_i' \phi)|_{U^\times_i}\rangle.
 \end{align*}
 
-We can represent $\alpha_i$ by a class in the bundle $\Ad(\phi)$, i.e. by $(b_i(2\pi), b_i(0))(\delta \phi) \in \gg((z))^2$.  In this form the operator $A_\phi$ acts by $b_i \mapsto (\phi b_i(2\pi) \phi^{-1}, \phi^{-1} b_i(0) \phi)$.  We need to use the invariant pairing on $\gg((z)) \oplus \gg((z))$ that vanishes on the subalgebra spanned by $(X, A_\phi(X))$, so we take the difference of the residue / Killing form pairings on the two summands.  The result is
+We can represent $\alpha_i$ by a class in the bundle $\Ad(\phi)$, i.e. by an equivalence class of pairs $(b^L, b^R)(\delta \phi) \in \gg((z))^2$.  In this form the operator $A_\phi$ acts by $(b^L, b^R) \mapsto (-\phi^{-1}b^R \phi, \phi b^L \phi^{-1})$
+
+$(b_i(2\pi),b_i(0))\mapsto (b_i(0),-b_i(2\pi))$ \chris{or maybe $(\phi^2 b_i(0) \phi^{-2},-b_i(2\pi))$}.  We need to use the invariant pairing on $\gg((z)) \oplus \gg((z))$ that vanishes on the subalgebra spanned by $(X, A_\phi(X))$, so we take the difference of the residue / Killing form pairings on the two summands.  The result is
 \begin{align*}
- \sum_{i=1}^d \langle b_i(2\pi), \phi b'_i(0) \phi^{-1} \rangle - \langle b_i(0), \phi^{-1} b'_i(2\pi) \phi \rangle 
-&= \sum_{i=1}^d \langle \phi^{-1} b_i(2\pi), \phi b'_i(0) \rangle - \langle \phi^{-1} b'_i(2\pi), \phi b_i(0) \rangle
+ \sum_{i=1}^d \langle b_i(2\pi), \phi^{-1} b'_i(0) \phi \rangle - \langle b_i(0), \phi b'_i(2\pi) \phi^{-1} \rangle 
+&= \sum_{i=1}^d \langle \phi b_i(2\pi), \phi^{-1} b'_i(0) \rangle - \langle \phi b'_i(2\pi), \phi ^{-1}b_i(0) \rangle
 \end{align*}
-using cyclic invariance in the last step. \chris{Still not the formula that we want exactly.  Want something more like 
-\[\sum_{i=1}^d \langle  b_i(2\pi) \phi, \phi b'_i(0) \rangle + \langle b'_i(2\pi) \phi, \phi b_i(0) \rangle\]
-to compare with what we have below.  Even so there are left-left and right-right cross-terms to kill, plus sign issues.}
+using cyclic invariance in the last step. 
 \end{proof}
 
 We can now establish our main result.
@@ -440,11 +440,23 @@ The symplectic structure on $\mon_G^\fr(\bb{CP}^1 \times S^1,D \times\{0\},\omeg
 This is straightforward now, by combining the two local descriptions of the symplectic structure on monopoles and multiplicative Higgs bundles on a neighbourhood of a puncture with the description in Proposition \ref{local_derivative_description_prop}.  So, let's begin by taking the symplectic form $\omega_{\mr{mHiggs}}$ on the moduli space $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ and evaluating it at the image under $\d H$ of two elements $(\alpha_i, \alpha'_i) = (\d_{\mr{mon}}(b_i), \d_{\mr{mon}}(b_i'))$.  According to Proposition \ref{local_derivative_description_prop} and Proposition \ref{qconn_symp_description} we have
 \begin{align*}
 \omega_{\mr{mHiggs}}(\d H(\alpha_i), \d H(\alpha_i')) &= \omega_{\mr{mHiggs}}(\d H(\d_{\mr{mon}}(b_i)), \d H(\d_{\mr{mon}}(b_i'))) \\
-&= \omega_{\mr{mHiggs}}(b_i(2\pi)H(\mc A) - H(\mc A)b_i(0),b'_i(2\pi)H(\mc A) - H(\mc A)b'_i(0)) \\
-&= \omega_{\mr{mHiggs}}(b_i(2\pi)H(\mc A), b'_i(2\pi)H(\mc A)) + \omega_{\mr{mHiggs}}(H(\mc A)b_i(0), H(\mc A)b'_i(0)) + \\
-&\qquad -\omega_{\mr{mHiggs}}(b_i(2\pi)H(\mc A), H(\mc A)b'_i(0)) - \omega_{\mr{mHiggs}}(H(\mc A)b_i(0), b'_i(2\pi)H(\mc A))
+&= \omega_{\mr{mHiggs}}(b_i(2\pi)H(\mc A) - H(\mc A)b_i(0),b'_i(2\pi)H(\mc A) - H(\mc A)b'_i(0)).
+%&= \omega_{\mr{mHiggs}}(b_i(2\pi)H(\mc A), b'_i(2\pi)H(\mc A)) + \omega_{\mr{mHiggs}}(H(\mc A)b_i(0), H(\mc A)b'_i(0)) + \\
+%&\qquad -\omega_{\mr{mHiggs}}(b_i(2\pi)H(\mc A), H(\mc A)b'_i(0)) - \omega_{\mr{mHiggs}}(H(\mc A)b_i(0), b'_i(2\pi)H(\mc A))
 \end{align*}
-\chris{should be an easy calculation to finish once I fix the proposition above.}
+\chris{from here needs fixing.}
+We can write this in terms of a pairing on the bundle $\Ad(\phi)$.  Represent the class $b_i(2\pi)H(\mc A) - H(\mc A)b_i(0)$ by the pair $(H(\mc A)b_i(2\pi),b_i(0)H(\mc A))$.  Then applying the description of $\omega_{\mr{mHiggs}}$ provided by Proposition \ref{qconn_symp_description} we have
+\begin{align*}
+\omega_{\mr{mHiggs}}(\d H(\alpha_i), \d H(\alpha_i')) &= \omega_{\mr{mHiggs}}((H(\mc A)b_i(2\pi),b_i(0)H(\mc A)),(H(\mc A)b'_i(2\pi),b'_i(0)H(\mc A))) \\
+&= \langle  b_i(2\pi) H(\mc A), b_i'(0) H(\mc A) \rangle - \langle H(\mc A)b_i(0) , H(\mc A)b_i'(2\pi) \rangle.
+\end{align*}
+
+On the other hand, we can evaluate the pairing $\omega_{\mr{Mon}}(\alpha_i,\alpha'_i) = \omega_{\mr{Mon}}(\d_{\mr{mon}}(b_i),\d_{\mr{mon}}(b_i'))$ via integration by parts. The result is that
+\begin{align*}
+\omega_{\mr{Mon}}(\alpha_i,\alpha'_i) &= \int_{U_i} \kappa(\d_{\mr{mon}}(b_i) \wedge \d_{\mr{mon}}(b_i')) \d z \\
+&= \oint_{\bb D^\times_i} \kappa(b_i(2\pi)H(\mc A), b_i'(0)H(\mc A)) \d z - \oint_{\bb D^\times_i} \kappa(H(\mc A)b_i(0), H(\mc A)b_i'(2\pi)) \d z
+\end{align*}
+so that the two expressions coincide.
 \end{proof}
 
 \begin{remark}

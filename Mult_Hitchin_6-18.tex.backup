@@ -1,6 +1,6 @@
 \documentclass[10pt, oneside]{article}
 
-\input ../math_headers.sty
+\input math_headers.sty
 
 \title{Multiplicative Hitchin Systems and Supersymmetric Gauge Theory}
 \author{Chris Elliott \and Vasily Pestun}
@@ -317,7 +317,13 @@ Note that the right-hand side is the derivative at $\mc A$ of the map $B_i \maps
 \end{proof}
 
 \section{Symplectic Structures}
-From now on we'll exclusively study the rational situation where $C = \bb{CP}^1$ and we fix a framing point $c = \infty$.  We begin by briefly discussing the holomorphic symplectic structure on the moduli space of periodic monopoles on $\bb{CP}^1$ following the analysis of Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin3}.  This structure arises from the description we gave as a hyperk\"ahler quotient.  To describe it specifically, let $\delta^{(1)} \mc A$ and $\delta^{(2)} \mc A$ be two tangent vectors at $(\bo P, \mc A)$ to the moduli space of monopoles.  Choose representatives for these two tangent vectors of the form $\alpha_i$ and $\alpha'_i$ respectively  in the \v Cech resolution we described above.  Then we can write the holomorphic symplectic form coming from the hyperk\"ahler reduction in terms of the symplectic pairing on the infinite-dimensional vector space $\mc V$, which is given by the Killing form on $\gg$ along with the wedge pairing of differential forms.  So summing over the local patches in our \v Cech resolution we can write it as.
+From now on we'll exclusively study the rational situation where $C = \bb{CP}^1$ and we fix a framing point $c = \infty$.  
+
+\subsection{The Example of $\GL_2$}
+\chris{Ultimately we might move this, but we should probably include a discussion of what happens for $\GL_2$ before or in parallel to discussing the general story.}
+
+\subsection{Symplectic Structures for General $G$}
+We begin the more anstract general analysis by briefly discussing the holomorphic symplectic structure on the moduli space of periodic monopoles on $\bb{CP}^1$ following the analysis of Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin3}.  This structure arises from the description we gave as a hyperk\"ahler quotient.  To describe it specifically, let $\delta^{(1)} \mc A$ and $\delta^{(2)} \mc A$ be two tangent vectors at $(\bo P, \mc A)$ to the moduli space of monopoles.  Choose representatives for these two tangent vectors of the form $\alpha_i$ and $\alpha'_i$ respectively  in the \v Cech resolution we described above.  Then we can write the holomorphic symplectic form coming from the hyperk\"ahler reduction in terms of the symplectic pairing on the infinite-dimensional vector space $\mc V$, which is given by the Killing form on $\gg$ along with the wedge pairing of differential forms.  So summing over the local patches in our \v Cech resolution we can write it as.
 \[\omega(\delta^{(1)} \mc A, \delta^{(2)} \mc A) = \sum_{i=1}^k \int_{U_i} \kappa(\alpha_i \wedge \alpha'_i) \d z.\]
 \chris{todo: fix this expression}
 
@@ -382,15 +388,17 @@ In order to work with this symplectic structure we'll need to give a local descr
 
 \begin{lemma}
 As a pairing on the tangent complex at a point $(P,\phi)$ the symplectic form on the moduli space of $q$-connections pairs $\alpha_i$ with $\beta_i$ for $i=1,\ldots,k$.  It is given on this coordinate patch by the formula 
-\[\omega(\alpha_i, \beta_i') = \langle (\alpha_i + \wt \alpha)|_{U^\times_i}, (\mr{Ad}_\phi^*)^{-1}(\beta'_i) \rangle\]
+\[\omega(\alpha_i, \beta_i') = \langle (\alpha_i + \wt \alpha)|_{U^\times_i}, (\mr{ad}_\phi^*)^{-1}(\beta'_i) \rangle\]
 where we use the Killing form to identify $\beta'_i$ with a $\gg^*$-valued form.
 \end{lemma}
 
 \begin{proof}
-The formula given above is saying that the Poisson bivector -- viewed as a map $\pi \colon \bb L_{(P,\phi)} \to \bb T_{(P,\phi)}$ -- acts in degree $-1$ by identifying $\gg$ with $\gg^*$ then applying the map $\mr{Ad}_\phi^*$.  Recall that to describe the Poisson bivector we must locally on $U_i$ describe the sum
+The formula given above is saying that the Poisson bivector -- viewed as a map $\pi \colon \bb L_{(P,\phi)} \to \bb T_{(P,\phi)}$ -- acts in degree $-1$ by identifying $\gg$ with $\gg^*$ then applying the map $\mr{ad}_\phi^*$.  Recall that to describe the Poisson bivector we must locally on $U_i$ describe the sum
 \[\lambda = f_1^*(\mu_1) + f_2^*(\mu_2) + \eta
 \]
-where $\eta$ is a potential for the pullback $(f_1 \circ g)^*\nu$.  The Lagrangian structure $\mu_1$ on the diagonal is 0, and the Lagrangian structure $\mu_2$ vanishes upon restriction to the open set $U_i$ since the map $\bun_G^{\fr}(\bb{CP}^1 \bs D) \to \bun_G^{\fr}(\bb{CP}^1 \bs D)^2 \times_{BLG^{2k}} BLG^{k}$ becomes an isomorphism after restricting to a formal neighbourhood of $z_i$ \chris{check}.  We must therefore find a local potential for $(f_1 \circ g)^*\nu$ where $\nu$ is the structure from Lemma \ref{restriction_Lagn_lemma}.  On the cotangent complex, the pullback $(f_1 \circ g)^*$ acts by \chris{see the appearance of the ($q$-twisted) adjoint map $\Ad_\phi$ here.}
+where $\eta$ is a potential for the pullback $(f_1 \circ g)^*\nu$.  The Lagrangian structure $\mu_1$ on the diagonal is 0, and the Lagrangian structure $\mu_2$ vanishes upon restriction to the open set $U_i$ since the map $\bun_G^{\fr}(\bb{CP}^1 \bs D) \to \bun_G^{\fr}(\bb{CP}^1 \bs D)^2 \times_{BLG^{2k}} BLG^{k}$ becomes an isomorphism after restricting to a formal neighbourhood of $z_i$ \chris{justify the difference between a formal neighbourhood and a contractible analytic neighbourhood here}.  We must therefore find a local potential for $(f_1 \circ g)^*\nu$ where $\nu$ is the structure from Lemma \ref{restriction_Lagn_lemma}.  On the cotangent complex, the pullback $g^*$ acts by the dual to the $q$-twisted diagonal map $\gg[[z]] \to \gg(\!(z)\!)^2$.  The pullback $(f_1 \circ g)^*$ acts by the projection map $\gg^*(\!(z)\!)^2 \to \Ad(\phi)^*|_{\bb D^\times}$ onto formal local section of the bundle $\Ad(\phi)^*$.
+
+We obtain a potential for the image of the residue pairing $\nu$ under this pullback as follows. \chris{todo: complete.  We end up with the residue pairing on $\Ad(\phi)^*$, and we'll get a potential by applying $\ad_\phi^*$ to one of the two factors.  Can write it down as in the lemma above.}
 \end{proof}
 
 \chris{correct the below proposition.}
@@ -402,25 +410,25 @@ The symplectic form on the moduli space of $q$-connections can be written in the
 \begin{proof}
  Specify a representative cocycle $(\alpha_\infty, \{\alpha_i\}, \alpha_0, \beta_\infty, \{\beta_i\})$ for the first \v Cech cohomology group. By addition of a coboundary we can assume that $\alpha_0=0$, and to force $\alpha_\infty$ to land in $z\gg[[z]]$ and each $\alpha_i$ to land in $z^{-1}\gg[[z]]$.  We've now fixed a representative cocycle -- there's no further gauge freedom.  Ignoring the factor at infinity -- since after we add these coboundaries the residue pairing there vanishes -- the pairing we end up with looks like 
 \begin{align*}
-\omega(\delta \phi, \delta \phi') &= \sum_{i=1}^d \langle (\alpha_i + \wt \alpha)|_{U^\times_i}, (\mr{Ad}_\phi^*)^{-1}(\kappa \beta'_i) \rangle \\ 
-&= \sum_{i=1}^d \langle (\alpha_i + \wt \alpha)|_{U^\times_i}, (\mr{Ad}_\phi^*)^{-1}(\kappa \mr{Ad}_\phi^{-1}(\alpha_i' - \wt \alpha')) \rangle \\
-&= \sum_{i=1}^d \langle (\alpha_i)|_{U^\times_i}, (\mr{Ad}_\phi^*)^{-1}(\kappa \mr{Ad}_\phi^{-1}(\alpha_i')|_{U^\times_i}) \rangle.
+\omega(\delta \phi, \delta \phi') &= \sum_{i=1}^d \langle (\alpha_i + \wt \alpha)|_{U^\times_i}, (\mr{ad}_\phi^*)^{-1}( \beta'_i) \rangle \\ 
+&= \sum_{i=1}^d \langle (\alpha_i + \wt \alpha)|_{U^\times_i}, (\mr{ad}_\phi^*)^{-1}(\mr{ad}_\phi^{-1}(\alpha_i' - \wt \alpha')) \rangle \\
+&= \sum_{i=1}^d \langle (\alpha_i)|_{U^\times_i}, (\mr{ad}_\phi^*)^{-1}(\mr{ad}_\phi^{-1}(\alpha_i')|_{U^\times_i}) \rangle.
 \end{align*}
 
-We can compute the composite operator $(\mr{Ad}_\phi^*)^{-1}\kappa \mr{Ad}_\phi^{-1}$ on $\gg_P(1)(U^\times_i) \iso \gg((z))$.  It's given by the inverse of the operator $\alpha \mapsto \alpha - \phi \alpha \phi^{-1}$.  Call this operator $1 - A_\phi$.  Then $(1-A_\phi)^{-1} = 1 + A_\phi + A_\phi^2 + \cdots$.  After applying our gauge transformation above the remaining degree of freedom in $\alpha_i$ is its $z^{-1}$ term.  Each time we apply $A$ it raises the order in $z$ of this term by one, so only the linear summand $A_\phi$ of $(1-A_\phi)^{-1}$ contributes to the residue pairing.  We therefore get
+We can compute the composite operator $(\mr{ad}_\phi^*)^{-1}\mr{ad}_\phi^{-1}$ on $\gg_P(1)(U^\times_i) \iso \gg((z))$.  It's given by the inverse of the operator $\alpha \mapsto - \alpha - \phi^{-1} \alpha \phi$.  Call this operator $-(1 + A_\phi)$.  Then $(1+A_\phi)^{-1} = 1 - A_\phi + A_\phi^2 + \cdots$.  After applying our gauge transformation above the remaining degree of freedom in $\alpha_i$ is its $z^{-1}$ term.  Each time we apply $A$ it raises the order in $z$ of this term by one, so only the linear summand $A_\phi$ of $-(1+A_\phi)^{-1}$ contributes to the residue pairing.  We therefore get
 \begin{align*}
-\omega(\delta \phi, \delta \phi') &= \sum_{i=1}^d \langle (\alpha_i)|_{U^\times_i}, (1-A_\phi)^{-1}(\alpha_i')|_{U^\times_i} \rangle\\
-&= \sum_{i=1}^d \langle (\alpha_i)|_{U^\times_i}, (\phi \alpha_i' \phi^{-1})|_{U^\times_i}\rangle.
+\omega(\delta \phi, \delta \phi') &= \sum_{i=1}^d \langle (\alpha_i)|_{U^\times_i}, (-1-A_\phi)^{-1}(\alpha_i')|_{U^\times_i} \rangle\\
+&= \sum_{i=1}^d \langle (\alpha_i)|_{U^\times_i}, (\phi^{-1} \alpha_i' \phi)|_{U^\times_i}\rangle.
 \end{align*}
 
-We can represent $\alpha_i$ by $(b_i(2\pi), b_i(0))(\delta \phi) \in \gg((z))^2$.  In this form the operator $A_\phi$ acts by $b_i \mapsto (\phi b_i(2\pi) \phi^{-1}, \phi^{-1} b_i(0) \phi)$.  We need to use the invariant pairing on $\gg((z)) \oplus \gg((z))$ that vanishes on the subalgebra spanned by $(X, - A_\phi(X))$, so we take the difference of the residue / Killing form pairings on the two summands.  The result is
+We can represent $\alpha_i$ by a class in the bundle $\Ad(\phi)$, i.e. by an equivalence class of pairs $(^L, b^R)(\delta \phi) \in \gg((z))^2$.  In this form the operator $A_\phi$ acts by $(b^L, b^R) \mapsto (\phi^{-1}b^L \phi,)$
+
+$(b_i(2\pi),b_i(0))\mapsto (b_i(0),-b_i(2\pi))$ \chris{or maybe $(\phi^2 b_i(0) \phi^{-2},-b_i(2\pi))$}.  We need to use the invariant pairing on $\gg((z)) \oplus \gg((z))$ that vanishes on the subalgebra spanned by $(X, A_\phi(X))$, so we take the difference of the residue / Killing form pairings on the two summands.  The result is
 \begin{align*}
- \sum_{i=1}^d \langle b_i(2\pi), \phi b'_i(0) \phi^{-1} \rangle - \langle b_i(0), \phi^{-1} b'_i(2\pi) \phi \rangle 
-&= \sum_{i=1}^d \langle \phi^{-1} b_i(2\pi) \phi, b'_i(0) \rangle - \langle \phi^{-1} b'_i(2\pi) \phi, b_i(0) \rangle
+ \sum_{i=1}^d \langle b_i(2\pi), \phi^{-1} b'_i(0) \phi \rangle - \langle b_i(0), \phi b'_i(2\pi) \phi^{-1} \rangle 
+&= \sum_{i=1}^d \langle \phi b_i(2\pi), \phi^{-1} b'_i(0) \rangle - \langle \phi b'_i(2\pi), \phi ^{-1}b_i(0) \rangle
 \end{align*}
-using cyclic invariance in the last step. \chris{Still not the formula that we want exactly.  Want something more like 
-\[\sum_{i=1}^d \langle  b_i(2\pi) \phi, \phi b'_i(0) \rangle - \langle b'_i(2\pi) \phi, \phi b_i(0) \rangle\]
-to compare with what we have below.  Even so there are left-left and right-right cross-terms to kill, plus sign issues.}
+using cyclic invariance in the last step. 
 \end{proof}
 
 We can now establish our main result.
@@ -432,10 +440,22 @@ The symplectic structure on $\mon_G^\fr(\bb{CP}^1 \times S^1,D \times\{0\},\omeg
 This is straightforward now, by combining the two local descriptions of the symplectic structure on monopoles and multiplicative Higgs bundles on a neighbourhood of a puncture with the description in Proposition \ref{local_derivative_description_prop}.  So, let's begin by taking the symplectic form $\omega_{\mr{mHiggs}}$ on the moduli space $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ and evaluating it at the image under $\d H$ of two elements $(\alpha_i, \alpha'_i) = (\d_{\mr{mon}}(b_i), \d_{\mr{mon}}(b_i'))$.  According to Proposition \ref{local_derivative_description_prop} and Proposition \ref{qconn_symp_description} we have
 \begin{align*}
 \omega_{\mr{mHiggs}}(\d H(\alpha_i), \d H(\alpha_i')) &= \omega_{\mr{mHiggs}}(\d H(\d_{\mr{mon}}(b_i)), \d H(\d_{\mr{mon}}(b_i'))) \\
-&= \omega_{\mr{mHiggs}}(b_i(2\pi)H(\mc A) - H(\mc A)b_i(0),b'_i(2\pi)H(\mc A) - H(\mc A)b'_i(0)) \\
-&= 
+&= \omega_{\mr{mHiggs}}(b_i(2\pi)H(\mc A) - H(\mc A)b_i(0),b'_i(2\pi)H(\mc A) - H(\mc A)b'_i(0)).
+%&= \omega_{\mr{mHiggs}}(b_i(2\pi)H(\mc A), b'_i(2\pi)H(\mc A)) + \omega_{\mr{mHiggs}}(H(\mc A)b_i(0), H(\mc A)b'_i(0)) + \\
+%&\qquad -\omega_{\mr{mHiggs}}(b_i(2\pi)H(\mc A), H(\mc A)b'_i(0)) - \omega_{\mr{mHiggs}}(H(\mc A)b_i(0), b'_i(2\pi)H(\mc A))
 \end{align*}
-\chris{should be an easy calculation to finish once I fix the proposition above.}
+\chris{from here needs fixing.}
+We can write this in terms of a pairing on the bundle $\Ad(\phi)$.  Represent the class $b_i(2\pi)H(\mc A) - H(\mc A)b_i(0)$ by the pair $(,)$.  Then applying the description of $\omega_{\mr{mHiggs}}$ provided by Proposition \ref{qconn_symp_description} we have
+\begin{align*}
+\omega_{\mr{mHiggs}}(\d H(\alpha_i), \d H(\alpha_i')) &= \omega_{\mr{mHiggs}}((H(\mc A)b_i(2\pi),b_i(0)H(\mc A)),(H(\mc A)b'_i(2\pi),b'_i(0)H(\mc A))) \\
+&= \langle H(\mc A) b_i(2\pi) H(\mc A)^{-1}, b_i'(2\pi) \rangle - \langle H(\mc A)^{-1} b_i(0) H(\mc A), b_i'(0) \rangle.
+\end{align*}
+
+On the other hand, we can evaluate the pairing $\omega_{\mr{Mon}}(\alpha_i,\alpha'_i) = \omega_{\mr{Mon}}(\d_{\mr{mon}}(b_i),\d_{\mr{mon}}(b_i'))$ via integration by parts. The result is that
+\begin{align*}
+\omega_{\mr{Mon}}(\alpha_i,\alpha'_i) &= \int_{U_i} \kappa(\d_{\mr{mon}}(b_i) \wedge \d_{\mr{mon}}(b_i')) \d z \\
+&= \oint_{\bb D^\times_i} \kappa(b_i(2\pi) H(\mc A), b_i'(2\pi)H(\mc A)) \d z - \oint_{\bb D^\times_i} \kappa(H(\mc A)b_i(0), H(\mc A)b_i'(0)) \d z.
+\end{align*}
 \end{proof}
 
 \begin{remark}
@@ -460,6 +480,9 @@ If we equip $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ with the complex
 \chris{comment on the holomorphic symplectic structure vs the one discussed above.}
 
 \chris{comment on the example of the Nahm transform.}
+
+\section{Quantization and Yangians}
+\chris{We're still discussing how this story goes.}
 
 \section{Duality}
 \chris{For a first draft I'm inserting some notes I prepared for a talk.  Todo: talk about motivation and the content we discussed regarding non-simply-laced groups}
