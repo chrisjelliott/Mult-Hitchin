@@ -421,9 +421,7 @@ We can compute the composite operator $(\mr{ad}_\phi^*)^{-1}\mr{ad}_\phi^{-1}$ o
 &= \sum_{i=1}^d \langle (\alpha_i)|_{U^\times_i}, (\phi^{-1} \alpha_i' \phi)|_{U^\times_i}\rangle.
 \end{align*}
 
-We can represent $\alpha_i$ by a class in the bundle $\Ad(\phi)$, i.e. by an equivalence class of pairs $(b^L, b^R)(\delta \phi) \in \gg((z))^2$.  In this form the operator $A_\phi$ acts by $(b^L, b^R) \mapsto (-\phi^{-1}b^R \phi, \phi b^L \phi^{-1})$
-
-$(b_i(2\pi),b_i(0))\mapsto (b_i(0),-b_i(2\pi))$ \chris{or maybe $(\phi^2 b_i(0) \phi^{-2},-b_i(2\pi))$}.  We need to use the invariant pairing on $\gg((z)) \oplus \gg((z))$ that vanishes on the subalgebra spanned by $(X, A_\phi(X))$, so we take the difference of the residue / Killing form pairings on the two summands.  The result is
+We can represent $\alpha_i$ by a class in the bundle $\Ad(\phi)$, i.e. by an equivalence class of pairs $(b^L, b^R)(\delta \phi) \in \gg((z))^2$.  In this form the operator $A_\phi$ acts by $(b^L, b^R) \mapsto (-\phi^{-1}b^R \phi, \phi b^L \phi^{-1})$ \chris{?? I'm sure this isn't correct right now.  What follows also needs fixing but I haven't got the above correct yet.}.  We need to use the invariant pairing on $\gg((z)) \oplus \gg((z))$ that vanishes on the subalgebra spanned by $(X, A_\phi(X))$, so we take the difference of the residue / Killing form pairings on the two summands.  The result is
 \begin{align*}
  \sum_{i=1}^d \langle b_i(2\pi), \phi^{-1} b'_i(0) \phi \rangle - \langle b_i(0), \phi b'_i(2\pi) \phi^{-1} \rangle 
 &= \sum_{i=1}^d \langle \phi b_i(2\pi), \phi^{-1} b'_i(0) \rangle - \langle \phi b'_i(2\pi), \phi ^{-1}b_i(0) \rangle
@@ -444,14 +442,13 @@ This is straightforward now, by combining the two local descriptions of the symp
 %&= \omega_{\mr{mHiggs}}(b_i(2\pi)H(\mc A), b'_i(2\pi)H(\mc A)) + \omega_{\mr{mHiggs}}(H(\mc A)b_i(0), H(\mc A)b'_i(0)) + \\
 %&\qquad -\omega_{\mr{mHiggs}}(b_i(2\pi)H(\mc A), H(\mc A)b'_i(0)) - \omega_{\mr{mHiggs}}(H(\mc A)b_i(0), b'_i(2\pi)H(\mc A))
 \end{align*}
-\chris{from here needs fixing.}
 We can write this in terms of a pairing on the bundle $\Ad(\phi)$.  Represent the class $b_i(2\pi)H(\mc A) - H(\mc A)b_i(0)$ by the pair $(H(\mc A)b_i(2\pi),b_i(0)H(\mc A))$.  Then applying the description of $\omega_{\mr{mHiggs}}$ provided by Proposition \ref{qconn_symp_description} we have
 \begin{align*}
 \omega_{\mr{mHiggs}}(\d H(\alpha_i), \d H(\alpha_i')) &= \omega_{\mr{mHiggs}}((H(\mc A)b_i(2\pi),b_i(0)H(\mc A)),(H(\mc A)b'_i(2\pi),b'_i(0)H(\mc A))) \\
 &= \langle  b_i(2\pi) H(\mc A), b_i'(0) H(\mc A) \rangle - \langle H(\mc A)b_i(0) , H(\mc A)b_i'(2\pi) \rangle.
 \end{align*}
 
-On the other hand, we can evaluate the pairing $\omega_{\mr{Mon}}(\alpha_i,\alpha'_i) = \omega_{\mr{Mon}}(\d_{\mr{mon}}(b_i),\d_{\mr{mon}}(b_i'))$ via integration by parts. The result is that
+On the other hand, we can evaluate the pairing $\omega_{\mr{Mon}}(\alpha_i,\alpha'_i) = \omega_{\mr{Mon}}(\d_{\mr{mon}}(b_i),\d_{\mr{mon}}(b_i'))$ via integration by parts. The result is that \chris{todo: fix and justify this.}
 \begin{align*}
 \omega_{\mr{Mon}}(\alpha_i,\alpha'_i) &= \int_{U_i} \kappa(\d_{\mr{mon}}(b_i) \wedge \d_{\mr{mon}}(b_i')) \d z \\
 &= \oint_{\bb D^\times_i} \kappa(b_i(2\pi)H(\mc A), b_i'(0)H(\mc A)) \d z - \oint_{\bb D^\times_i} \kappa(H(\mc A)b_i(0), H(\mc A)b_i'(2\pi)) \d z
