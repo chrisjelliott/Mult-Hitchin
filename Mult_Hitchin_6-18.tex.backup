@@ -244,7 +244,7 @@ The cochain complex $\mc F'_{(\bo P,\mc A)}(U_i)$ is the tangent complex to the 
 Now let's consider the tangent complex to the moduli space of $q$-connections.  For the arguments in this article we'll only need to carefully consider the case $q=\id$ of multiplicative Higgs bundles, but we'll include some remarks regarding the more general case.  In this case the calculation was performed by Bottacin \cite{Bottacin}, see also \cite[Section 4]{HurtubiseMarkman}. Fix a multiplicative Higgs bundle $(P,\phi)$ on $C$.  We consider the sheaf of cochain complexes on $C$
 \[\mc F_{(P,\phi)} = (\gg_P[1] \overset {\ad_\phi} {\to} \gg_P(D))\]
 in degrees $-1$ and 0 with differential given by the adjoint action of $\phi$.  More precisely let $L_\phi$ and $R_\phi$ be the bundle maps $\gg_P \to \gg_P$ obtained as the derivative of left- and right-multiplication.  Then $\ad_\phi = L_\phi - R_\phi$.  We can alternatively phrase this, as in \cite[Section 4]{HurtubiseMarkman}, as follows.  Define $\Ad(\phi)$ to be the vector bundle
-\[\Ad(\phi) = (\gg_P \oplus \gg_P)/\{(X, \phi X \phi^{-1}): X \in \gg_P\}.\]
+\[\Ad(\phi) = (\gg_P \oplus \gg_P)/\{(X, -\phi X \phi^{-1}): X \in \gg_P\}.\]
 Then we can write $\mc F$ as the sheaf of complexes
 \[\mc F_{(P,\phi)} = (\gg_P[1] \overset {\ad_\phi} {\to} \Ad(\phi))\]
 where now $\ad_\phi$ is just the map $X \mapsto [(X,-X)]$.
@@ -421,9 +421,7 @@ We can compute the composite operator $(\mr{ad}_\phi^*)^{-1}\mr{ad}_\phi^{-1}$ o
 &= \sum_{i=1}^d \langle (\alpha_i)|_{U^\times_i}, (\phi^{-1} \alpha_i' \phi)|_{U^\times_i}\rangle.
 \end{align*}
 
-We can represent $\alpha_i$ by a class in the bundle $\Ad(\phi)$, i.e. by an equivalence class of pairs $(^L, b^R)(\delta \phi) \in \gg((z))^2$.  In this form the operator $A_\phi$ acts by $(b^L, b^R) \mapsto (\phi^{-1}b^L \phi,)$
-
-$(b_i(2\pi),b_i(0))\mapsto (b_i(0),-b_i(2\pi))$ \chris{or maybe $(\phi^2 b_i(0) \phi^{-2},-b_i(2\pi))$}.  We need to use the invariant pairing on $\gg((z)) \oplus \gg((z))$ that vanishes on the subalgebra spanned by $(X, A_\phi(X))$, so we take the difference of the residue / Killing form pairings on the two summands.  The result is
+We can represent $\alpha_i$ by a class in the bundle $\Ad(\phi)$, i.e. by an equivalence class of pairs $(b^L, b^R)(\delta \phi) \in \gg((z))^2$.  In this form the operator $A_\phi$ acts by $(b^L, b^R) \mapsto (-\phi^{-1}b^R \phi, \phi b^L \phi^{-1})$ \chris{?? I'm sure this isn't correct right now.  What follows also needs fixing but I haven't got the above correct yet.}.  We need to use the invariant pairing on $\gg((z)) \oplus \gg((z))$ that vanishes on the subalgebra spanned by $(X, A_\phi(X))$, so we take the difference of the residue / Killing form pairings on the two summands.  The result is
 \begin{align*}
  \sum_{i=1}^d \langle b_i(2\pi), \phi^{-1} b'_i(0) \phi \rangle - \langle b_i(0), \phi b'_i(2\pi) \phi^{-1} \rangle 
 &= \sum_{i=1}^d \langle \phi b_i(2\pi), \phi^{-1} b'_i(0) \rangle - \langle \phi b'_i(2\pi), \phi ^{-1}b_i(0) \rangle
@@ -444,18 +442,22 @@ This is straightforward now, by combining the two local descriptions of the symp
 %&= \omega_{\mr{mHiggs}}(b_i(2\pi)H(\mc A), b'_i(2\pi)H(\mc A)) + \omega_{\mr{mHiggs}}(H(\mc A)b_i(0), H(\mc A)b'_i(0)) + \\
 %&\qquad -\omega_{\mr{mHiggs}}(b_i(2\pi)H(\mc A), H(\mc A)b'_i(0)) - \omega_{\mr{mHiggs}}(H(\mc A)b_i(0), b'_i(2\pi)H(\mc A))
 \end{align*}
-\chris{from here needs fixing.}
-We can write this in terms of a pairing on the bundle $\Ad(\phi)$.  Represent the class $b_i(2\pi)H(\mc A) - H(\mc A)b_i(0)$ by the pair $(,)$.  Then applying the description of $\omega_{\mr{mHiggs}}$ provided by Proposition \ref{qconn_symp_description} we have
+We can write this in terms of a pairing on the bundle $\Ad(\phi)$.  Represent the class $b_i(2\pi)H(\mc A) - H(\mc A)b_i(0)$ by the pair $(H(\mc A)b_i(2\pi),b_i(0)H(\mc A))$.  Then applying the description of $\omega_{\mr{mHiggs}}$ provided by Proposition \ref{qconn_symp_description} we have
 \begin{align*}
 \omega_{\mr{mHiggs}}(\d H(\alpha_i), \d H(\alpha_i')) &= \omega_{\mr{mHiggs}}((H(\mc A)b_i(2\pi),b_i(0)H(\mc A)),(H(\mc A)b'_i(2\pi),b'_i(0)H(\mc A))) \\
-&= \langle H(\mc A) b_i(2\pi) H(\mc A)^{-1}, b_i'(2\pi) \rangle - \langle H(\mc A)^{-1} b_i(0) H(\mc A), b_i'(0) \rangle.
+&= \langle  b_i(2\pi) H(\mc A), b_i'(0) H(\mc A) \rangle - \langle H(\mc A)b_i(0) , H(\mc A)b_i'(2\pi) \rangle.
 \end{align*}
 
-On the other hand, we can evaluate the pairing $\omega_{\mr{Mon}}(\alpha_i,\alpha'_i) = \omega_{\mr{Mon}}(\d_{\mr{mon}}(b_i),\d_{\mr{mon}}(b_i'))$ via integration by parts. The result is that
+On the other hand, we can evaluate the pairing $\omega_{\mr{Mon}}(\alpha_i,\alpha'_i) = \omega_{\mr{Mon}}(\d_{\mr{mon}}(b_i),\d_{\mr{mon}}(b_i'))$ via integration by parts. We'll compute the symplectic pairing for the full \v Cech complex, but it will split into a sum over open sets $U_i$.  The result is that
 \begin{align*}
-\omega_{\mr{Mon}}(\alpha_i,\alpha'_i) &= \int_{U_i} \kappa(\d_{\mr{mon}}(b_i) \wedge \d_{\mr{mon}}(b_i')) \d z \\
-&= \oint_{\bb D^\times_i} \kappa(b_i(2\pi) H(\mc A), b_i'(2\pi)H(\mc A)) \d z - \oint_{\bb D^\times_i} \kappa(H(\mc A)b_i(0), H(\mc A)b_i'(0)) \d z.
+\omega_{\mr{Mon}}(\{\alpha_i\},\{\alpha'_i\}) &= \sum_{i=0,\ldots,k,\infty} \int_{U_i} \kappa(\d_{\mr{mon}}(b_i) \wedge \d_{\mr{mon}}(b_i')) \d z + (b \leftrightarrows b')\\
+&= \sum_{i=1,\ldots,k,\infty} \int_{\dd \bb D_i \times [0,2\pi]} \kappa(b_i - b_0, \d_{\mr{mon}}(b'_i)) \d z + (b \leftrightarrows b')\\
+&= \sum_{i=1,\ldots,k,\infty} \oint_{\dd \bb D_i} \kappa(b_i(2\pi) - b_0(2\pi), b'_i(2 \pi)) - \kappa(b_i(0) - b_0(0), b'_i(0)) + (b \leftrightarrows b')\\
+&= \sum_{i=1,\ldots,k,\infty} \oint_{\dd \bb D_i} - \kappa(b_0(2\pi), b'_i(2 \pi)) + \kappa(b_0(0), b'_i(0)) + (b \leftrightarrows b').
 \end{align*}
+On the second line we used the fact that $\d_{\mr{mon}}b_i = \d_{\mr{mon}} b_0$ on $U_i \cap U_0$ and that $\d_{\mr{mon}} b_i(t) = 0$ when $t = 0$ or $2\pi$.  Pick out the summand corresponding to $U_i$.  On the open set $U_0$ containing no singularities we can choose a potential so that $b_0(2\pi) = 0$ and so that on $U_0 \cap U_i$ we have $b_0(0) = H(\mc A) b_i(2\pi) H(\mc A)^{-1}$.  Then
+\[ \omega_{\mr{Mon}}(\{\alpha_i\},\{\alpha'_i\}) = \oint_{\dd \bb D_i} \kappa(H(\mc A) b_i(2\pi) H(\mc A)^{-1}, b_i'(0)) + \kappa(H(\mc A) b'_i(2\pi) H(\mc A)^{-1},b_i(0))\]
+agreeing with the expression coming from $\mr{mHiggs}$.
 \end{proof}
 
 \begin{remark}

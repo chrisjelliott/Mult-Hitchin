@@ -388,8 +388,8 @@ In order to work with this symplectic structure we'll need to give a local descr
 
 \begin{lemma}
 As a pairing on the tangent complex at a point $(P,\phi)$ the symplectic form on the moduli space of $q$-connections pairs $\alpha_i$ with $\beta_i$ for $i=1,\ldots,k$.  It is given on this coordinate patch by the formula 
-\[\omega(\alpha_i, \beta_i') = \langle (\alpha_i + \wt \alpha)|_{U^\times_i}, (\mr{ad}_\phi^*)^{-1}(\beta'_i) \rangle\]
-where we use the Killing form to identify $\beta'_i$ with a $\gg^*$-valued form.
+\[\omega(\alpha_i, \beta_i') = \langle \rho_\phi^*(\alpha_i + \wt \alpha)|_{U^\times_i}, \rho_\phi^*(\mr{ad}_\phi^*)^{-1}(\beta'_i) \rangle\]
+where we use the Killing form to identify $\beta'_i$ with a $\gg^*$-valued form, and where $\rho_\phi^*$ is the pullback along the right multiplication by $\phi$.
 \end{lemma}
 
 \begin{proof}
@@ -404,29 +404,33 @@ We obtain a potential for the image of the residue pairing $\nu$ under this pull
 \chris{correct the below proposition.}
 \begin{prop} \label{qconn_symp_description}
 The symplectic form on the moduli space of $q$-connections can be written in the form
-\[\omega(\delta \phi, \delta \phi') = \sum_{i=1}^d \langle \phi^{-1} b_i(2\pi) \phi, b'_i(0) \rangle - \langle \phi^{-1} b'_i(2\pi) \phi, b_i(0) \rangle.\]
+\[\omega(\delta \phi, \delta \phi') = \sum_{i=1}^d \langle b_i^L \phi^{-1}, b^{'R}_i \phi^{-1} \rangle - (b \leftrightarrow b')\]
+where $\delta \phi$ is represented on $U_i$ by a pair $(b^L, b^R) \in \Ad_\phi$.
 \end{prop}
 
 \begin{proof}
  Specify a representative cocycle $(\alpha_\infty, \{\alpha_i\}, \alpha_0, \beta_\infty, \{\beta_i\})$ for the first \v Cech cohomology group. By addition of a coboundary we can assume that $\alpha_0=0$, and to force $\alpha_\infty$ to land in $z\gg[[z]]$ and each $\alpha_i$ to land in $z^{-1}\gg[[z]]$.  We've now fixed a representative cocycle -- there's no further gauge freedom.  Ignoring the factor at infinity -- since after we add these coboundaries the residue pairing there vanishes -- the pairing we end up with looks like 
 \begin{align*}
-\omega(\delta \phi, \delta \phi') &= \sum_{i=1}^d \langle (\alpha_i + \wt \alpha)|_{U^\times_i}, (\mr{ad}_\phi^*)^{-1}( \beta'_i) \rangle \\ 
-&= \sum_{i=1}^d \langle (\alpha_i + \wt \alpha)|_{U^\times_i}, (\mr{ad}_\phi^*)^{-1}(\mr{ad}_\phi^{-1}(\alpha_i' - \wt \alpha')) \rangle \\
-&= \sum_{i=1}^d \langle (\alpha_i)|_{U^\times_i}, (\mr{ad}_\phi^*)^{-1}(\mr{ad}_\phi^{-1}(\alpha_i')|_{U^\times_i}) \rangle.
+\omega(\delta \phi, \delta \phi') &= \sum_{i=1}^d \langle \rho_\phi^*(\alpha_i + \wt \alpha)|_{U^\times_i},\rho_\phi^* (\mr{ad}_\phi^*)^{-1}( \beta'_i) \rangle - ((\alpha,\beta) \leftrightarrow (\alpha',\beta')\\ 
+&= \sum_{i=1}^d \langle \rho_\phi^*(\alpha_i + \wt \alpha)|_{U^\times_i}, \rho_\phi^*(\mr{ad}_\phi^*)^{-1}(\mr{ad}_\phi^{-1}(\alpha_i' - \wt \alpha')) \rangle - (\alpha \leftrightarrow \alpha')\\
+&= \sum_{i=1}^d \langle \rho_\phi^*(\alpha_i)|_{U^\times_i}, \rho_\phi^*(\mr{ad}_\phi^*)^{-1}(\mr{ad}_\phi^{-1}(\alpha_i')|_{U^\times_i}) \rangle - (\alpha \leftrightarrow \alpha').
 \end{align*}
 
+\chris{There must be an error here as the antisymmetrization below vanishes.}t
 We can compute the composite operator $(\mr{ad}_\phi^*)^{-1}\mr{ad}_\phi^{-1}$ on $\gg_P(1)(U^\times_i) \iso \gg((z))$.  It's given by the inverse of the operator $\alpha \mapsto - \alpha - \phi^{-1} \alpha \phi$.  Call this operator $-(1 + A_\phi)$.  Then $(1+A_\phi)^{-1} = 1 - A_\phi + A_\phi^2 + \cdots$.  After applying our gauge transformation above the remaining degree of freedom in $\alpha_i$ is its $z^{-1}$ term.  Each time we apply $A$ it raises the order in $z$ of this term by one, so only the linear summand $A_\phi$ of $-(1+A_\phi)^{-1}$ contributes to the residue pairing.  We therefore get
 \begin{align*}
-\omega(\delta \phi, \delta \phi') &= \sum_{i=1}^d \langle (\alpha_i)|_{U^\times_i}, (-1-A_\phi)^{-1}(\alpha_i')|_{U^\times_i} \rangle\\
-&= \sum_{i=1}^d \langle (\alpha_i)|_{U^\times_i}, (\phi^{-1} \alpha_i' \phi)|_{U^\times_i}\rangle.
+\omega(\delta \phi, \delta \phi') &= \sum_{i=1}^d \langle \rho_\phi^*(\alpha_i)|_{U^\times_i}, \rho_\phi^*(-1-A_\phi)^{-1}(\alpha_i')|_{U^\times_i} \rangle - (\alpha \leftrightarrow \alpha')\\
+&= \sum_{i=1}^d \langle \rho_\phi^*(\alpha_i)|_{U^\times_i}, \rho_\phi^*(\phi^{-1} \alpha_i' \phi)|_{U^\times_i}\rangle - (\alpha \leftrightarrow \alpha').
 \end{align*}
 
-We can represent $\alpha_i$ by a class in the bundle $\Ad(\phi)$, i.e. by an equivalence class of pairs $(b^L, b^R)(\delta \phi) \in \gg((z))^2$.  In this form the operator $A_\phi$ acts by $(b^L, b^R) \mapsto (-\phi^{-1}b^R \phi, \phi b^L \phi^{-1})$ \chris{?? I'm sure this isn't correct right now.  What follows also needs fixing but I haven't got the above correct yet.}.  We need to use the invariant pairing on $\gg((z)) \oplus \gg((z))$ that vanishes on the subalgebra spanned by $(X, A_\phi(X))$, so we take the difference of the residue / Killing form pairings on the two summands.  The result is
-\begin{align*}
- \sum_{i=1}^d \langle b_i(2\pi), \phi^{-1} b'_i(0) \phi \rangle - \langle b_i(0), \phi b'_i(2\pi) \phi^{-1} \rangle 
-&= \sum_{i=1}^d \langle \phi b_i(2\pi), \phi^{-1} b'_i(0) \rangle - \langle \phi b'_i(2\pi), \phi ^{-1}b_i(0) \rangle
-\end{align*}
-using cyclic invariance in the last step. 
+We can represent $\alpha_i$ by a class in the bundle $\Ad(\phi)$, i.e. by an equivalence class of pairs $(b^L, b^R)(\delta \phi) \in \gg((z))^2$.  In this form the operator $A_\phi$ acts by $(b^L, b^R) \mapsto (b^L, -b^R)$ \chris{replace from here}
+
+%$(b^L, b^R) \mapsto (-\phi^{-1}b^R \phi, \phi b^L \phi^{-1})$ \chris{?? I'm sure this isn't correct right now.  What follows also needs fixing but I haven't got the above correct yet.}.  We need to use the invariant pairing on $\gg((z)) \oplus \gg((z))$ that vanishes on the subalgebra spanned by $(X, A_\phi(X))$, so we take the difference of the residue / Killing form pairings on the two summands.  The result is
+%\begin{align*}
+% \sum_{i=1}^d \langle b_i(2\pi), \phi^{-1} b'_i(0) \phi \rangle - \langle b_i(0), \phi b'_i(2\pi) \phi^{-1} \rangle 
+%&= \sum_{i=1}^d \langle \phi b_i(2\pi), \phi^{-1} b'_i(0) \rangle - \langle \phi b'_i(2\pi), \phi ^{-1}b_i(0) \rangle
+%\end{align*}
+%using cyclic invariance in the last step. 
 \end{proof}
 
 We can now establish our main result.
@@ -439,21 +443,24 @@ This is straightforward now, by combining the two local descriptions of the symp
 \begin{align*}
 \omega_{\mr{mHiggs}}(\d H(\alpha_i), \d H(\alpha_i')) &= \omega_{\mr{mHiggs}}(\d H(\d_{\mr{mon}}(b_i)), \d H(\d_{\mr{mon}}(b_i'))) \\
 &= \omega_{\mr{mHiggs}}(b_i(2\pi)H(\mc A) - H(\mc A)b_i(0),b'_i(2\pi)H(\mc A) - H(\mc A)b'_i(0)).
-%&= \omega_{\mr{mHiggs}}(b_i(2\pi)H(\mc A), b'_i(2\pi)H(\mc A)) + \omega_{\mr{mHiggs}}(H(\mc A)b_i(0), H(\mc A)b'_i(0)) + \\
-%&\qquad -\omega_{\mr{mHiggs}}(b_i(2\pi)H(\mc A), H(\mc A)b'_i(0)) - \omega_{\mr{mHiggs}}(H(\mc A)b_i(0), b'_i(2\pi)H(\mc A))
 \end{align*}
 We can write this in terms of a pairing on the bundle $\Ad(\phi)$.  Represent the class $b_i(2\pi)H(\mc A) - H(\mc A)b_i(0)$ by the pair $(H(\mc A)b_i(2\pi),b_i(0)H(\mc A))$.  Then applying the description of $\omega_{\mr{mHiggs}}$ provided by Proposition \ref{qconn_symp_description} we have
 \begin{align*}
 \omega_{\mr{mHiggs}}(\d H(\alpha_i), \d H(\alpha_i')) &= \omega_{\mr{mHiggs}}((H(\mc A)b_i(2\pi),b_i(0)H(\mc A)),(H(\mc A)b'_i(2\pi),b'_i(0)H(\mc A))) \\
-&= \langle  b_i(2\pi) H(\mc A), b_i'(0) H(\mc A) \rangle - \langle H(\mc A)b_i(0) , H(\mc A)b_i'(2\pi) \rangle.
+&= \langle  H(\mc A) b_i(2\pi) H(\mc A)^{-1}, b_i'(0) \rangle - (b \leftrightarrow b')
 \end{align*}
+where the remaining terms are killed by the antisymmetrization.
 
-On the other hand, we can evaluate the pairing $\omega_{\mr{Mon}}(\alpha_i,\alpha'_i) = \omega_{\mr{Mon}}(\d_{\mr{mon}}(b_i),\d_{\mr{mon}}(b_i'))$ via integration by parts. The result is that \chris{todo: fix and justify this.}
+On the other hand, we can evaluate the pairing $\omega_{\mr{Mon}}(\alpha_i,\alpha'_i) = \omega_{\mr{Mon}}(\d_{\mr{mon}}(b_i),\d_{\mr{mon}}(b_i'))$ via integration by parts. We'll compute the symplectic pairing for the full \v Cech complex, but it will split into a sum over open sets $U_i$.  The result is that
 \begin{align*}
-\omega_{\mr{Mon}}(\alpha_i,\alpha'_i) &= \int_{U_i} \kappa(\d_{\mr{mon}}(b_i) \wedge \d_{\mr{mon}}(b_i')) \d z \\
-&= \oint_{\bb D^\times_i} \kappa(b_i(2\pi)H(\mc A), b_i'(0)H(\mc A)) \d z - \oint_{\bb D^\times_i} \kappa(H(\mc A)b_i(0), H(\mc A)b_i'(2\pi)) \d z
+\omega_{\mr{Mon}}(\{\alpha_i\},\{\alpha'_i\}) &= \sum_{i=0,\ldots,k,\infty} \int_{U_i} \kappa(\d_{\mr{mon}}(b_i) \wedge \d_{\mr{mon}}(b_i')) \d z - (b \leftrightarrow b')\\
+&= \sum_{i=1,\ldots,k,\infty} \int_{\dd \bb D_i \times [0,2\pi]} \kappa(b_i - b_0, \d_{\mr{mon}}(b'_i)) \d z - (b \leftrightarrow b')\\
+&= \sum_{i=1,\ldots,k,\infty} \oint_{\dd \bb D_i} \kappa(b_i(2\pi) - b_0(2\pi), b'_i(2 \pi)) - \kappa(b_i(0) - b_0(0), b'_i(0)) - (b \leftrightarrow b')\\
+&= \sum_{i=1,\ldots,k,\infty} \oint_{\dd \bb D_i} - \kappa(b_0(2\pi), b'_i(2 \pi)) + \kappa(b_0(0), b'_i(0)) - (b \leftrightarrow b').
 \end{align*}
-so that the two expressions coincide.
+On the second line we used the fact that $\d_{\mr{mon}}b_i = \d_{\mr{mon}} b_0$ on $U_i \cap U_0$ and that $\d_{\mr{mon}} b_i(t) = 0$ when $t = 0$ or $2\pi$.  Pick out the summand corresponding to $U_i$.  Choose our potentials so that on the boundary $\dd \bb D_i$ we have $b_0(2\pi) = 0$ and $b_i(0) = 0$ \chris{possible why?}, which means that on $U_0 \cap U_i$ we can identify $b_0(0) = H(\mc A) b_i(2\pi) H(\mc A)^{-1}$.  Then
+\[ \omega_{\mr{Mon}}(\{\alpha_i\},\{\alpha'_i\}) = \oint_{\dd \bb D_i} \kappa(H(\mc A) b_i(2\pi) H(\mc A)^{-1}, b_i'(0)) - (b \leftrightarrow b')\]
+agreeing with the expression coming from $\mr{mHiggs}$.
 \end{proof}
 
 \begin{remark}
