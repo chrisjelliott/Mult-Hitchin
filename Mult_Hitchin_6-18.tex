@@ -401,11 +401,10 @@ where $\eta$ is a potential for the pullback $(f_1 \circ g)^*\nu$.  The Lagrangi
 We obtain a potential for the image of the residue pairing $\nu$ under this pullback as follows. \chris{todo: complete.  We end up with the residue pairing on $\ad(\phi)^*$, and we'll get a potential by applying $\Ad_\phi^*$ to one of the two factors.  Can write it down as in the lemma above.}
 \end{proof}
 
-\chris{correct the below proposition.}
 \begin{prop} \label{qconn_symp_description}
 The symplectic form on the moduli space of $q$-connections can be written in the form
-\[\omega(\delta \phi, \delta \phi') = \sum_{i=1}^d \langle b_i^L \phi^{-1}, b^{'R}_i \phi^{-1} \rangle - (b \leftrightarrow b')\]
-where $\delta \phi$ is represented on $U_i$ by a pair $(b^L, b^R) \in \Ad_\phi$.
+\[\omega(\delta \phi, \delta \phi') = - \sum_{i=1}^d \langle b_i^L \phi^{-1}, b^{'R}_i \phi^{-1} \rangle - (b \leftrightarrow b')\]
+where $\delta \phi$ is represented on $U_i$ by a pair $(b^L, b^R) \in \Ad_\phi$.  Here and throughout the notation ``$- (b \leftrightarrow b')$'' denotes antisymmetrization.
 \end{prop}
 
 \begin{proof}
@@ -418,8 +417,8 @@ where $\delta \phi$ is represented on $U_i$ by a pair $(b^L, b^R) \in \Ad_\phi$.
 
 We can compute the composite operator $(\Ad_\phi^*)^{-1}\Ad_\phi^{-1}$ on $\mr{ad}(P)(U^\times_i)$.  It's given by the inverse of the operator $\Ad_\phi\Ad_\phi^*$ which sends a pair $(b^L, b^R) \in \mr{ad}(P)(U^\times_i)$ to $(b^L - b^R, b^R - b^L) \sim (b^L + \phi^{-1} b^L \phi, b^R - \phi b^R \phi^{-1})$.  Denote this by $((1+A_\phi)b^L,(1-A_{\phi^{-1}})b^R)$.  We can describe the inverse using the expansion $(1+A_\phi)^{-1} = 1 - A_\phi + A_\phi^2 + \cdots$.  After applying our gauge transformation above the remaining degree of freedom in $\alpha_i$ is its $z^{-1}$ term.  Each time we apply $A$ it raises the order in $z$ of this term by one, so only the linear summand $A_\phi$ of $-(1+A_\phi)^{-1}$ contributes to the residue pairing.  In the pairing we need to use the invariant pairing on $\gg((z)) \oplus \gg((z))$ that vanishes on the subalgebra spanned by $(X, A_\phi(X))$, so we take the difference of the residue / Killing form pairings on the two summands.
 \begin{align*}
-\omega(\delta \phi, \delta \phi') &= \sum_{i=1}^d \langle \rho_\phi^*b^L_i, \rho_\phi^*A_{\phi^{-1}}b^{'R}_i \rangle + \langle \rho_\phi^*A_\phi b^L_i, \rho_\phi^*b^{'R}_i \rangle - (b \leftrightarrow b') \\ 
-&= \sum_{i=1}^d \langle b^L_i\phi^{-1}, b^{'R}_i \phi^{-1} \rangle  - (b \leftrightarrow b')
+\omega(\delta \phi, \delta \phi') &= \sum_{i=1}^d  - \langle \rho_\phi^*A_\phi b^L_i, \rho_\phi^*b^{'R}_i \rangle - \langle \rho_\phi^*b^L_i, \rho_\phi^*A_{\phi^{-1}}b^{'R}_i \rangle- (b \leftrightarrow b') \\ 
+&= - \sum_{i=1}^d \langle b^L_i\phi^{-1}, b^{'R}_i \phi^{-1} \rangle  - (b \leftrightarrow b')
 \end{align*}
 using cyclic invariant to identify the two terms.
 \end{proof}
@@ -430,15 +429,15 @@ The symplectic structure on $\mon_G^\fr(\bb{CP}^1 \times S^1,D \times\{0\},\omeg
 \end{theorem}
 
 \begin{proof}
-This is straightforward now, by combining the two local descriptions of the symplectic structure on monopoles and multiplicative Higgs bundles on a neighbourhood of a puncture with the description in Proposition \ref{local_derivative_description_prop}.  So, let's begin by taking the symplectic form $\omega_{\mr{mHiggs}}$ on the moduli space $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ and evaluating it at the image under $\d H$ of two elements $(\alpha_i, \alpha'_i) = (\d_{\mr{mon}}(b_i), \d_{\mr{mon}}(b_i'))$.  According to Proposition \ref{local_derivative_description_prop} and Proposition \ref{qconn_symp_description} we have
+This is straightforward now, by combining the two local descriptions of the symplectic structure on monopoles and multiplicative Higgs bundles on a neighbourhood of a puncture with the description in Proposition \ref{local_derivative_description_prop}.  So, let's begin by taking the symplectic form $\omega_{\mr{mHiggs}}$ on the moduli space $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ and evaluating it at the image under $\d H$ of two elements $(\alpha_i, \alpha'_i) = (\d_{\mr{mon}}(b_i), \d_{\mr{mon}}(b_i'))$.  According to Proposition \ref{local_derivative_description_prop} we have
 \begin{align*}
 \omega_{\mr{mHiggs}}(\d H(\alpha_i), \d H(\alpha_i')) &= \omega_{\mr{mHiggs}}(\d H(\d_{\mr{mon}}(b_i)), \d H(\d_{\mr{mon}}(b_i'))) \\
 &= \omega_{\mr{mHiggs}}(b_i(2\pi)H(\mc A) - H(\mc A)b_i(0),b'_i(2\pi)H(\mc A) - H(\mc A)b'_i(0)).
 \end{align*}
-We can write this in terms of a pairing on the bundle $\ad(\phi)$.  Represent the class $b_i(2\pi)H(\mc A) - H(\mc A)b_i(0)$ by the pair $(H(\mc A)b_i(2\pi),b_i(0)H(\mc A))$.  Then applying the description of $\omega_{\mr{mHiggs}}$ provided by Proposition \ref{qconn_symp_description} we have
+We can write this in terms of a pairing on the bundle $\ad(\phi)$.  Represent the class $b_i(2\pi)H(\mc A) - H(\mc A)b_i(0)$ by the pair $(b_i(2\pi)H(\mc A), -H(\mc A)b_i(0))$.  Then applying the description of $\omega_{\mr{mHiggs}}$ provided by Proposition \ref{qconn_symp_description} we have
 \begin{align*}
-\omega_{\mr{mHiggs}}(\d H(\alpha_i), \d H(\alpha_i')) &= \omega_{\mr{mHiggs}}((H(\mc A)b_i(2\pi),b_i(0)H(\mc A)),(H(\mc A)b'_i(2\pi),b'_i(0)H(\mc A))) \\
-&= \langle  H(\mc A) b_i(2\pi) H(\mc A)^{-1}, b_i'(0) \rangle - (b \leftrightarrow b')
+\omega_{\mr{mHiggs}}(\d H(\alpha_i), \d H(\alpha_i')) &= \omega_{\mr{mHiggs}}((b_i(2\pi)H(\mc A), -H(\mc A)b_i(0)),(b'_i(2\pi)H(\mc A), -H(\mc A)b'_i(0))) \\ 
+&= \langle  b_i(2\pi) , H(\mc A) b_i'(0) H(\mc A)^{-1}\rangle - (b \leftrightarrow b')
 \end{align*}
 where the remaining terms are killed by the antisymmetrization.
 
@@ -449,8 +448,8 @@ On the other hand, we can evaluate the pairing $\omega_{\mr{Mon}}(\alpha_i,\alph
 &= \sum_{i=1,\ldots,k,\infty} \oint_{\dd \bb D_i} \kappa(b_i(2\pi) - b_0(2\pi), b'_i(2 \pi)) - \kappa(b_i(0) - b_0(0), b'_i(0)) - (b \leftrightarrow b')\\
 &= \sum_{i=1,\ldots,k,\infty} \oint_{\dd \bb D_i} - \kappa(b_0(2\pi), b'_i(2 \pi)) + \kappa(b_0(0), b'_i(0)) - (b \leftrightarrow b').
 \end{align*}
-On the second line we used the fact that $\d_{\mr{mon}}b_i = \d_{\mr{mon}} b_0$ on $U_i \cap U_0$ and that $\d_{\mr{mon}} b_i(t) = 0$ when $t = 0$ or $2\pi$.  Pick out the summand corresponding to $U_i$.  Choose our potentials so that on the boundary $\dd \bb D_i$ we have $b_0(2\pi) = 0$ and $b_i(0) = 0$ \chris{possible why?}, which means that on $U_0 \cap U_i$ we can identify $b_0(0) = H(\mc A) b_i(2\pi) H(\mc A)^{-1}$.  Then
-\[ \omega_{\mr{Mon}}(\{\alpha_i\},\{\alpha'_i\}) = \oint_{\dd \bb D_i} \kappa(H(\mc A) b_i(2\pi) H(\mc A)^{-1}, b_i'(0)) - (b \leftrightarrow b')\]
+On the second line we used the fact that $\d_{\mr{mon}}b_i = \d_{\mr{mon}} b_0$ on $U_i \cap U_0$ and that $\d_{\mr{mon}} b_i(t) = 0$ when $t = 0$ or $2\pi$.  Pick out the summand corresponding to $U_i$.  Choose our potentials so that on the boundary $\dd \bb D_i$ we have $b_0(0) = 0$ and $b_i(2\pi) = 0$ \chris{possible why?}, which means that on $U_0 \cap U_i$ we can identify $b_0(2\pi) = H(\mc A) b_i(0) H(\mc A)^{-1}$.  Then
+\[ \omega_{\mr{Mon}}(\{\alpha_i\},\{\alpha'_i\}) = \oint_{\dd \bb D_i} \kappa( b_i(2\pi),  H(\mc A)b_i'(0) H(\mc A)^{-1}) - (b \leftrightarrow b')\]
 agreeing with the expression coming from $\mr{mHiggs}$.
 \end{proof}
 

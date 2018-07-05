@@ -243,10 +243,10 @@ The cochain complex $\mc F'_{(\bo P,\mc A)}(U_i)$ is the tangent complex to the 
 
 Now let's consider the tangent complex to the moduli space of $q$-connections.  For the arguments in this article we'll only need to carefully consider the case $q=\id$ of multiplicative Higgs bundles, but we'll include some remarks regarding the more general case.  In this case the calculation was performed by Bottacin \cite{Bottacin}, see also \cite[Section 4]{HurtubiseMarkman}. Fix a multiplicative Higgs bundle $(P,\phi)$ on $C$.  We consider the sheaf of cochain complexes on $C$
 \[\mc F_{(P,\phi)} = (\gg_P[1] \overset {\Ad_\phi} {\to} \gg_P(D))\]
-in degrees $-1$ and 0 with differential given by the adjoint action of $\phi$.  More precisely let $L_\phi$ and $R_\phi$ be the bundle maps $\gg_P \to \gg_P$ obtained as the derivative of left- and right-multiplication.  Then $\Ad_\phi = L_\phi - R_\phi$.  We can alternatively phrase this, as in \cite[Section 4]{HurtubiseMarkman}, as follows.  Define $\Ad(\phi)$ to be the vector bundle
-\[\Ad(\phi) = (\gg_P \oplus \gg_P)/\{(X, -\phi X \phi^{-1}): X \in \gg_P\}.\]
+in degrees $-1$ and 0 with differential given by the adjoint action of $\phi$.  More precisely let $L_\phi$ and $R_\phi$ be the bundle maps $\gg_P \to \gg_P$ obtained as the derivative of left- and right-multiplication.  Then $\Ad_\phi = L_\phi - R_\phi$.  We can alternatively phrase this, as in \cite[Section 4]{HurtubiseMarkman}, as follows.  Define $\ad(\phi)$ to be the vector bundle
+\[\ad(\phi) = (\gg_P \oplus \gg_P)/\{(X, -\phi X \phi^{-1}): X \in \gg_P\}.\]
 Then we can write $\mc F$ as the sheaf of complexes
-\[\mc F_{(P,\phi)} = (\gg_P[1] \overset {\Ad_\phi} {\to} \Ad(\phi))\]
+\[\mc F_{(P,\phi)} = (\gg_P[1] \overset {\Ad_\phi} {\to} \ad(\phi))\]
 where now $\Ad_\phi$ is just the map $X \mapsto [(X,-X)]$.
 
 \begin{remark}
@@ -256,7 +256,7 @@ If one introduces a framing at a point $c \in C$ then we must correspondingly tw
 
 \begin{remark}
 For more general $q$ we should modify this description by replacing $\phi$ by a $q$-connection.  Note that one can still define the ($q$-twisted) adjoint action $X \mapsto \phi X \phi^{-1}$ using a $q$-connection, and so we can still define the complex
-\[\mc F_{(P,\phi)} = (\gg_P[1] \overset {\Ad_\phi} {\to} \Ad(\phi))\]
+\[\mc F_{(P,\phi)} = (\gg_P[1] \overset {\Ad_\phi} {\to} \ad(\phi))\]
 just as in the untwisted case \chris{check}.
 \end{remark}
 
@@ -396,9 +396,9 @@ where we use the Killing form to identify $\beta'_i$ with a $\gg^*$-valued form,
 The formula given above is saying that the Poisson bivector -- viewed as a map $\pi \colon \bb L_{(P,\phi)} \to \bb T_{(P,\phi)}$ -- acts in degree $-1$ by identifying $\gg$ with $\gg^*$ then applying the map $\Ad_\phi^*$.  Recall that to describe the Poisson bivector we must locally on $U_i$ describe the sum
 \[\lambda = f_1^*(\mu_1) + f_2^*(\mu_2) + \eta
 \]
-where $\eta$ is a potential for the pullback $(f_1 \circ g)^*\nu$.  The Lagrangian structure $\mu_1$ on the diagonal is 0, and the Lagrangian structure $\mu_2$ vanishes upon restriction to the open set $U_i$ since the map $\bun_G^{\fr}(\bb{CP}^1 \bs D) \to \bun_G^{\fr}(\bb{CP}^1 \bs D)^2 \times_{BLG^{2k}} BLG^{k}$ becomes an isomorphism after restricting to a formal neighbourhood of $z_i$ \chris{justify the difference between a formal neighbourhood and a contractible analytic neighbourhood here}.  We must therefore find a local potential for $(f_1 \circ g)^*\nu$ where $\nu$ is the structure from Lemma \ref{restriction_Lagn_lemma}.  On the cotangent complex, the pullback $g^*$ acts by the dual to the $q$-twisted diagonal map $\gg[[z]] \to \gg(\!(z)\!)^2$.  The pullback $(f_1 \circ g)^*$ acts by the projection map $\gg^*(\!(z)\!)^2 \to \Ad(\phi)^*|_{\bb D^\times}$ onto formal local section of the bundle $\Ad(\phi)^*$.
+where $\eta$ is a potential for the pullback $(f_1 \circ g)^*\nu$.  The Lagrangian structure $\mu_1$ on the diagonal is 0, and the Lagrangian structure $\mu_2$ vanishes upon restriction to the open set $U_i$ since the map $\bun_G^{\fr}(\bb{CP}^1 \bs D) \to \bun_G^{\fr}(\bb{CP}^1 \bs D)^2 \times_{BLG^{2k}} BLG^{k}$ becomes an isomorphism after restricting to a formal neighbourhood of $z_i$ \chris{justify the difference between a formal neighbourhood and a contractible analytic neighbourhood here}.  We must therefore find a local potential for $(f_1 \circ g)^*\nu$ where $\nu$ is the structure from Lemma \ref{restriction_Lagn_lemma}.  On the cotangent complex, the pullback $g^*$ acts by the dual to the $q$-twisted diagonal map $\gg[[z]] \to \gg(\!(z)\!)^2$.  The pullback $(f_1 \circ g)^*$ acts by the projection map $\gg^*(\!(z)\!)^2 \to \ad(\phi)^*|_{\bb D^\times}$ onto formal local section of the bundle $\ad(\phi)^*$.
 
-We obtain a potential for the image of the residue pairing $\nu$ under this pullback as follows. \chris{todo: complete.  We end up with the residue pairing on $\Ad(\phi)^*$, and we'll get a potential by applying $\Ad_\phi^*$ to one of the two factors.  Can write it down as in the lemma above.}
+We obtain a potential for the image of the residue pairing $\nu$ under this pullback as follows. \chris{todo: complete.  We end up with the residue pairing on $\ad(\phi)^*$, and we'll get a potential by applying $\Ad_\phi^*$ to one of the two factors.  Can write it down as in the lemma above.}
 \end{proof}
 
 \chris{correct the below proposition.}
@@ -416,22 +416,12 @@ where $\delta \phi$ is represented on $U_i$ by a pair $(b^L, b^R) \in \Ad_\phi$.
 &= \sum_{i=1}^d \langle \rho_\phi^*(\alpha_i)|_{U^\times_i}, \rho_\phi^*(\Ad_\phi^*)^{-1}(\Ad_\phi^{-1}(\alpha_i')|_{U^\times_i}) \rangle - (\alpha \leftrightarrow \alpha').
 \end{align*}
 
-We can compute the composite operator $(\Ad_\phi^*)^{-1}\Ad_\phi^{-1}$ on $\mr{ad}(P)(U^\times_i)$.  It's given by the inverse of the operator $\Ad_\phi\Ad_\phi^*$ which sends a pair $(b^L, b^R) \in \mr{ad}(P)(U^\times_i)$ to \chris{replace from here}
-
-$\alpha \mapsto - \alpha - \phi^{-1} \alpha \phi$.  Call this operator $-(1 + A_\phi)$.  Then $(1+A_\phi)^{-1} = 1 - A_\phi + A_\phi^2 + \cdots$.  After applying our gauge transformation above the remaining degree of freedom in $\alpha_i$ is its $z^{-1}$ term.  Each time we apply $A$ it raises the order in $z$ of this term by one, so only the linear summand $A_\phi$ of $-(1+A_\phi)^{-1}$ contributes to the residue pairing.  We therefore get
+We can compute the composite operator $(\Ad_\phi^*)^{-1}\Ad_\phi^{-1}$ on $\mr{ad}(P)(U^\times_i)$.  It's given by the inverse of the operator $\Ad_\phi\Ad_\phi^*$ which sends a pair $(b^L, b^R) \in \mr{ad}(P)(U^\times_i)$ to $(b^L - b^R, b^R - b^L) \sim (b^L + \phi^{-1} b^L \phi, b^R - \phi b^R \phi^{-1})$.  Denote this by $((1+A_\phi)b^L,(1-A_{\phi^{-1}})b^R)$.  We can describe the inverse using the expansion $(1+A_\phi)^{-1} = 1 - A_\phi + A_\phi^2 + \cdots$.  After applying our gauge transformation above the remaining degree of freedom in $\alpha_i$ is its $z^{-1}$ term.  Each time we apply $A$ it raises the order in $z$ of this term by one, so only the linear summand $A_\phi$ of $-(1+A_\phi)^{-1}$ contributes to the residue pairing.  In the pairing we need to use the invariant pairing on $\gg((z)) \oplus \gg((z))$ that vanishes on the subalgebra spanned by $(X, A_\phi(X))$, so we take the difference of the residue / Killing form pairings on the two summands.
 \begin{align*}
-\omega(\delta \phi, \delta \phi') &= \sum_{i=1}^d \langle \rho_\phi^*(\alpha_i)|_{U^\times_i}, \rho_\phi^*(-1-A_\phi)^{-1}(\alpha_i')|_{U^\times_i} \rangle - (\alpha \leftrightarrow \alpha')\\
-&= \sum_{i=1}^d \langle \rho_\phi^*(\alpha_i)|_{U^\times_i}, \rho_\phi^*(\phi^{-1} \alpha_i' \phi)|_{U^\times_i}\rangle - (\alpha \leftrightarrow \alpha').
+\omega(\delta \phi, \delta \phi') &= \sum_{i=1}^d \langle \rho_\phi^*b^L_i, \rho_\phi^*A_{\phi^{-1}}b^{'R}_i \rangle + \langle \rho_\phi^*A_\phi b^L_i, \rho_\phi^*b^{'R}_i \rangle - (b \leftrightarrow b') \\ 
+&= \sum_{i=1}^d \langle b^L_i\phi^{-1}, b^{'R}_i \phi^{-1} \rangle  - (b \leftrightarrow b')
 \end{align*}
-
-We can represent $\alpha_i$ by a class in the bundle $\Ad(\phi)$, i.e. by an equivalence class of pairs $(b^L, b^R)(\delta \phi) \in \gg((z))^2$.  In this form the operator $A_\phi$ acts by $(b^L, b^R) \mapsto (b^L, -b^R)$ 
-
-%$(b^L, b^R) \mapsto (-\phi^{-1}b^R \phi, \phi b^L \phi^{-1})$ \chris{?? I'm sure this isn't correct right now.  What follows also needs fixing but I haven't got the above correct yet.}.  We need to use the invariant pairing on $\gg((z)) \oplus \gg((z))$ that vanishes on the subalgebra spanned by $(X, A_\phi(X))$, so we take the difference of the residue / Killing form pairings on the two summands.  The result is
-%\begin{align*}
-% \sum_{i=1}^d \langle b_i(2\pi), \phi^{-1} b'_i(0) \phi \rangle - \langle b_i(0), \phi b'_i(2\pi) \phi^{-1} \rangle 
-%&= \sum_{i=1}^d \langle \phi b_i(2\pi), \phi^{-1} b'_i(0) \rangle - \langle \phi b'_i(2\pi), \phi ^{-1}b_i(0) \rangle
-%\end{align*}
-%using cyclic invariance in the last step. 
+using cyclic invariant to identify the two terms.
 \end{proof}
 
 We can now establish our main result.
@@ -445,7 +435,7 @@ This is straightforward now, by combining the two local descriptions of the symp
 \omega_{\mr{mHiggs}}(\d H(\alpha_i), \d H(\alpha_i')) &= \omega_{\mr{mHiggs}}(\d H(\d_{\mr{mon}}(b_i)), \d H(\d_{\mr{mon}}(b_i'))) \\
 &= \omega_{\mr{mHiggs}}(b_i(2\pi)H(\mc A) - H(\mc A)b_i(0),b'_i(2\pi)H(\mc A) - H(\mc A)b'_i(0)).
 \end{align*}
-We can write this in terms of a pairing on the bundle $\Ad(\phi)$.  Represent the class $b_i(2\pi)H(\mc A) - H(\mc A)b_i(0)$ by the pair $(H(\mc A)b_i(2\pi),b_i(0)H(\mc A))$.  Then applying the description of $\omega_{\mr{mHiggs}}$ provided by Proposition \ref{qconn_symp_description} we have
+We can write this in terms of a pairing on the bundle $\ad(\phi)$.  Represent the class $b_i(2\pi)H(\mc A) - H(\mc A)b_i(0)$ by the pair $(H(\mc A)b_i(2\pi),b_i(0)H(\mc A))$.  Then applying the description of $\omega_{\mr{mHiggs}}$ provided by Proposition \ref{qconn_symp_description} we have
 \begin{align*}
 \omega_{\mr{mHiggs}}(\d H(\alpha_i), \d H(\alpha_i')) &= \omega_{\mr{mHiggs}}((H(\mc A)b_i(2\pi),b_i(0)H(\mc A)),(H(\mc A)b'_i(2\pi),b'_i(0)H(\mc A))) \\
 &= \langle  H(\mc A) b_i(2\pi) H(\mc A)^{-1}, b_i'(0) \rangle - (b \leftrightarrow b')
