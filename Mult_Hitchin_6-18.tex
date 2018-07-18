@@ -339,7 +339,7 @@ More precisely, $BLG$ is a Tate stack in the sense of Hennion \cite{Hennion}.  A
 
 \begin{proof}
 We can describe a potential for the pullback $r^*\omega$ as follows.  The tangent complex to $\bun_G^\fr(\bb{CP}^1 \! \bs \! D)$ at $P$ is quasi-isomorphic to $\Omega^{0,\bullet}(C \!\bs\! D; \gg_P)[1]$.  There is a pairing of degree 1 on this complex defined by
-\[ \nu((f,\alpha), (g,\beta)) = \int_{C \!\bs\! D} \kappa(f,\alpha) + \kappa(\beta,g) \d z\]
+\[ \nu((f,\alpha), (g,\beta)) = \int_{C \!\bs\! D} \kappa(f,\beta) + \kappa(\alpha,g) \d z\]
 where $(f,\alpha)$ and $(g,\beta)$ are general non-homogenous elements of $\Omega^{0,\bullet}(C \bs D; \gg_P)[1]$.  Applying the internal differential on $\bigwedge^2 (\bb T_{\bun_G^\fr(\bb{CP}^1 \! \bs \! D), P})$ to this pairing induces the degree 2 pairing
 \begin{align*}
 \d \nu(f,g) &= \int_{C \!\bs\! D} \kappa(f, \ol \dd g) + \kappa(g, \ol \dd f) \d z \\
@@ -396,7 +396,14 @@ where we use the Killing form to identify $\beta'_i$ with a $\gg^*$-valued form,
 The formula given above is saying that the Poisson bivector -- viewed as a map $\pi \colon \bb L_{(P,\phi)} \to \bb T_{(P,\phi)}$ -- acts in degree $-1$ by identifying $\gg$ with $\gg^*$ then applying the map $\Ad_\phi^*$.  Recall that to describe the Poisson bivector we must locally on $U_i$ describe the sum
 \[\lambda = f_1^*(\mu_1) + f_2^*(\mu_2) + \eta
 \]
-where $\eta$ is a potential for the pullback $(f_1 \circ g)^*\nu$.  The Lagrangian structure $\mu_1$ on the diagonal is 0, and the Lagrangian structure $\mu_2$ vanishes upon restriction to the open set $U_i$ since the map $\bun_G^{\fr}(\bb{CP}^1 \bs D) \to \bun_G^{\fr}(\bb{CP}^1 \bs D)^2 \times_{BLG^{2k}} BLG^{k}$ becomes an isomorphism after restricting to a formal neighbourhood of $z_i$ \chris{justify the difference between a formal neighbourhood and a contractible analytic neighbourhood here}.  We must therefore find a local potential for $(f_1 \circ g)^*\nu$ where $\nu$ is the structure from Lemma \ref{restriction_Lagn_lemma}.  On the cotangent complex, the pullback $g^*$ acts by the dual to the $q$-twisted diagonal map $\gg[[z]] \to \gg(\!(z)\!)^2$.  The pullback $(f_1 \circ g)^*$ acts by the projection map $\gg^*(\!(z)\!)^2 \to \ad(\phi)^*|_{\bb D^\times}$ onto formal local section of the bundle $\ad(\phi)^*$.
+where $\eta$ is a potential for the pullback $(f_1 \circ g)^*\nu$.  The Lagrangian structure $\mu_1$ on the diagonal is 0, and the Lagrangian structure $\mu_2$ vanishes upon restriction to the open set $U_i$ since the map $\bun_G^{\fr}(\bb{CP}^1 \bs D) \to \bun_G^{\fr}(\bb{CP}^1 \bs D)^2 \times_{BLG^{2k}} BLG^{k}$ becomes an isomorphism after restricting to a formal neighbourhood of $z_i$ \chris{justify the difference between a formal neighbourhood and a contractible analytic neighbourhood here}.  We must therefore find a local potential for $(f_1 \circ g)^*\nu$ where $\nu$ is the structure from Lemma \ref{restriction_Lagn_lemma}.  On the cotangent complex, the pullback $g^*$ acts by the dual to the $q$-twisted diagonal map $\gg[[z]] \to \gg(\!(z)\!)^2$.  The pullback $(f_1 \circ g)^*$ acts by the projection map $\gg^*(\!(z)\!)^2 \to \ad(\phi)^*|_{\bb D^\times}$ onto formal local sections of the bundle $\ad(\phi)^*$.
+
+On the other hand, applying the internal differential induced from $\Ad_\phi^*$ on the complex of 2-forms to the local pairing $\omega$ yields the degree 1 pairing
+\begin{align*}
+\langle \alpha_i, \beta_i' \rangle &= \langle \rho_\phi^*(\Ad_\phi(\beta_i + \wt \beta)), \rho_\phi^*(\Ad_\phi^*)^{-1}(\beta'_i) \rangle \\
+&= \langle \rho_\phi^*(\beta_i + \wt \beta), \rho_\phi^*(\beta'_i) \rangle
+\end{align*}
+where now 
 
 We obtain a potential for the image of the residue pairing $\nu$ under this pullback as follows. \chris{todo: complete.  We end up with the residue pairing on $\ad(\phi)^*$, and we'll get a potential by applying $\Ad_\phi^*$ to one of the two factors.  Can write it down as in the lemma above.}
 \end{proof}
@@ -441,7 +448,7 @@ We can write this in terms of a pairing on the bundle $\ad(\phi)$.  Represent th
 \end{align*}
 where the remaining terms are killed by the antisymmetrization.
 
-On the other hand, we can evaluate the pairing $\omega_{\mr{Mon}}(\alpha_i,\alpha'_i) = \omega_{\mr{Mon}}(\d_{\mr{mon}}(b_i),\d_{\mr{mon}}(b_i'))$ via integration by parts. We'll compute the symplectic pairing for the full \v Cech complex, but it will split into a sum over open sets $U_i$.  The result is that
+On the other hand, we can evaluate the pairing $\omega_{\mr{Mon}}(\alpha_i,\alpha'_i) = \omega_{\mr{Mon}}(\d_{\mr{mon}}(b_i),\d_{\mr{mon}}(b_i'))$ via Stokes' Theorem. We'll compute the symplectic pairing for the full \v Cech complex, but it will split into a sum over open sets $U_i$.  The result is that
 \begin{align*}
 \omega_{\mr{Mon}}(\{\alpha_i\},\{\alpha'_i\}) &= \sum_{i=0,\ldots,k,\infty} \int_{U_i} \kappa(\d_{\mr{mon}}(b_i) \wedge \d_{\mr{mon}}(b_i')) \d z - (b \leftrightarrow b')\\
 &= \sum_{i=1,\ldots,k,\infty} \int_{\dd \bb D_i \times [0,2\pi]} \kappa(b_i - b_0, \d_{\mr{mon}}(b'_i)) \d z - (b \leftrightarrow b')\\
