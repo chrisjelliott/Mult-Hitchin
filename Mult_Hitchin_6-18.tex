@@ -396,16 +396,18 @@ where we use the Killing form to identify $\beta'_i$ with a $\gg^*$-valued form,
 The formula given above is saying that the Poisson bivector -- viewed as a map $\pi \colon \bb L_{(P,\phi)} \to \bb T_{(P,\phi)}$ -- acts in degree $-1$ by identifying $\gg$ with $\gg^*$ then applying the map $\Ad_\phi^*$.  Recall that to describe the Poisson bivector we must locally on $U_i$ describe the sum
 \[\lambda = f_1^*(\mu_1) + f_2^*(\mu_2) + \eta
 \]
-where $\eta$ is a potential for the pullback $(f_1 \circ g)^*\nu$.  The Lagrangian structure $\mu_1$ on the diagonal is 0, and the Lagrangian structure $\mu_2$ vanishes upon restriction to the open set $U_i$ since the map $\bun_G^{\fr}(\bb{CP}^1 \bs D) \to \bun_G^{\fr}(\bb{CP}^1 \bs D)^2 \times_{BLG^{2k}} BLG^{k}$ becomes an isomorphism after restricting to a formal neighbourhood of $z_i$ \chris{justify the difference between a formal neighbourhood and a contractible analytic neighbourhood here}.  We must therefore find a local potential for $(f_1 \circ g)^*\nu$ where $\nu$ is the structure from Lemma \ref{restriction_Lagn_lemma}.  On the cotangent complex, the pullback $g^*$ acts by the dual to the $q$-twisted diagonal map $\gg[[z]] \to \gg(\!(z)\!)^2$.  The pullback $(f_1 \circ g)^*$ acts by the projection map $\gg^*(\!(z)\!)^2 \to \ad(\phi)^*|_{\bb D^\times}$ onto formal local sections of the bundle $\ad(\phi)^*$.
+where $\eta$ is a potential for the pullback $(f_1 \circ g)^*\nu$.  The Lagrangian structure $\mu_1$ on the diagonal is 0, and the Lagrangian structure $\mu_2$ vanishes upon restriction to the open set $U_i$ since the map $\bun_G^{\fr}(\bb{CP}^1 \bs D) \to \bun_G^{\fr}(\bb{CP}^1 \bs D)^2 \times_{BLG^{2k}} BLG^{k}$ becomes an isomorphism after restricting to a formal neighbourhood of $z_i$ \chris{justify the difference between a formal neighbourhood and a contractible analytic neighbourhood here}.  We must therefore find a local potential for $(f_1 \circ g)^*\nu$ where $\nu$ is the structure from Lemma \ref{restriction_Lagn_lemma}.  On the cotangent complex, the pullback $g^*$ acts by the dual to the $q$-twisted diagonal map $\gg[[z]] \to \gg(\!(z)\!)^2$.  The pullback $f_1^*$ acts by the dual to the projection map $\gg(\!z)\!)^2 \to \ad(\phi)_{\bb D^\times}$.  The composite is therefore given by $\Ad_\phi^*$. \chris{sign error here.  There's also another degree in the cotangent complex to calculate: map should be also $\Ad_\phi$ but without the dual?}
 
 On the other hand, applying the internal differential induced from $\Ad_\phi^*$ on the complex of 2-forms to the local pairing $\omega$ yields the degree 1 pairing
 \begin{align*}
-\langle \alpha_i, \beta_i' \rangle &= \langle \rho_\phi^*(\Ad_\phi(\beta_i + \wt \beta)), \rho_\phi^*(\Ad_\phi^*)^{-1}(\beta'_i) \rangle \\
-&= \langle \rho_\phi^*(\beta_i + \wt \beta), \rho_\phi^*(\beta'_i) \rangle
+\langle (\alpha_i,\beta_i), (\alpha_i',\beta_i') \rangle &= \langle \rho_\phi^*(\Ad_\phi(\beta_i)), \rho_\phi^*(\Ad_\phi^*)^{-1}(\beta'_i) \rangle \\
+&= \langle \rho_\phi^*(\beta_i), \rho_\phi^*(\beta'_i) \rangle.
 \end{align*}
-where now 
-
-We obtain a potential for the image of the residue pairing $\nu$ under this pullback as follows. \chris{todo: complete.  We end up with the residue pairing on $\ad(\phi)^*$, and we'll get a potential by applying $\Ad_\phi^*$ to one of the two factors.  Can write it down as in the lemma above.}
+We can then take the pairing defining $\eta$ from Lemma \ref{restriction_Lagn_lemma} and pull it back along $f_1 \circ g$ to obtain the local description for the pairing
+\begin{align*}
+\langle (\alpha_i,\beta_i), (\alpha_i',\beta_i') \rangle &= \langle \rho_\phi^* ... , \rho_\phi^* ... \rangle 
+\end{align*}
+\chris{...}
 \end{proof}
 
 \begin{prop} \label{qconn_symp_description}
