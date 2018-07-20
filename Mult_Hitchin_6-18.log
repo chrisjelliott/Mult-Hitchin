@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.22)  20 JUL 2018 09:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.22)  20 JUL 2018 10:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1134,17 +1134,17 @@ lliptic
  []
 
 [2] [3]
-LaTeX Font Info:    Try loading font information for U+euf on input line 137.
+LaTeX Font Info:    Try loading font information for U+euf on input line 136.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [4]
-LaTeX Font Info:    Try loading font information for U+eus on input line 173.
+LaTeX Font Info:    Try loading font information for U+eus on input line 174.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 ) [5] [6] <xymatrix
 3x1 98> [7] [8]
-Overfull \hbox (5.03471pt too wide) in paragraph at lines 332--334
+Overfull \hbox (5.03471pt too wide) in paragraph at lines 333--335
 \OT1/cmr/m/n/10 phism of tan-gent com-plexes (in de-gree 0). In other words, al
 l in-finites-i-mal de-for-ma-tions of $(\OML/cmm/m/it/10 P; g\OT1/cmr/m/n/10 ) 
 \OMS/cmsy/m/n/10 2 [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C; D; ![]\OT1/cmr/m/n/
@@ -1154,34 +1154,34 @@ l in-finites-i-mal de-for-ma-tions of $(\OML/cmm/m/it/10 P; g\OT1/cmr/m/n/10 )
 [9]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 385.
+(hyperref)                removing `math shift' on input line 386.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 385.
+(hyperref)                removing `subscript' on input line 386.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 385.
+(hyperref)                removing `math shift' on input line 386.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 394.
+(hyperref)                removing `math shift' on input line 395.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 394.
+(hyperref)                removing `math shift' on input line 395.
 
 [10] <xymatrix 4x4 525> [11] <xymatrix 2x2 154> [12] [13] [14] [15] [16]
 <xymatrix 2x2 182> (./Mult_Hitchin_6-18.bbl [17]) [18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 690.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 690.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 691.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 691.
  (./Mult_Hitchin_6-18.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 690.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 690.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 691.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 691.
 Package rerunfilecheck Info: File `Mult_Hitchin_6-18.out' has not changed.
 (rerunfilecheck)             Checksum: 0A167AF5200CD122BBDB26DA0AB7E911;964.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 690.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 691.
  ) 
 Here is how much of TeX's memory you used:
  29250 strings out of 494910
@@ -1225,7 +1225,7 @@ dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type
 1/public/cm-super/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/xypic/xycmat10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xypic/xy
 cmbt10.pfb>
-Output written on Mult_Hitchin_6-18.pdf (18 pages, 423499 bytes).
+Output written on Mult_Hitchin_6-18.pdf (18 pages, 423767 bytes).
 PDF statistics:
  443 PDF objects out of 1000 (max. 8388607)
  384 compressed objects within 4 object streams
