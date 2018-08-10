@@ -1,0 +1,819 @@
+\documentclass[12pt,psamsfonts,reqno]{amsart} 
+\input{mypack} \input{mydef} 
+
+
+\newcommand{\bA}{\mathbb{A}}
+
+
+\title{Monopole and group Higgs quantum integrable system, \\
+    and q-Opers}
+\author{ Chris Elliott \\ Vasily Pestun}
+\date{Oct 10, 2017}
+\begin{document}
+\maketitle
+
+\newcommand{\GrHiggs}{\mathsf{GrHiggs}}
+\newcommand{\Bun}{\mathsf{Bun}}
+\newcommand{\Mon}{\mathsf{Mon}}
+
+
+\newcommand{\Hecke}{\mathsf{Hecke}}
+
+\section{Group Higgs bundles from Hecke stacks}
+\label{se:grhiggs}
+\newcommand{\sn}{\mathsf{n}}
+\newcommand{\fr}{\mathrm{fr}}
+Let $G$ be a reductive group, $X$ be an algebraic complex curve. We do not assume
+that $G$ is simple or simply-connected, there could be abelian factors and non-trivial
+center. 
+
+Let $\check P$ be the co-weight lattice of $G$, and let
+$\check P_{+} \subset \check P$ be the subset of dominant weights.
+Let $\check Q \subset \check P$ be the lattice of coroots. Notice
+that rank of $\check P$ differes from the rank of $\check Q$ by
+the dimension of the abelian factor in $G$. 
+Let $\rho = \sum_{\alpha \in \Delta_{+}}$, where $\Delta_{+}$ is the set of
+positive roots be the Weyl vector. 
+
+
+Following 5.2.1 of Beilinson-Drinfeld \cite{Beilinson:Drinfeld}
+let Hecke stack be defined as follows
+
+\begin{definition}
+\begin{equation}
+  \Hecke_{G, \underline{x}} = \text{moduli stack of  $(P_1, P_2 , g)$ }
+\end{equation}
+\begin{itemize}
+\item $P_1, P_2$ are principal $G$-bundles on $X$
+\item $\underline{x} \in X^n$ denotes $n$ marked points $(x_1, \dots, x_n)$ with $x_i \in C$
+\item $g: P_{1} \to P_{2}$ is an isomorphism over $C \setminus \cup_{i \in I} \{ x_i \}$ 
+\end{itemize}
+\end{definition}
+As explained
+in 5.2.3 of  \cite{Beilinson:Drinfeld}, the stratification teh affine grassmanian
+$\mathsf{Gr}_{G}$ induces the stratification of the stack $\Hecke_{G,\underline{x}}$ by
+substacks $\Hecke_{G,\underline{x}, \underline{w}}$ where elements $\underline{w}$ of $\check P_{+}^{n}$
+  are n-tuples of co-weights $\underline{w} = (w_1, \dots, w_n)$ with $w_i \in \check P_{G,+}$. 
+
+Framed version is defined similarly. Let $x_{\infty}$ be a point on $X = \BP^{1}$. 
+\begin{definition}
+\begin{equation}
+  \Hecke^{\fr}_{G, \underline{x}} = \text{moduli stack of  $(P_1, P_2 , g)$ }
+\end{equation}
+where
+
+\begin{itemize}
+\item  $P_1, P_2$ are principal $G$-bundles on $X$ framed at $x_\infty$.
+\item $\underline{x} \in X^n$ denotes $n$ marked points $(x_1, \dots, x_n)$ with $x_i \in X \setminus \{x_\infty\}$
+\item $g: P_{1} \to P_{2}$ is an isomorphism over $X \setminus \cup_{i \in I} \{ x_i \}$ 
+\end{itemize}
+\end{definition}
+Then  $\pi^{\fr}: \GrHiggs_{G,\underline{x}, \underline{w}}^{\fr} \to G$ is the
+ natural evaluation map at the framing point $x_\infty$
+  \begin{equation}
+\label{eq:pifr}
+    \pi^{\fr}: (P_1, P_2, \underline{x}, g) \mapsto g_\infty
+  \end{equation}
+ with $g_\infty = g(x_\infty)$.
+  
+Let
+\begin{equation}
+  p:  \Hecke^{\fr}_{G, \underline{x}}  \to \Bun_{G}^\fr \times \Bun_{G}^\fr 
+\end{equation}
+be the natural projection that forgets $g$.
+Let
+\begin{equation}
+  \Delta: \Bun_{G}^{\fr}  \to \Bun_{G}^{\fr}  \times \Bun_{G}^{\fr}
+\end{equation}
+be the diagonal map
+
+\begin{definition} The moduli stack of multiplicative Higgs bundles is
+  the pullback of $p$ and $\Delta$
+  \begin{equation}
+  \GrHiggs_{G,\underline{x}, \underline{w}}^{\fr} = \Hecke^{\fr}_{G, \underline{x},\underline{w}} \times_{\Bun_{G}^{\fr}  \times \Bun_{G}^{\fr}} \times \Bun_{G}^{\fr}
+  \end{equation}
+\end{definition}
+
+For $X  = \BP^1$, let $\lambda$ be a section of $K_X  = O(-2 x_\infty)$ whose only
+singularity is the second order pole at $x_\infty$.
+
+Let $w = \sum_{i=1}^{n} w_i$ denote the total coweight.  On  $X = \BP^1$ there is isomorphism 
+  \begin{equation}
+\Bun_{G}^{\fr} = \check P / \check Q
+  \end{equation}
+
+
+
+\begin{proposition}
+Fix $(X = \BP^1, \underline{x}, \underline{w}, x_\infty)$ and $\lambda$ as above
+  \begin{enumerate}
+  \item If $w \not \in \check Q$ then $ \GrHiggs_{G,\underline{x}, \underline{w}}$ is empty, otherwise
+  \item  $ \GrHiggs_{G,\underline{x}, \underline{w}}^{\fr} $ is affine algebraic
+    variety with canonical Poisson structure induced by $\lambda$ and Killing form () on $\mathfrak{g}$, and
+    \begin{equation}
+     \dim \GrHiggs_{G,\underline{x}, \underline{w}}^{\fr}  = \dim G + 2(\rho, w) 
+   \end{equation}
+   Morover, the fibers $\GrHiggs_{G,\underline{x}, \underline{w}, g_\infty}^{\fr}$
+   of  (\ref{eq:pifr}) $\pi^{\fr}: \GrHiggs_{G,\underline{x}, \underline{w}}^{\fr} \to G$ are symplectic leaves of the dimension $2(\rho, w)$ in the Poisson variety $\GrHiggs_{G,\underline{x}, \underline{w}}^{\fr}$
+ \item There is birational symplectomorphism
+\begin{equation}
+ \label{eq:coord}\sigma:   (\BC \times \BC^{\times} )^{(\rho, w)} \to \GrHiggs_{G,\underline{x}, \underline{w}, g_\infty}^{\fr} 
+\end{equation}
+
+   where symplectic form on $\BC \times \BC^{\times}$ is $dx \wedge \frac{dy}{y}$ 
+ \item There is natural Poisson embedding $\GrHiggs_{G,\underline{x}, \underline{w}}^{\fr} \to
+   G(O_{x_0})\simeq G[[x]]$ given by the formal series expansion of $g(x)$ near any point $x_0$
+distinct from $\underline{x}$ and $x_\infty$,
+where $x$ is a coordinate in a formal disc around $x_0$ such that $x(x_0) = 0$
+and  $\lambda = d x$, and where Poisson structure on $G[[x]]$
+   is determined by Manin triple $\mathfrak{g}((x)) =
+   x^{-1} \mathfrak{g}[[x^{-1}]] \oplus \mathfrak{g}[[x]]$
+   with respect to the pairing $f,g \in \mathfrak{g}((x))$ defined by
+   \begin{equation} 
+     \langle f ,g \rangle  = \oint  ( f,  g) \lambda
+   \end{equation}
+   where $()$ is Killing form on $\mathfrak{g}$. In particular,
+   the agreement of Poisson structure with $G[[O_{x_0}]]$ does not depend on the choice of point $x_0$.
+ \item the fibers $\GrHiggs_{G,\underline{x}, \underline{w}, g_\infty}^{\fr}$ are symplectic leaves
+   in Poisson-Lie group $G[[x]]$
+ \item To each $\GrHiggs_{G,\underline{x}, \underline{w}, g_\infty}^{\fr}$
+   corresponds an ideal in the $\epsilon$-quantized algebra of function $\mathcal{F}_\epsilon(G[[x]])$
+   \begin{equation}
+     I_{\GrHiggs_{G,\underline{x}, \underline{w}, g_\infty}^{\fr}} \subset \mathcal{F}_\epsilon(G[[x]])
+   \end{equation}
+   and there is representation  of the quotient algebra
+   \begin{equation}
+  \sigma_{\ep}^{*}:    \mathcal{F}_\epsilon(G[[x]])/     I_{\GrHiggs_{G,\underline{x}, \underline{w}, g_\infty}^{\fr}} \to \mathcal{D}_{\ep}( \BC^{(\rho, w)})
+\end{equation}
+in the algebra of $\ep$-difference operators on $\BC^{(\rho,\omega)}$ obtained from the coordinate
+map $\sigma$ (\ref{eq:coord}). 
+
+ 
+
+  \end{enumerate}
+\end{proposition}
+
+  
+
+
+
+\section{First examples of group Higgs bundles}
+
+\subsection{$GL(2)$-group Higgs bundle}
+
+Let $G=GL_2$, let the curve $X = \CP^1$ with the coordinate $x$, the 1-form
+$\lambda = dx$ and the framing point $x_\infty = \infty$.
+
+Consider component of $\GrHiggs^{\fr}$ which projects to a trivial $G$-bundle on $X$.
+
+Fix framing of trivial $G$-bundle at infinity. Then trivialization of $G$-bundle is fixed everywhere on $X$. Then $\GrHiggs^{\fr}$ is identified with $G$-valued
+rational functions $g(x)$ on $X$ with certain conditions that we will identify explicitly.
+
+
+As a first explicit example we consider the fiber $\GrHiggs^{\fr}_{G, \underline{x}, \underline{w}, g_\infty}$ with two singularities at points $x_0 \neq x_\infty$ and $x_1\neq x_\infty$ with $x_0 \neq x_1$.  
+ Then $\underline{x}=(x_0,x_1)$ and let 
+ co-weights be $\underline{w} = (w_0, w_1)$ where $w_0 = (1,0)$ and $w_1 = (0,-1)$ in the defining basis of $GL_2$ (see the notations in \ref{eq:GLcoweights},
+ equations (\ref{eq:diag}, \ref{eq:GLcoweight})).
+ 
+
+
+ 
+
+ \begin{proposition} The fiber $\GrHiggs^{\fr}_{G,\underline{x}, \underline{w}, g_\infty}$
+   with $G = GL_2$ and $\underline{x} = (x_0, x_1)$ and $w_0 = (1,0)$ and $w_{1} = (0,-1)$ is identified with the space of functions $g(x)$
+   valued in $2 \times 2$ matrices
+   \begin{equation}
+     g(x) =
+     \begin{pmatrix}
+       a(x) & b(x) \\
+       c(x) & d(x)
+     \end{pmatrix}
+   \end{equation}
+   where $a(x), b(x), c(x), d(x)$ are rational functions on $X$ such that 
+   \begin{enumerate}
+   \item $a(x), b(x), c(x), d(x)$ are regular everywhere on $X \setminus {x_1}$,
+     in particular they are regular at $x_\infty = \infty$ and $x_0$.
+   \item $g(x_\infty) = g_\infty$ where $g_\infty \in GL_2$ is a fixed element
+     \begin{equation}
+       g_\infty =
+       \begin{pmatrix}
+         a_\infty & b_\infty \\
+         c_\infty & d_\infty 
+       \end{pmatrix}, \qquad a_\infty d_\infty - c_\infty b_\infty \neq 0 
+     \end{equation}
+where $a_\infty, b_\infty, c_\infty, d_\infty \in \BC$ 
+   \item
+     \begin{equation}
+       \det g(x) =  \frac{ x- x_0}{ x - x_1}  \det g_\infty
+     \end{equation}
+   \end{enumerate}
+ 
+   The conditions (1), (2), (3) imply that $a(x), b(x), c(x), d(x)$ have the form
+   \begin{equation}
+     a(x) =  \frac{a_\infty x  - a_0}{x - x_1}\quad
+     b(x) = \frac{ b_\infty x  - b_0}{x - x_1}\quad
+     c(x) = \frac{ c_\infty  x  - c_0}{x - x_1}\quad
+     d(x) = \frac{d_\infty  x  - d_0}{x - x_1}\quad
+   \end{equation}
+where $ (a_0, b_0, c_0, d_0) \in \BC^4$, 
+   such that
+   \begin{equation}
+ (     a_\infty x - a_0)( d_\infty x - d_0) -   (b_\infty x - b_0)(c_\infty x -c_0) =
+     (x - x_0)(x- x_1) (a_\infty d_\infty - b_\infty c_\infty)
+   \end{equation}
+   The above equation translates into the system of linear
+   equation and quadric equation on  $(a_0, b_0, c_0, d_0) \in \BC^4$ 
+   \begin{multline}
+     \GrHiggs^{\fr}_{G,\underline{x}, \underline{w}, g_\infty} =
+\big \{  (a_0, b_0, c_0, d_0) \in \BC^4 | \\
+       -a_0 d_\infty - a_\infty d_0 + b_0 c_\infty + b_\infty c_0 
+       = ( - x_0 - x_1) (a_\infty d_\infty - b_\infty c_\infty), \\
+      a_0 d_0 - b_0 c_0 = 
+       x_0 x_1 (a_\infty d_\infty - b_\infty c_\infty) \big \}
+     \end{multline}
+     We conclude, that in this example $     \GrHiggs^{\fr}_{G,\underline{x}, \underline{w}, g_\infty}$ is a complete intersection of a hyperplane and a  quadric on $\BC^4$, equivalently a quadric on $\BC^3$. For example,
+     say $(a_\infty, b_\infty, c_\infty, d_\infty) = (1,0,0,1)$,
+     and $x_0 = -m, x_1 = m$, then the linear equation implies $d_0 = -a_0$,
+     and the quadratic equation gives a canonical form of smooth affine quadric
+     surface 
+     \begin{equation}
+       \label{eq:quadric}
+         a_0^2 + b_0 c_0  = m^2 
+     \end{equation}
+on  $\BC^3 = (a_0, b_0, c_0)$.
+\end{proposition}
+
+
+
+\begin{remark}
+  In the limit when the singularities $x_0$ and $x_1$ collide, that is $m = 0$,
+  the quadric becomes singular $a_0^2 + b_0 c_0 = 0$. The resolved
+  ingularity on a quadric by blow-up is identified with $T^{*} \CP^1$.
+  The $m$-deformed quadric $a_0^2 + b_0 c_0 = m^2$ can be identified
+  with affine line bundle over $\CP^1$. This $\CP^1$ is the orbit
+  of the fundamental miniscule weight in the affine Grassmanian $GL_2$.
+  We see that $\GrHiggs^{\fr}_{G,\underline{x}, \underline{w}, g_\infty}$
+  in the case of two miniscule co-weight singularities for $GL_2$ 
+is an affine line bundle over the flag variety $\CP^1$, 
+where, locally, the 1-dimensional base comes 
+from the insertion of one singularity,
+and 1-dimensional fiber comes from the insertion of the other
+in the iterative definition of Hecke stack.
+\end{remark}
+
+\begin{remark}
+  The canonical coordinates $a \in \BC, b \in \BC^{\times}$ on the quadric (\ref{eq:quadric}) are given by
+  \begin{equation}
+    a_0 = a, \qquad b_0 = b(m - a), \qquad c_0 = b^{-1}(m+a)
+  \end{equation}
+  with Poisson brackets
+  \begin{equation}
+    {a,b} = b
+  \end{equation}
+  and symplectic form $da \wedge \frac{db} b$. 
+
+
+  
+\end{remark}
+
+
+ 
+
+
+
+
+\subsection{ $GL(r)$ group Higgs bundles on $\BP^1$ framed at infinity with $nr$ Dirac
+ singularities of the co-fundamental type $\omega_1^{\vee}$}
+
+For a positive  integer $n$, by $[n]$ we denote the set $[n] = \{1,2,\dots, n \}$.
+
+
+Let $G = GL(r, \BC)$, and $T_{G}$ be a maximal torus in $G$.
+Let $(\omega_i)_{i \in [r]}$ be fundamental weights $\omega_i: T_{G} \to \BC^{\times}$,
+and $\omega_i^{\vee}$ be fundamental co-weights $\omega_i^{\vee}: \BC^{\times} \to T_{G}$. We will use
+multiplicative notations so that $\omega_i^{\vee}: z \mapsto z^{\omega_{i}^{\vee}}$.
+In the standard defining representation of $GL(r)$ we have  $\omega_i^{\vee} = (\underbrace{1, \dots, 1}_{i},
+\underbrace{0, 0, \dots, 0}_{r-i})$
+
+
+
+\begin{definition} \label{de:GLrn}
+  
+  We consider the moduli space $\GrHiggs_{G,C,D_{nr[\omega_1^{\vee}]},g_\infty}$  
+  labelled by the data (group $G$, curve $C = \BP^1$ with marked point $z_\infty \in C$ called 'infinity',
+  degree $nr$ divisor $D_{nr[\omega_1^{\vee}]} = (z_{k,i})_{k \in [n], i \in [r]} \in C$ called
+  'positions of Dirac singularities', fixed value $g_{\infty} \in G$ called 'value at infinity') of the pairs
+  $(P,g)$ where 
+\begin{itemize}
+\item $P$ is a principal $G$-bundle on $C$ with a fixed framing at $z_{\infty}$
+\item $g(z)$ is a rational section of the group adjoint bundle $g \in \Gamma(C, P \times_{G} \mathrm{Ad} \, G)$
+  such that 
+  \begin{itemize}
+  \item $g(z)$ is holomorphic everywhere away from $D_{nr[\omega_1^{\vee}]}$ and $z_\infty$
+  \item near $z_{i,k}$ there exist holomorphic sections $\tilde g_{i,k}^{L}(z), \tilde g_{i,k}^{R}(z) $ such that
+    \begin{equation}
+     g(z) = \tilde g_{i,k}^{L} \cdot (z - z_{i,k})^{\omega_1^{\vee}} \cdot \tilde g_{i,k}^{R} (z) \qquad \text{as} \qquad z \to z_{i,k}
+    \end{equation}
+ \item near $z_{\infty}$ there exists holomorphic section $\tilde g_{\infty}(z)$
+   such that 
+   \begin{equation}
+     g(z) = (z-z_{\infty})^{-n \omega_{r}^{\vee}} \tilde g_{\infty} \qquad \text{as} \qquad z \to z_\infty
+   \end{equation}
+   and $\tilde g_\infty(z_{\infty}) = g_\infty(z)$
+  \end{itemize}
+\end{itemize}
+\end{definition}
+
+
+Notice that in the definition of the moduli space we fix values $\tilde g_{\infty}(z_\infty)$ but not $\tilde g_{i,k}^{L}(z_{i,k}), \tilde g_{i,k}^{R}(z_{i,k})$. Also notice that $(z - z_\infty)^{-n\omega_r^{\vee}}$ is central so it would not matter if we had written either $(z-z_{\infty})^{-n \omega_{r}^{\vee}} \tilde g_{\infty}(z)$ or $\tilde g_{\infty}(z) (z-z_{\infty})^{-n \omega_{r}^{\vee}}$. Also we shall assume that $g_{\infty}$ is simple regular element, and that all $z_{i,k} \in D_{nr[\omega_1^{\vee}]}$ are
+different. 
+
+
+\begin{proposition}
+  The moduli space $\GrHiggs_{G,C,D_{nr[\omega_1^{\vee}]},g_\infty}$ of the definition \ref{de:GLrn} is isomorphic to the space
+  of $r \times r$ complex matrix valued polynomials of degree $n$
+  \begin{equation}
+    p(z) =  \sum_{k=0}^{n} p_{k} z^{n-k} ,\qquad g_k \in \mathrm{Mat}_{r \times r}(\BC)
+  \end{equation}
+  such that
+  \begin{itemize}
+  \item $p_{0}  = \rho_{\omega_1} (g_{\infty})$ where $\rho_{\omega_1}$ is the    fundamental representation 
+  \item the determinant is fixed
+    \begin{equation}
+\label{eq:det}
+      \det p(z)  = \det p_0  \prod_{z_{*} \in D_{nr[\omega_1^{\vee}]}} (z - z_{*})
+    \end{equation}
+  \end{itemize}
+\end{proposition}
+
+\begin{proposition}
+  The moduli space $\GrHiggs_{G,C,D_{nr[\omega_1^{\vee}]},g_\infty}$ is affine algebraic variety defined in the affine space $\BC^{n r^2}$ of the 
+coefficients $(p_{k,\alpha,\beta})_{k \in [n], \alpha, \beta \in [r]}$
+by the set of $nr$ polynomial equations of degree $r$ (\ref{eq:det}).
+
+
+\end{proposition}
+
+\begin{proposition}
+The complex dimension of $\GrHiggs_{G,C,D_{nr[\omega_1^{\vee}]},g_\infty}$ is $ n (r^2 - r)$.
+\end{proposition}
+
+\begin{proposition}
+  The variety $\GrHiggs_{G,C,D_{nr[\omega_1^{\vee}]},g_\infty}$ is algebraic symplectic leaf in the meromorphic Poisson Lie loop
+  group of $G$-valued meromorphic functions on $\BC = \BP^1 \setminus z_{\infty}$ with symplectic structure induced from 
+ the classical rational $r$-matrix of Manin triple $\mathfrak{g}[z, z^{-1}] = \mathfrak{g}_{+} \oplus \mathfrak{g}_{-}$  with $\mathfrak{g}_{+} = \mathfrak{g}[[z]]$ and $\mathfrak{g}_{-} = z^{-1} \mathfrak{g}[[z^{-1}]]]$. 
+\end{proposition}
+
+\begin{lemma}
+  The moduli space $\GrHiggs_{G,C,D_{nr[\omega_1^{\vee}]},g_\infty}$ is algebraic integrable system.
+  The complete system of Poisson commuting Hamiltonians is formed by
+  the coefficients $(t_{i,k})_{i \in [r], k \in [ni]}$ of the polynomial characters 
+  \begin{equation}
+    T_{i}(z) = \tr_{\rho_{\omega_i}} ( p(z)), \qquad i \in [r - 1]
+  \end{equation}
+  in the $z$-expansion so that $T_{i}(z) = \sum_{k = 0}^{in}  t_{i,k} z^{in - k}$.
+  The character map $t: \GrHiggs_{G,C,D_{nr[\omega_1^{\vee}]},g_\infty} \to \mathfrak{B}$ 
+  defines the structure of fibration of
+  algebraic integrable system $\GrHiggs_{G,C,D_{nr[\omega_1^{\vee}]},g_\infty}$ over 
+  the affine base space $\mathfrak{B}$ with coordinates  $(t_{i,k})_{i \in [r], k \in [ni]}$.
+  The complex dimension of the base $\mathfrak{B}$ is $\sum_{i=1}^{r-1} ni = \frac 1 2 n (r^2 -r)$.
+\end{lemma}
+
+\begin{question}
+   Let $G=GL(n,\BC)$, $C = \BP^1$ with marked point $z_\infty \in C$, 
+   $C' = C \setminus z_\infty$.
+   
+   For arbitrary divisor $D$ valued in the co-weight lattice (a 
+   set $D$ of pairs $(z, \omega^{\vee})$ where $z \in C'$, $\omega^{\vee}$ is in the co-weight lattice), co-weight $\omega^{\vee}_{z_\infty}$ 
+   at the point $z_\infty$, and element $g_\infty \in G$ what is a precise definition 
+   of the framed moduli space $\GrHiggs_{G,C,D,\omega^{\vee}_{z_\infty},g_{\infty}}$? 
+   What is the dimension of $\GrHiggs$, is it symplectic, is is algebraic integrable
+   system?  Can we describe it explicitly as an affine variety? 
+   What if $G$ is an arbitrary reductive group? 
+\end{question}
+
+
+\begin{question}
+   How to modify the above definition of $\GrHiggs$ if $C$ is an elliptic curve, possibly with nodal or cusp singularity, and prove the similar propositions?
+\end{question}
+
+
+
+
+
+\subsection{Moduli space of framed  $GL(r)$ group Higgs bundles on $\CP^1$ regular at the framing point}
+\label{eq:GLcoweights}
+Let $G = GL(r, \BC)$, let $C = \CP^1$ with a marked point $z_\infty \in \CP^1$. Let $C' = C \setminus z_{\infty}$.
+
+
+A co-weight lattice of $GL(r)$ in a defining basis of the fundamental representation
+is identified with $\BZ^{r}$ on which the Weyl group $S_r$ acts by the permutations of the components. 
+
+
+A coweight $\omega^{\vee}$ with components $(\omega_1, \dots, \omega_r) \in \BZ^{r}$ maps $\BC^{\times} \to T_{GL_r} \simeq (\BC^{\times})^{r}$ as
+\begin{equation}
+\label{eq:diag}
+  z \mapsto \mathrm{diag}(z^{\omega_1}, \dots, z^{\omega_r})
+\end{equation}
+
+Let $\mathrm{det}$ be the determinant morphism $\GL(r,\BC) \to \BC^{\times}$, which induces
+trace morphism from the co-weight lattice $\BZ$ of $\GL(r,\BC)$ to the co-weight lattice $\BZ$ of $\BC^{\times}$ given by the sum
+of the components 
+\begin{equation}
+\mathrm{tr}:   (\omega_1, \dots \omega_r) \mapsto \sum_{k=1}^{r} \omega_k 
+\end{equation}
+
+We call a co-weight $\omega^{\vee}$ of $GL(r)$ dominant if its components form non-increasing sequence of integers of length $r$
+\begin{equation}
+\label{eq:GLcoweight}
+  \omega_1 \geq \omega_2 \dots \geq \omega_r, \qquad (\omega_i)_{i \in [r]} \in \BZ
+\end{equation}
+which is a 'generalized' (what is a proper adjective for this notion?) partition in a sence that the components may be non-positive integers. For any co-weight $\omega^{\vee}$ there is a unique dominant co-weight representative $\mathrm{dom} [\omega^{\vee}]$
+in the Weyl orbit $[\omega^{\vee}]$.
+
+Let $\rho$ denote the Weyl vector $\rho := \frac{1}{2} \sum_{\alpha \in \Delta^{+}} \alpha $ where $\Delta^{+}$ is
+the set of positive roots. In the $\BZ^{r}$ basis dual to the co-weight lattice $\rho$ has components
+\begin{equation}
+  \rho = \tfrac{1}{2} ( r - 1, r - 3, \dots, 1-r)
+\end{equation}
+
+
+Now let $D$ be a divisor on $C'$ valued in the co-weight lattice of $G$. An element of $D$ is a pair $(z, \omega^\vee)$
+with $z \in C'$ and $\omega^{\vee}$ in the co-weight lattice.
+\begin{lemma}
+  If and only if $D$ is such that 
+  \begin{equation}
+    \sum_{(z,\omega^{\vee}) \in D} \tr \omega^{\vee} = 0
+  \end{equation}
+  then there is 'classical' (vs derived) moduli space $\GrHiggs_{G,C,D,g_\infty}$
+  of group Higgs bundles with Dirac singularities at $D$ and framing $g_\infty$ at $z_\infty$ of complex dimension
+  \begin{equation}
+\label{eq:dim}
+    \dim \GrHiggs_{G,C,D,g_\infty} =   2  \sum_{(z,\omega^{\vee}) \in D} ( \rho, \mathrm{dom}[\omega^{\vee}])
+  \end{equation}
+\end{lemma}
+
+
+\todo[inline]{I think the equation (\ref{eq:dim}) comes from index theorems and in the derived sense
+  it should hold universally? However, can we classify $D$ such that $\GrHiggs_{G,C,D}$ is 
+a classical algebraic variety?}
+
+
+
+Educated guess:  The (derived) tangent bundle to $\GrHiggs_{G,C,D,g_\infty}$ is identified with 
+
+
+\begin{equation}
+\label{eq:THiggs}
+    T \GrHiggs = \sum_{\alpha \in \Delta^{+}} H^{\bullet}(C, F_\alpha) - H^{\bullet}(z_{\infty}, i_{z_\infty}^{*} F_\alpha)
+\end{equation}
+where $\Delta^{+}$ is the set of positive roots, and $F_\alpha$ is the line bundle 
+\begin{equation}
+    F_\alpha = L(\alpha \cdot \mathrm{dom}[D])
+\end{equation}
+where $(\alpha \cdot \mathrm{dom}[ D ])$ is $\BZ$-valued divisor obtained by evaluation by a root $\alpha$ on the co-weight valued divisor $\mathrm{dom}[D]$.
+
+\todo[inline]{I don't know how to arrive to \ref{eq:THiggs} and at which step of 
+index computation we would get $\alpha > 0$ and $\mathrm{dom}[\omega^{\vee}]$? In fact I would prefer some Weyl invariant formula (without operation $\mathrm{dom}$)}
+ 
+
+
+\subsection{The moduli space  $\GrHiggs_{C,G,D, \omega_{\infty}^{\vee}, g_\infty}$ with
+  singularity at infinity}
+
+
+\begin{definition}
+  Let $G$ be a reductive group and $g_\infty \in G$ be a semi-simple
+  regular element. Let $T \subset G$ be a maximal torus in $G$ defined as
+ the adjoint centralizer of $g_\infty \in G$, then $g_\infty \in T \subset G$.
+  The torus $T$ defines the weight and co-weight lattice.
+  
+Let $C = \CP^1$ be a curve
+  with marked point $z_\infty \in C$, $C' = C \setminus \{z_\infty\}$, $D$ be
+  a divisor on $C'$ valued in the co-weight lattice of $G$, and $D_{\infty} = (z_\infty, 
+\omega_{\infty}^{\vee})$ be a co-weight valued divisor supported at $z_\infty$. Then $\GrHiggs_{C, D, \omega^{\vee}_\infty, g_\infty}$ is the moduli space of
+  group Higgs bundles $(P, g)$ where $P$ is a $G$-principal bundle on $C$ framed at $z_\infty$
+  and $g$ is a rational section of group adjoint bundle $\mathrm{Ad P}$ such that 
+    \begin{enumerate}
+    \item restriction of $g(z)$ to $C' \setminus {D}$ is holomorphic 
+    \item For each $(z_{i}, \omega_{i}^{\vee}) \in D$ there exists sufficiently small
+      punctured disc $\mathbb{D}_{i}$ around $z_{i}$ and holomorphic
+      sections $\tilde g_{i,L},\tilde g_{i,R} \in \Gamma(\mathbb{D}_i, \mathrm{Ad} P)$ such
+      that in $\mathbb{D}^{\times}_{i} = \mathbb{D}_{i} \setminus {z_{i}}$ it holds
+      \begin{equation}
+        g(z) =  \tilde g_{i,L}(z) (z-z_{i})^{\omega_{i}^\vee} \tilde g_{i,R}(z)
+      \end{equation}
+    \item There exists sufficiently small disc $\mathbb{D}_{\infty}$ around $z_\infty$
+      and a holomorphic section $\tilde g_{\infty}(z) \in \Gamma(\mathbb{D}_\infty, \mathrm{Ad} P)$ such that
+      on $\mathbb{D}_\infty^{\times}$ it holds that 
+      \begin{equation}
+        g(z) = \tilde g_\infty(z) (z - z_\infty)^{\omega_\infty^{\vee}}
+      \end{equation}
+      and $\tilde g_\infty(z_\infty) = g_\infty$. 
+    \end{enumerate}
+\end{definition}
+
+For a co-weight $\omega^{\vee}$ let $\bar \omega^{\vee}$ denote
+a (unique) dominant weight in the Weyl orbit $[\omega^{\vee}]$.
+
+
+An element of co-weight lattice 
+  \begin{equation}
+   \alpha  =  \sum_{(z,\omega^{\vee}) \in D + D_\infty} \bar \omega^{\vee}
+ \end{equation}
+is called total charge. 
+ 
+\begin{proposition}
+If $\alpha$ belongs to a co-root lattice then the
+ moduli space $\GrHiggs_{C,D,\omega^{\infty}, g_\infty}$ 
+ is a classical symplectic algebraic variety of dimension
+ \begin{equation}
+   \dim_{\BC} \GrHiggs_{C,D,\omega^{\infty}, g_\infty} = 2 ( \rho, \alpha)
+ \end{equation}
+\end{proposition}
+
+
+
+
+
+
+\section{Group Higgs bundles from derived geometry}
+
+Let $G$ be an arbitrary reductive group, and let $(C,D_\infty)$ be a curve with a divisor such that there exists an effective divisor $E$ making $2D_\infty+E$ anticanonical.  Concretely there are three possibilities: either $C$ is an elliptic curve and $D_\infty = 0$, $C = \mathbb{CP}^1$ and $D_\infty=0-\infty$ (the nodal case), or $C=\mathbb{CP}^1$ and $D_\infty = (\infty)$ (the cuspidal case).  According to Spaide \cite{Spaide2016}, there is an AKSZ theorem for maps out of $C$ framed along $D_\infty$.  I claim something stronger will be true.
+
+( In general this condition on the existence of anticanonical $2D_\infty + E$ is necessary for Spaide's proof: he shows that $\Map_{\mathrm{fr}}(D_\infty + E, D_\infty, X) \to \Map(D_\infty + E, X)$ is Lagrangian precisely when this condition is satisfied.)
+
+
+\begin{claim}
+If $X$ is $k$-shifted symplectic and $D \subseteq C$ is a reduced effective divisor of degree $d$ disjoint from $D_\infty$ then the canonical restriction map from the mapping space framed along $D_\infty$
+\[\Map_{\mathrm{fr}}(C \backslash D, D_\infty, X) \to \Map((\mathbb{D}^\times)^D, X)\]
+is $k$-shifted Lagrangian.  Here $(\mathbb{D}^\times)^D$ is a formal punctured neighbourhood of $D$.
+\end{claim}
+
+In out case, take $X$ to be the adjoint quotient $G/G$, a 1-shifted symplectic stack.  Denote the framing at $D_\infty$ by $g_\infty$.  We choose a point in $\Map((\mathbb{D}^\times)^D, G/G)$, namely a set of $d$ germs of $G$-valued meromorphic functions, or $d$ conjugacy classes in $LG$.  Take this point to be given by a set of conjugacy classes of coweights: $([\omega_{z_1}^\vee], \ldots, [\omega_{z_d}^\vee])$.  The following is true in general.
+
+\begin{claim}
+The point 
+\[([\omega_{z_1}^\vee], \ldots, [\omega_{z_d}^\vee]) \to \Map((\mathbb{D}^\times)^D, G/G)\]
+is $1$-shifted Lagrangian.
+\end{claim}
+
+Combining the two claims we have the following.
+
+\begin{definition}
+The space of multiplicative $G$-Higgs bundles on $C$, framed by $g_\infty$ along $D_\infty$, with Dirac singularities at the divisor $D$ with prescribed residues conjugate to $\omega_{z_1}^\vee, \ldots, \omega_{z_d}^\vee$, is the derived fiber product
+\[\mathrm{GHiggs}_{G, \{\omega_{z_i}\}}(C, g_\infty) =  \Map((\mathbb{D}^\times)^D, G/G) \times_{\Map((\mathbb{D}^\times)^D, G/G)} ([\omega_{z_1}^\vee], \ldots, [\omega_{z_d}^\vee]).\]
+This fiber product is 0-shifted symplectic according to the two claims above.  If $C = \mathbb{CP}^1$ then the moduli space admits connected components indexed by $G$-bundles on $\mathbb{CP}^1$, or equivalently by dominant coweights.
+\end{definition}
+
+Each connected component should be an irreducible affine variety provided that the derived fiber product above is actually classical (i.e. provided the higher cohomology of the tangent complex vanishes).  This will happen as long as $d$ is sufficiently large.
+
+We can define a natural map
+\[\mathrm{GHiggs}_{G, \{\omega_{z_i}\}}(C, g_\infty) \to \mathfrak{B} =  \Map((\mathbb{D}^\times)^D, T/W) \times_{\Map((\mathbb{D}^\times)^D, T/W)} ([\omega_{z_1}^\vee], \ldots, [\omega_{z_d}^\vee]).\]
+
+\begin{claim}
+This map makes $\mathrm{GHiggs}_{G, \{\omega_{z_i}\}}(C, g_\infty)$ into an algebraic integrable system.
+\end{claim}
+
+This claim is clear away from the discriminant locus, where $G_{\mathrm{rss}}/G \cong T_{\mathrm{reg}}/W \times BT/W$.  It's also clear in the case where $d=0$, but in general in the case where $d > 0$ it needs further argument.
+
+
+\section{$\GrHiggs$ on $\BC^{\times}$ and trigonometric matrix}
+
+Let $X = \BP^{1}_{0,\infty}$ with coordinate $x$ and marked points  $x_0 = 0$ and $x_\infty =\infty$, and 1-form  $\lambda = \frac{dx}{x}$.
+
+We identify $X \setminus \{x_0, x_\infty\}$ with $\BC^{\times}$-torsor (cylinder). 
+
+Instead of fixing framing completely of $G$-bundle at a single point $x_\infty$ as we did in the rational case of $\BP^{1}$ with a single marked point,
+now we will fix framing partially at $x_0$ and $x_\infty$ as follows: we will reduce the structure group of the $G$-bundle to $N_{+}$ at $x=x_{\infty}$ and to
+$B_{-}$ at $x = x_0$, where $B_{-}, B_{+}$ denote opposite Borel subgroups, and $N_{\pm} \subset B_{\pm}$ denote corresponding unipotent subgroups, and
+$T= B_{+} \cap B_{-}$ denote the maximal torus. 
+
+
+
+Namely, $\Bun_{G}(X)^{\fr}$ is the moduli space of principal $G$-bundles on $X$ with reduction to $B_{+}$ at $x=x_\infty$ and $N_{-}$ at $x = x_{0}$.
+That means that at $x=x_{\infty}$ instead of framing we only fix a full flag, so that the residual
+automorphism group at $x = x_\infty$ that preserves this flag is $B_{+}$. At $x = x_{0}$ we fix an opposite flag and which results in the residual automorphism
+group at $x = x_{-}$ to be $B_{-}$.
+
+In addition we fix $T$-framing at $x = x_\infty$ which further reduces the structure of $G$-bundle to $N_{+}$ at $x = x_\infty$. 
+
+Reduction of the structure of $G$-bundle to $N_{+}$ at $x = x_\infty$ and to $N_{-}$ at $x = x_{0}$ makes automorphism group to be trivial: $N_{+} \cap B_{-} = \{1 \}$. 
+
+Now we define $\GrHiggs_{X,\underline{x}, \underline{w}, t^{\fr}}^{\fr}$
+to be the moduli space of  $(P_G,P_T,g)$ where
+
+\begin{enumerate}
+\item $P_G$ is a principal $G$-bundle on $X$ with reduction to $B_{-}$ at $x_0$ and to $B_{+}$ at $x_{\infty}$
+\item $P_T$ is a $T$-subbundle of $P_{T}$ compatible with (1)
+\item a $T$-framing of $P_{T}$ at $x_0$
+\item $g$ is a framed morphism from $P \to P$ with singularities of type $\underline{w}$ at divisor $\underline{x}$, morphism $g$ is compatible with (1), that is $g(x_0) \in B_{-}$ and $g(x_1) \in B_{+}$, and if
+  $t(x)$ denotes restriction of $g(x)$ to morphism $P_{T} \to P_{T}$,
+  we fix $t(x_0) t(x_\infty) = t^{\fr}$ where $t^{\fr} \in T$ 
+\end{enumerate}
+
+% as a Hecke modification from a bundle to itself with
+%   singularities at co-weigth colored divisor $\underline{x}, \underline{\omega}$ (as in section \ref{se:grhiggs}). Concretely, this means
+%   that group Higgs field satisfies
+%   $g(x_\infty) \subset B_{+}$ and $g(x_0) \subset B_{-}$. 
+
+
+  % Also, we define a fiber $\GrHiggs_{X,\underline{x}, \underline{w},t_\infty}^{\fr}$
+  % of the projection $\GrHiggs_{X,\underline{x}, \underline{w}}^{\fr} \to B_{+} \to T$
+  % give by evaluation of $g$ at $x = x_\infty$.
+
+ \begin{proposition}
+   If $\underline{w}$ is a collection of miniscule weights such that their
+   total sum lies in the co-root lattice, then 
+   \begin{enumerate}
+   \item $\GrHiggs_{X,\underline{x}, \underline{w},t}^{\fr}$ is a symplectic variety of dimension $2 (\rho, w)$.
+   \item $\GrHiggs_{X,\underline{x}, \underline{w},t}^{\fr}$ supports
+     algebraic integrable system with commuting Hamiltonians obtained
+     from characters of $g(x)$
+   \item The symplectic structure on $\GrHiggs_{X,\underline{x}, \underline{w},t}^{\fr}$ agrees with the one induced from the
+     standard trigonometric $r$-matrix on $G((x))$ 
+   \item There is a birational symplectomorphism $(\BC^{\times} \times \BC^{\times})^{(\rho,w)}
+     \to \GrHiggs_{X,\underline{x}, \underline{w},t}^{\fr}$
+   \end{enumerate}
+ \item 
+To each $\GrHiggs_{X,\underline{x}, \underline{w}, t}^{\fr}$
+   corresponds an ideal in the $q$-quantized algebra of function $\mathcal{F}_q(G((x)))$
+   \begin{equation}
+     I_{\GrHiggs_{G,\underline{x}, \underline{w}, t}^{\fr}} \subset \mathcal{F}_q(G((x)))
+   \end{equation}
+   and there is representation  of the quotient algebra
+   \begin{equation}
+  \sigma_{q}^{*}:    \mathcal{F}_q(G((x)))/     I_{\GrHiggs_{X,\underline{x}, \underline{w}, t}^{\fr}} \to \mathcal{D}_{q}( \BC^{(\rho, w)})
+\end{equation}
+in the algebra of q-difference operators on $(\BC^\times)^{(\rho,\omega)}$ obtained from the coordinate map $\sigma$ (\ref{eq:coord}). 
+ \end{proposition}
+  
+
+
+  
+\subsection{First example of trigonometric grHiggs for $GL_2$}
+
+
+\begin{equation}
+g(x) = (x - m_1m_2)^{-1}   \begin{pmatrix}
+    b^{-1/2} x - b^{1/2} m_1 & m_1 a x (b^{-1/2} - b^{1/2}/m_2) \\
+    a^{-1} (b^{1/2} m_2 - b^{-1/2})  & b^{1/2} x - b^{-1/2} m_1 
+  \end{pmatrix}
+  \begin{pmatrix}
+    t_1^{1/2} & 0\\
+    0 & t_2^{1/2} 
+  \end{pmatrix}
+\end{equation}
+where $t$ is the diagonal framing parameter, and $a, b \in \BC^{\times}$ are the canonical coordinate on
+the symplectic leaf $\BC^{\times} \times \BC^{\times}$ with Poisson brackets
+\begin{equation}
+  \{ a, b \} =  ab 
+\end{equation}
+so that the symplectic form is $\frac{db}{b} \wedge \frac {da}{a}$.
+
+Notice that
+\begin{equation}
+  g(x_0) = \begin{pmatrix}
+ \frac{\sqrt{b}}{m_2} & 0 \\
+ \frac{1-b m_2}{a \sqrt{b} m_1 m_2} & \frac{1}{\sqrt{b} m_2} \\
+\end{pmatrix}  \begin{pmatrix}
+    t_1^{1/2} & 0\\
+    0 & t_2^{1/2} 
+  \end{pmatrix}, \qquad 
+g(x_\infty) = 
+\begin{pmatrix}
+ \frac{1}{\sqrt{b}} & -\frac{a m_1 \left(b-m_2\right)}{\sqrt{b} m_2} \\
+ 0 & \sqrt{b} \\
+\end{pmatrix}  \begin{pmatrix}
+    t_1^{1/2} & 0\\
+    0 & t_2^{1/2} 
+  \end{pmatrix}
+\end{equation}
+so indeed
+\begin{equation}
+  t(x_0) t(x_\infty) =  \frac{1}{m_2}  \begin{pmatrix}
+    t_1 & 0\\
+    0 & t_2
+  \end{pmatrix}
+\end{equation}
+is fixed 
+
+The matrix elements $g_{ij}(x)$ in the fundamental representation satisfy the classical Yang-Baxter equation with the trigonometric $r$-matrix
+
+\begin{multline}
+  \{  g_{ij}(x_1), g_{kl}(x_2) \} = \frac{1}{2} \frac{ x_1 + x_2}{x_1 - x_2}
+  \Big(  g_{kj}(x_1) g_{il}(x_2) \delta_{ki} - g_{il}(x_1) g_{kj}(x_2) \delta_{lj} \Big) \\
+  + \frac{1}{x_1 -x_2} 
+\Big ( (x_1 \delta_{i<k} + x_2 \delta_{k<i}) g_{kj}(x_1)) g_{il}(x_2)
+ -(x_1 \delta_{l<j} + x_2 \delta_{j<l}) g_{il}(x_2) g_{kj}(x_2) \Big) 
+\end{multline}
+
+The parameters $m_1, m_2$ determine the position of the singularities $x_1 = m_1/m_2, x_2 = m_1 m_2$ 
+\begin{equation}
+  \det g(x) = \frac{ x- m_1/m_2}{x - m_1 m_2}
+\end{equation}
+with co-weights signularities given by $(1,0)$ at $x_1$ and by $(0,-1)$ at $x_2$ in the notations of (\ref{eq:GLcoweight})(\ref{eq:diag}). 
+
+
+
+
+\section{Monopoles}
+
+
+ Let $C' = \CP^1 \setminus z_{\infty}$ be complex affine line which
+  we identify with $\BC = \BR^2$
+ Let $X  = C' \times S^1$
+  be the real three-dimensional  flat Riemannian manifold  with flat Riemannian metric $ dz d \bar z + dy^2$ where $z$ is a coordinate
+  on $C'$ and $y \in \BR/ 2 \pi \BZ$ is a coordinate on $S^1$. Let $x = (z, y)$ with $z \in \BC, y \in \BR$
+  denote a coordinate on $X$. 
+ Let $G_c = U(r)$ be the maximal compact subgroup
+  of $G =GL(r, \BC)$. Let $P_c$ be a principal $G_c$ bundle on $X$ with a connection $d_{A} = d + A$
+  and fixed framing at the boundary at infinity $ \partial C' \times S^1$. 
+  Let $\phi$ be $\mathfrak{g}_{c}$  valued Higgs field $\phi \in \Gamma(X, P_c \times_{G_c} \mathrm{ad}\, \mathfrak{g}_c)
+$. 
+
+\begin{definition}
+A monopole on $X$ is a solution to Bogomolny equation
+  \begin{equation}
+    \star F_{A} = d_{A} \phi
+  \end{equation}
+\end{definition}
+
+
+\begin{definition}
+A monopole has fixed Dirac singularity at point $x_{*} \in X$ of co-weight $\omega^{\vee}$
+  if near $x_*$ there exists a gauge such that $\mathfrak{g}_{c}$-valued Higgs field $\phi(x)$ has singularity
+of the form
+\begin{equation}
+  \phi(x) = \frac{ \omega^{\vee} (\sqrt{-1})} { 2 |x - x_{*}|} + \text{finite analytic}
+\end{equation}
+\end{definition}
+
+Here $\omega^{\vee}(\sqrt{-1})$ denotes the image of $\sqrt{-1} \in \mathrm{Lie}(U(1))$,
+where $U(1)$ is identified with the group of unitary complex numbers,
+and co-weight $\omega^{\vee}$ is a Lie algebra homomorphism $\omega^{\vee}: \mathfrak{u}(1) \to \mathfrak{g}_{c}$.
+
+\begin{definition}
+A  monopole
+has charge $\omega^{\vee}_{x_\infty}$ and asymptotics $g_{\infty} \in G$ if 
+\begin{equation}
+  \begin{aligned}
+   A_y  +  \sqrt{-1} \phi = \frac{1}{2\pi} \left( \omega^{\vee}_{x_{\infty}}( \log z)  + \log g_{\infty} + \mathcal{O}(|z|^{-1})  \right), \qquad z \to \infty
+  \end{aligned}
+\end{equation}
+\end{definition}
+
+Let $D_{nr[\omega_1^{\vee}]}$ be a set of pairwise different $nr$ points in $X_3$ 
+colored by the fundamental co-weight $\omega^{\vee}_{1}$. 
+
+
+\begin{definition}
+The moduli space $\Mon(G_{c}, X, D_{nr[\omega_1^{\vee}]}, \omega_{x_\infty}^{\vee},  g_{\infty})$ is the moduli space of 
+framed at infinity monopole solutions to Bogomolny equations which are smooth away from $D_{nr[\omega_1^{\vee}]}$, 
+have Dirac singularities of fundamental co-weight $\omega_1^{\vee}$  at $D_{nr[\omega_1^{\vee}]}$
+and have charge $\omega_{x_\infty}^{\vee} = n\omega_{r}^{\vee}$ and asymptotics $g_\infty$ at infinity. 
+\end{definition}
+
+
+
+\begin{proposition}
+  The moduli space $\Mon(G_{c}, X, D_{nr[\omega_1^{\vee}]}, \omega_{x_\infty}^{\vee},  g_{\infty})$ is HyperK\"ahler variety.
+  The twistor sphere $\BP^1_{\zeta}$ is identified with a unit sphere $S^2 \simeq \BP^1$ in the tangent space $T_{X}$.
+\end{proposition}
+
+\begin{definition}
+ In complex structure $\zeta = \partial_{y}$ the holomorphic variables of the hyperK\"ahler reduction
+  are $A_y + \sqrt{-1} \phi$ and $A_{\bar z}$. By $\Mon_{\zeta}$
+  we denote holomorphic symplectic variety constructed from the HyperK\"ahler structure on $\Mon$ restricted
+  to the complex structure $\zeta$.  
+\end{definition}
+
+
+  
+\begin{lemma}
+  The moduli space $\Mon_{\partial_y}(G, C' \times S^1, D_{nr[\omega_1^{\vee}]}, \omega_{x_\infty}^{\vee}, g_{\infty})$
+  is complex symplectomorphic to $\GrHiggs(G, C, D'_{nr[\omega_1^{\vee}]}, \omega_{x_\infty}^{\vee}, g_{\infty})$
+  where $D'$ denotes the image of $D$ under the $S^1$-forgetting projection map $C' \times S^1 \to C'$,
+  so that $(z, y) \mapsto z$. The complex dimension of $\Mon(G, C' \times S^1, D_{nr[\omega_1^{\vee}]}, \omega_{x_\infty}^{\vee}, g_{\infty})$ is $n(r^2-r)$. 
+\end{lemma}
+
+For $X = C' \times S^1$ and a point $y \in S^1$ let $C'_y = C' \times \{y\}$ be a plane at point $y$. 
+The holomorphic structure of the principal holomorphic vector bundle $P$ in $\GrHiggs$ is
+induced by the connection $A_{\bar z}$ in the monopole solution restricted to $C_y'$.
+The group Higgs field $g(z)$ is identified with  the holonomy of the 
+monopole connection $\p_{y} + A_{y} + \sqrt{-1} \phi$
+around $S^1$ fiber in $X$ at point $z$
+\begin{equation}
+  g(z) = \mathrm{hol}_{S^{1}_{z}} ( A_{y} + \sqrt{-1} \phi)
+\end{equation}
+
+
+
+
+
+  
+  
+\bibliographystyle{utphys} \bibliography{lib} 
+\end{document} 
+
+

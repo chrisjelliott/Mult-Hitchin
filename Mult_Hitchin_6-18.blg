@@ -4,45 +4,45 @@ The top-level auxiliary file: Mult_Hitchin_6-18.aux
 The style file: alpha.bst
 Database file #1: Mult_Hitchin.bib
 Warning--there's a number but no volume in Shapiro
-You've used 23 entries,
+You've used 24 entries,
             2543 wiz_defined-function locations,
-            722 strings with 8345 characters,
-and the built_in function-call counts, 8788 in all, are:
-= -- 910
-> -- 372
+            727 strings with 8469 characters,
+and the built_in function-call counts, 9202 in all, are:
+= -- 954
+> -- 391
 < -- 12
-+ -- 119
-- -- 118
-* -- 647
-:= -- 1464
-add.period$ -- 70
-call.type$ -- 23
-change.case$ -- 134
-chr.to.int$ -- 23
-cite$ -- 24
-duplicate$ -- 343
-empty$ -- 636
-format.name$ -- 149
-if$ -- 1763
++ -- 125
+- -- 124
+* -- 680
+:= -- 1532
+add.period$ -- 73
+call.type$ -- 24
+change.case$ -- 140
+chr.to.int$ -- 24
+cite$ -- 25
+duplicate$ -- 357
+empty$ -- 666
+format.name$ -- 156
+if$ -- 1846
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 22
-newline$ -- 119
-num.names$ -- 69
-pop$ -- 94
+missing$ -- 23
+newline$ -- 124
+num.names$ -- 72
+pop$ -- 97
 preamble$ -- 1
-purify$ -- 158
+purify$ -- 165
 quote$ -- 0
-skip$ -- 287
+skip$ -- 300
 stack$ -- 0
-substring$ -- 566
-swap$ -- 39
+substring$ -- 598
+swap$ -- 40
 text.length$ -- 12
 text.prefix$ -- 9
 top$ -- 0
-type$ -- 184
+type$ -- 192
 warning$ -- 1
-while$ -- 93
-width$ -- 27
-write$ -- 299
+while$ -- 98
+width$ -- 28
+write$ -- 312
 (There was 1 warning)

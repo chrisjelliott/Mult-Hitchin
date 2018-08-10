@@ -1,0 +1,68 @@
+\documentclass[12pt,psamsfonts,reqno]{amsart} 
+\input{mypack} \input{mydef} 
+\begin{document}
+
+
+Notations. Let $G$ be a simple Lie group of rank $r$. Let $i = 1 \dots r$ label the nodes of Dynkin graph. Let $\lambda_i^{\vee}: \BC^{\times} \to T_{G}$ be fundamental coweights, and $\lambda_i:
+T_{G} \to \BC^{\times}$ be fundamental weights. Let $\rho_i: G \to \mathrm{End}(V_i)$
+be irreducible representation of $G$, i.e.  $V_i$ is irreducible $G$-module with highest weight $\lambda_i$. Let $\chi_i$ be the character of $\rho_i$, that is $\rho_i(g) = \tr_{V_{i}} \rho_i(g)$. 
+
+
+
+
+
+Conjecture 1. The moduli space $M_{G, \mathbf{n}, g_{\infty}}$ of smooth $G$-monopoles on $\BC_{x} \times S^{1}$
+with fixed charge $\mathbf{n} =(n_1, \dots, n_r) \in \BZ_{>=0}^{r}$ at infinity $x =\infty$ 
+in the asymptotic sector $g_\infty \in T_{G}/W$  is the subspace of analytic maps $g: \BC_{x} \to G$ restricted by the conditions
+
+1) The matrix elements of $\rho_i(g(x))$ are polynomials of $x$ of degree $n_i$
+
+2) The coefficient at $x^n$ of $ \chi_{i}(g(x))$ is fixed to be $\chi_i(g_\infty)$.
+
+\medskip
+
+Conjecture 2. The $\dim_{\BC} M_{G, \mathbf{n}, g_{\infty}} = 2 \sum_{i=1}^{r} n_i$
+
+\medskip
+
+Conjecture 3. The coefficients $u_{i,k}$ for $k=1, \dots n_i$ in the character polynomials
+\begin{equation}
+  \chi_i(g(x)) = \chi_i(g_{\infty})( x^{n_i} + u_{i,1} x^{n_i-1} + \dots u_{i,n_i})
+\end{equation}
+ are algebraically independent Poisson commuting functions on $M_{G, \mathbf{n}, \g_{\infty}}$ which provide a non-degenerate map $u: M_{G, \mathbf{n}, \g_{\infty}} \to U$
+where $\dim_{\BC} U =  \sum_{i=1}^{r} n_i$. 
+  
+ Hence $M_{G, \mathbf{n}, \g_{\infty}}$ is the phase space of algebraic completely integrable system with the base $U$.
+
+ \medskip
+
+
+ Conjecture 4. The $M_{G, \mathbf{n}, \g_{\infty}}$ is a holomorphic symplectic leaf of
+ holomorphic Poisson-Lie group $G[\BC]$ with quasi-triangular rational $r$-matrix type Poisson bracket.
+
+\medskip
+ 
+ Conjecture 5. The holomorphic symplectic structure on $M$ is isomorphic to the holomorphic symplectic
+  structure defined by the hyperKahler definition of $M$ as the moduli space of solutions of the Bogomolny equationson $\BR^2 \times S^1$ of the form
+  \begin{equation}
+     d_{A} \Phi = \star F_{A}
+  \end{equation}
+  with a certain fixed asymptotics of the solutions at $\infty$ (fix the topological sector $n$)
+  and the asymptotics of the field $\Phi$ at $x \to \infty$ such that $\exp(\Phi) = g_{\infty}$. 
+
+
+
+  Conjecture 6. (Example). For $G = SL(2)$ the complex variables $(p_i, \phi_i)|_{i=1,\dots, n}$ with $p_i \in \BC$ and $\phi_i \in \BC/(2\pi\sqrt{-1}\BZ)$ are Darboux coordinates on $M_{G,n,1}$ with the parametrization
+  \begin{equation}
+    g(x) = \prod_{i=1}^{n}
+    \begin{pmatrix}
+      p_i - x & e^{\phi_i} \\
+      e^{-\phi_i} & 0 
+    \end{pmatrix}
+  \end{equation}
+
+
+%\bibliographystyle{utphysurl} \bibliography{lib} 
+\end{document} 
+
+

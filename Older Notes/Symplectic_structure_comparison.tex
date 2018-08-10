@@ -1,0 +1,207 @@
+\documentclass[10pt, oneside, a4paper]{article}
+
+
+\IfFileExists{./math_headers.sty}
+  {\input ./math_headers.sty}
+  {\IfFileExists{../math_headers.sty}
+    {\input ../math_headers.sty}
+    {\typeout{Header file not found}
+    }
+  }
+  
+\newcommand{\Map}{\ul{\mr{Map}}}
+
+\title{Symplectic Structures on Moduli of Regular Higgs Bundles on a Punctured Line}
+\author{Chris Elliott}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+The following are a set of rough notes describing moduli stacks of Higgs bundles on non-compact curves with regular singularities and prescribed residues, and in particular giving two equivalent descriptions of the 0-shifted symplectic structures on this moduli space in genus zero.  These notes are still quite preliminary, so be warned that the proofs will be sketchy.
+
+\section{Regular Higgs Bundles on a Punctured Line}
+Let $G$ be a semisimple complex algebraic group.  We'll give two equivalent descriptions of the moduli space of $G$-Higgs bundles on the punctured curve $\bb P^1 \bs \{z_1, \ldots, z_n\}$, with regular singularities and prescribed residues $\delta_1, \ldots, \delta_n$ at the punctures, up to gauge equivalence.  Each perspective will come with a natural 0-shifted symplectic structure (as defined by Pantev-To\"en-Vaqui\'e-Vezzosi \cite{PTVV}), and we'll provide an equivalence of derived symplectic stacks.
+
+We'll write $\bb D$ and $\bb D^\times$ for the formal disk $\spec \CC[[z]]$ and the formal punctured disk $\spec \CC((z))$ respectively.  We denote by $G((z))$ the mapping stack $\ul{\mr{Map}}(\bb D^\times, G)$ (the \emph{formal loop group}), and similarly we denote by $\gg((z))$ the mapping stack $\ul{\mr{Map}}(\bb D^\times, \gg)$.  Throughout this note we'll freely use the invariant pairing coming from the Killing form to identify $\gg$ and $\gg^*$.
+
+\begin{definition}
+The moduli stack of \emph{algebraic $G$-bundles} on a scheme $X$ is the mapping stack $\Map(X, BG)$.  The moduli stack of \emph{$G$-Higgs bundles} on a scheme $X$ is the mapping stack $\Map(X_{\mr{Dol}}, BG)$, where $X_{\mr{Dol}}$ is the \emph{Dolbeault stack}: the formal completion $T_{\mr{form}}[1]X$ of the 1-shifted cotangent bundle at the zero section.
+\end{definition}
+
+\begin{lemma} \label{algebraic_bundles_vanish_lemma}
+The moduli stack $\bun_G(\bb A^1 \bs \{z_1, \ldots, z_n\})$ of algebraic $G$-bundles on a punctured affine line is equivalent to the classifying stack $BG(\CC[z]_{z_1, \ldots, z_n})$.  That is, all algebraic $G$-bundles are trivializable.
+\end{lemma}
+
+\begin{proof}
+The tangent complex to $\bun_G(X)$ at a classical point $P$ is abstractly isomorphic to the shifted Dolbeault complex $(\Omega^{0, \bullet}_{\mr{alg}}(X; \gg_P)[1], \ol \dd)$.  If $X$ is a punctured line, this complex is concentrated in degree 0, so the derived stack is equivalent to its classical truncation, the classical moduli stack of $G$-bundles.
+
+By a foundational result in algebraic geometry, a normal Noetherian affine scheme $\spec R$ has vanishing class group if and only if it is a UFD.  The ring $\CC[z]$ is a UFD, and therefore so are all its localizations, so every line bundle on the punctured affine line is trivializable.  A theorem of Serre (\cite[Theorem 1]{Serreprojective}) tells us that every vector bundle on an affine curve splits as the sum of a line bundle and a trivial bundle, therefore every vector bundle on a punctured line is trivializable.  Finally, the category of principal $G$-bundles on a smooth variety $X$ admits a Tannakian description as exact faithful monoidal functors $\rep(G) \to \vect(X)$ (satisfying a fibre functor condition), where $\vect(X)$ is the category of vector bundles on $X$.  Therefore if every vector bundle is trivializable, so, necessarily is every $G$-bundle, as required.
+\end{proof}
+
+\begin{corollary}
+The moduli stack $\bun_G(\bb D^\times)$ of $G$-bundles on the formal punctured disk is equivalent to $BG((z))$.
+\end{corollary}
+
+\begin{prop} \label{higgs_bundles_on_disk_prop}
+There are natural equivalences of derived stacks 
+\begin{align*}
+\higgs_G(\bb A^1 \bs \{z_1, \ldots, z_n\}) &\iso \gg(\CC[z]_{z_1, \ldots, z_n})/G(\CC[z]_{z_1, \ldots, z_n}) \\
+\text{and } \higgs_G(\bb D^\times) &\iso \gg((z)) / G((z)),
+\end{align*} 
+where $G(\CC[z]_{z_1, \ldots, z_n})$ and $G((z))$ act by the respective adjoint actions.
+\end{prop}
+
+\begin{proof}
+The tangent complex to $\higgs_G(X)$ at a classical point $P$ is abstractly isomorphic to the shifted complex of $(p,q)$-forms $(\Omega^{\bullet, \bullet}_{\mr{alg}}(X; \gg_P)[1], \ol \dd)$.  If $X$ is a punctured line, this complex is concentrated in degrees 0 and 1, so the derived stack is equivalent to its classical truncation, the classical moduli stack of $G$-Higgs bundles. 
+
+As such the fiber over $\pt \to BG(\CC[z]_{z_1, \ldots, z_n})$ in the moduli stack is just the space of Higgs fields on the trivial bundle.  This is clearly isomorphic to $\gg(\CC[z]_{z_1, \ldots, z_n})$, so the moduli stack in question is just the adjoint quotient $\gg(\CC[z]_{z_1, \ldots, z_n})/G(\CC[z]_{z_1, \ldots, z_n})$ as required.  The same argument holds for Higgs bundles on the formal punctured disk.
+\end{proof}
+
+The moduli stack $\higgs_G(\bb D^\times)$ fails to be shifted symplectic.  Indeed, we'd like to think of $\bb D^\times$ as 1-oriented with orientation given by the residue, and then obtain a 1-shifted symplectic structure by the AKSZ-PTVV formalism \cite[Theorem 2.5]{PTVV}.  On the tangent complex $\bb T_0 \higgs_G(\bb D^\times) \iso \gg((z))[1] \oplus \gg((z))$, the invariant pairing on $\gg$ combined with the residue gives a candidate pairing of degree 1, but it fails to be well-defined because the degree $-1$ part of the product may be a sum with infinitely many terms.  Let's describe a substack where this problem is resolved.
+
+\begin{definition}
+ The moduli space of \emph{regular} Higgs bundles on $\bb D^\times$ is the 1-shifted symplectic substack $t^{-1}\gg/G \inj \gg((z))/G((z))$.
+\end{definition}
+
+Here the 1-shifted symplectic structure is the canonical one, using the invariant pairing to identify $\gg/G$ with $\gg^*/G$.  Under the embedding $\gg/G \inj \gg((z))/G((z))$ placing $\gg$ in $z$ degree $-1$, this degree 1 pairing -- on the tangent complex -- is exactly given by the invariant pairing on $\gg$ combined with the residue pairing.
+
+This motivates a definition of regular Higgs bundles on any punctured curve.
+\begin{definition} \label{regular_higgs_def}
+If $X = \ol X \bs \{z_1, \ldots, z_n\}$ is a connected punctured curve, the moduli stack $\higgs_G^{\mr{reg}}(X)$ of \emph{regular} Higgs bundles on $X$ is the pullback
+\[\xymatrix{
+ \higgs_G^{\mr{reg}}(X) \ar[r] \ar[d] &\higgs_G(X) \ar[d] \\
+ \left(t^{-1}\gg\right)^n/G \ar[r] &\left(\gg((z))/G((z))\right)^n
+}\]
+where the vertical arrow $\higgs_G(X) \to \left(\gg((z))/G((z))\right)^n$ is given by restriction to a formal punctured neighbourhood of $\{z_1, \ldots, z_n\}$.
+\end{definition}
+
+\begin{prop} \label{higgs_bundles_on_punctured_line_prop}
+The moduli space of regular Higgs bundles on a punctured line $\bb P^1 \bs \{z_1, \ldots, z_n\}$ can be described as
+\[\higgs_G^{\mr{reg}}(\bb P^1 \bs \{z_1, \ldots, z_n\}) \iso \gg^n/G \times_{\gg/G} BG\]
+where the map $\gg^n/G \to \gg/G$ comes from the sum $\gg^n \to \gg$.
+\end{prop}
+
+\begin{proof}
+Without loss of generality we can assume that none of the $z_i = \infty$, and therefore write
+\begin{align*}
+\higgs_G^{\mr{reg}}(\bb P^1 \bs \{z_1, \ldots, z_n\}) &\iso \higgs_G^{\mr{reg}}(\bb A^1 \bs \{z_1, \ldots, z_n\}) \times_{\higgs_G^{\mr{reg}}(\bb D^\times)} \higgs_G^{\mr{reg}}(\bb D) \\
+&\iso \higgs_G^{\mr{reg}}(\bb A^1 \bs \{z_1, \ldots, z_n\}) \times_{\gg/G} BG. 
+\end{align*}
+According to proposition \ref{higgs_bundles_on_disk_prop}, we can identify 
+\[\higgs_G(\bb A^1 \bs \{z_1, \ldots, z_n\}) \iso \gg(\CC[z]_{z_1, \ldots, z_n})/G(\CC[z]_{z_1, \ldots, z_n}),\]
+and when we form the pullback as in definition \ref{regular_higgs_def} we obtain 
+\[\higgs_G^{\mr{reg}}(\bb A^1 \bs \{z_1, \ldots, z_n\}) \iso \left((t-z_1)^{-1}\gg \times \cdots \times (t-z_n)^{-1}\gg\right)/G\]
+and therefore the desired equivalence.
+\end{proof}
+
+We can go one step further, and define moduli spaces of regular Higgs bundles on a punctured curve with prescribed residues at the punctures.
+\begin{definition}
+If $X = \ol X \bs \{z_1, \ldots, z_n\}$ is a punctured curve, the moduli stack $\higgs_G^{\mr{reg}}(X; \delta_1, \ldots, \delta_n)$ of \emph{regular} Higgs bundles on $X$ with residues conjugate to $\delta_1, \ldots, \delta_n \in \gg$ at the punctures, is the pullback
+\[\xymatrix{
+\higgs_G^{\mr{reg}}(X; \delta_1, \ldots, \delta_n) \ar[r] \ar[d] &\higgs_G^{\mr{reg}}(X) \ar[d] \\
+[\delta_1]/G \times \cdots \times [\delta_n]/G \ar[r] &\left(t^{-1}\gg/G\right)^n
+}\]
+where $[\delta_i]/G$ is the image of $\delta_i$ under the projection $\gg \to \gg/G$.
+\end{definition}
+
+\begin{lemma} \label{higgs_lagrangian_structure_lemma}
+The map $\higgs_G^{\mr{reg}}(\bb P^1 \bs \{z_1, \ldots, z_n\}) \to \left(\gg/G\right)^n$ admits a canonical Lagrangian structure.
+\end{lemma}
+
+\begin{proof} 
+We'll use the description in proposition \ref{higgs_bundles_on_punctured_line_prop}.  The pullback of the symplectic form on $\left(\gg/G\right)^n$ to $\gg^n/G \times_{\gg/G} BG$ vanishes (is not merely equivalent to zero), which one can check directly by evaluating it as a pairing on the tangent complex: indeed, when we pull it back to $\gg^n/G$, we get
+\[\omega((X, (Y_1, \ldots, Y^n)), (X', (Y_1', \ldots, Y_n'))) = \sum_{i=1}^n \left( \langle X, Y_i' \rangle + \langle X', Y_i \rangle \right)\]
+as a pairing on the tangent complex $\gg[1] \oplus \gg^n$  When we pullback to the fiber product, this imposes the condition that $\sum Y_i = \sum Y_i' = 0$, so the pairing vanishes identically.  A Lagrangian structure is therefore an element of $\Omega^{2, \mr{cl}}(\gg^n/G \times_{\gg/G} BG)$ of degree 2 which is closed for the internal differential, and there's a canonical choice, namely the pullback of the invariant pairing on $\gg$ as an element of $\Omega^{2, \mr{cl}}(BG)$. 
+\end{proof}
+
+\begin{corollary} \label{residue_moduli_symplectic_cor}
+The moduli stack $\higgs_G^{\mr{reg}}(\bb P^1 \bs \{z_1, \ldots, z_n\}; \delta_1 \ldots, \delta_n)$ is 0-shifted symplectic.
+\end{corollary}
+
+\begin{proof}
+Since $[\delta_i]/G \to \gg/G$ is Lagrangian, so is the product $[\delta_1]/G \times \cdots \times [\delta_n]/G \to \left(\gg/G\right)^n$.  Therefore, lemma \ref{higgs_lagrangian_structure_lemma} tells us that the moduli stack $\higgs_G^{\mr{reg}}(\bb P^1 \bs \{z_1, \ldots, z_n\}; \delta_1 \ldots, \delta_n)$ arises as a Lagrangian intersection in $\gg/G$, and therefore by \cite[Theorem 2.9]{PTVV} inherits a canonical 0-shifted symplectic structure.
+\end{proof}
+
+\section{An Alternative Perspective}
+Let's consider the following alternative way of understanding $G$-Higgs bundles on the punctured line, via Hamiltonian reduction.  Consider the adjoint orbit $[(\delta_1, \ldots, \delta_n)]$ of an element in $\gg^n$ with respect to the diagonal adjoint action of $G$. There is a summation map $\sigma [(\delta_1, \ldots, \delta_n)] \to \gg$.  This map is adjoint-equivariant and Hamiltonian, so one can form the Hamiltonian reduction $\sigma^{-1}(0)/G$, as usual using the invariant pairing to identify $\gg$ and $\gg^*$.
+
+Concretely, we should view this as asking for a set of $n$ residues for a $G$-Higgs field on an $n$-punctured $\bb P^1$, such that the residues can be simultaneously conjugated to $(\delta_1, \ldots, \delta_n)$, and with the constraint that the residues sum to zero, all modulo the adjoint action.  This gives an alternative description of the moduli stack $\higgs_G^{\mr{reg}}(\bb P^1 \bs \{z_1, \ldots, z_n\}; \delta_1 \ldots, \delta_n)$.  We'll explain how to give is a 0-shifted symplectic structure in the derived setting, and then prove that these two symplectic stacks are equivalent.
+
+Safronov \cite{Safronovquasi} explained how to make sense ot Hamiltonian reduction in the setting of derived symplectic geometry.
+\begin{definition}[Safronov]
+A \emph{derived Hamiltonian structure} on a $G$-equivariant morphism $\mu \colon X \to \gg^*$ of derived stacks is a Lagrangian structure on the associated morphism $X/G \to \gg^*/G$.  The \emph{derived Hamiltonian reduction} of $X$ along the morphism $\mu$ is the derived fiber product $X/G \times_{\gg^*/G} BG$.  Since $BG \to \gg^*/G$ is canonically Lagrangian, a Hamiltonian structure on $\mu$ makes the Hamiltonian reduction into a 0-shifted symplectic stack.
+\end{definition}
+
+\begin{example} \label{sum_coadjoint_example}
+If $\delta_1, \ldots, \delta_n$ are elements of $\gg$, the map $\mu \colon [(\delta_1, \ldots, \delta_n)] \to \gg^n \to \gg$ obtained by composing the inclusion with the summation map is Hamiltonian.  Indeed, the quotient stack $ [(\delta_1, \ldots, \delta_n)]/G$ with respect to the diagonal adjoint action is canonically equivalent to $BG_{(\delta_1, \ldots, \delta_n)}$, the classifying space of the stabilizer.  The pullback of the symplectic form on $\gg/G$ to this stabilizer is equal to (not just equivalent to) zero.  We choose as isotropic data the invariant pairing on $\gg_{(\delta_1, \ldots, \delta_n)}$ viewed as a closed degree 2 element of $\Omega^{2, \mr{cl}}(BG_{(\delta_1, \ldots, \delta_n)}, 0)$.  This element is non-degenerate, so defines a Lagrangian structure.  Therefore the derived Hamiltonian intersection
+\[[(\delta_1, \ldots, \delta_n)]/G \times_{\gg/G} BG\]
+is 0-shifted symplectic.
+\end{example}
+
+\begin{theorem} \label{equivalent_hamiltonian_reduction_thm}
+The derived stacks $\higgs_G^{\mr{reg}}(\bb P^1 \bs \{z_1, \ldots, z_n\}; \delta_1 \ldots, \delta_n)$ and $[(\delta_1, \ldots, \delta_n)]/G \times_{\gg/G} BG$ are equivalent as 0-shifted symplectic stacks.
+\end{theorem}
+
+\begin{proof}
+We'll first observe that the two stacks are equivalent, then match up the two symplectic structures.  The equivalence as stacks is easy, indeed, we can expand the Higgs moduli stack as
+\begin{align*}
+\higgs_G^{\mr{reg}}(\bb P^1 \bs \{z_1, \ldots, z_n\}; \delta_1, \ldots, \delta_n) &\iso \left(\delta_1/G \times \cdots \times \delta_n/G\right) \times_{\left(\gg/G\right)^n} \higgs_G^{reg}(\bb P^1 \bs \{z_1, \ldots, z_n\}) \\
+&\iso \left([\delta_1]/G \times \cdots \times [\delta_n]/G\right) \times_{\left(\gg/G\right)^n} \left(\gg^n/G \times_{\gg/G} BG\right) \\
+&\iso  \left(\left([\delta_1]/G \times \cdots \times [\delta_n]/G\right) \times_{\left(\gg/G\right)^n} \gg^n/G\right) \times_{\gg/G} BG \\
+&\iso [(\delta_1, \ldots, \delta_n)]/G \times_{\gg/G} BG
+\end{align*}
+as required, where on the last line we used the observation that the base change $- \times_{\left(\gg/G\right)^n} \gg^n/G$ sends a point in $(\gg/G)^n = \gg^n/G^n$ to the corresponding point in $\gg^n/G$ by forgetting the $G^n$ action down to the diagonal.  Now we have to match up the symplectic structures.  Our triple Lagrangian intersection can be made into a 0-shifted symplectic stack in two ways, coming from the two ways of bracketing the expression (i.e. the second and third lines above).
+
+In order to understand this, let's consider a more general triple intersection of the form
+\[L_1 \times_{X_1} Y \times_{X_2} L_2,\]
+with symplectic structures $\omega_1$ and $\omega_2$ on $X_1$ and $X_2$, and Lagrangian structures on the morphisms $L_1 \to X_1$, $L_2 \to X_2$ as well as $L_1 \times_{X_1} Y \to X_2$ and $Y \times_{X_2} L_2 \to X_1$.  Suppose in addition that, if $g_i$ is the morphism $Y \to X_i$, there is an equivalence between $g_1^*\omega_1$ and $g_2^*\omega_2$.  Under this equivalence, the Lagrangian structure on $L_1 \times_{X_1} Y \to X_2$ becomes a Lagrangian structure on the projection $L_1 \times_{X_1} Y \to X_1$, and similarly the Lagrangian structure on $Y \times_{X_2} L_2 \to X_1$ becomes a Lagrangian structure on the projection $Y \times_{X_2} L_2 \to X_2$.  In order to prove that the two symplectic structures on the triple intersection are equivalent, we must find homotopies between the Lagrangian structure on $L_1 \times_{X_1} Y \to X_1$ we just described and the pullback of the Lagrangian structure on $L_1 \to X_1$ to the fiber product, and similarly on the other side.
+
+In our example, the closed 2-forms on $\gg^n/G$ obtained by pulling back the symplectic structures on $\left(\gg/G\right)^n$ and $\gg/G$ are equal: on the tangent complex $\gg[1] \oplus \gg^n$ both are given by the formula 
+\[\omega((X, (Y_1, \ldots, Y^n)), (X', (Y_1', \ldots, Y_n'))) = \sum_{i=1}^n \left( \langle X, Y_i' \rangle + \langle X', Y_i \rangle \right).\]
+According to the discussion in the previous paragraph, we must therefore construct two homotopies between two pairs of Lagrangian structures.  First, there are two Lagrangian structures for the left-hand side, $[(\delta_1, \ldots, \delta_n)]/G \to \left(\gg/G\right)^n$.  As we discussed in example \ref{sum_coadjoint_example} above, one of these Lagrangian structures is the invariant pairing for the centralizer $\gg_{(\delta_1, \ldots, \delta_n)}$.  The other is the pullback of the invariant pairing for the product of centralizers $\gg_{\delta_1} \oplus \cdots \oplus \gg_{\delta_n}$ to the diagonal inside $(\gg^n)^{\otimes 2}$, and these are equal.
+
+On the other side, we have a pair of Lagrangian structures on $\gg^n/G \times_{\gg/G} BG \to \gg/G$: the pullback of the invariant pairing on $\gg$ to a closed 2-form on the fiber product, and the Lagrangian structure on $\gg^n/G \times_{\gg/G} BG \to \left(\gg/G\right)^n$.  However, as we saw in lemma \ref{higgs_lagrangian_structure_lemma}, this is again equal to this pullback.  Therefore the Lagrangian structures coincide, and thus so do our two symplectic structures.
+\end{proof}
+
+\section{Quasi-Hamiltonian Reduction}
+One advantage of this derived geometry approach is that the constructions can be immediately generalized to a \emph{group} version.  Safronov explains how, in his language, one can immediately define \emph{quasi-Hamiltonian reduction} analogously to Hamiltonian reduction.  One simply replaces the quotient $\gg^*/G$ by the \emph{group} adjoint quotient $\frac GG$.  This adjoint quotient also admits a 1-shifted symplectic structure: I like to understanding it by identifying $\frac GG$ with the derived loop space $\mc L G = \Map(S^1, BG)$, which has an AKSZ 1-shifted symplectic structure using the 2-shifted symplectic structure on $BG$ and the 1-orientation on the circle.
+\begin{definition}[Safronov]
+A \emph{derived quasi-Hamiltonian structure} on a $G$-equivariant morphism $\mu \colon X \to G$ (where $G$ acts on itself by the adjoint action) of derived stacks is a Lagrangian structure on the associated morphism $X/G \to \frac GG$.  The \emph{derived quasi-Hamiltonian reduction} of $X$ along the morphism $\mu$ is the derived fiber product $X/G \times_{\frac GG} BG$.  Since $BG \to \frac GG$ is canonically Lagrangian, a Hamiltonian structure on $\mu$ makes the Hamiltonian reduction into a 0-shifted symplectic stack. 
+\end{definition}
+
+From this point of view, we can think of \emph{group}-valued Higgs bundles -- where the Higgs field is group valued rather than Lie algebra valued.  I don't have a good description of these derived moduli spaces in general as mapping spaces, but by analogy with the previous section it's clear how we should define this for a punctured line.
+
+\begin{definition}
+The moduli space of regular \emph{group-valued} $G$-Higgs bundles on $\bb P^1 \bs \{z_1, \ldots, z_n\}$ is the fiber product
+\[\higgs_G^{\text{grp,reg}}(\bb P^1 \bs \{z_1, \ldots, z_n\}) = \frac {G^n}G \times_{\frac GG} BG.\]
+The moduli space of regular group valued $G$-Higgs bundles with prescribed residues $\Delta_1, \ldots, \Delta_n \in G$, up to conjugation, is the fiber product
+\[\higgs_G^{\text{grp,reg}}(\bb P^1 \bs \{z_1, \ldots, z_n\}; \Delta_1, \ldots, \Delta_n) = \higgs_G^{\text{grp,reg}}(\bb P^1 \bs \{z_1, \ldots, z_n\}) \times_{\left(\frac GG \right)^n} \left( \frac {[\Delta_1]}G \times \cdots \times \frac {[\Delta_n]}G \right).\]
+\end{definition}
+
+\begin{lemma}
+The moduli stack $\higgs_G^{\text{grp,reg}}(\bb P^1 \bs \{z_1, \ldots, z_n\}; \Delta_1, \ldots, \Delta_n)$ has a canonical 0-shifted symplectic structure.
+\end{lemma}
+
+\begin{proof}
+Identical to the proof of lemma \ref{higgs_lagrangian_structure_lemma} and corollary \ref{residue_moduli_symplectic_cor}.
+\end{proof}
+
+As before, we can view this moduli stack equivalently as a derived quasi-Hamiltonian reduction, where now we use the \emph{multiplication map} $\mu \colon [(\Delta_1, \ldots, \Delta_n)] \to G$ instead of the summation map.  Otherwise, the argument is identical.
+
+\begin{theorem}
+There is an equivalence of 0-shifted symplectic stacks between $\higgs_G^{\text{grp,reg}}(\bb P^1 \bs \{z_1, \ldots, z_n\}; \Delta_1, \ldots, \Delta_n)$ and the derived quasi-Hamiltonian reduction $\frac{[(\Delta_1, \ldots, \Delta_n)]}G \times_{\frac GG} BG$.
+\end{theorem}
+
+\begin{proof}
+Identical to the proof of theorem \ref{equivalent_hamiltonian_reduction_thm}.
+\end{proof}
+
+ 
+\bibliographystyle{alpha}
+\bibliography{Oper}
+
+\textsc{Institut des Hautes \'Etudes Scientifiques,}\\
+\textsc{35 Rue des Chartres, Bures-sur-Yvette 91440, France} \\
+\texttt{celliott@ihes.fr}\\
+\end{document}

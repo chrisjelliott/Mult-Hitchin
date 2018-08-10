@@ -1,0 +1,166 @@
+\documentclass[10pt, oneside]{article}
+
+\IfFileExists{./math_headers.sty}
+  {\input ./math_headers.sty}
+  {\IfFileExists{../math_headers.sty}
+    {\input ../math_headers.sty}
+    {\typeout{Header file not found}
+    }
+  }
+
+\title{Notes on Higgs Moduli}
+\author{Chris Elliott}
+
+\usepackage{verbatim}
+
+\DeclareMathOperator{\EOM}{EOM}
+\newcommand{\PT}{\mathbb{PT}}
+\newcommand{\vac}{\mc{V} \text{ac}}
+\newcommand{\del}{\partial}
+\def\d{{\rm d}}
+\newcommand{\Obs}{\mathrm{Obs}}
+\newcommand{\IC}{\mathrm{IndCoh}}
+\renewcommand{\flat}{\mathrm{Flat}}
+\newcommand{\arth}{\mathrm{Arth}}
+\newcommand{\sing}{\mathrm{Sing}}
+\newcommand{\hecke}{\mathrm{Hecke}}
+\newcommand{\HC}{\mathrm{HC}}
+\newcommand{\map}{\underline{\mathrm{Map}}}
+
+\begin{document}
+
+\maketitle
+
+\section{Properties of the Multiplicative Higgs Stack}
+Let me try to refine and correct the description I gave before of multiplicative Higgs bundles, which wasn't quite correct.  
+
+\begin{definition}
+The derived moduli stack $\mr{GpHiggs}_G(C; D)$ of \emph{multiplicative Higgs bundles} on $C$ with singularities at the effective divisor $D = \{z_1, \ldots, z_k\}$ (where the $z_i$ are distinct) is the derived fiber product
+\[\mr{GpHiggs}_G(C; D) = \map(C, BG) \times_{\map(C\backslash D, BG)} \map(C\backslash D, G/G),\]
+modelling a $G$-bundle on $C$ with a section of the multiplicative adjoint bundle with singularities permitted at the divisor $D$.
+\end{definition}
+
+\begin{remark}
+One can replace all the mapping spaces with relative mapping spaces for a divisor $D_\infty$ in $C$ disjoint from $D$ to define a moduli stack of multiplicative Higgs bundles with a \emph{framing} at $D^\infty$.  We'll be most interested in the example $C = \bb{CP}^1$ with a framing at $\infty$.
+\end{remark}
+
+\begin{definition} \label{mult_Higgs_def}
+The derived moduli stack of multiplicative Higgs bundles with prescribed singularities $(\omega^\vee_{z_1}, \ldots, \omega^\vee_{z_k})$ at $D$ is the derived fiber product
+\[\mr{GpHiggs}_G(C; D, \omega^\vee) = \mr{GpHiggs}_G(C; D) \times_{\bun_G(\bb B)^k} (B\Lambda_1 \times \cdots \times B\Lambda_k)\]
+where $\mr{GpHiggs}_G(C; D)$ first maps down to the adjoint quotient $G(K) /_{\mr{ad}} G(\OO)$ by restricting to a punctured neighbourhood of each singularity, and then in turn to the double quotient stack $\bun_G(\bb B) = G(\OO) \bs G(K) / G(\OO)$.  We take the fiber product with the $k$-tuple of left $G(\OO)$-orbits in $\Gr_G = G(K)/G(\OO)$ corresponding to the $k$-tuple of coweights $\omega^\vee = (\omega^\vee_{z_1}, \ldots, \omega^\vee_{z_k})$, whose $G(\OO)$-stabilizers are $(\Lambda_1, \ldots, \Lambda_k)$ (infinite-dimensional groups whose quotients by the unipotent subgroup $G(z\OO)$ are Levi subgroups of $G$). 
+\end{definition}
+
+There's a natural map \emph{into} the moduli stack of multiplicative Higgs bundles from the stack of $k^{\text{th}}$ order Hecke modifications with equal source and target, defined as follows.
+
+\begin{definition}
+The stack of \emph{Hecke modifications} on a curve $C$ at a divisor $D = \{z_1, \ldots, z_k\}$ is the fiber product
+\[\hecke_G(C;D) = \bun_G(C) \times_{BG(\OO_{z_1})} \bun_G(C) \times_{BG(\OO_{z_2})} \cdots \times_{BG(\OO_{z_k})} \bun_G(C)\]
+modelling sequences of $(k+1)$ $G$-bundles $P_1, \ldots, P_{k+1}$ on $C$ with isomorphisms $P_i|_{C \bs z_i} \iso P_{i+1}|_{C \bs z_i}$.  We can view this stack as a $k$-iterated $\Gr_G$-bundle over $\bun_G(C)$ whose projection to a $G(\OO) \bs \Gr_G$-bundle is trivial -- at each step one can restrict to a $G(\OO)$-orbit in the fiber direction -- say at the $i^{\text{th}}$ step the orbit corresponding to the coweight $\omega^\vee_{z_i}$ -- to obtain a stack $\hecke_G(C;D,\omega^\vee)$ of Hecke modifications on $D$ of type $\omega^\vee$.
+
+If we want we can modify this definition to include a \emph{framing} at a divisor $D_\infty$ on $C$ disjoint from $D$ by replacing $G$-bundles by framed $G$-bundles (or $D_\infty$-pointed maps into $BG$).
+\end{definition}
+
+\begin{prop}
+There is a natural map of derived stacks
+\[c \colon \hecke_G(C;D,\omega^\vee) \times_{\bun_G(C)^2} \bun_G(C) \to \mr{GpHiggs}_G(C; D, \omega^\vee),\]
+where on the left we map the Hecke stack into $\bun_G(C^2)$ by projecting onto the first and last $G$-bundles in the chain, the form the derived intersection with the diagonal (i.e. set the first and last $G$-bundles to be equal).  The map $c$ is given by composing the $k$ bundle isomorphisms to obtain an automorphism of the restriction $P_1|_{C\backslash D}$.
+\end{prop}
+
+\begin{proof}[Proof sketch]
+There's an obvious projection map $\hecke_G(C;D,\omega^\vee) \times_{\bun_G(C)^2} \bun_G(C) \to \bun_G(C)$.  Before fixing the coweights we need to give a map $\hecke_G(C;D) \to \map(C\backslash D, G/G)$.  We identify this latter stack with the derived loop space $\LL\bun_G(C\backslash D)$ of $\bun_G(C\backslash D)$.  Convolution defines a map $\hecke_G(C;D) \to (\bun_G(C) \times_{BG(\OO_D)} \bun_G(C)) \times_{\bun_G(C)^2} \bun_G(C)$, which maps to $\bun_G(C\backslash D) \times_{\bun_G(C\backslash D)^2} \bun_G(C\backslash D) = \LL\bun_G(C\backslash D)$ as required.
+
+Now, turning on the $i^{\text{th}}$ coweight on the Hecke side means fixing a component after projecting the $\Gr_G$-bundle to a $G(\OO) \bs \Gr_G$-bundle.  Viewing this $i^{\text{th}}$ trivial $G(\OO) \bs \Gr_G$-bundle structure as a projection map to $G(\OO) \bs \Gr_G$ we identify the choice of a $G(\OO)$-orbit with the choice of a coweight in definition \ref{mult_Higgs_def}.
+
+We finally need to check that the two maps down to $\map(C\backslash D, BG)$ coincide, but this is clear: both maps send a Hecke modification from $P_1$ to $P_1$ to the $G$-bundle $P_1|_{C\backslash D}$.
+\end{proof}
+
+\begin{question}
+Is this map clearly an equivalence?  Checking this means checking that the construction via the Hecke stack satisfies the universal property characterising the pullback.  This isn't obvious to me.  Equivalently one could exhibit an explicit quasi-inverse.
+\end{question}
+
+\begin{example}
+Let's restrict to the case of $C = \bb{CP}^1$ with a framing at $\infty$.  The stack $\bun_G^{\mr{fr}}(\bb{CP}^1)$ is classical and has virtual dimension 0, so the Hecke stack $\hecke^{\mr{fr}}_G(\bb{CP}^1;D,\omega^\vee) \times_{\bun^{\mr{fr}}_G(\bb{CP}^1)^2} \bun^{\mr{fr}}_G(\bb{CP}^1)$ is also classical and has virtual dimension $2\sum_{i=1}^k \langle \rho, \mr{dom}(\omega^\vee_{z_i})\rangle$ as expected.
+
+This stack is also naturally 0-shifted Poisson.  Because $(\bun_G^{\mr{fr}}(\bb{CP}^1))^2$ is 1-shifted symplectic and the diagonal map is always derived coisotropic by Melani-Safronov, to we only need to check that the Hecke stack is also 1-shifted coisotropic.  Actually something stronger is true which we can see in general.  
+
+\begin{claim}
+If $L_1 \to X_{12}$, $L_2 \to X_{12} \times X_{23}$ and $L_3 \to X_{23}$ are $n$-shifted coisotropic maps, then there is a composed coisotropic correspondence from $\pt_n$ to $\pt_n$ $L_1 \times_{X_{12}} L_2 \times_{X_{23}} L_3$, which is then canonically $(n-1)$-Poisson.  We can forget this structure down to a $(n-1)$-shifted coisotropic correspondence 
+\[\xymatrix{
+ &L_1 \times_{X_{12}} L_2 \times_{X_{23}} L_3 \ar[dl] \ar[dr] \\
+ L_1 \times_{X_{12}} L_2 &&L_2 \times_{X_{23}} L_3.
+}\]
+\end{claim}
+To recover our example for $|D|=1$ we just set $n=2$, $X_{12} = X_{23} = BG(K)$, $L_1 = L_3 = BG(z^{-1}\CC[z^{-1}])$ and $L_2 = BG(\OO)$, so $L_1 \times_{X_{12}} L_2$ and $L_2 \times_{X_{23}} L_3$ both model the 1-shifted symplectic stack $(\bun_G^{\mr{fr}}(\bb{CP}^1))^2$.  One can iterate this in the obvious way for more punctures.  So actually the Hecke stack itself is 1-shifted Poisson, but only a 0-shifted Poisson structure survives on the intersection with the diagonal.  
+
+This was the case corresponding to a cuspidal curve, but a similar argument should work for a nodal or smooth elliptic curve.
+\end{example}
+
+\begin{question}
+Is this Poisson structure witnessed by the 1-shifted coisotropic forgetful map to $\bun_G^{\mr{fr}}(\bb{CP}^1)$ -- i.e. is this map the inclusion into the Poisson center?  Essentially this is just asking: is this map not just coisotropic but Lagrangian?  If so then the symplectic leaves of the Poisson stack correspond to a choice of a framed bundle.
+\end{question}
+
+
+
+
+\begin{comment}
+\subsection{Aside on Additive Higgs Bundles}
+Let's compute the tangent complex of the ordinary Higgs stack at a closed point $(P,\phi)$.  This is straightforward because taking the tangent complex commutes with fiber products, so
+\[\bb T_{\mr{Higgs}_G^\mr{fr}(\bb {CP}^1; D, \omega^\vee),(P,\phi)} \iso \bb T_{\mr{Higgs}_G^\text{fr,simp}(\bb {CP}^1; D),(P,\phi)} \times_{\bb T_{(\gg/G)^k, \omega^\vee}} (\bb T_{BL_1} \oplus \cdots \oplus \bb T_{BL_k}).\]
+The tangent complex to $\gg/G$ at the point $\omega^\vee_{z_i}$ is equivalent to $\mf l_i[1] \oplus \mf l_i$, where $\mf l_i$ is the centralizer of $\omega^\vee_{z_i}$ in $\gg$.  The tangent complex $\bb T_{BL_i}$ is likewise equivalent to $\mf l_i[1]$, which means we can compute the tangent complex to the fiber product as the two step complex
+\[\bb T_{\mr{Higgs}_G^\text{fr,simp}(\bb {CP}^1; D),(P,\phi)} \to \oplus_{i=1}^k \mf l_i[-1].\]
+It's easy to describe the fiber of the tangent complex to $\mr{Higgs}_G^\text{fr,simp}(\bb {CP}^1; D)$ at $(P,\phi)$ in terms of the definition, so the overall tangent complex we want is equivalent to
+\[H^\bullet(\bb {CP}^1; \gg_P[1] \oplus \gg_P(D))/(\hh[1] \oplus \hh) \to oplus_{i=1}^k \mf l_i[-1]\]
+where the quotient by $\hh[1] \oplus \hh$ comes from fixing a regular semisimple framing at $\infty$.
+
+\begin{remark}
+In order to make this identification we need to justify replacing the two tangent complexes on the left and the right by their cohomology.  To see that we can do this, just note that the complex on the left is concentrated in degree $-1,0$ and 1, and the complex on the right is concentrated in degrees 0 and 1, and so there's no possible differential on the $E_2$-page of the spectral sequence.
+\end{remark}
+
+Now, of course we can compute the cohomology of our bundle on $\bb {CP}^1$.  It's given by 
+\[H^\bullet(\bb {CP}^1; \gg_P[1] \oplus \gg_P(D)) \iso \Gamma(\bb {CP}^1; \gg_P[1] \oplus (\gg_P(-2) \oplus \gg_P(k)) \oplus \gg_P(-k-2)[-1])\]
+where we've used the Killing form to identify $\gg_P$ with $\gg_P^*$.  In particular we've established the following.
+
+\begin{prop}
+The fiber of the moduli stack of Higgs bundles over the point $P \in \bun_G^{\mr{fr}}(\bb{CP}^1)$ is classical if the following two conditions are satisfied.
+\begin{enumerate} 
+ \item The vector bundle $\gg_P(-k-2)$ has no global sections.
+ \item The map $\Gamma(\bb{CP}^1; \gg_P(k)) \to \oplus_{i=1}^k \mf l_i$ arising as the derivative of the residue map at $\omega^\vee$ is surjective.
+\end{enumerate}
+\end{prop}
+
+The first condition is always satisfied if $k$ is large enough compared to the degree of $P$.  The second condition is a little trickier -- the obstruction to surjectivity is the condition that the deformation of the section of $\gg_P(k)$ corresponding to the prescribed deformation of the residues can be extended across $\infty$.  This seems to be satisfied only for elements $(\ell_1, \ldots, \ell_k)$ satisfying $\sum_{i=1}^k \ell_i = 0$, which would mean the moduli stack would essentially never be classical.
+
+\begin{remark}
+There's a separate condition involving the $\omega^\vee_{z_i}$ for a classical closed point $(P,\phi)$ with the appropriate residues to even exist, saying that the $\omega^\vee_{z_i}$ are conjugate to elements summing to zero.  This condition should essentially be that $\sum_{i=1}^k \tr(\omega^\vee_{z_i}) = 0$, but I'm not sure if it's literally that at the moment.
+\end{remark}
+
+Ok, now let's compute the virtual dimension at the point $(P,\phi)$ assuming condition 1) above is satisfied.  I can do this at least for $G = \GL_n$.
+
+\begin{prop}
+Assuming $\gg_P(-k-2)$ has no global sections, the virtual dimension of $\mr{Higgs}_{\GL_n}^\mr{fr}(\bb {CP}^1; D, \omega^\vee)$ at a point $(P,\exp(\phi)$ in the image of the exponential map is 
+\[kn^2 - \sum_{i=1}^k \dim Z_{\gl_n}(\omega^\vee_{z_i}).\]
+\end{prop}
+
+\begin{example}
+If $G = \GL_n$ and all the residues $\omega^\vee_{z_i}$ are regular semisimple, then the virtual dimension of the moduli space is $k(n^2-n)$.
+\end{example}
+
+\begin{remark}
+Note that the moduli stack of Higgs bundles in this language is not only always derived, but always stacky -- the tangent complex always has a non-trivial $H^{-1}$.  Furthermore the dimension of $H^0$ of the tangent complex depends on the choice of $G$-bundle $P$, as does the dimension of the automorphism group acting on it.  It's only in the quotient that these dependencies cancel out.  This cancelling also only happens when the condition on $\gg_P(k-2)$ is satisfied: if $k$ is too small then we'll once again see a dependence on the degree of the principal $G$-bundle.
+\end{remark}
+
+\begin{remark}
+Note that there's no reason for the virtual dimension of the moduli space to always be even: the sign depends on the choice of residues $\omega^\vee_{z_i}$.
+\end{remark}
+\end{comment}
+
+\textsc{Institut des Hautes \'Etudes Scientifiques}\\
+\textsc{35 Route de Chartres, Bures-sur-Yvette, 91440, France}\\
+\texttt{celliott@ihes.fr}\\
+\vspace{5pt}
+\end{document}
+
+
+
+
+
