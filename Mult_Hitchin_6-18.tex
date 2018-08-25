@@ -335,7 +335,7 @@ where the notation $(\pm 1)$ indicates tensoring by the line bundle $\OO(\pm 1)$
 
 Being a 0-cocycle means that $(\alpha_\infty - \alpha_0)|_{U^\times_\infty} = \mr{Ad}_g(\beta_\infty)$ and $(\alpha_i - \alpha_0)|_{U^\times_i} = \mr{Ad}_g(\beta_i)$ for each $i$.  We consider 0-cocycles modulo 0-coboundaries of the form $(\mr{Ad}_g(f_\infty), \{\mr{Ad}_g(f_i)\}, \mr{Ad}_g(f_0), f_\infty -  f_0, \{f_i - f_0\})$.  
 
-Now $\mr{Ad}_g$ is an isomorphism on $U_0$ for the sections $\wt \alpha$ of $\gg_P$ that occur: those with no poles or zeroes in $U_0$.  That means that we can add a coboundary to force $\wt \alpha=0$.  We can likewise use the freedom in $f_i$ to find a representative cocycle where the $\beta_i$ are all zero.  We now have a unique representative cocycle of the form $(\alpha_\infty, \{\alpha_i\}, 0,0,0\})$.
+Now $\mr{Ad}_g$ is an isomorphism on $U_0$ for the sections $\alpha_0$ of $\gg_P$ that occur: those with no poles or zeroes in $U_0$.  That means that we can add a coboundary to force $\alpha_0=0$.  We can likewise use the freedom in $f_i$ to find a representative cocycle where the $\beta_i$ are all zero.  We now have a unique representative cocycle of the form $(\alpha_\infty, \{\alpha_i\}, 0,0,0\})$.
 
 Now, rather than describing the tangent complex to the moduli space of monopoles we'll define a complex that maps to it which we can define locally with respect to the cover $\mc U$.  Consider the open cover $\mc U \times S^1 = \{U_i \times S^1\}$ of $M = C \times S^1$.  For each element $U_i$ of the cover we can define a map
 \begin{align*}
@@ -414,16 +414,10 @@ More precisely, $BLG$ is a Tate stack in the sense of Hennion \cite{Hennion}.  A
 \end{remark}
 
 \begin{proof}
-We can describe a potential for the pullback $r^*\omega$ as follows.  The tangent complex to $\bun_G^\fr(\bb{CP}^1 \! \bs \! D)$ at $P$ is quasi-isomorphic to $\Omega^{0,\bullet}(C \!\bs\! D; \gg_P)[1]$.  There is a pairing of degree 1 on this complex defined by
-\[ \nu((f,\alpha), (g,\beta)) = \int_{C \!\bs\! D} \kappa(f,\beta) + \kappa(\alpha,g) \d z\]
-where $(f,\alpha)$ and $(g,\beta)$ are general non-homogenous elements of $\Omega^{0,\bullet}(C \bs D; \gg_P)[1]$.  Applying the internal differential on $\bigwedge^2 (\bb T_{\bun_G^\fr(\bb{CP}^1 \! \bs \! D), P})$ to this pairing induces the degree 2 pairing
-\begin{align*}
-\d \nu(f,g) &= \int_{C \!\bs\! D} \kappa(f, \ol \dd g) + \kappa(g, \ol \dd f) \d z \\
-&=\int_{C \!\bs\! D} \ol \dd \kappa(f, g) \d z \\
-&=2 \pi i \sum_{i=1}^k \oint_{S^1_i} \kappa(f, g) \d z
-\end{align*}
-which is the pullback $r^*\omega$ of the residue pairing on $(BLG)^k$.
-\chris{Rewrite more rigorously.}
+Consider the inclusion $\d r \colon \gg_- = \bb T_{\bun_G^\fr(\bb{CP}^1 \! \bs \! D)}[-1] \to r^*\bb T_{BLG^k}[-1] = \gg(\!(z)\!)^k$: a map of ind-pro Lie algebras concentrated in degree zero.  The residue pairing vanishes after pulling back along $r$ since elements of $\gg_-$ are  $\gg$-valued functions on $\bb{CP}^1$ with at least a simple pole at every puncture in $D$.  So the map $r$ is isotropic with 0 isotropic structure; this structure is unique for degree reasons.  We must check that this structure is non-degenerate.  It suffices to check that the sequence
+\[\bb T_{\bun_G^\fr(\bb{CP}^1 \! \bs \! D)}[-1] \to r^*\bb T_{BLG^k}[-1] \to (\bb T_{\bun_G^\fr(\bb{CP}^1 \! \bs \! D)}[-1])^\vee\]
+is an exact sequence of ind-pro vector spaces, and therefore an exact sequence of quasi-coherent sheaves on the stack $\bun_G^\fr(\bb{CP}^1 \! \bs \! D)$.  To do this we identify the pair $(\gg_-, \gg(\!(z)\!)^k)$ as part of a Manin triple, where a complementary isotropic subalgebra to $\gg_-$ is given by $\gg_+ = \gg[[z]]^k$.  Using the residue pairing we can identify $\gg_+$ with $(\gg_-)^\vee$ and therefore identify our sequence with the split exact sequence
+\[0 \to \gg_- \to \gg(\!(z)\!)^k \to \gg_+ \to 0.\]
 \end{proof}
 
 \begin{construction}
@@ -432,7 +426,7 @@ Recall that we can identify the moduli space of singular $q$-connections on a cu
 \[\xymatrix@C-30pt@R-8pt{
 & \qconn_G^{\fr}(\bb{CP}^1, D) \ar[rr]^{f_1} \ar'[d][dd]^(.25){\mr{res}} & & \bun_G^{\fr}(\bb{CP}^1) \ar[dd]
 \\
-\bun_G^{\fr}(\bb{CP}^1 \bs D) \ar@{<-}[ur]^{f_2} \ar[rr]\ar[dd] & & \bun_G^{\fr}(\bb{CP}^1 \bs D)^2 \ar@{<-}[ur]^g \ar[dd]^(.4)r
+\bun_G^{\fr}(\bb{CP}^1 \bs D) \ar@{<-}[ur]^{f_2} \ar[rr]^(.6){g_2} \ar[dd] & & \bun_G^{\fr}(\bb{CP}^1 \bs D)^2 \ar@{<-}[ur]^{g_1} \ar[dd]^(.4)r
 \\
 & \bun_G(\bb B)^k \ar'[r][rr] & & BL^+G^{2k}
 \\
@@ -446,7 +440,7 @@ Here the top and bottom faces are homotopy Cartesian.  The front and the right f
 Call these Lagrangian structures $\mu_1$ and $\mu_2$ respectively.  Denote the 2-shifted Lagrangian structure on the map $r$ from Lemma \ref{restriction_Lagn_lemma} by $\nu$.  The 1-shifted Lagrangian structure that we want on the map $\mr{res}$ is then given by 
 \[\lambda = f_1^*(\mu_1) + f_2^*(\mu_2) + \eta
 \]
-where $\eta$ is a potential for the pullback $(f_1 \circ g)^*\nu$.
+where $\eta$ is any choice \chris{todo: check this from e.g. Spaide: important} of potential for the difference of the pullbacks $(f_1 \circ g)^*\nu - (f_2 \circ g_2)^*\nu$.  Here this difference is zero as the top square is genuinely commutative, not just up to homotopy.
 
 This 1-shifted Lagrangian structure $\lambda$ defines a quasi-isomorphism $\bb T_{\qconn_G^{\fr}(\bb{CP}^1, D)} \to \bb L_{\mr{res}}$ where I'm writing $\bb L_{\mr{res}}$ for the dual of $\mr{res}^*(\bb T_{\qconn_G^{\fr}(\bb{CP}^1, D)}) \to \bb T_{\bun_G(\bb B)^k)}[-1]$: the relative tangent complex to the map $\mr{res}$.  Write $\lambda^{-1}$ for a quasi-inverse.  This defines a Poisson bivector on $\qconn_G^{\fr}(\bb{CP}^1, D)$ where the associated map from the cotangent complex to the tangent complex is given by
 \[\pi = \lambda^{-1} \circ \iota \colon \bb L_{\qconn_G^{\fr}(\bb{CP}^1, D)} \to \bb L_{\mr{res}} \to \bb T_{\qconn_G^{\fr}(\bb{CP}^1, D)}\]
@@ -468,27 +462,22 @@ From now on we'll write $\langle - , - \rangle$ to denote the residue pairing be
 \end{remark}
 
 \begin{lemma}
-As a pairing on the tangent complex at a point $(P,g)$ the symplectic form on the moduli space of $q$-connections pairs $\alpha_i$ with $\beta_i$ for $i=1,\ldots,k$.  It is given on this coordinate patch by the formula 
-\[\omega(\alpha_i, \beta_i') = \langle \rho_g^*(\alpha_i + \wt \alpha)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta'_i) \rangle\]
-where we use the Killing form to identify $\beta'_i$ with a $\gg^*$-valued form, and where $\rho_g^*$ is the pullback along the right multiplication by $g$.
+As a pairing on the tangent complex at a point $(P,g)$ the symplectic form on the moduli space of $q$-connections pairs $\alpha_i$ with $\beta_i$ for $i=1,\ldots,k$.  It is given by the formula 
+\[\omega((\{\alpha_i\}, \{\beta_i\}), (\{\alpha'_i\},\{\beta_i'\})) = \sum_i \langle \rho_g^*(\alpha_i + \alpha_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta'_i) \rangle - \langle \rho_g^*(\alpha'_i + \alpha'_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta_i) \rangle,\]
+where we use the Killing form to identify $\beta'_i$ with a $\gg^*$-valued form, and where $\rho_g^*$ is the pullback along the right multiplication by $g$.  In this expression the sum is over $i=1,\ldots,k$ and $i=\infty$.
 \end{lemma}
 
 \begin{proof}
 The formula given above is saying that the Poisson bivector -- viewed as a map $\pi \colon \bb L_{(P,g)} \to \bb T_{(P,g)}$ -- acts in degree $-1$ by identifying $\gg$ with $\gg^*$ then applying the map $\Ad_g^*$.  Recall that to describe the Poisson bivector we must locally on $U_i$ describe the sum
-\[\lambda = f_1^*(\mu_1) + f_2^*(\mu_2) + \eta
-\]
-where $\eta$ is a potential for the pullback $(f_1 \circ g)^*\nu$.  The Lagrangian structure $\mu_1$ on the diagonal is 0, and the Lagrangian structure $\mu_2$ vanishes upon restriction to the open set $U_i$ since the map $\bun_G^{\fr}(\bb{CP}^1 \bs D) \to \bun_G^{\fr}(\bb{CP}^1 \bs D)^2 \times_{BLG^{2k}} BLG^{k}$ becomes an isomorphism after restricting to a formal neighbourhood of $z_i$ \chris{justify the difference between a formal neighbourhood and a contractible analytic neighbourhood here}.  We must therefore find a local potential for $(f_1 \circ g)^*\nu$ where $\nu$ is the structure from Lemma \ref{restriction_Lagn_lemma}.  On the cotangent complex, the pullback $g^*$ acts by the dual to the $q$-twisted diagonal map $\gg[[z]] \to \gg(\!(z)\!)^2$.  The pullback $f_1^*$ acts by the dual to the projection map $\gg(\!z)\!)^2 \to \ad(g)_{\bb D^\times}$.  The composite is therefore given by $\Ad_g^*$. \chris{sign error here.  There's also another degree in the cotangent complex to calculate: map should be also $\Ad_g$ but without the dual?}
+\[\lambda = f_1^*(\mu_1) + f_2^*(\mu_2) + \eta,\] 
+where $\eta$ is a 2-form of degree 0 which is closed for the internal differential. The Lagrangian structure $\mu_1$ on the diagonal is 0, and the Lagrangian structure $\mu_2$ is also 0 for degree reasons.  Indeed, the tangent complex of $\bun_G^\fr(\bb{CP}^1 \bs D)$ is concentrated in degree $-1$ so there are no 2-forms of degree 1.  We must therefore describe a pairing closed for the internal differential.  This pairing defines a potential $\eta$ as required, and therefore a Lagrangian structure.
 
-On the other hand, applying the internal differential induced from $\Ad_g^*$ on the complex of 2-forms to the local pairing $\omega$ yields the degree 1 pairing
+Consider the image of our candidate pairing under the internal differential on the space of 2-forms (here modelled by the \v Cech differential).  The result is the degree 1 pairing
 \begin{align*}
-\langle (\alpha_i,\beta_i), (\alpha_i',\beta_i') \rangle &= \langle \rho_g^*(\Ad_g(\beta_i)), \rho_g^*(\Ad_g^*)^{-1}(\beta'_i) \rangle \\
-&= \langle \rho_g^*(\beta_i), \rho_g^*(\beta'_i) \rangle.
+\eta((\{\alpha_i\}, \{\beta_i\}), (\{\alpha'_i\},\{\beta_i'\})) &= \sum_i \langle \rho_g^* \Ad_g(\phi_i + \phi_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta'_i) \rangle - \langle \rho_g^*\Ad_g(\phi'_i + \phi'_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta_i) \rangle\\
+&= \sum_i \langle \rho_g^*(\phi_i + \phi_0)|_{U^\times_i}, \rho_g^*(\beta'_i) \rangle - \langle \rho_g^*(\phi'_i + \phi'_0)|_{U^\times_i}, \rho_g^*(\beta_i) \rangle,
 \end{align*}
-We can then take the pairing defining $\eta$ from Lemma \ref{restriction_Lagn_lemma} and pull it back along $f_1 \circ g$ to obtain the local description for the pairing
-\begin{align*}
-\langle (\alpha_i,\beta_i), (\alpha_i',\beta_i') \rangle &= \langle \rho_g^* ... , \rho_g^* ... \rangle 
-\end{align*}
-\chris{...}
+where $\phi_i$ is an element of $\gg_P(U_i)$: a degree $-1$ element of the \v Cech complex.  This pairing vanishes on \v Cech cocycles, because if $\{\phi_i\}$ is a $-1$-cocycle then $(\phi'_i + \phi'_0)|_{U^\times_i}=0$.  Our candidate pairing is therefore closed for the internal differential.
 \end{proof}
 
 \begin{prop} \label{qconn_symp_description}
@@ -506,8 +495,8 @@ where $\delta g$ is represented on $U_i$ by a pair $(b^L, b^R) \in \Ad_g$.  Here
 \begin{proof}
  Specify a representative cocycle $(\alpha_\infty, \{\alpha_i\}, \alpha_0, \beta_\infty, \{\beta_i\})$ for the first \v Cech cohomology group. By addition of a coboundary we can assume that $\alpha_0=0$, and to force $\alpha_\infty$ to land in $z\gg[[z]]$ and each $\alpha_i$ to land in $z^{-1}\gg[[z]]$.  We've now fixed a representative cocycle -- there's no further gauge freedom.  Ignoring the factor at infinity -- since after we add these coboundaries the residue pairing there vanishes -- the pairing we end up with looks like 
 \begin{align*}
-\omega(\delta g, \delta g') &= \sum_{i=1}^d \langle \rho_g^*(\alpha_i + \wt \alpha)|_{U^\times_i},\rho_g^* (\Ad_g^*)^{-1}( \beta'_i) \rangle - ((\alpha,\beta) \leftrightarrow (\alpha',\beta')\\ 
-&= \sum_{i=1}^d \langle \rho_g^*(\alpha_i + \wt \alpha)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\Ad_g^{-1}(\alpha_i' - \wt \alpha')) \rangle - (\alpha \leftrightarrow \alpha')\\
+\omega(\delta g, \delta g') &= \sum_{i=1}^d \langle \rho_g^*(\alpha_i + \alpha_0)|_{U^\times_i},\rho_g^* (\Ad_g^*)^{-1}( \beta'_i) \rangle - ((\alpha,\beta) \leftrightarrow (\alpha',\beta')\\ 
+&= \sum_{i=1}^d \langle \rho_g^*(\alpha_i + \alpha_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\Ad_g^{-1}(\alpha_i' - \alpha'_0)) \rangle - (\alpha \leftrightarrow \alpha')\\
 &= \sum_{i=1}^d \langle \rho_g^*(\alpha_i)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\Ad_g^{-1}(\alpha_i')|_{U^\times_i}) \rangle - (\alpha \leftrightarrow \alpha').
 \end{align*}
 
