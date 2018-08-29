@@ -7,6 +7,12 @@ Boudjemaa Anchouche and Indranil Biswas.
   a compact {K}\"ahler manifold.
 \newblock {\em Amer. J. Math.}, 123(2):207--228, 2001.
 
+\bibitem[AH88]{AtiyahHitchin}
+Michael Atiyah and Nigel Hitchin.
+\newblock {\em The geometry and dynamics of magnetic monopoles}.
+\newblock M. B. Porter Lectures. Princeton University Press, Princeton, NJ,
+  1988.
+
 \bibitem[Bot95]{Bottacin}
 Francesco Bottacin.
 \newblock Symplectic geometry on moduli spaces of stable pairs.
@@ -59,6 +65,12 @@ Lorenzo Foscolo.
 \newblock Deformation theory of periodic monopoles (with singularities).
 \newblock {\em Comm. Math. Phys.}, 341(1):351--390, 2016.
 
+\bibitem[FP18]{FrassekPestun}
+Rouven Frassek and Vasily Pestun.
+\newblock A family of {$\GL(r)$} multiplicative {Higgs} bundles on rational
+  base.
+\newblock {\em arXiv preprint arXiv:1808.00799}, 2018.
+
 \bibitem[FRSTS98]{FrenkelReshetikhinSTS}
 Edward Frenkel, Nicolai Reshetikhin, and Michel Semenov-Tian-Shansky.
 \newblock {Drinfeld--Sokolov} reduction for difference operators and
@@ -97,6 +109,12 @@ Valerio Melani and Pavel Safronov.
 Valerio Melani and Pavel Safronov.
 \newblock Derived coisotropic structures {II}: stacks and quantization.
 \newblock {\em arXiv preprint arXiv:1704.03201}, 2017.
+
+\bibitem[NP12]{NekrasovPestun}
+Nikita Nekrasov and Vasily Pestun.
+\newblock {Seiberg-Witten} geometry of four dimensional {$\mathcal N= 2$}
+  quiver gauge theories.
+\newblock {\em arXiv preprint arXiv:1211.2240}, 2012.
 
 \bibitem[PR01]{PolishchukRothstein}
 Alexander Polishchuk and Mitchell Rothstein.
