@@ -414,20 +414,21 @@ where we use the Killing form to identify $\beta'_i$ with a $\gg^*$-valued form,
 \end{lemma}
 
 \begin{remark}
-How should we think about this symplectic structure?  There's an intuitive description just as in Hurtubise and Markman's elliptic moduli space.  The symplectic structure is induced from the natural equivalence between the tangent and cotangent spaces of the moduli space of multiplicative Higgs bundles as described in Section \ref{def_section}.  That is, there's a map of complexes
+How should we think about this symplectic structure?  There's an intuitive description just as in Hurtubise and Markman's elliptic moduli space.  The symplectic structure is induced from the natural equivalence between the tangent and cotangent spaces of the moduli space of multiplicative Higgs bundles as described in Section \ref{def_section}.  That is, there's a map of complexes of sheaves
 \[\xymatrix{
-(\mc F^\fr_{(P,g)})^* \ar@{=}[r] \ar[d] &(\gg^*_P(D) \ar[d] \ar[r]^{\Ad_g^*} &\gg^*_P) \otimes \OO(c) \ar[d] \\
-\mc F^\fr_{(P,g)} \ar@{=}[r] &(\gg_P[1] \ar[r]^{\Ad_g} &\gg_P(-D)) \otimes \OO(c) 
+(\mc F^\fr_{(P,g)})^*[2] \ar@{=}[r] \ar[d] &\Big(\gg^*_P(D)[1] \otimes \OO(-c) \ar[d]^{\kappa \circ \Ad_g^*} \ar[r]^{\Ad_g^*} &\gg^*_P \OO(-c)\Big)\ar[d]^{\Ad_g \circ \kappa^{-1}} \\
+\mc F^\fr_{(P,g)} \ar@{=}[r] &\Big(\gg_P[1] \OO(-c) \ar[r]^{\Ad_g} &\gg_P(-D) \OO(-c)\Big)
 }\]
-which induces a map from the cotangent to the tangent space upon taking hypercohomology.
-\chris{...}
+where here $\kappa$ denotes the isomorphism from $\gg_P \to \gg^*_P$ induced by the Killing form.  The top line is the Serre dual complex to the bottom line; note that the incorporation of the framing was necessary for this to be the case (that is, we're using the relative Calabi-Yau structure on the pair $(\bb{CP}^1, c)$).  Taking 0th hypercohomology we obtain a map from the cotangent space to the tangent space of our moduli space of multiplicative Higgs bundles.
 \end{remark}
 
 \begin{proof}
 \chris{todo.  It should be written so as to be manifestly anti-symmetric, we need to verify non-degeneracy.}
 \end{proof}
 
+\begin{remark}
 \chris{What about the Poisson structure on the total space?  These should be leaves.  Maybe just remark on this since we haven't calculated the tangent complex of the big space.  What about $\eps$-connections?}
+\end{remark}
 
 \begin{prop} \label{qconn_symp_description}
 The symplectic form on the moduli space of multiplicative Higgs bundles can be written in the form
