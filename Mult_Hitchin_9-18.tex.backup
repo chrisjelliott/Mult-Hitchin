@@ -58,11 +58,7 @@ In particular when $q=1$ this recovers the moduli stack of multiplicative Higgs 
 \end{definition}
 
 \begin{remark}
-A closed point of $\qconn_G(C,D)$ consists of a principal $G$-bundle $P$ on $C$ along with a \emph{$q$ difference connection}: an isomorphism of $G$-bundles $P|_{C \! \bs \! D} \to q^*P|_{C \! \bs \! D}$ away from the divisor $D$.
-\end{remark}
-
-\begin{remark}
-\chris{Expository remarks on $q$-difference connections / $q$-difference modules.  Cite Sauloy?  Others?}
+A closed point of $\qconn_G(C,D)$ consists of a principal $G$-bundle $P$ on $C$ along with a \emph{$q$ difference connection}: an isomorphism of $G$-bundles $P|_{C \! \bs \! D} \to q^*P|_{C \! \bs \! D}$ away from the divisor $D$.  For an introduction to the classical theory of $q$-difference connections we refer the reader to \cite{STSSevostyanov}. \chris{I'm not sure what to say about $q$-difference equations.  You suggested citing Sauloy but I'm not sure exactly what.  He has articles on $q$-difference modules which don't seem so relevant here?}
 \end{remark}
 
 \subsection{Residue Conditions}
@@ -110,8 +106,6 @@ The most important examples for our purposes are given by the following rational
   \item \textbf{Elliptic:} Finally, let $C = E$ be a smooth curve of genus one.  In this case we won't fix any additional boundary data, but just consider the moduli space $\qconn_G(E,D, \omega^\vee)$.  In the case $q = 1$ this space -- or rather its polystable locus -- was studied by Hurtubise and Markman \cite{HurtubiseMarkman}, who proved that it can be given the structure of an algebraic integrable system with symplectic structure related to the elliptic R-matrix of Etingof and Varchenko \cite{EtingofVarchenko}.
  \end{itemize}
 \end{examples}
-
-\vasily{What shall we say about higher genus? The definition of mHiggs as above makes sense. Will the resulting space be Poisson? I guess not because to define the Poisson structure we need to fix a section of canonical bundle on $C$, that is a one-form ``dz''. However, in higher genus such 1-form necessarily has zeroes. May be here is a good place to comment or restrict attention to the trichotomy with an explanation why higher genus is on different grounds} \chris{added a remark below.}
 
 \begin{remark} \label{Elliptic_AKSZ_remark}
 In the elliptic case it's natural to ask to what extent Hurtubise and Markman's integrable system structure can be extended from the variety of polystable multiplicative Higgs bundles to the full moduli stack.  If $D$ is empty then it's easy to see that we have a symplectic structure given by the AKSZ construction of Pantev-To\"en-Vaqui\'e-Vezzosi \cite{PTVV}.  Indeed, $E$ is compact 1-oriented and the quotient stack $G/G$ is 1-shifted symplectic, so the mapping stack $\map(E, G/G) = \mhiggs_G(E)$ is equipped with a 0-shifted symplectic structure by \cite[Theorem 2.5]{PTVV}.  The role of the Hitchin fibration is played by the Chevalley map $\chi \colon G/G \to T/W$, and therefore
@@ -194,15 +188,6 @@ is an exact sequence of ind-pro vector spaces, and therefore an exact sequence o
 We can also discuss the analogue of the integrable system discussed in Remark \ref{Elliptic_AKSZ_remark} with a non-empty divisor $D$.  \chris{here or above?}
 \end{remark}
 
-
-%In order to work with this symplectic structure we'll need to give a local description as a pairing on the tangent complex.  Using the description of the tangent complex in terms of hypercohomology from Section \ref{def_section} it will suffice to describe the pairing on each summand in the \v Cech resolution.
-
-%\begin{lemma}
-%As a pairing on the tangent complex at a point $(P,g)$ the symplectic form on the moduli space of multiplicative Higgs bundles pairs $\alpha_i$ with $\beta_i$ for $i=1,\ldots,k$.  It is given by the formula 
-%\[\omega((\{\alpha_i\}, \{\beta_i\}), (\{\alpha'_i\},\{\beta_i'\})) = \sum_i \langle \rho_g^*(\alpha_i + \alpha_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta'_i) \rangle - \langle \rho_g^*(\alpha'_i + \alpha'_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta_i) \rangle,\]
-%where we use the Killing form to identify $\beta'_i$ with a $\gg^*$-valued form, and where $\rho_g^*$ is the pullback along the right multiplication by $g$.  In this expression the sum is over $i=1,\ldots,k$ and $i=\infty$.
-%\end{lemma}
-
 \section{Periodic Monopoles}
 Moduli spaces of $q$-connections on a Riemann surface $C$ are closely related to moduli spaces of periodic monopoles, i.e. monopoles on 3-manifolds that fiber over the circle (more specifically, with fiber $C$ and monodromy determined by $q$).  Let $G_\RR$ be a compact Lie group whose complexification is $G$.  The discussion in this section will mostly follow that of \cite{CharbonneauHurtubise, Smith}.
 
@@ -224,7 +209,7 @@ F_{A_0} - \nabla_t \Phi &= 0 \\
 \end{align*}
 where $\nabla_t$ is the component of the covariant derivative $\d_A$ normal to $C_0$.  
 
-\begin{definition}
+\begin{definition} 
 From now on we'll use the notation $\mc A$ for the combination $\nabla_t - i\Phi \d t$: an element of the space $\Omega^0(C_0, \gg_P)\d t$ of sections of the complex vector bundle $\gg_P$ on the complex curve $C_0$. 
 \end{definition}
 
@@ -283,11 +268,9 @@ Mochizuki \cite{Mochizuki} proved a stronger result in the rational case for the
 \end{remark}
 
 \subsection{Deformation Theory} \label{def_section}
-\chris{be careful about what we can say generally, and where we need to restrict to the rational case.}
-
 In the next section we'll compare symplectic forms on these moduli spaces.  In order to do so it will be important to understand the tangent spaces at a point of the source and target.  There's a natural description of these tangent spaces in terms of the hypercohomology of certain cochain complexes.
 
-Let's first describe the tangent complex to the moduli space of monopoles.  For simplicity we'll restrict attention to the rational case where we can use the description as a hyperk\"ahler reduction.  For more general deformation theory calculations we refer to Foscolo \cite{FoscoloDef}.  Recall that in this case we can write
+From now on we'll focus on the example we're most interested in.  That is, we'll exclusively study the rational situation where $C = \bb{CP}^1$ and we fix a framing point $c = \infty$.  In this case we can use the description as a hyperk\"ahler reduction.  For more general deformation theory calculations we refer to Foscolo \cite{FoscoloDef}.  Recall that we can write
 \[\mon^{(\fr)}_G(C \times_q S^1, D \times \{t_0\}, \omega^\vee) \iso \mu^{-1}(0)/ \mc G\]
 where $\mc G$ is the group of gauge transformations of $\bo P$ and $\mu \colon \mc V \to \Omega^1(M; (\gg_R)_{\bo P})$ is the Bogomolny functional $(A,\Phi) \mapsto \ast F_A - \d_A \Phi$.  The tangent complex to this hyperk\"ahler quotient at a point $(\bo P, \mc A)$ can be written as $\Omega^0(M \!\bs\! D; (\gg_\RR)_{\bo P})[1] \to \bb T_{\mu^{-1}(0)}$ where $\bb T_{\mu^{-1}(0)}$ is the tangent complex to the zero locus of the moment map, concentrated in non-negative degrees. Roughly speaking $\bb T_{\mu^{-1}(0)} = \bb T_{\mc V} \overset {\d\mu} \to \Omega^1(M; (\gg_R)_{\bo P})[-1]$.  
 
@@ -298,14 +281,7 @@ More explicitly, following \cite{FoscoloDef} let
 placed in degrees $-1$, 0 and 1 where $\d_1(g) = -(\d_A(g),[\Phi, g])$ and $\d_2(a,\psi) = \ast \d_A(a) - \d_A(\psi) + [\Phi,a]$.  Write $\d_{\mr{mon}}$ for the total differential.
 
 \begin{remark}
-Here we've chosen a point in the twistor sphere, forgetting the hyperk\"ahler structure and retaining a holomorphic symplectic structure.  In other words we've identified the target of the hyperk\"ahler moment map with $\RR \oplus \CC$.  One way of thinking about this is \chris{todo}
-
-\vasily{Somewhere here we should clarify that the hyperKahler moment map takes value in the space imaginary quaternions which is isomorphic as
-  real space to $\RR^3_{quat}$. After we pick a complex structure on the twistor sphere, there is natural split $\RR^{3}_{quat} = \CC \oplus \RR$.
-  If we care only about complex structure and holomorphic symplectic form on the tangent space to the moduli space of monopoles with respect
-  to a certain fixed
-  point on a twistor sphere, we trade the real component of the equation in the split $\RR^{3}_{quat} = \CC \oplus \RR$ in the third term
-with a complexification of the gauge group transformation in the first term in which we would replace $\gg_{\RR}$ by $\gg_{\CC}$}
+Here we've chosen a point in the twistor sphere, forgetting the hyperk\"ahler structure and retaining a holomorphic symplectic structure.  In other words we've identified the target of the hyperk\"ahler moment map -- the space of imaginary quaternions -- with $\RR \oplus \CC$, which is equivalent to choosing a point in the unit sphere of the imaginary quaternions: the twistor sphere.  
 \end{remark}
 
 \begin{remark} \label{monopole_holo_restriction_rmk}
@@ -346,16 +322,21 @@ where now $\Ad_g$ is just the map $X \mapsto [(X,-X)]$.
 For more general $q$ we should modify this description by replacing $g$ by a $q$-connection.  Note that one can still define the ($q$-twisted) adjoint action $X \mapsto g X g^{-1}$ using a $q$-connection, and so we can still define the complex
 \[\mc F_{(P,g)} = (\gg_P[1] \overset {\Ad_g} {\to} \ad(g))\]
 just as in the untwisted case \chris{check}.
-\vasily{I wonder what would replace the rational $r$-matrix that defines the Poisson structure on the Lie group of rational Higgs fields 
-  given the explicit formula for the symplectic structure on the moduli space of $q$-connections  (\ref{eq:resid}) for non-trivial $q$ ? And if we quantize
-the space of functions on $q$-deformed big mHiggs what do we get instead of completed Yangian when $q$ is trivial, say for the case of a single singularity at 0} \chris{If you turn on the $q$-deformation it's not a group anymore (because if you multiply a $q$-connection by a $q$-connection you get a $q^2$-connection).  So it's not clear to me whether there's any sense in which we can think of the Poisson structure as coming from an $r$-matrix anymore.  For instance probably the quantized algebra of functions won't be a Hopf algebra anymore.  However I guess there will still be a map, before quantization, from $\OO(G_0[[z^{-1}]])$ coming from restricting a $q$-connection to a formal punctured neighbourhood of $\infty$.  I'd guess however that that map is no longer Poisson after $q$-deformation.}
 \end{remark}
+
+This complex defines the deformation theory of the moduli space of multiplicative Higgs bundles.
 
 \begin{prop}
 The cohomology of the tangent complex of $\mhiggs_G(C, D)$ at the point $(P,g)$ is quasi-isomorphic to the hypercohomology $\bb H^\bullet(C; \mc F_{(P,g)})$ of the sheaf $\mc F$.
 \end{prop}
 
+\begin{remark}
+Bottacin {\cite[Proposition 3.1.3]{Bottacin}} works with vector bundles rather than principal $G$-bundles and proves that the space of infinitesimal deformations of the point $(P,g)$ is given by $\bb H^0(C; \mc F_{(P,g)})$.  
+\end{remark}
+
 \begin{proof}
+\chris{Need a new argument here.  I can filter the moduli space by order of the pole of the multiplicative Higgs field (by the partial order on dominant coweights), and each filtered piece is a variety of finite type.  So the whole thing is ind-finite type.  Filtered pieces have genuine tangent complexes but aren't mapping stacks.  Tangent complex maps onto that of $\bun_G(C)$ with finite-type fiber.  I might end up removing it, citing Bottacin then adding some intuition.  Actually do we really need the whole tangent complex and not just the degree zero part?}
+
 We'll explain the proof in different language to that used in \cite{Bottacin}.  Recall that for a mapping stack $\map(X,Y)$ where $X$ and $Y$ are derived Artin stacks the cohomology of the tangent complex at a point $f$ can be computed as the cohomology $H^\bullet(\bb T_{\map(X,Y),f}) \iso \bb H^\bullet(X, f^*\bb T_Y)$.  Let $X = C \!\bs\! D$ and let $Y = G/G$, so $H^\bullet(\bb T_{(P,g), \map(C \!\bs\! D, G/G)}) \iso \bb H^\bullet(C \!\bs\! D; \gg_P[1]|_{C \!\bs\! D} \to \gg_P|_{C \!\bs\! D})$ where the map $\gg_P|_{C \!\bs\! D} \to \gg_P|_{C \!\bs\! D}$ is given by the adjoint action of $g$.  Alternatively one can view this complex as the cohomology of the operator
 \[H^\bullet(C \! \bs \! D, \gg_P|_{C\!\bs\!D})[1] \to H^\bullet(C \! \bs \! D, \gg_P|_{C\!\bs\!D})\]
 given by the adjoint action of $g$ since the relevant spectral sequence converges at the $E_2$-page.  From this point of view the first term corresponds to deformations of the $G$-bundle $P$ and the second to deformations of the multiplicative Higgs field $g$.
@@ -363,7 +344,6 @@ given by the adjoint action of $g$ since the relevant spectral sequence converge
 In order to compute the tangent complex to $\mhiggs_G(C,D)$ we must impose the conditions \chris{not really though since it's homotopical} that the deformation of the $G$-bundle $P$ extends across the divisor $D$ and that the deformation of the multiplicative Higgs field has a simple pole at $D$.  In other words we find
 \[ H^\bullet(\bb T_{\mhiggs_G(C,D), (P,g)}) \iso \bb H^\bullet(C; \gg_P[1] \to \gg_P(-D)) \sub \bb H^\bullet(C \!\bs\! D; \gg_P[1]|_{C \!\bs\! D} \to \gg_P|_{C \!\bs\! D})\]
 as required.
-\chris{This last step isn't rigorous, needs improving.}
 \end{proof}
 
 \begin{remark}
@@ -417,8 +397,6 @@ Note that the right-hand side is the derivative at $\mc A$ of the map $B_i \maps
 \end{proof}
 
 \section{Symplectic Structures} \label{symp_section}
-From now on we'll exclusively study the rational situation where $C = \bb{CP}^1$ and we fix a framing point $c = \infty$.  
-
 \subsection{The Example of $\GL_2$}
 \chris{Ultimately we might move this, but we should probably include a discussion of what happens for $\GL_2$ before or in parallel to discussing the general story.}
 
@@ -431,7 +409,7 @@ terms of some chart
   \chris{My idea was to include the discussion of, at least, the simple example that you worked out for $\GL_2$ with minimal singularities where you described the geometry of the moduli space and gave an expression for the symplectic form (in Section 2 of the file 2017\_11\_30\_ghiggs).  I really only had in mind for $\GL_2$ trying to give a more explicit argument for what will appear below, i.e. that the moduli spaces after fixing residues were naturally symplectic.  But maybe we could do what you suggest and described the symplectic leaves in some Darboux coordinates and refer to \cite{FrassekPestun} for proof?} 
 
 \subsection{Symplectic Structures for General $G$}
-We begin the more abstract general analysis by briefly discussing the holomorphic symplectic structure on the moduli space of periodic monopoles on $\bb{CP}^1$ following the analysis of Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin3}.  This structure arises from the description we gave as a hyperk\"ahler quotient.  To describe it specifically, let $\delta^{(1)} \mc A$ and $\delta^{(2)} \mc A$ be two tangent vectors at $(\bo P, \mc A)$ to the moduli space of monopoles.  Choose representatives for these two tangent vectors of the form $\alpha_i$ and $\alpha'_i$ respectively  in the \v Cech resolution we described above.  Then we can write the holomorphic symplectic form coming from the hyperk\"ahler reduction in terms of the symplectic pairing on the infinite-dimensional vector space $\mc V$, which is given by the Killing form on $\gg$ along with the wedge pairing of differential forms.  So summing over the local patches in our \v Cech resolution we can write it as
+We begin the more abstract general analysis by briefly discussing the holomorphic symplectic structure on the moduli space of periodic monopoles on $\bb{CP}^1$ following the analysis of Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin3}.  This structure arises from the description we gave as a hyperk\"ahler quotient.  To describe it specifically, let $\delta^{(1)} \mc A$ and $\delta^{(2)} \mc A$ be two tangent vectors at $(\bo P, \mc A)$ to the moduli space of monopoles.  Recall that $\mc A$ denotes the combination $\nabla_t - i\Phi \d t$.  Choose representatives for these two tangent vectors of the form $\alpha_i$ and $\alpha'_i$ respectively  in the \v Cech resolution we described above.  Then we can write the holomorphic symplectic form coming from the hyperk\"ahler reduction in terms of the symplectic pairing on the infinite-dimensional vector space $\mc V$, which is given by the Killing form on $\gg$ along with the wedge pairing of differential forms.  So summing over the local patches in our \v Cech resolution we can write it as
 \begin{align*}
 \omega_{\mr{mon}}(\delta^{(1)} \mc A, \delta^{(2)} \mc A) &= \int_{M} \kappa(\delta^{(1)} \mc A \wedge \delta^{(2)} \mc A) \d z \d t \\
 &= \sum_{i=1}^k \int_{U_i \times S^1} \kappa(\alpha_i \wedge \alpha'_i) \d z \d t
@@ -440,7 +418,7 @@ where the contributions to the integral away from the $U_i$ vanish.
 
 Our goal in this section will be describe a symplectic structure on the moduli space of multiplicative Higgs bundles -- the rational analogue of Hurtubise and Markman's symplectic structure -- and then prove that it's equivalent to this symplectic form under the equivalence between multiplicative Higgs bundles and periodic monopoles.
 
-\chris{From here on, replace what was here with a proof that the below formula does define a Poisson/symplectic structure following Hurtubise and Markman.}
+\chris{From here on, replace what was here with a proof that the below formula does define a Poisson/symplectic structure following Hurtubise and Markman.  Include a remark on what happens in the $q$-deformed case too.}
 
 \begin{remark}
 From now on we'll write $\langle - , - \rangle$ to denote the residue pairing between elements of $L\gg$.  That is, 
@@ -448,21 +426,27 @@ From now on we'll write $\langle - , - \rangle$ to denote the residue pairing be
 \end{remark}
 
 \begin{lemma}
-As a pairing on the tangent complex at a point $(P,g)$ the symplectic form on the moduli space of multiplicative Higgs bundles pairs $\alpha_i$ with $\beta_i$ for $i=1,\ldots,k$.  It is given by the formula 
+There is a natural symplectic structure on the moduli space $\mhiggs_G^{\fr}(\bb{CP}^1,D,\omega^\vee)$.  In terms of our \v Cech description it is described by the formula 
 \[\omega((\{\alpha_i\}, \{\beta_i\}), (\{\alpha'_i\},\{\beta_i'\})) = \sum_i \langle \rho_g^*(\alpha_i + \alpha_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta'_i) \rangle - \langle \rho_g^*(\alpha'_i + \alpha'_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta_i) \rangle,\]
 where we use the Killing form to identify $\beta'_i$ with a $\gg^*$-valued form, and where $\rho_g^*$ is the pullback along the right multiplication by $g$.  In this expression the sum is over $i=1,\ldots,k$ and $i=\infty$.
 \end{lemma}
 
+\begin{remark}
+How should we think about this symplectic structure?  There's an intuitive description just as in Hurtubise and Markman's elliptic moduli space. \chris{...}
+\end{remark}
+
+\begin{proof}
+\chris{todo.  It should be written so as to be manifestly anti-symmetric, we need to verify non-degeneracy.}
+\end{proof}
+
+\chris{What about the Poisson structure on the total space?  These should be leaves.  What about $\eps$-connections?}
 
 \begin{prop} \label{qconn_symp_description}
-The symplectic form on the moduli space of $q$-connections can be written in the form
+The symplectic form on the moduli space of multiplicative Higgs bundles can be written in the form
 \begin{equation}
 \label{eq:resid}
 \omega(\delta g, \delta g') = - \sum_{i=1}^d \langle b_i^L g^{-1}, b^{'R}_i g^{-1} \rangle - (b \leftrightarrow b')
 \end{equation}
-\vasily{I think some repairs are required here if we are to compare to the expression (\ref{eq:res-sum}) below: 1) we should expect sandwiches between $g$ and $g^{-1}$ and not $g^{-1}$ and $g^{-1}$ 2) the
-  summation should also include  a contribution from $\infty$ 3) Pick either $\langle \rangle$ or $\kappa$ notation for the Killing form}
-  \chris{other than making sure signs are correct I think the expression here works for what's below in Theorem \ref{symplectic_comparison_thm} though I may of course be making an error.  1) We evaluate this pairing on a pair of expressions of the form $(b^L g, - g b^R)$, yielding $(b^L, -g b^R g^{-1})$, 2) doesn't the term at $\infty$ vanish because it can be assumed to land in $z \gg[[z]]$ where the residue pairing vanishes?  3) I added a remark to clarify, but by $\langle - , - \rangle$ I mean the combination of the Killing form pairing with the residue, so $\langle a,b \rangle = \oint \kappa(a,b)$.}
 where $\delta g$ is represented on $U_i$ by a pair $(b^L, b^R) \in \Ad_g$.  Here and throughout the notation ``$- (b \leftrightarrow b')$'' denotes antisymmetrization.
 \end{prop}
 
@@ -502,12 +486,7 @@ We can write this in terms of a pairing on the bundle $\ad(g)$.  Represent the c
 \end{align*}
 where the remaining terms are killed by the antisymmetrization.
 
-On the other hand, we can evaluate the pairing $\omega_{\mr{Mon}}(\alpha_i,\alpha'_i) = \omega_{\mr{Mon}}(\d_{\mr{mon}}(b_i),\d_{\mr{mon}}(b_i'))$ via integration by parts. We'll compute the symplectic pairing for the full \v Cech complex, but it will split into a sum over open sets $U_i$.  The result is that \vasily{the
-  expression (\ref{eq:omega-mon}) expands as}
-\vasily{ 1. let us unify the notations for the Higgs field in the equations above and the previous sections: somewhere holonomy or
-  the Higgs field is called $H(\mc A)$, somewhere $\phi$, somewhere $g$. I would favour the notation $g$. 2. Let us introduce somewhere before the notation $b^{L} = b(0), b^{R} = b(2\pi)$ to make the equations more readable, and break the multline computation into separate lines and insert between
-  the lines the explanations of what we are doing  } \chris{made some notational changes following your suggestions.}
-
+On the other hand, we can evaluate the pairing $\omega_{\mr{Mon}}(\alpha_i,\alpha'_i) = \omega_{\mr{Mon}}(\d_{\mr{mon}}(b_i),\d_{\mr{mon}}(b_i'))$ via integration by parts. We'll compute the symplectic pairing for the full \v Cech complex, but it will split into a sum over open sets $U_i$.  The result is that 
 \begin{align*}
 \omega_{\mr{Mon}}(\{\alpha_i\},\{\alpha'_i\}) &= \sum_{i=0,\ldots,k,\infty} \int_{U_i} \kappa(\d_{\mr{mon}}(b_i) \wedge \d_{\mr{mon}}(b_i')) \d z - (b \leftrightarrow b')\\
 &= \sum_{i=1,\ldots,k,\infty} \int_{\dd \bb D_i \times [0,2\pi]} \kappa(b_i - b_0, \d_{\mr{mon}}(b'_i)) \d z - (b \leftrightarrow b')
@@ -520,31 +499,6 @@ using here the fact that $\d_{\mr{mon}}b_i = \d_{\mr{mon}} b_0$ on $U_i \cap U_0
 Pick out the summand corresponding to $U_i$.  Choose our potentials so that on the boundary $\dd \bb D_i$ we have $b_0^L = b_0^{'L} = 0$.  We can do this by setting $b^{R} = \delta g g^{-1}$ since $g$ is non-singular on $U_0$.  This choice means that on $U_0 \cap U_i$, since $\delta g  = b_{i} ^R g - g b_i^L = b_0^{R} g $ we can make the identification $ b_0^{R} = b_{i}^{R} - g b_{i}^{L} g^{-1}$.  Therefore
 \[\omega_{\mr{Mon}}(\{\alpha_i\},\{\alpha'_i\}) = \sum_{i=1,\ldots,k,\infty} \langle(g b_i^{L} g^{-1}, b_i^{'R}\rangle \quad - \quad  (b \leftrightarrow b')\]
 agreeing with the expression coming from $\mr{mHiggs}$. \chris{indeed there's a sign error somewhere which I haven't tracked down yet.  On the other hand maybe it isn't correct to say that the two symplectic forms are equal, maybe they're just proportional?}
-
-\vasily{Instead, I would suggest that here we choose the potentials such
-  that $b_0^L = 0$ and $b_0'^L = 0$ everywhere on $U_0$,
-  and in particular on the boundary $\partial \bb D_i$. There is no
-  obstruction to this choice because for 
-  any  variation of the holonomy $\delta g  = b^R g - g b^L$
-  with the choice $b^{L} = 0$ we set $b^{R} = \delta g g^{-1}$
-  which is a holomorphic section on $U_0$ for the reason
-  that $U_0$ does not contain any singularities and because of the Bogomolny
-  equation. Given this choice the last line becomes
-  \begin{equation}
-     \sum_{i=1,\ldots,k,\infty} \oint_{\dd \bb D_i} - \kappa(b_0^R, b_i^R{}') \quad - \quad  (b \leftrightarrow b')
-   \end{equation}
-   Next, from $\delta g  = b_{i} ^R g - g b_i^L = b_0^{R} g $ on $\partial \bb D_i = U_0 \cap U_i$
-   we find
-   $ b_0^{R} = b_{i}^{R} - g b_{i}^{L} g^{-1}$ and plug in the above line. Because of the antisymmetrization $b \leftrightarrow b'$ the term
-   containing 
-$b_i^{R} b_{i}^{R}{}'$ vanishes and we are left with
-    \begin{equation}
- \label{eq:res-sum}
-      \sum_{i=1,\ldots,k,\infty} \oint_{\dd \bb D_i}  \kappa(g b_i^{L} g^{-1}, b_i^R{}') \quad - \quad  (b \leftrightarrow b')
-    \end{equation}
-} \chris{modified}
-
-\vasily{I think the minus sign is missed if compared to (\ref{eq:res-sum})}
 \end{proof}
 
 

@@ -61,6 +61,10 @@ In particular when $q=1$ this recovers the moduli stack of multiplicative Higgs 
 A closed point of $\qconn_G(C,D)$ consists of a principal $G$-bundle $P$ on $C$ along with a \emph{$q$ difference connection}: an isomorphism of $G$-bundles $P|_{C \! \bs \! D} \to q^*P|_{C \! \bs \! D}$ away from the divisor $D$.
 \end{remark}
 
+\begin{remark}
+\chris{Expository remarks on $q$-difference connections / $q$-difference modules.  Cite Sauloy?  Others?}
+\end{remark}
+
 \subsection{Residue Conditions}
 These moduli stacks are typically of infinite type.  In order to obtain finite type stacks, and later in order to define symplectic rather than only Poisson structure, we can fix the behaviour of our multiplicative Higgs fields and $q$ difference connections near the punctures $D \sub C$.
 
@@ -109,11 +113,12 @@ The most important examples for our purposes are given by the following rational
 
 \vasily{What shall we say about higher genus? The definition of mHiggs as above makes sense. Will the resulting space be Poisson? I guess not because to define the Poisson structure we need to fix a section of canonical bundle on $C$, that is a one-form ``dz''. However, in higher genus such 1-form necessarily has zeroes. May be here is a good place to comment or restrict attention to the trichotomy with an explanation why higher genus is on different grounds} \chris{added a remark below.}
 
-\begin{remark}
+\begin{remark} \label{Elliptic_AKSZ_remark}
 In the elliptic case it's natural to ask to what extent Hurtubise and Markman's integrable system structure can be extended from the variety of polystable multiplicative Higgs bundles to the full moduli stack.  If $D$ is empty then it's easy to see that we have a symplectic structure given by the AKSZ construction of Pantev-To\"en-Vaqui\'e-Vezzosi \cite{PTVV}.  Indeed, $E$ is compact 1-oriented and the quotient stack $G/G$ is 1-shifted symplectic, so the mapping stack $\map(E, G/G) = \mhiggs_G(E)$ is equipped with a 0-shifted symplectic structure by \cite[Theorem 2.5]{PTVV}.  The role of the Hitchin fibration is played by the Chevalley map $\chi \colon G/G \to T/W$, and therefore
 \[\map(E,G/G) \to \map(E,T/W).\]
-The fibers of this map over regular points in $T/W$ are given by moduli stacks of the form $\bun_T(\wt E)^W$ where $\wt E$ is a $W$-fold cover of $E$ (the cameral cover). \chris{is the base just $T/W$?  Come back to this, at least by dimension counting.}
-\vasily{If there are no singularities, I think that's correct, but perhaps we can extend the comment above for the case of non-empty D?} \chris{I think figuring out how to phrase the singuarity conditions on the base and to verify that the fibers are Lagrangian in the derived geometry language would be tricky, and it's a bit orthogonal to the rest of the paper.  It's probably doable if you think it's worth it.  What do you think?}
+The fibers of this map over regular points in $T/W$ are given by moduli stacks of the form $\bun_T(\wt E)^W$ where $\wt E$ is a $W$-fold cover of $E$ (the cameral cover). \chris{Come back to this, at least by dimension counting.}
+
+\chris{todo: remark on what the base looks like for general $D$.  Probably put it in the last subsection?  Include comparison to the story in \cite{DonagiGaitsgory}.}
 \end{remark}
 
 \begin{remark}
@@ -140,6 +145,102 @@ Below we'll write $\qconn_G^{\text{ps}}(C, D, \omega^\vee)$ for the moduli space
 
 When $C = \bb{CP}^1$ every principal $G$-bundle on $C$ admits an essentially unique (up to the action of the Weyl group) holomorphic reduction of structure group to a maximal torus \cite{GrothendieckSphere}.  Since $q$-connections for an abelian group are automatically stable, polystability on the sphere is equivalent to admissibility of the torus reduction.  As a consequence, for our main example of interest -- the rational case -- the moduli space of polystable $q$-connections is equivalent to the moduli space of all $q$-connections of admissible degree.  For instance for $G=\SL_n$ the moduli space of polystable $q$-connection is equivalent to the moduli space of $q$-connections on the trivial bundle.
 
+\subsection{Poisson Structures from Derived Geometry}
+As we mentioned above in Remark \ref{Elliptic_AKSZ_remark}, in the case where $C$ is an elliptic curve and there are no punctures there's a symplectic structure on $\mhiggs_G(C)$ given by the AKSZ formalism.  More generally, when we do have punctures, we expect the moduli space $\mhiggs_G(C,D)$ to have a Poisson structure with a clear origin story coming from the theory of derived Poisson geometry.  In this section we'll explain what this story looks like.  However, we emphasise that there are technical obstructions to making this story precise with current technology: this section should be viewed as motivation for the structures we'll discuss in the rest of the paper.  We refer the reader to \cite{CPTVV} for the theory of derived Poisson structures and to \cite{MelaniSafronov1, MelaniSafronov2, Spaide} for that of derived coisotropic structures.
+
+Here's the idea.  Recall that we can identify the moduli space of singular $q$-connections on a curve as a fiber product: $\qconn_G^{\fr}(\bb{CP}^1, D) \iso \bun_G^\fr(C) \times_{\bun_G(\bb{CP}^1 \! \bs \! D)^2} \bun_G(\bb{CP}^1 \! \bs \! D)$ where the map $g \colon \bun_G^\fr(\bb{CP}^1) \to \bun_G(\bb{CP}^1 \! \bs \! D)$ is given by $P \mapsto (P|_{\bb{CP}^1 \! \bs \! D}, q^*P|_{\bb{CP}^1 \! \bs \! D})$.  Consider the following commutative cube:
+
+\[\xymatrix@C-30pt@R-8pt{
+& \qconn_G^{\fr}(\bb{CP}^1, D) \ar[rr]^{f_1} \ar'[d][dd]^(.25){\mr{res}} & & \bun_G^{\fr}(\bb{CP}^1) \ar[dd]
+\\
+\bun_G^{\fr}(\bb{CP}^1 \bs D) \ar@{<-}[ur]^{f_2} \ar[rr]^(.6){g_2} \ar[dd] & & \bun_G^{\fr}(\bb{CP}^1 \bs D)^2 \ar@{<-}[ur]^{g_1} \ar[dd]^(.4)r
+\\
+& \bun_G(\bb B)^k \ar'[r][rr] & & BL^+G^{2k}
+\\
+BLG^k \ar[rr]\ar@{<-}[ur] & & BLG^{2k}. \ar@{<-}[ur]
+}\]
+Here the top and bottom faces are homotopy Cartesian.  What does this setup buy us?  We'll first answer informally.
+
+\begin{claim}
+\chris{first ingredient: $BLG$ being 2-shifted symplectic.  Second ingredient: that the restriction map is Lagrangian.  Together these give us what we want.  Can phrase these things formally as conjectures.}
+\end{claim}
+
+Now, let's make this claim more precise.  The main technical condition that makes this claim subtle comes from the fact that most of the derived stacks appearing in this cube, for instance the stack $BLG$m are not Artin.  As such we need to be careful when we try to, for instance, talk about the tangent complex to such stacks.  One can make careful statements using the formalism of ``Tate stacks'' developed by Hennion \cite{Hennion}.  We can therefore make our claim into a more formal conjecture.
+
+\begin{conjecture}
+The stack $BLG$ is Tate 2-shifted symplectic, and both $BL^+G \to BLG$ and $\bun_G(C \bs D) \to BLG^k$ are Tate 2-shifted Lagrangian.  Furthermore 
+\end{conjecture}
+
+
+
+
+\chris{all of the below is to be removed}
+
+\begin{lemma} \label{restriction_Lagn_lemma}
+The restriction map $r \colon \bun_G^\fr(\bb{CP}^1 \! \bs \! D) \to BLG^k$ has a 2-shifted Lagrangian structure with respect to the residue pairing on $BLG$.
+\end{lemma}
+
+\begin{remark}
+More precisely, $BLG$ is a Tate stack in the sense of Hennion \cite{Hennion}.  Although we won't check that the residue pairing symplectic structure $\omega$ is compatible with the Tate structure, this problem doesn't arise when defining a Lagrangian structure as a potential for $r^*\omega$ in $\Omega^{2,\mr{cl}}(\bun_G^\fr(\bb{CP}^1 \! \bs \! D), 2)$ since the stack in question is of ind-finite type.
+\end{remark}
+
+\begin{proof}
+Consider the inclusion $\d r \colon \gg_- = \bb T_{\bun_G^\fr(\bb{CP}^1 \! \bs \! D)}[-1] \to r^*\bb T_{BLG^k}[-1] = \gg(\!(z)\!)^k$: a map of ind-pro Lie algebras concentrated in degree zero.  The residue pairing vanishes after pulling back along $r$ since elements of $\gg_-$ are  $\gg$-valued functions on $\bb{CP}^1$ with at least a simple pole at every puncture in $D$.  So the map $r$ is isotropic with 0 isotropic structure; this structure is unique for degree reasons.  We must check that this structure is non-degenerate.  It suffices to check that the sequence
+\[\bb T_{\bun_G^\fr(\bb{CP}^1 \! \bs \! D)}[-1] \to r^*\bb T_{BLG^k}[-1] \to (\bb T_{\bun_G^\fr(\bb{CP}^1 \! \bs \! D)}[-1])^\vee\]
+is an exact sequence of ind-pro vector spaces, and therefore an exact sequence of quasi-coherent sheaves on the stack $\bun_G^\fr(\bb{CP}^1 \! \bs \! D)$.  To do this we identify the pair $(\gg_-, \gg(\!(z)\!)^k)$ as part of a Manin triple, where a complementary isotropic subalgebra to $\gg_-$ is given by $\gg_+ = \gg[[z]]^k$.  Using the residue pairing we can identify $\gg_+$ with $(\gg_-)^\vee$ and therefore identify our sequence with the split exact sequence
+\[0 \to \gg_- \to \gg(\!(z)\!)^k \to \gg_+ \to 0.\]
+\end{proof}
+
+\begin{construction}
+The front and the right faces are not homotopy Cartesian but there are canonical 1-shifted Lagrangian structures on the induced maps from the source of the face into the homotopy fiber product, i.e.
+\begin{align*}
+&\bun_G^{\fr}(\bb{CP}^1) \to \bun_G^{\fr}(\bb{CP}^1 \bs D)^2 \times_{BLG^{2k}} BL^+G^{2k} \iso \bun_G^{\fr}(\bb{CP}^1)^2 \\
+\text{and } &\bun_G^{\fr}(\bb{CP}^1 \bs D) \to \bun_G^{\fr}(\bb{CP}^1 \bs D)^2 \times_{BLG^{2k}} BLG^{k}.
+\end{align*}
+Call these Lagrangian structures $\mu_1$ and $\mu_2$ respectively.  Denote the 2-shifted Lagrangian structure on the map $r$ from Lemma \ref{restriction_Lagn_lemma} by $\nu$.  The 1-shifted Lagrangian structure that we want on the map $\mr{res}$ is then given by 
+\[\lambda = f_1^*(\mu_1) + f_2^*(\mu_2) + \eta
+\]
+where $\eta$ is a potential for the difference of the pullbacks $(f_1 \circ g)^*\nu - (f_2 \circ g_2)^*\nu$.  Here $\eta = 0$ since $\nu = 0$ and the potential is obtained as the pullback of $\nu$ along the homotopy making the top square commute (which in this case is the identity).  Furthermore, the Lagrangian structure $\mu_1$ on the diagonal is 0, and the Lagrangian structure $\mu_2$ is also 0 for degree reasons.  Indeed, the tangent complex of $\bun_G^\fr(\bb{CP}^1 \bs D)$ is concentrated in degree $-1$ so there are no 2-forms of degree 1.  Thus the 1-shifted Lagrangian structure occuring here is the trivial nullhomotopy for the zero closed 2-form \chris{check}.
+
+Any 1-shifted Lagrangian structure $\lambda$ defines a quasi-isomorphism $\wt \lambda \colon \bb T_{\qconn_G^{\fr}(\bb{CP}^1, D)} \to \bb L_{\mr{res}}$ where I'm writing $\bb L_{\mr{res}}$ for the dual of $\mr{res}^*(\bb T_{\qconn_G^{\fr}(\bb{CP}^1, D)}) \to \bb T_{\bun_G(\bb B)^k)}[-1]$: the relative tangent complex to the map $\mr{res}$.  Write $\wt{\lambda}^{-1}$ for a quasi-inverse.  This defines a Poisson bivector on $\qconn_G^{\fr}(\bb{CP}^1, D)$ where the associated map from the cotangent complex to the tangent complex is given by
+\[\pi = \wt{\lambda}^{-1} \circ \iota \colon \bb L_{\qconn_G^{\fr}(\bb{CP}^1, D)} \to \bb L_{\mr{res}} \to \bb T_{\qconn_G^{\fr}(\bb{CP}^1, D)}\]
+where $\iota$ is the canonical inclusion of the cotangent complex into the relative cotangent complex.
+
+We obtain the 0-shifted symplectic structure on a Poisson leaf as the Lagrangian intersection
+\[\xymatrix{
+\qconn_G^{\fr}(\bb{CP}^1, D, \omega^\vee) \ar[r] \ar[d] &\qconn_G^{\fr}(\bb{CP}^1, D) \ar[d] \\
+\prod B\Gamma_i \ar[r] & \bun_G(\bb B)^k
+}\]
+where $B\Gamma_i$ is the classifying space of the group of symmetries of the $G$-bundle on $\bb B$ associated to the coweight $\omega^\vee_i$.  If we restrict the Poisson bivector to the leaf $\qconn_G^{\fr}(\bb{CP}^1, D, \omega^\vee)$ it becomes non-degenerate and so defines a 0-shifted symplectic structure.
+\end{construction}
+
+In order to work with this symplectic structure we'll need to give a local description as a pairing on the tangent complex.  Using the description of the tangent complex in terms of hypercohomology from Section \ref{def_section} it will suffice to describe the pairing on each summand in the \v Cech resolution.
+
+\begin{remark}
+From now on we'll write $\langle - , - \rangle$ to denote the residue pairing between elements of $L\gg$.  That is, 
+\[\langle g_1, g_2 \rangle = \oint_{\bb D^\times} \kappa(g_1, g_2).\]
+\end{remark}
+
+\chris{remark on more general case of non-trivial $q$ and what we expect there.}
+
+\begin{lemma}
+As a pairing on the tangent complex at a point $(P,g)$ the symplectic form on the moduli space of multiplicative Higgs bundles pairs $\alpha_i$ with $\beta_i$ for $i=1,\ldots,k$.  It is given by the formula 
+\[\omega((\{\alpha_i\}, \{\beta_i\}), (\{\alpha'_i\},\{\beta_i'\})) = \sum_i \langle \rho_g^*(\alpha_i + \alpha_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta'_i) \rangle - \langle \rho_g^*(\alpha'_i + \alpha'_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta_i) \rangle,\]
+where we use the Killing form to identify $\beta'_i$ with a $\gg^*$-valued form, and where $\rho_g^*$ is the pullback along the right multiplication by $g$.  In this expression the sum is over $i=1,\ldots,k$ and $i=\infty$.
+\end{lemma}
+
+\begin{proof}
+The formula given above is saying that the Poisson bivector -- viewed as a map $\pi \colon \bb L_{(P,g)} \to \bb T_{(P,g)}$ -- acts in degree $-1$ by identifying $\gg$ with $\gg^*$ then applying the map $\Ad_g^*$.  
+\chris{Removed what was here because it was wrong.  I think maybe to fix it we want to say that if we find any pairing which is closed for the internal differential then it will agree with the pairing coming from the trivial Lagrangian structure because the pairing only depends on cocycles up to coboundaries, and on that level there's a unique map $\bb T_L \to \bb L_L$ which is null-homotopic to zero and therefore a unique Poisson structure?  Needs more thought.}
+
+Consider the image of our candidate pairing under the internal differential on the space of 2-forms (here modelled by the \v Cech differential).  The result is the degree 1 pairing
+\begin{align*}
+\eta((\{\alpha_i\}, \{\beta_i\}), (\{\alpha'_i\},\{\beta_i'\})) &= \sum_i \langle \rho_g^* \Ad_g(\phi_i + \phi_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta'_i) \rangle - \langle \rho_g^*\Ad_g(\phi'_i + \phi'_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta_i) \rangle\\
+&= \sum_i \langle \rho_g^*(\phi_i + \phi_0)|_{U^\times_i}, \rho_g^*(\beta'_i) \rangle - \langle \rho_g^*(\phi'_i + \phi'_0)|_{U^\times_i}, \rho_g^*(\beta_i) \rangle,
+\end{align*}
+where $\phi_i$ is an element of $\gg_P(U_i)$: a degree $-1$ element of the \v Cech complex.  This pairing vanishes on \v Cech cocycles, because if $\{\phi_i\}$ is a $-1$-cocycle then $(\phi'_i + \phi'_0)|_{U^\times_i}=0$.  Our candidate pairing is therefore closed for the internal differential.
+\end{proof}
+
 \section{Periodic Monopoles}
 Moduli spaces of $q$-connections on a Riemann surface $C$ are closely related to moduli spaces of periodic monopoles, i.e. monopoles on 3-manifolds that fiber over the circle (more specifically, with fiber $C$ and monodromy determined by $q$).  Let $G_\RR$ be a compact Lie group whose complexification is $G$.  The discussion in this section will mostly follow that of \cite{CharbonneauHurtubise, Smith}.
 
@@ -154,28 +255,21 @@ A \emph{monopole} on the Riemannian 3-manifold $M = C \times_q S^1_R$ is a smoot
 We should emphasise the difference between the Riemannian 3-manifold $M = C \times_q S^1_R$ appearing in this section and the derived stack $C \times_q S^1_B$ (the mapping torus) appearing in the previous section.  These should be thought of as smooth and algebraic realizations of the same object (justified by the comparison Theorem \ref{monopole_qconn_comparison_thm}) but they are a priori defined in different mathematical contexts.
 \end{remark}
 
-\vasily{We should specify the Riemannian metric on $M$ in order to define the $*$ operation on forms. I guess our convention for the metric on $M$
-  which leads to the symplectomorphism with mHiggs is
-  \begin{equation}
-\label{eq:RM}
-   ds^2 = v \otimes \bar v  + dt \otimes dt 
-  \end{equation}
-  where $v = "dz"$ is a chosen section of the canonical bundle on $C$; I suggest to give some fixed coordinate-free name to this holomorphic volume form on $C$, like   $v$ or whatever,  and may be even consider that that this volume form is fixed as an attribute of $C$ through out the paper )
-} \chris{I added a description of the Riemannian metric.  I think we won't need to specify a section of the canonical bundle until Section \ref{symp_section}.}
-
 We can rephrase the data of a monopole on $M$ as follows.  Let $C_0 = C \times \{0\}$ be the fiber over $0$ in $S^1$, viewed as a Riemann surface.  Let $P$ be the restriction of the complexified bundle $\bo P_\CC$ to $C_0$.  Consider first the restriction of the complexification of $A$ to a connection $A_0$ on $P$ over $C_0$.  The $(0,1)$ part of $A_0$ automatically defines a holomorphic structure on $P$.  We can introduce an additional piece of structure on this holomorphic $G$-bundle.  In order to do so we can decompose the Bogomolny equation into one real and one complex equation as follows.
 \begin{align*}
 F_{A_0} - \nabla_t \Phi &= 0 \\
 [\ol{\del}_{A_0}, \nabla_t - i\Phi \d t] &= 0 
 \end{align*}
-where $\nabla_t$ is the component of the covariant derivative $\d_A$ normal to $C_0$.  From now on we'll denote $\mc A = \nabla_t - i\Phi \d t$.
+where $\nabla_t$ is the component of the covariant derivative $\d_A$ normal to $C_0$.  
+
+\begin{definition}
+From now on we'll use the notation $\mc A$ for the  \chris{...explain} $\nabla_t - i\Phi \d t$. 
+\end{definition}
 
 Let's now introduce singularities into the story.  We'll keep the description brief, referring the reader to \cite{CharbonneauHurtubise, Smith} for details.
 \begin{definition}
   Let $D \sub M$ be a finite subset.  Let $\omega^\vee$ be a choice of coweight for $G$.  A monopole on $M \bs D$ has \emph{Dirac singularity} at $z \in D$ with charge $\omega^\vee$ if locally on a neighbourhood of $z$ in $M$ it is obtained by pulling back under $\omega^\vee$ the standard Dirac monopole solution to the Bogomolny equation where $\Phi$ is spherically symmetric with a simple pole at $z$ () and the restriction of a connection $A$ to a two-sphere $S^2$ enclosing the singularity defines a $U(1)$ bundle on this $S^2$ of degree $1$ so that
-    \[
-     \frac{1}{2\pi} \int_{S^2} F = 1 .
-    \]
+    \[\frac{1}{2\pi} \int_{S^2} F = 1 .\]
   See e.g. \cite[Section 2.2]{CharbonneauHurtubise} for a more detailed description.
 \end{definition}
 
@@ -203,25 +297,23 @@ Now let's address the relationship between periodic monopoles and $q$-connection
 There is an analytic isomorphism between the moduli space of polystable monopoles on $C \times_q S^1$ with Dirac singularities at $D \times \{t_0\}$ (and a possible framing on $\{c\} \times S^1$) and the moduli space of $q$-connections on $C$ with singularities at $D$ and framing at $\{c\}$.  More precisely there is an analytic isomorphism
 \[H \colon \mon^{(\fr)}_G(C \times_q S^1, D \times \{t_0\}, \omega^\vee) \to \qconn_G^{\text{ps,(fr)}}(C, D, \omega^\vee)\]
 given by the holonomy map around $S^1$, i.e. sending a monopole $(\bo P, \mc A)$ to the holomorphic bundle $P = (\bo P_\CC)|_{C_0}$ with $q$-connection $g = \Hol_{S^1}(\mc A) \colon P \to q^*(P)$.
-\vasily{Do we assume that $C_0 = C \times {t_0}$ or not necessarily the same $t_0$ where are the singularities? } \chris{I think I want that $C_0 = C \times \{0\}$, a slice explicitly different from the slice where the singularities live.}
 \end{theorem}
+
+\begin{remark}
+Note that in this statement we assumed that all the singularities occur in the same location in $S^1$, i.e. in the same slice $C \times {t_0}$.  This assumption is not necessary, as explained in \cite[]{CharbonneauHurtubise} \chris{add ref and explain.}
+\end{remark}
 
 \begin{proof}
 \chris{check}
 This follows by the same argument as that given by Charbonneau-Hurtubise \cite{CharbonneauHurtubise} and Smith \cite{Smith}.  More explicitly, first let's think about injectivity, so let $(\bo P, \mc A)$ and $(\bo P', \mc A')$ be a pair of periodic monopoles on $C \times_q S^1$ with images $(P,g)$ and $(P', g')$ respectively, and choose a bundle isomorphism $\tau \colon P \to P'$ intertwining the $q$-connections $g$ and $g'$.  One observes first that $\bo P$ and $\bo P'$ are also isomorphic $G$-bundles since, by intertwining with the $q$-connections, we have an isomorphism $\bo P|_{C \times \{t\}} \to \bo P'|_{C \times \{t\}}$ for every $t \in S^1$.  That the monopole structures also match up follows by the same argument as in \cite[Proposition 4.7]{CharbonneauHurtubise}.
 
-For surjectivity, again we'll match the argument in the case where $q=\id$.  We begin by extending a holomorphic $G$-bundle $P$ on $C_0$ with $q$-connection $g$ to a $G$-bundle on $M \bs (D \times \{t_0\}) = (C \times_q S^1_R) \bs (D \times \{t_0\})$  Let $\gamma \colon [-2\pi R,2\pi R] \to \aut(C)$ 
-\vasily{Sorry, what is the target space of map $\gamma$? Perhaps not $G$ but the group of automorphisms of the curve $C$? Also, now we are assuming
-  that there exists group homomorphism from real numbers to the automorphism group of $C$. It is true for the rational, and trigonometric case. However, what if automorphism group of the curve $C$ includes some discrete factor, and $q$ is that discrete automorphism. In this case we will not be able to smoothly interpolate. Perhaps we need to restrict explicitly to a subgroup of automorphism group of $C$ which is covered by the group of real numbers or circle?} \chris{Yes, I did try to make that explicit in the sentence before the theorem statement.}
-
-be a geodesic with $\gamma(-2\pi R) = q^{-1}$, $\gamma(0)=1$ and $\gamma(2\pi R) = q$.  Let $\wt M$ be the 3-manifold
+For surjectivity, again we'll match the argument in the case where $q=\id$.  We begin by extending a holomorphic $G$-bundle $P$ on $C_0$ with $q$-connection $g$ to a $G$-bundle on $M \bs (D \times \{t_0\}) = (C \times_q S^1_R) \bs (D \times \{t_0\})$  Let $\gamma \colon [-2\pi R,2\pi R] \to \aut(C)$ be a geodesic with $\gamma(-2\pi R) = q^{-1}$, $\gamma(0)=1$ and $\gamma(2\pi R) = q$.  Let $\wt M$ be the 3-manifold
 \[\wt M = ((-2\pi R, 2\pi R) \times C) \bs \bigcup_{j=1}^k (A^+_j \cup A^-_j)\]
 where $A^+_j$ is the arc $\{(t+ t_0,\gamma(t)(z_j)) \colon t \in (0, 2\pi R - t_0]\}$ and $A^-_j$ is the arc $\{(t + t_0 - 4 \pi R,\gamma(t)(z_j)) \colon t \in [2\pi R-t_0, 2 \pi R)\}$.
 
 Let $\pi \colon \wt M \to C$ be the projection sending $(t,z)$ to $\gamma(t)(z)$.  The bundle $P$ pulls back to a bundle $\pi^*(P)$ on $\wt M$.  We obtain a bundle on $M \bs (D \times t_0)$ by applying the identification $(t,z) \sim (t - 2 \pi R, q(z))$.  This bundle extends to an $S^1$-invariant holomorphic $G$-bundle on $M \times S^1$.  The remainder of the proof -- verifying the existence of the monopole structure associated to an appropriate choice of hermitian structure -- consists of local analysis which is independent of the value of the parameter $q$. 
 
 It remains to remark on the compatibility of framing data on the two sides.  A trivialization of the bundle $\bo P$ along the circle $\{c\} \times S^1$ yields a trivialization of the fiber of the bundle $P$ at $c$.  The condition that the holonomy around the circle at $c$ is $f$ fixes the value of the $q$-connection at $c$ to be in the conjugacy class $f$.
-
 \end{proof}
 
 \begin{remark}
@@ -229,9 +321,7 @@ Mochizuki \cite{Mochizuki} proved a stronger result in the rational case for the
 \end{remark}
 
 \subsection{Deformation Theory} \label{def_section}
-\chris{I think I've got a load of signs wrong and $(D)$ should be $(-D)$ throughout.  Todo: fix.}
-
-\vasily{Do we assume in this section the case of rational $C$? I think that some of our statements hold for generic $C$ and some for rational case} \chris{I believe everything in this section will make sense generally, and starting in the subsequent section we'll want to restrict to the rational case.}
+\chris{be careful about what we can say generally, and where we need to restrict to the rational case.}
 
 In the next section we'll compare symplectic forms on these moduli spaces.  In order to do so it will be important to understand the tangent spaces at a point of the source and target.  There's a natural description of these tangent spaces in terms of the hypercohomology of certain cochain complexes.
 
@@ -246,7 +336,8 @@ More explicitly, following \cite{FoscoloDef} let
 placed in degrees $-1$, 0 and 1 where $\d_1(g) = -(\d_A(g),[\Phi, g])$ and $\d_2(a,\psi) = \ast \d_A(a) - \d_A(\psi) + [\Phi,a]$.  Write $\d_{\mr{mon}}$ for the total differential.
 
 \begin{remark}
-Here we've chosen a point in the twistor sphere, forgetting the hyperk\"ahler structure and retaining a holomorphic symplectic structure.  In other words we've identified the target of the hyperk\"ahler moment map with $\RR \oplus \CC$.
+Here we've chosen a point in the twistor sphere, forgetting the hyperk\"ahler structure and retaining a holomorphic symplectic structure.  In other words we've identified the target of the hyperk\"ahler moment map with $\RR \oplus \CC$.  One way of thinking about this is \chris{todo}
+
 \vasily{Somewhere here we should clarify that the hyperKahler moment map takes value in the space imaginary quaternions which is isomorphic as
   real space to $\RR^3_{quat}$. After we pick a complex structure on the twistor sphere, there is natural split $\RR^{3}_{quat} = \CC \oplus \RR$.
   If we care only about complex structure and holomorphic symplectic form on the tangent space to the moduli space of monopoles with respect
@@ -263,20 +354,11 @@ with total differential given by $\d_A$ on each of the two factors along with th
 where the internal differentials on the two factors are now given by $\ol \dd_{A_0}$.  This complex is in turn quasi-isomorphic to the complex
 \[\Omega^\bullet(S^1; \Omega^{0,\bullet}(C_t;\gg_P))[1]\]
 with total differential $\ol \dd_{A_0} + \d_{\mc A}$.
-
-\vasily{Sorry, I am afraid I did not understand the notations of the remark and
-  hence the statement. Anyways, I was expecting, in the line of our discussions,
-  that the relevant differential, from which we would find the tangent bundle to Mon and then determine symplectic form,  is given by
-  \begin{equation}
-    D = dt D_{t} + d \bar z D_{\bar z}, \qquad D_t = \partial_t + A_{t} + i \Phi, \quad D_{\bar z} = \partial_{\bar z} + A_{\bar z} 
-  \end{equation}
-  that is a mixture of Dol differential along $C$ and de Rham differential along $S^1$. And we should have been referring here to the choice of the Riemmanian metric on $M$ (\ref{eq:RM}) to make the claims and the twistor sphere
-  point corresponding to the split of $T_{M} \simeq \RR^3_{quat} \simeq \CC \oplus \RR = T_{C} \oplus T_{S^1}$ } \chris{I rewrote the remark a bit: I think the differential I'm describing and the differential you're describing are actually the same.  Though note it needs editing to get the signs and factors of $i$ correct.}
 \end{remark}
 
 \begin{remark}
-If one introduces a framing at a point $c \in C$ then we must correspondingly twist the complex $\mc F^{\mr{mon}}$ above by the line bundle $\OO(-c)$ on $C$.  So in that case we define \chris{check}
-\[\mc F^{\text{mon,fr}}_{(\bo P,\mc A)} = \mc F^{\mr{mon}}_{\bo P, \mc A} \otimes (\CC_{S^1} \boxtimes \OO(-c)).\]
+If one introduces a framing at a point $c \in C$ then we must correspondingly twist the complex $\mc F^{\mr{mon}}$ above by the line bundle $\OO(c)$ on $C$.  So in that case we define \chris{check}
+\[\mc F^{\text{mon,fr}}_{(\bo P,\mc A)} = \mc F^{\mr{mon}}_{\bo P, \mc A} \otimes (\CC_{S^1} \boxtimes \OO(c)).\]
 \end{remark}
 
 The following is proved in \cite{FoscoloDef}.
@@ -286,7 +368,7 @@ The tangent complex of $\mon_G(S^1 \times C, D \times \{t_0\}, \omega^\vee)$ at 
 \end{prop}
 
 Now let's consider the tangent complex to the moduli space of $q$-connections.  For the arguments in this article we'll only need to carefully consider the case $q=\id$ of multiplicative Higgs bundles, but we'll include some remarks regarding the more general case.  In this case the calculation was performed by Bottacin \cite{Bottacin}, see also \cite[Section 4]{HurtubiseMarkman}. Fix a multiplicative Higgs bundle $(P,g)$ on $C$.  We consider the sheaf of cochain complexes on $C$
-\[\mc F_{(P,g)} = (\gg_P[1] \overset {\Ad_g} {\to} \gg_P(D))\]
+\[\mc F_{(P,g)} = (\gg_P[1] \overset {\Ad_g} {\to} \gg_P(-D))\]
 in degrees $-1$ and 0 with differential given by the adjoint action of $g$.  More precisely let $L_g$ and $R_g$ be the bundle maps $\gg_P \to \gg_P$ obtained as the derivative of left- and right-multiplication.  Then $\Ad_g = L_g - R_g$.  We can alternatively phrase this, as in \cite[Section 4]{HurtubiseMarkman}, as follows.  Define $\ad(g)$ to be the vector bundle
 \[\ad(g) = (\gg_P \oplus \gg_P)/\{(X, -g X g^{-1}): X \in \gg_P\}.\]
 Then we can write $\mc F$ as the sheaf of complexes
@@ -294,8 +376,8 @@ Then we can write $\mc F$ as the sheaf of complexes
 where now $\Ad_g$ is just the map $X \mapsto [(X,-X)]$.
 
 \begin{remark}
-  If one introduces a framing at a point $c \in C$ then we must correspondingly twist the complex $\mc F$ above by the line bundle $\OO(-c)$ on $C$, i.e. we restrict to deformations that preserve the framing and therefore are zero at the point $c$.  So in that case we define
-\[\mc F^\fr_{(P,g)} = (\gg_P[1] \overset {\Ad_g} {\to} \gg_P(D)) \otimes \OO(-c).\]
+  If one introduces a framing at a point $c \in C$ then we must correspondingly twist the complex $\mc F$ above by the line bundle $\OO(c)$ on $C$, i.e. we restrict to deformations that preserve the framing and therefore are zero at the point $c$.  So in that case we define
+\[\mc F^\fr_{(P,g)} = (\gg_P[1] \overset {\Ad_g} {\to} \gg_P(-D)) \otimes \OO(c).\]
 \end{remark}
 
 \begin{remark}
@@ -317,7 +399,7 @@ We'll explain the proof in different language to that used in \cite{Bottacin}.  
 given by the adjoing action of $g$ since the relevant spectral sequence converges at the $E_2$-page.  From this point of view the first term corresponds to deformations of the $G$-bundle $P$ and the second to deformations of the multiplicative Higgs field $g$.
 
 In order to compute the tangent complex to $\mhiggs_G(C,D)$ we must impose the conditions \chris{not really though since it's homotopical} that the deformation of the $G$-bundle $P$ extends across the divisor $D$ and that the deformation of the multiplicative Higgs field has a simple pole at $D$.  In other words we find
-\[ H^\bullet(\bb T_{\mhiggs_G(C,D), (P,g)}) \iso \bb H^\bullet(C; \gg_P[1] \to \gg_P(D)) \sub \bb H^\bullet(C \!\bs\! D; \gg_P[1]|_{C \!\bs\! D} \to \gg_P|_{C \!\bs\! D})\]
+\[ H^\bullet(\bb T_{\mhiggs_G(C,D), (P,g)}) \iso \bb H^\bullet(C; \gg_P[1] \to \gg_P(-D)) \sub \bb H^\bullet(C \!\bs\! D; \gg_P[1]|_{C \!\bs\! D} \to \gg_P|_{C \!\bs\! D})\]
 as required.
 \chris{This last step isn't rigorous, needs improving.}
 \end{proof}
@@ -330,17 +412,15 @@ In order to calculate with this hypercohomology space we'll use a \v Cech resolu
 
 Specify a representative 0-cocycle $(\alpha_\infty, \{\alpha_i\}, \alpha_0, \beta_\infty, \{\beta_i\})$ for the \v Cech cohomology group with respect to our chosen cover $\mc U$.  Explicitly a 0-cochain is given by the following data:
 \begin{align*}
- \alpha_\infty &\in \ad(g)(-1)(U_\infty) \\
- \alpha_i &\in \ad(g)(1)(U_i) \text{ for } i = 1,\ldots,k \\
+ \alpha_\infty &\in \ad(g)(1)(U_\infty) \\
+ \alpha_i &\in \ad(g)(-1)(U_i) \text{ for } i = 1,\ldots,k \\
  \alpha_0 &\in \ad(g)(C \bs (D \cup \{\infty\})) \\
  \beta_\infty &\in \gg_P(U^\times_\infty) \\
  \beta_i &\in \gg_P(U^\times_i) \text{ for } i=1,\ldots,k
 \end{align*}
 where the notation $(\pm 1)$ indicates tensoring by the line bundle $\OO(\pm 1)$.
 
-Being a 0-cocycle means that $(\alpha_\infty - \alpha_0)|_{U^\times_\infty} = \mr{Ad}_g(\beta_\infty)$ and $(\alpha_i - \alpha_0)|_{U^\times_i} = \mr{Ad}_g(\beta_i)$ for each $i$.  We consider 0-cocycles modulo 0-coboundaries of the form $(\mr{Ad}_g(f_\infty), \{\mr{Ad}_g(f_i)\}, \mr{Ad}_g(f_0), f_\infty -  f_0, \{f_i - f_0\})$.  
-
-Now $\mr{Ad}_g$ is an isomorphism on $U_0$ for the sections $\alpha_0$ of $\gg_P$ that occur: those with no poles or zeroes in $U_0$.  That means that we can add a coboundary to force $\alpha_0=0$.  We can likewise use the freedom in $f_i$ to find a representative cocycle where the $\beta_i$ are all zero.  We now have a unique representative cocycle of the form $(\alpha_\infty, \{\alpha_i\}, 0,0,0\})$.
+Being a 0-cocycle means that $(\alpha_\infty - \alpha_0)|_{U^\times_\infty} = \mr{Ad}_g(\beta_\infty)$ and $(\alpha_i - \alpha_0)|_{U^\times_i} = \mr{Ad}_g(\beta_i)$ for each $i$.  We consider 0-cocycles modulo 0-coboundaries of the form $(\mr{Ad}_g(f_\infty), \{\mr{Ad}_g(f_i)\}, \mr{Ad}_g(f_0), (f_\infty -  f_0)|_{U_\infty^\times}, \{(f_i - f_0)|_{U_i^\times}\})$.  In fact $\mr{Ad}_g$ is an isomorphism on $U_0$ for the sections $\alpha_0$ of $\gg_P$ that occur: those with no poles or zeroes in $U_0$.  That means that we can add a coboundary to force $\alpha_0=0$.  %We can likewise use the freedom in $f_i$ to find a representative cocycle where the $\beta_i$ are all zero.  We now have a unique representative cocycle of the form $(\alpha_\infty, \{\alpha_i\}, 0,0,0\})$.
 
 Now, rather than describing the tangent complex to the moduli space of monopoles we'll define a complex that maps to it which we can define locally with respect to the cover $\mc U$.  Consider the open cover $\mc U \times S^1 = \{U_i \times S^1\}$ of $M = C \times S^1$.  For each element $U_i$ of the cover we can define a map
 \begin{align*}
@@ -360,7 +440,7 @@ Explicitly a 0-cochain in this \v Cech complex is given by $(\alpha_\infty, \{\a
  \beta_\infty &\in \Omega^0_\CC(U_\infty^\times \times S^1; \gg_{\bo P_\CC}) \\
  \beta_i &\in \Omega^0_\CC(U_i^\times \times S^1; \gg_{\bo P_\CC}) \text{ for } i=1,\ldots,k.
 \end{align*}
-Here we write $\mc F^{\mr{mon}}_0$ to indicate the degree 0 term in the cochain complex.  There's a similar condition for being a 0-cocycle involving the differential $\d_{\mr{mon}}$.  Again we can add a 0-coboundary to find a representative cocycle of the form $(\alpha_\infty, \{\alpha_i\}, 0,0,0\})$.
+Here we write $\mc F^{\mr{mon}}_0$ to indicate the degree 0 term in the cochain complex.  There's a similar condition for being a 0-cocycle involving the differential $\d_{\mr{mon}}$.  %Again we can add a 0-coboundary to find a representative cocycle of the form $(\alpha_\infty, \{\alpha_i\}, 0,0,0\})$.
 
 To conclude this subsection it will also be important to have an explicit description of the derivative of the holonomy map $H$ as a map between tangent spaces.  We can describe this map using our \v Cech resolutions on each contractible open set $U_i$ individually.
 
@@ -396,77 +476,7 @@ We begin the more abstract general analysis by briefly discussing the holomorphi
 \end{align*}
 where the contributions to the integral away from the $U_i$ vanish.
 
-\vasily{we should start from the expression like
-  \begin{equation}
-\label{eq:omega-mon}
-    \omega(\delta^{(1)} \mc A, \delta^{(2)} \mc A) = \int_{M} \kappa(
-    \delta^{(1)} \mc A \wedge \delta^{(2)} \mc A) \wedge v 
-  \end{equation}
-  where $v = "dz"$ is the CY 1-form and where we should have had defined before  (did we ?) 
-  \begin{equation}
-    \mc A = A_{\bar z} d \bar z  + A_{z} d z  + (A_{t} + i \Phi) dt 
-  \end{equation}
-} \chris{altered what was written a bit here.}
-
-Let's now consider the moduli space of framed $q$-connections on $\bb{CP}^1$.  This moduli space has an algebraic symplectic structure with a natural abstract origin, via \emph{derived Poisson geometry}.  We refer to \cite{CPTVV} for the theory of derived Poisson structures and to \cite{MelaniSafronov1, MelaniSafronov2, Spaide} for that of derived coisotropic structures.
-
-\begin{lemma} \label{restriction_Lagn_lemma}
-The restriction map $r \colon \bun_G^\fr(\bb{CP}^1 \! \bs \! D) \to BLG^k$ has a 2-shifted Lagrangian structure with respect to the residue pairing on $BLG$.
-\end{lemma}
-
-\begin{remark}
-More precisely, $BLG$ is a Tate stack in the sense of Hennion \cite{Hennion}.  Although we won't check that the residue pairing symplectic structure $\omega$ is compatible with the Tate structure, this problem doesn't arise when defining a Lagrangian structure as a potential for $r^*\omega$ in $\Omega^{2,\mr{cl}}(\bun_G^\fr(\bb{CP}^1 \! \bs \! D), 2)$ since the stack in question is of ind-finite type.
-\end{remark}
-
-\begin{proof}
-Consider the inclusion $\d r \colon \gg_- = \bb T_{\bun_G^\fr(\bb{CP}^1 \! \bs \! D)}[-1] \to r^*\bb T_{BLG^k}[-1] = \gg(\!(z)\!)^k$: a map of ind-pro Lie algebras concentrated in degree zero.  The residue pairing vanishes after pulling back along $r$ since elements of $\gg_-$ are  $\gg$-valued functions on $\bb{CP}^1$ with at least a simple pole at every puncture in $D$.  So the map $r$ is isotropic with 0 isotropic structure; this structure is unique for degree reasons.  We must check that this structure is non-degenerate.  It suffices to check that the sequence
-\[\bb T_{\bun_G^\fr(\bb{CP}^1 \! \bs \! D)}[-1] \to r^*\bb T_{BLG^k}[-1] \to (\bb T_{\bun_G^\fr(\bb{CP}^1 \! \bs \! D)}[-1])^\vee\]
-is an exact sequence of ind-pro vector spaces, and therefore an exact sequence of quasi-coherent sheaves on the stack $\bun_G^\fr(\bb{CP}^1 \! \bs \! D)$.  To do this we identify the pair $(\gg_-, \gg(\!(z)\!)^k)$ as part of a Manin triple, where a complementary isotropic subalgebra to $\gg_-$ is given by $\gg_+ = \gg[[z]]^k$.  Using the residue pairing we can identify $\gg_+$ with $(\gg_-)^\vee$ and therefore identify our sequence with the split exact sequence
-\[0 \to \gg_- \to \gg(\!(z)\!)^k \to \gg_+ \to 0.\]
-\end{proof}
-
-\begin{construction}
-Recall that we can identify the moduli space of singular $q$-connections on a curve as a fiber product: $\qconn_G^{\fr}(\bb{CP}^1, D) \iso \bun_G^\fr(C) \times_{\bun_G(\bb{CP}^1 \! \bs \! D)^2} \bun_G(\bb{CP}^1 \! \bs \! D)$ where the map $g \colon \bun_G^\fr(\bb{CP}^1) \to \bun_G(\bb{CP}^1 \! \bs \! D)$ is given by $P \mapsto (P|_{\bb{CP}^1 \! \bs \! D}, q^*P|_{\bb{CP}^1 \! \bs \! D})$.  Consider the following commutative cube:
-
-\[\xymatrix@C-30pt@R-8pt{
-& \qconn_G^{\fr}(\bb{CP}^1, D) \ar[rr]^{f_1} \ar'[d][dd]^(.25){\mr{res}} & & \bun_G^{\fr}(\bb{CP}^1) \ar[dd]
-\\
-\bun_G^{\fr}(\bb{CP}^1 \bs D) \ar@{<-}[ur]^{f_2} \ar[rr]^(.6){g_2} \ar[dd] & & \bun_G^{\fr}(\bb{CP}^1 \bs D)^2 \ar@{<-}[ur]^{g_1} \ar[dd]^(.4)r
-\\
-& \bun_G(\bb B)^k \ar'[r][rr] & & BL^+G^{2k}
-\\
-BLG^k \ar[rr]\ar@{<-}[ur] & & BLG^{2k}. \ar@{<-}[ur]
-}\]
-Here the top and bottom faces are homotopy Cartesian.  The front and the right faces are not homotopy Cartesian but there are canonical 1-shifted Lagrangian structures on the induced maps from the source of the face into the homotopy fiber product, i.e.
-\begin{align*}
-&\bun_G^{\fr}(\bb{CP}^1) \to \bun_G^{\fr}(\bb{CP}^1 \bs D)^2 \times_{BLG^{2k}} BL^+G^{2k} \iso \bun_G^{\fr}(\bb{CP}^1)^2 \\
-\text{and } &\bun_G^{\fr}(\bb{CP}^1 \bs D) \to \bun_G^{\fr}(\bb{CP}^1 \bs D)^2 \times_{BLG^{2k}} BLG^{k}.
-\end{align*}
-Call these Lagrangian structures $\mu_1$ and $\mu_2$ respectively.  Denote the 2-shifted Lagrangian structure on the map $r$ from Lemma \ref{restriction_Lagn_lemma} by $\nu$.  The 1-shifted Lagrangian structure that we want on the map $\mr{res}$ is then given by 
-\[\lambda = f_1^*(\mu_1) + f_2^*(\mu_2) + \eta
-\]
-where $\eta$ is a potential for the difference of the pullbacks $(f_1 \circ g)^*\nu - (f_2 \circ g_2)^*\nu$.  Here $\eta = 0$ since $\nu = 0$ and the potential is obtained as the pullback of $\nu$ along the homotopy making the top square commute (which in this case is the identity) \chris{check}.
-
-This 1-shifted Lagrangian structure $\lambda$ defines a quasi-isomorphism $\bb T_{\qconn_G^{\fr}(\bb{CP}^1, D)} \to \bb L_{\mr{res}}$ where I'm writing $\bb L_{\mr{res}}$ for the dual of $\mr{res}^*(\bb T_{\qconn_G^{\fr}(\bb{CP}^1, D)}) \to \bb T_{\bun_G(\bb B)^k)}[-1]$: the relative tangent complex to the map $\mr{res}$.  Write $\lambda^{-1}$ for a quasi-inverse.  This defines a Poisson bivector on $\qconn_G^{\fr}(\bb{CP}^1, D)$ where the associated map from the cotangent complex to the tangent complex is given by
-\[\pi = \lambda^{-1} \circ \iota \colon \bb L_{\qconn_G^{\fr}(\bb{CP}^1, D)} \to \bb L_{\mr{res}} \to \bb T_{\qconn_G^{\fr}(\bb{CP}^1, D)}\]
-where $\iota$ is the canonical inclusion of the cotangent complex into the relative cotangent complex.
-
-We obtain the 0-shifted symplectic structure on a Poisson leaf as the Lagrangian intersection
-\[\xymatrix{
-\qconn_G^{\fr}(\bb{CP}^1, D, \omega^\vee) \ar[r] \ar[d] &\qconn_G^{\fr}(\bb{CP}^1, D) \ar[d] \\
-\prod B\Gamma_i \ar[r] & \bun_G(\bb B)^k
-}\]
-where $B\Gamma_i$ is the classifying space of the group of symmetries of the $G$-bundle on $\bb B$ associated to the coweight $\omega^\vee_i$.  If we restrict the Poisson bivector to the leaf $\qconn_G^{\fr}(\bb{CP}^1, D, \omega^\vee)$ it becomes non-degenerate and so defines a 0-shifted symplectic structure.
-\end{construction}
-
-In order to work with this symplectic structure we'll need to give a local description as a pairing on the tangent complex.  Using the description of the tangent complex in terms of hypercohomology from Section \ref{def_section} it will suffice to describe the pairing on each summand in the \v Cech resolution.
-
-\begin{remark}
-From now on we'll write $\langle - , - \rangle$ to denote the residue pairing between elements of $L\gg$.  That is, 
-\[\langle g_1, g_2 \rangle = \oint_{\bb D^\times} \kappa(g_1, g_2).\]
-\end{remark}
-
-\chris{remark on more general case of non-trivial $q$ and what we expect there.}
+\chris{From here on, replace what was here with a proof that the below formula does define a Poisson/symplectic structure following Hurtubise and Markman.}
 
 \begin{lemma}
 As a pairing on the tangent complex at a point $(P,g)$ the symplectic form on the moduli space of multiplicative Higgs bundles pairs $\alpha_i$ with $\beta_i$ for $i=1,\ldots,k$.  It is given by the formula 
@@ -474,19 +484,6 @@ As a pairing on the tangent complex at a point $(P,g)$ the symplectic form on th
 where we use the Killing form to identify $\beta'_i$ with a $\gg^*$-valued form, and where $\rho_g^*$ is the pullback along the right multiplication by $g$.  In this expression the sum is over $i=1,\ldots,k$ and $i=\infty$.
 \end{lemma}
 
-\begin{proof}
-The formula given above is saying that the Poisson bivector -- viewed as a map $\pi \colon \bb L_{(P,g)} \to \bb T_{(P,g)}$ -- acts in degree $-1$ by identifying $\gg$ with $\gg^*$ then applying the map $\Ad_g^*$.  Recall that to describe the Poisson bivector we must locally on $U_i$ describe the sum
-\[\lambda = f_1^*(\mu_1) + f_2^*(\mu_2) + \eta,\] 
-where $\eta$ is a 2-form of degree 0 which is closed for the internal differential. The Lagrangian structure $\mu_1$ on the diagonal is 0, and the Lagrangian structure $\mu_2$ is also 0 for degree reasons.  Indeed, the tangent complex of $\bun_G^\fr(\bb{CP}^1 \bs D)$ is concentrated in degree $-1$ so there are no 2-forms of degree 1.  We must therefore describe a pairing closed for the internal  differential.  This pairing defines a potential $\eta$ as required, and therefore a Lagrangian structure.
-\chris{this is wrong I think, because I think here literally the form $\lambda$ is zero.  I think maybe to fix it we want to say that if we find any pairing which is closed for the internal differential then it will agree with the pairing coming from the trivial Lagrangian structure because the pairing only depends on cocycles up to coboundaries, and on that level there's a unique map $\bb T_L \to \bb L_L$ which is null-homotopic to zero and therefore a unique Poisson structure?  Needs more thought.}
-
-Consider the image of our candidate pairing under the internal differential on the space of 2-forms (here modelled by the \v Cech differential).  The result is the degree 1 pairing
-\begin{align*}
-\eta((\{\alpha_i\}, \{\beta_i\}), (\{\alpha'_i\},\{\beta_i'\})) &= \sum_i \langle \rho_g^* \Ad_g(\phi_i + \phi_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta'_i) \rangle - \langle \rho_g^*\Ad_g(\phi'_i + \phi'_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta_i) \rangle\\
-&= \sum_i \langle \rho_g^*(\phi_i + \phi_0)|_{U^\times_i}, \rho_g^*(\beta'_i) \rangle - \langle \rho_g^*(\phi'_i + \phi'_0)|_{U^\times_i}, \rho_g^*(\beta_i) \rangle,
-\end{align*}
-where $\phi_i$ is an element of $\gg_P(U_i)$: a degree $-1$ element of the \v Cech complex.  This pairing vanishes on \v Cech cocycles, because if $\{\phi_i\}$ is a $-1$-cocycle then $(\phi'_i + \phi'_0)|_{U^\times_i}=0$.  Our candidate pairing is therefore closed for the internal differential.
-\end{proof}
 
 \begin{prop} \label{qconn_symp_description}
 The symplectic form on the moduli space of $q$-connections can be written in the form
