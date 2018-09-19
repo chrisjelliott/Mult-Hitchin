@@ -28,7 +28,6 @@
 \end{abstract}
 
 \section{Introduction}
-\chris{There are a lot of notes in red: that just indicates that there are a lot of arguments that are only partially written.  They're notes for myself.}
 
 \section{Multiplicative Higgs Bundles and $q$-Connections}
 We'll begin with an abstract definition of the moduli spaces we'll investigate in this paper using the language of derived algebraic geometry.
@@ -415,7 +414,12 @@ where we use the Killing form to identify $\beta'_i$ with a $\gg^*$-valued form,
 \end{lemma}
 
 \begin{remark}
-How should we think about this symplectic structure?  There's an intuitive description just as in Hurtubise and Markman's elliptic moduli space.  The symplectic structure is induced from the natural map  \chris{...}
+How should we think about this symplectic structure?  There's an intuitive description just as in Hurtubise and Markman's elliptic moduli space.  The symplectic structure is induced from the natural equivalence between the tangent and cotangent spaces of the moduli space of multiplicative Higgs bundles as described in Section \ref{def_section}.  That is, there's a map of complexes of sheaves
+\[\xymatrix{
+(\mc F^\fr_{(P,g)})^*[2] \ar@{=}[r] \ar[d] &\Big(\gg^*_P(D)[1] \otimes \OO(-c) \ar[d]^{\kappa \circ \Ad_g^*} \ar[r]^{\Ad_g^*} &\gg^*_P \OO(-c)\Big)\ar[d]^{\Ad_g \circ \kappa^{-1}} \\
+\mc F^\fr_{(P,g)} \ar@{=}[r] &\Big(\gg_P[1] \OO(-c) \ar[r]^{\Ad_g} &\gg_P(-D) \OO(-c)\Big)
+}\]
+where here $\kappa$ denotes the isomorphism from $\gg_P \to \gg^*_P$ induced by the Killing form.  The top line is the Serre dual complex to the bottom line; note that the incorporation of the framing was necessary for this to be the case (that is, we're using the relative Calabi-Yau structure on the pair $(\bb{CP}^1, c)$).  Taking 0th hypercohomology we obtain a map from the cotangent space to the tangent space of our moduli space of multiplicative Higgs bundles.
 \end{remark}
 
 \begin{proof}

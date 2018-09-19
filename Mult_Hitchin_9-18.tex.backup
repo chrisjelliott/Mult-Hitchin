@@ -28,7 +28,6 @@
 \end{abstract}
 
 \section{Introduction}
-\chris{There are a lot of notes in red: that just indicates that there are a lot of arguments that are only partially written.  They're notes for myself.}
 
 \section{Multiplicative Higgs Bundles and $q$-Connections}
 We'll begin with an abstract definition of the moduli spaces we'll investigate in this paper using the language of derived algebraic geometry.
@@ -103,6 +102,7 @@ The most important examples for our purposes are given by the following rational
   \end{definition}
   
   Again let $C = \bb{CP}^1$.  Fix a pair of opposite Borel subgroups $B_+$ and $B_- \sub G$ with unipotent radicals $N_\pm$ and consider the moduli space of $q$-connections with $B_+$-reduction at $0$ and $N_-$-reduction at $\infty$.  We'll now take $q$ to be an automorphism of the form $z \mapsto qz$ for $q \in \CC^\times$.  We'll defer in depth analysis of this example to future work.
+  
   \item \textbf{Elliptic:} Finally, let $C = E$ be a smooth curve of genus one.  In this case we won't fix any additional boundary data, but just consider the moduli space $\qconn_G(E,D, \omega^\vee)$.  In the case $q = 1$ this space -- or rather its polystable locus -- was studied by Hurtubise and Markman \cite{HurtubiseMarkman}, who proved that it can be given the structure of an algebraic integrable system with symplectic structure related to the elliptic R-matrix of Etingof and Varchenko \cite{EtingofVarchenko}.
  \end{itemize}
 \end{examples}
@@ -302,7 +302,7 @@ If one introduces a framing at a point $c \in C$ then we must correspondingly tw
 The following is proved in \cite{FoscoloDef}.
  
 \begin{prop}
-The tangent complex of $\mon_G(S^1 \times C, D \times \{t_0\}, \omega^\vee)$ at the point $(\bo P,\mc A)$ is quasi-isomorphic to the hypercohomology $\bb H^\bullet(C \times S^1; \mc F'_{(\bo P,\mc A)})$ of a subsheaf $\mc F' \sub \mc F^{\mr{mon}}$ where growth conditions are imposed on the degree 0 part of $\mc F^{\mr{mon}}$ near the singularities.
+The tangent space of $\mon_G(S^1 \times C, D \times \{t_0\}, \omega^\vee)$ at the point $(\bo P,\mc A)$ is quasi-isomorphic to the hypercohomology $\bb H^0(C \times S^1; \mc F'_{(\bo P,\mc A)})$ of a subsheaf $\mc F' \sub \mc F^{\mr{mon}}$ where growth conditions are imposed on the degree 0 part of $\mc F^{\mr{mon}}$ near the singularities.
 \end{prop}
 
 Now let's consider the tangent complex to the moduli space of $q$-connections.  For the arguments in this article we'll only need to carefully consider the case $q=\id$ of multiplicative Higgs bundles, but we'll include some remarks regarding the more general case.  In this case the calculation was performed by Bottacin \cite{Bottacin}, see also \cite[Section 4]{HurtubiseMarkman}. Fix a multiplicative Higgs bundle $(P,g)$ on $C$.  We consider the sheaf of cochain complexes on $C$
@@ -326,31 +326,15 @@ just as in the untwisted case \chris{check}.
 
 This complex defines the deformation theory of the moduli space of multiplicative Higgs bundles.
 
-\begin{prop}
-The cohomology of the tangent complex of $\mhiggs_G(C, D)$ at the point $(P,g)$ is quasi-isomorphic to the hypercohomology $\bb H^\bullet(C; \mc F_{(P,g)})$ of the sheaf $\mc F$.
+\begin{prop}[{\cite[Proposition 3.1.3]{Bottacin}}]
+The tangent space of $\mhiggs_G(C, D, \omega^\vee)$ at the point $(P,g)$ is quasi-isomorphic to the hypercohomology $\bb H^0(C; \mc F_{(P,g)})$ of the sheaf $\mc F$.
 \end{prop}
 
 \begin{remark}
-Bottacin {\cite[Proposition 3.1.3]{Bottacin}} works with vector bundles rather than principal $G$-bundles and proves that the space of infinitesimal deformations of the point $(P,g)$ is given by $\bb H^0(C; \mc F_{(P,g)})$.  
+The remaining hypercohomology of the sheaf $\mc F_{(P,g)}$ has dimension $\dim \mf z_{\gg}$ in degree $-1$ and $1$.  However the moduli space $\mhiggs_G(C, D,\omega^\vee)$ is in fact a smooth algebraic variety.  This follows from a result of Hurtubise and Markman \cite[Theorem 4.13]{HurtubiseMarkman}, noting that their argument does not rely on the curve $C$ being of genus 1.
 \end{remark}
 
-\begin{proof}
-\chris{Need a new argument here.  I can filter the moduli space by order of the pole of the multiplicative Higgs field (by the partial order on dominant coweights), and each filtered piece is a variety of finite type.  So the whole thing is ind-finite type.  Filtered pieces have genuine tangent complexes but aren't mapping stacks.  Tangent complex maps onto that of $\bun_G(C)$ with finite-type fiber.  I might end up removing it, citing Bottacin then adding some intuition.  Actually do we really need the whole tangent complex and not just the degree zero part?}
-
-We'll explain the proof in different language to that used in \cite{Bottacin}.  Recall that for a mapping stack $\map(X,Y)$ where $X$ and $Y$ are derived Artin stacks the cohomology of the tangent complex at a point $f$ can be computed as the cohomology $H^\bullet(\bb T_{\map(X,Y),f}) \iso \bb H^\bullet(X, f^*\bb T_Y)$.  Let $X = C \!\bs\! D$ and let $Y = G/G$, so $H^\bullet(\bb T_{(P,g), \map(C \!\bs\! D, G/G)}) \iso \bb H^\bullet(C \!\bs\! D; \gg_P[1]|_{C \!\bs\! D} \to \gg_P|_{C \!\bs\! D})$ where the map $\gg_P|_{C \!\bs\! D} \to \gg_P|_{C \!\bs\! D}$ is given by the adjoint action of $g$.  Alternatively one can view this complex as the cohomology of the operator
-\[H^\bullet(C \! \bs \! D, \gg_P|_{C\!\bs\!D})[1] \to H^\bullet(C \! \bs \! D, \gg_P|_{C\!\bs\!D})\]
-given by the adjoint action of $g$ since the relevant spectral sequence converges at the $E_2$-page.  From this point of view the first term corresponds to deformations of the $G$-bundle $P$ and the second to deformations of the multiplicative Higgs field $g$.
-
-In order to compute the tangent complex to $\mhiggs_G(C,D)$ we must impose the conditions \chris{not really though since it's homotopical} that the deformation of the $G$-bundle $P$ extends across the divisor $D$ and that the deformation of the multiplicative Higgs field has a simple pole at $D$.  In other words we find
-\[ H^\bullet(\bb T_{\mhiggs_G(C,D), (P,g)}) \iso \bb H^\bullet(C; \gg_P[1] \to \gg_P(-D)) \sub \bb H^\bullet(C \!\bs\! D; \gg_P[1]|_{C \!\bs\! D} \to \gg_P|_{C \!\bs\! D})\]
-as required.
-\end{proof}
-
-\begin{remark}
-The embedding of the moduli space $\mhiggs_G(C, D,\omega^\vee)$ into $\mhiggs_G(C, D)$ induces an isomorphism on $H^0$ of their respective tangent complexes: this is seen by comparing the discussion here with the arguments of Bottacin.  In other words, all infinitesimal deformations of $(P,g) \in \mhiggs_G(C, D,\omega^\vee)$ preserve the residue condition at $D$.  The remaining cohomology of the tangent complex $\bb T_{\mhiggs_G(C, D),(P,g)}$, i.e. the remaining hypercohomology of the sheaf $\mc F_{(P,g)}$ has dimension $\dim \mf z_{\gg}$ in degree $-1$ and $1$.  However the moduli space $\mhiggs_G(C, D,\omega^\vee)$ obtained by fixing residue conditions is in fact a smooth algebraic variety.  This  follows from a result of Hurtubise and Markman \cite[Theorem 4.13]{HurtubiseMarkman}, noting that their argument does not rely on the curve $C$ being of genus 1.
-\end{remark}
-
-In order to calculate with this hypercohomology space we'll use a \v Cech resolution.  This will be straightforward for the multiplicative Higgs moduli space, and we'll use the isomorphism of Theorem \ref{monopole_qconn_comparison_thm} to give an analogous description on the monopole side.    We define a cover $\mc U = \{U_0, U_1, \ldots, U_k, U_\infty\}$ of $C$ as follows.  Let $U_i$ be a contractible open neighbourhood of the point $z_i$ and let $U_\infty$ be a contractible analytic open neighbourhood of $c \in C$, all chosen to be pairwise disjoint.  Let $U_0$.  Finally let $U_0 = C \bs (D \cup \{c\})$.  Since the $U_i$ are contractible and the remaining subset $C \bs (D \cup \{c\})$ is an affine algebraic curve, which means that for any quasi-coherent sheaf of cochain complexes the higher cohomology groups vanish.  Likewise for the intersections: the punctured open sets $U_i^\times$ are analytic open sets of an affine curve.  
+In order to calculate with this hypercohomology group we'll use a \v Cech resolution.  This will be straightforward for the multiplicative Higgs moduli space, and we'll use the isomorphism of Theorem \ref{monopole_qconn_comparison_thm} to give an analogous description on the monopole side.    We define a cover $\mc U = \{U_0, U_1, \ldots, U_k, U_\infty\}$ of $C$ as follows.  Let $U_i$ be a contractible open neighbourhood of the point $z_i$ and let $U_\infty$ be a contractible analytic open neighbourhood of $c \in C$, all chosen to be pairwise disjoint.  Let $U_0$.  Finally let $U_0 = C \bs (D \cup \{c\})$.  Since the $U_i$ are contractible and the remaining subset $C \bs (D \cup \{c\})$ is an affine algebraic curve, which means that for any quasi-coherent sheaf of cochain complexes the higher cohomology groups vanish.  Likewise for the intersections: the punctured open sets $U_i^\times$ are analytic open sets of an affine curve.  
 
 Specify a representative 0-cocycle $(\alpha_\infty, \{\alpha_i\}, \alpha_0, \beta_\infty, \{\beta_i\})$ for the \v Cech cohomology group with respect to our chosen cover $\mc U$.  Explicitly a 0-cochain is given by the following data:
 \begin{align*}
@@ -364,7 +348,7 @@ where the notation $(\pm 1)$ indicates tensoring by the line bundle $\OO(\pm 1)$
 
 Being a 0-cocycle means that $(\alpha_\infty - \alpha_0)|_{U^\times_\infty} = \mr{Ad}_g(\beta_\infty)$ and $(\alpha_i - \alpha_0)|_{U^\times_i} = \mr{Ad}_g(\beta_i)$ for each $i$.  We consider 0-cocycles modulo 0-coboundaries of the form $(\mr{Ad}_g(f_\infty), \{\mr{Ad}_g(f_i)\}, \mr{Ad}_g(f_0), (f_\infty -  f_0)|_{U_\infty^\times}, \{(f_i - f_0)|_{U_i^\times}\})$.  In fact $\mr{Ad}_g$ is an isomorphism on $U_0$ for the sections $\alpha_0$ of $\gg_P$ that occur: those with no poles or zeroes in $U_0$.  That means that we can add a coboundary to force $\alpha_0=0$.  %We can likewise use the freedom in $f_i$ to find a representative cocycle where the $\beta_i$ are all zero.  We now have a unique representative cocycle of the form $(\alpha_\infty, \{\alpha_i\}, 0,0,0\})$.
 
-Now, rather than describing the tangent complex to the moduli space of monopoles we'll define a complex that maps to it which we can define locally with respect to the cover $\mc U$.  Consider the open cover $\mc U \times S^1 = \{U_i \times S^1\}$ of $M = C \times S^1$.  For each element $U_i$ of the cover we can define a map
+Now, rather than describing the tangent space to the moduli space of monopoles we'll define a complex that maps to it which we can define locally with respect to the cover $\mc U$.  Consider the open cover $\mc U \times S^1 = \{U_i \times S^1\}$ of $M = C \times S^1$.  For each element $U_i$ of the cover we can define a map
 \begin{align*}
 \mc F'(U_i \times S^1) &\to (\Omega^0(S^1; \Omega^{0,\bullet}(U_i; \gg_P)) \to \Omega^1(S^1; \Omega^{0,\bullet}(U_i; \gg_P)(D_{U_i})))[1] \\ %With singularity conditions to be fixed
 &\iso \gg_P(U_i)[1] \to \gg_P(U_i)(D|_{U_i}) \\
@@ -418,8 +402,6 @@ where the contributions to the integral away from the $U_i$ vanish.
 
 Our goal in this section will be describe a symplectic structure on the moduli space of multiplicative Higgs bundles -- the rational analogue of Hurtubise and Markman's symplectic structure -- and then prove that it's equivalent to this symplectic form under the equivalence between multiplicative Higgs bundles and periodic monopoles.
 
-\chris{From here on, replace what was here with a proof that the below formula does define a Poisson/symplectic structure following Hurtubise and Markman.  Include a remark on what happens in the $q$-deformed case too.}
-
 \begin{remark}
 From now on we'll write $\langle - , - \rangle$ to denote the residue pairing between elements of $L\gg$.  That is, 
 \[\langle g_1, g_2 \rangle = \oint_{\bb D^\times} \kappa(g_1, g_2).\]
@@ -432,14 +414,20 @@ where we use the Killing form to identify $\beta'_i$ with a $\gg^*$-valued form,
 \end{lemma}
 
 \begin{remark}
-How should we think about this symplectic structure?  There's an intuitive description just as in Hurtubise and Markman's elliptic moduli space. \chris{...}
+How should we think about this symplectic structure?  There's an intuitive description just as in Hurtubise and Markman's elliptic moduli space.  The symplectic structure is induced from the natural equivalence between the tangent and cotangent spaces of the moduli space of multiplicative Higgs bundles as described in Section \ref{def_section}.  That is, there's a map of complexes
+\[\xymatrix{
+(\mc F^\fr_{(P,g)})^* \ar@{=}[r] \ar[d] &(\gg^*_P(D) \ar[d] \ar[r]^{\Ad_g^*} &\gg^*_P) \otimes \OO(c) \ar[d] \\
+\mc F^\fr_{(P,g)} \ar@{=}[r] &(\gg_P[1] \ar[r]^{\Ad_g} &\gg_P(-D)) \otimes \OO(c) 
+}\]
+which induces a map from the cotangent to the tangent space upon taking hypercohomology.
+\chris{...}
 \end{remark}
 
 \begin{proof}
 \chris{todo.  It should be written so as to be manifestly anti-symmetric, we need to verify non-degeneracy.}
 \end{proof}
 
-\chris{What about the Poisson structure on the total space?  These should be leaves.  What about $\eps$-connections?}
+\chris{What about the Poisson structure on the total space?  These should be leaves.  Maybe just remark on this since we haven't calculated the tangent complex of the big space.  What about $\eps$-connections?}
 
 \begin{prop} \label{qconn_symp_description}
 The symplectic form on the moduli space of multiplicative Higgs bundles can be written in the form
