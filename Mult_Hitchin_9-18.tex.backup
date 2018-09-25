@@ -225,7 +225,13 @@ We can also introduce a framing (or a reduction of structure group as in the tri
   A monopole on $M$ with \emph{framing} at the point $c \in C$ is a monopole $(\bo P,A,\Phi)$ on $M$ (possibly with Dirac singularities at $D$) along with a trivialization of the restriction of $\bo P$ to the circle $\{c\} \times S^1_R$, with the condition that the holonomy of $\mc A$ around this circle lies in a fixed conjugacy class $f \in G/G$.
 \end{definition}
 
-The moduli theory of monopoles on 3-manifolds of this form has been studied in the mathematics literature by Foscolo \cite{FoscoloDef}, applying the analytic techniques of deformation theory to earlier work on periodic monopoles by Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin2}.  In the cases of interest to us it can be obtained as a hyperk\"ahler quotient.  Let's focus initially on the rational case, so monopoles on $M = \bb{CP}^1 \times_\eps S^1_R$ with Dirac singularities at $D \times \{t_0\}$ and a framing at $\infty$.  Consider the infinite-dimensional vector space $\mc V$ consisting of pairs $(A,\Phi)$ where $A$ is a connection on a fixed principal $G_\RR$-bundle $\bo P$ on $M$, $\Phi$ is a section of $\gg_{\bo P}$, and $(A,\Phi)$ have a Dirac singularity with charge $\omega^\vee_{z_i}$ at each $(z_i,t_0)$ in $D \times \{t_0\}$.  Let $\mc G$ be the group of gauge transformations of the bundle $\bo P$.
+The moduli theory of monopoles on general compact 3-manifolds was described by Pauly \cite{Pauly}.  In this paper we'll be interested in moduli spaces of monopoles on 3-manifolds of the form $C \times S^1$, possibly with a fixed framing at a point in $C$.  
+
+\begin{remark}
+The moduli space of periodic monopoles on $\RR^2 \times S^1$ specifically has been studied in the mathematics literature by Foscolo \cite{FoscoloDef} , applying the analytic techniques of deformation theory to earlier work on periodic monopoles by Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin2}. This analysis considers a less restrictive boundary condition at infinity in $\RR^2$ than a framing, and therefore requires more sophisticated analysis than we'll need to consider in the present paper.
+\end{remark}
+
+In the cases of interest to us the moduli space of periodic monopoles can be obtained as a hyperk\"ahler quotient.  Let's focus initially on the rational case, meaning monopoles on $M = \bb{CP}^1 \times_\eps S^1_R$ with Dirac singularities at $D \times \{t_0\}$ and a framing at $\infty$.  Consider the infinite-dimensional vector space $\mc V$ consisting of pairs $(A,\Phi)$ where $A$ is a connection on a fixed principal $G_\RR$-bundle $\bo P$ on $M$, $\Phi$ is a section of $\gg_{\bo P}$, and $(A,\Phi)$ have a Dirac singularity with charge $\omega^\vee_{z_i}$ at each $(z_i,t_0)$ in $D \times \{t_0\}$.  Let $\mc G$ be the group of gauge transformations of the bundle $\bo P$.
 
 The hyperk\"ahler moment map is given by the Bogomolny functional, namely
 \begin{align*}
@@ -233,7 +239,7 @@ The hyperk\"ahler moment map is given by the Bogomolny functional, namely
 (A,\Phi) &\mapsto \ast F_A - \d_A \Phi.
 \end{align*}
 
-\begin{definition}
+\begin{definition} \label{monopole_moduli_def}
 Let $D$ be a finite subset $\{(z_1,t_1), \ldots, (z_k, t_k)\}$ of points in $M = \bb{CP}^1 \times_\eps S^1_R$, and let $\omega^\vee_{i}$ be a choice of coweight for each point in $D$. The moduli space $\mon_G(M, D, \omega^\vee)$ is the hyperk\"ahler quotient
 \[\mon_G(M, D, \omega^\vee) = \mu^{-1}(0) / \mc G.\]
 \end{definition}
@@ -408,13 +414,13 @@ From now on we'll write $\langle - , - \rangle$ to denote the residue pairing be
 \end{remark}
 
 \begin{lemma}
-There is a natural symplectic structure on the moduli space $\mhiggs_G^{\fr}(\bb{CP}^1,D,\omega^\vee)$.  In terms of our \v Cech description it is described by the formula 
-\[\omega((\{\alpha_i\}, \{\beta_i\}), (\{\alpha'_i\},\{\beta_i'\})) = \sum_i \langle \rho_g^*(\alpha_i + \alpha_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta'_i) \rangle - \langle \rho_g^*(\alpha'_i + \alpha'_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta_i) \rangle,\]
+There is a natural non-degenerate anti-symmetric pairing on the moduli space $\mhiggs_G^{\fr}(\bb{CP}^1,D,\omega^\vee)$.  In terms of our \v Cech description it is described by the formula 
+\[\omega((\{\alpha_i\}, \{\beta_i\}), (\{\alpha'_i\},\{\beta_i'\})) = \frac 12 \sum_i \langle \rho_g^*(\alpha'_i + \alpha'_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta_i) \rangle - \langle \rho_g^*(\alpha_i + \alpha_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta'_i) \rangle,\]
 where we use the Killing form to identify $\beta'_i$ with a $\gg^*$-valued form, and where $\rho_g^*$ is the pullback along the right multiplication by $g$.  In this expression the sum is over $i=1,\ldots,k$ and $i=\infty$.
 \end{lemma}
 
 \begin{remark}
-How should we think about this symplectic structure?  There's an intuitive description just as in Hurtubise and Markman's elliptic moduli space.  The symplectic structure is induced from the natural equivalence between the tangent and cotangent spaces of the moduli space of multiplicative Higgs bundles as described in Section \ref{def_section}.  That is, there's a map of complexes of sheaves
+How should we think about this structure?  There's an intuitive description just as in Hurtubise and Markman's elliptic moduli space.  The pairing is induced from the natural equivalence between the tangent and cotangent spaces of the moduli space of multiplicative Higgs bundles as described in Section \ref{def_section}.  That is, there's a map of complexes of sheaves
 \[\xymatrix{
 (\mc F^\fr_{(P,g)})^*[2] \ar@{=}[r] \ar[d] &\Big(\gg^*_P(D)[1] \otimes \OO(-c) \ar[d]^{\kappa \circ \Ad_g^*} \ar[r]^{\Ad_g^*} &\gg^*_P \OO(-c)\Big)\ar[d]^{\Ad_g \circ \kappa^{-1}} \\
 \mc F^\fr_{(P,g)} \ar@{=}[r] &\Big(\gg_P[1] \OO(-c) \ar[r]^{\Ad_g} &\gg_P(-D) \OO(-c)\Big)
@@ -422,19 +428,23 @@ How should we think about this symplectic structure?  There's an intuitive descr
 where here $\kappa$ denotes the isomorphism from $\gg_P \to \gg^*_P$ induced by the Killing form.  The top line is the Serre dual complex to the bottom line; note that the incorporation of the framing was necessary for this to be the case (that is, we're using the relative Calabi-Yau structure on the pair $(\bb{CP}^1, c)$).  Taking 0th hypercohomology we obtain a map from the cotangent space to the tangent space of our moduli space of multiplicative Higgs bundles.
 \end{remark}
 
+\begin{remark}
+At this point we will not prove that the pairing is a symplectic structure: we will not verify the Jacobi identity.  While we expect that it is possible to prove this directly using the techniques of \cite[Section 5]{HurtubiseMarkman}, instead we'll see this below by proving that the pairing coincides with the symplectic pairing on the moduli space of periodic monopoles.
+\end{remark}
+
 \begin{proof}
-\chris{todo.  It should be written so as to be manifestly anti-symmetric, we need to verify non-degeneracy.}
+We need only verify that the pairing described is non-degenerate.  It suffices to check non-degeneracy for each individual summand, i.e. that for fixed $i$, given $\alpha_i$ if the expression $\langle \rho_g^*(\alpha_i)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta'_i) \rangle$ vanishes for all $\beta'_i$ then $\alpha_i=0$ (and the same with $\alpha$ and $\beta$ interchanged).  This is immediate because the residue pairing $\langle - , - \rangle$ is non-degenerate and the map $(\Ad_g^*)^{-1}$ is an isomorphism on the open set $U^\times_i$.
 \end{proof}
 
 \begin{remark}
-\chris{What about the Poisson structure on the total space?  These should be leaves.  Maybe just remark on this since we haven't calculated the tangent complex of the big space.  What about $\eps$-connections?}
+\chris{Remark on the Poisson structure on the total space (ind-Poisson structure really)  These should be leaves.  Maybe just remark on this since we haven't calculated the tangent complex of the big space.  Likewise, what about $\eps$-connections?}
 \end{remark}
 
 \begin{prop} \label{qconn_symp_description}
 The symplectic form on the moduli space of multiplicative Higgs bundles can be written in the form
 \begin{equation}
 \label{eq:resid}
-\omega(\delta g, \delta g') = - \sum_{i=1}^d \langle b_i^L g^{-1}, b^{'R}_i g^{-1} \rangle - (b \leftrightarrow b')
+\omega(\delta g, \delta g') = \sum_{i=1}^d \langle b_i^L g^{-1}, b^{'R}_i g^{-1} \rangle - (b \leftrightarrow b')
 \end{equation}
 where $\delta g$ is represented on $U_i$ by a pair $(b^L, b^R) \in \Ad_g$.  Here and throughout the notation ``$- (b \leftrightarrow b')$'' denotes antisymmetrization.
 \end{prop}
@@ -442,22 +452,22 @@ where $\delta g$ is represented on $U_i$ by a pair $(b^L, b^R) \in \Ad_g$.  Here
 \begin{proof}
  Specify a representative cocycle $(\alpha_\infty, \{\alpha_i\}, \alpha_0, \beta_\infty, \{\beta_i\})$ for the first \v Cech cohomology group. By addition of a coboundary we can assume that $\alpha_0=0$, and to force $\alpha_\infty$ to land in $z\gg[[z]]$ and each $\alpha_i$ to land in $z^{-1}\gg[[z]]$.  We've now fixed a representative cocycle -- there's no further gauge freedom.  Ignoring the factor at infinity -- since after we add these coboundaries the residue pairing there vanishes -- the pairing we end up with looks like 
 \begin{align*}
-\omega(\delta g, \delta g') &= \sum_{i=1}^d \langle \rho_g^*(\alpha_i + \alpha_0)|_{U^\times_i},\rho_g^* (\Ad_g^*)^{-1}( \beta'_i) \rangle - ((\alpha,\beta) \leftrightarrow (\alpha',\beta')\\ 
-&= \sum_{i=1}^d \langle \rho_g^*(\alpha_i + \alpha_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\Ad_g^{-1}(\alpha_i' - \alpha'_0)) \rangle - (\alpha \leftrightarrow \alpha')\\
-&= \sum_{i=1}^d \langle \rho_g^*(\alpha_i)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\Ad_g^{-1}(\alpha_i')|_{U^\times_i}) \rangle - (\alpha \leftrightarrow \alpha').
+\omega(\delta g, \delta g') &= \frac 12 \sum_{i=1}^d \langle \rho_g^*(\alpha'_i + \alpha'_0)|_{U^\times_i},\rho_g^* (\Ad_g^*)^{-1}( \beta_i) \rangle - ((\alpha,\beta) \leftrightarrow (\alpha',\beta')\\ 
+&= \frac 12 \sum_{i=1}^d \langle \rho_g^*(\alpha'_i + \alpha'_0)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\Ad_g^{-1}(\alpha_i - \alpha_0)) \rangle - (\alpha \leftrightarrow \alpha')\\
+&= \frac 12 \sum_{i=1}^d \langle \rho_g^*(\alpha'_i)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\Ad_g^{-1}(\alpha_i)|_{U^\times_i}) \rangle - (\alpha \leftrightarrow \alpha').
 \end{align*}
 
-We can compute the composite operator $(\Ad_g^*)^{-1}\Ad_g^{-1}$ on $\mr{ad}(P)(U^\times_i)$.  It's given by the inverse of the operator $\Ad_g\Ad_g^*$ which sends a pair $(b^L, b^R) \in \mr{ad}(P)(U^\times_i)$ to $(b^L - b^R, b^R - b^L) \sim (b^L + g^{-1} b^L g, b^R - g b^R g^{-1})$.  Denote this by $((1+A_g)b^L,(1-A_{g^{-1}})b^R)$.  We can describe the inverse using the expansion $(1+A_g)^{-1} = 1 - A_g + A_g^2 + \cdots$.  After applying our gauge transformation above the remaining degree of freedom in $\alpha_i$ is its $z^{-1}$ term.  Each time we apply $A$ it raises the order in $z$ of this term by one, so only the linear summand $-A_g$ of $(1+A_g)^{-1}$ contributes to the residue pairing.  In the pairing we need to use the invariant pairing on $\gg((z)) \oplus \gg((z))$ that vanishes on the subalgebra spanned by $(X, A_g(X))$, so we take the difference of the residue / Killing form pairings on the two summands \chris{scaled by 1/2: why this normalization?}.
+We can compute the composite operator $(\Ad_g^*)^{-1}\Ad_g^{-1}$ on $\mr{ad}(P)(U^\times_i)$.  It's given by the inverse of the operator $\Ad_g\Ad_g^*$ which sends a pair $(b^L, b^R) \in \mr{ad}(P)(U^\times_i)$ to $(b^L - b^R, b^R - b^L) \sim (b^L + g^{-1} b^L g, b^R - g b^R g^{-1})$.  Denote this by $((1+A_g)b^L,(1-A_{g^{-1}})b^R)$.  We can describe the inverse using the expansion $(1+A_g)^{-1} = 1 - A_g + A_g^2 + \cdots$.  After applying our gauge transformation above the remaining degree of freedom in $\alpha_i$ is its $z^{-1}$ term.  Each time we apply $A$ it raises the order in $z$ of this term by one, so only the linear summand $-A_g$ of $(1+A_g)^{-1}$ contributes to the residue pairing.  In the pairing we need to use the invariant pairing on $\gg((z)) \oplus \gg((z))$ that vanishes on the subalgebra spanned by $(X, A_g(X))$, so we take the difference of the residue / Killing form pairings on the two summands.
 \begin{align*}
-\omega(\delta g, \delta g') &= \frac 12 \sum_{i=1}^d  - \langle \rho_g^*A_g b^L_i, \rho_g^*b^{'R}_i \rangle - \langle \rho_g^*b^L_i, \rho_g^*A_{g^{-1}}b^{'R}_i \rangle- (b \leftrightarrow b') \\ 
-&= - \sum_{i=1}^d \langle b^L_ig^{-1}, b^{'R}_i g^{-1} \rangle  - (b \leftrightarrow b')
+\omega(\delta g, \delta g') &= \frac 12 \sum_{i=1}^d  - \langle \rho_g^*A_g b^{'L}_i, \rho_g^*b^{R}_i \rangle - \langle \rho_g^*b^{'L}_i, \rho_g^*A_{g^{-1}}b^{R}_i \rangle- (b \leftrightarrow b') \\ 
+&= \sum_{i=1}^d \langle b^L_ig^{-1}, b^{'R}_i g^{-1} \rangle  - (b \leftrightarrow b')
 \end{align*}
 using cyclic invariant to identify the two terms. 
 \end{proof}
 
 We can now establish our main result.
 \begin{theorem} \label{symplectic_comparison_thm}
-The symplectic structure on $\mon_G^\fr(\bb{CP}^1 \times S^1,D \times\{0\},\omega^\vee)$ and the pullback of the symplectic structure on $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ under $H$ coincide.
+The symplectic structure on $\mon_G^\fr(\bb{CP}^1 \times S^1,D \times\{0\},\omega^\vee)$ and the pullback of the non-degenerate pairing on $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ under $H$ coincide.
 \end{theorem}
 
 \begin{proof}
@@ -471,7 +481,7 @@ According to Proposition \ref{local_derivative_description_prop} we have
 We can write this in terms of a pairing on the bundle $\ad(g)$.  Represent the class $b_i^Rg - gb_i^L$ by the pair $(b_i^Rg, -gb_i^L)$.  Then applying the description of $\omega_{\mr{mHiggs}}$ provided by Proposition \ref{qconn_symp_description} we have
 \begin{align*}
 \omega_{\mr{mHiggs}}(\d H(\alpha_i), \d H(\alpha_i')) &= \omega_{\mr{mHiggs}}((b_i^Rg, -gb_i^L),(b_i^{'R}g, -gb_i^{'L})) \\ 
-&= \langle  b_i^R , g b_i'^L g^{-1}\rangle - (b \leftrightarrow b')
+&= - \langle  b_i^R , g b_i'^L g^{-1}\rangle - (b \leftrightarrow b')
 \end{align*}
 where the remaining terms are killed by the antisymmetrization.
 
@@ -487,22 +497,36 @@ using here the fact that $\d_{\mr{mon}}b_i = \d_{\mr{mon}} b_0$ on $U_i \cap U_0
 \end{align*}
 Pick out the summand corresponding to $U_i$.  Choose our potentials so that on the boundary $\dd \bb D_i$ we have $b_0^L = b_0^{'L} = 0$.  We can do this by setting $b^{R} = \delta g g^{-1}$ since $g$ is non-singular on $U_0$.  This choice means that on $U_0 \cap U_i$, since $\delta g  = b_{i} ^R g - g b_i^L = b_0^{R} g $ we can make the identification $ b_0^{R} = b_{i}^{R} - g b_{i}^{L} g^{-1}$.  Therefore
 \[\omega_{\mr{Mon}}(\{\alpha_i\},\{\alpha'_i\}) = \sum_{i=1,\ldots,k,\infty} \langle(g b_i^{L} g^{-1}, b_i^{'R}\rangle \quad - \quad  (b \leftrightarrow b')\]
-agreeing with the expression coming from $\mr{mHiggs}$. \chris{indeed there's a sign error somewhere which I haven't tracked down yet.  On the other hand maybe it isn't correct to say that the two symplectic forms are equal, maybe they're just proportional?}
+agreeing with the expression coming from $\mr{mHiggs}$. 
 \end{proof}
-
-
 
 \begin{remark}
 \chris{connection to Shapiro's symplectic leaves in \cite{Shapiro}.  The claim is that taking the Taylor expansion at infinity defines a Poisson map to $\wt G \sub G_1[[z^{-1}]]$ sending symplectic leaves to (discrete) unions of symplectic leaves.  One can do the classification more completely in the type A case.}
 \end{remark}
 
-
 \section{Hyperk\"ahler Structures}
 \vasily{As of July 19, 2018 I have not yet passed this and following sections}
 
-The results of the previous section imply that the symplectic structure on $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ extends canonically to a hyperk\"ahler structure.  In this section we'll compare the twistor rotation with the deformation to the moduli space of $\eps$-connections. \chris{todo: expand on this}
+The results of the previous section imply that the symplectic structure on $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ extends canonically to a hyperk\"ahler structure.  In this section we'll compare the twistor rotation with the deformation to the moduli space of $\eps$-connections. We'll show that in an appropriate limit passing to a point $\eps$ in the twistor sphere we obtain a complex manifold equivalent to the moduli space of $\eps$-connections as a deformation of the moduli space of multiplicative Higgs bundles.
 
-Let us begin by describing the hyperk\"ahler structure on the moduli space of periodic monopoles and how the holomorphic symplectic structure varies under rotation in the twistor sphere.  We'll begin by observing that the moduli space of periodic monopoles can be described as a hyperk\"ahler quotient as in the work of Atiyah and Hitchin \cite{AtiyahHitchin}.  This was demonstrated by Cherkis and Kapustin \cite{CherkisKapustin3} for the group $\SU(2)$, see also Foscolo \cite{FoscoloDef}[Theorem 7.12] \chris{is the Cherkis-Kapustin result sufficiently rigorous for our purposes?  Foscolo only talks about $\SO(3)$.  Reference for more general $G$?  Maybe \cite{NekrasovPestun}?}.
+Let us begin by describing the hyperk\"ahler structure on the moduli space of periodic monopoles and how the holomorphic symplectic structure varies under rotation in the twistor sphere.  We'll begin by recalling that the moduli space of periodic monopoles can be described as a hyperk\"ahler quotient as in the work of Atiyah and Hitchin \cite{AtiyahHitchin}.  In a context with more general boundary data at $\infty$ this was demonstrated by Cherkis and Kapustin \cite{CherkisKapustin3} for the group $\SU(2)$, see also Foscolo \cite{FoscoloDef}[Theorem 7.12].  In the case of $\bb{CP}^1$ with a fixed framing the analysis is much easier.
+
+Recall from Definition \ref{monopole_moduli_def} that the moduli space of periodic monopoles on $\bb{CP}^1$ with a fixed framing at $\infty$ and fixed Dirac singularities can be described as the quotient
+\[\mon_G^{\fr}(\bb{CP}^1 \times S^1, D, \omega^\vee) = \mu^{-1}(0)/\mc G,\]
+where 
+\vspace{-10pt}
+\begin{itemize}
+\item The space $\mc V$ of fields is the space of pairs $(A,\Phi)$ consisting of framed connections $A$ on the trivial principal $G_\RR$-bundle $\bo P$ on $\bb{CP}^1 \times S^1$, $\Phi$ is a section of $\gg_{\bo P}$ vanishing at $\{\infty\} \times S^1$, and the pair $(A,\Phi)$ has a Dirac singularity with charge $\omega^\vee_{z_i}$ at each point $(z_i,t_0)$ in $D \times \{t_0\}$.
+\item $\mu \colon \mc V \to \Omega^1(\bb{CP}^1 \times S^1; (\gg_\RR)_{\bo P})/\gg_\RR$ is the map sending a monopole $(A, \Phi)$ to the $\gg_\RR$-valued 1-form $\ast F_A - \d_A \Phi$ vanishing at $\{\infty\} \times S^1$.  
+\item The group $\mc G$ of gauge transformations consists of automorphisms of the trivial bundle $\bo P$ fixing the framing.
+\end{itemize}
+
+This is an instance of hyperk\"ahler reduction.  Indeed the infinite-dimensional space $\mc V$ admits a hyperk\"ahler structure defined by
+\[\omega_i((A,\Phi),(A',\Phi')) = \int_{\bb{CP}^1 \times S^1} \kappa(A_i,\Phi') - \kappa(\Phi, A_i') + \sum_{j,k=1,2,3} \eps_{ijk} \kappa(A_j,A'_k), \]
+where $i=1,2,3$, and where $A$ can be written as $A_1 \d x + A_2 \d y + A_3 \d t$ with respect to a choice $\d x \wedge \d y$ of meromorphic volume form on $\bb{CP}^1$ with a second order pole at $\infty$.  This descends to a hyperk\"ahler structure on the quotient since  \chris{... probably I want to find a good reference here.  Could refer to \cite[Section 1.4.2]{FoscoloThesis}.}
+
+
+
 
 \chris{Key observation to include: the action of twistor rotation is by $\SO(3)$-action on a space of lattices.  More precisely the fibers in the twistor sphere are obtained, with their holomorphic symplectic structures by performing this rotation.}
 

@@ -65,6 +65,12 @@ Pavel Etingof and Alexander Varchenko.
   {Y}ang-{B}axter equation.
 \newblock {\em Comm. Math. Phys.}, 192(1):77--120, 1998.
 
+\bibitem[Fos13]{FoscoloThesis}
+Lorenzo Foscolo.
+\newblock {\em On moduli spaces of periodic monopoles and gravitational
+  instantons}.
+\newblock PhD thesis, Imperial College London, 2013.
+
 \bibitem[Fos16]{FoscoloDef}
 Lorenzo Foscolo.
 \newblock Deformation theory of periodic monopoles (with singularities).
@@ -115,11 +121,10 @@ Valerio Melani and Pavel Safronov.
 \newblock Derived coisotropic structures {II}: stacks and quantization.
 \newblock {\em arXiv preprint arXiv:1704.03201}, 2017.
 
-\bibitem[NP12]{NekrasovPestun}
-Nikita Nekrasov and Vasily Pestun.
-\newblock {Seiberg-Witten} geometry of four dimensional {$\mathcal N= 2$}
-  quiver gauge theories.
-\newblock {\em arXiv preprint arXiv:1211.2240}, 2012.
+\bibitem[Pau98]{Pauly}
+Marc Pauly.
+\newblock Monopole moduli spaces for compact {$3$}-manifolds.
+\newblock {\em Math. Ann.}, 311(1):125--146, 1998.
 
 \bibitem[PR01]{PolishchukRothstein}
 Alexander Polishchuk and Mitchell Rothstein.
