@@ -111,13 +111,39 @@ The most important examples for our purposes are given by the following rational
 In the elliptic case it's natural to ask to what extent Hurtubise and Markman's integrable system structure can be extended from the variety of polystable multiplicative Higgs bundles to the full moduli stack.  If $D$ is empty then it's easy to see that we have a symplectic structure given by the AKSZ construction of Pantev-To\"en-Vaqui\'e-Vezzosi \cite{PTVV}.  Indeed, $E$ is compact 1-oriented and the quotient stack $G/G$ is 1-shifted symplectic, so the mapping stack $\map(E, G/G) = \mhiggs_G(E)$ is equipped with a 0-shifted symplectic structure by \cite[Theorem 2.5]{PTVV}.  The role of the Hitchin fibration is played by the Chevalley map $\chi \colon G/G \to T/W$, and therefore
 \[\map(E,G/G) \to \map(E,T/W).\]
 The fibers of this map over regular points in $T/W$ are given by moduli stacks of the form $\bun_T(\wt E)^W$ where $\wt E$ is a $W$-fold cover of $E$ (the cameral cover). \chris{Come back to this, at least by dimension counting.}
-
-\chris{todo: remark on what the base looks like for general $D$.  Probably put it in the last subsection?  Include comparison to the story in \cite{DonagiGaitsgory}.}
 \end{remark}
 
 \begin{remark}
 While the moduli space of multiplicative Higgs bundles makes sense on a general curve it's only after restricting identity to this trichotomy of examples that we'll expect the existence of a Poisson structure.  Such a structure arises by the AKSZ construction, i.e. by transgressing the 1-shifted symplectic structure on $G/G$ to the mapping space using a fixed section of the canonical bundle on $C$ (possibly with a boundary condition).  
 \end{remark}
+
+We can define the global Chevalley map as in Remark \ref{Elliptic_AKSZ_remark} in the case of non-empty $D$ as well.  We'll show that in the rational case this defines a completely integrable system structure.
+
+\begin{definition} \label{mult_Hitchin_system_def}
+Fix a curve $C$, a divisor $D$ and a dominant coweight $\omega_{z_i}^\vee$ at each point $z_i$ in $D$.  The \emph{multiplicative Hitchin base} is the stack
+\[\mc B(C,D,\omega^\vee) = \mr{Sect}(C, X(D,\omega^\vee)/W)\]
+of sections of $X(D,\omega^\vee)/W$, the $T/W$-bundle on $C$ where $X(D,\omega^\vee)$ is the $T$-bundle characterized by the condition that the associated line bundle $X(D,\omega^\vee) \times_T {\lambda}$ corresponding to a weight $\lambda$ is given by $\OO(\sum \omega_{z_i}^\vee(\lambda) \cdot z_i)$ (c.f. \cite[Section 3.3]{HurtubiseMarkman}).
+
+The \emph{multiplicative Hitchin fibration} is the map
+\[\pi \colon \mhiggs_G(C,D,\omega^\vee) \to \mc B(C,D,\omega^\vee)\]
+given by post-composing a map $C \bs D \to G/G$ with the Chevalley map $\chi \colon G/G \to T/W$.  
+\end{definition}
+
+\begin{prop}
+The multiplicative Hitchin fibration described above is well-defined.
+\end{prop}
+
+\begin{proof}
+We need to verify that the image of a point in $\mhiggs_G(C,D,\omega^\vee)$ under $\pi$, viewed as a section of the trivial $T/W$-bundle on $C \bs D$, extends to a section of $X(D,\omega^\vee)/W$, look locally near a singularity $z_i \in D$.  Let $\phi \in G((z_i))$ be a local representative for a multiplicative Higgs field in $\mhiggs_G(C,D,\omega^\vee)$, i.e. an element of the associated $G[[z_i]]$-adjoint orbit.  Since $\phi$ is equivalent to $z_i^{-\omega^\vee_{z_i}}$ under the action of $G[[z_i]]^2$ by left and right multiplication, without loss of generality we can say that $\phi = z_i^{-\omega^\vee_{z_i}} \phi_0$ for some $\phi_0 \in G[[z_i]]$.  Consider $\chi(\phi) \in T((z_i))$ -- the singular part of this element is the same as $\chi(z_i^{-\omega^\vee_{z_i}} g)$ for some $g \in G$, which implies the section extends to a meromorphic $T/W$-valued function of the required type.
+\end{proof}
+
+We'll show that this fibration defines a completely integrable system in the rational case where $C = \bb{CP}^1$ with a framing at $\infty$.  We should first observe that the generic fibers are half-dimensional tori.  Computing the fibers of the Hitchin fibration works similarly to the non-singular case: a point in the base is, in particular, a map $C \bs D \to T/W$.  Suppose this map lands in the regular locus $T^{\mr{reg}}/W$, then the fiber over this point is, in particular, a map $C \bs D \to BT/W$.  \chris{... conditions at $D$ in the fiber, it'll be a $W$-equivariant $T$-bundle on the cameral cover but with some prescribed singularities at the preimage of $D$.  Also there's only one $T$-bundle on an affine curve, we want $T$-bundles on the compact curve which is the $W$-fold cover of $C$ ramified at $D$.}
+
+\begin{remark}
+\chris{Compare to the base in \cite{HurtubiseMarkman}.  Variety versus stack?  Difference in processing the $W$-action?}
+\end{remark}
+
+\chris{Include comparison to the story in \cite{DonagiGaitsgory}.}
 
 \subsection{Stability Conditions}
 For comparison to results in the literature it is important that we briefly discuss the role of stability conditions for difference connections.  In our main example of interest -- the rational case -- these conditions won't play a role, but they do appear in the comparison results between $q$-connections and monopoles in the literature for more general curves.  For definitions for general $G$ we refer to \cite{Smith}, although see also \cite{AnchoucheBiswas} on polystable $G$-bundles.  In what follows we fix a choice of $0 < t_0 < 2\pi R$.
@@ -133,7 +159,7 @@ for the character $\chi = \det(\mr{Ad}_L^{\mf n})$ defined to be the determinant
 The $q$-connection $(P,g)$ is \emph{polystable} if there exists a (not necessarily maximal) parabolic subgroup $H$ with Levi factor $L$ and a reduction of structure group $(P_L, g)$ to $L$ so that $(P_L,g)$ is a stable $q$-connection and so that the associated $H$-bundle is admissible, meaning that for every character $\chi$ of $H$ which is trivial on $Z(G)$ the associated line bundle $P_H \times_\chi \CC$ has degree zero. 
 \end{definition}
 
-Below we'll write $\qconn_G^{\text{ps}}(C, D, \omega^\vee)$ for the moduli space of polystable $q$-connections.  This moduli space is a smooth algebraic variety of finite type.  \chris{Reference for this other than for $q$ trivial?}
+Below we'll write $\qconn_G^{\text{ps}}(C, D, \omega^\vee)$ for the moduli space of polystable $q$-connections.  This moduli space is a smooth algebraic variety of finite type.  If $q$ is the identity this is a theorem of Charbonneau, Hurtubise and Smith.  For more general $q$, as a smooth manifold these moduli spaces are actually independent when one varies $q$ -- we'll see this when we describe an equivalent description of these moduli spaces as spaces of periodic monopoles on diffeomorphic manifolds.  
 
 When $C = \bb{CP}^1$ every principal $G$-bundle on $C$ admits an essentially unique (up to the action of the Weyl group) holomorphic reduction of structure group to a maximal torus \cite{GrothendieckSphere}.  Since $q$-connections for an abelian group are automatically stable, polystability on the sphere is equivalent to admissibility of the torus reduction.  As a consequence, for our main example of interest -- the rational case -- the moduli space of polystable $q$-connections is equivalent to the moduli space of all $q$-connections of admissible degree.  For instance for $G=\SL_n$ the moduli space of polystable $q$-connection is equivalent to the moduli space of $q$-connections on the trivial bundle.
 
@@ -184,9 +210,9 @@ is an exact sequence of ind-pro vector spaces, and therefore an exact sequence o
 \[0 \to \gg_- \to \gg(\!(z)\!)^k \to \gg_+ \to 0.\]
 \end{remark}
 
-\begin{remark}
-We can also discuss the analogue of the integrable system discussed in Remark \ref{Elliptic_AKSZ_remark} with a non-empty divisor $D$.  \chris{here or above?}
-\end{remark}
+%\begin{remark}
+%We can also discuss the multiplicative Hitchin system of Definition \ref{mult_Hitchin_system_def} in this derived context.  \chris{not sure what to say precisely.}
+%\end{remark}
 
 \section{Periodic Monopoles}
 Moduli spaces of $q$-connections on a Riemann surface $C$ are closely related to moduli spaces of periodic monopoles, i.e. monopoles on 3-manifolds that fiber over the circle (more specifically, with fiber $C$ and monodromy determined by $q$).  Let $G_\RR$ be a compact Lie group whose complexification is $G$.  The discussion in this section will mostly follow that of \cite{CharbonneauHurtubise, Smith}.
@@ -398,11 +424,11 @@ terms of some chart
   
   \chris{My idea was to include the discussion of, at least, the simple example that you worked out for $\GL_2$ with minimal singularities where you described the geometry of the moduli space and gave an expression for the symplectic form (in Section 2 of the file 2017\_11\_30\_ghiggs).  I really only had in mind for $\GL_2$ trying to give a more explicit argument for what will appear below, i.e. that the moduli spaces after fixing residues were naturally symplectic.  But maybe we could do what you suggest and described the symplectic leaves in some Darboux coordinates and refer to \cite{FrassekPestun} for proof?} 
 
-\subsection{Symplectic Structures for General $G$}
+\subsection{Symplectic Structures for General $G$} \label{general_symplectic_sec}
 We begin the more abstract general analysis by briefly discussing the holomorphic symplectic structure on the moduli space of periodic monopoles on $\bb{CP}^1$ following the analysis of Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin3}.  This structure arises from the description we gave as a hyperk\"ahler quotient.  To describe it specifically, let $\delta^{(1)} \mc A$ and $\delta^{(2)} \mc A$ be two tangent vectors at $(\bo P, \mc A)$ to the moduli space of monopoles.  Recall that $\mc A$ denotes the combination $\nabla_t - i\Phi \d t$.  Choose representatives for these two tangent vectors of the form $\alpha_i$ and $\alpha'_i$ respectively  in the \v Cech resolution we described above.  Then we can write the holomorphic symplectic form coming from the hyperk\"ahler reduction in terms of the symplectic pairing on the infinite-dimensional vector space $\mc V$, which is given by the Killing form on $\gg$ along with the wedge pairing of differential forms.  So summing over the local patches in our \v Cech resolution we can write it as
 \begin{align*}
-\omega_{\mr{mon}}(\delta^{(1)} \mc A, \delta^{(2)} \mc A) &= \int_{M} \kappa(\delta^{(1)} \mc A \wedge \delta^{(2)} \mc A) \d z \d t \\
-&= \sum_{i=1}^k \int_{U_i \times S^1} \kappa(\alpha_i \wedge \alpha'_i) \d z \d t
+\omega_{\mr{mon}}(\delta^{(1)} \mc A, \delta^{(2)} \mc A) &= \int_{M} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \\
+&= \sum_{i=1}^k \int_{U_i \times S^1} \kappa(\alpha_i, \alpha'_i) \d z \d t
 \end{align*}
 where the contributions to the integral away from the $U_i$ vanish.
 
@@ -440,8 +466,21 @@ We need only verify that the pairing described is non-degenerate.  It suffices t
 \chris{Remark on the Poisson structure on the total space (ind-Poisson structure really)  These should be leaves.  Maybe just remark on this since we haven't calculated the tangent complex of the big space.  Likewise, what about $\eps$-connections?}
 \end{remark}
 
+In fact the moduli space is not only symplectic, but the total space of a completely integrable system -- the multiplicative Hitchin system described in Definition \ref{mult_Hitchin_system_def}.  We already know that the generic fibers are half-dimensional tori, it remains to verify that they're isotropic.
+
+\begin{prop}
+The fibers of the multiplicative Hitchin fibration, in the rational case, are isotropic.
+\end{prop}
+
+\begin{proof}
+In order to check this we need to describe the subspace of the tangent space to $\mhiggs^\fr_G(C,D,\omega^\vee)$ at a point $(P,g)$ tangent to the Hitchin fiber in our \v Cech description.
+\chris{Todo: this needs further thought.}
+\end{proof}
+
+We'll now begin the comparison between the pairing described above and the symplectic structure on the moduli space of periodic monopoles.
+
 \begin{prop} \label{qconn_symp_description}
-The symplectic form on the moduli space of multiplicative Higgs bundles can be written in the form
+The non-degenerate pairing on the moduli space of multiplicative Higgs bundles can be written in the form
 \begin{equation}
 \label{eq:resid}
 \omega(\delta g, \delta g') = \sum_{i=1}^d \langle b_i^L g^{-1}, b^{'R}_i g^{-1} \rangle - (b \leftrightarrow b')
@@ -464,6 +503,8 @@ We can compute the composite operator $(\Ad_g^*)^{-1}\Ad_g^{-1}$ on $\mr{ad}(P)(
 \end{align*}
 using cyclic invariant to identify the two terms. 
 \end{proof}
+
+\chris{We haven't included an explicit comparison with the rational Poisson Lie group.  Perhaps include it here as a corollary.}
 
 We can now establish our main result.
 \begin{theorem} \label{symplectic_comparison_thm}
@@ -500,6 +541,12 @@ Pick out the summand corresponding to $U_i$.  Choose our potentials so that on t
 agreeing with the expression coming from $\mr{mHiggs}$. 
 \end{proof}
 
+In particular the non-degenerate pairing on the multiplicative Higgs moduli space is determined by a closed 2-form, and the multiplicative Hitchin fibers are Lagrangian.
+
+\begin{corollary}
+The moduli space $\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee)$ has the structure of a completely integrable system.
+\end{corollary}
+
 \begin{remark}
 \chris{connection to Shapiro's symplectic leaves in \cite{Shapiro}.  The claim is that taking the Taylor expansion at infinity defines a Poisson map to $\wt G \sub G_1[[z^{-1}]]$ sending symplectic leaves to (discrete) unions of symplectic leaves.  One can do the classification more completely in the type A case.}
 \end{remark}
@@ -512,59 +559,56 @@ The results of the previous section imply that the symplectic structure on $\mhi
 Let us begin by describing the hyperk\"ahler structure on the moduli space of periodic monopoles and how the holomorphic symplectic structure varies under rotation in the twistor sphere.  We'll begin by recalling that the moduli space of periodic monopoles can be described as a hyperk\"ahler quotient as in the work of Atiyah and Hitchin \cite{AtiyahHitchin}.  In a context with more general boundary data at $\infty$ this was demonstrated by Cherkis and Kapustin \cite{CherkisKapustin3} for the group $\SU(2)$, see also Foscolo \cite{FoscoloDef}[Theorem 7.12].  In the case of $\bb{CP}^1$ with a fixed framing the analysis is much easier.
 
 Recall from Definition \ref{monopole_moduli_def} that the moduli space of periodic monopoles on $\bb{CP}^1$ with a fixed framing at $\infty$ and fixed Dirac singularities can be described as the quotient 
-\[\mon_G^{\fr}(\bb{CP}^1 \times S^1_R, D, \omega^\vee) = \mu^{-1}(0)/\mc G,\]
+\[\mon_G^{\fr}(\bb{CP}^1 \times_\eps S^1_R, D, \omega^\vee) = \mu^{-1}(0)/\mc G,\]
 where 
 \vspace{-10pt}
 \begin{itemize}
-\item The space $\mc V$ of fields is the space of pairs $(A,\Phi)$ consisting of framed connections $A$ on the trivial principal $G_\RR$-bundle $\bo P$ on $\bb{CP}^1 \times S^1_R$, $\Phi$ is a section of $\gg_{\bo P}$ vanishing at $\{\infty\} \times S^1_R$, and the pair $(A,\Phi)$ has a Dirac singularity with charge $\omega^\vee_{z_i}$ at each point $(z_i,t_0)$ in $D \times \{t_0\}$.
-\item $\mu \colon \mc V \to \Omega^1(\bb{CP}^1 \times S^1_R; (\gg_\RR)_{\bo P})/\gg_\RR$ is the map sending a monopole $(A, \Phi)$ to the $\gg_\RR$-valued 1-form $\ast F_A - \d_A \Phi$ vanishing at $\{\infty\} \times S^1_R$.  
+\item The space $\mc V$ of fields is the space of pairs $(A,\Phi)$ consisting of framed connections $A$ on the trivial principal $G_\RR$-bundle $\bo P$ on $\bb{CP}^1 \times_\eps S^1_R$, $\Phi$ is a section of $\gg_{\bo P}$ vanishing at $\{\infty\} \times S^1_R$, and the pair $(A,\Phi)$ has a Dirac singularity with charge $\omega^\vee_{z_i}$ at each point $(z_i,t_0)$ in $D \times \{t_0\}$.
+\item $\mu \colon \mc V \to \Omega^1(\bb{CP}^1 \times_\eps S^1_R; (\gg_\RR)_{\bo P})/\gg_\RR$ is the map sending a monopole $(A, \Phi)$ to the $\gg_\RR$-valued 1-form $\ast F_A - \d_A \Phi$ vanishing at $\{\infty\} \times S^1_R$.  
 \item The group $\mc G$ of gauge transformations consists of automorphisms of the trivial bundle $\bo P$ fixing the framing.
 \end{itemize}
 
-This is an instance of hyperk\"ahler reduction.  Indeed the infinite-dimensional space $\mc V$ admits a hyperk\"ahler structure defined by
-\[\omega_i((A,\Phi),(A',\Phi')) = \int_{\bb{CP}^1 \times S^1_R} \kappa(A_i,\Phi') - \kappa(\Phi, A_i') + \sum_{j,k=1,2,3} \eps_{ijk} \kappa(A_j,A'_k), \]
-where $i=1,2,3$, and where $A$ can be written as $A_1 \d x + A_2 \d y + A_3 \d t$ with respect to a choice $\d x \wedge \d y$ of meromorphic volume form on $\bb{CP}^1$ with a second order pole at $\infty$.  This descends to a hyperk\"ahler structure on the quotient since  \chris{... probably I want to find a good reference here.  Could refer to \cite[Section 1.4.2]{FoscoloThesis}.}
+This is an instance of hyperk\"ahler reduction.  Indeed the infinite-dimensional space $\mc V$ admits a hyperk\"ahler structure with symplectic forms defined by
+\[\omega_i((A,\Phi),(A',\Phi')) = \int_{\bb{CP}^1 \times_\eps S^1_R} \left(\kappa(A_i,\Phi') - \kappa(\Phi, A_i') + \sum_{j,k=1,2,3} \eps_{ijk} \kappa(A_j,A'_k)\right) \d x \d y \d t, \]
+where $i=1,2,3$, and where $A$ can be written as $A_1 \d t + A_2 \d x + A_3 \d y$ with respect to a choice $\d z = \d (x + iy)$ of meromorphic volume form on $\bb{CP}^1$ with a second order pole at $\infty$.  This descends to a hyperk\"ahler structure on the quotient since  \chris{... probably I want to find a good reference here.  Could refer to \cite[Section 1.4.2]{FoscoloThesis}.}
 
-\chris{extract holomorphic symplectic form at 0 and the formula given in the previous section}
+Let's restrict to the case where $\eps=0$ for now.  Consider the holomorphic symplectic structure $\omega_2 + i \omega_3$.  We can alternatively write the formula above for this choice of holomorphic symplectic in the form
+\[\omega(\mc A, \mc A') = \int_{\bb{CP}^1 \times S^1_R} \kappa(\mc A, \mc A') \d z \d t,\]
+as described at the beginning of Section \ref{general_symplectic_sec}. \chris{This needs justification.  What happens to the $xy$ term?  At face value you get something more like the antisymmetrization of $\int \kappa(\mc A, A'_2 + i A'_3)\d z$.}
 
-This description for the hyperk\"ahler structure also tells us clearly what happens when we perform a rotation in the twistor sphere.  The following statement follows by identifying the holomorphic symplectic structure at $\eps$ in the twistor sphere by applying the corresponding rotation in $\SO(3)$ to the coordinates $x$, $y$ and $t$ on $\RR^3$ in the expression for the holomorphic symplectic structure at $0$.
+This description for the hyperk\"ahler structure also tells us clearly what happens when we perform a rotation in the twistor sphere.  The following statement follows by identifying the holomorphic symplectic structure at $\eps$ in the twistor sphere by applying the corresponding rotation in $\SO(3)$ to the coordinates $x$, $y$ and $t$ on $\RR^3$ in the expression for the holomorphic symplectic structure at $0$.  Note that when we calculate the symplectic form as an integral as above, it's enough to take the integral over just $\RR^2 \times S^1_R$ instead of $\bb{CP}^1 \times S^1_R$.
+
 \begin{prop}
-Let $\eps$ be a point in the twistor sphere.  The holomorphic symplectic form on the moduli space $\mon_G^{\fr}(\bb{CP}^1 \times S^1_R, D, \omega^\vee)$ of periodic monopoles is given by the formula 
-\[\omega_\eps(\delta^{(1)}\mc A, \delta^{(2)}\mc A,) = \int_{\RR^2 \times S^1_R} \kappa(\delta^{(1)} \mc A \wedge \delta^{(2)} \mc A) \eps(\d x \wedge \d y \wedge \d t),\]
-where we identify $\eps$ with an element of $\SO(3)$ and apply this rotation to the volume form $\d z \wedge \d t$.  Equivalently we can identify $\RR^2 \times \bb{CP}^1$ with the quotient $\RR^3 \times L$ where $L$ is the rank one lattice $\{0\}^2 \times 2\pi R\ZZ$ and identify the rotated holomorphic symplectic form with 
-\[\omega_\eps(\delta^{(1)}\mc A, \delta^{(2)}\mc A,) = \int_{\RR^3/(\eps(L))} \kappa(\delta^{(1)} \mc A \wedge \delta^{(2)} \mc A) \d x \wedge \d y  \wedge \d t.\]
-\chris{fix the expression in the integrand to write it in terms of $x$ and $y$, not $z$.}
+Let $\zeta$ be a point in the twistor sphere.  The holomorphic symplectic form on the moduli space $\mon_G^{\fr}(\bb{CP}^1 \times S^1_R, D, \omega^\vee)$ of periodic monopoles is given by the formula 
+\[\omega_\eps(\delta^{(1)}\mc A, \delta^{(2)}\mc A) = \int_{\RR^2 \times S^1_R} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \zeta(\d z \wedge \d t),\]
+where we identify $\zeta$ with an element of $\SO(3)$ and apply this rotation to the volume form $\d z \wedge \d t$.  Equivalently we can identify $\RR^2 \times \bb{CP}^1$ with the quotient $\RR^3 \times L$ where $L$ is the rank one lattice $\{0\}^2 \times 2\pi R\ZZ$ and identify the rotated holomorphic symplectic form with 
+\[\omega_\zeta(\delta^{(1)}\mc A, \delta^{(2)}\mc A) = \int_{\RR^3/(\zeta(L))} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t.\]
 \end{prop}
 
-Now, we'll perform our identification of the twistor deformation on the multiplicative Higgs side by rewriting this twistor rotation in a somewhat different way in the large $R$ limit.  In this limit we can identify the twistor rotation with the deformation obtained by replacing the product $\bb{CP}^1 \times S^1_R$ with the product twisted by an automorphism of $\RR^2$.  Let's be more precise about what this means.
+Now, we'll perform our identification of the twistor deformation on the multiplicative Higgs side by rewriting this twistor rotation in a somewhat different way in the large $R$ limit.  In this limit we can identify the twistor rotation with the deformation obtained by replacing the product $\bb{CP}^1 \times S^1_R$ with the product twisted by an automorphism of $\RR^2$.  More precisely, the rotated symplectic structure can then be described in the following way.
 
-\begin{definition}
-\chris{define what I mean by $\eps$-deformation for monopoles.}
-\end{definition}
-
-The rotated symplectic structure can then be described in the following way.
-\begin{prop}
-\chris{Monopoles in the large $R$ (Gaiotto) limit -- twistor rotation and $\eps$-deformation coincide.}
-\end{prop}
+\begin{theorem}
+Let $\left(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee)\right)_{\zeta,R}$ be the family of complex manifolds obtained by pulling back the holomorphic symplectic structure $\omega_{\zeta,R}$ on $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ at $\zeta$ in the twistor sphere.  In the limit where $R \to \infty$ with $\zeta R = \eps$ fixed this complex structure coincides with the complex structure on $\epsconn^\fr_G(\bb{CP}^1,D,\omega^\vee)$.
+\end{theorem}
 
 \begin{proof}
- 
+According to Theorem \ref{monopole_qconn_comparison_thm} it's enough to show that the complex structure on $\mon_G^\fr(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ at the point $\zeta$ converges to the complex structure on the $\eps$-deformation $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_\eps S^1_R,D,\omega^\vee)$.  The key observation that we'll use is that in the $R \to \infty$ limit with $\zeta R = \eps$ we can identify the rotated lattice with a \emph{sheared} lattice.  Namely
+\[\zeta(L_{R,0}) = \zeta((0,0,2\pi R) \ZZ) \to L_{R,\eps} = (\mr{Re}(\eps), \mr{Im}(\eps), 2\pi R) \ZZ\]
+in the $R \to \infty$ limit.  The quotient of $\RR^3$ by the sheared lattice is exactly $\RR^2 \times_\eps S^1_R$.
+
+In order to identify the desired complex structures it's enough to identify the full family of symplectic structures on the $\eps$-deformation with the appropriately rotated family of symplectic structures without deforming, in the large $R$ limit.  So, if we apply the twistor rotation by $\zeta$ to the holomorphic symplectic structure $\omega_2 + i\omega_3$ on $\mon_G^\fr(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ (the argument will be identical for the other points in the $\bb{CP}^1$ family of holomorphic symplectic structures) we obtain the pairing
+\[\omega_\zeta(\delta^{(1)}\mc A, \delta^{(2)}\mc A) = \int_{\RR^3/(\zeta(L_{R,0}))} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t.\]
+On the other hand we can identify the holomorphic symplectic structure on $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_\eps S^1_R,D,\omega^\vee)$ as
+\[\omega_\zeta(\delta^{(1)}\mc A, \delta^{(2)}\mc A) = \int_{\RR^3/(L_{R,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t.\]
+Indeed, in the large $R$ limit these structures coincide as required. \chris{It would be better to make this argument more careful.}
 \end{proof}
 
-\begin{corollary}
-If we equip $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ with the complex structure at the twistor parameter $\eta \in \CC$, the resulting complex manifold is isomorphic to $\epsconn_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$.
-\end{corollary}
-
-\begin{proof}
- 
-\end{proof}
-
-\chris{comment on the holomorphic symplectic structure vs the one discussed above.}
-
+\begin{remark}
 \chris{comment on the example of the Nahm transform.}
+\end{remark}
 
 \section{Quantization and Yangians}
-\chris{We're still discussing how this story goes.}
+\chris{In this section, begin by recalling the claim that the map to the Poisson Lie group is a Poisson map.  Mention the map the other direction, which should also be Poisson.  Consider the correponding maps on the algebras of functions: need to be clear about what this means for infinite-type or ind-schemes.  Then talk about quantization and recall the definition of the (completed) Yangian.  State as a theorem that quantized functions on our symplectic leaves are modules for the Yangian.}
 
 \section{Duality}
 \chris{For a first draft I'm inserting some notes I prepared for a talk.  Todo: talk about motivation and the content we discussed regarding non-simply-laced groups}
