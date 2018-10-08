@@ -7,6 +7,11 @@ Boudjemaa Anchouche and Indranil Biswas.
   a compact {K}\"ahler manifold.
 \newblock {\em Amer. J. Math.}, 123(2):207--228, 2001.
 
+\bibitem[AFO17]{AFO}
+Mina Aganagic, Edward Frenkel, and Andrei Okounkov.
+\newblock Quantum {$q$}-{Langlands} correspondence.
+\newblock {\em arXiv preprint arXiv:1701.03146}, 2017.
+
 \bibitem[AH88]{AtiyahHitchin}
 Michael Atiyah and Nigel Hitchin.
 \newblock {\em The geometry and dynamics of magnetic monopoles}.
@@ -88,6 +93,12 @@ Edward Frenkel, Nicolai Reshetikhin, and Michel Semenov-Tian-Shansky.
   deformations of-{$\mc W$}algebras $i$. the case of {Virasoro} algebra.
 \newblock {\em Communications in mathematical physics}, 192(3):605--629, 1998.
 
+\bibitem[GKLO05]{GKLO}
+A.~Gerasimov, S.~Kharchev, D.~Lebedev, and S.~Oblezin.
+\newblock On a class of representations of the {Y}angian and moduli space of
+  monopoles.
+\newblock {\em Comm. Math. Phys.}, 260(3):511--525, 2005.
+
 \bibitem[Gro57]{GrothendieckSphere}
 Alexander Grothendieck.
 \newblock Sur la classification des fibr\'es holomorphes sur la sph\`ere de
@@ -120,6 +131,12 @@ Valerio Melani and Pavel Safronov.
 Valerio Melani and Pavel Safronov.
 \newblock Derived coisotropic structures {II}: stacks and quantization.
 \newblock {\em arXiv preprint arXiv:1704.03201}, 2017.
+
+\bibitem[NP12]{NekrasovPestun}
+Nikita Nekrasov and Vasily Pestun.
+\newblock {Seiberg-Witten} geometry of four dimensional {$\mathcal N= 2$}
+  quiver gauge theories.
+\newblock {\em arXiv preprint arXiv:1211.2240}, 2012.
 
 \bibitem[Pau98]{Pauly}
 Marc Pauly.

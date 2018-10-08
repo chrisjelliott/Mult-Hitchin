@@ -65,10 +65,10 @@ These moduli stacks are typically of infinite type.  In order to obtain finite t
 
 We'll write $\bb D$ to denote the \emph{formal disk} $\spec \CC[\![z]\!]$.  Likewise we'll write $\bb D^\times$ for the \emph{formal punctured disk} $\spec \CC(\!(z)\!)$.  We'll then write $\bb B$ for the derived pushout $\bb D \sqcup_{\bb D^\times} \bb D$.  Let $LG = \map(\bb D^\times, G)$ and let $L^+G = \map(\bb D, G)$.
 
-There is a canonical inclusion $\bb B^{\sqcup k} \to (C \times_q S^1_B) \bs (D \times \{0\})$, the inclusion of the formal punctured neighbourhood of $D \times \{0\}$.  This induces a restriction map on mapping spaces
+There is a canonical inclusion $\bb B^{\sqcup k} \to (C \times_q S^1_B) \!\!\bs\!\! (D \times \{0\})$, the inclusion of the formal punctured neighbourhood of $D \times \{0\}$.  This induces a restriction map on mapping spaces
 \[\res_D \colon \qconn_G(C, D) \to \bun_G(\bb B)^k.\]
 
-The following is well-known (see e.g. the expository article \cite{Zhu}).
+One can identify $\bun_G(\bb B)$ with the double quotient stack $L^+G \!\bs\! LG / L^+G$, or equivalently with the quotient $L^+G \!\bs\! \Gr_G$ of the affine Grassmannian.  The following is well-known (see e.g. the expository article \cite{Zhu}).
 
 \begin{lemma}
 The set of closed points of $\bun_G(\bb B)$ is in canonical bijection with the set of dominant coweights of $G$.
@@ -78,6 +78,12 @@ The set of closed points of $\bun_G(\bb B)$ is in canonical bijection with the s
 Choose a map from $D$ to the set of dominant coweights and denote it by $\omega^\vee \colon z_i \mapsto \omega^\vee_{z_i}$.  Write $\Lambda_i$ for the isotropy group of the point $\omega^\vee_{z_i}$ in $\bun_G(\bb B)$. The moduli stack of $q$ difference connections on $C$ with singularities at $D$ and fixed residues given by $\omega^\vee$ is defined to be the fiber product
 \[\qconn_G(C,D, \omega^\vee) = \qconn_G(C,D) \times_{\bun_G(\bb B)^k} (B\Lambda_1 \times \cdots \times B\Lambda_k).\]
 \end{definition}
+
+\begin{remark}\label{ind_structure_remark}
+In a similar way we can define a filtration on the moduli stack of $q$-connections.  Recall that the affine Grassmannian $\Gr_G$ is stratified by dominant coweights $\omega^\vee$, and there is an inclusion $\Gr_G^{\omega^\vee_1}\sub \ol{\Gr_G^{\omega^\vee_2}}$ of one stratum into the closure of another stratum if and only if $\omega^\vee_1 \preceq \omega^\vee_2$ with respect to the standard partial order on dominant coweights.  We can then define
+\[\qconn_G(C,D, \preceq \omega^\vee) = \qconn_G(C,D) \times_{\bun_G(\bb B)^k} \left(L^+G \!\!\bs\!\! \ol{\Gr_G^{\omega^\vee_1}} \times \cdots \times L^+G \!\!\bs\!\! \ol{\Gr_G^{\omega^\vee_k}}\right).\]
+The full moduli stack $\qconn_G(C,D)$ is the filtered colimit of these moduli spaces.  One can additionally take the filtered colimit over all finite subsets $D$ in order to define a moduli stack $\qconn^\mr{sing}_G(C)$ of $q$-connections on $C$ with arbitrary singularities.
+\end{remark}
 
 \begin{examples}
 The most important examples for our purposes are given by the following rational/trigonometric/elliptic trichotomy.
@@ -496,7 +502,7 @@ We need only verify that the pairing described is non-degenerate.  It suffices t
 \end{proof}
 
 \begin{remark}
-\chris{Remark on the Poisson structure on the total space (ind-Poisson structure really)  These should be leaves.  Maybe just remark on this since we haven't calculated the tangent complex of the big space.  Likewise, what about $\eps$-connections?}
+If we do not fix residue data at the punctures, the full moduli space $\mhiggs_G^\fr(\bb{CP}^1,D)$, or indeed the moduli space $\mhiggs_G^{\text{fr,sing}}(\bb{CP}^1)$ with arbitrary singularities, will have an ind-Poisson structure, analogous to the ind-Poisson structure in the elliptic moduli space of Hurtubise and Markman.  One uses the filtration discussed in Remark \ref{ind_structure_remark} in order to define this structure: one needs to check that the moduli space  $\mhiggs_G^\fr(\bb{CP}^1,D, \preceq \omega^\vee)$ is Poisson, and that the inclusion of the symplectic moduli space $\mhiggs_G^\fr(\bb{CP}^1,D, \omega^\vee)$ is a Poisson map.  We won't discuss this in any more detail here, except to remark that this should follow using the techniques of \cite[Section 7]{HurtubiseMarkman}.  We will, however, discuss the close relationship between this Poisson structure and the rational Poisson Lie group, and the consequences for quantization, in Section \ref{quantization_section}.
 \end{remark}
 
 In fact the moduli space is not only symplectic, but the total space of a completely integrable system -- the multiplicative Hitchin system described in Definition \ref{mult_Hitchin_system_def}.  We already know that the generic fibers are half-dimensional tori, it remains to verify that they're isotropic.
@@ -580,10 +586,6 @@ In particular the non-degenerate pairing on the multiplicative Higgs moduli spac
 The moduli space $\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee)$ has the structure of a completely integrable system.
 \end{corollary}
 
-\begin{remark}
-\chris{connection to Shapiro's symplectic leaves in \cite{Shapiro}.  The claim is that taking the Taylor expansion at infinity defines a Poisson map to $\wt G \sub G_1[[z^{-1}]]$ sending symplectic leaves to (discrete) unions of symplectic leaves.  One can do the classification more completely in the type A case.}
-\end{remark}
-
 \section{Hyperk\"ahler Structures}
 The results of the previous section imply that the symplectic structure on $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ extends canonically to a hyperk\"ahler structure.  In this section we'll compare the twistor rotation with the deformation to the moduli space of $\eps$-connections. We'll show that in an appropriate limit passing to a point $\eps$ in the twistor sphere we obtain a complex manifold equivalent to the moduli space of $\eps$-connections as a deformation of the moduli space of multiplicative Higgs bundles.
 
@@ -650,8 +652,51 @@ Since the moduli space of monopoles is compact \chris{wait, it isn't is it?  So 
 \chris{comment on the example of the Nahm transform.}
 \end{remark}
 
-\section{Quantization and Yangians}
-\chris{In this section, begin by recalling the claim that the map to the Poisson Lie group is a Poisson map.  Mention the map the other direction, which should also be Poisson.  Consider the correponding maps on the algebras of functions: need to be clear about what this means for infinite-type or ind-schemes.  Then talk about quantization and recall the definition of the (completed) Yangian.  State as a theorem that quantized functions on our symplectic leaves are modules for the Yangian.}
+\section{The Rational Poisson Lie Group and the Yangian} \label{quantization_section}
+
+Let us proceed by discussing the connection between the symplectic structure on the moduli space of multiplicative Higgs bundles in the rational case and the rational Poisson Lie group.  This connection should be compared to the connection between the elliptic moduli space and the elliptic quantum group in the work of Hurtubise and Markman.  
+
+Consider the infinite-type moduli space $\mhiggs^{\text{fr,sing}}(\bb{CP}^1)$ of multiplicative Higgs bundles with arbitrary singularities.  There is a map
+\[r_\infty \colon \mhiggs^{\text{fr,sing}}(\bb{CP}^1) \to G_1[[z^{-1}]],\]
+defined by restricting a multiplicative Higgs bundle to a formal neighbourhood of infinity.  In particular we can restrict $r_\infty$ to any of the finite-dimensional subspaces $\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee)$ (the symplectic leaves).  Here the notation $G_1[[z^{-1}]]$ denotes Taylor series in $G$ with constant term 1.  Recall that $G_1[[z^{-1}]]$ is a Poisson Lie group, with Poisson structure defined by the Manin triple $(G(\!(z)\!), G[[z]], G_1[[z^{-1}]])$.
+
+The Poisson Lie group $G_1[[z^{-1}]]$ has the structure of an ind-scheme using the filtration where $G_1[[z^{-1}]]_n$ consists of $G$-valued polynomials in $z^{-1}$ with identity constant term and where the matrix elements in a fixed faithful representation have degree at most $n$.  When we talk about the Poisson algebra $\OO(G_1[[z^{-1}]])$ of regular functions on $G_1[[z^{-1}]]$, we are therefore referring to the limit over $n \in \ZZ_{\ge 0}$ of the finitely generated algebras $\OO(G_1[[z^{-1}]]_n)$.  Due to the condition on the constant term the group $G_1[[z^{-1}]]$ is nilpotent, which means we can identify its algebra of functions with the algebra of functions on the Lie algebra.  That is:
+\begin{align*}
+\OO(G_1[[z^{-1}]]) &= \underset n \lim \OO(G_1[[z^{-1}]]_n) \\
+&\iso \underset n \lim \sym(\gg_1^*[[z^{-1}]]_n).
+\end{align*}
+The Poisson bracket is compatible with this filtration, in the sense that it defines a map $\{,\} \colon \OO(G_1[[z^{-1}]]_m) \otimes \OO(G_1[[z^{-1}]]_n) \to \OO(G_1[[z^{-1}]]_{m+n})$ for each $m$ and $n$.
+
+\begin{theorem} \label{Poisson_Lie_Comparison_thm}
+The map $r_\infty \colon \mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee) \to G_1[[z^{-1}]]$ is Poisson.  That is, the pullback of the Poisson structure on $\OO(G_1[[z^{-1}]])$ coincides with the Poisson bracket on $\OO(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$. 
+\end{theorem}
+
+\begin{proof}
+We just need to compute the pullback of the Poisson bracket on $\OO(G_1[[z^{-1}]])$ under $r_\infty$. \chris{...}
+\end{proof}
+
+\chris{remark on the role played by the rational $r$-matrix?}
+
+\begin{remark}
+It's instructive to compare this calculation with the work of Shapiro \cite{Shapiro} on symplectic leaves for the rational Poisson Lie group.  According to Shapiro, and for the group $G = \SL_n$, there are symplectic leaves in $G_1[[z^{-1}]]$ indexed by Smith normal forms, i.e. by a sequence $d_1, \ldots, d_n$ of polynomials where $d_i | d_{i+1}$ for each $i$.  This data is equivalent to a dominant coweight coloured divisor $(D,\omega^\vee)$ in the following way.  The data of the sequence of polynomials is equivalent to the data of an increasing sequence $(D_1, \ldots, D_n)$ of $n$ effective divisors in $\bb{CP}^1$ disjoint from $\infty$: the tuples of roots of the polynomials $d_i$.  Let $D = \{z_1, \ldots, z_k\}$ be the support of the largest divisor $D_n$, and for each $z_j$ let $\omega^\vee_{z_j} = (m_1, \ldots, m_n)$ be the dominant coweight where $m_i$ is the order of the root $z_j$ in the polynomial $d_i$.  The dominant coweight Shapiro refers to as the ``type'' of a leaf is, therefore, the sum of all these coweights.
+
+To be a little more precise, Shapiro proves that for $G = \SL_n$ these symplectic leaves span the Poisson subgroup $\mc G \sub G_1[[z^{-1}]]$ of elements that can be factorized as the product of a polynomial element in $G_1[z^{-1}]$ and a monic $\CC$-valued power series.  In fact, the map $r_\infty$ (for any group, not necessarily $G = \SL_n$) factors through the subgroup $\mc G$: the Taylor expansion of all \emph{rational} $G$ valued functions can be factorized in this way.  As a consequence, Theorem \ref{Poisson_Lie_Comparison_thm} implies that our symplectic leaves for the group $\SL_n$ agree with Shapiro's symplectic leaves.
+\end{remark}
+
+This comparison has interesting consequences upon quantization.  The Poisson algebra $\OO(G_1[[z^{-1}]])$ has a well-studied quantization to the \emph{Yangian} $Y(\gg)$.
+
+\begin{definition}
+\chris{define the Yangian, take care with completions.  References?}
+\end{definition}
+
+Likewise, we can study deformation quantization for the algebra $\OO(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$ of functions on our symplectic moduli space.  This moduli space is, in particular, a smooth finite-dimensional Poisson manifold, so its algebra of functions can be quantized using the theory
+\chris{deformation quantization of functions on mHiggs, and of the Poisson map from $\OO(G_1[[z^{-1}]])$.  There's a possibility of an anomaly.  Probably the following should actually be a conjecture?}
+
+\begin{corollary}
+The quantum algebra of functions $\OO_\hbar(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$ has the structure of a $Y(\gg)$-module for each choice $(D,\omega^\vee)$ of residue data.
+\end{corollary}
+
+\chris{Include some discussion on how we can think of $\OO_\hbar(\mhiggs^{\text{fr,sing}}(\bb{CP}^1))$ as an intermediate Poisson Lie group between the Yangian and something dual to it.  References and a remark on the comparison with the conjectures made in \cite[Chapter 8.1]{NekrasovPestun}.  Include some words about $q$-Opers and $q$-W algebras, citing Sevostyanov et al and Aganagic-Frenkel-Okounkov \cite{AFO}.  Remark on the comparison with our modules and those of \cite{GKLO} -- would need some kind of Nahm transform story to relate our periodic monopoles with the Zastava spaces that appear in that work.}
 
 \section{Twisted Gauge Theory}
 \chris{calculations of the twist of 5d $\mc N=2$ super Yang-Mills with monopole operators yielding out moduli spaces}

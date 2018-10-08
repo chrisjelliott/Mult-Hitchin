@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.1)  5 OCT 2018 17:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.1)  8 OCT 2018 17:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1127,63 +1127,62 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (17.3165pt too wide) in paragraph at lines 83--84
-[][]\OT1/cmr/bx/n/10 Examples 2.7. []\OT1/cmr/m/n/10 The most im-por-tant ex-am
+Overfull \hbox (17.3165pt too wide) in paragraph at lines 89--90
+[][]\OT1/cmr/bx/n/10 Examples 2.8. []\OT1/cmr/m/n/10 The most im-por-tant ex-am
 -ples for our pur-poses are given by the fol-low-ing ra-tio-nal/trigonometric/e
 lliptic
  []
 
 [2]
-LaTeX Font Info:    Try loading font information for U+eus on input line 124.
+LaTeX Font Info:    Try loading font information for U+eus on input line 130.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 ) [3]
-LaTeX Font Info:    Try loading font information for U+euf on input line 150.
+LaTeX Font Info:    Try loading font information for U+euf on input line 156.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) <xymatrix 2x2 154>
-[4] [5] <xymatrix 4x4 533> [6] [7] [8] [9] <xymatrix 3x1 98> [10] [11]
+[4] [5] <xymatrix 4x4 533> [6] [7] [8] [9] <xymatrix 3x1 98> [10] [11] [12]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 449.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 449.
+(hyperref)                removing `math shift' on input line 455.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 449.
-
-[12]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 460.
+(hyperref)                removing `subscript' on input line 455.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 460.
+(hyperref)                removing `math shift' on input line 455.
 
-[13] <xymatrix 3x2 292> [14] [15] [16] [17] [18] [19] <xymatrix 2x2 182>
-[20] (./Mult_Hitchin_9-18.bbl [21]) [22]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 736.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 736.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 466.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 466.
+
+[13] <xymatrix 3x2 292> [14] [15] [16] [17] [18] [19] [20] [21] <xymatrix 2x2
+182> (./Mult_Hitchin_9-18.bbl [22] [23]) [24]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 781.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 781.
  (./Mult_Hitchin_9-18.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 736.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 736.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 781.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 781.
 Package rerunfilecheck Info: File `Mult_Hitchin_9-18.out' has not changed.
-(rerunfilecheck)             Checksum: 26217DBFAF4E6CD1DA04F4E64AEDE0B1;1120.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 736.
+(rerunfilecheck)             Checksum: 0C951A0EB5EDFD271B5AA724FC48ED03;1141.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 781.
  ) 
 Here is how much of TeX's memory you used:
- 29285 strings out of 494910
- 543476 string characters out of 6179837
- 621558 words of memory out of 5000000
- 31978 multiletter control sequences out of 15000+600000
+ 29300 strings out of 494910
+ 543681 string characters out of 6179837
+ 621789 words of memory out of 5000000
+ 31984 multiletter control sequences out of 15000+600000
  21620 words of font info for 87 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 56i,19n,65p,10412b,559s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,19n,65p,10412b,483s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
@@ -1218,10 +1217,10 @@ dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type
 1/public/cm-super/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/xypic/xycmat10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xypic/xy
 cmbt10.pfb>
-Output written on Mult_Hitchin_9-18.pdf (22 pages, 449315 bytes).
+Output written on Mult_Hitchin_9-18.pdf (24 pages, 460309 bytes).
 PDF statistics:
- 508 PDF objects out of 1000 (max. 8388607)
- 444 compressed objects within 5 object streams
- 132 named destinations out of 1000 (max. 500000)
+ 532 PDF objects out of 1000 (max. 8388607)
+ 466 compressed objects within 5 object streams
+ 141 named destinations out of 1000 (max. 500000)
  149 words of extra memory for PDF output out of 10000 (max. 10000000)
 
