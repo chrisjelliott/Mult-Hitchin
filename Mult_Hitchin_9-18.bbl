@@ -46,6 +46,23 @@ Sergey Cherkis and Anton Kapustin.
 \newblock {Hyper-K\"ahler} metrics from periodic monopoles.
 \newblock {\em Physical Review D}, 65(8):084015, 2002.
 
+\bibitem[Cos13a]{CostelloSH}
+Kevin Costello.
+\newblock Notes on supersymmetric and holomorphic field theories in dimensions
+  2 and 4.
+\newblock In {\em Special Issue: In Honor of Dennis Sullivan}, volume~9 of {\em
+  Pure and Applied Mathematics Quarterly}. 2013.
+
+\bibitem[Cos13b]{CostelloYangian}
+Kevin Costello.
+\newblock Supersymmetric gauge theory and the {Yangian}.
+\newblock {\em arXiv preprint arXiv:1303.2632}, 2013.
+
+\bibitem[CP95]{ChariPressley}
+Vyjayanthi Chari and Andrew Pressley.
+\newblock {\em A guide to quantum groups}.
+\newblock Cambridge University Press, 1995.
+
 \bibitem[CPT{\etalchar{+}}17]{CPTVV}
 Damien Calaque, Tony Pantev, Bertrand To{\"e}n, Michel Vaqui{\'e}, and Gabriele
   Vezzosi.
@@ -57,6 +74,13 @@ Ron Donagi and Dennis Gaitsgory.
 \newblock The gerbe of {H}iggs bundles.
 \newblock {\em Transform. Groups}, 7(2):109--153, 2002.
 
+\bibitem[Don03]{DonagiLectures}
+Ron Donagi.
+\newblock Geometry and integrability.
+\newblock In {\em Geometry and integrability}, volume 295 of {\em London Math.
+  Soc. Lecture Note Ser.}, pages 21--59. Cambridge Univ. Press, Cambridge,
+  2003.
+
 \bibitem[DP10]{DonagiPantev}
 Ron Donagi and Tony Pantev.
 \newblock Lectures on the geometric {Langlands} conjecture and non-abelian
@@ -64,11 +88,29 @@ Ron Donagi and Tony Pantev.
 \newblock {\em Second International School on Geometry and Physics Geometric
   Langlands and Gauge Theory}, page 129, 2010.
 
+\bibitem[Dri88]{DrinfeldQuantum}
+Vladimir Drinfeld.
+\newblock Quantum groups.
+\newblock {\em Journal of Soviet Mathematics}, 41:898--915, 1988.
+\newblock Originally published {\emph{Zap. Nauchn. Sem. POMI}}, 155:18--49,
+  1986.
+
+\bibitem[EK98]{EtingofKazhdanIII}
+Pavel Etingof and David Kazhdan.
+\newblock Quantization of {Lie} bialgebras, {III}.
+\newblock {\em Selecta Mathematica}, 4(2):233, 1998.
+
 \bibitem[EV98]{EtingofVarchenko}
 Pavel Etingof and Alexander Varchenko.
 \newblock Geometry and classification of solutions of the classical dynamical
   {Y}ang-{B}axter equation.
 \newblock {\em Comm. Math. Phys.}, 192(1):77--120, 1998.
+
+\bibitem[EY18]{ElliottYoo1}
+Chris Elliott and Philsang Yoo.
+\newblock Geometric {Langlands} twists of {$N=4$} gauge theory from derived
+  algebraic geometry.
+\newblock {\em Advances in Theoretical and Mathematical Physics}, 22(3), 2018.
 
 \bibitem[Fos13]{FoscoloThesis}
 Lorenzo Foscolo.
@@ -153,6 +195,11 @@ Tony Pantev, Bertrand To{\"e}n, Michel Vaqui{\'e}, and Gabriele Vezzosi.
 \newblock Shifted symplectic structures.
 \newblock {\em Publications math{\'e}matiques de l'IH{\'E}S}, 117(1):271--328,
   2013.
+
+\bibitem[QZ16]{QiuZabzine}
+Jian Qiu and Maxim Zabzine.
+\newblock On twisted {$\mc N= 2$} {5D} super {Yang--Mills} theory.
+\newblock {\em Letters in Mathematical Physics}, 106(1):1--27, 2016.
 
 \bibitem[Sha16]{Shapiro}
 Alexander Shapiro.

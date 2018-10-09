@@ -150,7 +150,7 @@ We need to verify that the image of a point in $\mhiggs_G(C,D,\omega^\vee)$ unde
 \chris{I don't want this section to have to be too rigorous, so make a comment to that effect.}
 We'll show that this fibration defines a completely integrable system in the rational case where $C = \bb{CP}^1$ with a framing at $\infty$.  We should first observe that the generic fibers are half-dimensional tori.  Computing the fibers of the Hitchin fibration works similarly to the non-singular case: a point in the base is, in particular, a map $C \bs D \to T/W$.  Suppose this map lands in the regular locus $T^{\mr{reg}}/W$, then an element of the fiber over this point defines, in particular, a map $C \bs D \to BT/W$.  We would like to argue that the fiber consists of $T$-bundles on the cameral cover $\wt C$: a $W$-fold cover of $C$ ramified at the divisor $D$ \chris{am I making an error here: is $D$ really the same as the ramification divisor?  Maybe they should be different, and in fact it should be ramified at points whose value is a point in $T/W$ with stabilizer (but these aren't regular!)}.
 
-In order to say this a bit more precisely this we'll compare our moduli space with the space of abstract Higgs bundles introduced by Donagi and Gaitsgory \cite{DonagiGaitsgory}.  Our argument will follow the same ideas as the arguments of \cite[Section 6]{HurtubiseMarkman}.
+In order to say this a bit more precisely this we'll compare our moduli space with the space of abstract Higgs bundles introduced by Donagi and Gaitsgory \cite{DonagiGaitsgory} (see also \cite{DonagiLectures}, where Donagi proposed the applicability of this abstract Higgs theory to the multiplicative situation and asked for a geometric interpretation).  Our argument will follow the same ideas as the arguments of \cite[Section 6]{HurtubiseMarkman}.
 
 \begin{definition}
 An \emph{abstract $G$-Higgs bundle} on a curve $C$ is a principal $G$-bundle $P$ along with a sub-bundle $\mf c$ of $\gg_P$ of \emph{regular centralizers}, meaning that the fibers are subalgebras of $\gg$ which arise as the centralizer of a regular element of $\gg$.  Write $\higgs_G^{\mr{abs}}(C)$ for the moduli stack of abstract $G$-Higgs bundles on $C$.
@@ -543,7 +543,7 @@ We can compute the composite operator $(\Ad_g^*)^{-1}\Ad_g^{-1}$ on $\mr{ad}(P)(
 using cyclic invariant to identify the two terms. 
 \end{proof}
 
-\chris{We haven't included an explicit comparison with the rational Poisson Lie group.  Perhaps include it here as a corollary.}
+We'll use this description of the pairing to compare our symplectic structure with the Poisson structure of the rational Poisson Lie group in Section \ref{quantization_section}.
 
 We can now establish our main result.
 \begin{theorem} \label{symplectic_comparison_thm}
@@ -621,7 +621,7 @@ where we identify $\zeta$ with an element of $\SO(3)$ and apply this rotation to
 Now, we'll perform our identification of the twistor deformation on the multiplicative Higgs side by rewriting this twistor rotation in a somewhat different way in the large $R$ limit.  In this limit we can identify the twistor rotation with the deformation obtained by replacing the product $\bb{CP}^1 \times S^1_R$ with the product twisted by an automorphism of $\RR^2$.  More precisely, the rotated symplectic structure can then be described in the following way.
 
 \begin{theorem}
-Let $\left(\mhiggs^{\text{ps,fr}}_G(\bb{CP}^1,D,\omega^\vee)\right)_{\zeta,R}$ be the family of complex manifolds obtained by pulling back the holomorphic symplectic structure $\omega_{\zeta,R}$ on $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ at $\zeta$ in the twistor sphere.  In the limit where $R \to \infty$ with $2 \pi \zeta R = \eps$ fixed this complex structure coincides with the complex structure on $\epsconn^{\text{ps,fr}}_G(\bb{CP}^1,D,\omega^\vee)$, in the sense that the complex structures converge uniformly over the moduli space of monopoles.
+Let $\left(\mhiggs^{\text{ps,fr}}_G(\bb{CP}^1,D,\omega^\vee)\right)_{\zeta,R}$ be the family of complex manifolds obtained by pulling back the holomorphic symplectic structure $\omega_{\zeta,R}$ on $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ at $\zeta$ in the twistor sphere.  In the limit where $R \to \infty$ with $2 \pi \zeta R = \eps$ fixed this complex structure coincides with the complex structure on $\epsconn^{\text{ps,fr}}_G(\bb{CP}^1,D,\omega^\vee)$, in the sense that the complex structures converge pointwise over the tangent bundle to the moduli space of monopoles. \chris{can we / would we like to say anything stronger than pointwise convergence?  The symplectic forms aren't finite for any $L^p$ norm, I think, though we can say e.g. that we have uniform convergence after multiplying by some suitable, e.g. Schwartz function on the tangent space?}
 \end{theorem}
 
 \begin{proof}
@@ -636,7 +636,7 @@ On the other hand we can identify the holomorphic symplectic structure on $\mon_
 \[\omega_\zeta(\delta^{(1)}\mc A, \delta^{(2)}\mc A) = \int_{\RR^3/(L_{R,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t.\]
 In particular, by tuning the radius and the shear parameter the above calculation means there's a hyperk\"ahler equivalence between the moduli spaces $\mon_G^{\text{ps,fr}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ -- after rotating the twistor sphere by $\zeta$ -- and $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_{\frac{\eps}{1+|\zeta|^2}} S^1_{R \frac {1-|\zeta|^2}{1+|\zeta|^2}},D,\omega^\vee)$.  
 
-Now, let's consider the large $R$ limit.  We'd like to note that the following difference of symplectic pairings converges to zero uniformly as $R\to \infty$.
+Now, let's consider the large $R$ limit.  We'd like to note that the following difference of symplectic pairings converges to zero pointwise as $R\to \infty$.
 \[ \left\lvert \int_{\RR^3/(L_{R \frac {1-|\zeta|^2}{1+|\zeta|^2},\frac{\eps}{1+|\zeta|^2}})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t - \int_{\RR^3/(L_{R,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t \right \rvert.\]
 Rescaling the radii of the circles only rescales the pairing by an overall constant, so we can rewrite this as 
 \[ R\left\lvert \frac {1-|\zeta|^2}{1+|\zeta|^2} \int_{\RR^3/(L_{1,\frac{\eps}{1+|\zeta|^2}})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t - \int_{\RR^3/(L_{1,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t \right \rvert\]
@@ -645,7 +645,7 @@ in which we recall that $\zeta = \frac \eps {2\pi R}$.  Write $\delta^{(i)}\mc A
 R\left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \frac {1-|\zeta|^2}{1+|\zeta|^2} \kappa(\delta^{(1)} \mc A_\zeta, \delta^{(2)} \mc A_\zeta)  -  \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t \right \rvert &= R \left\lvert \frac {1-|\zeta|^2}{1+|\zeta|^2} - 1 \right\rvert \left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t \right \rvert \\
 &= \left\lvert\frac {2R |\eps|^2}{4 \pi^2 R^2 + |\eps|^2} \right \rvert \left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t \right \rvert.
 \end{align*}
-Since the moduli space of monopoles is compact \chris{wait, it isn't is it?  So maybe we need a different kind of convergence here} this converges to zero uniformly as $R \to \infty$.  The same calculation proves uniform convergence for the other symplectic structures in the hyperk\"ahler family, and therefore uniform convergence for the two complex structures.
+This converges to zero pointwise as $R \to \infty$.  The same calculation proves convergence for the other symplectic structures in the hyperk\"ahler family, and therefore convergence for the two complex structures.
 \end{proof}
 
 \begin{remark}
@@ -654,7 +654,7 @@ Since the moduli space of monopoles is compact \chris{wait, it isn't is it?  So 
 
 \section{The Rational Poisson Lie Group and the Yangian} \label{quantization_section}
 
-Let us proceed by discussing the connection between the symplectic structure on the moduli space of multiplicative Higgs bundles in the rational case and the rational Poisson Lie group.  This connection should be compared to the connection between the elliptic moduli space and the elliptic quantum group in the work of Hurtubise and Markman.  
+Let us proceed by discussing the connection between the symplectic structure on the moduli space of multiplicative Higgs bundles in the rational case and the rational Poisson Lie group.  This connection should be compared to the connection between the elliptic moduli space and the elliptic quantum group in the work of Hurtubise and Markman \cite[Theorem 9.1]{HurtubiseMarkman}.  
 
 Consider the infinite-type moduli space $\mhiggs^{\text{fr,sing}}(\bb{CP}^1)$ of multiplicative Higgs bundles with arbitrary singularities.  There is a map
 \[r_\infty \colon \mhiggs^{\text{fr,sing}}(\bb{CP}^1) \to G_1[[z^{-1}]],\]
@@ -672,33 +672,39 @@ The map $r_\infty \colon \mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee) \to G_1[[z^{-1}]
 \end{theorem}
 
 \begin{proof}
-We just need to compute the pullback of the Poisson bracket on $\OO(G_1[[z^{-1}]])$ under $r_\infty$. \chris{...}
+We just need to compute the pullback of the Poisson bracket on $\OO(G_1[[z^{-1}]])$ under $r_\infty$.  This Poisson bracket is most easily described in terms of the rational $r$-matrix: that is, we have a linear map $r \colon \gg(\!(z)\!) \to \gg(\!(z)\!)$ defined by \chris{...}
 \end{proof}
 
-\chris{remark on the role played by the rational $r$-matrix?}
-
 \begin{remark}
-It's instructive to compare this calculation with the work of Shapiro \cite{Shapiro} on symplectic leaves for the rational Poisson Lie group.  According to Shapiro, and for the group $G = \GL_n$, there are symplectic leaves in $G_1[[z^{-1}]]$ indexed by Smith normal forms, i.e. by a sequence $d_1, \ldots, d_n$ of polynomials where $d_i | d_{i+1}$ for each $i$.  This data is equivalent to a dominant coweight coloured divisor $(D,\omega^\vee)$ in the following way.  The data of the sequence of polynomials is equivalent to the data of an increasing sequence $(D_1, \ldots, D_n)$ of $n$ effective divisors in $\bb{CP}^1$ disjoint from $\infty$: the tuples of roots of the polynomials $d_i$.  Let $D = \{z_1, \ldots, z_k\}$ be the support of the largest divisor $D_n$, and for each $z_j$ let $\omega^\vee_{z_j} = (m_1, \ldots, m_n)$ be the dominant coweight where $m_i$ is the order of the root $z_j$ in the polynomial $d_i$.  The dominant coweight Shapiro refers to as the ``type'' of a leaf is, therefore, the sum of all these coweights.
+It's instructive to compare this calculation with the work of Shapiro \cite{Shapiro} on symplectic leaves for the rational Poisson Lie group.  According to Shapiro, and for the group $G = \SL_n$, there are symplectic leaves in $G_1[[z^{-1}]]$ indexed by Smith normal forms, i.e. by a sequence $d_1, \ldots, d_n$ of polynomials where $d_i | d_{i+1}$ for each $i$.  This data is equivalent to a dominant coweight coloured divisor $(D,\omega^\vee)$ in the following way.  The data of the sequence of polynomials is equivalent to the data of an increasing sequence $(D_1, \ldots, D_n)$ of $n$ effective divisors in $\bb{CP}^1$ disjoint from $\infty$: the tuples of roots of the polynomials $d_i$.  Let $D = \{z_1, \ldots, z_k\}$ be the support of the largest divisor $D_n$, and for each $z_j$ let $\omega^\vee_{z_j} = (m_1, \ldots, m_n)$ be the dominant coweight where $m_i$ is the order of the root $z_j$ in the polynomial $d_i$.  The dominant coweight Shapiro refers to as the ``type'' of a leaf is, therefore, the sum of all these coweights.
 
-\chris{The claim is that taking the Taylor expansion at infinity defines a Poisson map to $\wt G \sub G_1[[z^{-1}]]$ sending symplectic leaves to (discrete) unions of symplectic leaves.  One can do the classification more completely in the type A case.}
+To be a little more precise, Shapiro proves that for $G = \SL_n$ these symplectic leaves span the Poisson subgroup $\mc G \sub G_1[[z^{-1}]]$ of elements that can be factorized as the product of a polynomial element in $G_1[z^{-1}]$ and a monic $\CC$-valued power series.  In fact, the map $r_\infty$ (for any group, not necessarily $G = \SL_n$) factors through the subgroup $\mc G$: the Taylor expansion of all \emph{rational} $G$ valued functions can be factorized in this way.  As a consequence, Theorem \ref{Poisson_Lie_Comparison_thm} implies that our symplectic leaves for the group $\SL_n$ agree with Shapiro's symplectic leaves.
 \end{remark}
 
-This comparison has an interesting consequence upon quantization.  The Poisson algebra $\OO(G_1[[z^{-1}]])$ has a well-studied quantization to the \emph{Yangian} $Y(\gg)$.
+This comparison has interesting consequences upon quantization.  The Poisson algebra $\OO(G_1[[z^{-1}]])$ has a well-studied quantization to the \emph{Yangian} $Y(\gg)$.  This is the unique Hopf algebra quantizing the algebra $U(\gg[z])$ with first order correction determined by the Lie bialgebra structure on $\gg[z]$.  Recall that $(\gg(\!(z)\!), \gg[z], \gg_1[[z^{-1}]])$ is a Manin triple, so the residue pairing on $\gg(!(z)\!)$ induces an isomorphism between $\gg_1[[z^{-1}]]$ and the dual to $\gg[z]$, and therefore a Lie cobracket on $\gg[z]$.  The uniqueness of this quantization is a theorem of Drinfeld \cite{DrinfeldQuantum}.
 
 \begin{definition}
-\chris{define the Yangian, take care with completions.  References?}
+The \emph{Yangian} of the Lie algebra $\gg$ is the unique $\CC[[\hbar]]$-linear Hopf algebra $Y(\gg)$ where when we set $\hbar=0$ we recover $Y(\gg) \otimes_{\CC[[\hbar]]} \CC \iso U(\gg[z])$, and where the first order  \chris{... also References?  For instance \cite{CostelloYangian}, \cite{EtingofKazhdanIII} and \cite{ChariPressley}.}
 \end{definition}
 
-\chris{deformation quantization of functions on mHiggs, and of the Poisson map from $\OO(G_1[[z^{-1}]])$.  There's a possibility of an anomaly.  Probably the following should actually be a conjecture?}
+Likewise, we can study deformation quantization for the algebra $\OO(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$ of functions on our symplectic moduli space.  This moduli space is, in particular, a smooth finite-dimensional Poisson manifold, so its algebra of functions can be quantized, for instance using Kontsevich's results on formality.
+
+\begin{definition}
+The quantum algebra of functions $\OO_\hbar(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$ is \chris{deformation quantization: note the choices that need to be made.  Drinfeld associator / choice of formality equivalence?}
+\end{definition}
+
+\chris{There's a possibility of an anomaly for the Poisson morphism.  Probably the following should actually be a conjecture?  Can then discuss how Shapiro and GKLO verify the conjecture in some special cases (for GKLO: the case where all the singularities are at $0 \in \bb{CP}^1$).}
 
 \begin{corollary}
 The quantum algebra of functions $\OO_\hbar(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$ has the structure of a $Y(\gg)$-module for each choice $(D,\omega^\vee)$ of residue data.
 \end{corollary}
 
-\chris{Include some discussion on how we can think of $\OO_\hbar(\mhiggs^{\text{fr,sing}}(\bb{CP}^1))$ as an intermediate Poisson Lie group between the Yangian and something dual to it.  References and a remark on the comparison with the conjectures made in \cite[Chapter 8.1]{NekrasovPestun}.  Include some words about $q$-Opers and $q$-W algebras, citing Sevostyanov et al and Aganagic-Frenkel-Okounkov \cite{AFO}.  Remark on the comparison with our modules and those of \cite{GKLO} -- would need some kind of Nahm transform story to relate our periodic monopoles with the Zastava spaces that appear in that work.}
+\chris{Include some discussion on how we can think of $\OO_\hbar(\mhiggs^{\text{fr,sing}}(\bb{CP}^1))$ as an intermediate quantum group between the Yangian and something dual to it.  References and a remark on the comparison with the conjectures made in \cite[Chapter 8.1]{NekrasovPestun}.  Include some words about $q$-Opers and $q$-W algebras, citing Sevostyanov et al and Aganagic-Frenkel-Okounkov \cite{AFO}.  Remark on the comparison with our modules and those of \cite{GKLO} -- would need some kind of Nahm transform story to relate our periodic monopoles with the Zastava spaces that appear in that work.}
 
 \section{Twisted Gauge Theory}
-\chris{calculations of the twist of 5d $\mc N=2$ super Yang-Mills with monopole operators yielding out moduli spaces}
+In this section we'll discuss yet another occurence of the moduli space of multiplicative Higgs bundles via gauge theory.  This story is distinct from the appearance of the moduli space in \cite{NekrasovPestun} as the Seiberg-Witten integral system of a 4d $\mc N=2$ theory.  Instead the moduli space will appear as the moduli space of solutions to the equations of motion in a twisted 5d $\mc N=2$ supersymmetric gauge theory, compactified on a circle.  This story will be directly analogous to the occurence of the ordinary moduli stack of Higgs bundles in a holomorphic twist of 4d $\mc N=4$ theory (see \cite{CostelloSH,ElliottYoo1} for a discussion of this story); we'll recover that example in the limit where the radius of the circle shrinks to zero.
+
+\chris{calculations of the twist of 5d $\mc N=2$ super Yang-Mills with monopole operators yielding our moduli spaces}
 
 \section{Langlands Duality}
 \chris{For a first draft I'm inserting some notes I prepared for a talk.  Todo: talk about motivation and the content we discussed regarding non-simply-laced groups}

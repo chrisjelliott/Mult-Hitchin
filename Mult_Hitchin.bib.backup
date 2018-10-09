@@ -454,66 +454,9 @@ MRREVIEWER = {Olivier G. Schiffmann},
 @article{DrinfeldQuantum,
   title={Quantum groups},
   author={Drinfeld, Vladimir},
-  journal={Journal of Soviet Mathematics},
-  volume={41},
-  issue={3},
-  year={1988},
-  pages={898--915},
-  note={Originally published {\emph{Zap. Nauchn. Sem. POMI}}, 155:18--49, 1986}
+  journal={Zapiski Nauchnykh Seminarov POMI},
+  volume={155},
+  pages={18--49},
+  year={1986},
+  publisher={St. Petersburg Department of Steklov Institute of Mathematics, Russian Academy of Sciences}
 }
-
-@article{CostelloYangian,
-  title={Supersymmetric gauge theory and the {Yangian}},
-  author={Costello, Kevin},
-  journal={arXiv preprint arXiv:1303.2632},
-  year={2013}
-}
-
-@book{ChariPressley,
-  title={A guide to quantum groups},
-  author={Chari, Vyjayanthi and Pressley, Andrew},
-  year={1995},
-  publisher={Cambridge University Press}
-}
-
-@article{EtingofKazhdanIII,
-  title={Quantization of {Lie} bialgebras, {III}},
-  author={Etingof, Pavel and Kazhdan, David},
-  journal={Selecta Mathematica},
-  volume={4},
-  number={2},
-  pages={233},
-  year={1998},
-  publisher={Springer}
-}
-
-@incollection{CostelloSH,
-	Author = {Costello, Kevin},
-	Booktitle = {Special Issue: In Honor of Dennis Sullivan},
-	Number = {1},
-	Series = {Pure and Applied Mathematics Quarterly},
-	Title = {Notes on supersymmetric and holomorphic field theories in dimensions 2 and 4},
-	Volume = {9},
-	Year = {2013}}
-
-@article{ElliottYoo1,
-	Author = {Elliott, Chris and Yoo, Philsang},
-	Journal = {Advances in Theoretical and Mathematical Physics},
-	Volume={22},
-	Number={3},
-	Title = {Geometric {Langlands} Twists of {$N=4$} Gauge Theory from Derived Algebraic Geometry},
-	Year = {2018}}
-
-@article{QiuZabzine,
-	Archiveprefix = {arXiv},
-	Author = {Qiu, Jian and Zabzine, Maxim},
-	Date-Modified = {2018-05-03 13:46:04 +0000},
-	Eprint = {1409.1058},
-	Journal = {Letters in Mathematical Physics},
-	Number = {1},
-	Pages = {1--27},
-	Primaryclass = {hep-th},
-	Publisher = {Springer},
-	Title = {On twisted {$\mc N= 2$} {5D} super {Yang--Mills} theory},
-	Volume = {106},
-	Year = {2016}}
