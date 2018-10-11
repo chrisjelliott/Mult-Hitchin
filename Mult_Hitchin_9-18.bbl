@@ -88,12 +88,11 @@ Ron Donagi and Tony Pantev.
 \newblock {\em Second International School on Geometry and Physics Geometric
   Langlands and Gauge Theory}, page 129, 2010.
 
-\bibitem[Dri88]{DrinfeldQuantum}
-Vladimir Drinfeld.
-\newblock Quantum groups.
-\newblock {\em Journal of Soviet Mathematics}, 41:898--915, 1988.
-\newblock Originally published {\emph{Zap. Nauchn. Sem. POMI}}, 155:18--49,
-  1986.
+\bibitem[Dri90]{DrinfeldQuantum1}
+Vladimir Drinfel'd.
+\newblock Hopf algebras and the quantum {Yang-Baxter} equation.
+\newblock In {\em {Yang-Baxter} Equation in Integrable Systems}, pages
+  264--268. World Scientific, 1990.
 
 \bibitem[EK98]{EtingofKazhdanIII}
 Pavel Etingof and David Kazhdan.
@@ -135,8 +134,15 @@ Edward Frenkel, Nicolai Reshetikhin, and Michel Semenov-Tian-Shansky.
   deformations of-{$\mc W$}algebras $i$. the case of {Virasoro} algebra.
 \newblock {\em Communications in mathematical physics}, 192(3):605--629, 1998.
 
+\bibitem[GKL04]{GKL}
+Anton Gerasimov, Sergei Kharchev, and Dimitri Lebedev.
+\newblock Representation theory and quantum inverse scattering method: the open
+  {Toda} chain and the hyperbolic {Sutherland} model.
+\newblock {\em International Mathematics Research Notices}, 2004(17):823--854,
+  2004.
+
 \bibitem[GKLO05]{GKLO}
-A.~Gerasimov, S.~Kharchev, D.~Lebedev, and S.~Oblezin.
+Anton Gerasimov, Sergei Kharchev, Dimitri Lebedev, and Sergey Oblezin.
 \newblock On a class of representations of the {Y}angian and moduli space of
   monopoles.
 \newblock {\em Comm. Math. Phys.}, 260(3):511--525, 2005.

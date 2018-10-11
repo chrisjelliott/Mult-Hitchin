@@ -6,45 +6,45 @@ Database file #1: Mult_Hitchin.bib
 Warning--can't use both volume and number fields in CostelloSH
 Warning--empty publisher in CostelloSH
 Warning--there's a number but no volume in Shapiro
-You've used 40 entries,
+You've used 41 entries,
             2543 wiz_defined-function locations,
-            828 strings with 10753 characters,
-and the built_in function-call counts, 14907 in all, are:
-= -- 1532
-> -- 647
-< -- 21
-+ -- 211
-- -- 205
-* -- 1076
-:= -- 2493
-add.period$ -- 125
-call.type$ -- 40
-change.case$ -- 230
-chr.to.int$ -- 39
-cite$ -- 43
-duplicate$ -- 599
-empty$ -- 1080
-format.name$ -- 259
-if$ -- 2994
+            836 strings with 11041 characters,
+and the built_in function-call counts, 15490 in all, are:
+= -- 1594
+> -- 672
+< -- 22
++ -- 220
+- -- 214
+* -- 1117
+:= -- 2577
+add.period$ -- 128
+call.type$ -- 41
+change.case$ -- 237
+chr.to.int$ -- 40
+cite$ -- 44
+duplicate$ -- 626
+empty$ -- 1125
+format.name$ -- 269
+if$ -- 3125
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 40
-newline$ -- 205
-num.names$ -- 120
-pop$ -- 175
+missing$ -- 41
+newline$ -- 209
+num.names$ -- 123
+pop$ -- 185
 preamble$ -- 1
-purify$ -- 274
+purify$ -- 282
 quote$ -- 0
-skip$ -- 496
+skip$ -- 519
 stack$ -- 0
-substring$ -- 863
-swap$ -- 68
-text.length$ -- 21
+substring$ -- 902
+swap$ -- 78
+text.length$ -- 22
 text.prefix$ -- 15
 top$ -- 0
-type$ -- 312
+type$ -- 320
 warning$ -- 3
-while$ -- 154
-width$ -- 45
-write$ -- 519
+while$ -- 160
+width$ -- 46
+write$ -- 531
 (There were 3 warnings)
