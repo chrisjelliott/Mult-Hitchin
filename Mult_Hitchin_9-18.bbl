@@ -1,5 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{FRSTS98}
+\begin{thebibliography}{KWWY14}
 
 \bibitem[AB01]{AnchoucheBiswas}
 Boudjemaa Anchouche and Indranil Biswas.
@@ -94,11 +94,6 @@ Vladimir Drinfel'd.
 \newblock In {\em {Yang-Baxter} Equation in Integrable Systems}, pages
   264--268. World Scientific, 1990.
 
-\bibitem[EK98]{EtingofKazhdanIII}
-Pavel Etingof and David Kazhdan.
-\newblock Quantization of {Lie} bialgebras, {III}.
-\newblock {\em Selecta Mathematica}, 4(2):233, 1998.
-
 \bibitem[EV98]{EtingofVarchenko}
 Pavel Etingof and Alexander Varchenko.
 \newblock Geometry and classification of solutions of the classical dynamical
@@ -164,6 +159,22 @@ Jacques Hurtubise and Eyal Markman.
   groups.
 \newblock {\em Advances in Theoretical and Mathematical Physics},
   6(5):873--978, 2002.
+
+\bibitem[Jar98]{Jarvis}
+Stuart Jarvis.
+\newblock Euclidian monopoles and rational maps.
+\newblock {\em Proceedings of the London Mathematical Society}, 77(1):170--192,
+  1998.
+
+\bibitem[Kon03]{KontsevichQuantization}
+Maxim Kontsevich.
+\newblock Deformation quantization of {Poisson} manifolds.
+\newblock {\em Letters in Mathematical Physics}, 66(3):157--216, 2003.
+
+\bibitem[KWWY14]{KWWY}
+Joel Kamnitzer, Ben Webster, Alex Weekes, and Oded Yacobi.
+\newblock Yangians and quantizations of slices in the affine {G}rassmannian.
+\newblock {\em Algebra \& Number Theory}, 8(4):857--893, 2014.
 
 \bibitem[Moc17]{Mochizuki}
 Takuro Mochizuki.

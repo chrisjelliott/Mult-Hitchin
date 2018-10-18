@@ -3,48 +3,49 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Mult_Hitchin_9-18.aux
 The style file: alpha.bst
 Database file #1: Mult_Hitchin.bib
+Warning--I didn't find a database entry for "EgingofKazhdanIII"
 Warning--can't use both volume and number fields in CostelloSH
 Warning--empty publisher in CostelloSH
 Warning--there's a number but no volume in Shapiro
-You've used 41 entries,
+You've used 43 entries,
             2543 wiz_defined-function locations,
-            836 strings with 11041 characters,
-and the built_in function-call counts, 15490 in all, are:
-= -- 1594
-> -- 672
-< -- 22
-+ -- 220
-- -- 214
-* -- 1117
-:= -- 2577
-add.period$ -- 128
-call.type$ -- 41
-change.case$ -- 237
-chr.to.int$ -- 40
-cite$ -- 44
-duplicate$ -- 626
-empty$ -- 1125
-format.name$ -- 269
-if$ -- 3125
+            853 strings with 11391 characters,
+and the built_in function-call counts, 16329 in all, are:
+= -- 1684
+> -- 700
+< -- 24
++ -- 230
+- -- 224
+* -- 1187
+:= -- 2708
+add.period$ -- 134
+call.type$ -- 43
+change.case$ -- 249
+chr.to.int$ -- 42
+cite$ -- 46
+duplicate$ -- 656
+empty$ -- 1189
+format.name$ -- 283
+if$ -- 3291
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 41
-newline$ -- 209
-num.names$ -- 123
-pop$ -- 185
+missing$ -- 43
+newline$ -- 219
+num.names$ -- 129
+pop$ -- 193
 preamble$ -- 1
-purify$ -- 282
+purify$ -- 296
 quote$ -- 0
-skip$ -- 519
+skip$ -- 541
 stack$ -- 0
-substring$ -- 902
-swap$ -- 78
-text.length$ -- 22
-text.prefix$ -- 15
+substring$ -- 982
+swap$ -- 80
+text.length$ -- 24
+text.prefix$ -- 17
 top$ -- 0
-type$ -- 320
+type$ -- 336
 warning$ -- 3
-while$ -- 160
-width$ -- 46
-write$ -- 531
-(There were 3 warnings)
+while$ -- 169
+width$ -- 47
+write$ -- 557
+(There were 4 warnings)

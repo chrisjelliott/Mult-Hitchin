@@ -28,6 +28,25 @@
 \end{abstract}
 
 \section{Introduction}
+\chris{
+Preliminary notes: phrase it as comparing a number of different descriptions of the same moduli space and natural structures thereon.  The descriptions are:
+\begin{enumerate}
+\item Multiplicative Higgs
+\item Periodic monopoles
+\item A symplectic leaf in the Poisson Lie group
+\item The Seiberg-Witten system associated to an ADE $\mc N=2$ quiver gauge theory
+\item The phase space of a twisted 5d $\mc N=2$ super Yang-Mills theory.  
+\end{enumerate}
+The natural structures are: 
+\begin{enumerate}[label=\alph*.]
+\item Holomorphic symplectic structure (equivalent descriptions from each of the points of view 1-4).
+\item Promotion to a hyperk\"ahler structure (naturally comes from 2, but also 4). 
+\item Even more so, algebraic integrable system structure (can describe from point of view 1, but also 4).
+\item Deformation to q-connections (from point of view 1, 2 or 5). 
+\item The Hitchin section and the moduli space of q-Opers (most naturally from 1, though there are physical implications).  
+\item Multiplicative Langlands duality (point of view 5).
+\end{enumerate}}
+
 
 \section{Multiplicative Higgs Bundles and $q$-Connections}
 We'll begin with an abstract definition of the moduli spaces we'll investigate in this paper using the language of derived algebraic geometry.
@@ -691,29 +710,36 @@ The \emph{Yangian} of the Lie algebra $\gg$ is the unique graded topological Hop
 for all elements $f \in Y(\gg)$.  Here $\sigma$ is the braiding automorphism of $Y(\gg)^{\otimes 2}$ (i.e. $\sigma(f \otimes g) = g \otimes f$).
 \end{definition}
 
-There is a very extensive literature on the Yangian and related quantum groups.  For more information we refer the reader to \chris{References?  For instance \cite{CostelloYangian}, \cite{EtingofKazhdanIII} and \cite{ChariPressley}.}
+There is a very extensive literature on the Yangian and related quantum groups.  The general theory for quantization of Poisson Lie groups, including the Yangian, was developed by Etingof and Kazhdan \cite{EgingofKazhdanIII}.  For more information we refer the reader to Chari and Pressley \cite{ChariPressley}, or for the Yangian specifically to the concise introduction in \cite[Section 9]{CostelloYangian}.
 
-Likewise, we can study deformation quantization for the algebra $\OO(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$ of functions on our symplectic moduli space.  This moduli space is, in particular, a smooth finite-dimensional Poisson manifold, so its algebra of functions can be quantized, for instance using Kontsevich's results on formality.
+Likewise, we can study deformation quantization for the algebra $\OO(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$ of functions on our symplectic moduli space.  This moduli space is, in particular, a smooth finite-dimensional Poisson manifold, so its algebra of functions can be quantized, for instance using Kontsevich's results on formality \cite{KontsevichQuantization}.
 
 \begin{definition}
-The quantum algebra of functions $\OO_\hbar(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$ is \chris{deformation quantization: note the choices that need to be made.  Drinfeld associator / choice of formality equivalence?}
+The quantum algebra of functions $\OO_\hbar(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$ is a choice of deformation quantization of the Poisson algebra $\OO(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$.  That is, an associative $\CC[[\hbar]]$-algebra where the antisymmetrization of the first order term in $\hbar$ of the product recovers the Poisson bracket. 
 \end{definition}
 
-\chris{There's a possibility of an anomaly for the Poisson morphism.  Probably the following should actually be a conjecture?  Can then discuss how Shapiro and GKLO verify the conjecture in some special cases (for GKLO: the case where all the singularities are at $0 \in \bb{CP}^1$).}
+While we have a Poisson morphism $\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee) \to G_1[[z^{-1}]]$ by Theorem \ref{Poisson_Lie_Comparison_thm}, and therefore a map of Poisson algebras $\OO(G_1[[z^{-1}]]) \to \OO(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$ there's no automatic guarantee that we can choose a quantization of the target admitting an algebra map from the Yangian quantizing this Poisson map -- one would need to verify the absence of an anomaly obstructing quantization.  There is however a natural model for this quantization, to a $Y(\gg)$-module,  constructed by Gerasimov, Kharchev, Lebedev and Oblezin \cite{GKLO} (extending an earlier calculation \cite{GKL} for $\gg = \gl_n$).
 
 \begin{theorem}
-There is, for each choice $(D,\omega^\vee)$ of residue data, a deformation quantization $\OO_\hbar(\mhiggs^\fr_{SL_n}(\bb{CP}^1,D,\omega^\vee))$ of the algebra of functions on the multiplicative Higgs moduli space with the structure of a $Y(\sl_n)$-module.
+For any reductive group $G$, and any choice of residue data, the Poisson map $\OO(G_1[[z^{-1}]]) \to \OO(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$ quantizes to a $Y(\gg)$-module structure on a deformation quantization $\OO_\hbar(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$ of the algebra of functions on the multiplicative Higgs moduli space.  
 \end{theorem}
 
 \begin{proof}
-\chris{I think this is a consequence of the combination of \cite{GKLO} (see also \cite{GKL}, though this doesn't talk about the classical limits / monopoles) and \cite{Shapiro}: The former describes the modules and computes their classical limits, then the latter proves that those classical limits are equivalent to the Smith Normal Form symplectic leaves.}
+\chris{todo, reorganize}
+One can verify this claim by studying the classical limits of the $Y(\gg)$-modules from \cite{GKLO}.  Gerasimov, Kharchev, Lebedev and Oblezin -- henceforth referred to as GKLO -- constructed $Y(\gg)$-modules for any semisimple Lie algebra $\gg$ indexed by the data of a dominant coweight-coloured divisor $(D, \omega^\vee)$.  As in Shapiro, this data is encoded in the form of a set $\nu_{i,k}$ of complex numbers, where $i$ varies over simple roots of $\gg$: the coweight at a point $z \in D$ is encoded by the vector $(m_1, \ldots, m_r)$ where $m_i = \lvert\{\nu_{i,k} = z\}\rvert$.  Let us denote this module by $M_{D,\omega^\vee}$.
+
+GKLO discuss the classical limits of these modules $M_{D,\omega^\vee}$ as symplectic subvarieties of the Poisson Lie group.  This is discussed with further detail in \cite[Section 4]{Shapiro}.  In particular, one can compare the Poisson Lie group with the Zastava space for the group $G$.  Recall that  moduli spaces of (non-periodic) monopoles on $\bb{CP}^1$ can be modelled by spaces of framed maps from $\bb{CP}^1$ to the flag variety $G/B$, sending $\infty$ to the point $[B]$ (this is Jarvis's description of monopoles via scattering data \cite{Jarvis}).  The space $\mr{Map}_{\alpha^\vee}^\fr(\bb{CP}^1, G/B)$ of monopoles of degree $\alpha^\vee$ (where $\alpha^\vee$ is a positive coroot, identified as a class in $\mr H_2(G/B;\ZZ)$) admits a compactification known as \emph{Zastava space}.  Concretely, this is a stratified algebraic variety, with stratification given by
+\[Z_{\alpha^\vee}(G) = \coprod_{\beta^\vee \preceq \alpha^\vee} \mr{Map}_{\alpha^\vee}^\fr(\bb{CP}^1, G/B) \times \sym^{\alpha^\vee - \beta^\vee}(\CC),\]
+where the factor $\sym^{\alpha^\vee - \beta^\vee}(\CC)$ represents the space of coloured divisors $(D, \omega^\vee)$ with $\sum_{z_i \in D} \omega^\vee_{z_i} = \alpha^\vee - \beta^\vee$.  We refer the reader to \chris{refs} for more information.
+
+Using a birational map to this Zastava space, GKLO show that the union of symplectic leaves corresponding to representations of a given type (meaning a given sum $\sum \omega^\vee_{z_i}$) is equivalent to the union of the classical leaves of that given type.  It is, therefore, reasonable to conjecture that the decompositions of these two varieties into their individual symplectic leaves (i.e. into decompositions of $\sum \omega^\vee_{z_i}$ labelled by points in $\CC$) should coincide.  We should note that this doesn't seem to follow directly from the GKLO calculations.  They analyse the symplectic leaves corresponding to the classical limits of $Y(\gg)$-modules via a rational map, denoted by $e_i(z) = b_i(z)/a_i(z)$, defined on an open set of this symplectic leaf.  This rational map is, by construction, not sensitive to the positions of the singularities, only of the total type of a representation.
+
+Nevertheless, the symplectic leaves obtained as classical limits of the $Y(\gg)$-modules $M_{D,\omega^\vee}$ \emph{are} symplectic subvarieties of the Poisson Lie group sweeping out the union of symplectic leaves of a given type.  In particular every symplectic leaf $\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee)$ quantizes to some module within the GKLO classification as required.
 \end{proof}
 
-The $Y(\gg)$-modules in question, as constructed in \cite{GKLO}, make sense for a general reductive group.  Although we don't have access to the Nahm transform for general $G$, so we can't repeat the above argument directly, it's still natural to make the following conjecture.
-
-\begin{conjecture}
-For any reductive group $G$, and any choice of residue data, the Poisson map $\OO(G_1[[z^{-1}]]) \to \OO(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$ quantizes to a $Y(\gg)$-module structure on a deformation quantization $\OO_\hbar(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$ of the algebra of functions on the multiplicative Higgs moduli space.  Specifically, this $Y(\gg)$-module is isomorphic to the module \chris{notation} defined in \cite{GKLO}.
-\end{conjecture}
+\begin{example}
+One example is given by the case where the only pole lies at $0 \in \CC$, so the map to the Poisson Lie group $G_1[[z^{-1}]]$ factors through the polynomial group $G_1[z^{-1}]$.  This example is included in the work of Kamnitzer, Webster, Weekes and Yacobi \cite{KWWY} (though they also went much further), who show in particular that \chris{...}
+\end{example}
 
 We'll conclude this section with some additional discussion about 
 \chris{Include some discussion on how we can think of $\OO_\hbar(\mhiggs^{\text{fr,sing}}(\bb{CP}^1))$ as an intermediate quantum group between the Yangian and something dual to it.  References and a remark on the comparison with the conjectures made in \cite[Chapter 8.1]{NekrasovPestun}.  Include some words about $q$-Opers and $q$-W algebras, citing Sevostyanov et al and Aganagic-Frenkel-Okounkov \cite{AFO}.  Remark on the comparison with our modules and those of \cite{GKLO} -- would need some kind of Nahm transform story to relate our periodic monopoles with the Zastava spaces that appear in that work.}
@@ -727,11 +753,14 @@ With the background in hand, we'll focus in on the example we're interested in. 
 
 \begin{definition}
 The complexified $\mc N=2$ supersymmetry algebra in dimension 5 is the super Lie algebra
-\[(\sp(4;\CC) \oplus \sp(2;\CC)_R \oplus V) \oplus \Pi(S \otimes W),\]
-where $V$ is the five-dimensional defining representation of $\so(5;\CC) \iso \sp(4;\CC)$, $W$ is the two-dimensional defining representation of $\sp(2;\CC)_R$, and where there's an additional bracket $\Gamma \colon \sym^2(S \otimes W) \to V$ defined in the following way.  We can project $\sym^2(S \otimes W)$ onto $\wedge^2(S) \otimes \wedge^2(W)$.  The first factor decomposes as an $\sp(4;\CC)$-module into irreducible summands $V \oplus \CC$.  The second factor is isomorphic as an $\sp(2;\CC)_R$-module to $\CC$.  There is, therefore, a $\sp(4;\CC) \oplus \sp(2;\CC)_R$-equivariant projection $\wedge^2(S) \otimes \wedge^2(W) \to V \otimes \CC$ as required.
+\[(\sp(4;\CC) \oplus \sp(4;\CC)_R \oplus V) \oplus \Pi(S \otimes W),\]
+where $V$ is the five-dimensional defining representation of $\so(5;\CC) \iso \sp(4;\CC)$, $W$ is the four-dimensional defining representation of $\sp(4;\CC)_R$, and where there's an additional bracket $\Gamma \colon \sym^2(S \otimes W) \to V$ defined in the following way.  We can project $\sym^2(S \otimes W)$ onto $\wedge^2(S) \otimes \wedge^2(W)$.  The first factor decomposes as an $\sp(4;\CC)$-module into irreducible summands $V \oplus \CC$.  The second factor likewise decomposes as an $\sp(4;\CC)_R$-module into $V \oplus \CC$.  There is, therefore, a $\sp(4;\CC) \oplus \sp(4;\CC)_R$-equivariant projection $\wedge^2(S) \otimes \wedge^2(W) \to V \otimes \CC$ as required.
 \end{definition}
 
-Now, let's describe the locus of elements $Q \in S \otimes W$ such that $\Gamma(Q,Q) = 0$.  \chris{then twisting homomorphisms compatible with the relevant supercharges -- the ones with 4d image.}
+Now, let's describe the locus of elements $Q \in S \otimes W$ such that $\Gamma(Q,Q) = 0$.  We think of the $\sp(4;\CC) \oplus \sp(4;\CC)_R$-module $S \otimes W$ as the space of 4-by-4 matrices, where the two copies of $\sp(4;\CC)$ act by left and right matrix multiplication respectively.
+
+
+Square-zero supercharges can be classified by the dimension of their image $\Gamma(Q,-) \sub \CC^5$, so for instance supercharges with 5-dimensional image are topological.  We'll be interested in twists which are not quite topological, but instead have 4-dimensional image.  These elements all have rank 2 in $S \otimes W$.  \chris{then twisting homomorphisms compatible with the relevant supercharges -- the ones with 4d image.}
 
 \chris{This section needs to include: 1) A description of the relevant twist and the 5-manifolds it's defined on (think about the connection to the theory studied in \cite{QiuZabzine}).  2) An easy calculation of the twisted BV complex / moduli space, with a remark on the algebraic structure. 3) A definition of the 't Hooft surface operators and a description of the effect on the calculation of the twist. 4) A comment on the $R \to 0$ limit and the ordinary holomorphic twist of 4d $\mc N=4$.}
 
