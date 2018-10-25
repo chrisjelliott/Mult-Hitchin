@@ -28,24 +28,113 @@
 \end{abstract}
 
 \section{Introduction}
-\chris{
-Preliminary notes: phrase it as comparing a number of different descriptions of the same moduli space and natural structures thereon.  The descriptions are:
+
+In this paper, we will be concerned with the geometric structures associated to five parallel moduli spaces: three coming from geometry and representation theory, and two coming from supersymmetric gauge theory.  In fact, all five of these moduli spaces are equivalent.  By leveraging these multiple perspectives we'll equip our common moduli space with the structure of a completely integrable system which we call the \emph{multiplicative Hitchin system}.  Many of the structures associated with the ordinary Hitchin system, such as the brane of opers, have parallels in the multiplicative setting.  
+
+Let us begin by presenting these five perspectives, before explaining their inter-relationships.  Let $C$ be a Riemann surface, and let $G$ be a reductive complex Lie group.
+\vspace{-10pt}
 \begin{enumerate}
-\item Multiplicative Higgs
-\item Periodic monopoles
-\item A symplectic leaf in the Poisson Lie group
-\item The Seiberg-Witten system associated to an ADE $\mc N=2$ quiver gauge theory
-\item The phase space of a twisted 5d $\mc N=2$ super Yang-Mills theory.  
+ \item We'll first describe the moduli space that motivates the ``multiplicative Hitchin system'' terminology.  Say that a \emph{multiplicative Higgs bundle} on $C$ is a principal $G$-bundle $P$ on $C$ with a meromorphic automorphism $g \colon P \to P$, or equivalently, a meromorphic section of $\mr{Ad}_P$.  We refer to these by analogy with Higgs bundles, which consist of a meromorphic section of the Lie algebra (co)adjoint bundle, rather than its Lie group valued analogue \footnote{Usually Higgs bundles on a curve are defined to be sections of the coadjoint bundle twisted by the canonical bundle.  There isn't an obvious replacement for this twist in the multiplicative context, but we'll mostly be interested in the case where $C$ is Calabi-Yau, and therefore this twist is trivial.}.  Just like for ordinary Higgs bundles, the space of multiplicative meromorphic Higgs bundles with arbitrary poles is infinite-dimensional, but we can cut it down to a finite-dimensional space by fixing the locations of the singularities, and their residues.  These residues are described by \chris{...}
+ 
+ Moduli spaces of multiplicative Higgs bundles have been studied in the literature previously, though they're more often referred to as ``moduli spaces of pairs''. \chris{refs: Frenkel-Ngo, Charbonneau-Hurtubise, Hurtubise-Markman, Bouthier}
+ 
+ Let $C = \bb{CP}^1$ and consider the \emph{moduli space of multiplicative Higgs bundles} on $\bb{CP}^1$ with prescribed singularities lying at the points $D = \{z_1, \ldots, z_k\}$, with residues $\omega_{z_1}^\vee, \ldots, \omega_{z_k}^\vee$ respectively, and with a fixed framing at $\infty$.  This moduli space is a smooth algebraic variety with dimension depending on the coweights we chose.
+ 
+ \chris{structure to describe: Hitchin system, symplectic structure, $q$-connections.}
+ 
+\item \chris{Periodic monopoles.  Mention the hyperk\"ahler structure.}
+\item \chris{A symplectic leaf in the Poisson Lie group.  Obviously this is symplectic.  Match classification with Shapiro, mention quantization and GKLO.}
+\item \chris{The Seiberg-Witten system associated to an ADE $\mc N=2$ quiver gauge theory: Nekrasov-Pestun, mention elliptic generalizations, conjectures related to the Yangian}
+\item \chris{The phase space of a twisted 5d $\mc N=2$ super Yang-Mills theory.  From this point of view, mention multiplicative Langlands.}
 \end{enumerate}
-The natural structures are: 
-\begin{enumerate}[label=\alph*.]
-\item Holomorphic symplectic structure (equivalent descriptions from each of the points of view 1-4).
-\item Promotion to a hyperk\"ahler structure (naturally comes from 2, but also 4). 
-\item Even more so, algebraic integrable system structure (can describe from point of view 1, but also 4).
-\item Deformation to q-connections (from point of view 1, 2 or 5). 
-\item The Hitchin section and the moduli space of q-Opers (most naturally from 1, though there are physical implications).  
-\item Multiplicative Langlands duality (point of view 5).
-\end{enumerate}}
+
+\subsection{Twisted Gauge Theory}
+
+\chris{note: include citation / discussion of new paper by Costello and Yagi \cite{CostelloYagi}.}
+
+In this section we'll discuss yet another occurence of the moduli space of multiplicative Higgs bundles via gauge theory.  This story is distinct from the appearance of the moduli space in \cite{NekrasovPestun} as the Seiberg-Witten integral system of a 4d $\mc N=2$ theory.  Instead the moduli space will appear as the moduli space of solutions to the equations of motion in a twisted 5d $\mc N=2$ supersymmetric gauge theory, compactified on a circle.  This story will be directly analogous to the occurence of the ordinary moduli stack of Higgs bundles in a holomorphic twist of 4d $\mc N=4$ theory (see \cite{CostelloSH,ElliottYoo1} for a discussion of this story); we'll recover that example in the limit where the radius of the circle shrinks to zero.
+
+We should begin by briefly recalling the idea behind twisting for supersymmetric field theories.  This idea goes back to Witten \chris{briefly describe in words, give some references, then say that what we'll do is to compute the twist of the action functional / BRST theory, and therefore of the classical BV complex.  The twisted theory actually tells us the moduli spaces of solutions to the equations of motion, with shifted tangent complex given by the classical BV complex.  Cite \cite{ElliottSafronov}, referencing the calculations there in 5d.}
+
+With the background in hand, we'll focus in on the example we're interested in.  Let us first describe the 5d $\mc N=2$ superalgebra, and the supercharge we'll be twisting by.  Recall that there is an exceptional isomorphism identifying the groups $\Spin(5)$ and $\mr{USp}(4)$.  The Dirac spinor representation $S$ of $\Spin(5)$ is four dimensional: under the above exceptional isomorphism it is identified with the defining representation of $\mr{USp}(4)$.
+
+\begin{definition}
+The complexified $\mc N=2$ supersymmetry algebra in dimension 5 is the super Lie algebra
+\[(\sp(4;\CC) \oplus \sp(4;\CC)_R \oplus V) \oplus \Pi(S \otimes W),\]
+where $V$ is the five-dimensional defining representation of $\so(5;\CC) \iso \sp(4;\CC)$, $W$ is the four-dimensional defining representation of $\sp(4;\CC)_R$, and where there's an additional bracket $\Gamma \colon \sym^2(S \otimes W) \to V$ defined in the following way.  We can project $\sym^2(S \otimes W)$ onto $\wedge^2(S) \otimes \wedge^2(W)$.  The first factor decomposes as an $\sp(4;\CC)$-module into irreducible summands $V \oplus \CC$.  The second factor likewise decomposes as an $\sp(4;\CC)_R$-module into $V \oplus \CC$.  There is, therefore, a $\sp(4;\CC) \oplus \sp(4;\CC)_R$-equivariant projection $\wedge^2(S) \otimes \wedge^2(W) \to V \otimes \CC$ as required.
+\end{definition}
+
+Now, let's describe the locus of elements $Q \in S \otimes W$ such that $\Gamma(Q,Q) = 0$.  We think of the $\sp(4;\CC) \oplus \sp(4;\CC)_R$-module $S \otimes W$ as the space of 4-by-4 matrices, where the two copies of $\sp(4;\CC)$ act by left and right matrix multiplication respectively.  Square-zero supercharges can be classified by the dimension of their image $\Gamma(Q,-) \sub \CC^5$, so for instance supercharges with 5-dimensional image are topological.  We'll be interested in twists which are not quite topological, but instead have 4-dimensional image.  These elements all have rank 2 in $S \otimes W$.  One can check that the locus of such square zero spinors consists of those 4-by-4 matrices where both the rows and the columns span Lagrangian subspaces of $\CC^4$.
+
+We can choose supercharges to be additionally compatible with partial twisting homomorphisms $\phi \colon \SU(2) \to \USp(4)_R$.  We say $Q$ is \emph{compatible} with $\phi$ if $Q$ is invariant under the action of the subgroup $(i,\phi) \colon \SU(2) \inj \Spin(5) \times \USp(4)_R$, where $i$ is defined to be the embedding $A \mapsto \mr{diag}(A,1)$ from $\SU(2)$ to $\Spin(5) \iso \USp(4)$.  When we twist a supersymmetric field theory by $Q$, if $Q$ is compatible with $\phi$ then the action of this subgroup survives to the twisted theory. \chris{In particular can define on $C_1 \times C_2 \times S^1$ where $C_i$ are Calabi-Yau curves.  Do I actually want $\SU(2)$ not $\Spin(4)$ in order to allow Calabi-Yau surfaces but not more general surfaces?  Reduce to the Kapustin twist in 4d $\mc N=4$.}
+
+\chris{This section needs to include: 1) A description of the relevant twist and the 5-manifolds it's defined on (think about the connection to the theory studied in \cite{QiuZabzine}).  2) An easy calculation of the twisted BV complex / moduli space, with a remark on the algebraic structure. 3) A definition of the 't Hooft surface operators and a description of the effect on the calculation of the twist. 4) A comment on the $R \to 0$ limit and the ordinary holomorphic twist of 4d $\mc N=4$.}
+
+\subsection{Langlands Duality}
+\chris{For a first draft I'm inserting some notes I prepared for a talk.  Todo: talk about motivation and the content we discussed regarding non-simply-laced groups}
+
+\begin{pseudoconj}[Multiplicative Geometric Langlands] \label{multLanglands}
+Let $G$ be a Langlands self-dual group.  There is an equivalence of categories
+\[\text{A-Branes}_{q^{-1}}(\mhiggs_G(C,D,\omega^\vee)) \iso \text{B-Branes}(\qconn_G(C, D, \omega^\vee))\]
+where the category on the right-hand side depends on the value $q$.
+\end{pseudoconj}
+
+What does this mean, and are there situations in which we can make it precise?  We'll discuss three examples where we can say something more concrete.  In each case, by ``B-branes'' we'll just mean the category $\coh(\qconn_G(C, D, \omega^\vee))$ of coherent sheaves.  By ``A-branes'' we'll mean some version of \emph{$q^\vee$-difference connections} on the stack $\bun_G(C)$.
+
+\begin{remark}
+This equivalence is supposed to interchange objects corresponding to branes of opers on the two sides, and introduce an analogue of the Feigin-Frenkel isomorphism between deformed W-algebras (see \cite{FrenkelReshetikhinSTS, STSSevostyanov}.  This isomorphism only holds for self-dual groups, which motivates the restriction to the self-dual case here.
+\end{remark}
+
+\subsubsection{The Abelian Case}
+Suppose $G = \GL(1)$ (more generally we could consider a higher rank abelian gauge group).  In general for an abelian group the moduli spaces we've defined are trivial -- for instance the rational and trigonometric spaces are always discrete.  However there is one interesting non-trivial example: the elliptic case.  For simplicity let us consider the abelian situation with $D = \emptyset$: the case with no punctures.
+
+\begin{definition}
+A \emph{$q$-difference module} on a variety $X$ with automorphism $q$ is a module for the sheaf $\Delta_{q,X}$ of non-commutative rings generated by $\OO_X$ and an invertible generator $\Phi$ with the relation $\Phi \cdot f = q^*(f) \cdot \Phi$.  Write $\diff_q(X)$ for the category of $q$-difference modules on $X$.
+\end{definition}
+
+In the abelian case the space $\qconn_{\GL(1)}(E)$ is actually a stack, but one can split off the stacky part to define difference modules on it.  Indeed, for any $q$ one can write
+\[\bun_{\GL(1)}(E) = \iso B\GL(1) \times \ZZ \times E^\vee\]
+and so
+\[\qconn_{\GL(1)}(E) \iso B\GL(1) \times \ZZ \times (E^\vee \times_q \CC^\times)\]
+which means one can define difference modules on these stacks associated to an automorphism of $E^\vee$ or $E^\vee \times_q \CC^\times$ respectively.
+
+\begin{conjecture}
+There is an equivalence of categories for any $q \in \bb{CP}^1$
+\[\diff_q(\bun_{\GL(1)}(E)) \iso \coh(q^{-1}\conn_{\GL(1)}(E)).\]
+\end{conjecture}
+
+In this abelian case we can go even farther and make a more sensitive 2-parameter version of the conjecture.
+
+\begin{conjecture}
+There is an equivalence of categories for any $q_1, q_2 \in \bb{CP}^1$
+\[\diff_{q_1}(q_2\conn_{\GL(1)}(E) \iso \diff_{q_2^{-1}}(q_1^{-1}\conn_{GL(1)}(E)\]
+where $q_1$ is the automorphism of $E^\vee \times_{q_2} \CC^\times$ acting fiberwise over each point of $\CC^\times$.
+\end{conjecture}
+
+This conjecture should be provable using the same techniques as the ordinary geometric Langlands correspondence in the abelian case, i.e. by a (quantum) twisted Fourier-Mukai transform (as constructed by Polishchuk and Rothstein \cite{PolishchukRothstein}).
+
+\subsubsection{The Classical Case}
+Now, let us consider the limit $q \to 0$.  This will give a conjectural statement involving coherent sheaves on both sides analogous to the classical limit of the geometric Langlands conjecture as conjectured by Donagi and Pantev \cite{DonagiPantev}.  The existence of an equivalence isn't so interesting in the self-dual case (where both sides are the same), but the classical multiplicative Langlands functor should be an \emph{interesting} non-trivial equivalence.  For example we can make the following conjecture
+
+\begin{conjecture}
+Let $G$ be a Langlands self-dual group and let $E$ be an elliptic curve.  There is an automorphism of categories (for the rational, trigonometric and elliptic moduli spaces)
+\[F \colon \coh(\mhiggs_G(E) \iso \coh(\mhiggs_{G}(E)\]
+so that the following square commutes:
+\[\xymatrix{
+\coh(\mhiggs_T(E)) \ar[r]^{\mathrm{FM}} \ar[d]_{p_*q^!} &\coh(\mhiggs_T(E)) \ar[d]^{p_*q^!} \\
+\coh(\mhiggs_G(E)) \ar[r]^{F} &\coh(\mhiggs_G(E)).
+}\]
+Here we're using the natural morphisms $p \colon \mhiggs_B(E) \to \mhiggs_G(E)$ and $q \colon \mhiggs_B(E) \to \mhiggs_T(E)$, and $\mr{FM}$ is the Fourier-Mukai transform.
+\end{conjecture}
+
+It ought to be possible to state something a bit stronger that includes singularities in this auto-duality.
+
+\subsection{The Rational Type A Case}
+There's one more example where we can say something precise, and even draw a connection to the ordinary geometric Langlands correspondence.  We already mentioned the Nahm transform in the previous section: in the case where $G = \GL(n)$ and $C$ is $\CC$ (where as usual we fix framing data at infinity) the Nahm transform identifies multiplicative Higgs bundles of degree $k$ with \emph{ordinary} Higgs bundles on $\bb{CP}^1$ for the group $\GL(k)$ with $n+2$ tame singularities (with appropriate fixed locations and residues).
+
+\begin{claim}
+Under the Nahm transform, Pseudo-Conjecture \ref{multLanglands} in the rational case for the group $\GL(n)$ becomes the ordinary geometric Langlands conjecture on $\bb{CP}^1$ with tame ramification.
+\end{claim}
 
 
 \section{Multiplicative Higgs Bundles and $q$-Connections}
@@ -526,13 +615,13 @@ If we do not fix residue data at the punctures, the full moduli space $\mhiggs_G
 In fact the moduli space is not only symplectic, but the total space of a completely integrable system -- the multiplicative Hitchin system described in Definition \ref{mult_Hitchin_system_def}.  We already know that the generic fibers are half-dimensional tori, it remains to verify that they're isotropic.
 
 \begin{prop}
-The fibers of the multiplicative Hitchin fibration, in the rational case, are isotropic.
+Generic fibers of the multiplicative Hitchin fibration, in the rational case, are isotropic.
 \end{prop}
 
 \begin{proof}
 In order to check this we need to describe the subspace of the tangent space to $\mhiggs^\fr_G(C,D,\omega^\vee)$ at a point $(P,g)$ tangent to the Hitchin fiber in our \v Cech description.  Recall that the tangent space to $\mhiggs^\fr_G(C,D,\omega^\vee)$ can be identified as the space of \v Cech cocycles $(\alpha_0, \{\alpha_i\}, \alpha_\infty, \{\beta_i\}, \beta_\infty)$, where in particular the $\beta_i$ and $\beta_\infty$ are local sections of the adjoint bundle $\gg_P$.  We will show that, for a \v Cech cocycle lying tangent to the Hitchin fiber, the elements $\beta_i, \beta_\infty$ must be valued in the associated bundle of centralizers $\mf c_g$ of $g$.  Having established this the claim follows because the operator $\Ad_g$, and therefore the operator $(\Ad_g^*)^{-1}$, acts trivially on the centralizer of $g$.  Replacing this operator with the identity in our expression for the symplectic form from Lemma \ref{sym_nondegeneracy_lemma} results in a symmetric expression.  Since it's also antisymmetric, it must vanish, which implies the desired isotropic condition.
 
-So it remains to establish this restriction on tangent vectors to the Hitchin fiber.  Note that $\beta_i$ lies in $\mf c_g$ if and only if $\alpha_i - \alpha_0 = 0$.  If the derivative $\d \pi$ of the multiplicative Hitchin map annihilates a cochain, then in particular the elements $\alpha_i - \alpha_0$ are functions without poles at $z_i$, since \chris{?  This is the current missing step.  I guess this is saying that nilpotent elements never have the desired singularity at the puncture since the possible residues are regular.}.  That means that the tangent vectors to the Hitchin fiber -- which are annihilated by $\d \pi$ -- are cohomologous to cocycles with $\alpha_i - \alpha_0 = 0$ as required.
+So it remains to establish this restriction on tangent vectors to the Hitchin fiber.  Note that $\beta_i$ lies in $\mf c_g$ if and only if $\alpha_i - \alpha_0 = 0$.  If the derivative $\d \pi$ of the multiplicative Hitchin map annihilates a cocycle, then in particular the elements $\alpha_i - \alpha_0$ are functions without poles at $z_i$, since the cocycle condition implies that $\alpha_i - \alpha_0$ has the same singularity type as $g$, which -- assuming regularity -- means it cannot be in the kernel of $\d \pi$. \chris{This is sketchy, need to say it better}.  That means that the tangent vectors to the Hitchin fiber -- which are annihilated by $\d \pi$ -- are cohomologous to cocycles with $\alpha_i - \alpha_0 = 0$ as required.
 \end{proof}
 
 We'll now begin the comparison between the pairing described above and the symplectic structure on the moduli space of periodic monopoles.
@@ -747,90 +836,7 @@ One example is given by the case where the only pole lies at $0 \in \CC$, so the
 We'll conclude this section with some additional discussion about 
 \chris{Include some discussion on how we can think of $\OO_\hbar(\mhiggs^{\text{fr,sing}}(\bb{CP}^1))$ as an intermediate quantum group between the Yangian and something dual to it.  References and a remark on the comparison with the conjectures made in \cite[Chapter 8.1]{NekrasovPestun}.  Include some words about $q$-Opers and $q$-W algebras, citing Sevostyanov et al and Aganagic-Frenkel-Okounkov \cite{AFO}.}
 
-\section{Twisted Gauge Theory}
-In this section we'll discuss yet another occurence of the moduli space of multiplicative Higgs bundles via gauge theory.  This story is distinct from the appearance of the moduli space in \cite{NekrasovPestun} as the Seiberg-Witten integral system of a 4d $\mc N=2$ theory.  Instead the moduli space will appear as the moduli space of solutions to the equations of motion in a twisted 5d $\mc N=2$ supersymmetric gauge theory, compactified on a circle.  This story will be directly analogous to the occurence of the ordinary moduli stack of Higgs bundles in a holomorphic twist of 4d $\mc N=4$ theory (see \cite{CostelloSH,ElliottYoo1} for a discussion of this story); we'll recover that example in the limit where the radius of the circle shrinks to zero.
 
-We should begin by briefly recalling the idea behind twisting for supersymmetric field theories.  This idea goes back to Witten \chris{briefly describe in words, give some references, then say that what we'll do is to compute the twist of the action functional / BRST theory, and therefore of the classical BV complex.  The twisted theory actually tells us the moduli spaces of solutions to the equations of motion, with shifted tangent complex given by the classical BV complex.  Cite \cite{ElliottSafronov}, referencing the calculations there in 5d.}
-
-With the background in hand, we'll focus in on the example we're interested in.  Let us first describe the 5d $\mc N=2$ superalgebra, and the supercharge we'll be twisting by.  Recall that there is an exceptional isomorphism identifying the groups $\Spin(5)$ and $\mr{USp}(4)$.  The Dirac spinor representation $S$ of $\Spin(5)$ is four dimensional: under the above exceptional isomorphism it is identified with the defining representation of $\mr{USp}(4)$.
-
-\begin{definition}
-The complexified $\mc N=2$ supersymmetry algebra in dimension 5 is the super Lie algebra
-\[(\sp(4;\CC) \oplus \sp(4;\CC)_R \oplus V) \oplus \Pi(S \otimes W),\]
-where $V$ is the five-dimensional defining representation of $\so(5;\CC) \iso \sp(4;\CC)$, $W$ is the four-dimensional defining representation of $\sp(4;\CC)_R$, and where there's an additional bracket $\Gamma \colon \sym^2(S \otimes W) \to V$ defined in the following way.  We can project $\sym^2(S \otimes W)$ onto $\wedge^2(S) \otimes \wedge^2(W)$.  The first factor decomposes as an $\sp(4;\CC)$-module into irreducible summands $V \oplus \CC$.  The second factor likewise decomposes as an $\sp(4;\CC)_R$-module into $V \oplus \CC$.  There is, therefore, a $\sp(4;\CC) \oplus \sp(4;\CC)_R$-equivariant projection $\wedge^2(S) \otimes \wedge^2(W) \to V \otimes \CC$ as required.
-\end{definition}
-
-Now, let's describe the locus of elements $Q \in S \otimes W$ such that $\Gamma(Q,Q) = 0$.  We think of the $\sp(4;\CC) \oplus \sp(4;\CC)_R$-module $S \otimes W$ as the space of 4-by-4 matrices, where the two copies of $\sp(4;\CC)$ act by left and right matrix multiplication respectively.  Square-zero supercharges can be classified by the dimension of their image $\Gamma(Q,-) \sub \CC^5$, so for instance supercharges with 5-dimensional image are topological.  We'll be interested in twists which are not quite topological, but instead have 4-dimensional image.  These elements all have rank 2 in $S \otimes W$.  One can check that the locus of such square zero spinors consists of those 4-by-4 matrices where both the rows and the columns span Lagrangian subspaces of $\CC^4$.
-
-We can choose supercharges to be additionally compatible with partial twisting homomorphisms $\phi \colon \SU(2) \to \USp(4)_R$.  We say $Q$ is \emph{compatible} with $\phi$ if $Q$ is invariant under the action of the subgroup $(i,\phi) \colon \SU(2) \inj \Spin(5) \times \USp(4)_R$, where $i$ is defined to be the embedding $A \mapsto \mr{diag}(A,1)$ from $\SU(2)$ to $\Spin(5) \iso \USp(4)$.  When we twist a supersymmetric field theory by $Q$, if $Q$ is compatible with $\phi$ then the action of this subgroup survives to the twisted theory. \chris{In particular can define on $C_1 \times C_2 \times S^1$ where $C_i$ are Calabi-Yau curves.  Do I actually want $\SU(2)$ not $\Spin(4)$ in order to allow Calabi-Yau surfaces but not more general surfaces?  Reduce to the Kapustin twist in 4d $\mc N=4$.}
-
-\chris{This section needs to include: 1) A description of the relevant twist and the 5-manifolds it's defined on (think about the connection to the theory studied in \cite{QiuZabzine}).  2) An easy calculation of the twisted BV complex / moduli space, with a remark on the algebraic structure. 3) A definition of the 't Hooft surface operators and a description of the effect on the calculation of the twist. 4) A comment on the $R \to 0$ limit and the ordinary holomorphic twist of 4d $\mc N=4$.}
-
-\section{Langlands Duality}
-\chris{For a first draft I'm inserting some notes I prepared for a talk.  Todo: talk about motivation and the content we discussed regarding non-simply-laced groups}
-
-\begin{pseudoconj}[Multiplicative Geometric Langlands] \label{multLanglands}
-Let $G$ be a Langlands self-dual group.  There is an equivalence of categories
-\[\text{A-Branes}_{q^{-1}}(\mhiggs_G(C,D,\omega^\vee)) \iso \text{B-Branes}(\qconn_G(C, D, \omega^\vee))\]
-where the category on the right-hand side depends on the value $q$.
-\end{pseudoconj}
-
-What does this mean, and are there situations in which we can make it precise?  We'll discuss three examples where we can say something more concrete.  In each case, by ``B-branes'' we'll just mean the category $\coh(\qconn_G(C, D, \omega^\vee))$ of coherent sheaves.  By ``A-branes'' we'll mean some version of \emph{$q^\vee$-difference connections} on the stack $\bun_G(C)$.
-
-\begin{remark}
-This equivalence is supposed to interchange objects corresponding to branes of opers on the two sides, and introduce an analogue of the Feigin-Frenkel isomorphism between deformed W-algebras (see \cite{FrenkelReshetikhinSTS, STSSevostyanov}.  This isomorphism only holds for self-dual groups, which motivates the restriction to the self-dual case here.
-\end{remark}
-
-\subsection{The Abelian Case}
-Suppose $G = \GL(1)$ (more generally we could consider a higher rank abelian gauge group).  In general for an abelian group the moduli spaces we've defined are trivial -- for instance the rational and trigonometric spaces are always discrete.  However there is one interesting non-trivial example: the elliptic case.  For simplicity let us consider the abelian situation with $D = \emptyset$: the case with no punctures.
-
-\begin{definition}
-A \emph{$q$-difference module} on a variety $X$ with automorphism $q$ is a module for the sheaf $\Delta_{q,X}$ of non-commutative rings generated by $\OO_X$ and an invertible generator $\Phi$ with the relation $\Phi \cdot f = q^*(f) \cdot \Phi$.  Write $\diff_q(X)$ for the category of $q$-difference modules on $X$.
-\end{definition}
-
-In the abelian case the space $\qconn_{\GL(1)}(E)$ is actually a stack, but one can split off the stacky part to define difference modules on it.  Indeed, for any $q$ one can write
-\[\bun_{\GL(1)}(E) = \iso B\GL(1) \times \ZZ \times E^\vee\]
-and so
-\[\qconn_{\GL(1)}(E) \iso B\GL(1) \times \ZZ \times (E^\vee \times_q \CC^\times)\]
-which means one can define difference modules on these stacks associated to an automorphism of $E^\vee$ or $E^\vee \times_q \CC^\times$ respectively.
-
-\begin{conjecture}
-There is an equivalence of categories for any $q \in \bb{CP}^1$
-\[\diff_q(\bun_{\GL(1)}(E)) \iso \coh(q^{-1}\conn_{\GL(1)}(E)).\]
-\end{conjecture}
-
-In this abelian case we can go even farther and make a more sensitive 2-parameter version of the conjecture.
-
-\begin{conjecture}
-There is an equivalence of categories for any $q_1, q_2 \in \bb{CP}^1$
-\[\diff_{q_1}(q_2\conn_{\GL(1)}(E) \iso \diff_{q_2^{-1}}(q_1^{-1}\conn_{GL(1)}(E)\]
-where $q_1$ is the automorphism of $E^\vee \times_{q_2} \CC^\times$ acting fiberwise over each point of $\CC^\times$.
-\end{conjecture}
-
-This conjecture should be provable using the same techniques as the ordinary geometric Langlands correspondence in the abelian case, i.e. by a (quantum) twisted Fourier-Mukai transform (as constructed by Polishchuk and Rothstein \cite{PolishchukRothstein}).
-
-\subsection{The Classical Case}
-Now, let us consider the limit $q \to 0$.  This will give a conjectural statement involving coherent sheaves on both sides analogous to the classical limit of the geometric Langlands conjecture as conjectured by Donagi and Pantev \cite{DonagiPantev}.  The existence of an equivalence isn't so interesting in the self-dual case (where both sides are the same), but the classical multiplicative Langlands functor should be an \emph{interesting} non-trivial equivalence.  For example we can make the following conjecture
-
-\begin{conjecture}
-Let $G$ be a Langlands self-dual group and let $E$ be an elliptic curve.  There is an automorphism of categories (for the rational, trigonometric and elliptic moduli spaces)
-\[F \colon \coh(\mhiggs_G(E) \iso \coh(\mhiggs_{G}(E)\]
-so that the following square commutes:
-\[\xymatrix{
-\coh(\mhiggs_T(E)) \ar[r]^{\mathrm{FM}} \ar[d]_{p_*q^!} &\coh(\mhiggs_T(E)) \ar[d]^{p_*q^!} \\
-\coh(\mhiggs_G(E)) \ar[r]^{F} &\coh(\mhiggs_G(E)).
-}\]
-Here we're using the natural morphisms $p \colon \mhiggs_B(E) \to \mhiggs_G(E)$ and $q \colon \mhiggs_B(E) \to \mhiggs_T(E)$, and $\mr{FM}$ is the Fourier-Mukai transform.
-\end{conjecture}
-
-It ought to be possible to state something a bit stronger that includes singularities in this auto-duality.
-
-\subsection{The Rational Type A Case}
-There's one more example where we can say something precise, and even draw a connection to the ordinary geometric Langlands correspondence.  We already mentioned the Nahm transform in the previous section: in the case where $G = \GL(n)$ and $C$ is $\CC$ (where as usual we fix framing data at infinity) the Nahm transform identifies multiplicative Higgs bundles of degree $k$ with \emph{ordinary} Higgs bundles on $\bb{CP}^1$ for the group $\GL(k)$ with $n+2$ tame singularities (with appropriate fixed locations and residues).
-
-\begin{claim}
-Under the Nahm transform, Pseudo-Conjecture \ref{multLanglands} in the rational case for the group $\GL(n)$ becomes the ordinary geometric Langlands conjecture on $\bb{CP}^1$ with tame ramification.
-\end{claim}
 
  
 \pagestyle{bib}
