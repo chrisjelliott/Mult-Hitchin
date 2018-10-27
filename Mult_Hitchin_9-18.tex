@@ -129,7 +129,7 @@ Here we're using the natural morphisms $p \colon \mhiggs_B(E) \to \mhiggs_G(E)$ 
 
 It ought to be possible to state something a bit stronger that includes singularities in this auto-duality.
 
-\subsection{The Rational Type A Case}
+\subsubsection{The Rational Type A Case}
 There's one more example where we can say something precise, and even draw a connection to the ordinary geometric Langlands correspondence.  We already mentioned the Nahm transform in the previous section: in the case where $G = \GL(n)$ and $C$ is $\CC$ (where as usual we fix framing data at infinity) the Nahm transform identifies multiplicative Higgs bundles of degree $k$ with \emph{ordinary} Higgs bundles on $\bb{CP}^1$ for the group $\GL(k)$ with $n+2$ tame singularities (with appropriate fixed locations and residues).
 
 \begin{claim}
@@ -253,11 +253,12 @@ We need to verify that the image of a point in $\mhiggs_G(C,D,\omega^\vee)$ unde
 \end{proof}
 
 \begin{remark}
-\chris{Compare to the base in \cite{HurtubiseMarkman}.  Variety versus stack?  Difference in processing the $W$-action?  They are birational.}
+Note that the base stack we're defining here is not exactly the same as the base of the integrable system defined in \cite{HurtubiseMarkman}.  The difference comes from the way in which we treat the Weyl group quotient; the Hurtubise-Markman base is an algebraic variety defined essentially by taking the part of our space of sections where $W$ acts freely as an open subset, then constructing a compactification using techniques from toric geometry.
 \end{remark}
 
-\chris{I don't want this section to have to be too rigorous, so make a comment to that effect.}
-We'll show that this fibration defines a completely integrable system in the rational case where $C = \bb{CP}^1$ with a framing at $\infty$.  We should first observe that the generic fibers are half-dimensional tori.  Computing the fibers of the Hitchin fibration works similarly to the non-singular case: a point in the base is, in particular, a map $C \bs D \to T/W$.  Suppose this map lands in the regular locus $T^{\mr{reg}}/W$, then an element of the fiber over this point defines, in particular, a map $C \bs D \to BT/W$.  We would like to argue that the fiber consists of $T$-bundles on the cameral cover $\wt C$: a $W$-fold cover of $C$ ramified at the divisor $D$ \chris{am I making an error here: is $D$ really the same as the ramification divisor?  Maybe they should be different, and in fact it should be ramified at points whose value is a point in $T/W$ with stabilizer (but these aren't regular!)}.
+We'll show in Section \ref{general_symplectic_sec} that this fibration defines a completely integrable system in the rational case where $C = \bb{CP}^1$ with a framing at $\infty$.  More specifically, we'll describe a non-degenerate pairing on the tangent space of the multiplicative Higgs moduli space, and in Proposition \ref{Hitchin_isotropic_prop} we'll show that the multiplicative Hitchin fibers are isotropic for this pairing.  Then, by comparison to the symplectic structure on periodic monopoles, we'll see that the pairing was symplectic.
+
+Here, we'll first observe that the generic fibers are half-dimensional tori, which will ultimately imply that the multiplicative Hitchin system is generically a Lagrangian fibration.  Computing the fibers of the Hitchin fibration works similarly to the non-singular case: a point in the base is, in particular, a map $C \bs D \to T/W$.  Suppose this map lands in the regular locus $T^{\mr{reg}}/W$, then an element of the fiber over this point defines, in particular, a map $C \bs D \to BT/W$.  We would like to argue that the fiber consists of $T$-bundles on the cameral cover $\wt C$: a $W$-fold cover of $C$ ramified at the divisor $D$ \chris{am I making an error here: is $D$ really the same as the ramification divisor?  Maybe they should be different, and in fact it should be ramified at points whose value is a point in $T/W$ with stabilizer (but these aren't regular!)}.
 
 In order to say this a bit more precisely this we'll compare our moduli space with the space of abstract Higgs bundles introduced by Donagi and Gaitsgory \cite{DonagiGaitsgory} (see also \cite{DonagiLectures}, where Donagi proposed the applicability of this abstract Higgs theory to the multiplicative situation and asked for a geometric interpretation).  Our argument will follow the same ideas as the arguments of \cite[Section 6]{HurtubiseMarkman}.
 
@@ -346,10 +347,6 @@ More generally we can say the following.  Let us consider the rational case wher
 is an exact sequence of ind-pro vector spaces, and therefore an exact sequence of quasi-coherent sheaves on the stack $\bun_G^\fr(\bb{CP}^1 \! \bs \! D)$.  To do this we identify the pair $(\gg_-, \gg(\!(z)\!)^k)$ as part of a Manin triple, where a complementary isotropic subalgebra to $\gg_-$ is given by $\gg_+ = \gg[[z]]^k$.  Using the residue pairing we can identify $\gg_+$ with $(\gg_-)^\vee$ and therefore identify our sequence with the split exact sequence
 \[0 \to \gg_- \to \gg(\!(z)\!)^k \to \gg_+ \to 0.\]
 \end{remark}
-
-%\begin{remark}
-%We can also discuss the multiplicative Hitchin system of Definition \ref{mult_Hitchin_system_def} in this derived context.  \chris{not sure what to say precisely.}
-%\end{remark}
 
 \section{Periodic Monopoles}
 Moduli spaces of $q$-connections on a Riemann surface $C$ are closely related to moduli spaces of periodic monopoles, i.e. monopoles on 3-manifolds that fiber over the circle (more specifically, with fiber $C$ and monodromy determined by $q$).  Let $G_\RR$ be a compact Lie group whose complexification is $G$.  The discussion in this section will mostly follow that of \cite{CharbonneauHurtubise, Smith}.
@@ -560,7 +557,7 @@ Note that the right-hand side is the derivative at $\mc A$ of the map $B_i \maps
 
 \section{Symplectic Structures} \label{symp_section}
 \subsection{The Example of $\GL_2$}
-\chris{Ultimately we might move this, but we should probably include a discussion of what happens for $\GL_2$ before or in parallel to discussing the general story.}
+Let us discuss in detail the geometry of the moduli space of multiplicative Higgs bundles in some of the simplest examples, for the group $G = \GL_2$.  The symplectic structures, and the Hitchin integrable system, which we'll analyse for the more general moduli spaces can be described very concretely in this simple situation.
 
 \vasily{Chris, is the idea to put here explicit expressions for Higgs field in 
 terms of some chart
@@ -573,8 +570,8 @@ terms of some chart
 \subsection{Symplectic Structures for General $G$} \label{general_symplectic_sec}
 We begin the more abstract general analysis by briefly discussing the holomorphic symplectic structure on the moduli space of periodic monopoles on $\bb{CP}^1$ following the analysis of Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin3}.  This structure arises from the description we gave as a hyperk\"ahler quotient.  To describe it specifically, let $\delta^{(1)} \mc A$ and $\delta^{(2)} \mc A$ be two tangent vectors at $(\bo P, \mc A)$ to the moduli space of monopoles.  Recall that $\mc A$ denotes the combination $\nabla_t - i\Phi \d t$.  Choose representatives for these two tangent vectors of the form $\alpha_i$ and $\alpha'_i$ respectively  in the \v Cech resolution we described above.  Then we can write the holomorphic symplectic form coming from the hyperk\"ahler reduction in terms of the symplectic pairing on the infinite-dimensional vector space $\mc V$, which is given by the Killing form on $\gg$ along with the wedge pairing of differential forms.  So summing over the local patches in our \v Cech resolution we can write it as
 \begin{align*}
-\omega_{\mr{mon}}(\delta^{(1)} \mc A, \delta^{(2)} \mc A) &= \int_{M} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \\
-&= \sum_{i=1}^k \int_{U_i \times S^1} \kappa(\alpha_i, \alpha'_i) \d z \d t
+\omega_{\mr{mon}}(\delta^{(1)} \mc A, \delta^{(2)} \mc A) &= \int_{M} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d \ol{z} \\
+&= \sum_{i=1}^k \int_{U_i \times S^1} \kappa(\alpha_i, \alpha'_i) \d z \d \ol{z} \d t
 \end{align*}
 where the contributions to the integral away from the $U_i$ vanish.
 
@@ -614,7 +611,7 @@ If we do not fix residue data at the punctures, the full moduli space $\mhiggs_G
 
 In fact the moduli space is not only symplectic, but the total space of a completely integrable system -- the multiplicative Hitchin system described in Definition \ref{mult_Hitchin_system_def}.  We already know that the generic fibers are half-dimensional tori, it remains to verify that they're isotropic.
 
-\begin{prop}
+\begin{prop} \label{Hitchin_isotropic_prop}
 Generic fibers of the multiplicative Hitchin fibration, in the rational case, are isotropic.
 \end{prop}
 
@@ -713,17 +710,26 @@ This is an instance of hyperk\"ahler reduction.  Indeed the infinite-dimensional
 \[\omega_i((A,\Phi),(A',\Phi')) = \int_{\bb{CP}^1 \times_\eps S^1_R} \left(\kappa(A_i,\Phi') - \kappa(\Phi, A_i') + \sum_{j,k=1,2,3} \eps_{ijk} \kappa(A_j,A'_k)\right) \d x \d y \d t, \]
 where $i=1,2,3$, and where $A$ can be written as $A_1 \d t + A_2 \d x + A_3 \d y$ with respect to a choice $\d z = \d (x + iy)$ of meromorphic volume form on $\bb{CP}^1$ with a second order pole at $\infty$.  This descends to a hyperk\"ahler structure on the quotient since  \chris{... probably I want to find a good reference here.  Could refer to \cite[Section 1.4.2]{FoscoloThesis}.}
 
-Let us restrict to the case where $\eps=0$ for now.  Consider the holomorphic symplectic structure $\omega_2 + i \omega_3$.  We can alternatively write the formula above for this choice of holomorphic symplectic in the form
-\[\omega(\mc A, \mc A') = \int_{\bb{CP}^1 \times S^1_R} \kappa(\mc A, \mc A') \d z \d t,\]
-as described at the beginning of Section \ref{general_symplectic_sec}. \chris{This needs justification.  What happens to the $xy$ term?  At face value you get something more like the antisymmetrization of $\int \kappa(\mc A, A'_2 + i A'_3)\d z$.}
+Let us restrict to the case where $\eps=0$ for now.  Consider the holomorphic symplectic structure $\omega_2 + i \omega_3$.  We can alternatively write the formula above for this choice of holomorphic symplectic structure in the form
+\[\omega((A_0, \mc A), (A_0', \mc A')) = \int_{\bb{CP}^1 \times S^1_R} \kappa(A_0, \mc A') - \kappa(\mc A, A_0') \d x \d y \d t,\]
+where $A_0 = A_2 + i A_3$ and $\mc A = A_1 - i \Phi$.  
+
+\begin{remark}
+We can compare this to the expression described at the beginning of Section \ref{general_symplectic_sec}. Indeed, up to a factor of $i$ we can rewrite this expression as
+\[\omega((A_0, \mc A), (A_0', \mc A')) = \int_{\bb{CP}^1 \times S^1_R} \kappa(A_0\d z + \mc A \d t, A_0' \d z + \mc A' \d t) \d \ol{z}.\]
+This expression agrees with the symplectic pairing on monopoles in Section \ref{general_symplectic_sec} as a pairing of $\gg$-valued 1-forms on $\CC \times \RR$, which are holomorphic in the $\CC$-direction, where we set $\delta \mc A = A_0\d z + \mc A \d t$.
+\end{remark}
+\chris{check this section as rewritten}
 
 This description for the hyperk\"ahler structure also tells us clearly what happens when we perform a rotation in the twistor sphere.  The following statement follows by identifying the holomorphic symplectic structure at $\eps$ in the twistor sphere by applying the corresponding rotation in $\SO(3)$ to the coordinates $x$, $y$ and $t$ on $\RR^3$ in the expression for the holomorphic symplectic structure at $0$.  Note that when we calculate the symplectic form as an integral as above, it's enough to take the integral over just $\RR^2 \times S^1_R$ instead of $\bb{CP}^1 \times S^1_R$.
 
+Notationally, from now on we'll write the holomorphic symplectic pairing in the abbreviated form $\kappa(A_0, \mc A') - \kappa(\mc A, A_0') = \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A)$, and we'll write $\dvol$ for the volume form $\d x \wedge \d y \wedge \d t$ on $\CC \times \RR \sub \bb{CP}^1 \times S^1_R$.
+
 \begin{prop}
 Let $\zeta$ be a point in the twistor sphere.  The holomorphic symplectic form on the moduli space $\mon_G^{\fr}(\bb{CP}^1 \times S^1_R, D, \omega^\vee)$ of periodic monopoles is given by the formula 
-\[\omega_\eps(\delta^{(1)}\mc A, \delta^{(2)}\mc A) = \int_{\RR^2 \times S^1_R} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \zeta(\d z \wedge \d t),\]
-where we identify $\zeta$ with an element of $\SO(3)$ and apply this rotation to the volume form $\d z \wedge \d t$.  Equivalently we can identify $\RR^2 \times \bb{CP}^1$ with the quotient $\RR^3 \times L$ where $L$ is the rank one lattice $\{0\}^2 \times 2\pi R\ZZ$ and identify the rotated holomorphic symplectic form with 
-\[\omega_\zeta(\delta^{(1)}\mc A, \delta^{(2)}\mc A) = \int_{\RR^3/(\zeta(L))} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t.\]
+\[\omega_\eps(\delta^{(1)}\mc A, \delta^{(2)}\mc A) = \int_{\RR^2 \times S^1_R} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \zeta(\dvol),\]
+where we identify $\zeta$ with an element of $\SO(3)$ and apply this rotation to the volume form $\dvol$.  Equivalently we can identify $\RR^2 \times \bb{CP}^1$ with the quotient $\RR^3 \times L$ where $L$ is the rank one lattice $\{0\}^2 \times 2\pi R\ZZ$ and identify the rotated holomorphic symplectic form with 
+\[\omega_\zeta(\delta^{(1)}\mc A, \delta^{(2)}\mc A) = \int_{\RR^3/(\zeta(L))} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol.\]
 \end{prop}
 
 Now, we'll perform our identification of the twistor deformation on the multiplicative Higgs side by rewriting this twistor rotation in a somewhat different way in the large $R$ limit.  In this limit we can identify the twistor rotation with the deformation obtained by replacing the product $\bb{CP}^1 \times S^1_R$ with the product twisted by an automorphism of $\RR^2$.  More precisely, the rotated symplectic structure can then be described in the following way.
@@ -739,19 +745,19 @@ We can view the quotient of $\RR^3$ by the rotated lattice as a sheared lattice 
 \[\RR^3 / \zeta(L_{R,0}) \iso \RR^2 \times_{\frac{\eps}{1+|\zeta|^2}} S^1_{R \frac {1-|\zeta|^2}{1+|\zeta|^2}}.\]
 
 In order to identify the desired complex structures it's enough to identify the full family of symplectic structures on the $\eps$-deformation with the appropriately rotated family of symplectic structures without deforming.  So, if we apply the twistor rotation by $\zeta$ to the holomorphic symplectic structure $\omega_2 + i\omega_3$ on $\mon_G^{\text{ps,fr}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ (the argument will be identical for the other points in the $\bb{CP}^1$ family of holomorphic symplectic structures) we obtain the pairing
-\[\omega_\zeta(\delta^{(1)}\mc A, \delta^{(2)}\mc A) = \int_{\RR^3/(\zeta(L_{R,0}))} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t.\]
+\[\omega_\zeta(\delta^{(1)}\mc A, \delta^{(2)}\mc A) = \int_{\RR^3/(\zeta(L_{R,0}))} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol.\]
 On the other hand we can identify the holomorphic symplectic structure on $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_\eps S^1_R,D,\omega^\vee)$ as
-\[\omega_\zeta(\delta^{(1)}\mc A, \delta^{(2)}\mc A) = \int_{\RR^3/(L_{R,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t.\]
+\[\omega_\zeta(\delta^{(1)}\mc A, \delta^{(2)}\mc A) = \int_{\RR^3/(L_{R,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol.\]
 In particular, by tuning the radius and the shear parameter the above calculation means there's a hyperk\"ahler equivalence between the moduli spaces $\mon_G^{\text{ps,fr}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ -- after rotating the twistor sphere by $\zeta$ -- and $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_{\frac{\eps}{1+|\zeta|^2}} S^1_{R \frac {1-|\zeta|^2}{1+|\zeta|^2}},D,\omega^\vee)$.  
 
 Now, let us consider the large $R$ limit.  We'd like to note that the following difference of symplectic pairings converges to zero pointwise as $R\to \infty$.
-\[ \left\lvert \int_{\RR^3/(L_{R \frac {1-|\zeta|^2}{1+|\zeta|^2},\frac{\eps}{1+|\zeta|^2}})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t - \int_{\RR^3/(L_{R,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t \right \rvert.\]
+\[ \left\lvert \int_{\RR^3/(L_{R \frac {1-|\zeta|^2}{1+|\zeta|^2},\frac{\eps}{1+|\zeta|^2}})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol - \int_{\RR^3/(L_{R,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert.\]
 Rescaling the radii of the circles only rescales the pairing by an overall constant, so we can rewrite this as 
-\[ R\left\lvert \frac {1-|\zeta|^2}{1+|\zeta|^2} \int_{\RR^3/(L_{1,\frac{\eps}{1+|\zeta|^2}})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t - \int_{\RR^3/(L_{1,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t \right \rvert\]
+\[ R\left\lvert \frac {1-|\zeta|^2}{1+|\zeta|^2} \int_{\RR^3/(L_{1,\frac{\eps}{1+|\zeta|^2}})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol - \int_{\RR^3/(L_{1,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert\]
 in which we recall that $\zeta = \frac \eps {2\pi R}$.  Write $\delta^{(i)}\mc A_\zeta$ for the image of the deformation $\delta^{(i)}\mc A$ under the diffeomorphism induced by identifying the $\frac{\eps}{1+|\zeta|^2}$-twisted product with the $\eps$-twisted product, so $\delta^{(i)}\mc A_\zeta(z,t) = \delta^{(i)}\mc A(z-\frac{\eps}{1+|\zeta|^2},t)$.  Note that when we perform the integral the pairing between $\delta^{(1)}\mc A$ and $\delta^{(2)}\mc A$ and the pairing between $\delta^{(1)}\mc A_\zeta$ and $\delta^{(2)}\mc A_\zeta$ coincide.  In other words our difference of pairings becomes
 \begin{align*} 
-R\left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \frac {1-|\zeta|^2}{1+|\zeta|^2} \kappa(\delta^{(1)} \mc A_\zeta, \delta^{(2)} \mc A_\zeta)  -  \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t \right \rvert &= R \left\lvert \frac {1-|\zeta|^2}{1+|\zeta|^2} - 1 \right\rvert \left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t \right \rvert \\
-&= \left\lvert\frac {2R |\eps|^2}{4 \pi^2 R^2 + |\eps|^2} \right \rvert \left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d z  \wedge \d t \right \rvert.
+R\left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \frac {1-|\zeta|^2}{1+|\zeta|^2} \kappa(\delta^{(1)} \mc A_\zeta, \delta^{(2)} \mc A_\zeta)  -  \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert &= R \left\lvert \frac {1-|\zeta|^2}{1+|\zeta|^2} - 1 \right\rvert \left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert \\
+&= \left\lvert\frac {2R |\eps|^2}{4 \pi^2 R^2 + |\eps|^2} \right \rvert \left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert.
 \end{align*}
 This converges to zero pointwise as $R \to \infty$.  The same calculation proves convergence for the other symplectic structures in the hyperk\"ahler family, and therefore convergence for the two complex structures.
 \end{proof}
