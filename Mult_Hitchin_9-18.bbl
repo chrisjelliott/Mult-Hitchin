@@ -18,10 +18,34 @@ Michael Atiyah and Nigel Hitchin.
 \newblock M. B. Porter Lectures. Princeton University Press, Princeton, NJ,
   1988.
 
+\bibitem[BF99]{BezrukavnikovFinkelbergI}
+Roman Bezrukavnikov and Michael Finkelberg.
+\newblock Semi-infinite flags {I.} case of global curve {$\mathbb P^1$}.
+\newblock In {\em Differential topology, infinite-dimensional Lie algebras, and
+  applications: DB Fuchs' 60th anniversary collection}, number 194 in Transl.
+  Amer. Math. Soc., page~81. American Mathematical Society, 1999.
+
 \bibitem[Bot95]{Bottacin}
 Francesco Bottacin.
 \newblock Symplectic geometry on moduli spaces of stable pairs.
 \newblock {\em Ann. Sci. \'Ecole Norm. Sup. (4)}, 28(4):391--433, 1995.
+
+\bibitem[Bou14]{Bouthier2}
+Alexis Bouthier.
+\newblock La fibration de {Hitchin-Frenkel-Ng\^o} et son complexe
+  d'intersection.
+\newblock {\em arXiv preprint arXiv:1409.1275}, 2014.
+
+\bibitem[Bou15]{Bouthier1}
+Alexis Bouthier.
+\newblock Dimension des fibres de {Springer} affines pour les groupes.
+\newblock {\em Transformation Groups}, 20(3):615--663, 2015.
+
+\bibitem[Bra07]{BravermanICM}
+Alexander Braverman.
+\newblock Spaces of quasi-maps into the flag varieties and their applications.
+\newblock In {\em Proceedings of the International Congress of Mathematicians
+  Madrid, August 22--30, 2006}, pages 1145--1170, 2007.
 
 \bibitem[CH10]{CharbonneauHurtubise}
 Beno\^it Charbonneau and Jacques Hurtubise.
@@ -115,6 +139,11 @@ Chris Elliott and Philsang Yoo.
 \newblock Geometric {Langlands} twists of {$N=4$} gauge theory from derived
   algebraic geometry.
 \newblock {\em Advances in Theoretical and Mathematical Physics}, 22(3), 2018.
+
+\bibitem[FN11]{FrenkelNgo}
+Edward Frenkel and Bao~Ch{\^a}u Ng{\^o}.
+\newblock Geometrization of trace formulas.
+\newblock {\em Bulletin of Mathematical Sciences}, 1(1):129--199, 2011.
 
 \bibitem[Fos13]{FoscoloThesis}
 Lorenzo Foscolo.
@@ -227,6 +256,11 @@ Tony Pantev, Bertrand To{\"e}n, Michel Vaqui{\'e}, and Gabriele Vezzosi.
 Jian Qiu and Maxim Zabzine.
 \newblock On twisted {$\mc N= 2$} {5D} super {Yang--Mills} theory.
 \newblock {\em Letters in Mathematical Physics}, 106(1):1--27, 2016.
+
+\bibitem[Sev11]{Sevostyanov}
+Alexey Sevostyanov.
+\newblock Conjugacy classes in {Weyl} groups and {q-W} algebras.
+\newblock {\em Advances in Mathematics}, 228(3):1315--1376, 2011.
 
 \bibitem[Sha16]{Shapiro}
 Alexander Shapiro.

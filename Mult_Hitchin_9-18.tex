@@ -36,7 +36,7 @@ Let us begin by presenting these five perspectives, before explaining their inte
 \begin{enumerate}
  \item We'll first describe the moduli space that motivates the ``multiplicative Hitchin system'' terminology.  Say that a \emph{multiplicative Higgs bundle} on $C$ is a principal $G$-bundle $P$ on $C$ with a meromorphic automorphism $g \colon P \to P$, or equivalently, a meromorphic section of $\mr{Ad}_P$.  We refer to these by analogy with Higgs bundles, which consist of a meromorphic section of the Lie algebra (co)adjoint bundle, rather than its Lie group valued analogue \footnote{Usually Higgs bundles on a curve are defined to be sections of the coadjoint bundle twisted by the canonical bundle.  There isn't an obvious replacement for this twist in the multiplicative context, but we'll mostly be interested in the case where $C$ is Calabi-Yau, and therefore this twist is trivial.}.  Just like for ordinary Higgs bundles, the space of multiplicative meromorphic Higgs bundles with arbitrary poles is infinite-dimensional, but we can cut it down to a finite-dimensional space by fixing the locations of the singularities, and their residues.  These residues are described by \chris{...}
  
- Moduli spaces of multiplicative Higgs bundles have been studied in the literature previously, though they're more often referred to as ``moduli spaces of pairs''. \chris{refs: Frenkel-Ngo, Charbonneau-Hurtubise, Hurtubise-Markman, Bouthier}
+ Moduli spaces of multiplicative Higgs bundles have been studied in the literature previously, though they're more often referred to as ``moduli spaces of pairs''. \chris{refs: Frenkel-Ng\^o \cite{FrenkelNgo}, Charbonneau-Hurtubise \cite{CharbonneauHurtubise}, Hurtubise-Markman \cite{HurtubiseMarkman}, Bouthier \cite{Bouthier1, Bouthier2}}
  
  Let $C = \bb{CP}^1$ and consider the \emph{moduli space of multiplicative Higgs bundles} on $\bb{CP}^1$ with prescribed singularities lying at the points $D = \{z_1, \ldots, z_k\}$, with residues $\omega_{z_1}^\vee, \ldots, \omega_{z_k}^\vee$ respectively, and with a fixed framing at $\infty$.  This moduli space is a smooth algebraic variety with dimension depending on the coweights we chose.
  
@@ -279,8 +279,8 @@ where $\rho$ is the Weyl vector.  On the other hand the dimension of the total s
 
 The Donagi-Gaitsgory fiber is, according to the main theorem of \cite{DonagiGaitsgory}, equivalent to the moduli space of $W$-equivariant $T$-bundles on the cameral curve $\wt C$ up to a discrete correction involving the root datum of $G$.  In particular it is generically an abelian variety.  The multiplicative Hitchin fiber is isogenous to this abelian variety, since the map from the multiplicative Hitchin fiber to the Donagi-Gaitsgory fiber is surjective and \'etale.
 
-\begin{remark}
-Like in the case of the ordinary Hitchin system, the multiplicative Hitchin system admits a canonical Hitchin section.  One can construct this section using the Steinberg section (the multiplicative analogue of the Kostant section).  This is a section of the map $G/G \to T/W$, canonical after choosing a Borel subgroup $B$ with maximal torus $T$ and a basis vector for each simple root space.  The \emph{multiplicative Hitchin section} is the map $\sigma \colon \mc B(C,D,\omega^\vee) \to \mhiggs_G(C,D,\omega^\vee)$ defined by post-composition with the Steinberg section.  One can use this section to define the moduli space of \emph{$q$-opers} for the group $G$ and the curve $\bb{CP}^1$ with its framing at infinity.  We'll discuss the hyperk\"ahler structure on the moduli space of multiplicative Higgs bundles in Section \ref{hyperkahler_section}.  In particular we'll show that when one rotates to $q$ in the twistor sphere one obtains the moduli space of $q$-connections on $\bb{CP}^1$.  The moduli space of $q$-opers is defined to be the Hitchin section, but viewed as a subspace of $\qconn^{\fr}_G(\bb{CP}^1,D,\omega^\vee)$.  We'll make some brief remarks about the role played by this moduli space at the end of Section \ref{hyperkahler_section}
+\begin{remark} \label{q_opers_remark}
+Like in the case of the ordinary Hitchin system, the multiplicative Hitchin system admits a canonical Hitchin section.  One can construct this section using the Steinberg section (the multiplicative analogue of the Kostant section).  This is a section of the map $G/G \to T/W$, canonical after choosing a Borel subgroup $B$ with maximal torus $T$ and a basis vector for each simple root space.  The \emph{multiplicative Hitchin section} is the map $\sigma \colon \mc B(C,D,\omega^\vee) \to \mhiggs_G(C,D,\omega^\vee)$ defined by post-composition with the Steinberg section.  One can use this section to define the moduli space of \emph{$q$-opers} for the group $G$ and the curve $\bb{CP}^1$ with its framing at infinity.  We'll discuss the hyperk\"ahler structure on the moduli space of multiplicative Higgs bundles in Section \ref{hyperkahler_section}.  In particular we'll show that when one rotates to $q$ in the twistor sphere one obtains the moduli space of $q$-connections on $\bb{CP}^1$.  The moduli space of $q$-opers is defined to be the Hitchin section, but viewed as a subspace of $\qconn^{\fr}_G(\bb{CP}^1,D,\omega^\vee)$.  We'll make some brief remarks about the role played by this moduli space at the end of Section \ref{quantization_section}
 \end{remark}
 
 \subsection{Stability Conditions}
@@ -436,7 +436,7 @@ Mochizuki \cite{Mochizuki} proved a stronger result in the rational case for the
 \subsection{Deformation Theory} \label{def_section}
 In the next section we'll compare symplectic forms on these moduli spaces.  In order to do so it will be important to understand the tangent spaces at a point of the source and target.  There's a natural description of these tangent spaces in terms of the hypercohomology of certain cochain complexes.
 
-From now on we'll focus on the example we're most interested in.  That is, we'll exclusively study the rational situation where $C = \bb{CP}^1$ and we fix a framing point $c = \infty$.  In this case we can use the description as a hyperk\"ahler reduction.  For more general deformation theory calculations we refer to Foscolo \cite{FoscoloDef}.  Recall that we can write
+From now on we'll focus on the example we're most interested in.  That is, we'll exclusively study the rational situation where $C = \bb{CP}^1$ and we fix a framing point $c = \infty$.  In this case we can use the description as a hyperk\"ahler reduction.  For more general deformation theory calculations we refer to Foscolo \cite{FoscoloDef} (though the results in that paper are more broadly applicable).  Recall that we can write
 \[\mon^{(\fr)}_G(C \times_q S^1, D \times \{t_0\}, \omega^\vee) \iso \mu^{-1}(0)/ \mc G\]
 where $\mc G$ is the group of gauge transformations of $\bo P$ and $\mu \colon \mc V \to \Omega^1(M; (\gg_R)_{\bo P})$ is the Bogomolny functional $(A,\Phi) \mapsto \ast F_A - \d_A \Phi$.  The tangent complex to this hyperk\"ahler quotient at a point $(\bo P, \mc A)$ can be written as $\Omega^0(M \!\bs\! D; (\gg_\RR)_{\bo P})[1] \to \bb T_{\mu^{-1}(0)}$ where $\bb T_{\mu^{-1}(0)}$ is the tangent complex to the zero locus of the moment map, concentrated in non-negative degrees. Roughly speaking $\bb T_{\mu^{-1}(0)} = \bb T_{\mc V} \overset {\d\mu} \to \Omega^1(M; (\gg_R)_{\bo P})[-1]$.  
 
@@ -629,7 +629,7 @@ The non-degenerate pairing on the moduli space of multiplicative Higgs bundles c
 \label{eq:resid}
 \omega(\delta g, \delta g') = \sum_{i=1}^d \langle b_i^L g^{-1}, b^{'R}_i g^{-1} \rangle - (b \leftrightarrow b')
 \end{equation}
-where $\delta g$ is represented on $U_i$ by a pair $(b^L, b^R) \in \Ad_g$.  Here and throughout the notation ``$- (b \leftrightarrow b')$'' denotes antisymmetrization.
+where $\delta g$ is represented on $U_i$ by a pair $(b^L, b^R) \in \ad(g)$.  Here and throughout the notation ``$- (b \leftrightarrow b')$'' denotes antisymmetrization.
 \end{prop}
 
 \begin{proof}
@@ -708,7 +708,7 @@ where
 
 This is an instance of hyperk\"ahler reduction.  Indeed the infinite-dimensional space $\mc V$ admits a hyperk\"ahler structure with symplectic forms defined by
 \[\omega_i((A,\Phi),(A',\Phi')) = \int_{\bb{CP}^1 \times_\eps S^1_R} \left(\kappa(A_i,\Phi') - \kappa(\Phi, A_i') + \sum_{j,k=1,2,3} \eps_{ijk} \kappa(A_j,A'_k)\right) \d x \d y \d t, \]
-where $i=1,2,3$, and where $A$ can be written as $A_1 \d t + A_2 \d x + A_3 \d y$ with respect to a choice $\d z = \d (x + iy)$ of meromorphic volume form on $\bb{CP}^1$ with a second order pole at $\infty$.  This descends to a hyperk\"ahler structure on the quotient since  \chris{... probably I want to find a good reference here.  Could refer to \cite[Section 1.4.2]{FoscoloThesis}.}
+where $i=1,2,3$, and where $A$ can be written as $A_1 \d t + A_2 \d x + A_3 \d y$ with respect to a choice $\d z = \d (x + iy)$ of meromorphic volume form on $\bb{CP}^1$ with a second order pole at $\infty$.  This descends to a hyperk\"ahler structure on the quotient; see \cite[Section 1.4.2]{FoscoloThesis}.
 
 Let us restrict to the case where $\eps=0$ for now.  Consider the holomorphic symplectic structure $\omega_2 + i \omega_3$.  We can alternatively write the formula above for this choice of holomorphic symplectic structure in the form
 \[\omega((A_0, \mc A), (A_0', \mc A')) = \int_{\bb{CP}^1 \times S^1_R} \kappa(A_0, \mc A') - \kappa(\mc A, A_0') \d x \d y \d t,\]
@@ -762,13 +762,11 @@ R\left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \frac {1-|\zeta|^2}{1+|\zeta|^2}
 This converges to zero pointwise as $R \to \infty$.  The same calculation proves convergence for the other symplectic structures in the hyperk\"ahler family, and therefore convergence for the two complex structures.
 \end{proof}
 
-\begin{remark}
-\chris{comment on the example of the Nahm transform.}
-\end{remark}
+\begin{example}
+In the case where the group $G=\GL_n$ it's possible to describe the multiplicative Hitchin system on $\bb{CP}^1$ in terms of an \emph{ordinary} Hitchin system on $\CC^\times$, but for a different group $\GL_k$ and with different singularity data.  This relationship is given by the \emph{Nahm transform}.  From a gauge-theoretic point of view, the idea is that we can either interpret \chris{...}.  The Nahm transform in this setting was developed by Cherkis and Kapustin \cite{CherkisKapustin2}, and worked out in detail in the case $n=2$ (they also give a brane description of the transform: see \cite[Section 2]{CherkisKapustin2}).
 
-\begin{remark}
-\chris{comment on $q$-opers -- or maybe defer to the subsequent section}.
-\end{remark}
+One then has to match up the singularity data.  In brief, the multiplicative Hitchin system for the group $\GL_n$ with $k$ singularities at $z_1, \ldots, z_k$ is equivalent to the ordinary Hitchin system on $\CC^\times$ for the group $\GL_k$ with $n$ regular singularities, which residues determined by the original positions $z_i$ and positions determined by the original residues $\omega^\vee_{z_i}$.  We refer to \cite[Section 7.1]{NekrasovPestun} for more details.
+\end{example}
 
 \section{The Rational Poisson Lie Group and the Yangian} \label{quantization_section}
 Let us proceed by discussing the connection between the symplectic structure on the moduli space of multiplicative Higgs bundles in the rational case and the rational Poisson Lie group.  This connection should be compared to the connection between the elliptic moduli space and the elliptic quantum group in the work of Hurtubise and Markman \cite[Theorem 9.1]{HurtubiseMarkman}.  
@@ -789,9 +787,12 @@ The map $r_\infty \colon \mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee) \to G_1[[z^{-1}]
 \end{theorem}
 
 \begin{proof}
-We just need to compute the pullback of the Poisson bracket on $\OO(G_1[[z^{-1}]])$ under $r_\infty$.  This Poisson bracket is most easily described in terms of the rational $r$-matrix: that is, we have an element $r$ in $\gg_1[[z^{-1}]] \otimes \gg_1[[w^{-1}]]$ defined by the formula $\frac \Omega {z-w}$ where $\Omega$ is the quadratic Casimir element of $\gg$.  The pairing defining the Poisson structure is given by contracting two cotangent vectors with the bivector field whose value at $g \in G_1[[z^{-1}]]$ is $\Ad_g(r) - r$.  Concretely, given a pair of elements $X$ and $X'$ in the cotangent space $T^*_{G_1[[z^{-1}]], g}$, this computes the pairing
-\[(X, X') \mapsto \int \kappa(g X g^{-1},X') - \kappa(X, g X' g^{-1})\d z,\]
-where $X$, for example, is identified with a $\gg^*$-valued meromorphic function on $\CC$, vanishing at $\infty$, via pullback under the right multiplication by $g^{-1}$ map \chris{does it?}.  Now, suppose the element $g$ is in the image of the restriction map $r_\infty$ for fixed residue data $(D,\omega^\vee)$.  Then we note that the map $r_\infty^*$ sends a cotangent vector $X$ to the meromorphic global section $(b^L, b^R) = (gX, -Xg)$ of the bundle $\ad(g)^*$ \chris{identify tangent and cotangent here}, and so with this identification, applying the residue formula, our expression recovers the expression given for the symplectic form in Proposition \ref{qconn_symp_description}. \chris{...}
+We just need to compute the pullback of the Poisson bracket on $\OO(G_1[[z^{-1}]])$ under $r_\infty$.  This Poisson bracket is most easily described in terms of the rational $r$-matrix: that is, we have an element $r$ in $\gg_1[[z^{-1}]] \otimes \gg_1[[w^{-1}]]$ defined by the formula $\frac \Omega {z-w}$ where $\Omega$ is the quadratic Casimir element of $\gg$.  The pairing defining the Poisson structure is given by contracting two cotangent vectors with the bivector field whose value at $g \in G_1[[z^{-1}]]$ is $(1 \otimes \Ad_g - \Ad_g \otimes 1)(r)$.  Concretely, given a pair of elements $X$ and $X'$ in the cotangent space $T^*_{G_1[[z^{-1}]], g}$, this computes the pairing
+\[(X, X') \mapsto \int \kappa(X, g X' g^{-1}) - \kappa(g X g^{-1},X')\d z,\]
+where $X$, for example, is identified with a $\gg^*$-valued meromorphic function on $\CC$, vanishing at $\infty$, via pullback under the right multiplication by $g^{-1}$ map.  Now, suppose the element $g$ is in the image of the restriction map $r_\infty$ for fixed residue data $(D,\omega^\vee)$.  Then we note that the map $r_\infty^*$ sends a cotangent vector $X$ to the meromorphic global section $(b^L, b^R) = (gX, -Xg)$ of the bundle $\ad(g) \iso \ad(g)^*$ -- identifying the bundle with its dual using the invariant pairing \chris{sketchy} -- and so with this identification, our expression yields the formula
+\[(X,X') \mapsto \int \kappa(b^Lg^{-1}, b^{'R}g^{-1}) - \kappa(b^{'L}g^{-1}, b^{R}g^{-1})\d z.\]
+This recovers the expression given for the symplectic form in Proposition \ref{qconn_symp_description} by applying the residue formula.
+\chris{check}
 \end{proof}
 
 \begin{remark} \label{shapiro_leaves_remark}
@@ -828,7 +829,7 @@ One can verify this claim by studying the classical limits of the $Y(\gg)$-modul
 
 GKLO discuss the classical limits of these modules $M_{D,\omega^\vee}$ as symplectic subvarieties of the Poisson Lie group.  This is discussed with further detail in \cite[Section 4]{Shapiro}.  In particular, one can compare the Poisson Lie group with the Zastava space for the group $G$.  Recall that  moduli spaces of (non-periodic) monopoles on $\bb{CP}^1$ can be modelled by spaces of framed maps from $\bb{CP}^1$ to the flag variety $G/B$, sending $\infty$ to the point $[B]$ (this is Jarvis's description of monopoles via scattering data \cite{Jarvis}).  The space $\mr{Map}_{\alpha^\vee}^\fr(\bb{CP}^1, G/B)$ of monopoles of degree $\alpha^\vee$ (where $\alpha^\vee$ is a positive coroot, identified as a class in $\mr H_2(G/B;\ZZ)$) admits a compactification known as \emph{Zastava space}.  Concretely, this is a stratified algebraic variety, with stratification given by
 \[Z_{\alpha^\vee}(G) = \coprod_{\beta^\vee \preceq \alpha^\vee} \mr{Map}_{\alpha^\vee}^\fr(\bb{CP}^1, G/B) \times \sym^{\alpha^\vee - \beta^\vee}(\CC),\]
-where the factor $\sym^{\alpha^\vee - \beta^\vee}(\CC)$ represents the space of coloured divisors $(D, \omega^\vee)$ with $\sum_{z_i \in D} \omega^\vee_{z_i} = \alpha^\vee - \beta^\vee$.  We refer the reader to \chris{refs} for more information.
+where the factor $\sym^{\alpha^\vee - \beta^\vee}(\CC)$ represents the space of coloured divisors $(D, \omega^\vee)$ with $\sum_{z_i \in D} \omega^\vee_{z_i} = \alpha^\vee - \beta^\vee$.  Zastava spaces were introduced by Bezrukavnikov and Finkelberg in \cite{BezrukavnikovFinkelbergI}, see also \cite{BravermanICM}.
 
 Using a birational map to this Zastava space, GKLO show that the union of symplectic leaves corresponding to representations of a given type (meaning a given sum $\sum \omega^\vee_{z_i}$) is equivalent to the union of the classical leaves of that given type.  It is, therefore, reasonable to conjecture that the decompositions of these two varieties into their individual symplectic leaves (i.e. into decompositions of $\sum \omega^\vee_{z_i}$ labelled by points in $\CC$) should coincide.  We should note that this doesn't seem to follow directly from the GKLO calculations.  They analyse the symplectic leaves corresponding to the classical limits of $Y(\gg)$-modules via a rational map, denoted by $e_i(z) = b_i(z)/a_i(z)$, defined on an open set of this symplectic leaf.  This rational map is, by construction, not sensitive to the positions of the singularities, only of the total type of a representation.
 
@@ -839,9 +840,16 @@ Nevertheless, the symplectic leaves obtained as classical limits of the $Y(\gg)$
 One example is given by the case where the only pole lies at $0 \in \CC$, so the map to the Poisson Lie group $G_1[[z^{-1}]]$ factors through the polynomial group $G_1[z^{-1}]$.  This example is included in the work of Kamnitzer, Webster, Weekes and Yacobi \cite{KWWY}.  They calculate the quantization of slices in the thick affine Grassmannian $G(\!(t^{-1})\!)/G[t]$.  The thick affine Grassmannian has an open cell isomorphic to $G_1[[z^{-1}]]$.  For each dominant coweight $\omega^\vee$ there is a slice defining a symplectic leaf in this open cell: it's exactly the leaf corresponding to multiplicative Higgs fields with a single pole at 0 with residue $\omega^\vee$.  Kamnitzer et al quantize this slice (in particular; they also quantize slices through to the other cells in the thick affine Grassmannian) to a $Y(\gg)$-module of GKLO type. 
 \end{example}
 
-We'll conclude this section with some additional discussion about 
-\chris{Include some discussion on how we can think of $\OO_\hbar(\mhiggs^{\text{fr,sing}}(\bb{CP}^1))$ as an intermediate quantum group between the Yangian and something dual to it.  References and a remark on the comparison with the conjectures made in \cite[Chapter 8.1]{NekrasovPestun}.  Include some words about $q$-Opers and $q$-W algebras, citing Sevostyanov et al and Aganagic-Frenkel-Okounkov \cite{AFO}.}
+\begin{remark}
+This result should be compared to the conjecture made in \cite[Chapter 8.1]{NekrasovPestun}.  The Poisson Lie group $G_1[[z^{-1}]]$ receives a Poisson map from the full moduli space $\mhiggs^{\text{fr,sing}}(\bb{CP}^1)$ of multiplicative Higgs bundles with arbitrary singularities.  Upon deformation quantization therefore, the quantized algebra of functions on this moduli space is closely related to the Yangian.
+\end{remark}
 
+\begin{remark}[$q$-Opers and Quantization]
+Finally, let's refer back to Remark \ref{q_opers_remark} and discuss the brane of $q$-opers, and the associated structures that should arise after quantization.  Recall that the multiplicative Hitchin system has a natural section defined by post-composition with the Steinberg section $T/W \to G/G$.  The moduli space of $q$-opers is the subspace of $\qconn_G(C,D,\omega^\vee)$ defined to be the multiplicative Hitchin section after rotating to the point $q$ in the twistor sphere of complex structures.
+
+Now, in the rational case, upon quantization this 
+\chris{Comment should include their definition as the twistor rotation of the Hitchin section (why is it generically still algebraic, i.e. a BBA-brane?).  Then mention their quantization to $q$-W algebras, citing Sevostyanov et al \cite{STSSevostyanov, Sevostyanov} and Aganagic-Frenkel-Okounkov \cite{AFO}.}.
+\end{remark}
 
 
  
