@@ -7,45 +7,45 @@ Warning--I didn't find a database entry for "EgingofKazhdanIII"
 Warning--can't use both volume and number fields in CostelloSH
 Warning--empty publisher in CostelloSH
 Warning--there's a number but no volume in Shapiro
-You've used 51 entries,
+You've used 53 entries,
             2543 wiz_defined-function locations,
-            904 strings with 12739 characters,
-and the built_in function-call counts, 19331 in all, are:
-= -- 1997
-> -- 808
+            913 strings with 13013 characters,
+and the built_in function-call counts, 20020 in all, are:
+= -- 2061
+> -- 852
 < -- 31
-+ -- 262
-- -- 256
-* -- 1383
-:= -- 3185
-add.period$ -- 159
-call.type$ -- 51
-change.case$ -- 293
-chr.to.int$ -- 50
-cite$ -- 54
-duplicate$ -- 792
-empty$ -- 1422
-format.name$ -- 327
-if$ -- 3920
++ -- 278
+- -- 271
+* -- 1427
+:= -- 3308
+add.period$ -- 165
+call.type$ -- 53
+change.case$ -- 305
+chr.to.int$ -- 52
+cite$ -- 56
+duplicate$ -- 820
+empty$ -- 1467
+format.name$ -- 344
+if$ -- 4055
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 51
-newline$ -- 259
-num.names$ -- 153
-pop$ -- 232
+missing$ -- 54
+newline$ -- 269
+num.names$ -- 159
+pop$ -- 247
 preamble$ -- 1
-purify$ -- 348
+purify$ -- 363
 quote$ -- 0
-skip$ -- 657
+skip$ -- 681
 stack$ -- 0
-substring$ -- 1163
-swap$ -- 106
+substring$ -- 1178
+swap$ -- 108
 text.length$ -- 31
 text.prefix$ -- 21
 top$ -- 0
-type$ -- 400
+type$ -- 412
 warning$ -- 3
-while$ -- 199
-width$ -- 55
-write$ -- 660
+while$ -- 205
+width$ -- 57
+write$ -- 684
 (There were 4 warnings)

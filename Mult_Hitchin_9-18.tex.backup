@@ -50,7 +50,7 @@ Let us begin by presenting these five perspectives, before explaining their inte
 
 \subsection{Twisted Gauge Theory}
 
-\chris{note: include citation / discussion of new paper by Costello and Yagi \cite{CostelloYagi}.}
+\chris{note: include citation / discussion of new paper by Costello and Yagi \cite{CostelloYagi}.  Should at least mention \cite{AshwinkumarTanZhao} as well.}
 
 In this section we'll discuss yet another occurence of the moduli space of multiplicative Higgs bundles via gauge theory.  This story is distinct from the appearance of the moduli space in \cite{NekrasovPestun} as the Seiberg-Witten integral system of a 4d $\mc N=2$ theory.  Instead the moduli space will appear as the moduli space of solutions to the equations of motion in a twisted 5d $\mc N=2$ supersymmetric gauge theory, compactified on a circle.  This story will be directly analogous to the occurence of the ordinary moduli stack of Higgs bundles in a holomorphic twist of 4d $\mc N=4$ theory (see \cite{CostelloSH,ElliottYoo1} for a discussion of this story); we'll recover that example in the limit where the radius of the circle shrinks to zero.
 
@@ -130,7 +130,7 @@ Here we're using the natural morphisms $p \colon \mhiggs_B(E) \to \mhiggs_G(E)$ 
 It ought to be possible to state something a bit stronger that includes singularities in this auto-duality.
 
 \subsubsection{The Rational Type A Case}
-There's one more example where we can say something precise, and even draw a connection to the ordinary geometric Langlands correspondence.  We already mentioned the Nahm transform in the previous section: in the case where $G = \GL(n)$ and $C$ is $\CC$ (where as usual we fix framing data at infinity) the Nahm transform identifies multiplicative Higgs bundles of degree $k$ with \emph{ordinary} Higgs bundles on $\bb{CP}^1$ for the group $\GL(k)$ with $n+2$ tame singularities (with appropriate fixed locations and residues).
+There's one more example where we can say something precise, and even draw a connection to the ordinary geometric Langlands correspondence.  In the case where $G = \GL(n)$ and $C$ is $\CC$ (where as usual we fix framing data at infinity) the Nahm transform identifies multiplicative Higgs bundles of degree $k$ with \emph{ordinary} Higgs bundles on $\bb{CP}^1$ for the group $\GL(k)$ with $n+2$ tame singularities (with appropriate fixed locations and residues).
 
 \begin{claim}
 Under the Nahm transform, Pseudo-Conjecture \ref{multLanglands} in the rational case for the group $\GL(n)$ becomes the ordinary geometric Langlands conjecture on $\bb{CP}^1$ with tame ramification.
@@ -231,7 +231,7 @@ The fibers of this map over regular points in $T/W$ are given by moduli stacks o
 While the moduli space of multiplicative Higgs bundles makes sense on a general curve it's only after restricting identity to this trichotomy of examples that we'll expect the existence of a Poisson structure.  Such a structure arises by the AKSZ construction, i.e. by transgressing the 1-shifted symplectic structure on $G/G$ to the mapping space using a fixed section of the canonical bundle on $C$ (possibly with a boundary condition).  
 \end{remark}
 
-\subsection{The Multiplicative Hitchin System}
+\subsection{The Multiplicative Hitchin System} \label{Hitchin_system_section}
 We can define the global Chevalley map as in Remark \ref{Elliptic_AKSZ_remark} in the case of non-empty $D$ as well.  We'll show that in the rational case this defines a completely integrable system structure.
 
 \begin{definition} \label{mult_Hitchin_system_def}
@@ -347,6 +347,11 @@ More generally we can say the following.  Let us consider the rational case wher
 is an exact sequence of ind-pro vector spaces, and therefore an exact sequence of quasi-coherent sheaves on the stack $\bun_G^\fr(\bb{CP}^1 \! \bs \! D)$.  To do this we identify the pair $(\gg_-, \gg(\!(z)\!)^k)$ as part of a Manin triple, where a complementary isotropic subalgebra to $\gg_-$ is given by $\gg_+ = \gg[[z]]^k$.  Using the residue pairing we can identify $\gg_+$ with $(\gg_-)^\vee$ and therefore identify our sequence with the split exact sequence
 \[0 \to \gg_- \to \gg(\!(z)\!)^k \to \gg_+ \to 0.\]
 \end{remark}
+
+\begin{remark}
+We will conclude this section with some comments on the multiplicative Hitchin system described above in Section \ref{Hitchin_system_section}.  In particular, the derived point of view suggests that both the multiplicative Hitchin fibers and the multiplicative Hitchin section of Remark \ref{q_opers_remark} will be -- at least generically -- canonically Lagrangian.  We can see this directly from the Chevalley map $G/G \to T/W$. \chris{... include cross-references, make sure I talked about the Hitchin section in the previous subsection at least briefly.}
+\end{remark}
+
 
 \section{Periodic Monopoles}
 Moduli spaces of $q$-connections on a Riemann surface $C$ are closely related to moduli spaces of periodic monopoles, i.e. monopoles on 3-manifolds that fiber over the circle (more specifically, with fiber $C$ and monodromy determined by $q$).  Let $G_\RR$ be a compact Lie group whose complexification is $G$.  The discussion in this section will mostly follow that of \cite{CharbonneauHurtubise, Smith}.
@@ -763,7 +768,9 @@ This converges to zero pointwise as $R \to \infty$.  The same calculation proves
 \end{proof}
 
 \begin{example}
-In the case where the group $G=\GL_n$ it's possible to describe the multiplicative Hitchin system on $\bb{CP}^1$ in terms of an \emph{ordinary} Hitchin system on $\CC^\times$, but for a different group $\GL_k$ and with different singularity data.  This relationship is given by the \emph{Nahm transform}.  From a gauge-theoretic point of view, the idea is that we can either interpret \chris{...}.  The Nahm transform in this setting was developed by Cherkis and Kapustin \cite{CherkisKapustin2}, and worked out in detail in the case $n=2$ (they also give a brane description of the transform: see \cite[Section 2]{CherkisKapustin2}).
+In the case where the group $G=\GL_n$ it's possible to describe the multiplicative Hitchin system on $\bb{CP}^1$ in terms of an \emph{ordinary} Hitchin system on $\CC^\times$, but for a different group $\GL_k$ and with different singularity data.  This relationship is given by the \emph{Nahm transform}.  
+
+Let us give an informal explanation.  From a gauge-theoretic point of view, the Nahm transform arises from the Fourier-Mukai transform for anti-self-dual connections on a 4-torus $T$, relating an of ASD connection on a vector bundle to an ASD connection on the bundle of kernels for the associated Dirac operator, a vector bundle on the dual torus $T^\vee$ (see the book of Donaldson--Kronheimer \cite[Section 3.2]{DonaldsonKronheimer}).  There is a Nahm transform relating the ordinary Hitchin system to the moduli space of periodic monopoles obtained in an appropriate limit: consider the torus $T = S^1_{r_1} \times S^1_{r_2} \times S^1_{r_3} \times S^1_{R}$.  The moduli space of periodic monopoles on $\CC$ arises in the limit where $r_1$ and $r_2$ go to $\infty$ and $r_3$ goes to zero.  On the other hand, the Hitchin system on $\CC^\times$ arises in the dual limit where $r_1$ and $r_2$ go to zero and $r_3$ goes to $\infty$.  The Nahm transform in this setting -- i.e. for periodic monopoles -- was developed by Cherkis and Kapustin \cite{CherkisKapustin2}, and worked out in detail in the case $n=2$ (they also give a brane description of the transform: see \cite[Section 2]{CherkisKapustin2}).
 
 One then has to match up the singularity data.  In brief, the multiplicative Hitchin system for the group $\GL_n$ with $k$ singularities at $z_1, \ldots, z_k$ is equivalent to the ordinary Hitchin system on $\CC^\times$ for the group $\GL_k$ with $n$ regular singularities, which residues determined by the original positions $z_i$ and positions determined by the original residues $\omega^\vee_{z_i}$.  We refer to \cite[Section 7.1]{NekrasovPestun} for more details.
 \end{example}
@@ -787,9 +794,12 @@ The map $r_\infty \colon \mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee) \to G_1[[z^{-1}]
 \end{theorem}
 
 \begin{proof}
-We just need to compute the pullback of the Poisson bracket on $\OO(G_1[[z^{-1}]])$ under $r_\infty$.  This Poisson bracket is most easily described in terms of the rational $r$-matrix: that is, we have an element $r$ in $\gg_1[[z^{-1}]] \otimes \gg_1[[w^{-1}]]$ defined by the formula $\frac \Omega {z-w}$ where $\Omega$ is the quadratic Casimir element of $\gg$.  The pairing defining the Poisson structure is given by contracting two cotangent vectors with the bivector field whose value at $g \in G_1[[z^{-1}]]$ is $\Ad_g(r) - r$.  Concretely, given a pair of elements $X$ and $X'$ in the cotangent space $T^*_{G_1[[z^{-1}]], g}$, this computes the pairing
-\[(X, X') \mapsto \int \kappa(g X g^{-1},X') - \kappa(X, g X' g^{-1})\d z,\]
-where $X$, for example, is identified with a $\gg^*$-valued meromorphic function on $\CC$, vanishing at $\infty$, via pullback under the right multiplication by $g^{-1}$ map \chris{does it?}.  Now, suppose the element $g$ is in the image of the restriction map $r_\infty$ for fixed residue data $(D,\omega^\vee)$.  Then we note that the map $r_\infty^*$ sends a cotangent vector $X$ to the meromorphic global section $(b^L, b^R) = (gX, -Xg)$ of the bundle $\ad(g)^*$, and so with this identification, applying the residue formula, our expression recovers the expression given for the symplectic form in Proposition \ref{qconn_symp_description}. \chris{complete this, also take care, it isn't quite right.  This argument is trying to match up a pairing on the cotangent space with a pairing on the tangent space (as we had in previous sections).  Need to write our usual pairing dually first.}
+We just need to compute the pullback of the Poisson bracket on $\OO(G_1[[z^{-1}]])$ under $r_\infty$.  This Poisson bracket is most easily described in terms of the rational $r$-matrix: that is, we have an element $r$ in $\gg_1[[z^{-1}]] \otimes \gg_1[[w^{-1}]]$ defined by the formula $\frac \Omega {z-w}$ where $\Omega$ is the quadratic Casimir element of $\gg$.  The pairing defining the Poisson structure is given by contracting two cotangent vectors with the bivector field whose value at $g \in G_1[[z^{-1}]]$ is $(1 \otimes \Ad_g - \Ad_g \otimes 1)(r)$.  Concretely, given a pair of elements $X$ and $X'$ in the cotangent space $T^*_{G_1[[z^{-1}]], g}$, this computes the pairing
+\[(X, X') \mapsto \int \kappa(X, g X' g^{-1}) - \kappa(g X g^{-1},X')\d z,\]
+where $X$, for example, is identified with a $\gg^*$-valued meromorphic function on $\CC$, vanishing at $\infty$, via pullback under the right multiplication by $g^{-1}$ map.  Now, suppose the element $g$ is in the image of the restriction map $r_\infty$ for fixed residue data $(D,\omega^\vee)$.  Then we note that the map $r_\infty^*$ sends a cotangent vector $X$ to the meromorphic global section $(b^L, b^R) = (gX, -Xg)$ of the bundle $\ad(g) \iso \ad(g)^*$ -- identifying the bundle with its dual using the invariant pairing \chris{sketchy} -- and so with this identification, our expression yields the formula
+\[(X,X') \mapsto \int \kappa(b^Lg^{-1}, b^{'R}g^{-1}) - \kappa(b^{'L}g^{-1}, b^{R}g^{-1})\d z.\]
+This recovers the expression given for the symplectic form in Proposition \ref{qconn_symp_description} by applying the residue formula.
+\chris{check}
 \end{proof}
 
 \begin{remark} \label{shapiro_leaves_remark}
@@ -843,7 +853,9 @@ This result should be compared to the conjecture made in \cite[Chapter 8.1]{Nekr
 
 \begin{remark}[$q$-Opers and Quantization]
 Finally, let's refer back to Remark \ref{q_opers_remark} and discuss the brane of $q$-opers, and the associated structures that should arise after quantization.  Recall that the multiplicative Hitchin system has a natural section defined by post-composition with the Steinberg section $T/W \to G/G$.  The moduli space of $q$-opers is the subspace of $\qconn_G(C,D,\omega^\vee)$ defined to be the multiplicative Hitchin section after rotating to the point $q$ in the twistor sphere of complex structures.
-\chris{Probably not actually in a remark.  Comment on $q$-opers, referring back to Remark \ref{q_opers_remark}.  Comment should include their definition as the twistor rotation of the Hitchin section (why is it generically still algebraic, i.e. a BBA-brane?).  Then mention their quantization to $q$-W algebras, citing Sevostyanov et al and Aganagic-Frenkel-Okounkov \cite{AFO}.}.
+
+Now, in the rational case, upon quantization this 
+\chris{Comment should include their definition as the twistor rotation of the Hitchin section (why is it generically still algebraic, i.e. a BBA-brane?).  Then mention their quantization to $q$-W algebras, citing Sevostyanov et al \cite{STSSevostyanov, Sevostyanov} and Aganagic-Frenkel-Okounkov \cite{AFO}.}.
 \end{remark}
 
 

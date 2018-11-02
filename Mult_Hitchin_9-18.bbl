@@ -18,6 +18,11 @@ Michael Atiyah and Nigel Hitchin.
 \newblock M. B. Porter Lectures. Princeton University Press, Princeton, NJ,
   1988.
 
+\bibitem[ATZ18]{AshwinkumarTanZhao}
+Meer Ashwinkumar, Meng-Chwan Tan, and Qin Zhao.
+\newblock Branes and categorifying integrable lattice models.
+\newblock {\em arXiv preprint arXiv:1806.02821}, 2018.
+
 \bibitem[BF99]{BezrukavnikovFinkelbergI}
 Roman Bezrukavnikov and Michael Finkelberg.
 \newblock Semi-infinite flags {I.} case of global curve {$\mathbb P^1$}.
@@ -102,6 +107,11 @@ Kevin Costello and Junya Yagi.
 Ron Donagi and Dennis Gaitsgory.
 \newblock The gerbe of {H}iggs bundles.
 \newblock {\em Transform. Groups}, 7(2):109--153, 2002.
+
+\bibitem[DK90]{DonaldsonKronheimer}
+Simon Donaldson and Peter Kronheimer.
+\newblock {\em The geometry of four-manifolds}.
+\newblock Oxford University Press, 1990.
 
 \bibitem[Don03]{DonagiLectures}
 Ron Donagi.
