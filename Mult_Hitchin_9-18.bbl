@@ -12,6 +12,12 @@ Mina Aganagic, Edward Frenkel, and Andrei Okounkov.
 \newblock Quantum {$q$}-{Langlands} correspondence.
 \newblock {\em arXiv preprint arXiv:1701.03146}, 2017.
 
+\bibitem[AG15]{ArinkinGaitsgory}
+Dima Arinkin and Dennis Gaitsgory.
+\newblock Singular support of coherent sheaves and the geometric {Langlands}
+  conjecture.
+\newblock {\em Selecta Mathematica}, 21(1):1--199, 2015.
+
 \bibitem[AH88]{AtiyahHitchin}
 Michael Atiyah and Nigel Hitchin.
 \newblock {\em The geometry and dynamics of magnetic monopoles}.
@@ -22,6 +28,12 @@ Michael Atiyah and Nigel Hitchin.
 Meer Ashwinkumar, Meng-Chwan Tan, and Qin Zhao.
 \newblock Branes and categorifying integrable lattice models.
 \newblock {\em arXiv preprint arXiv:1806.02821}, 2018.
+
+\bibitem[Bau11]{Baulieu}
+Laurent Baulieu.
+\newblock {$\mathrm{SU}(5)$}-invariant decomposition of ten-dimensional
+  {Yang--Mills} supersymmetry.
+\newblock {\em Physics Letters B}, 698(1):63--67, 2011.
 
 \bibitem[BF99]{BezrukavnikovFinkelbergI}
 Roman Bezrukavnikov and Michael Finkelberg.
@@ -51,6 +63,12 @@ Alexander Braverman.
 \newblock Spaces of quasi-maps into the flag varieties and their applications.
 \newblock In {\em Proceedings of the International Congress of Mathematicians
   Madrid, August 22--30, 2006}, pages 1145--1170, 2007.
+
+\bibitem[But19]{Butson}
+Dylan Butson.
+\newblock 6d {$\mathcal N = (1, 0)$} gauge theories and their holomorphic
+  twists.
+\newblock {\em Forthcoming}, 2019.
 
 \bibitem[CH10]{CharbonneauHurtubise}
 Beno\^it Charbonneau and Jacques Hurtubise.
@@ -138,11 +156,22 @@ Chris Elliott and Pavel Safronov.
 \newblock Topological twists of supersymmetric algebras of observables.
 \newblock {\em arXiv preprint arXiv:1805.10806}, 2018.
 
+\bibitem[ESW18]{EagerSaberiWalcher}
+Richard Eager, Ingmar Saberi, and Johannes Walcher.
+\newblock Nilpotence varieties.
+\newblock 7 2018.
+
 \bibitem[EV98]{EtingofVarchenko}
 Pavel Etingof and Alexander Varchenko.
 \newblock Geometry and classification of solutions of the classical dynamical
   {Y}ang-{B}axter equation.
 \newblock {\em Comm. Math. Phys.}, 192(1):77--120, 1998.
+
+\bibitem[EY17]{ElliottYoo2}
+Chris Elliott and Philsang Yoo.
+\newblock A physical origin for singular support conditions in geometric
+  {L}anglands.
+\newblock {\em arXiv preprint arXiv:1707.01292}, 2017.
 
 \bibitem[EY18]{ElliottYoo1}
 Chris Elliott and Philsang Yoo.
@@ -220,6 +249,11 @@ Maxim Kontsevich.
 \newblock Deformation quantization of {Poisson} manifolds.
 \newblock {\em Letters in Mathematical Physics}, 66(3):157--216, 2003.
 
+\bibitem[KW07]{KapustinWitten}
+Anton Kapustin and Edward Witten.
+\newblock Electric-magnetic duality and the geometric {L}anglands program.
+\newblock {\em Commun. Number Theory Phys.}, 1(1):1--236, 2007.
+
 \bibitem[KWWY14]{KWWY}
 Joel Kamnitzer, Ben Webster, Alex Weekes, and Oded Yacobi.
 \newblock Yangians and quantizations of slices in the affine {G}rassmannian.
@@ -292,6 +326,18 @@ Michel Semenov-Tian-Shansky and Alexey Sevostyanov.
 \newblock {Drinfeld--Sokolov} reduction for difference operators and
   deformations of {$\mc W$}-algebras {II}. the general semisimple case.
 \newblock {\em Communications in mathematical physics}, 192(3):631--647, 1998.
+
+\bibitem[Wit88]{WittenTQFT}
+Edward Witten.
+\newblock Topological quantum field theory.
+\newblock {\em Comm. Math. Phys.}, 117(3):353--386, 1988.
+
+\bibitem[Wit10]{Witten6d}
+Edward Witten.
+\newblock Geometric {L}anglands from six dimensions.
+\newblock In {\em A celebration of the mathematical legacy of {R}aoul {B}ott},
+  volume~50 of {\em CRM Proc. Lecture Notes}, pages 281--310. Amer. Math. Soc.,
+  Providence, RI, 2010.
 
 \bibitem[Zhu17]{Zhu}
 Xinwen Zhu.

@@ -6,46 +6,47 @@ Database file #1: Mult_Hitchin.bib
 Warning--I didn't find a database entry for "EgingofKazhdanIII"
 Warning--can't use both volume and number fields in CostelloSH
 Warning--empty publisher in CostelloSH
+Warning--empty journal in EagerSaberiWalcher
 Warning--there's a number but no volume in Shapiro
-You've used 53 entries,
+You've used 61 entries,
             2543 wiz_defined-function locations,
-            913 strings with 13013 characters,
-and the built_in function-call counts, 20020 in all, are:
-= -- 2061
-> -- 852
-< -- 31
-+ -- 278
-- -- 271
-* -- 1427
-:= -- 3308
-add.period$ -- 165
-call.type$ -- 53
-change.case$ -- 305
-chr.to.int$ -- 52
-cite$ -- 56
-duplicate$ -- 820
-empty$ -- 1467
-format.name$ -- 344
-if$ -- 4055
+            959 strings with 14057 characters,
+and the built_in function-call counts, 22961 in all, are:
+= -- 2367
+> -- 966
+< -- 37
++ -- 314
+- -- 306
+* -- 1633
+:= -- 3786
+add.period$ -- 190
+call.type$ -- 61
+change.case$ -- 350
+chr.to.int$ -- 60
+cite$ -- 65
+duplicate$ -- 947
+empty$ -- 1686
+format.name$ -- 391
+if$ -- 4654
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 54
-newline$ -- 269
-num.names$ -- 159
-pop$ -- 247
+missing$ -- 62
+newline$ -- 309
+num.names$ -- 183
+pop$ -- 284
 preamble$ -- 1
-purify$ -- 363
+purify$ -- 416
 quote$ -- 0
-skip$ -- 681
+skip$ -- 787
 stack$ -- 0
-substring$ -- 1178
-swap$ -- 108
-text.length$ -- 31
-text.prefix$ -- 21
+substring$ -- 1349
+swap$ -- 126
+text.length$ -- 37
+text.prefix$ -- 25
 top$ -- 0
-type$ -- 412
-warning$ -- 3
-while$ -- 205
-width$ -- 57
-write$ -- 684
-(There were 4 warnings)
+type$ -- 476
+warning$ -- 4
+while$ -- 236
+width$ -- 65
+write$ -- 786
+(There were 5 warnings)
