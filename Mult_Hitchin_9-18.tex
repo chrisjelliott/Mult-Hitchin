@@ -25,41 +25,114 @@
 
 \maketitle 
 \begin{abstract}
-Multiplicative Hitchin systems are analogues of Hitchin's integrable system based on moduli spaces of $G$-Higgs bundles on a curve $C$ where the Higgs field is group-valued, rather than Lie algebra valued.  We discuss the relationship between several occurences of these moduli spaces in geometry and supersymmetric gauge theory with a particular focus on the case where $C = \bb{CP}^1$ with a fixed framing at infinity.  In this case we prove that the identification between multiplicative Higgs bundles and periodic monopoles proved by Charbonneau and Hurtubise can be promoted to an equivalence of hyperk\"ahler spaces, and analyse the twistor rotation for the multiplicative Hitchin system.  We also discuss quantization of these moduli spaces, yielding the modules for the Yangian $Y(\gg)$ first described by Gerasimov, Kharchev, Lebedev and Oblezin.
+Multiplicative Hitchin systems are analogues of Hitchin's integrable system based on moduli spaces of $G$-Higgs bundles on a curve $C$ where the Higgs field is group-valued, rather than Lie algebra valued.  We discuss the relationship between several occurences of these moduli spaces in geometry and supersymmetric gauge theory with a particular focus on the case where $C = \bb{CP}^1$ with a fixed framing at infinity.  In this case we prove that the identification between multiplicative Higgs bundles and periodic monopoles proved by Charbonneau and Hurtubise can be promoted to an equivalence of hyperk\"ahler spaces, and analyse the twistor rotation for the multiplicative Hitchin system.  We also discuss quantization of these moduli spaces, yielding the modules for the Yangian $Y(\gg)$ discovered by Gerasimov, Kharchev, Lebedev and Oblezin.
 \end{abstract}
 
 \section{Introduction}
 
-In this paper, we will be concerned with the geometric structures associated to five parallel moduli spaces: three coming from geometry and representation theory, and two coming from supersymmetric gauge theory.  In fact, all five of these moduli spaces are equivalent.  By leveraging these multiple perspectives we'll equip our common moduli space with the structure of a completely integrable system which we call the \emph{multiplicative Hitchin system}.  Many of the structures associated with the ordinary Hitchin system, such as the brane of opers, have parallels in the multiplicative setting.  
+In this paper, we will be concerned with the geometric structures associated to five moduli spaces: three coming from geometry and representation theory, and two coming from supersymmetric gauge theory.  In fact, all five of these moduli spaces are equivalent.  By leveraging these multiple perspectives we'll equip our common moduli space with the structure of a completely integrable system which we call the \emph{multiplicative Hitchin system}.  Many of the structures associated with the ordinary Hitchin system, such as the brane of opers, have parallels in the multiplicative setting.  
 
 Let us begin by presenting these five perspectives, before explaining their inter-relationships.  Let $C$ be a Riemann surface, and let $G$ be a reductive complex Lie group.
 \vspace{-10pt}
 \begin{enumerate}
- \item We'll first describe the moduli space that motivates the ``multiplicative Hitchin system'' terminology.  Say that a \emph{multiplicative Higgs bundle} on $C$ is a principal $G$-bundle $P$ on $C$ with a meromorphic automorphism $g \colon P \to P$, or equivalently, a meromorphic section of $\mr{Ad}_P$.  We refer to these by analogy with Higgs bundles, which consist of a meromorphic section of the Lie algebra (co)adjoint bundle, rather than its Lie group valued analogue \footnote{Usually Higgs bundles on a curve are defined to be sections of the coadjoint bundle twisted by the canonical bundle.  There isn't an obvious replacement for this twist in the multiplicative context, but we'll mostly be interested in the case where $C$ is Calabi-Yau, and therefore this twist is trivial.}.  Just like for ordinary Higgs bundles, the space of multiplicative meromorphic Higgs bundles with arbitrary poles is infinite-dimensional, but we can cut it down to a finite-dimensional space by fixing the locations of the singularities, and their residues.  These residues are described by \chris{...}
+ \item We'll first describe the moduli space that motivates the ``multiplicative Hitchin system'' terminology.  Say that a \emph{multiplicative Higgs bundle} on $C$ is a principal $G$-bundle $P$ on $C$ with a meromorphic automorphism $g \colon P \to P$, or equivalently, a meromorphic section of $\mr{Ad}_P$.  We refer to these by analogy with Higgs bundles, which consist of a meromorphic section of the Lie algebra (co)adjoint bundle, rather than its Lie group valued analogue \footnote{Usually Higgs bundles on a curve are defined to be sections of the coadjoint bundle twisted by the canonical bundle.  There isn't an obvious replacement for this twist in the multiplicative context, but we'll mostly be interested in the case where $C$ is Calabi-Yau, and therefore this twist is trivial.}.  Just like for ordinary Higgs bundles, the space of multiplicative meromorphic Higgs bundles with arbitrary poles is infinite-dimensional, but we can cut it down to a finite-dimensional space by fixing the locations of the singularities, and their residues.  These residues are described by orbits in the affine Grassmannian $\Gr_G$: restrict the multiplicative Higgs field to a formal neighbourhood of the puncture, to obtain an element of the algebraic loop group $LG = G(\!(z)\!)$.  This element is well-defined up to the action of $L^+G = G[[z]]$ on the left and right, and so determines a well-defined double coset in $L^+G \!\!\bs\!\! LG/L^+G = L^+G \!\!\bs\!\! \Gr_G$.  orbits in the affine Grassmannian are in canonical bijection with dominant coweights of $\gg$, so fixing residues at the punctures means fixing a dominant coweight $\omega^\vee_{z_i}$ at each puncture $z_i$.
  
- Moduli spaces of multiplicative Higgs bundles have been studied in the literature previously, though they're more often referred to as ``moduli spaces of pairs''. \chris{refs: Frenkel-Ng\^o \cite{FrenkelNgo}, Charbonneau-Hurtubise \cite{CharbonneauHurtubise}, Hurtubise-Markman \cite{HurtubiseMarkman}, Bouthier \cite{Bouthier1, Bouthier2}}
+ Fix a curve $C$ and consider the \emph{moduli space of multiplicative Higgs bundles} on $\bb{CP}^1$ with prescribed singularities lying at the points $D = \{z_1, \ldots, z_k\}$, with residues $\omega_{z_1}^\vee, \ldots, \omega_{z_k}^\vee$ respectively.  We denote this moduli space by $\mhiggs_G(C,D,\omega^\vee)$.
  
- Let $C = \bb{CP}^1$ and consider the \emph{moduli space of multiplicative Higgs bundles} on $\bb{CP}^1$ with prescribed singularities lying at the points $D = \{z_1, \ldots, z_k\}$, with residues $\omega_{z_1}^\vee, \ldots, \omega_{z_k}^\vee$ respectively, and with a fixed framing at $\infty$.  This moduli space is a smooth algebraic variety with dimension depending on the coweights we chose.
+ Moduli spaces of multiplicative Higgs bundles have been studied in the literature previously, though they've more often been referred to simply as ``moduli spaces of pairs''.  The earliest descriptions of these moduli spaces that we're aware of occur in the work of Hurtubise and Markman \cite{HurtubiseMarkman1, HurtubiseMarkman}.  Their work was motivated by the desire to understand the elliptic Skylanin Poisson brackets on loop groups, and to that end they mainly studied the case where the underlying curve $C$ is elliptic -- we'll refer back to their work throughout the paper.  From a different perspective, the moduli space of multiplicative Higgs bundles was also studied by Frenkel and Ng\^o \cite[Section 4]{FrenkelNgo} as part of their geometrization of the trace formula.  Further work was done following their definition by Bouthier\cite{Bouthier2, Bouthier1}, who gave an alternative construction of the moduli space as the space of sections of a vector bundle associated to a fixed residue datum defined using the Vinberg semigroup (see Remark \ref{Bouthier_remark}).  
  
- \chris{structure to describe: Hitchin system, symplectic structure, $q$-connections.}
+ The moduli space of multiplicative Higgs bundles admits a version of the Hitchin fibration, just like the ordinary moduli space of Higgs bundles.  Intuitively, this map is defined using the Chevalley map $\chi \colon G \to T/W$ (for instance if $G = \GL_n$, the map sending a matrix to its characteristic polynomial): the multiplicative Higgs field is, in particular, a meromorphic $G$-valued function, and the multiplicative Hitchin fibration post-composes this function with $\chi$.  See Section \ref{Hitchin_system_section} for details on our point of view on this structure.
  
-\item \chris{Periodic monopoles.  Mention the hyperk\"ahler structure.}
-\item \chris{A symplectic leaf in the Poisson Lie group.  Obviously this is symplectic.  Match classification with Shapiro, mention quantization and GKLO.}
-\item \chris{The Seiberg-Witten system associated to an ADE $\mc N=2$ quiver gauge theory: Nekrasov-Pestun, mention elliptic generalizations, conjectures related to the Yangian}
-\item \chris{The phase space of a twisted 5d $\mc N=2$ super Yang-Mills theory.  From this point of view, mention multiplicative Langlands.}
+ While this structure makes sense for any curve, it only defines a completely integrable system -- in particular there is only a natural symplectic structure on the total space -- in the very special situation where the curve $C$ is Calabi-Yau.  That is, $C$ must be either $\CC$, $\CC^\times$ or an elliptic curve.  In this paper we'll be most interested in the ``rational'' case, where $C = \CC$.  We use a specific boundary condition at infinity: we consider multiplicative Higgs bundles on $\bb{CP}^1$ with a fixed framing at infinity.  In other words we study the moduli space $\mhiggs^{\text{fr}}_G(\bb{CP}^1,D,\omega^\vee)$ of multiplicative Higgs bundles on $\bb{CP}^1$ with prescribed singularities lying at the points $D = \{z_1, \ldots, z_k\}$, with residues $\omega_{z_1}^\vee, \ldots, \omega_{z_k}^\vee$ respectively, and with a fixed framing at $\infty$.  This moduli space is a smooth algebraic variety with dimension depending on the coweights we chose
+ 
+ In the case where $C$ is Calabi-Yau the moduli space of multiplicative Higgs bundles admits a one-parameter deformation; from the above point of view, the moduli space is hyperk\"ahler so we can rotate the complex structure within the twistor sphere.  The result of this deformation also has a natural interpretation in terms of \emph{$\eps$-connections}.  That is, $G$-bundles $P$ on $C$ equipped with an isomorphism $P \to \eps^*P$ between $P$ and its translate by $\eps \in \CC$.  We can summarize this identification as follows.
+ 
+ \begin{theorem} [See Theorem \ref{HK_rotation_thm}]
+ The moduli space $\mhiggs^{\text{fr}}_G(\bb{CP}^1,D,\omega^\vee)$, given the complex structure at $\eps \in \CC \sub \bb{CP}^1$ in the twistor sphere can be identified (in the limit where an auxiliary parameter is taken to $\infty$) with the moduli space $\epsconn^{\text{fr}}_G(\bb{CP}^1,D,\omega^\vee)$ of framed $\eps$-connections on $\bb{CP}^1$.
+ \end{theorem}
+ 
+\item Consider now another, a priori different, representation-theoretic moduli space.  Let $M$ be a Riemannian 3-manifold, and let $G_\RR$ be a compact connected Lie group.  The moduli space of \emph{$G_\RR$-monopoles} on $M$ is the moduli space of triples $(P,A,\Phi)$, consisting of a smooth principal $G_\RR$-bundle $P$ equipped with a connection $A$ and a section $\Phi$ of the associated bundle $\gg_{ P}$ satisfying the \emph{Bogomolny equation}: $\ast F_A = \d_A \Phi$. 
+
+If we focus on the example where $M = C \times S^1$ splits as the product of a compact Riemann surface and a circle, the moduli space of monopoles on $M$ was studied by Charbonneau--Hurtubise \cite{CharbonneauHurtubise}, for $G_\RR = \mr U(n)$, and by Smith \cite{Smith} for general $G$.  These moduli spaces were also studied in the rational case where $C = \CC$ by Cherkis and Kapustin \cite{CherkisKapustin1,CherkisKapustin2,CherkisKapustin3}, with more general boundary conditions than the framing at infinity which we consider.  This example has also been studied in the mathematics literature by Foscolo \cite{FoscoloDef} and by Mochizuki \cite{Mochizuki} -- note that considering weaker boundary conditions at infinity means they need to use far more sophisticated analysis in order to work with hyperk\"ahler structures on their moduli spaces than we'll consider in this paper.
+
+The connection between periodic monopoles and multiplicative Higgs bundles is provided by the following theorem.
+\begin{theorem}[Charbonneau--Hurtubise, Smith]
+There is an analytic isomorphism between the moduli space of (polystable) multiplicative $G$-Higgs bundles on a compact curve $C$ with singularities at points $z_1, \ldots, z_k$ and residues $\omega^\vee_{z_1}, \ldots, \omega^\vee_{z_k}$ and the moduli space of periodic monopoles on $C \times S^1$ with Dirac singularities at $(z_1,0), \ldots, (z_k,0)$ with charges $\omega^\vee_{z_1}, \ldots, \omega^\vee_{z_k}$.
+\end{theorem}
+
+One of our main goals in this paper was to compare -- in the rational case -- the symplectic structure on the moduli space of multiplicative Higgs fields analogous to the symplectic structure defined by Hurtubise and Markman in the elliptic case, and the hyperk\"ahler structure on the moduli space of periodic monopoles, defined by realizing the moduli space of periodic monopoles as a hyperk\"ahler quotient.  We prove that they coincide.
+
+\begin{theorem}[See Theorem \ref{symplectic_comparison_thm}]
+The holomorphic symplectic structure on $\mon_G^\fr(\bb{CP}^1 \times S^1,D \times\{0\},\omega^\vee)$ (at 0 in the twistor sphere of holomorphic symplectic structures) and the pullback of the natural symplectic structure on $\mhiggs_G^{\text{fr}}(\bb{CP}^1,D,\omega^\vee)$, under the isomorphism defined by Charbonneau-Hurtubise and Smith, coincide.
+\end{theorem}
+
+In particular, the symplectic structure on the multiplicative Higgs moduli space extends to a hyperk\"ahler structure, as we discussed in point 1 above.
+
+\item The third perspective that we'll consider connects our moduli spaces directly to the theory of Poison Lie groups and Lie bialgebras, and leads to an interesting connection to quantum groups upon quantization.  By the \emph{rational Poisson Lie group} we'll mean the group $G_1[[z^{-1}]]$ consisting of $G$-valued power series in $z^{-1}$ with constant term $1$.  More precisely this is an ind-algebraic group: it is expressed as a direct limit of algebraic varieties $G_1[[z^{-1}]]_n$ with an associative multiplication $G_1[[z^{-1}]]_m \times G_1[[z^{-1}]]_n \to G_1[[z^{-1}]]_{m+n}$.  The Poisson structure on this group can be thought of as coming from a Manin triple: specifically the triple $(G(\!(z)\!), G_1[[z^{-1}]], G[z])$, where $G(\!(z)\!)$ is equipped with the residue pairing (see Section \ref{quantization_section} for more details).  
+
+We claim that our moduli spaces $\mhiggs_G^{\text{fr}}(\bb{CP}^1,D,\omega^\vee)$ correspond to \emph{symplectic leaves} in the rational Poisson Lie group, extending a classification result of Shapiro \cite{Shapiro} for the groups $G = \SL_n$ and $G = \GL_n$.  More specifically, we prove the following.
+\begin{theorem}[See Theorem \ref{Poisson_Lie_Comparison_thm}]
+The map $\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee) \to G_1[[z^{-1}]]$, defined by restricting a multiplicative Higgs field to a formal neughbourhood of $\infty$, is Poisson.  That is, the pullback of the Poisson structure on $\OO(G_1[[z^{-1}]])$ coincides with the Poisson bracket on $\OO(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$. 
+\end{theorem}
+
+From this point of view it's natural to try to understand how our moduli spaces behave under deformation quantization.  The quantization of the rational Poisson Lie group is well known: it's modelled by the \emph{Yangian} quantum group $Y(\gg)$.  When we quantize our symplectic leaves, we obtain $Y(\gg)$-modules.  This follows from the work of Gerasimov, Kharchev, Lebedev and Oblezin \cite{GKLO} who constructed the $Y(\gg)$-modules in question and analysed their classical limits.
+
+\item Having discussed three points of view on our moduli space in geometric representation theory, let us move on to explain some of the ways in which multiplicative Higgs bundles / periodic monopoles arise naturally in the world of supersymmetric gauge theory.  Firstly, these moduli spaces appeared in work of the second author, Nekrasov and Shatashvili \cite{NekrasovPestun, NekrasovPestunShatashvili} concerning the Seiberg-Witten integrable systems of 4d $\mc N=2$ ADE quiver gauge theories.  Let $\gg$ be a simple Lie algebra of ADE type.  One can define an $\mc N=2$ superconformal 4d gauge theory modelled on the Dynkin diagram of $\gg$.  To define this theory one must specify masses $m_{i,j}$ for fundamental hypermultiplets associated to the vertices of the Dynkin diagram, so $i = 1,\ldots,r$ varies over the vertices of the Dynkin diagram and $j=1, \ldots,w_i$ is an index parameterizing the number of hypermultiplets at each vertex.  Let us assume we're in the generic situation, where the masses are all distinct.
+
+The paper \cite{NekrasovPestun} studied the Seiberg-Witten integrable system associated to this theory, so in particular the hyperk\"ahler moduli space $\mf P$ occuring as the target of the $\mc N=4$ supersymmetric sigma model obtained by compactifying the 4d theory on a circle.  In particular, it proved the following.
+
+\begin{theorem}[{\cite[Section 8.1]{NekrasovPestun}}]
+Let $G$ be a simple Lie group with ADE Lie algebra $\gg$.  The phase space $\mf P$ is isomorphic, as a hyperk\"ahler manifold, to the moduli space $\mon_G^\fr(\bb{CP}^1 \times S^1,D \times\{0\},\omega^\vee)$ of periodic monopoles, where $D = \{m_{i,j}\}$, and where the residue $\omega^\vee_{m_{i,j}}$ is the fundamental coweight corresponding to the vertex $i$ of the Dynkin diagram of $\gg$.
+\end{theorem}
+
+\begin{remark}
+If one considers gauge theories that are not necessarily conformal, but only asymptotically free, the phase space is modelled by periodic monopoles that are permitted to have a singularity at infinity.  If $G_\RR = \SU(2)$ then this moduli space fits into the framework studied by Cherkis--Kapustin and by Foscolo.  We won't discuss this more complicated setting in this paper.
+\end{remark}
+
+\begin{remark}[Elliptic version]
+The analysis of \cite{NekrasovPestun} suggests an elliptic generalization of our multiplicative story, corresponding to the phase space of a theory modelled on an \emph{affine} ADE quiver.  The phase space of these theories is identified with a moduli space of doubly periodic instantons.  In our setting, the idea is the following.  We can think of the moduli space of multiplicative Higgs bundles as a moduli space of meromorphic functions into the adjoint quotient stack $G/G$, just like we can think of the moduli space of ordinary Higgs bundles as a moduli space of meromorphic functions into the adjoint quotient stack $\gg/G$ for the Lie algebra.  There is a rational/trigonometric/elliptic trichotomy extending these two examples: one studies the moduli stack of semistable $G$-bundles on a cuspidal, nodal or smooth elliptic curve.  That is:
+\begin{align*}
+\bun^{\mr{ss}}_G(E^{\mr{cusp}}) &\iso \gg/G \\
+\bun^{\mr{ss}}_G(E^{\mr{nod}}) &\iso \gg/G \\
+\bun^{\mr{ss}}_G(E_q) &\iso LG/_q LG.
+\end{align*}
+The last statement is a theorem of Looijenga (see e.g. \cite{Laszlo}): $LG/_q LG$ denotes the $q$-twisted adjoint quotient of the loop group $LG$: so $g(z)$ acts by $h(z) \mapsto g(qz)^{-1}h(z)g(z)$.  
+
+Without singularities, therefore, the elliptic analogue of our Hitchin system should be the space of maps from $C$ into $\bun^{\mr{ss}}_G(E_q)$: this moduli space is closely related to the moduli space of instantons on $C \times E_q$, i.e. doubly periodic instantons.  It would be interesting to study this elliptic Hitchin system in the full, singular setting.
+\end{remark}
+
+\item The final perspective we'll consider is perhaps the most interesting from our point of view, because it suggests that the categorical geometric Langlands conjecture of Beilinson and Drinfeld might admit a multiplicative analogue, built from the multiplicative Hitchin system instead of the ordinary Hitchin system.  Again, we'll describe a moduli space coming from supersymmetric gauge theory, but in a quite different setting to that of perspective 4 above.
+
+We consider now a five-dimensional $\mc N=2$ supersymmetric gauge theory.  In order to extract interesting moduli spaces for geometric representation theory, we won't study its moduli space of vacua, but instead we'll \emph{twist} the theory, then look at the entire moduli space of solutions to the equations of motion in the twisted theory.  We'll review the idea behind twisting at the beginning of Section \ref{twist_section}, but very informally, we'll choose a supersymmetry $Q_\HT$ that squares to zero, and study the derived space of $Q_\HT$-invariant solutions to the equations of motion.  In Section \ref{twist_section} we'll sketch the following, which also follows from forthcoming work of Butson \cite{Butson}.
+
+\begin{claimnum}
+Tthe twist by $Q_\HT$ of $\mc N=2$ super Yang-Mills theory with gauge group $G$, on the 5-manifold $C \times S^1 \times \RR^2$ where $C$ is a Calabi-Yau curve,and  with monopole surface operators placed at the points $(z_1,0), \ldots, (z_k,0)$ in $C \times S^1$ with charges $\omega^\vee_{z_1}, \ldots, \omega^\vee_{z_k}$ respectively, has the following stack of solutions to the equations of motion:
+\[\mr{EOM}(C \times S^1 \times \RR^2) = T^*[1]\mr{Map}(C \times S^1_{\mr{dR}}, BG)\]
+where $T^*[1]X$ denotes the ``1-shifted cotangent space'' of $X$.
+\end{claimnum}
+
+This story leads us to a ``multiplicative'' analogue of the approach to geometric Langlands introduced by Kapustin and Witten \cite{KapustinWitten}.  When we take the radius of $S^1$ to zero we recover Kapustin's partially topological twist \cite{KapustinHolo} of 4d $\mc N=4$ super Yang-Mills, which degenerates to Kapustin-Witten's A- and B-topologically twisted theories.  By ``multiplicative geometric Langlands'' we mean a version of the geometric Langlands conjecture modelled on the multiplicative Hitchin system instead of the ordinary Hitchin system, where the radius of this circle is kept positive.  For more details on what this means, see Section \ref{Langlands_section}.
 \end{enumerate}
 
 \begin{remark}[Derived geometry]
-\chris{remark on derived geometry and the extent to which we'll use it.}
+We'll use the language of derived algebraic geometry in several places in this paper, mainly in Sections \ref{mhiggs_def_section} and \ref{twist_section}.  While we believe this perspective provides a clear way of thinking about the moduli spaces we're interested in studying, we hope that the main results of this paper are understandable without a derived geometry background.  There are several clear and references explaining the point of view of derived algebraic geometry, for instance the survey articles of To\"en \cite{ToenOverview,ToenSurvey}.  A comprehensive account of the theory of derived geometry can be found in the book of Gaitsgory and Rozenblyum \cite{GRvol1, GRvol2}.
 \end{remark}
 
 \subsection{Outline of the Paper}
+We begin in Section \ref{mhiggs_def_section} by introducing and defining the moduli spaces we'll be studying in this paper: the moduli spaces of multiplicative Higgs bundles.  We discuss the trichotomy of rational, trigonometric and elliptic examples that are most relevant to us: where the moduli space has the structure of an integrable system.  We include a discussion of how the symplectic structures we're studying in this paper are expected to arise from the theory of derived symplectic geometry.
 
+The following section, Section \ref{twist_section}, stands alone from the rest of the paper.  In this section we explain how the moduli space of multiplicative Higgs bundles appears when one studies a certain partially topological twist of 5d $\mc N=2$ supersymmetric gauge theory.  As a consequence, we can speculate on the existence of a multiplicative version of the geometric Langlands conjecture, using the work of Kapustin and Witten.
+
+In Section \ref{periodic_monopole_section} we discuss the moduli space of periodic monopoles and its identification with the moduli space of multiplicative Higgs bundles.  We describe the tangent space to the moduli space from both points of view, which we'll then use in the following section, Section \ref{symp_section}.  Here we prove our main result, identifying the symplectic structures on the moduli spaces of periodic monopoles and on multiplicative Higgs bundles.
+
+Having done this, in Section \ref{hyperkahler_section} we can transfer the hyperk\"ahler structure on the moduli space of periodic monopoles across to the multiplicative Hitchin system.  The main thing we can do is to identify the twistor rotation on this moduli space: after rotating to a point $q$ in the twistor sphere we identify the holomorphic symplectic moduli space with the moduli space of $q$-difference connections, i.e. $G$-bundles $P$ with an isomorphism between $P$ and its translate by $q$.
+
+Finally, in Section \ref{quantization_section} we discuss the quantization of our moduli spaces.  We identify the moduli spaces of multiplicative Higgs bundles with symplectic leaves in the rational Poisson Lie group, and then after quantization we identify the quantized algebra of functions on our moduli spaces with modules for the Yangian as first constructed by Gerasimov, Kharchev, Lebedev and Oblezin. 
 
 \subsection{Acknowledgements}
 We would like to thank David Jordan, Davide Gaiotto, Kevin Costello and especially Pavel Safronov for helpful conversations about this work. The calculation of twists of 5d and 6d supersymmetric gauge theories was performed independently by Dylan Butson, and we would like to thank him for sharing his forthcoming manuscript. CE would like to thank the Perimeter Institute for Theoretical Physics for supporting research on this project. Research at Perimeter Institute is supported by the Government of Canada through Industry Canada and by the Province of Ontario through the Ministry of Economic Development \& Innovation. We acknowledge the support of IH\'ES.  This project has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (QUASIFT grant agreement 677368).
 
-\section{Multiplicative Higgs Bundles and $q$-Connections}
+\section{Multiplicative Higgs Bundles and $q$-Connections} \label{mhiggs_def_section}
 We'll begin with an abstract definition of the moduli spaces we'll investigate in this paper using the language of derived algebraic geometry.
 
 Let $G$ be a reductive complex algebraic group, let $C$ be a smooth complex algebraic curve and fix a finite set $D = \{z_i, \ldots, z_k\}$ of closed points in $C$.  We write $\bun_G(C)$ for the moduli stack of $G$-bundles on $C$, which we view as a mapping stack $\map(C, BG)$ into the classifying stack of $G$.
@@ -180,7 +253,7 @@ Note that the base stack we're defining here is not exactly the same as the base
 
 We'll show in Section \ref{general_symplectic_sec} that this fibration defines a completely integrable system in the rational case where $C = \bb{CP}^1$ with a framing at $\infty$.  More specifically, we'll describe a non-degenerate pairing on the tangent space of the multiplicative Higgs moduli space, and in Proposition \ref{Hitchin_isotropic_prop} we'll show that the multiplicative Hitchin fibers are isotropic for this pairing.  Then, by comparison to the symplectic structure on periodic monopoles, we'll see that the pairing was symplectic.
 
-Here, we'll first observe that the generic fibers are half-dimensional tori, which will ultimately imply that the multiplicative Hitchin system is generically a Lagrangian fibration.  Computing the fibers of the Hitchin fibration works similarly to the non-singular case: a point in the base is, in particular, a map $C \bs D \to T/W$.  Suppose this map lands in the regular locus $T^{\mr{reg}}/W$, then an element of the fiber over this point defines, in particular, a map $C \bs D \to BT/W$.  We would like to argue that the fiber consists of $T$-bundles on the cameral cover $\wt C$: a $W$-fold cover of $C$ ramified at the divisor $D$ \chris{am I making an error here: is $D$ really the same as the ramification divisor?  Maybe they should be different, and in fact it should be ramified at points whose value is a point in $T/W$ with stabilizer (but these aren't regular!)}.
+Here, we'll first observe that the generic fibers are half-dimensional tori, which will ultimately imply that the multiplicative Hitchin system is generically a Lagrangian fibration.  Computing the fibers of the Hitchin fibration works similarly to the non-singular case: a point in the base is, in particular, a map $C \bs D \to T/W$.  Suppose this map lands in the regular locus $T^{\mr{reg}}/W$, then an element of the fiber over this point defines, in particular, a map $C \bs D \to BT/W$.  We would like to argue that the fiber consists of $T$-bundles on the cameral cover $\wt C$: a $W$-fold cover of $C$ ramified at the divisor $D$.
 
 In order to say this a bit more precisely this we'll compare our moduli space with the space of abstract Higgs bundles introduced by Donagi and Gaitsgory \cite{DonagiGaitsgory} (see also \cite{DonagiLectures}, where Donagi proposed the applicability of this abstract Higgs theory to the multiplicative situation and asked for a geometric interpretation).  Our argument will follow the same ideas as the arguments of \cite[Section 6]{HurtubiseMarkman}.
 
@@ -224,7 +297,7 @@ Below we'll write $\qconn_G^{\text{ps}}(C, D, \omega^\vee)$ for the moduli space
 When $C = \bb{CP}^1$ every principal $G$-bundle on $C$ admits an essentially unique (up to the action of the Weyl group) holomorphic reduction of structure group to a maximal torus \cite{GrothendieckSphere}.  Since $q$-connections for an abelian group are automatically stable, polystability on the sphere is equivalent to admissibility of the torus reduction.  As a consequence, for our main example of interest -- the rational case -- the moduli space of polystable $q$-connections is equivalent to the moduli space of all $q$-connections of admissible degree.  For instance for $G=\SL_n$ the moduli space of polystable $q$-connection is equivalent to the moduli space of $q$-connections on the trivial bundle.
 
 \subsection{Poisson Structures from Derived Geometry}
-As we mentioned above in Remark \ref{Elliptic_AKSZ_remark}, in the case where $C$ is an elliptic curve and there are no punctures there's a symplectic structure on $\mhiggs_G(C)$ given by the AKSZ formalism.  More generally, when we do have punctures, we expect the moduli space $\mhiggs_G(C,D)$ to have a Poisson structure with a clear origin story coming from the theory of derived Poisson geometry.  In this section we'll explain what this story looks like.  However, we emphasise that there are technical obstructions to making this story precise with current technology: this section should be viewed as motivation for the structures we'll discuss in the rest of the paper.  We refer the reader to \cite{CPTVV} for the theory of derived Poisson structures and to \cite{MelaniSafronov1, MelaniSafronov2, Spaide} for that of derived coisotropic structures.
+As we mentioned above in Remark \ref{Elliptic_AKSZ_remark}, in the case where $C$ is an elliptic curve and there are no punctures there's a symplectic structure on $\mhiggs_G(C)$ given by the AKSZ formalism.  More generally, when we do have punctures, we expect the moduli space $\mhiggs_G(C,D)$ to have a Poisson structure with a clear origin story coming from the theory of derived Poisson geometry.  In this section we'll explain what this story looks like.  However, we emphasise that there are technical obstructions to making this story precise with current technology: this section should be viewed as motivation for the structures we'll discuss in the rest of the paper.  We refer the reader to \cite{CPTVV} for the theory of derived Poisson structures and to \cite{MelaniSafronov1, MelaniSafronov2, Spaide} for that of derived coisotropic structures.  We would like to thank Pavel Safronov for explaining many of the ideas discused in this section to us.
 
 Here's the idea.  Recall that we can identify the moduli space of singular $q$-connections on a curve $C$ as a fiber product: $\qconn_G(C, D) \iso \bun_G^\fr(C) \times_{\bun_G(C \! \bs \! D)^2} \bun_G(C \! \bs \! D)$ where the map $g \colon \bun_G^\fr(C) \to \bun_G(C \! \bs \! D)$ is given by $P \mapsto (P|_{C \! \bs \! D}, q^*P|_{C \! \bs \! D})$.  Consider the following commutative cube:
 
@@ -276,6 +349,10 @@ We will conclude this section with some comments on the multiplicative Hitchin s
 We should compare this discussion to Proposition \ref{Hitchin_isotropic_prop} in the rational case where $C = \bb{CP}^1$.  \chris{... include cross-references.}
 \end{remark}
 
+\begin{remark} \label{Bouthier_remark}
+There's yet another perspective that one might hope to pursue in order to define our symplectic structures in the language of derived symplectic geometry.  Bouthier \cite{Bouthier2} gave a description of the multiplicative Hitchin system along the following lines.  The Vinberg semigroup $V_G$ of $G$ is a family of affine schemes over $\CC^r$ whose generic fiber is isomorphic to $G$ but whose fibers lying on coordinate hyperplanes correspond to various degenerations of $G$.  Bouthier showed that the moduli space of multiplicative Higgs bundles is equivalent to the moduli space of $G$-bundles, along with a section of an associated bundle $V_G^{\omega^\vee}$ built from the Vinberg semigroup and the data of the coloured divisor $(D,\omega^\vee)$.  It's reasonable to ask whether one can construct an AKSZ shifted symplectic structure on the moduli space from this point of view, using the oriented structure on $(\bb{CP}^1,\infty)$ and the results of Ginzburg and Rozenblyum on shifted symplectic structures on spaces of sections \cite{GinzburgRozenblyum}.  
+\end{remark}
+
 \section{Twisted Gauge Theory} \label{twist_section}
 Before we move on to the main mathematical content of the paper, we'll digress a little to talk about one situation where multiplicative Hitchin systems appear in gauge theory.  This story was our original motivation for studying the objects appearing in this paper, but we should emphasise that it is quite independent from the rest of the paper.  The reader who is only interested in algebraic and symplectic geometry, and not in gauge theory, can safely skip this section.
 
@@ -324,7 +401,7 @@ The shifted cotangent space of a stack is a natural construction in the world of
 So, let us try to unpack the meaning of Claim \ref{twist_claim}.  Firstly, what does it mean to identify ``the moduli stack of solutions to the equations of motion'' of our twisted theory?  We have the following idea in mind.
 
 \begin{construction}
-We'll use the Lagrangian description for the twisted field theory.  On the one hand, we can describe a twisted space of fields and twisted action functional.  This is a fairly standard construction \chris{... note that I have to include a remark on twisting homomorphisms and on $\ZZ$-gradings.}
+We'll use the Lagrangian description for the twisted field theory.  On the one hand, we can describe a twisted space of fields and twisted action functional.  This is a fairly standard construction \chris{Talk about the twisted action functional first -- note that I have to include a remark on twisting homomorphisms and on $\ZZ$-gradings.  There's a na\"ively defined space of solutions.  Then, at each classical solution we can compute the twisted BV complex, so all in all we get a Q-manifold.  On the other hand one can forget the derived stack down to a Q-manifold by taking its space of $\CC$-points, and the tangent sheaf.  We're claiming that these are the same, i.e. we can identify the underlying spaces and the BV complex / tangent complex.}
 \end{construction}
 
 Now that we know what Claim \ref{twist_claim} means, why is it true?  We'll only outline an argument here, since the whole twisted gauge theory story is somewhat orthogonal to the emphasis of the rest of this paper.  The outline we'll give goes via the minimal twist of 6d $\mc N=(1,1)$ super Yang-Mills theory.  This calculation was done independently by Dylan Butson -- a detailed version will appear in his forthcoming article \cite{Butson}.
@@ -337,12 +414,18 @@ Now that we know what Claim \ref{twist_claim} means, why is it true?  We'll only
  \item Finally, we need to include surface operators. \chris{modify the space of fields, hence the moduli stack.}
 \end{enumerate}
 
+\begin{remark}[Reduction to 4-dimensions]
+\chris{Do this calculation, to get the Kapustin twist}
+\end{remark}
+
 \begin{remark}
 This supersymmetric gauge theory story should be compared to several recent calculations in the literature.  First, \chris{note: include citation / discussion of new paper by Costello and Yagi \cite{CostelloYagi}.  Should at least mention \cite{AshwinkumarTanZhao} as well.  Also \cite{QiuZabzine}.}
 \end{remark}
 
-\subsection{Langlands Duality}
+\subsection{Langlands Duality} \label{Langlands_section}
 Our main motivation for describing the multiplicative Hitchin system in terms of a twist of 5d $\mc N=2$ super Yang-Mills theory is to make the first steps towards a ``multiplicative'' version of the geometric Langlands conjecture.  The description in terms of supersymmetric gauge theory allows us to use the description of the geometric Langlands conjecture in terms of S-duality for topological twists of 4d $\mc N=4$ super Yang-Mills theory given by Kapustin and Witten \cite{KapustinWitten}.  Better yet, Witten described S-duality in terms of the 6d $\mc N=(2,0)$ superconformal field theory compactified on a torus: one obtains dual theories by compactifying on the two circles in either of the two possible orders \cite{Witten6d}.  We can leverage this story in order to describe a conjectural duality for twisted 5d gauge theories. 
+
+The A- and B-twists of 4d $\mc N=4$ super Yang-Mills can both be defined by deforming an intermediate twist sometimes referred to as the Kapustin twist \cite{KapustinHolo} (see \cite{CostelloSUSY, ElliottYoo1} for more details).  The moduli stack of solutions to the equations of motion on $C \times \RR^2$ in the Kapustin twist is the 1-shifted cotangent space of $\higgs_G(C)$: the moduli stack of $G$-Higgs bundles on $C$.  The A- and B-twists modify this in two different ways.  The B-twist acts \chris{... some of this should move up to the previous subsection}
 
 \chris{more details and motivation.}
 
@@ -416,7 +499,7 @@ Under the Nahm transform, Pseudo-Conjecture \ref{multLanglands} in the rational 
 \end{claim}
 
 
-\section{Periodic Monopoles}
+\section{Periodic Monopoles} \label{periodic_monopole_section}
 Moduli spaces of $q$-connections on a Riemann surface $C$ are closely related to moduli spaces of periodic monopoles, i.e. monopoles on 3-manifolds that fiber over the circle (more specifically, with fiber $C$ and monodromy determined by $q$).  Let $G_\RR$ be a compact Lie group whose complexification is $G$.  The discussion in this section will mostly follow that of \cite{CharbonneauHurtubise, Smith}.
 
 Write $M = C\times_q S^1_R$ for the $C$-bundle over $S^1$ with monodromy given by the automorphism $q$.  More precisely, $M$ is the Riemannian 3-manifold obtained by gluing the ends of the product $C \times [0,2\pi R]$ of Riemannian manifolds by the isometry $(x,2\pi R) \sim (q(x), 0)$.
@@ -472,7 +555,7 @@ Let $D$ be a finite subset $\{(z_1,t_1), \ldots, (z_k, t_k)\}$ of points in $M =
 \[\mon_G(M, D, \omega^\vee) = \mu^{-1}(0) / \mc G.\]
 \end{definition}
 
-Now let us address the relationship between periodic monopoles and $q$-connections.  Suppose from now on that $q$ is in the identity component of the group of automorphisms of $C$ (fixing the framing point $c$ if present).
+Now let us address the relationship between periodic monopoles and $q$-connections.  Suppose from now on that $q$ is in the identity component of the group of automorphisms of $C$ (fixing the framing point $c$ if present).  The following theorem is a slightly generalized version of the comparison theorem between multiplicative Higgs bundles and periodic monopoles proved by Charbonneau--Hurtubise \cite{CharbonneauHurtubise} for $\GL_n$, and Smith \cite{Smith} for general $G$.
 
 \begin{theorem} \label{monopole_qconn_comparison_thm}
 There is an analytic isomorphism between the moduli space of polystable monopoles on $C \times_q S^1$ with Dirac singularities at $D \times \{t_0\}$ (and a possible framing on $\{c\} \times S^1$) and the moduli space of $q$-connections on $C$ with singularities at $D$ and framing at $\{c\}$.  More precisely there is an analytic isomorphism
@@ -486,7 +569,7 @@ Note that in this statement we assumed that all the singularities occur in the s
 
 \begin{proof}
 \chris{check}
-This follows by the same argument as that given by Charbonneau-Hurtubise \cite{CharbonneauHurtubise} and Smith \cite{Smith}.  More explicitly, first let us think about injectivity, so let $(\bo P, \mc A)$ and $(\bo P', \mc A')$ be a pair of periodic monopoles on $C \times_q S^1$ with images $(P,g)$ and $(P', g')$ respectively, and choose a bundle isomorphism $\tau \colon P \to P'$ intertwining the $q$-connections $g$ and $g'$.  One observes first that $\bo P$ and $\bo P'$ are also isomorphic $G$-bundles since, by intertwining with the $q$-connections, we have an isomorphism $\bo P|_{C \times \{t\}} \to \bo P'|_{C \times \{t\}}$ for every $t \in S^1$.  That the monopole structures also match up follows by the same argument as in \cite[Proposition 4.7]{CharbonneauHurtubise}.
+This follows by the same argument as that given by Charbonneau--Hurtubise and Smith.  More explicitly, first let us think about injectivity, so let $(\bo P, \mc A)$ and $(\bo P', \mc A')$ be a pair of periodic monopoles on $C \times_q S^1$ with images $(P,g)$ and $(P', g')$ respectively, and choose a bundle isomorphism $\tau \colon P \to P'$ intertwining the $q$-connections $g$ and $g'$.  One observes first that $\bo P$ and $\bo P'$ are also isomorphic $G$-bundles since, by intertwining with the $q$-connections, we have an isomorphism $\bo P|_{C \times \{t\}} \to \bo P'|_{C \times \{t\}}$ for every $t \in S^1$.  That the monopole structures also match up follows by the same argument as in \cite[Proposition 4.7]{CharbonneauHurtubise}.
 
 For surjectivity, again we'll match the argument in the case where $q=\id$.  We begin by extending a holomorphic $G$-bundle $P$ on $C_0$ with $q$-connection $g$ to a $G$-bundle on $M \bs (D \times \{t_0\}) = (C \times_q S^1_R) \bs (D \times \{t_0\})$  Let $\gamma \colon [-2\pi R,2\pi R] \to \aut(C)$ be a geodesic with $\gamma(-2\pi R) = q^{-1}$, $\gamma(0)=1$ and $\gamma(2\pi R) = q$.  Let $\wt M$ be the 3-manifold
 \[\wt M = ((-2\pi R, 2\pi R) \times C) \bs \bigcup_{j=1}^k (A^+_j \cup A^-_j)\]
@@ -802,7 +885,7 @@ where we identify $\zeta$ with an element of $\SO(3)$ and apply this rotation to
 
 Now, we'll perform our identification of the twistor deformation on the multiplicative Higgs side by rewriting this twistor rotation in a somewhat different way in the large $R$ limit.  In this limit we can identify the twistor rotation with the deformation obtained by replacing the product $\bb{CP}^1 \times S^1_R$ with the product twisted by an automorphism of $\RR^2$.  More precisely, the rotated symplectic structure can then be described in the following way.
 
-\begin{theorem}
+\begin{theorem} \label{HK_rotation_thm}
 Let $\left(\mhiggs^{\text{ps,fr}}_G(\bb{CP}^1,D,\omega^\vee)\right)_{\zeta,R}$ be the family of complex manifolds obtained by pulling back the holomorphic symplectic structure $\omega_{\zeta,R}$ on $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ at $\zeta$ in the twistor sphere.  In the limit where $R \to \infty$ with $2 \pi \zeta R = \eps$ fixed this complex structure coincides with the complex structure on $\epsconn^{\text{ps,fr}}_G(\bb{CP}^1,D,\omega^\vee)$, in the sense that the complex structures converge pointwise over the tangent bundle to the moduli space of monopoles. 
 \end{theorem}
 
@@ -843,7 +926,7 @@ Let us proceed by discussing the connection between the symplectic structure on 
 
 Consider the infinite-type moduli space $\mhiggs^{\text{fr,sing}}(\bb{CP}^1)$ of multiplicative Higgs bundles with arbitrary singularities.  There is a map
 \[r_\infty \colon \mhiggs^{\text{fr,sing}}(\bb{CP}^1) \to G_1[[z^{-1}]],\]
-defined by restricting a multiplicative Higgs bundle to a formal neighbourhood of infinity.  In particular we can restrict $r_\infty$ to any of the finite-dimensional subspaces $\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee)$ (the symplectic leaves).  Here the notation $G_1[[z^{-1}]]$ denotes Taylor series in $G$ with constant term 1.  Recall that $G_1[[z^{-1}]]$ is a Poisson Lie group, with Poisson structure defined by the Manin triple $(G(\!(z)\!), G[[z]], G_1[[z^{-1}]])$.
+defined by restricting a multiplicative Higgs bundle to a formal neighbourhood of infinity.  In particular we can restrict $r_\infty$ to any of the finite-dimensional subspaces $\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee)$ (the symplectic leaves).  Here the notation $G_1[[z^{-1}]]$ denotes Taylor series in $G$ with constant term 1.  Recall that $G_1[[z^{-1}]]$ is a Poisson Lie group, with Poisson structure defined by the Manin triple $(G(\!(z)\!), G[[z]], G_1[[z^{-1}]])$ (see \cite{Shapiro, Williams}).
 
 The Poisson Lie group $G_1[[z^{-1}]]$ has the structure of an ind-scheme using the filtration where $G_1[[z^{-1}]]_n$ consists of $G$-valued polynomials in $z^{-1}$ with identity constant term and where the matrix elements in a fixed faithful representation have degree at most $n$.  When we talk about the Poisson algebra $\OO(G_1[[z^{-1}]])$ of regular functions on $G_1[[z^{-1}]]$, we are therefore referring to the limit over $n \in \ZZ_{\ge 0}$ of the finitely generated algebras $\OO(G_1[[z^{-1}]]_n)$.  Due to the condition on the constant term the group $G_1[[z^{-1}]]$ is nilpotent, which means we can identify its algebra of functions with the algebra of functions on the Lie algebra.  That is:
 \begin{align*}
@@ -879,7 +962,7 @@ The \emph{Yangian} of the Lie algebra $\gg$ is the unique graded topological Hop
 for all elements $f \in Y(\gg)$.  Here $\sigma$ is the braiding automorphism of $Y(\gg)^{\otimes 2}$ (i.e. $\sigma(f \otimes g) = g \otimes f$).
 \end{definition}
 
-There is a very extensive literature on the Yangian and related quantum groups.  The general theory for quantization of Poisson Lie groups, including the Yangian, was developed by Etingof and Kazhdan \cite{EgingofKazhdanIII}.  For more information we refer the reader to Chari and Pressley \cite{ChariPressley}, or for the Yangian specifically to the concise introduction in \cite[Section 9]{CostelloYangian}.
+There is a very extensive literature on the Yangian and related quantum groups.  The general theory for quantization of Poisson Lie groups, including the Yangian, was developed by Etingof and Kazhdan \cite{EtingofKazhdanIII}.  For more information we refer the reader to Chari and Pressley \cite{ChariPressley}, or for the Yangian specifically to the concise introduction in \cite[Section 9]{CostelloYangian}.
 
 Likewise, we can study deformation quantization for the algebra $\OO(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$ of functions on our symplectic moduli space.  This moduli space is, in particular, a smooth finite-dimensional Poisson manifold, so its algebra of functions can be quantized, for instance using Kontsevich's results on formality \cite{KontsevichQuantization}.
 
@@ -917,12 +1000,9 @@ This result should be compared to the conjecture made in \cite[Chapter 8.1]{Nekr
 \begin{remark}[$q$-Opers and Quantization]
 Finally, let's refer back to Remark \ref{q_opers_remark} and discuss the brane of $q$-opers, and the associated structures that should arise after quantization.  Recall that the multiplicative Hitchin system has a natural section defined by post-composition with the Steinberg section $T/W \to G/G$.  The moduli space of $q$-opers is the subspace of $\qconn_G(C,D,\omega^\vee)$ defined to be the multiplicative Hitchin section after rotating to the point $q$ in the twistor sphere of complex structures.
 
-Now, in the rational case, upon quantization this 
-\chris{Comment should include their definition as the twistor rotation of the Hitchin section (why is it generically still algebraic, i.e. a BBA-brane?).  Then mention their quantization to $q$-W algebras, citing Sevostyanov et al \cite{STSSevostyanov, Sevostyanov} and Aganagic-Frenkel-Okounkov \cite{AFO}.}.
+Now, we expect that the space of $q$-opers will, in the rational case, be Lagrangian, and therefore will admit a canonical $\bb P_0$-structure -- a $-1$-shifted Poisson structure -- on its derived algebra of functions.  It would be interesting to study the quantization of this $\bb P_0$-algebra, and to investigate its relationship with the $q$-W algebras of Sevostyanov \cite{STSSevostyanov, Sevostyanov} and of Aganagic-Frenkel-Okounkov \cite{AFO}.
 \end{remark}
 
-
- 
 \pagestyle{bib}
 \bibliographystyle{alpha}
 \bibliography{Mult_Hitchin}
