@@ -103,9 +103,15 @@ Without singularities, therefore, the elliptic analogue of our Hitchin system sh
 
 \item The final perspective we'll consider is perhaps the most interesting from our point of view, because it suggests that the categorical geometric Langlands conjecture of Beilinson and Drinfeld might admit a multiplicative analogue, built from the multiplicative Hitchin system instead of the ordinary Hitchin system.  Again, we'll describe a moduli space coming from supersymmetric gauge theory, but in a quite different setting to that of perspective 4 above.
 
-We consider now a five-dimensional $\mc N=2$ supersymmetric gauge theory.  In order to extract interesting moduli spaces for geometric representation theory, we won't study its moduli space of vacua, but instead we'll \emph{twist} the theory.  The twisting construction, after Witten \cite{WittenTQFT} extracts a certain sector of a supersymmetric field theory that has additional invariance properties when we vary the metric on spacetime (we'll review the idea at the beginning of Section \ref{twist_section}).
+We consider now a five-dimensional $\mc N=2$ supersymmetric gauge theory.  In order to extract interesting moduli spaces for geometric representation theory, we won't study its moduli space of vacua, but instead we'll \emph{twist} the theory, then look at the entire moduli space of solutions to the equations of motion in the twisted theory.  We'll review the idea behind twisting at the beginning of Section \ref{twist_section}, but very informally, we'll choose a supersymmetry $Q_\HT$ that squares to zero, and study the derived space of $Q_\HT$-invariant solutions to the equations of motion.  In Section \ref{twist_section} we'll sketch the following, which also follows from forthcoming work of Butson \cite{Butson}.
 
-\chris{The phase space of a twisted 5d $\mc N=2$ super Yang-Mills theory.  From this point of view, mention multiplicative Langlands.}
+\begin{claimnum}
+Tthe twist by $Q_\HT$ of $\mc N=2$ super Yang-Mills theory with gauge group $G$, on the 5-manifold $C \times S^1 \times \RR^2$ where $C$ is a Calabi-Yau curve,and  with monopole surface operators placed at the points $(z_1,0), \ldots, (z_k,0)$ in $C \times S^1$ with charges $\omega^\vee_{z_1}, \ldots, \omega^\vee_{z_k}$ respectively, has the following stack of solutions to the equations of motion:
+\[\mr{EOM}(C \times S^1 \times \RR^2) = T^*[1]\mr{Map}(C \times S^1_{\mr{dR}}, BG)\]
+where $T^*[1]X$ denotes the ``1-shifted cotangent space'' of $X$.
+\end{claimnum}
+
+This story leads us to a ``multiplicative'' analogue of the approach to geometric Langlands introduced by Kapustin and Witten \cite{KapustinWitten}.  When we take the radius of $S^1$ to zero we recover Kapustin's partially topological twist \cite{KapustinHolo} of 4d $\mc N=4$ super Yang-Mills, which degenerates to Kapustin-Witten's A- and B-topologically twisted theories.  By ``multiplicative geometric Langlands'' we mean a version of the geometric Langlands conjecture modelled on the multiplicative Hitchin system instead of the ordinary Hitchin system, where the radius of this circle is kept positive.  For more details on what this means, see Section \ref{Langlands_section}.
 \end{enumerate}
 
 \begin{remark}[Derived geometry]
@@ -338,9 +344,9 @@ is an exact sequence of ind-pro vector spaces, and therefore an exact sequence o
 \end{remark}
 
 \begin{remark}
-We will conclude this section with some comments on the multiplicative Hitchin system described above in Section \ref{Hitchin_system_section}.  In particular, the derived point of view suggests that both the multiplicative Hitchin fibers and the multiplicative Hitchin section of Remark \ref{q_opers_remark} will be -- at least generically -- canonically Lagrangian.  We can see this directly from the Chevalley map $\chi \colon G/G \to T/W$.  Generically, i.e. after restricting to the regular semisimple locus, we can identify $G^{\mr{rss}}/G$ with $(T^{\mr{reg}} \times BT)/W$, so that the fibers of the tangent space to $G/G$ are generically equivalent to $\mf t[1] \oplus \mf t$.  The directions tangent to the generic fibers of $\chi$ are concentrated in degree $-1$, meaning that the generic fibers of $\chi$ are canonically 1-shifted Lagrangian for degree reasons.  Likewise, the directions tangent to the Steinberg section $\sigma \colon T/W \to G/G$, at regular semisimple points, are concentrated in degree 0, meaning that after restriction to the regular semisimple locus is also canonically 1-shifted Lagrangian for degree reasons.  Now, \chris{...}
+We will conclude this section with some comments on the multiplicative Hitchin system described above in Section \ref{Hitchin_system_section}.  In particular, the derived point of view suggests that both the multiplicative Hitchin fibers and the multiplicative Hitchin section of Remark \ref{q_opers_remark} will be -- at least generically -- canonically Lagrangian.  We can motivate this directly from the Chevalley map $\chi \colon G/G \to T/W$, by studying the non-singular example.  Generically, i.e. after restricting to the regular semisimple locus, we can identify $G^{\mr{rss}}/G$ with $(T^{\mr{reg}} \times BT)/W$, so that the fibers of the tangent space to $G/G$ are generically equivalent to $\mf t[1] \oplus \mf t$.  The directions tangent to the generic fibers of $\chi$ are concentrated in degree $-1$, meaning that the generic fibers of $\chi$ are canonically 1-shifted Lagrangian for degree reasons.  Likewise, the directions tangent to the Steinberg section $\sigma \colon T/W \to G/G$, at regular semisimple points, are concentrated in degree 0, meaning that after restriction to the regular semisimple locus is also canonically 1-shifted Lagrangian for degree reasons.  Now, if $L \to X$ is $n$-shifted Lagrangian and $M$ is $k$-oriented then there is an AKSZ $n-k$-shifted Lagrangian structure on the mapping space $\map(M,L) \to \map(M,X)$ \cite[Theorem 2.10]{Calaque}, which establishes our claim in the non-singular case. 
 
-We should compare this discussion to Proposition \ref{Hitchin_isotropic_prop} in the rational case where $C = \bb{CP}^1$.  \chris{... include cross-references.}
+We should compare this discussion to Proposition \ref{Hitchin_isotropic_prop} in the rational case where $C = \bb{CP}^1$, where we prove that, in the rational case, the generic multiplicative Hitchin fibers are, indeed, Lagrangian.  
 \end{remark}
 
 \begin{remark} \label{Bouthier_remark}
@@ -384,42 +390,73 @@ Let us fix some notation for the square-zero supercharges -- odd elements $Q$ wh
 Having set up our notation, we can state one the way in which the moduli space of multiplicative Higgs bundles arises from twisted supersymmetric gauge theory.  We will first state the relationship, then explain what exactly the statement is supposed to mean.
 
 \begin{claimnum} \label{twist_claim}
-If we take the twist of $\mc N=2$ super Yang-Mills theory with gauge group $G$ by $Q_\HT$, on the 5-manifold $C \times S^1 \times \RR^2$ where $C$ is a Calabi-Yau curve, with monopole surface operators placed at the points $(z_1,0), \ldots, (z_k,0)$ in $C \times S^1$ with charges $\omega^\vee_{z_1}, \ldots, \omega^\vee_{z_k}$ respectively, its moduli stack of solutions to the equations of motion can be identified with the shifted cotangent space
-\[\mr{EOM}(C \times S^1 \times \RR^2) = T^*[1]\mr{Map}(C \times S^1_{\mr{dR}}, BG).\]
+If we take the twist of $\mc N=2$ super Yang-Mills theory with gauge group $G$ by $Q_\HT$, on the 5-manifold $C \times S^1 \times \RR^2$ where $C$ is a Calabi-Yau curve, with monopole surface operators placed at the points $(z_1,0), \ldots, (z_k,0)$ in $C \times S^1$ with charges $\omega^\vee_{z_1}, \ldots, \omega^\vee_{z_k}$ respectively, its moduli space of solutions to the equations of motion can be identified with the shifted cotangent space
+\[\mr{EOM}_\HT(C \times S^1 \times \RR^2) \iso T^*[1]\mhiggs(C,D,\omega^\vee).\]
 \end{claimnum}
 
 \begin{remark}
 The shifted cotangent space of a stack is a natural construction in the world of derived geometry.  In brief, the $k$-shifted cotangent space of a stack $\mc X$ has a canonical projection $\pi \colon T^*[k]\mc X \to \mc X$, and the fiber over a point $x \in \mc X$ is a derived affine space (i.e. a cochain complex) -- the tangent space to $\mc X$ at $x$ shifted down in cohomological degree by $k$.
 \end{remark}
 
-So, let us try to unpack the meaning of Claim \ref{twist_claim}.  Firstly, what does it mean to identify ``the moduli stack of solutions to the equations of motion'' of our twisted theory?  We have the following idea in mind.
+So, let us try to unpack the meaning of Claim \ref{twist_claim}.  Firstly, what does it mean to identify ``the moduli stack of solutions to the equations of motion'' of our twisted theory?  We have the following idea in mind (discussed in more detail, for instance, in \cite{CostelloSUSY, ElliottYoo1}).
 
-\begin{construction}
-We'll use the Lagrangian description for the twisted field theory.  On the one hand, we can describe a twisted space of fields and twisted action functional.  This is a fairly standard construction \chris{Talk about the twisted action functional first -- note that I have to include a remark on twisting homomorphisms and on $\ZZ$-gradings.  There's a na\"ively defined space of solutions.  Then, at each classical solution we can compute the twisted BV complex, so all in all we get a Q-manifold.  On the other hand one can forget the derived stack down to a Q-manifold by taking its space of $\CC$-points, and the tangent sheaf.  We're claiming that these are the same, i.e. we can identify the underlying spaces and the BV complex / tangent complex.}
+\begin{construction} \label{twist_construction}
+We'll use the Lagrangian description for the twisted field theory.  On the one hand, we can describe a twisted space of fields and twisted action functional.  This is a fairly standard construction: one factors the action functional into the sum $S_{\mr{tw}}(\phi) + Q\Lambda(\phi)$ of a ``twisted'' action functional and a $Q$-exact functional.  Note that the action of the group $\Spin(n) \times G_R$, where $G_R$ is the group of R-symmetries, is broken to a subgroup.  Only the subgroup of this product stabilizing $Q$ still acts on the twisted theory. 
+
+Having written down the twisted action functional, we'll consider its critical locus: the moduli space of solutions to the equations of motion.  However, we can consider a finer invariant than only the ordinary critical locus: we can form the critical locus in the setting of derived geometry.  In classical field theory this idea is captured by the classical \emph{BV formalism}: for a modern formulation see e.g. \cite{CostelloBook}.  In particular, for each classical point in the critical locus, we can calculate the classical BV-BRST complex of the twisted theory -- concretely, we calculate the BV-BRST complex of the untwisted theory, and add the operator $Q$ to the differential.  The twisted BV-BRST complex models the tangent complex to the derived critical locus of the twisted theory.
+
+So, to summarize, the BV formalism gives us a space: the critical locus of the twisted action functional, equipped with a sheaf of cochain complexes, whose fiber at a solution is the twisted BV-BRST complex around that solution.  This structure is weaker than a derived stack, but when we say a derived stack $\mc X$ ``can be identified with'' the moduli space $\EOM$ of solutions to the equations of motion, we mean that we can identify the space of $\CC$-points of $\mc X$ in the analytic topology with the underlying space of $\EOM$, and we can coherently identify the tangent complex of $\mc X$ at each $\CC$-point $x$ with the twisted BV-BRST complex at the corresponding classical solution.
 \end{construction}
+
+\begin{remark}
+There's another subtlety that we glossed over in our discussion of the BV-BRST complex above: a priori when you add $Q$ to the differential of the untwisted BV-BRST complex the result is only $\ZZ/2\ZZ$-graded, since $Q$ has ghost number 0 and superdegree 1, whereas the BV-BRST differential has ghost number 1 and superdegree 0.  In order to promote it to a $\ZZ$-graded complex we need to modify the degrees of our fields using an action of $\mr U(1)$ inside the R-symmetry group, so that $Q$ has weight 1.  This is possible in all the examples we'll discuss below, and in our sketch argument we'll use this $\mr U(1)$ action to collapse the $\ZZ/2\ZZ \times \ZZ$-grading down to a single $\ZZ$-grading everywhere without further comment.
+\end{remark}
 
 Now that we know what Claim \ref{twist_claim} means, why is it true?  We'll only outline an argument here, since the whole twisted gauge theory story is somewhat orthogonal to the emphasis of the rest of this paper.  The outline we'll give goes via the minimal twist of 6d $\mc N=(1,1)$ super Yang-Mills theory.  This calculation was done independently by Dylan Butson -- a detailed version will appear in his forthcoming article \cite{Butson}.
 
 \begin{enumerate}
- \item First, compute the twist of $\mc N=(1,0)$ super Yang-Mills theory in 6-dimensions by $Q_{\mr{min}}$. \chris{... note there are two ways of doing it, cite \cite{Baulieu} for one of them.}
- \item One can extend this calculation to include a hypermultiplet valued in a symplectic representation $W$.  \chris{set it to the correct thing to get $\mc N=(1,1)$ super Yang-Mills}
- \item \chris{The twist by $Q_\HT$ is a natural deformation of the moduli space, say what it is.}
- \item Now, all of these theories can be compactified to 5 dimensions \chris{say the relevant one}
- \item Finally, we need to include surface operators. \chris{modify the space of fields, hence the moduli stack.}
+ \item First, compute the twist of $\mc N=(1,0)$ super Yang-Mills theory in 6-dimensions by $Q_{\mr{min}}$.  This twisted theory is defined on a compact Calabi-Yau 3-fold $X^3$, and can be identified, in the sense of Construction \ref{twist_construction}, with the shifted cotangent space $T^*[-1]\bun_G(X^3)$.  Note: there are at least two ways of doing this calculation.  One can calculate the twist directly using a method very similar to Baulieu's calculation of the minimal twist of 10-dimensional $\mc N=1$ super Yang-Mills theory in \cite{Baulieu}.  Alternatively one can work in a version of the first order formalism where one introduces an auxiliary 2-form field: this is the approach followed by Butson. 
+ 
+ \item One can extend this calculation to include a hypermultiplet valued in a symplectic representation $W$.  One finds that the inclusion of the twisted hypermultiplet couples the moduli space of holomorphic $G$-bundles to sections in the associated bundle corresponding to $W$.  That is, the moduli space of solutions of the twisted theory can be identified with the shifted cotangent space $T^*[-1]\map(X^3, W/G)$, where $W/G$ is the quotient stack.  This tells us the twist of $\mc N=(1,1)$ super Yang-Mills: this is the case where $W = \gg$.
+ 
+ \item The twist by the holomorphic-topological supercharge $Q_{\mr{HT}}$ corresponds to a deformation of this moduli space.  Specifically, let's set $X^3 = S \times C$ where $S$ is a Calabi-Yau surface and $\Sigma$ is a Calabi-Yau curve.  In this case we can identify the $Q_{\mr{min}}$-twisted $\mc N=(1,1)$ theory with
+ \begin{align*}
+ T^*[-1]\map(S \times \Sigma, \gg/G) &\iso T^*[-1]\map(S \times \Sigma, T[-1]BG) \\
+ &\iso T^*[-1]\map(S \times T[1]\Sigma, BG).  
+ \end{align*}
+ The deformation to the twist by $Q_\HT$ corresponds to the Hodge deformation, deforming $T[1]\Sigma$ (the Dolbeault stack of $\Sigma$) to $\Sigma_{\mr{dR}}$ (the de Rham stack of $\Sigma$: this has the property that $G$-bundles on $\Sigma_{\mr{dR}}$ are the same as $G$-bundles on $\Sigma$ with a flat connection).  
+ 
+ \item Now, all of these theories can be dimensionally reduced down to 5 dimensions.  Specifically, let's split $S$ as $C \times E_q$, and send the radius of one of the $S^1$ factors to zero, or equivalently degenerate the smooth elliptic curve $E_q$ to a nodal curve  We're left with the identification, for the example we're interested in:
+ \[\EOM_\HT(C \times S^1 \times \Sigma) \iso T^*[-1]\map(C \times \Sigma_{\mr{dR}}, G/G).\]
+ Here we've identified $\map(E^{\mr{nod}}, BG)$ with the adjoint quotient $G/G$ \footnote{Strictly speaking this is only the semistable part of the moduli space, we get $G/G$, for instance, by asking for only those bundles which lift to the trivial bundle on the normalization.}.  So far, tn this discussion $\Sigma$ was a compact curve.  If we want to set $\Sigma = \CC$ instead the only change is that the $-1$-shifted tangent space becomes the 1-shifted tangent complex.  There's a unique flat $G$-bundle on $\CC$, so we can identify
+ \[\EOM_\HT(C \times S^1 \times \CC) \iso T^*[1]\map(C, G/G).\]
+ 
+ \item Finally, we need to include surface operators.  In order to see how to do this, let's go back to the Lagrangian description of our classical field theory.  The inclusion of monopole operators is usually thought of as modifying the space of fields in our supersymmetric gauge theory, so that the gauge field is permitted to be singular along the prescribed surface, with specified residues.  If we track the above calculation where the fields are allowed those prescribed singularities, the result is that we should replace $\map(C \times S^1_{\mr{dR}}, BG)$ with the moduli space of multiplicative Higgs fields with corresponding singularity data.  That is,
+ \[\mr{EOM}_\HT(C \times S^1 \times \RR^2) = T^*[1]\mhiggs(C,D,\omega^\vee).\]
 \end{enumerate}
 
 \begin{remark}[Reduction to 4-dimensions]
-\chris{Do this calculation, to get the Kapustin twist}
+If we reduce further, to four dimensions, by sending the radius of the remaining $S^1$ to zero, then we recover a more familiar twist first defined by Kapustin \cite{KapustinHolo}.  We can interpret this further degeneration as degenerating the factor $E_q$ not to a nodal, but to a cuspidal curve.  The semistable part of the stack $\map(E^{\mr{cusp}},BG)$ of $G$-bundles on a cuspidal curve is equivalent the Lie algebra adjoint quotient stack $\gg/G$, so we can identify the $Q_\HT$-twisted 4d $\mc N=4$ theory with
+\begin{align*}
+\EOM_\HT(C \times \Sigma) &\iso T^*[-1]\map(C \times \Sigma_{\mr{dR}}, \gg/G) \\
+&\iso T^*[-1]\map(T[1]C \times \Sigma_{\mr{dR}}, BG).
+\end{align*}
+This is the shifted cotangent space whose base is the moduli space of $G$-bundles on $C \times \Sigma$ with a flat connection on $\Sigma$ and a Higgs field on $C$.  This agrees with the calculation performed in \cite{ElliottYoo1}.  In particular, if we set $\Sigma = \CC$ the result is
+\[\EOM_\HT(C \times \CC) \iso T^*[1]\higgs_G(C).\]
 \end{remark}
 
-\begin{remark}
-This supersymmetric gauge theory story should be compared to several recent calculations in the literature.  First, \chris{note: include citation / discussion of new paper by Costello and Yagi \cite{CostelloYagi}.  Should at least mention \cite{AshwinkumarTanZhao} as well.  Also \cite{QiuZabzine}.}
+\begin{remark} \label{Kapustin_twist_remark}
+This supersymmetric gauge theory story should be compared to several recent twisting calculations in the literature.  Firstly, the minimal twist of 5d $\mc N=2$ gauge theory was discussed by Qiu and Zabzine \cite{QiuZabzine} on quite general contact five-manifolds.  They described the twisted equations of motion in terms of the Haydys-Witten equations.
+
+A recent article of Costello and Yagi \cite{CostelloYagi} also described a relationship between multiplicative Higgs moduli spaces and twisted supersymmetric gauge theory in yet another context.  They calculated the twist of 6d $\mc N=(1,1)$ gauge theory, but with respect to yet another twisting supercharge $Q$ with the property that the image of $[Q,-]$ in $\CC^6$ is five-dimensional.  They then consider this theory on $\RR^2 \times C \times \Sigma$, and place it in the $\Omega$-background in the $\RR^2$ directions.  They argue that the resulting theory is Costello's four-dimensional Chern-Simons theory \cite{CostelloYangian}, whose moduli stack of derived classical solutions can be identified with $\map(C \times \Sigma_{\mr{dR}}, BG)$.  Costello and Yagi go on to argue via a sequence of string dualities that this theory is dual to the ADE quiver gauge theories discussed in \cite{NekrasovPestun, NekrasovPestunShatashvili}.  From another point of view, dualities of this form were also discussed by Ashwinkumar, Tan and Zhao \cite{AshwinkumarTanZhao}.
 \end{remark}
 
-\subsection{Langlands Duality}
+\subsection{Langlands Duality} \label{Langlands_section}
 Our main motivation for describing the multiplicative Hitchin system in terms of a twist of 5d $\mc N=2$ super Yang-Mills theory is to make the first steps towards a ``multiplicative'' version of the geometric Langlands conjecture.  The description in terms of supersymmetric gauge theory allows us to use the description of the geometric Langlands conjecture in terms of S-duality for topological twists of 4d $\mc N=4$ super Yang-Mills theory given by Kapustin and Witten \cite{KapustinWitten}.  Better yet, Witten described S-duality in terms of the 6d $\mc N=(2,0)$ superconformal field theory compactified on a torus: one obtains dual theories by compactifying on the two circles in either of the two possible orders \cite{Witten6d}.  We can leverage this story in order to describe a conjectural duality for twisted 5d gauge theories. 
 
-The A- and B-twists of 4d $\mc N=4$ super Yang-Mills can both be defined by deforming an intermediate twist sometimes referred to as the Kapustin twist \cite{KapustinHolo} (see \cite{CostelloSUSY, ElliottYoo1} for more details).  The moduli stack of solutions to the equations of motion on $C \times \RR^2$ in the Kapustin twist is the 1-shifted cotangent space of $\higgs_G(C)$: the moduli stack of $G$-Higgs bundles on $C$.  The A- and B-twists modify this in two different ways.  The B-twist acts \chris{... some of this should move up to the previous subsection}
+The A- and B-twists of 4d $\mc N=4$ super Yang-Mills can both be defined by deforming an intermediate twist sometimes referred to as the Kapustin twist \cite{KapustinHolo} (see \cite{CostelloSUSY, ElliottYoo1} for more details).  The moduli stack of solutions to the equations of motion on $C \times \RR^2$ in the Kapustin twist is the 1-shifted cotangent space of $\higgs_G(C)$: the moduli stack of $G$-Higgs bundles on $C$.  The A- and B-twists modify this in two different ways.  In the B-twist $\higgs_G(C)$ is deformed by a hyperk\"ahler rotation, and it becomes $\flat_G(C)$: the moduli stack of flat $G$-bundles on $C$.  In the A-twist the shifted cotangent bundle $T^*[1]\higgs_G(C)$ is deformed to the de Rham stack $\higgs_G(C)_{\mr{dR}}$ -- the de Rham stack of $\mc X$ has the property that quasi-coherent sheaves on $\mc X_{\mr{dR}}$ are the same as $D$-modules on $\mc X$.   
+
+This motivates an analogous five-dimensional story, \chris{... some of this should move up to the previous subsection}
 
 \chris{more details and motivation.}
 
@@ -436,7 +473,7 @@ This equivalence is supposed to interchange objects corresponding to branes of o
 \end{remark}
 
 \begin{remark}
-\chris{remark on the Arinkin-Gaitsgory correction \cite{ArinkinGaitsgory, ElliottYoo2}.}
+Even for the ordinary geometric Langlands there are additional complications that we aren't addressing here.  For example, the most natural categorical version of the geometric Langlands conjecture is false for all non-abelian groups.  Arinkin and Gaitsgory \cite{ArinkinGaitsgory} explained how to correct the statement to obtain a believable conjecture: one has to consider not all coherent sheaves on the B-side, but only those sheaves satisfying a ``singular support'' condition.  In \cite{ElliottYoo2} it was argued that, from the point of view of twisted $\mc N=4$ super Yang-Mills theory these singular support conditions arise when one restricts to only those boundary conditions compatible with a choice of vacuum.  The same sorts of subtleties should equally occur in the multiplicative setting.
 \end{remark}
 
 \subsubsection{The Abelian Case}
@@ -472,7 +509,7 @@ Now, let us consider the limit $q \to 0$.  This will give a conjectural statemen
 
 \begin{conjecture}
 Let $G$ be a Langlands self-dual group and let $E$ be an elliptic curve.  There is an automorphism of categories (for the rational, trigonometric and elliptic moduli spaces)
-\[F \colon \coh(\mhiggs_G(E) \iso \coh(\mhiggs_{G}(E)\]
+\[F \colon \coh(\mhiggs_G(E)) \iso \coh(\mhiggs_{G}(E))\]
 so that the following square commutes:
 \[\xymatrix{
 \coh(\mhiggs_T(E)) \ar[r]^{\mathrm{FM}} \ar[d]_{p_*q^!} &\coh(\mhiggs_T(E)) \ar[d]^{p_*q^!} \\
@@ -481,17 +518,14 @@ so that the following square commutes:
 Here we're using the natural morphisms $p \colon \mhiggs_B(E) \to \mhiggs_G(E)$ and $q \colon \mhiggs_B(E) \to \mhiggs_T(E)$, and $\mr{FM}$ is the Fourier-Mukai transform.
 \end{conjecture}
 
-It ought to be possible to state something a bit stronger that includes singularities in this auto-duality.
+Alternatively, we can say something about classical geometric Langlands duality in the non-simply-laced case.  Recall in the usual geometric Langlands story that non-simply-laced gauge theories in dimension 4 arise by ``folding'' the Dynkin diagram.  In other words, one identifies a non-simply laced simple Lie group as the invariants of a simply laced self-dual Lie group $\wt G$ with respect to its finite group of outer automorphisms (either $\ZZ/2\ZZ$, or $S_3$ in the case of the exceptional group $G_2$).  One obtains a 5d $\mc N=2$ gauge theory with gauge group $G$ by taking the invariants of the 6d $\mc N=(2,0)$ theory reduced on a circle, where $\mr{Out}(\wt G)$ acts simultaneously on $\wt G$ and on the circle we reduce along.
 
-\chris{say something about the non-simply-laced case here.}
-
-\subsubsection{The Rational Type A Case}
-There's one more example where we can say something precise, and even draw a connection to the ordinary geometric Langlands correspondence.  In the case where $G = \GL(n)$ and $C$ is $\CC$ (where as usual we fix framing data at infinity) the Nahm transform identifies multiplicative Higgs bundles of degree $k$ with \emph{ordinary} Higgs bundles on $\bb{CP}^1$ for the group $\GL(k)$ with $n+2$ tame singularities (with appropriate fixed locations and residues).
-
-\begin{claim}
-Under the Nahm transform, Pseudo-Conjecture \ref{multLanglands} in the rational case for the group $\GL(n)$ becomes the ordinary geometric Langlands conjecture on $\bb{CP}^1$ with tame ramification.
-\end{claim}
-
+Putting this together yields the following conjecture.
+\begin{conjecture}
+Let $G$ and $G^\vee$ be Langlands dual simple Lie groups, and say that $G$ arose by folding the Dynkin diagram of a self-dual group $\wt G$.  Then there is an equivalence of categories
+\[\coh(\mhiggs_{G^\vee}(E) \iso \coh(\mhiggs_{\wt G}(E)^{\mr{Out}(\wt G)}),\]
+where $\mr{Out}(\wt G)$ acts simultaneously on $\wt G$ and on the circle $S^1_B$, under the identification $\mhiggs_{\wt G}(E) = \bun_{\wt G}(E \times S^1_B)$.
+\end{conjecture}
 
 \section{Periodic Monopoles} \label{periodic_monopole_section}
 Moduli spaces of $q$-connections on a Riemann surface $C$ are closely related to moduli spaces of periodic monopoles, i.e. monopoles on 3-manifolds that fiber over the circle (more specifically, with fiber $C$ and monodromy determined by $q$).  Let $G_\RR$ be a compact Lie group whose complexification is $G$.  The discussion in this section will mostly follow that of \cite{CharbonneauHurtubise, Smith}.
@@ -913,6 +947,12 @@ In the case where the group $G=\GL_n$ it's possible to describe the multiplicati
 Let us give an informal explanation.  From a gauge-theoretic point of view, the Nahm transform arises from the Fourier-Mukai transform for anti-self-dual connections on a 4-torus $T$, relating an of ASD connection on a vector bundle to an ASD connection on the bundle of kernels for the associated Dirac operator, a vector bundle on the dual torus $T^\vee$ (see the book of Donaldson--Kronheimer \cite[Section 3.2]{DonaldsonKronheimer}).  There is a Nahm transform relating the ordinary Hitchin system to the moduli space of periodic monopoles obtained in an appropriate limit: consider the torus $T = S^1_{r_1} \times S^1_{r_2} \times S^1_{r_3} \times S^1_{R}$.  The moduli space of periodic monopoles on $\CC$ arises in the limit where $r_1$ and $r_2$ go to $\infty$ and $r_3$ goes to zero.  On the other hand, the Hitchin system on $\CC^\times$ arises in the dual limit where $r_1$ and $r_2$ go to zero and $r_3$ goes to $\infty$.  The Nahm transform in this setting -- i.e. for periodic monopoles -- was developed by Cherkis and Kapustin \cite{CherkisKapustin2}, and worked out in detail in the case $n=2$ (they also give a brane description of the transform: see \cite[Section 2]{CherkisKapustin2}).
 
 One then has to match up the singularity data.  In brief, the multiplicative Hitchin system for the group $\GL_n$ with $k$ singularities at $z_1, \ldots, z_k$ is equivalent to the ordinary Hitchin system on $\CC^\times$ for the group $\GL_k$ with $n$ regular singularities, which residues determined by the original positions $z_i$ and positions determined by the original residues $\omega^\vee_{z_i}$.  We refer to \cite[Section 7.1]{NekrasovPestun} for more details.
+
+In the example where we have the Nahm transform available, we conjecture that the multiplicative geometric Langlands equivalence recovers the ordinary geometric Langlands equivalence with tame ramification.  That is, we expect the following.
+
+\begin{claim}
+Under the Nahm transform, Pseudo-Conjecture \ref{multLanglands} in the rational case for the group $\GL(n)$ becomes the ordinary geometric Langlands conjecture on $\bb{CP}^1$ with tame ramification.
+\end{claim}
 \end{example}
 
 \section{The Rational Poisson Lie Group and the Yangian} \label{quantization_section}

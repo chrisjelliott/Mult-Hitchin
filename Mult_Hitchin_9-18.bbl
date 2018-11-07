@@ -70,6 +70,13 @@ Dylan Butson.
   twists.
 \newblock {\em Forthcoming}, 2019.
 
+\bibitem[Cal15]{Calaque}
+Damien Calaque.
+\newblock Lagrangian structures on mapping stacks and semi-classical {TFT}s.
+\newblock In {\em Stacks and categories in geometry, topology, and algebra},
+  volume 643 of {\em Contemp. Math.}, pages 1--23. Amer. Math. Soc.,
+  Providence, RI, 2015.
+
 \bibitem[CH10]{CharbonneauHurtubise}
 Beno\^it Charbonneau and Jacques Hurtubise.
 \newblock Singular {Hermitian-Einstein} monopoles on the product of a circle
@@ -92,6 +99,11 @@ Sergey Cherkis and Anton Kapustin.
 Sergey Cherkis and Anton Kapustin.
 \newblock {Hyper-K\"ahler} metrics from periodic monopoles.
 \newblock {\em Physical Review D}, 65(8):084015, 2002.
+
+\bibitem[Cos11]{CostelloBook}
+Kevin Costello.
+\newblock {\em Renormalization and effective field theory}.
+\newblock Number 170. American Mathematical Soc., 2011.
 
 \bibitem[Cos13a]{CostelloSH}
 Kevin Costello.

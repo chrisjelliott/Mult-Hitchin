@@ -3,50 +3,51 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Mult_Hitchin_9-18.aux
 The style file: alpha.bst
 Database file #1: Mult_Hitchin.bib
+Warning--there's a number but no series in CostelloBook
 Warning--can't use both volume and number fields in CostelloSH
 Warning--empty publisher in CostelloSH
 Warning--empty journal in EagerSaberiWalcher
 Warning--empty journal in KapustinHolo
 Warning--there's a number but no volume in Shapiro
-You've used 73 entries,
+You've used 75 entries,
             2543 wiz_defined-function locations,
-            1026 strings with 15502 characters,
-and the built_in function-call counts, 27480 in all, are:
-= -- 2827
-> -- 1134
-< -- 47
-+ -- 370
-- -- 357
-* -- 1968
-:= -- 4509
-add.period$ -- 226
-call.type$ -- 73
-change.case$ -- 415
-chr.to.int$ -- 69
-cite$ -- 78
-duplicate$ -- 1136
-empty$ -- 2039
-format.name$ -- 460
-if$ -- 5573
+            1039 strings with 15769 characters,
+and the built_in function-call counts, 28210 in all, are:
+= -- 2902
+> -- 1150
+< -- 52
++ -- 374
+- -- 361
+* -- 2015
+:= -- 4619
+add.period$ -- 234
+call.type$ -- 75
+change.case$ -- 424
+chr.to.int$ -- 71
+cite$ -- 81
+duplicate$ -- 1177
+empty$ -- 2104
+format.name$ -- 468
+if$ -- 5734
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 76
-newline$ -- 369
-num.names$ -- 219
-pop$ -- 339
+missing$ -- 79
+newline$ -- 379
+num.names$ -- 225
+pop$ -- 353
 preamble$ -- 1
-purify$ -- 495
+purify$ -- 507
 quote$ -- 0
-skip$ -- 940
+skip$ -- 965
 stack$ -- 0
-substring$ -- 1654
-swap$ -- 152
-text.length$ -- 47
-text.prefix$ -- 31
+substring$ -- 1687
+swap$ -- 162
+text.length$ -- 52
+text.prefix$ -- 33
 top$ -- 0
-type$ -- 564
-warning$ -- 5
-while$ -- 284
-width$ -- 77
-write$ -- 941
-(There were 5 warnings)
+type$ -- 576
+warning$ -- 6
+while$ -- 291
+width$ -- 79
+write$ -- 969
+(There were 6 warnings)
