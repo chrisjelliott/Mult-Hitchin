@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Mult_Hitchin_11_18_draft.aux
+The style file: alpha.bst
+Database file #1: Mult_Hitchin.bib
+Warning--there's a number but no series in CostelloBook
+Warning--can't use both volume and number fields in CostelloSH
+Warning--empty publisher in CostelloSH
+Warning--empty journal in EagerSaberiWalcher
+Warning--empty journal in KapustinHolo
+Warning--there's a number but no volume in Shapiro
+You've used 75 entries,
+            2543 wiz_defined-function locations,
+            1039 strings with 15783 characters,
+and the built_in function-call counts, 28210 in all, are:
+= -- 2902
+> -- 1150
+< -- 52
++ -- 374
+- -- 361
+* -- 2015
+:= -- 4619
+add.period$ -- 234
+call.type$ -- 75
+change.case$ -- 424
+chr.to.int$ -- 71
+cite$ -- 81
+duplicate$ -- 1177
+empty$ -- 2104
+format.name$ -- 468
+if$ -- 5734
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 79
+newline$ -- 379
+num.names$ -- 225
+pop$ -- 353
+preamble$ -- 1
+purify$ -- 507
+quote$ -- 0
+skip$ -- 965
+stack$ -- 0
+substring$ -- 1687
+swap$ -- 162
+text.length$ -- 52
+text.prefix$ -- 33
+top$ -- 0
+type$ -- 576
+warning$ -- 6
+while$ -- 291
+width$ -- 79
+write$ -- 969
+(There were 6 warnings)
