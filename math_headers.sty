@@ -1,8 +1,8 @@
-\usepackage[top=2.5cm, bottom=2.1cm,left=2cm,right=2cm,footnotesep=20pt]{geometry}
-\usepackage{amsmath, amsthm, amssymb}
+%\usepackage[top=2.5cm, bottom=2.1cm,left=2cm,right=2cm,footnotesep=20pt]{geometry}
+%\usepackage{amsmath, amsthm, amssymb}
 %\usepackage{lmodern}
 %\usepackage[T1]{fontenc}
-\usepackage{fancyhdr}
+%\usepackage{fancyhdr}
 \usepackage[all, cmtip]{xy}
 \usepackage[titletoc,title]{appendix}
 \usepackage[usenames,dvipsnames]{color}
@@ -30,8 +30,8 @@
 \usetikzlibrary{decorations.pathmorphing,decorations.markings}
 \usepackage[pdftex, bookmarks=true, linkbordercolor={0 0 1}]{hyperref}
 
-\pagestyle{fancy}
-\fancyhf{}
+%\pagestyle{fancy}
+%\fancyhf{}
 
 \theoremstyle{definition} \newtheorem{definition}{Definition}[section]
 
@@ -265,28 +265,28 @@
 \newcommand{\vasily}[1]{(\textcolor{blue}{Vasily: #1})}
 
 
-\headheight 0.5cm
-\headsep 0.5cm
-\footskip 0.75cm
+% \headheight 0.5cm
+% \headsep 0.5cm
+% \footskip 0.75cm
 
-\fancyhead[R]{\textsf{Section \nouppercase{\leftmark}}}
-\fancyhead[L]{\textsf{\textbf{\thepage}}}
+% \fancyhead[R]{\textsf{Section \nouppercase{\leftmark}}}
+% \fancyhead[L]{\textsf{\textbf{\thepage}}}
 
-\fancypagestyle{bib}{
-  \fancyhf{}
-  \fancyhead[R]{\textsf{\nouppercase{\leftmark}}}
-  \fancyhead[L]{\textsf{\textbf{\thepage}}}
-}
+% \fancypagestyle{bib}{
+%   \fancyhf{}
+%   \fancyhead[R]{\textsf{\nouppercase{\leftmark}}}
+%   \fancyhead[L]{\textsf{\textbf{\thepage}}}
+% }
 
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{11pt}
+% \setlength{\parindent}{0pt}
+% \setlength{\parskip}{11pt}
 
-\let\OLDthebibliography\thebibliography
-\renewcommand\thebibliography[1]{
-  \OLDthebibliography{#1}
-  \setlength{\parskip}{0pt}
-  \setlength{\itemsep}{4pt plus 0.3ex}
-}
+% \let\OLDthebibliography\thebibliography
+% \renewcommand\thebibliography[1]{
+%   \OLDthebibliography{#1}
+%   \setlength{\parskip}{0pt}
+%   \setlength{\itemsep}{4pt plus 0.3ex}
+% }
 
 % This is a hack to make Feynmf work correctly.
 % http://tex.stackexchange.com/questions/20241/how-to-use-kile-with-feynmf-or-feynmp

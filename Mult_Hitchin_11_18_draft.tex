@@ -1,5 +1,111 @@
-\documentclass[10pt, oneside]{article}
-\input math_headers.sty
+\documentclass[11pt, oneside]{amsart}
+
+\usepackage{amsmath, amsthm, amssymb}
+
+\usepackage[usenames,dvipsnames]{color}
+
+\usepackage[all, cmtip]{xy}
+
+\usepackage[pdftex, bookmarks=true, linkbordercolor={0 0 1}]{hyperref}
+
+
+% \input math_headers.sty
+
+
+\usepackage[margin=1in]{geometry}
+
+\theoremstyle{definition} \newtheorem{definition}{Definition}[section]
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{prop}[definition]{Proposition}
+\newtheorem{conjecture}[definition]{Conjecture}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{construction}[definition]{Construction}
+\newtheorem{observation}[definition]{Observation}
+\newtheorem{assumption}[definition]{Assumption}
+\newtheorem{claimnum}[definition]{Claim}
+\newtheorem*{nonum}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{claim}{Claim}
+\newtheorem*{subclaim}{Subclaim}
+\newtheorem*{fact}{Fact}
+\newtheorem*{problem}{Problem}
+\newtheorem*{ack}{Acknowledgements}
+
+\theoremstyle{definition} \newtheorem{remark}[definition]{Remark}
+\theoremstyle{definition} \newtheorem{remarks}[definition]{Remarks}
+\theoremstyle{definition} \newtheorem{question}[definition]{Question}
+\theoremstyle{definition} \newtheorem*{note}{Note}
+\theoremstyle{definition} \newtheorem{example}[definition]{Example}
+\theoremstyle{definition} \newtheorem{examples}[definition]{Examples}
+
+\newtheorem{pseudoconj}[definition]{Pseudo-Conjecture}
+
+
+
+
+\renewcommand{\gg}{\mathfrak{g}}
+
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\mr}[1]{\mathrm{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\mf}[1]{\mathfrak{#1}}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\bo}[1]{\boldsymbol{#1}}
+
+\newcommand{\inj}{\hookrightarrow}
+
+
+
+\newcommand{\bs}{\ \backslash \ }
+
+\newcommand{\dd}{\partial}
+\newcommand{\del}{\partial}
+
+\newcommand{\ul}[1]{\underline{#1}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+
+\newcommand{\SO}{\mathrm{SO}}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\spin}{\mathrm{Spin}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\so}{\mathfrak{so}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\renewcommand{\sp}{\mathfrak{sp}}
+\newcommand{\gl}{\mathfrak{gl}}
+
+
+
+\newcommand{\sub}{\subseteq}
+
+\newcommand{\iso}{\cong}
+
+\DeclareMathOperator{\coh}{Coh}
+\DeclareMathOperator{\higgs}{Higgs}
+\DeclareMathOperator{\bun}{Bun}
+\DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\spec}{Spec}
+\DeclareMathOperator{\res}{res} %lower case: residue.
+\DeclareMathOperator{\EOM}{EOM}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\dvol}{dvol}
+\DeclareMathOperator{\aut}{Aut}
+
+\DeclareMathOperator{\sym}{Sym}
+
+
 
 \title{Multiplicative Hitchin Systems and Supersymmetric Gauge Theory}
 \author{Chris Elliott \and Vasily Pestun}
@@ -7,19 +113,28 @@
 
 \DeclareMathOperator{\mhiggs}{mHiggs}
 \DeclareMathOperator{\mon}{Mon}
+
 \newcommand{\map}{\ul{\mr{Map}}}
 \newcommand{\qconn}{q\text{-Conn}}
-\renewcommand{\conn}{\text{-Conn}}
+\newcommand{\conn}{\text{-Conn}}
 \newcommand{\epsconn}{\varepsilon\text{-Conn}}
 \DeclareMathOperator{\diff}{Diff}
 \renewcommand{\d}{\mathrm{d}}
 \newcommand{\fr}{\mathrm{fr}}
 \DeclareMathOperator{\Hol}{Hol}
-\renewcommand{\ad}{\mr{ad}}
+\newcommand{\ad}{\mr{ad}}
 \newcommand{\Ad}{\mr{Ad}}
 \newcommand{\HT}{\mr{HT}}
 
-\newtheorem{pseudoconj}[definition]{Pseudo-Conjecture}
+
+
+
+\newcommand{\todo}[1]{(\textcolor{red}{TODO: #1})}
+%\newcommand{\todo}[1]{}
+\newcommand{\chris}[1]{(\textcolor{red}{Chris: #1})}
+\newcommand{\vasily}[1]{(\textcolor{blue}{Vasily: #1})}
+
+
 
 \begin{document}
 
@@ -33,13 +148,50 @@ Multiplicative Hitchin systems are analogues of Hitchin's integrable system base
 In this paper, we will compare five different perspectives an a single moduli space: three coming from geometry and representation theory, and two coming from supersymmetric gauge theory.  By leveraging these multiple perspectives we'll equip our common moduli space with the structure of a completely integrable system which we call the \emph{multiplicative Hitchin system}.  Many of the structures associated with the ordinary Hitchin system, such as the brane of opers, have parallels in the multiplicative setting.  
 
 Let us begin by presenting these five perspectives, before explaining their inter-relationships.  Let $C$ be a Riemann surface, and let $G$ be a reductive complex Lie group.
-\vspace{-10pt}
-\begin{enumerate}
- \item We'll first describe the moduli space that motivates the ``multiplicative Hitchin system'' terminology.  Say that a \emph{multiplicative Higgs bundle} on $C$ is a principal $G$-bundle $P$ on $C$ with a meromorphic automorphism $g \colon P \to P$, or equivalently, a meromorphic section of the group-valued adjoint bundle $\mr{Ad}_P$.  We refer to these by analogy with Higgs bundles, which consist of a meromorphic section of the Lie algebra (co)adjoint bundle, rather than its Lie group valued analogue \footnote{Usually Higgs bundles on a curve are defined to be sections of the coadjoint bundle twisted by the canonical bundle.  There isn't an obvious replacement for this twist in the multiplicative context, but we'll mostly be interested in the case where $C$ is Calabi-Yau, and therefore this twist is trivial.}.  Just like for ordinary Higgs bundles, the space of multiplicative meromorphic Higgs bundles with arbitrary poles is infinite-dimensional, but we can cut it down to a finite-dimensional space by fixing the locations of the singularities, and their residues.  These residues are described by orbits in the affine Grassmannian $\Gr_G$: restrict the multiplicative Higgs field to a formal neighborhood of the puncture, to obtain an element of the algebraic loop group $LG = G(\!(z)\!)$.  This element is well-defined up to the action of $L^+G = G[[z]]$ on the left and right, and so determines a well-defined double coset in $L^+G \!\!\bs\!\! LG/L^+G = L^+G \!\!\bs\!\! \Gr_G$.  orbits in the affine Grassmannian are in canonical bijection with dominant coweights of $\gg$, so fixing residues at the punctures means fixing a dominant coweight $\omega^\vee_{z_i}$ at each puncture $z_i$.
+
+
+%\begin{enumerate}
+
+% \item 
+\subsection{Multiplicative Higgs bundles}
+We'll first describe the moduli space that motivates the
+``multiplicative Hitchin system'' terminology.  Say that a
+\emph{multiplicative Higgs bundle} on $C$ is a principal $G$-bundle
+$P$ on $C$ with a meromorphic automorphism $g \colon P \to P$, or
+equivalently, a meromorphic section of the group-valued adjoint bundle
+$\mr{Ad}_P$.  We refer to these by analogy with Higgs bundles, which
+consist of a meromorphic section of the Lie algebra (co)adjoint
+bundle, rather than its Lie group valued analogue \footnote{Usually
+  Higgs bundles on a curve are defined to be sections of the coadjoint
+  bundle twisted by the canonical bundle.  There isn't an obvious
+  replacement for this twist in the multiplicative context, but we'll
+  mostly be interested in the case where $C$ is Calabi-Yau, and
+  therefore this twist is trivial.}.  Just like for ordinary Higgs
+bundles, the space of multiplicative meromorphic Higgs bundles with
+arbitrary poles is infinite-dimensional, but we can cut it down to a
+finite-dimensional space by fixing the locations of the singularities,
+and their residues.
+\vasily{Chris, how general the term 'residue' in mathematics?
+  Is it common to use word 'residue' here, in the multiplicative case? I am not sure.
+  For example,
+  for GL(1), singularity of the co-weight $n$ means that $g(z) \simeq (z-z_0)^{n}$,
+  I am not sure that phrase 'residue' = 'n' conveys proper intution. May be change
+  wording 'residue' to the wording 'degree of singularity', and say that in the non-abelian case
+  the degree of singularity takes values in coweight lattice mod Weyl group?}
+  These residues are described by orbits in the
+affine Grassmannian $\Gr_G$: restrict the multiplicative Higgs field
+to a formal neighborhood of the puncture, to obtain an element of the
+algebraic loop group $LG = G(\!(z)\!)$.  This element is well-defined
+up to the action of $L^+G = G[[z]]$ on the left and right, and so
+determines a well-defined double coset in
+$L^+G \!\!\bs\!\! LG/L^+G = L^+G \!\!\bs\!\! \Gr_G$.  Orbits in the
+affine Grassmannian are in canonical bijection with dominant coweights
+of $\gg$, so fixing residues at the punctures means fixing a dominant
+coweight $\omega^\vee_{z_i}$ at each puncture $z_i$.
  
- Fix a curve $C$ and consider the \emph{moduli space of multiplicative Higgs bundles} on $\bb{CP}^1$ with prescribed singularities lying at the points $D = \{z_1, \ldots, z_k\}$, with residues $\omega_{z_1}^\vee, \ldots, \omega_{z_k}^\vee$ respectively.  We denote this moduli space by $\mhiggs_G(C,D,\omega^\vee)$.
+ Fix a curve $C$ and consider the \emph{moduli space of multiplicative Higgs bundles} on $C$ with prescribed singularities lying at the points $D = \{z_1, \ldots, z_k\}$, with residues $\omega_{z_1}^\vee, \ldots, \omega_{z_k}^\vee$ respectively.  We denote this moduli space by $\mhiggs_G(C,D,\omega^\vee)$.
  
- Moduli spaces of multiplicative Higgs bundles have been studied in the literature previously, though they've more often been referred to simply as ``moduli spaces of $G$-pairs''.  The earliest descriptions of these moduli spaces that we're aware of occur in the work of Hurtubise and Markman \cite{HurtubiseMarkman, HurtubiseMarkman1}.  Their work was motivated by the desire to understand the elliptic Skylanin Poisson brackets on loop groups, and to that end they mainly studied the case where the underlying curve $C$ is elliptic -- we'll refer back to their work throughout the paper.  From a different perspective, the moduli space of multiplicative Higgs bundles was also studied by Frenkel and Ng\^o \cite[Section 4]{FrenkelNgo} as part of their geometrization of the trace formula.  Further work was done following their definition by Bouthier\cite{Bouthier2, Bouthier1}, who gave an alternative construction of the moduli space as the space of sections of a vector bundle associated to a fixed residue datum defined using the Vinberg semigroup (see Remark \ref{Bouthier_remark}).  
+ Moduli spaces of multiplicative Higgs bundles have been studied in the literature previously, though they've more often been referred to simply as ``moduli spaces of $G$-pairs''.  The earliest descriptions of these moduli spaces that we're aware of occur in the work of Hurtubise and Markman \cite{HurtubiseMarkman, HurtubiseMarkman1}.  Their work was motivated by the desire to understand the elliptic Skylanin Poisson brackets on loop groups, and to that end they mainly studied the case where the underlying curve $C$ is elliptic -- we'll refer back to their work throughout the paper.  From a different perspective, the moduli space of multiplicative Higgs bundles was also studied by Frenkel and Ng\^o \cite[Section 4]{FrenkelNgo} as part of their geometrization of the trace formula.  Further work was done following their definition by Bouthier \cite{Bouthier2, Bouthier1}, who gave an alternative construction of the moduli space as the space of sections of a vector bundle associated to a fixed residue datum defined using the Vinberg semigroup (see Remark \ref{Bouthier_remark}).  
  
  The moduli space of multiplicative Higgs bundles admits a version of the Hitchin fibration, just like the ordinary moduli space of Higgs bundles.  Intuitively, this map is defined using the Chevalley map $\chi \colon G \to T/W$ (for instance if $G = \GL_n$, the map sending a matrix to its characteristic polynomial): the multiplicative Higgs field is, in particular, a meromorphic $G$-valued function, and the multiplicative Hitchin fibration post-composes this function with $\chi$.  See Section \ref{Hitchin_system_section} for a more detailed definition.
  
@@ -50,25 +202,64 @@ Let us begin by presenting these five perspectives, before explaining their inte
  \begin{theorem} [See Theorem \ref{HK_rotation_thm}]
  The moduli space $\mhiggs^{\text{fr}}_G(\bb{CP}^1,D,\omega^\vee)$, given the complex structure at $\eps \in \CC \sub \bb{CP}^1$ in the twistor sphere can be identified (in the limit where an auxiliary parameter is taken to $\infty$) with the moduli space $\epsconn^{\text{fr}}_G(\bb{CP}^1,D,\omega^\vee)$ of framed $\eps$-connections on $\bb{CP}^1$.
  \end{theorem}
- 
-\item Consider now another, a priori different, representation-theoretic moduli space.  Let $M$ be a Riemannian 3-manifold, and let $G_\RR$ be a compact connected Lie group.  The moduli space of \emph{$G_\RR$-monopoles} on $M$ is the moduli space of triples $(P,A,\Phi)$, consisting of a smooth principal $G_\RR$-bundle $P$ equipped with a connection $A$ and a section $\Phi$ of the associated bundle $\gg_{P}$, together satisfying the \emph{Bogomolny equation}: $\ast F_A = \d_A \Phi$. 
 
-If we focus on the example where $M = C \times S^1$ splits as the product of a compact Riemann surface and a circle, the moduli space of monopoles on $M$ was studied by Charbonneau--Hurtubise \cite{CharbonneauHurtubise}, for $G_\RR = \mr U(n)$, and by Smith \cite{Smith} for general $G$.  These moduli spaces were also studied in the rational case where $C = \CC$ by Cherkis and Kapustin \cite{CherkisKapustin1,CherkisKapustin2,CherkisKapustin3}, with more general boundary conditions than the framing at infinity which we consider.  This example has also been studied in the mathematics literature by Foscolo \cite{FoscoloDef, FoscoloThesis} and by Mochizuki \cite{Mochizuki} -- note that considering weaker boundary conditions at infinity means they need to use far more sophisticated analysis in order to work with hyperk\"ahler structures on their moduli spaces than we'll consider in this paper.
+\subsection{Moduli space of monopoles}
+%\item Consider now another, a priori different, representation-theoretic moduli space.  Let $M$ be a Riemannian 3-manifold, and let $G_\RR$ be a compact connected Lie group.  The moduli space of \emph{$G_\RR$-monopoles} on $M$ is the moduli space of triples $(P,A,\Phi)$, consisting of a smooth principal $G_\RR$-bundle $P$ equipped with a connection $A$ and a section $\Phi$ of the associated bundle $\gg_{P}$, together satisfying the \emph{Bogomolny equation}: $\ast F_A = \d_A \Phi$. 
+
+If we focus on the example where real three-dimensional Riemannian
+manifold $M = C \times S^1$ splits as the product of a compact Riemann
+surface and a circle, for the rational case $C = \CC$ the moduli space
+of monopoles on $M$ was studied in by Cherkis and Kapustin
+\cite{CherkisKapustin1,CherkisKapustin2,CherkisKapustin3} from the
+perspective of the Coulomb branch of vacua of 4d $\mathcal{N}=2$
+supersymmetric gauge theory. For general $C$ the moduli space of
+monopoles on $M = C \times S^{1}$ was studied by
+Charbonneau--Hurtubise \cite{CharbonneauHurtubise}, for
+$G_\RR = \mr U(n)$, and by Smith \cite{Smith} for general $G$.  These
+moduli spaces were also studied in the rational case where $C = \CC$
+with more general boundary conditions than the framing at infinity
+which we consider.  This example has also been studied in the
+mathematics literature by Foscolo \cite{FoscoloDef, FoscoloThesis} and
+by Mochizuki \cite{Mochizuki} -- note that considering weaker boundary
+conditions at infinity means they need to use far more sophisticated
+analysis in order to work with hyperk\"ahler structures on their
+moduli spaces than we'll consider in this paper.
 
 The connection between periodic monopoles and multiplicative Higgs bundles is provided by the following theorem.
 \begin{theorem}[Charbonneau--Hurtubise, Smith]
-There is an analytic isomorphism between the moduli space of (polystable) multiplicative $G$-Higgs bundles on a compact curve $C$ with singularities at points $z_1, \ldots, z_k$ and residues $\omega^\vee_{z_1}, \ldots, \omega^\vee_{z_k}$ and the moduli space of periodic monopoles on $C \times S^1$ with Dirac singularities at $(z_1,0), \ldots, (z_k,0)$ with charges $\omega^\vee_{z_1}, \ldots, \omega^\vee_{z_k}$.
+  There is an analytic isomorphism 
+  \begin{equation*}
+    H: \mon_G^\fr(C \times S^1,D \times\{0\},\omega^\vee) \to \mhiggs_G^{\text{fr}}(C,D,\omega^\vee)
+  \end{equation*}
+between the moduli space of (polystable) multiplicative $G$-Higgs bundles on a compact curve $C$ with singularities at points $z_1, \ldots, z_k$ and residues $\omega^\vee_{z_1}, \ldots, \omega^\vee_{z_k}$ and the moduli space of periodic monopoles on $C \times S^1$ with Dirac singularities at $(z_1,0), \ldots, (z_k,0)$ with charges $\omega^\vee_{z_1}, \ldots, \omega^\vee_{z_k}$
 \end{theorem}
+
+The morphism $H$,  discussed first by Kapustin Cherkis in \cite{CherkisKapustin2} and later in
+\cite{CharbonneauHurtubise}, \cite{Smith}, \cite{NekrasovPestun}
+defines the value of the multiplicative Higgs field at $z \in C$ to be equal to
+the holonomy of the monopole connection (complexified by the scalar field) along the fiber circle $\{z\} \times S^{1} \subset M$.
+
+
+
+
+
 
 One of our main goals in this paper is to compare -- in the rational case -- the symplectic structure on the moduli space of multiplicative Higgs fields analogous to the symplectic structure defined by Hurtubise and Markman in the elliptic case, and the hyperk\"ahler structure on the moduli space of periodic monopoles, defined by realizing the moduli space of periodic monopoles as a hyperk\"ahler quotient.  We prove that they coincide.
 
 \begin{theorem}[See Theorem \ref{symplectic_comparison_thm}]
-The holomorphic symplectic structure on $\mon_G^\fr(\bb{CP}^1 \times S^1,D \times\{0\},\omega^\vee)$ (at 0 in the twistor sphere of holomorphic symplectic structures) and the pullback of the natural symplectic structure on $\mhiggs_G^{\text{fr}}(\bb{CP}^1,D,\omega^\vee)$, under the isomorphism defined by Charbonneau-Hurtubise and Smith, coincide.
+  The holomorphic symplectic structure on
+  $\mon_G^\fr(\bb{CP}^1 \times S^1,D \times\{0\},\omega^\vee)$ (at 0
+  in the twistor sphere of holomorphic symplectic structures) 
+  is isomorphic to the pullback of the natural symplectic structure on
+  $\mhiggs_G^{\text{fr}}(\bb{CP}^1,D,\omega^\vee)$ under the
+  holonomy morphism $H: \mon_G^\fr(\bb{CP}^1 \times S^1,D \times\{0\},\omega^\vee) \to \mhiggs_G^{\text{fr}}(\bb{CP}^1,D,\omega^\vee)$  
 \end{theorem}
 
 In particular, the symplectic structure on the multiplicative Higgs moduli space extends to a hyperk\"ahler structure, as we discussed in point 1 above.
 
-\item The third perspective that we'll consider connects our moduli spaces directly to the theory of Poison Lie groups and Lie bialgebras, and leads to an interesting connection to quantum groups upon quantization.  By the \emph{rational Poisson Lie group} we'll mean the group $G_1[[z^{-1}]]$ consisting of $G$-valued power series in $z^{-1}$ with constant term $1$.  More precisely this is an ind-algebraic group: it is expressed as a direct limit of algebraic varieties $G_1[[z^{-1}]]_n$ with an associative multiplication $G_1[[z^{-1}]]_m \times G_1[[z^{-1}]]_n \to G_1[[z^{-1}]]_{m+n}$.  The Poisson structure on this group can be thought of as coming from a Manin triple: specifically the triple $(G(\!(z^{-1})\!), G_1[[z^{-1}]], G[z])$, where $G(\!(z)\!)$ is equipped with the residue pairing (see Section \ref{quantization_section} for more details).  
+%\item 
+\subsection{Poisson-Lie groups}
+The third perspective that we'll consider connects our moduli spaces directly to the theory of Poison Lie groups and Lie bialgebras, and leads to an interesting connection to quantum groups upon quantization.  By the \emph{rational Poisson Lie group} we'll mean the group $G_1[[z^{-1}]]$ consisting of $G$-valued power series in $z^{-1}$ with constant term $1$.  More precisely this is an ind-algebraic group: it is expressed as a direct limit of algebraic varieties $G_1[[z^{-1}]]_n$ with an associative multiplication $G_1[[z^{-1}]]_m \times G_1[[z^{-1}]]_n \to G_1[[z^{-1}]]_{m+n}$.  The Poisson structure on this group can be thought of as coming from a Manin triple: specifically the triple $(G(\!(z^{-1})\!), G_1[[z^{-1}]], G[z])$, where $G(\!(z)\!)$ is equipped with the residue pairing (see Section \ref{quantization_section} for more details).  
 
 We claim that our moduli spaces $\mhiggs_G^{\text{fr}}(\bb{CP}^1,D,\omega^\vee)$ correspond to \emph{symplectic leaves} in the rational Poisson Lie group, extending a classification result of Shapiro \cite{Shapiro} for the groups $G = \SL_n$ and $G = \GL_n$.  More specifically, we prove the following.
 \begin{theorem}[See Theorem \ref{Poisson_Lie_Comparison_thm}]
@@ -77,7 +268,14 @@ The map $\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee) \to G_1[[z^{-1}]]$, defined by r
 
 From this point of view it's natural to try to understand how our moduli spaces behave under deformation quantization.  The quantization of the rational Poisson Lie group is well known: it's modelled by the \emph{Yangian} quantum group $Y(\gg)$.  When we quantize our symplectic leaves, we obtain $Y(\gg)$-modules.  This follows from the work of Gerasimov, Kharchev, Lebedev and Oblezin \cite{GKLO} who constructed the $Y(\gg)$-modules in question and analyzed their classical limits.
 
-\item Having discussed three points of view on our moduli space in geometric representation theory, let us move on to explain some of the ways in which multiplicative Higgs bundles / periodic monopoles arise naturally in the world of supersymmetric gauge theory.  Firstly, these moduli spaces appeared in work of the second author, Nekrasov and Shatashvili \cite{NekrasovPestun, NekrasovPestunShatashvili} concerning the Seiberg-Witten integrable systems of 4d $\mc N=2$ ADE quiver gauge theories.  Let $\gg$ be a simple Lie algebra of ADE type.  One can define an $\mc N=2$ superconformal 4d gauge theory modelled on the Dynkin diagram of $\gg$.  To define this theory one must specify masses $m_{i,j}$ for fundamental hypermultiplets associated to the vertices of the Dynkin diagram, so $i = 1,\ldots,r$ varies over the vertices of the Dynkin diagram and $j=1, \ldots,w_i$ is an index parameterizing the number of hypermultiplets at each vertex.  Let us assume we're in the generic situation, where the masses are all distinct.
+\vasily{The \cite{GKLO} consider monopoles on $\RR^3$, as well as
+  later paper by Kamnitzer et al. Chris, can we explain what is relation of
+  those works to our present work for monopoles on $\RR^2 \times
+  S^1$.}
+
+% \item
+\subsection{Moduli spaces of vacua in supersymmetric gauge theories}
+Having discussed three points of view on our moduli space in geometric representation theory, let us move on to explain some of the ways in which multiplicative Higgs bundles / periodic monopoles arise naturally in the world of supersymmetric gauge theory.  Firstly, these moduli spaces appeared in work of the second author, Nekrasov and Shatashvili \cite{NekrasovPestun, NekrasovPestunShatashvili} concerning the Seiberg-Witten integrable systems of 4d $\mc N=2$ ADE quiver gauge theories.  Let $\gg$ be a simple Lie algebra of ADE type.  One can define an $\mc N=2$ superconformal 4d gauge theory modelled on the Dynkin diagram of $\gg$.  To define this theory one must specify masses $m_{i,j}$ for fundamental hypermultiplets associated to the vertices of the Dynkin diagram, so $i = 1,\ldots,r$ varies over the vertices of the Dynkin diagram and $j=1, \ldots,w_i$ is an index parameterizing the number of hypermultiplets at each vertex.  Let us assume we're in the generic situation, where the masses are all distinct.
 
 The paper \cite{NekrasovPestun} studied the Seiberg-Witten integrable system associated to this theory, so in particular the hyperk\"ahler moduli space $\mf P$ occuring as the target of the $\mc N=4$ supersymmetric sigma model obtained by compactifying the 4d theory on a circle.  In particular, it proved the following.
 
@@ -89,8 +287,20 @@ Let $G$ be a simple Lie group with ADE Lie algebra $\gg$.  The phase space $\mf 
 If one considers gauge theories that are not necessarily conformal, but only asymptotically free, the phase space is modelled by periodic monopoles that are permitted to have a singularity at infinity.  If $G_\RR = \SU(2)$ then this moduli space fits into the framework studied by Cherkis--Kapustin and by Foscolo.  We won't discuss this more complicated setting further in this paper.
 \end{remark}
 
-\begin{remark}[Elliptic version]
-The analysis of \cite{NekrasovPestun} suggests an elliptic generalization of our multiplicative story, corresponding to the phase space of a theory modelled on an \emph{affine} ADE quiver.  The phase space of these theories is identified with a moduli space of doubly periodic instantons.  In our setting, the idea is the following.  We can think of the moduli space of multiplicative Higgs bundles as a moduli space of meromorphic functions into the adjoint quotient stack $G/G$, just like we can think of the moduli space of ordinary Higgs bundles as a moduli space of meromorphic functions into the adjoint quotient stack $\gg/G$ for the Lie algebra.  There is a rational/trigonometric/elliptic trichotomy extending these two examples: one studies the moduli stack of semistable $G$-bundles on a cuspidal, nodal or smooth elliptic curve.  That is:
+\begin{remark}[Elliptic fiber version]
+  The analysis of \cite{NekrasovPestun} suggests an elliptic fiber
+  generalization of our multiplicative story, corresponding to the
+  phase space of a theory modelled on an \emph{affine} ADE quiver.
+  The phase space of these theories is identified with a moduli space
+  of doubly periodic instantons.  In our setting, the idea is the
+  following.  We can think of the moduli space of multiplicative Higgs
+  bundles as a moduli space of meromorphic functions into the adjoint
+  quotient stack $G/G$, just like we can think of the moduli space of
+  ordinary Higgs bundles as a moduli space of meromorphic functions
+  into the adjoint quotient stack $\gg/G$ for the Lie algebra.  There
+  is a rational/trigonometric/elliptic trichotomy extending these two
+  examples: one studies the moduli stack of semistable $G$-bundles on
+  a cuspidal, nodal or smooth elliptic curve.  That is:
 \begin{align*}
 \bun^{\mr{ss}}_G(E^{\mr{cusp}}) &\iso \gg/G \\
 \bun^{\mr{ss}}_G(E^{\mr{nod}}) &\iso G/G \\
@@ -98,10 +308,17 @@ The analysis of \cite{NekrasovPestun} suggests an elliptic generalization of our
 \end{align*}
 The last statement is a theorem of Looijenga (see e.g. \cite{Laszlo}): $LG/_q LG$ denotes the $q$-twisted adjoint quotient of the loop group $LG$: so $g(z)$ acts by $h(z) \mapsto g(qz)^{-1}h(z)g(z)$.  
 
-Without singularities, therefore, the elliptic analogue of our Hitchin system should be the space of maps from $C$ into $\bun^{\mr{ss}}_G(E_q)$: this moduli space is closely related to the moduli space of instantons on $C \times E_q$, i.e. doubly periodic instantons.  It would be interesting to study this elliptic Hitchin system in the full, singular setting.
+Without singularities, therefore, the elliptic analogue of our
+multiplicative Hitchin system should be the space of maps from $C$
+into $\bun^{\mr{ss}}_G(E_q)$: this moduli space is closely related to
+the moduli space of instantons on $C \times E_q$, i.e. doubly periodic
+instantons.  It would be interesting to study this elliptic Hitchin
+system in the full, singular setting.
 \end{remark}
 
-\item The final perspective we'll consider is perhaps the most interesting from our point of view, because it suggests that the categorical geometric Langlands conjecture of Beilinson and Drinfeld might admit a multiplicative analogue, built from the multiplicative Hitchin system instead of the ordinary Hitchin system.  Again, we'll describe a moduli space coming from supersymmetric gauge theory, but in a quite different setting to that of perspective 4 above.
+% \item
+\subsection{Multiplicative ($q$-geometric) Langlands correspondence}
+The final perspective we'll consider is perhaps the most interesting from our point of view, because it suggests that the categorical geometric Langlands conjecture of Beilinson and Drinfeld might admit a multiplicative analogue, built from the multiplicative Hitchin system instead of the ordinary Hitchin system.  Again, we'll describe a moduli space coming from supersymmetric gauge theory, but in a quite different setting to that of perspective 4 above.
 
 We consider now a five-dimensional $\mc N=2$ supersymmetric gauge theory.  In order to extract interesting moduli spaces for geometric representation theory, we won't study its moduli space of vacua, but instead we'll \emph{twist} the theory, then look at the entire moduli space of solutions to the equations of motion in the twisted theory.  We'll review the idea behind twisting at the beginning of Section \ref{twist_section}, but very informally, we'll choose a supersymmetry $Q_\HT$ that squares to zero, and study the derived space of $Q_\HT$-invariant solutions to the equations of motion.  In Section \ref{twist_section} we'll sketch the following, which also follows from forthcoming work of Butson \cite{Butson}.
 
@@ -112,10 +329,11 @@ where $T^*[1]X$ denotes the ``1-shifted cotangent space'' of $X$.
 \end{claimnum}
 
 This story leads us to a ``multiplicative'' analogue of the approach to geometric Langlands introduced by Kapustin and Witten \cite{KapustinWitten}.  When we take the radius of $S^1$ to zero we recover Kapustin's partially topological twist \cite{KapustinHolo} of 4d $\mc N=4$ super Yang-Mills, which degenerates to Kapustin-Witten's A- and B-topologically twisted theories.  By ``multiplicative geometric Langlands'' we mean a version of the geometric Langlands conjecture modelled on the multiplicative Hitchin system instead of the ordinary Hitchin system, where the radius of this circle is kept positive.  For more details on what this means, see Section \ref{Langlands_section}.
-\end{enumerate}
+%\end{enumerate}
 
 \begin{remark}[Derived geometry]
-We'll use the language of derived algebraic geometry in several places in this paper, mainly in Sections \ref{mhiggs_def_section} and \ref{twist_section}.  While we believe this perspective provides a clear way of thinking about the moduli spaces we're interested in studying, the derived language is not necessary when we state and prove the main results of this paper.  We hope that the majority of the paper is understandable without a derived geometry background.  There are several clear and references explaining the point of view of derived algebraic geometry, for instance the survey articles of To\"en \cite{ToenOverview,ToenSurvey}.  A comprehensive account of the theory of derived geometry can be found in the book of Gaitsgory and Rozenblyum \cite{GRvol1, GRvol2}.  We'll also refer a few times to the theory of shifted symplectic structures.  This theory was developed by Pantev, To\"en, Vaqui\'e and Vezzosi \cite{PTVV}, and we also recommend the explanations in \cite{Calaque}.
+  We'll use the language of derived algebraic geometry in several places in this paper, mainly in Sections \ref{mhiggs_def_section} and \ref{twist_section}.  While we believe this perspective provides a clear way of thinking about the moduli spaces we're interested in studying, the derived language is not necessary when we state and prove the main results of this paper.  We hope that the majority of the paper is understandable without a derived geometry background.  There are several clear and references explaining the point of view of derived algebraic geometry, for instance the survey articles of To\"en \cite{ToenOverview,ToenSurvey}.  A comprehensive account of the theory of derived geometry can be found in the book of Gaitsgory and Rozenblyum \cite{GRvol1, GRvol2}.  We'll also refer a few times to the theory of shifted symplectic structures.  This theory was developed by Pantev, To\"en, Vaqui\'e and Vezzosi \cite{PTVV}, and we also recommend the explanations in \cite{Calaque}. \vasily{I think we should also first of all suggest the AKSZ paper, also it easier
+    in some respect for comprehension by physicists} 
 \end{remark}
 
 \subsection{Outline of the Paper}
@@ -130,7 +348,7 @@ Having done this, in Section \ref{hyperkahler_section} we can transfer the hyper
 Finally, in Section \ref{quantization_section} we discuss the quantization of our moduli spaces.  We identify the moduli spaces of multiplicative Higgs bundles with symplectic leaves in the rational Poisson Lie group, and then after quantization we identify the quantized algebra of functions on our moduli spaces with modules for the Yangian as first constructed by Gerasimov, Kharchev, Lebedev and Oblezin. 
 
 \subsection{Acknowledgements}
-We would like to thank David Jordan, Davide Gaiotto, Kevin Costello and especially Pavel Safronov for helpful conversations about this work. The calculation of twists of 5d and 6d supersymmetric gauge theories was performed independently by Dylan Butson, and we would like to thank him for sharing his forthcoming manuscript. CE would like to thank the Perimeter Institute for Theoretical Physics for supporting research on this project. Research at Perimeter Institute is supported by the Government of Canada through Industry Canada and by the Province of Ontario through the Ministry of Economic Development \& Innovation. We acknowledge the support of IH\'ES.  This project has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (QUASIFT grant agreement 677368).
+We would like to thank David Jordan, Davide Gaiotto, Dennis Gaitsgory, Nikita Nekrasov, Kevin Costello and especially Pavel Safronov for helpful conversations about this work. The calculation of twists of 5d and 6d supersymmetric gauge theories was performed independently by Dylan Butson, and we would like to thank him for sharing his forthcoming manuscript. CE would like to thank the Perimeter Institute for Theoretical Physics for supporting research on this project. Research at Perimeter Institute is supported by the Government of Canada through Industry Canada and by the Province of Ontario through the Ministry of Economic Development \& Innovation. We acknowledge the support of IH\'ES.  This project has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (QUASIFT grant agreement 677368).
 
 \section{Multiplicative Higgs Bundles and $q$-Connections} \label{mhiggs_def_section}
 We'll begin with an abstract definition of moduli spaces of multiplicative Higgs bundles using the language of derived algebraic geometry.  We note, however, that once we specialize to our main, rational, example, the moduli spaces we'll end up studying are actually smooth algebraic varieties, not derived stacks.  However, the derived point of view gives us a useful and concise definition of these moduli spaces in full generality.
@@ -154,17 +372,28 @@ The source of this mapping stack can be $q$-deformed.  Indeed, let $q$ denote an
 where the two maps $C \to C \times C$ are given by the diagonal and the $q$-twisted diagonal $x \mapsto (x,q(x))$ respectively.
 
 \begin{definition}
-The moduli stack of \emph{$q$ difference connections} for the group $G$ on $C$ with singularities at $D$ is the mapping space
+The moduli stack of \emph{$q$-difference connections} for the group $G$ on $C$ with singularities at $D$ is the mapping space
 \[\qconn_G(C,D) = \map((C \times_q S^1_B) \bs (D \times \{0\}), BG).\] 
 In particular when $q=1$ this recovers the moduli stack of multiplicative Higgs bundles.
 \end{definition}
 
 \begin{remark}
-A closed point of $\qconn_G(C,D)$ consists of a principal $G$-bundle $P$ on $C$ along with a \emph{$q$ difference connection}: an isomorphism of $G$-bundles $P|_{C \! \bs \! D} \to q^*P|_{C \! \bs \! D}$ away from the divisor $D$.  For an introduction to the classical theory of $q$-difference connections we refer the reader to \cite{STSSevostyanov}. \chris{I'm not sure what to say about $q$-difference equations.  You suggested citing Sauloy but I'm not sure exactly what.  He has articles on $q$-difference modules which don't seem so relevant here?}
+  A closed point of $\qconn_G(C,D)$ consists of a principal $G$-bundle
+  $P$ on $C$ along with a \emph{$q$ difference connection}: an
+  isomorphism of $G$-bundles
+  $P|_{C \! \bs \! D} \to q^*P|_{C \! \bs \! D}$ away from the divisor
+  $D$.  For an introduction and review of the classical theory of $q$-difference
+  connections we refer the reader to \cite{STSSevostyanov} and \url{https://www.emis.de/journals/SC/2006/14/pdf/smf_sem-cong_14_249-280.pdf} for $GL_n$.
+  \vasily{Chris, please could you add this to the bibtex bibliography?} 
+  \chris{I'm
+    not sure what to say about $q$-difference equations.  You
+    suggested citing Sauloy but I'm not sure exactly what.  He has
+    articles on $q$-difference modules which don't seem so relevant
+    here?}
 \end{remark}
 
 \subsection{Residue Conditions}
-These moduli stacks are typically of infinite type.  In order to obtain finite type stacks, and later in order to define symplectic rather than only Poisson structures, we can fix the behaviour of our multiplicative Higgs fields and $q$ difference connections near the punctures $D \sub C$.
+These moduli stacks are typically of infinite type.  In order to obtain finite type stacks, and later in order to define symplectic rather than only Poisson structures, we can fix the behaviour of our multiplicative Higgs fields and $q$-difference connections near the punctures $D \sub C$.
 
 We'll write $\bb D$ to denote the \emph{formal disk} $\spec \CC[\![z]\!]$.  Likewise we'll write $\bb D^\times$ for the \emph{formal punctured disk} $\spec \CC(\!(z)\!)$.  We'll then write $\bb B$ for the derived pushout $\bb D \sqcup_{\bb D^\times} \bb D$.  Let $LG = \map(\bb D^\times, G)$ and let $L^+G = \map(\bb D, G)$.
 
@@ -183,7 +412,14 @@ Choose a map from $D$ to the set of dominant coweights and denote it by $\omega^
 \end{definition}
 
 \begin{remark}\label{ind_structure_remark}
-In a similar way we can define a filtration on the moduli stack of $q$-connections.  Recall that the affine Grassmannian $\Gr_G$ is stratified by dominant coweights $\omega^\vee$, and there is an inclusion $\Gr_G^{\omega^\vee_1}\sub \ol{\Gr_G^{\omega^\vee_2}}$ of one stratum into the closure of another stratum if and only if $\omega^\vee_1 \preceq \omega^\vee_2$ with respect to the standard partial order on dominant coweights.  We can then define
+  In a similar way we can define a filtration on the moduli stack of
+  $q$-connections.  Recall that the affine Grassmannian $\Gr_G$ is
+  stratified by dominant coweights $\omega^\vee$, and there is an
+  inclusion $\Gr_G^{\omega^\vee_1}\sub \ol{\Gr_G^{\omega^\vee_2}}$ of
+  one stratum into the closure of another stratum if and only if
+  $\omega^\vee_1 \preceq \omega^\vee_2$ with respect to the standard
+  partial order on dominant coweights.  \vasily{Perhaps a ref here, at least
+    for physics audience? Or this is too classical?} We can then define
 \[\qconn_G(C,D, \preceq \omega^\vee) = \qconn_G(C,D) \times_{\bun_G(\bb B)^k} \left(L^+G \!\!\bs\!\! \ol{\Gr_G^{\omega^\vee_1}} \times \cdots \times L^+G \!\!\bs\!\! \ol{\Gr_G^{\omega^\vee_k}}\right).\]
 The full moduli stack $\qconn_G(C,D)$ is the filtered colimit of these moduli spaces.  One can additionally take the filtered colimit over all finite subsets $D$ in order to define a moduli stack $\qconn^\mr{sing}_G(C)$ of $q$-connections on $C$ with arbitrary singularities.
 \end{remark}
@@ -199,9 +435,23 @@ The most important examples for our purposes are given by the following rational
     where $f \colon \{c\} \times S^1_B \to BG$ (or equivalently $f \colon \{c\} \to G/G$) is a choice of adjoint orbit.  We can define the framed mapping space with singularities and fixed residues in exactly the same way as above.  
   \end{definition}
     
-    In this paper we'll be most interested in the following example.  Let $C = \bb{CP}^1$ with framing point $c = \infty$ and framing given by the identity in $G/G$, and consider automorphisms of the form $z \mapsto z + \eps$ for $\eps \in \CC$.  Choose a finite subset $D \sub \bb A^1$ and label the points $z_i \in D$ by dominant coweights $\omega^\vee_{z_i}$.  We can then study the moduli space $\epsconn^\fr_G(\bb{CP}^1,D, \omega^\vee)$.  The main object of study in this paper will be the holomorphic symplectic structure on this moduli space.  
+  In this paper we'll be most interested in the following example.  Let $C = \bb{CP}^1$ with framing point $c = \infty$ and framing given by the identity \vasily{How critical to choose
+    identity for our manuscript? Could we pick a generic regular semi-simple element for simplicity? Then it would be easier to connect to Nahm dual Hitchin system and to Coulomb branch
+    of the quiver gauge theory. Namely, $[f]$ determines the positions of punctures in Nahm dual Hitchin ystem (in A-case), and the gauge coupling constants in the respective quiver gauge theory.
+    These are important parameters to have handle on them} in $G/G$, and consider automorphisms of the form $z \mapsto z + \eps$ for $\eps \in \CC$.  Choose a finite subset $D \sub \bb A^1$ and label the points $z_i \in D$ by dominant coweights $\omega^\vee_{z_i}$.  We can then study the moduli space $\epsconn^\fr_G(\bb{CP}^1,D, \omega^\vee)$.  The main object of study in this paper will be the holomorphic symplectic structure on this moduli space.
+  \vasily{OK, I think we decided that for different $[f]$'s the symplectic structures
+    are isomorphic. However, the fibration of the integrable system depends non-trivially
+    on $[f]$'s and are not equivalent. For physicists $[f]$ is coupling constant
+  and is very useful to be kept parametrically free. May be add a comment here?}
     
-    Note that the motivation for this definition comes in part from Spaide's formalism \cite{Spaide} of AKSZ symplectic structures on relative mapping spaces -- in this formalism $\bb{CP}^1$ with a single framing point is relatively 1-oriented, so mapping spaces out of it with 1-shifted symplectic targets have AKSZ 0-shifted symplectic structures.
+    Note that the motivation for this definition comes in part from
+    Spaide's formalism \cite{Spaide} of AKSZ
+\vasily{let us add ref to AKSZ}
+ symplectic structures on
+    relative mapping spaces -- in this formalism $\bb{CP}^1$ with a
+    single framing point is relatively 1-oriented, so mapping spaces
+    out of it with 1-shifted symplectic targets have AKSZ 0-shifted
+    symplectic structures.
   
   \item \textbf{Trigonometric:} Alternatively, we can enhance our definition by including a reduction of structure group at a point $c \in C$ not contained in $D$, again fixed by the automorphism $q$.
   \begin{definition}
@@ -324,13 +574,11 @@ Now, let us make this claim more precise.  The main technical condition that mak
 
 \begin{conjecture}
 Suppose $C$ is either an elliptic curve or $\bb{CP}^1$ with a fixed framing at $\infty$.
-\vspace{-10pt}
 \begin{enumerate}
 \item The stack $BLG$ is Tate 2-shifted symplectic, and both $BL^+G \to BLG$ and $\bun_G(C \bs D) \to BLG^k$ are Tate 2-shifted Lagrangian.  
 \item The stack $\bun_G(C \bs D)$ is ind 1-shifted Poisson, and the map $\bun_G(C) \to \bun_G(C \bs D)$ is ind 1-shifted coisotropic witnessed by the 2-shifted Lagrangian map $BL^+G^k \to BLG^k$.
 \item The Lagrangian intersection $\bun_G(\bb B)$ is Tate 1-shifted symplectic, and the map $B\Lambda_i \to \bun_G(\bb B)$ associated to the inclusion of the stabilizer of a closed point is 1-shifted Lagrangian.
 \end{enumerate}
-\vspace{-10pt}
 As a consequence, the moduli stack $\qconn_G(C,D)$ is ind 0-shifted Poisson and the moduli stack $\qconn_G(C,D, \omega^\vee)$ is 0-shifted symplectic.
 \end{conjecture}
 
@@ -583,7 +831,15 @@ Let $D$ be a finite subset $\{(z_1,t_1), \ldots, (z_k, t_k)\}$ of points in $M =
 \[\mon_G(M, D, \omega^\vee) = \mu^{-1}(0) / \mc G.\]
 \end{definition}
 
-Now let us address the relationship between periodic monopoles and $q$-connections.  Suppose from now on that $q$ is in the identity component of the group of automorphisms of $C$ (fixing the framing point $c$ if present).  The following theorem is a slightly generalized version of the comparison theorem between multiplicative Higgs bundles and periodic monopoles proved by Charbonneau--Hurtubise \cite{CharbonneauHurtubise} for $\GL_n$, and Smith \cite{Smith} for general $G$.
+Now let us address the relationship between periodic monopoles and
+$q$-connections.  Suppose from now on that $q$ is in the identity
+component of the group of automorphisms of $C$ (fixing the framing
+point $c$ if present).  The following theorem is a slightly
+generalized version of the comparison theorem between multiplicative
+Higgs bundles and periodic monopoles proved by Charbonneau--Hurtubise
+\cite{CharbonneauHurtubise} for $\GL_n$, and Smith \cite{Smith} for
+general $G$. This approach was first suggested by Kapustin-Cherkis
+\cite{CherkisKapustin2} under the name `spectral data'. 
 
 \begin{theorem} \label{monopole_qconn_comparison_thm}
 There is an analytic isomorphism between the moduli space of polystable monopoles on $C \times_q S^1$ with Dirac singularities at $D \times \{t_0\}$ (and a possible framing on $\{c\} \times S^1$) and the moduli space of $q$-connections on $C$ with singularities at $D$ and framing at $\{c\}$.  More precisely there is an analytic isomorphism
@@ -735,16 +991,129 @@ Note that the right-hand side is the derivative at $\mc A$ of the map $B_i \maps
 
 \section{Symplectic Structures} \label{symp_section}
 \subsection{The Example of $\GL_2$}
-Let us discuss in detail the geometry of the moduli space of multiplicative Higgs bundles in some of the simplest examples, for the group $G = \GL_2$.  The symplectic structures, and the Hitchin integrable system, which we'll analyze for the more general moduli spaces can be described very concretely in this simple situation.  Along the way we'll discuss the connection between the work discussed here and the Darboux coordinates for multiplicative Higgs moduli spaces constructed by Frassek and the second author in \cite{FrassekPestun}.
+Let us discuss in detail the geometry of the moduli space of multiplicative Higgs bundles in some of the simplest examples, for the group $G = \GL_2$.  The symplectic structures, and the Hitchin integrable system, which we'll analyze for the more general moduli spaces can be described very concretely in this simple situation. 
 
-\vasily{Chris, is the idea to put here explicit expressions for Higgs field in 
-terms of some chart
-  Darboux coordinates $(p,q)$ that we have discussed in the past drafts
-  draft?. If all singularities are miniscule, then for $GL_2$ the leaves could
-  be described quite explicitly as products of regular semi-simple co-adoint orbits in $\mathfrak{gl}_2$. Rouven is finishing a draft with explicit parametrization by Darboux coordinates of a certain family of symplectic leaves for $GL_n$. Perhaps here we can put a reference on it. } 
+
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\BC}{\mathbb{C}}
+Let $G=GL_2$, let the curve $C = \CP^1 = \mathbb{C} \cup \{\infty\} $ with the coordinate $z$, the 1-form
+$\lambda = dz$ and the framing point $z_\infty = \infty$.
+
+Consider component of $\mhiggs^\fr_{G}(C, D, \omega^{\vee}, g_\infty)$  which projects to a trivial $G$-bundle on $C$.
+
+Fix framing of trivial $G$-bundle at infinity. Then trivialization of $G$-bundle is fixed everywhere on $C$. Then $\mhiggs^{\fr}$ is identified with $G$-valued
+rational functions $g(z)$ on $C$ with certain conditions that we will identify explicitly.
+
+
+As a first explicit example we consider  $\mhiggs_{G}^\fr(C, D, \omega^{\vee}, g_\infty)$ with two singularities at points $z_0 \neq z_\infty$ and $z_1\neq z_\infty$ with $z_0 \neq z_1$.  
+ Then $\underline{z}=(z_0,z_1)$ and let 
+ co-weights be $\underline{\omega} = (\omega_0, \omega_1)$ where $\omega_0 = (1,0)$ and $\omega_1 = (0,-1)$ in the defining basis of $GL_2$.
+ 
+
+
+ 
+
+ The moduli space  $\mhiggs_{G}^\fr(C, D, \omega^{\vee}, g_\infty)$  is then
+ identified with the space of functions $g(z)$
+   valued in $2 \times 2$ matrices
+   \begin{equation*}
+     g(z) =
+     \begin{pmatrix}
+       a(z) & b(z) \\
+       c(z) & d(z)
+     \end{pmatrix}
+   \end{equation*}
+   where $a(z), b(z), c(z), d(z)$ are rational functions on $C$ such that 
+   \begin{enumerate}
+   \item $a(z), b(z), c(z), d(z)$ are regular everywhere on $C \setminus \{z_1\}$,
+     in particular they are regular at $z_\infty = \infty$ and $z_0$.
+   \item $g(z_\infty) = g_\infty$ where $g_\infty \in GL_2$ is a fixed element
+     \begin{equation*}
+       g_\infty =
+       \begin{pmatrix}
+         a_\infty & b_\infty \\
+         c_\infty & d_\infty 
+       \end{pmatrix}, \qquad a_\infty d_\infty - c_\infty b_\infty \neq 0 
+     \end{equation*}
+where $a_\infty, b_\infty, c_\infty, d_\infty \in \BC$ 
+   \item
+     \begin{equation*}
+       \det g(z) =  \frac{ z- z_0}{ z - z_1}  \det g_\infty
+     \end{equation*}
+   \end{enumerate}
+ 
+   The conditions (1), (2), (3) imply that $a(z), b(z), c(z), d(z)$ have the form
+   \begin{equation*}
+     a(z) =  \frac{a_\infty z  - a_0}{z - z_1}\quad
+     b(z) = \frac{ b_\infty z  - b_0}{z - z_1}\quad
+     c(z) = \frac{ c_\infty  z  - c_0}{z - z_1}\quad
+     d(z) = \frac{d_\infty  z  - d_0}{z - z_1}\quad
+   \end{equation*}
+where $ (a_0, b_0, c_0, d_0) \in \BC^4$, 
+   such that
+   \begin{equation*}
+ (     a_\infty z - a_0)( d_\infty z - d_0) -   (b_\infty z - b_0)(c_\infty z -c_0) =
+     (z - z_0)(z- z_1) (a_\infty d_\infty - b_\infty c_\infty)
+   \end{equation*}
+   The above equation translates into the system of linear
+   equation and quadric equation on  $(a_0, b_0, c_0, d_0) \in \BC^4$ 
+   \begin{multline*}
+\mhiggs^{\fr}_G(C, D, \omega^{\vee}, g_\infty)=
+\big \{  (a_0, b_0, c_0, d_0) \in \BC^4 | \\
+       -a_0 d_\infty - a_\infty d_0 + b_0 c_\infty + b_\infty c_0 
+       = ( - z_0 - z_1) (a_\infty d_\infty - b_\infty c_\infty), \\
+      a_0 d_0 - b_0 c_0 = 
+       z_0 z_1 (a_\infty d_\infty - b_\infty c_\infty) \big \}
+     \end{multline*}
+     We conclude, that in this example $     \mhiggs^{\fr}_G(C, D, \omega^{\vee}, g_\infty)$ is a complete intersection of a hyperplane and a  quadric on $\BC^4$, equivalently a quadric on $\BC^3$. For example,
+     say $(a_\infty, b_\infty, c_\infty, d_\infty) = (1,0,0,1)$,
+     and $z_0 = -m, z_1 = m$, then the linear equation implies $d_0 = -a_0$,
+     and the quadratic equation gives a canonical form of smooth affine quadric
+     surface 
+     \begin{equation*}
+       \label{eq:quadric}
+         a_0^2 + b_0 c_0  = m^2 
+     \end{equation*}
+on  $\BC^3 = (a_0, b_0, c_0)$.
+
+
+
+
+\begin{remark}
+  In the limit when the singularities $z_0$ and $z_1$ collide, that is $m = 0$,
+  the quadric becomes singular $a_0^2 + b_0 c_0 = 0$. The resolved
+  ingularity on a quadric by blow-up is identified with $T^{*} \CP^1$.
+  The $m$-deformed quadric $a_0^2 + b_0 c_0 = m^2$ can be identified
+  with affine line bundle over $\CP^1$. This $\CP^1$ is the orbit
+  of the fundamental miniscule weight in the affine Grassmanian $GL_2$.
+  We see that $      \mhiggs^{\fr}_G(C, D, \omega^{\vee}, g_\infty)$ 
+  in the case of two miniscule co-weight singularities for $GL_2$ 
+is an affine line bundle over the flag variety $\CP^1$, 
+where, locally, the 1-dimensional base comes 
+from the insertion of one singularity,
+and 1-dimensional fiber comes from the insertion of the other
+in the iterative definition of Hecke stack.
+\end{remark}
+
+\begin{remark}
+  The canonical coordinates $a \in \BC, b \in \BC^{\times}$ on the quadric (\ref{eq:quadric}) are given by
+  \begin{equation*}
+    a_0 = a, \qquad b_0 = b(m - a), \qquad c_0 = b^{-1}(m+a)
+  \end{equation*}
+  with Poisson brackets
+  \begin{equation*}
+    {a,b} = b
+  \end{equation*}
+  and symplectic form $da \wedge \frac{db} b$. 
+
+
   
-  \chris{My idea was to include the discussion of, at least, the simple example that you worked out for $\GL_2$ with minimal singularities where you described the geometry of the moduli space and gave an expression for the symplectic form (in Section 2 of the file 2017\_11\_30\_ghiggs).  I really only had in mind for $\GL_2$ trying to give a more explicit argument for what will appear below, i.e. that the moduli spaces after fixing residues were naturally symplectic.  But maybe we could do what you suggest and described the symplectic leaves in some Darboux coordinates and refer to \cite{FrassekPestun} for proof?} 
+\end{remark}
 
+
+More general explicit cases of $\mhiggs_G(C)$ with parametrization by Darboux coordinates
+for $C = \CP^1$ and $G=\GL_n$ case are discussed in  \cite{FrassekPestun}.
+  
 \subsection{Symplectic Structures for General $G$} \label{general_symplectic_sec}
 We begin analysis of the general case by briefly discussing the holomorphic symplectic structure on the moduli space of periodic monopoles on $\bb{CP}^1$ following the work of Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin3}.  This structure arises from the description we gave as a hyperk\"ahler quotient.  To describe it specifically, let $\delta^{(1)} \mc A$ and $\delta^{(2)} \mc A$ be two tangent vectors at $(\bo P, \mc A)$ to the moduli space of monopoles.  Recall that $\mc A$ denotes the combination $\nabla_t - i\Phi \d t$.  Choose representatives for these two tangent vectors of the form $\alpha_i$ and $\alpha'_i$ respectively  in the \v Cech resolution we described above.  Then we can write the holomorphic symplectic form coming from the hyperk\"ahler reduction in terms of the symplectic pairing on the infinite-dimensional vector space $\mc V$, which is given by the Killing form $\kappa$ on $\gg$ along with the wedge pairing of differential forms.  So summing over the local patches in our \v Cech resolution we can write it as
 \begin{align*}
@@ -877,7 +1246,6 @@ Let us begin by describing the hyperk\"ahler structure on the moduli space of pe
 Recall from Definition \ref{monopole_moduli_def} that the moduli space of periodic monopoles on $\bb{CP}^1$ with a fixed framing at $\infty$ and fixed Dirac singularities can be described as the quotient 
 \[\mon_G^{\fr}(\bb{CP}^1 \times_\eps S^1_R, D, \omega^\vee) = \mu^{-1}(0)/\mc G,\]
 where 
-\vspace{-10pt}
 \begin{itemize}
 \item The space $\mc V$ of fields is the space of pairs $(A,\Phi)$ consisting of framed connections $A$ on the trivial principal $G_\RR$-bundle $\bo P$ on $\bb{CP}^1 \times_\eps S^1_R$, $\Phi$ is a section of $\gg_{\bo P}$ vanishing at $\{\infty\} \times S^1_R$, and the pair $(A,\Phi)$ has a Dirac singularity with charge $\omega^\vee_{z_i}$ at each point $(z_i,t_0)$ in $D \times \{t_0\}$.
 \item $\mu \colon \mc V \to \Omega^1(\bb{CP}^1 \times_\eps S^1_R; (\gg_\RR)_{\bo P})/\gg_\RR$ is the map sending a monopole $(A, \Phi)$ to the $\gg_\RR$-valued 1-form $\ast F_A - \d_A \Phi$ vanishing at $\{\infty\} \times S^1_R$.  
@@ -953,6 +1321,11 @@ Under the Nahm transform, Pseudo-Conjecture \ref{multLanglands} in the rational 
 \end{claim}
 \end{example}
 
+
+\begin{remark}
+  The limit  $R \to \infty$ with $2 \pi \zeta R = \eps$ appearing in the hyperKahler rotation
+  theorem \ref{HK_rotation_thm} was first suggested by Gaiotto 2014 'Opers and TBA' on the Nahm dual side. \vasily{Please add bibtex citation}. 
+\end{remark}
 \section{The Rational Poisson Lie Group and the Yangian} \label{quantization_section}
 Let us proceed by discussing the connection between the symplectic structure on the moduli space of multiplicative Higgs bundles in the rational case and the rational Poisson Lie group.  This connection should be compared to the connection between the elliptic moduli space and the elliptic quantum group in the work of Hurtubise and Markman \cite[Theorem 9.1]{HurtubiseMarkman}.  
 
@@ -1029,9 +1402,20 @@ This result should be compared to the conjecture made in \cite[Chapter 8.1]{Nekr
 Finally, let us refer back to Remark \ref{q_opers_remark} and discuss the brane of $q$-opers, and the associated structures that should arise after quantization.  Recall that the multiplicative Hitchin system has a natural section defined by post-composition with the Steinberg section $T/W \to G/G$.  The moduli space of $q$-opers is the subspace of $\qconn_G(C,D,\omega^\vee)$ defined to be the multiplicative Hitchin section after rotating to the point $q$ in the twistor sphere of complex structures.
 
 Now, we expect that the space of $q$-opers will, in the rational case, be Lagrangian, and therefore will admit a canonical $\bb P_0$-structure -- a $-1$-shifted Poisson structure -- on its derived algebra of functions.  It would be interesting to study the quantization of this $\bb P_0$-algebra, and to investigate its relationship with the $q$-W algebras of Sevostyanov \cite{STSSevostyanov, Sevostyanov} and of Aganagic-Frenkel-Okounkov \cite{AFO}.
+
+\vasily{Please move to bibtex the citations}
+Preliminary results have been announced in [Pestun, String-Math 2017 talk in Hamburg]
+\url{ https://stringmath2017.desy.de/sites/sites_conferences/site_stringmath2017/content/e45470/e56510/e56567/SM-Pestun.pdf}.
+Also see \url{https://arxiv.org/pdf/1810.11410.pdf}
+
+\vasily{Chris, can we give more explicit definition of q-oper with singularities? For example,
+could we write down explicitly q-oper for the GL2 that we added to this manuscript? }
+
 \end{remark}
 
-\pagestyle{bib}
+
+
+%\pagestyle{bib}
 \bibliographystyle{alpha}
 \bibliography{Mult_Hitchin}
 %\printbibliography
