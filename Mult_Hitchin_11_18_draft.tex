@@ -88,6 +88,15 @@
 
 
 
+\newcommand{\sfe}{\mathsf{e}}
+\newcommand{\sff}{\mathsf{f}}
+\newcommand{\sfh}{\mathsf{h}}
+\newcommand{\sfs}{\mathsf{s}}
+
+\newcommand{\frakq}{\mathfrak{q}}
+
+
+
 \newcommand{\sub}{\subseteq}
 
 \newcommand{\iso}{\cong}
@@ -1412,6 +1421,271 @@ Also see \url{https://arxiv.org/pdf/1810.11410.pdf}
 could we write down explicitly q-oper for the GL2 that we added to this manuscript? }
 
 \end{remark}
+
+
+
+
+
+\section{q-geometric Langlands: q-Opers and q-characters}
+
+\vasily{Chris, I inserted here a section from my draft file
+  that I was preparing for the Hamburg 2017 String Math talk. I did not
+  bring yet this section to be coherent with the rest of the manuscript.
+  Let us try to do it together. So far, please read here
+  the notations  as independent from the rest }.
+
+
+\subsection{Lie algebra conventions} 
+
+Let $\mathfrak{g}$ be a simple simply-laced (ADE) Lie algera, $G$ be the corresponding
+simple Lie group of the adjoint type, 
+$\mathfrak{h}$ be a Cartan subalgebra of $\mathfrak{g}$, and $\Delta$ be the root system of $\mathfrak{g}$.
+
+
+Let $\Gamma$ be the Dynkin graph with the set of nodes $I$. 
+Let  $\Pi = \{\alpha_i\}_{i \in I}$  be the set of simple roots, 
+let $\{ \check \alpha_i\}_{i \in I}$ be simple coroots, and $Q = \mathbb{Z} \Pi $ be the root lattice.
+Let $\{\omega_i\}_{i \in I}$ be fundamental weights and $\{\omega_{i}\}_{i \in I }$ be fundamental coweights.
+
+It holds that  $\langle \alpha_i, \check \omega_j\rangle  = \delta_{ij}$ and $\langle \check \alpha_i, \omega_j \rangle = \delta_{ij}$. 
+
+Let $\mathfrak{g} = \mathfrak{h} \oplus \bigoplus_{\alpha \in \Delta} \mathfrak{g}_{\alpha} $ be the
+decomposition of $\mathfrak{g}$ into a Cartan subalgebra $\mathfrak{h}$ and
+the direct sum of root subspaces $\mathfrak{g}_{\alpha}$ for each root $\alpha \in \Delta
+$. Denote $\mathfrak{g}_{-} =  \bigoplus_{\alpha < 0} \mathfrak{g}_{\alpha}$,
+$\mathfrak{g}_{+} = \bigoplus_{\alpha >0} \mathfrak{g}_{\alpha}$. Let $\Delta^{+}$ be the set of positive roots. 
+
+Let $\check {\mathfrak{h}}$ be the dual to the Cartan subalgebra $\mathfrak{h}$,
+and $\check \alpha \in \mathfrak{h}$ be a coroot corresponding to the root $\alpha \in \check {\mathfrak{h}}$.
+
+
+Let $c_{ij} = \langle \check \alpha_i \alpha_j \rangle$ be the Cartan matrix. 
+
+We choose orientation on the edges of $\Gamma$, so that $\Gamma$ becomes an ADE quiver.
+Then we can define half-Cartan matrix
+\begin{equation}
+  c_{ij}^{+} =  \delta_{ij} - \#(e : i \to j) , \qquad i,j \in \Pi 
+\end{equation}
+such that
+\begin{equation}
+  c_{ij} = c_{ij}^{+} + c_{ji}^{+}
+\end{equation}
+
+Define not-symmetric bilinear form $(,)_{+}$ on coroot lattice by 
+\begin{equation}
+  (\alpha, \beta)_{+} = a_i c_{ij}^{+} b_i \qquad \alpha = \sum_{i \in I} a_i \alpha_i, \qquad \beta = \sum_{i \in I} b_i \beta_i
+\end{equation}
+and  bi-multiplicative function $\varepsilon: Q \times Q \to \pm 1$
+\begin{equation}
+\label{eq:epsab}
+  \varepsilon(\alpha, \beta) = (-1)^{ (\alpha|\beta)_{+}}
+\end{equation}
+
+
+
+Then there is a basis element $e_\alpha$ in each root subspace $\mathfrak{g}_{\alpha}$ such that 
+\begin{equation}
+  \begin{aligned}{}
+  &[h, e_{\alpha}] = \langle \alpha, h \rangle  e_\alpha, \qquad \alpha \in \Delta,\quad h \in \mathfrak{h}\\
+  &[e_\alpha, e_{-\alpha}] = - \check \alpha, \qquad \alpha \in \Delta, \quad \check \alpha \in \mathfrak{h} \\
+  &[e_\alpha, e_\beta] = \varepsilon(\alpha, \beta) e_{\alpha + \beta} \qquad \alpha, \beta, \alpha + \beta \in \Delta
+  \end{aligned}
+\end{equation}
+
+
+
+Let $h_{i} = \check \alpha_i$ be $i$-th simple coroot,
+then $(h_i)_{i \in I}$ is a basis of $\mathfrak{h}$, and  $(e_\alpha, h_i)_{\alpha \in \Delta, i \in I}$ is a basis of $\mathfrak{g}$. Conventionally we call 
+$\sfh_i$, $\sfe_i = e_{\alpha_i}$ and $\sff_{i} = -e_{-\alpha_i}$ the Chevalley generators.
+
+The Chevalley generators commute as follows
+\begin{equation}
+  \begin{aligned}{}
+   & [\sfh_i, \sfe_j] = c_{ij} e_{j} \\
+   & [\sfh_i, \sff_j] = -c_{ij} f_{j} \\
+   & [\sfe_i, \sff_{j}] = \delta_{ij} h_i 
+  \end{aligned}
+\end{equation}
+
+
+Since $\Gamma$ is directed acyclic tree, we can pick an ordering $\prec$ on $I$ (not uniquely)
+such that existence of edge $e: i \to j$ implies that $ i \prec j$, and then (\ref{eq:epsab}) is equivalent to 
+\begin{equation}
+  \varepsilon(\alpha_i, \alpha_j) =
+  \begin{cases}
+    (-1)^{\langle \check \alpha_i, \alpha_j \rangle }, \qquad i \prec j\\
+    -1, \qquad  i = j\\
+    1, \qquad i \succ j 
+  \end{cases}
+\end{equation}
+
+
+
+Let $T$ be a maximal torus of $G$,  $N(T) \subset G$ be the normalizer of $T$ in $G$,  $W = N(T)/T$ be the Weyl group and  $s_i \in W$ be
+reflection in simple root $\alpha_i$.
+
+We choose a representative  $\sfs_i \in N(T)$ of $ s_i \in W$  
+\begin{equation}
+  \sfs_i  =  \exp(-\sfe_i) \exp(\sff_i) \exp(-\sfe_i) 
+\end{equation}
+
+\subsection{Explicit form of $q$-oper}
+Let $C = \BC$. Let $(p_i(z))_{i \in I}$ be the set of $I$-colored polynomials
+called \emph{fundamental matter polynomials}  in the context of ADE quiver gauge theories
+\cite{NekrasovPestun}
+
+ The degree of $p_i$ is equal to
+the rank $m_i$ of the fundamental flavour group  at node $i$
+\begin{equation}
+  p_i(z) = \frakq_i \prod_{k=1}^{m_i} (z  - \mu_{ik})
+\end{equation}
+the roots the $(\mu_{ik})_{k=1\dots m_i}$ are the masses of the fundamental hypermultiples, and $\frakq_i$ is the instanton counting parameter of the quiver gauge bundle at the node $i$, in
+conventions of \cite{NekrasovPestun,NekrasovPestunShatashvili,Nekrasov:2015wsu,Kimura:2015rgi}.
+
+
+
+The phase space of the corresponding integrable system
+is the moduli space of monopoles on $C \times S^1$, 
+the roots of the fundamental matter polynomials  $\mu_{ik}$ of $p_i(z)$ are the points at which 
+the monopole field develops a Dirac singularity of type $\check \omega_i$:
+\begin{equation}
+  g(z) \simeq (z - z_{*})^{-\check \omega_i}, \qquad z \to \mu_{ik}
+\end{equation}
+
+In other words, the collection of $p_i(z)$ for $i \in I$  encodes the decorated divisor of the mHiggs system on $C$. 
+
+\vasily{I need to change the sign conventions for the degree of singularity to
+  agree with the rest of the manuscript}
+
+Let $B \subset G$ be the Borel subgroup generated by $\mathfrak{h} \oplus \mathfrak{g}_{+}$, and let $U \subset B$ be the unipotent subgroup generated by $\mathfrak{g}_{+}$.
+
+\begin{definition}[q-connection] Let $C$ be a flat Riemann surface ($\BC$, $\BC^{\times}$ or elliptic curve $\mathcal{E}$)
+  with abelian automorphism group, $q: C \to C$ be an automorphism.  Let $P$ be a principal $G$-bundle on $C$. A $q$-connection $g$ on $P$ is an isomorphism 
+  $g:  P \stackrel{\sim}{\to} (q^{*})^{-1}P$. 
+Under a local change of trivialization (gauge transformation)
+by $u \in \Gamma(C, \mathcal{P} \times_{G} \mathrm{Ad} G)$ a $q$-connection $g$ transforms as 
+\begin{equation}
+g_z \to  u_{q^{-1} z} g_z u_{z}^{-1}  
+\end{equation}
+\end{definition}
+
+
+\begin{definition}[q-oper] Fix a system of polynomials $(p_i(z))_{i \in I}$ that
+  define singularities of the monopole system.
+  Let   $(t_i(z))_{i \in I}$ be another collection of polynomials called
+  'eigenvalues of the transfer matrices' in the context of the
+  integrable system of the multiplicative Higgs bundles. 
+
+  \vasily{This is a repetetive defintion given
+    the rest of manuscript, I temporally keep it here for a
+    coherence of this section so far}
+      
+A $q$-oper on $C$ with $(p_i)_{i \in I}$-singularities is a $G$-bundle together with the reduction of its $G$-structure
+to the Borel subgroup $B$ and a $q$-connection $g_z \equiv g(z)$ of the form
+\begin{equation}
+  g^{t}_z = \prod_{i \in I}^{\prec} \exp\left(t_{i,z} \sfe_i\right) s_i p_{i,z}^{-\check \omega_i}
+\end{equation}
+up to $U_{+}$-valued gauge transformations where $U_{+} = \exp(\mathfrak{g}_{+})$. 
+\end{definition}
+
+
+\begin{definition}[diagonalized q-oper]
+  A $q$-oper $g_z$ on $C$ with  $(p_i)_{i \in I}$-singularities
+has generalized eigenvalues $y_{i,z}$ if $g_z^t$ is  equivalent to a $q$-connection $g_{z}^{y}$ of the form
+  \begin{equation}
+\quad     g^{y}_{z} = \prod_{i \in I }^{\prec} \exp\left(y_{i,z}^{-1} \sff_i\right) y_{i,z}^{\check \alpha_i} p_{i,z}^{-\check \omega_i} 
+  \end{equation}
+by a $U_{+}$-valued gauge transformation.
+\end{definition}
+
+
+% \begin{conjecture} The expression of parameters  $t_{i,z}$ of q-oper in 
+%   terms of generalized  eigenvalues  $(y_{i, q^{\BZ} z})_{i \in I}$ coincides with fundamental $t$-characters
+%   in notation of \cite{Frenkel_1997} (that is $q_1$ character in notations of \cite{Kimura:2015rgi})
+% \label{def:qchar}
+% \end{conjecture}
+
+
+Consider a quiver with framings based on the Dynkin diagram of $G$. 
+Assume that the ordering $i \prec j$ matches the
+directions on the edges of the quiver graph $ i \leftarrow j$,
+and assume that all framings are in the anti-fundamental representation
+(the arrows go from framing node to the corresponding gauge node).
+
+Then quiver gauge theory $q$-characters are generated by the iWeil reflections of the form
+ \cite{NekrasovPestun,NekrasovPestunShatashvili,Nekrasov:2015wsu} (we follow conventions of \cite{Kimura:2015rgi} for shifts)
+\begin{equation}
+  y_{i,z} \mapsto    (y_{i, z q^{-1}}^{-1} \prod_{e: i \to j} y_{j, z} \prod_{e: j\to i} y_{j,q^{-1} z})  p_{i, q^{-1} z}
+\end{equation}
+
+
+\vasily{Ok, here goes the main theorem}
+\begin{theorem}
+  The expression of q-oper parameters
+  $t_{i,z}$ in terms of q-oper generalized eigenvalues $y_{i,z}$
+  under $U_{+}$ gauge transformation is
+  identical to the expression $q$-characters of the quiver
+  gauge theory in terms of the corresponding
+  $\mathsf{Y}$ observables and matter polynomials  $\mathsf{P}$
+  \cite{NekrasovPestunShatashvili,Kimura:2015rgi,Nekrasov:2015wsu}
+\end{theorem}
+
+\vasily{Chris, so far, for the proof I have a computer algebra code which verifies
+  that theorem for any ADE, and I could
+  run in reasonable time (few minutes) for
+  $A_1,A_2,A_3,D_4,D_5$. By direct computation this theorem
+is totally non-obvious and magical (at least to me). On q-oper side (B-model) we deal with
+  some classical gauge transformations of q-connections, and
+  classical monopole configuration. On the quiver gauge theory side
+  we deal with the cohomomology of the Nakajima quiver variety:
+  totally different beast. And, on quantum integrable side  (A-model)
+  we deal with common spectrum of quantum commuting operators (Baxter) algebra.
+It would be fantastic if you have got any ideas
+on the proof of this theorem. To me, the statement of this theorem is
+the most magical so far in the whole business. Even if we don't have proof,
+we should conclude with it}. 
+
+\begin{example}
+  Here is illustration of proof by explicit computation and comparison.
+
+  Let $\mathfrak{g} = A_2$. We label positive roots as $\alpha_1, \alpha_2$ and $\alpha_3:=\alpha_1 + \alpha_2$ and  parametrize $U$-valued
+  gauge transformation $u_{z}$ by collection of functions  
+ $(u_{i,z})_{\alpha_i  \in \Delta^{+}}$ 
+  \begin{equation}
+    u_{z} = \prod_{3,2,1} \exp( u_{i,z} e_{\alpha_i})
+  \end{equation}
+Then solving the equation 
+\begin{equation}
+g_{z}^{t} =  u_{q^{-1} z}^{-1} g_{z}^{y} u_{z}
+\end{equation}
+for $u_{1,z}, u_{2,z}, u_{3,z}$ and $t_{1,z}, t_{2,z}$  we find
+\begin{equation}
+\begin{aligned}
+& u_{1,z} = p_{1,z} u_{2,{q^{-1}} z}-p_{1,z} y_{2,z} y_{1,z}^{-1} \\
+& u_{2,z} =  -p_{2,z} y_{2,z}^{-1} \\
+& u_{3,z} = -p_{1,z} p_{2,z} y_{1,z}^{-1} \\
+& t_{1,z} = y_{1,z}-u_{1,{q^{-1}} z} \\
+& t_{2,z} = y_{2,z} - y_{1,z} u_{2,{q^{-1}} z}-u_{3,{q^{-1}} z} \\
+\end{aligned}
+\end{equation}
+\end{example}
+which implies
+\begin{equation}
+  \begin{aligned}
+    t_{1,z} =y_{1,z}  +  \frac{p_{1,{q^{-1}} z} y_{2,{q^{-1}} z}}{y_{1,{q^{-1}} z}} + \frac{p_{1,{q^{-1}} z} p_{2,{q^{-2} z}}}{ y_{2,{q^{-2} z}}}\\
+    t_{2,z} = y_{2,z}  +\frac{y_{1,z} p_{2,{q^{-1}} z}}{y_{2,{q^{-1}} z}}+   \frac{p_{1,{q^{-1}} z} p_{2,{q^{-1}} z}}{y_{1,{q^{-1}} z}}
+  \end{aligned}
+\end{equation}
+and that indeed coincides with expression of the $q$-characters for the $A_2$ quiver in
+\cite{Nekrasov:2015wsu,NekrasovPestunShatashvili,NekrasovPestun,Kimura:2015rgi}
+
+
+
+
+
+
+
+
 
 
 

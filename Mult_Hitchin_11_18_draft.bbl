@@ -302,6 +302,11 @@ Maxim Kontsevich.
 \newblock Deformation quantization of {Poisson} manifolds.
 \newblock {\em Letters in Mathematical Physics}, 66(3):157--216, 2003.
 
+\bibitem[KP15]{Kimura:2015rgi}
+Taro Kimura and Vasily Pestun.
+\newblock {Quiver W-algebras}.
+\newblock 2015.
+
 \bibitem[KW07]{KapustinWitten}
 Anton Kapustin and Edward Witten.
 \newblock Electric-magnetic duality and the geometric {L}anglands program.
@@ -331,6 +336,12 @@ Valerio Melani and Pavel Safronov.
 Valerio Melani and Pavel Safronov.
 \newblock Derived coisotropic structures {II}: stacks and quantization.
 \newblock {\em arXiv preprint arXiv:1704.03201}, 2017.
+
+\bibitem[Nek15]{Nekrasov:2015wsu}
+Nikita Nekrasov.
+\newblock {BPS/CFT correspondence: non-perturbative Dyson-Schwinger equations
+  and qq-characters}.
+\newblock 2015.
 
 \bibitem[NP12]{NekrasovPestun}
 Nikita Nekrasov and Vasily Pestun.
