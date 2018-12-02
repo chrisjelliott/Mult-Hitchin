@@ -1,55 +1,57 @@
-This is BibTeX, Version 0.99d (TeX Live 2016)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Mult_Hitchin_11_18_draft.aux
 The style file: alpha.bst
 Database file #1: Mult_Hitchin.bib
+Warning--there's a number but no volume in ChenDoreyHollowoodLee
 Warning--there's a number but no series in CostelloBook
 Warning--can't use both volume and number fields in CostelloSH
 Warning--empty publisher in CostelloSH
+Warning--there's a number but no volume in DoreyHollowoodLee
 Warning--empty journal in EagerSaberiWalcher
 Warning--empty journal in KapustinHolo
-Warning--empty journal in Kimura:2015rgi
-Warning--empty journal in Nekrasov:2015wsu
+Warning--empty journal in PestunStringMath
 Warning--there's a number but no volume in Shapiro
-You've used 77 entries,
+Warning--there's a number but no volume in Steinberg
+You've used 90 entries,
             2543 wiz_defined-function locations,
-            1047 strings with 16005 characters,
-and the built_in function-call counts, 28792 in all, are:
-= -- 2958
-> -- 1177
-< -- 53
-+ -- 382
-- -- 369
-* -- 2047
-:= -- 4721
-add.period$ -- 240
-call.type$ -- 77
-change.case$ -- 435
-chr.to.int$ -- 73
-cite$ -- 85
-duplicate$ -- 1204
-empty$ -- 2144
-format.name$ -- 479
-if$ -- 5847
+            1130 strings with 18337 characters,
+and the built_in function-call counts, 34298 in all, are:
+= -- 3525
+> -- 1423
+< -- 62
++ -- 470
+- -- 454
+* -- 2476
+:= -- 5614
+add.period$ -- 282
+call.type$ -- 90
+change.case$ -- 517
+chr.to.int$ -- 86
+cite$ -- 100
+duplicate$ -- 1417
+empty$ -- 2539
+format.name$ -- 582
+if$ -- 6964
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 81
-newline$ -- 389
-num.names$ -- 231
-pop$ -- 367
+missing$ -- 94
+newline$ -- 455
+num.names$ -- 270
+pop$ -- 427
 preamble$ -- 1
-purify$ -- 520
+purify$ -- 615
 quote$ -- 0
-skip$ -- 989
+skip$ -- 1158
 stack$ -- 0
-substring$ -- 1701
-swap$ -- 162
-text.length$ -- 53
-text.prefix$ -- 34
+substring$ -- 2057
+swap$ -- 198
+text.length$ -- 62
+text.prefix$ -- 39
 top$ -- 0
-type$ -- 592
-warning$ -- 8
-while$ -- 296
-width$ -- 81
-write$ -- 991
-(There were 8 warnings)
+type$ -- 696
+warning$ -- 10
+while$ -- 351
+width$ -- 94
+write$ -- 1165
+(There were 10 warnings)

@@ -12,6 +12,11 @@ Mina Aganagic, Edward Frenkel, and Andrei Okounkov.
 \newblock Quantum {$q$}-{Langlands} correspondence.
 \newblock {\em arXiv preprint arXiv:1701.03146}, 2017.
 
+\bibitem[AFR18]{AvanFrappatRagoucy}
+Jean Avan, Luc Frappat, and Eric Ragoucy.
+\newblock Elliptic deformation of {$\mathcal W_N$}-algebras.
+\newblock {\em arXiv preprint arXiv:1810.11410}, 2018.
+
 \bibitem[AG15]{ArinkinGaitsgory}
 Dima Arinkin and Dennis Gaitsgory.
 \newblock Singular support of coherent sheaves and the geometric {Langlands}
@@ -23,6 +28,12 @@ Michael Atiyah and Nigel Hitchin.
 \newblock {\em The geometry and dynamics of magnetic monopoles}.
 \newblock M. B. Porter Lectures. Princeton University Press, Princeton, NJ,
   1988.
+
+\bibitem[ASZK97]{AKSZ}
+Mikhail Alexandrov, Albert Schwarz, Oleg Zaboronsky, and Maxim Kontsevich.
+\newblock The geometry of the master equation and topological quantum field
+  theory.
+\newblock {\em Internat. J. Modern Phys. A}, 12(7):1405--1429, 1997.
 
 \bibitem[ATZ18]{AshwinkumarTanZhao}
 Meer Ashwinkumar, Meng-Chwan Tan, and Qin Zhao.
@@ -76,6 +87,11 @@ Damien Calaque.
 \newblock In {\em Stacks and categories in geometry, topology, and algebra},
   volume 643 of {\em Contemp. Math.}, pages 1--23. Amer. Math. Soc.,
   Providence, RI, 2015.
+
+\bibitem[CDHL11]{ChenDoreyHollowoodLee}
+Heng-Yu Chen, Nick Dorey, Timothy~J. Hollowood, and Sungjay Lee.
+\newblock A new 2d/4d duality via integrability.
+\newblock {\em J. High Energy Phys.}, (9):040, 16, 2011.
 
 \bibitem[CH10]{CharbonneauHurtubise}
 Beno\^it Charbonneau and Jacques Hurtubise.
@@ -149,6 +165,11 @@ Simon Donaldson and Peter Kronheimer.
 \newblock {\em The geometry of four-manifolds}.
 \newblock Oxford University Press, 1990.
 
+\bibitem[DLH11]{DoreyHollowoodLee}
+Nick Dorey, Sungjay Lee, and Timothy~J. Hollowood.
+\newblock Quantization of integrable systems and a 2d/4d duality.
+\newblock {\em J. High Energy Phys.}, (10):077, 42, 2011.
+
 \bibitem[Don03]{DonagiLectures}
 Ron Donagi.
 \newblock Geometry and integrability.
@@ -202,6 +223,12 @@ Chris Elliott and Philsang Yoo.
   algebraic geometry.
 \newblock {\em Advances in Theoretical and Mathematical Physics}, 22(3), 2018.
 
+\bibitem[FKRD18]{FKR}
+Michael Finkelberg, Alexander Kuznetsov, Leonid Rybnikov, and Galyna
+  Dobrovolska.
+\newblock Towards a cluster structure on trigonometric zastava.
+\newblock {\em Selecta Math. (N.S.)}, 24(1):187--225, 2018.
+
 \bibitem[FN11]{FrenkelNgo}
 Edward Frenkel and Bao~Ch{\^a}u Ng{\^o}.
 \newblock Geometrization of trace formulas.
@@ -224,11 +251,30 @@ Rouven Frassek and Vasily Pestun.
   base.
 \newblock {\em arXiv preprint arXiv:1808.00799}, 2018.
 
+\bibitem[FR98]{FrenkelReshetikhin1}
+Edward Frenkel and Nicolai Reshetikhin.
+\newblock Deformations of {$\mathcal W$}-algebras associated to simple {L}ie
+  algebras.
+\newblock {\em Comm. Math. Phys.}, 197(1):1--32, 1998.
+
+\bibitem[FR99]{FrenkelReshetikhin2}
+Edward Frenkel and Nicolai Reshetikhin.
+\newblock The {$q$}-characters of representations of quantum affine algebras
+  and deformations of {$\mathcal W$}-algebras.
+\newblock In {\em Recent developments in quantum affine algebras and related
+  topics ({R}aleigh, {NC}, 1998)}, volume 248 of {\em Contemp. Math.}, pages
+  163--205. Amer. Math. Soc., Providence, RI, 1999.
+
 \bibitem[FRSTS98]{FrenkelReshetikhinSTS}
 Edward Frenkel, Nicolai Reshetikhin, and Michel Semenov-Tian-Shansky.
 \newblock {Drinfeld--Sokolov} reduction for difference operators and
   deformations of-{$\mc W$}algebras $i$. the case of {Virasoro} algebra.
 \newblock {\em Communications in mathematical physics}, 192(3):605--629, 1998.
+
+\bibitem[Gai14]{GaiottoTBA}
+Davide Gaiotto.
+\newblock Opers and {TBA}.
+\newblock {\em arXiv preprint arXiv:1403.6137}, 2014.
 
 \bibitem[GKL04]{GKL}
 Anton Gerasimov, Sergei Kharchev, and Dimitri Lebedev.
@@ -302,10 +348,16 @@ Maxim Kontsevich.
 \newblock Deformation quantization of {Poisson} manifolds.
 \newblock {\em Letters in Mathematical Physics}, 66(3):157--216, 2003.
 
-\bibitem[KP15]{Kimura:2015rgi}
+\bibitem[KP18]{Kimura:2015rgi}
 Taro Kimura and Vasily Pestun.
-\newblock {Quiver W-algebras}.
-\newblock 2015.
+\newblock Quiver {W}-algebras.
+\newblock {\em Letters in Mathematical Physics}, 108(6):1351--1381, 2018.
+
+\bibitem[KSZ18]{KoroteevSageZeitlin}
+Peter Koroteev, Daniel Sage, and Anton Zeitlin.
+\newblock {$(\SL(N), q)$}-opers, the {$q$}-{L}anglands correspondence, and
+  quantum/classical duality.
+\newblock {\em arXiv preprint arXiv:1811.09937}, 2018.
 
 \bibitem[KW07]{KapustinWitten}
 Anton Kapustin and Edward Witten.
@@ -337,11 +389,11 @@ Valerio Melani and Pavel Safronov.
 \newblock Derived coisotropic structures {II}: stacks and quantization.
 \newblock {\em arXiv preprint arXiv:1704.03201}, 2017.
 
-\bibitem[Nek15]{Nekrasov:2015wsu}
+\bibitem[Nek16]{Nekrasov:2015wsu}
 Nikita Nekrasov.
-\newblock {BPS/CFT correspondence: non-perturbative Dyson-Schwinger equations
-  and qq-characters}.
-\newblock 2015.
+\newblock {BPS/CFT} correspondence: non-perturbative {D}yson-{S}chwinger
+  equations and {$qq$}-characters.
+\newblock {\em Journal of High Energy Physics}, 2016(3):181, 2016.
 
 \bibitem[NP12]{NekrasovPestun}
 Nikita Nekrasov and Vasily Pestun.
@@ -359,6 +411,13 @@ Marc Pauly.
 \newblock Monopole moduli spaces for compact {$3$}-manifolds.
 \newblock {\em Math. Ann.}, 311(1):125--146, 1998.
 
+\bibitem[Pes17]{PestunStringMath}
+Vasily Pestun.
+\newblock Periodic {M}onopoles and {qOpers}.
+\newblock 2017.
+\newblock Lecture, String-Math, Hamburg, 28 July 2017,
+  \url{https://stringmath2017.desy.de/sites/sites_conferences/site_stringmath2017/content/e45470/e56510/e56567/SM-Pestun.pdf}.
+
 \bibitem[PR01]{PolishchukRothstein}
 Alexander Polishchuk and Mitchell Rothstein.
 \newblock Fourier transform for {$D$}-algebras, {I}.
@@ -374,6 +433,19 @@ Tony Pantev, Bertrand To{\"e}n, Michel Vaqui{\'e}, and Gabriele Vezzosi.
 Jian Qiu and Maxim Zabzine.
 \newblock On twisted {$\mc N= 2$} {5D} super {Yang--Mills} theory.
 \newblock {\em Letters in Mathematical Physics}, 106(1):1--27, 2016.
+
+\bibitem[Sau06]{Sauloy}
+Jacques Sauloy.
+\newblock Isomonodromy for complex linear {$q$}-difference equations.
+\newblock In {\em Th\'{e}ories asymptotiques et \'{e}quations de
+  {P}ainlev\'{e}}, volume~14 of {\em S\'{e}min. Congr.}, pages 249--280. Soc.
+  Math. France, Paris, 2006.
+
+\bibitem[Sev02]{Sevostyanov1}
+Alexei Sevostyanov.
+\newblock Drinfeld-{S}okolov reduction for quantum groups and deformations of
+  {$W$}-algebras.
+\newblock {\em Selecta Math. (N.S.)}, 8(4):637--703, 2002.
 
 \bibitem[Sev11]{Sevostyanov}
 Alexey Sevostyanov.
@@ -394,6 +466,11 @@ Benjamin~H Smith.
 Theodore Spaide.
 \newblock Shifted symplectic and {Poisson} structures on spaces of framed maps.
 \newblock {\em arXiv preprint arXiv:1607.03807}, 2016.
+
+\bibitem[Ste65]{Steinberg}
+Robert Steinberg.
+\newblock Regular elements of semisimple algebraic groups.
+\newblock {\em Inst. Hautes \'{E}tudes Sci. Publ. Math.}, (25):49--80, 1965.
 
 \bibitem[STSS98]{STSSevostyanov}
 Michel Semenov-Tian-Shansky and Alexey Sevostyanov.

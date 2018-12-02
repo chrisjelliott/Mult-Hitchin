@@ -659,7 +659,7 @@ MRREVIEWER = {Daniel S. Freed},
 	
 @article{Butson,
   Author = {Butson, Dylan},
-  Title = {6d {$\mathcal N = (1, 0)$} Gauge Theories and their Holomorphic Twists},
+  Title = {Omega Backgrounds and Boundary Theories in Twisted Supersymmetric Gauge Theories},
   Journal={Forthcoming},
   Year = {2019}
 }
@@ -892,7 +892,24 @@ MRREVIEWER = {Rutwig Campoamor-Stursberg},
        URL = {https://doi.org/10.1007/s00220-017-3071-y},
 }
 
-@article {FriedmanMorganWitten,
+@article {FriedmanMorganWitten1,
+    AUTHOR = {Friedman, Robert and Morgan, John and Witten, Edward},
+     TITLE = {Vector bundles and {${\rm F}$} theory},
+   JOURNAL = {Comm. Math. Phys.},
+  FJOURNAL = {Communications in Mathematical Physics},
+    VOLUME = {187},
+      YEAR = {1997},
+    NUMBER = {3},
+     PAGES = {679--743},
+      ISSN = {0010-3616},
+   MRCLASS = {14J60 (14B07 14D20 14H52 14J27 14J32 32J81 81T30)},
+  MRNUMBER = {1468319},
+MRREVIEWER = {I. Dolgachev},
+       DOI = {10.1007/s002200050154},
+       URL = {https://doi.org/10.1007/s002200050154},
+}
+
+@article {FriedmanMorganWitten2,
     AUTHOR = {Friedman, Robert and Morgan, John W. and Witten, Edward},
      TITLE = {Principal {$G$}-bundles over elliptic curves},
    JOURNAL = {Math. Res. Lett.},
@@ -923,4 +940,94 @@ MRREVIEWER = {Arnaud Beauville},
   MRNUMBER = {1625614},
 MRREVIEWER = {P. E. Newstead},
        URL = {http://www.numdam.org/item?id=AIF_1998__48_2_413_0},
+}
+
+
+
+@incollection {Calaque,
+    AUTHOR = {Calaque, Damien},
+     TITLE = {Lagrangian structures on mapping stacks and semi-classical
+              {TFT}s},
+ BOOKTITLE = {Stacks and categories in geometry, topology, and algebra},
+    SERIES = {Contemp. Math.},
+    VOLUME = {643},
+     PAGES = {1--23},
+ PUBLISHER = {Amer. Math. Soc., Providence, RI},
+      YEAR = {2015},
+   MRCLASS = {53D12 (14A20 14F05 81T45)},
+  MRNUMBER = {3381468},
+MRREVIEWER = {Brent Pym},
+       DOI = {10.1090/conm/643/12894},
+       URL = {https://doi.org/10.1090/conm/643/12894},
+}
+
+@book{CostelloBook,
+	Author = {Costello, Kevin},
+	Number = {170},
+	Publisher = {American Mathematical Soc.},
+	Title = {Renormalization and effective field theory},
+	Year = {2011}}
+
+@article {AKSZ,
+    AUTHOR = {Alexandrov, Mikhail and Schwarz, Albert and Zaboronsky, Oleg and
+              Kontsevich, Maxim},
+     TITLE = {The geometry of the master equation and topological quantum
+              field theory},
+   JOURNAL = {Internat. J. Modern Phys. A},
+  FJOURNAL = {International Journal of Modern Physics A. Particles and
+              Fields. Gravitation. Cosmology},
+    VOLUME = {12},
+      YEAR = {1997},
+    NUMBER = {7},
+     PAGES = {1405--1429},
+      ISSN = {0217-751X},
+   MRCLASS = {81T70 (58D29 58F05)},
+  MRNUMBER = {1432574},
+MRREVIEWER = {Luigi Martina},
+       DOI = {10.1142/S0217751X97001031},
+       URL = {https://doi.org/10.1142/S0217751X97001031},
+}
+
+@incollection {Sauloy,
+    AUTHOR = {Sauloy, Jacques},
+     TITLE = {Isomonodromy for complex linear {$q$}-difference equations},
+ BOOKTITLE = {Th\'{e}ories asymptotiques et \'{e}quations de {P}ainlev\'{e}},
+    SERIES = {S\'{e}min. Congr.},
+    VOLUME = {14},
+     PAGES = {249--280},
+ PUBLISHER = {Soc. Math. France, Paris},
+      YEAR = {2006},
+   MRCLASS = {39A13 (33D15 34M40 34M55)},
+  MRNUMBER = {2353469},
+MRREVIEWER = {Andrea Pulita},
+}
+		
+@article{GaiottoTBA,
+  title={Opers and {TBA}},
+  author={Gaiotto, Davide},
+  journal={arXiv preprint arXiv:1403.6137},
+  year={2014}
+}
+
+
+
+@Article{Kimura:2015rgi,
+  Title                    = {{Quiver W-algebras}},
+  Author                   = {Kimura, Taro and Pestun, Vasily},
+  Year                     = {2015},
+  Archiveprefix            = {arXiv},
+  Eprint                   = {1512.08533},
+  Primaryclass             = {hep-th},
+  Slaccitation             = {%%CITATION = ARXIV:1512.08533;%%}
+}
+
+@article{Nekrasov:2015wsu,
+      author         = "Nekrasov, Nikita",
+      title          = "{BPS/CFT correspondence: non-perturbative Dyson-Schwinger
+                        equations and qq-characters}",
+      year           = "2015",
+      eprint         = "1512.05388",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-th",
+      SLACcitation   = "%%CITATION = ARXIV:1512.05388;%%"
 }
