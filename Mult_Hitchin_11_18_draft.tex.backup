@@ -834,8 +834,8 @@ From now on we'll focus on the example we're most interested in.  That is, we'll
 \[\mon^{(\fr)}_G(C \times_q S^1, D \times \{t_0\}, \omega^\vee) \iso \mu^{-1}(0)/ \mc G\]
 where $\mc G$ is the group of gauge transformations of $\bo P$ and $\mu \colon \mc V \to \Omega^1(M; (\gg_R)_{\bo P})$ is the Bogomolny functional $(A,\Phi) \mapsto \ast F_A - \d_A \Phi$.  The tangent complex to this hyperk\"ahler quotient at a point $(\bo P, \mc A)$ can be written as $\Omega^0(M \!\bs\! D; (\gg_\RR)_{\bo P})[1] \to \bb T_{\mu^{-1}(0)}$ where $\bb T_{\mu^{-1}(0)}$ is the tangent complex to the zero locus of the moment map, concentrated in non-negative degrees. Roughly speaking $\bb T_{\mu^{-1}(0)} = \bb T_{\mc V} \overset {\d\mu} \to \Omega^1(M; (\gg_R)_{\bo P})[-1]$.  
 
-More explicitly, following \cite{FoscoloDef} let 
-\[\mc F^{\mr{mon}}_{\bo P, \mc A} = \left(\xymatrix{
+More explicitly, following \cite{FoscoloDef} define $\mc F^{\mr{mon}}_{\bo P, \mc A}$ to be the sheaf of cochain complexes
+\[\left(\xymatrix{
 \Omega^0(M \!\bs\! D; (\gg_\RR)_{\bo P}) \ar[r]^(.36){\d_1} &\Omega^1(M \!\bs\! D; (\gg_\RR)_{\bo P}) \oplus \Omega^0(M \!\bs\! D; (\gg_\RR)_{\bo P}) \ar[r]^(.64){\d_2} &\Omega^1(M \!\bs\! D; (\gg_\RR)_{\bo P})
 }\right) \otimes_\RR \CC\]
 placed in degrees $-1$, 0 and 1 where $\d_1(g) = -(\d_A(g),[\Phi, g])$ and $\d_2(a,\psi) = \ast \d_A(a) - \d_A(\psi) + [\Phi,a]$.  Write $\d_{\mr{mon}}$ for the total differential.
@@ -998,7 +998,7 @@ where $a_\infty, b_\infty, c_\infty, d_\infty \in \CC$  satisfy the condition
 for an element $(a_0, b_0, c_0, d_0) \in \CC^4$ such that
    \begin{equation*}
  (a_\infty z - a_0)( d_\infty z - d_0) -   (b_\infty z - b_0)(c_\infty z -c_0) =
-     (z - z_0)(z- z_1) (a_\infty d_\infty - b_\infty c_\infty).
+     (z - z_1)(z- z_2) (a_\infty d_\infty - b_\infty c_\infty).
    \end{equation*}
    The above equation translates into the system of a linear
    equation and a quadric equation on $(a_0, b_0, c_0, d_0) \in \CC^4$, so our moduli space is encoded by the following complex affine variety:
@@ -1006,9 +1006,9 @@ for an element $(a_0, b_0, c_0, d_0) \in \CC^4$ such that
 \mc M(z_1,z_2)=
 \big \{  (a_0, b_0, c_0, d_0) \in \CC^4 | \\
        -a_0 d_\infty - a_\infty d_0 + b_0 c_\infty + b_\infty c_0 
-       = ( - z_0 - z_1) (a_\infty d_\infty - b_\infty c_\infty), \\
+       = ( - z_1 - z_2) (a_\infty d_\infty - b_\infty c_\infty), \\
       a_0 d_0 - b_0 c_0 = 
-       z_0 z_1 (a_\infty d_\infty - b_\infty c_\infty) \big \}
+       z_1 z_2 (a_\infty d_\infty - b_\infty c_\infty) \big \}
      \end{multline*}
      We conclude that, in this example, our moduli space $\mc M(z_1,z_2)$ is described by the complete intersection of a hyperplane and a  quadric in $\CC^4$, therefore by a quadric on $\CC^3$. For example,
      say $(a_\infty, b_\infty, c_\infty, d_\infty) = (1,0,0,1)$,
@@ -1045,6 +1045,18 @@ and 1-dimensional fiber comes from the insertion of the other.
   \end{equation*}
   and symplectic form $\d a \wedge \frac{\d b} b$.  
 \end{remark}
+
+\begin{remark}
+We can likewise calculate the multiplicative Hitchin section as in Remark \ref{q_opers_remark} in this example.  The Steinberg section for the group $G = \GL_2$ sends a pair of eigenvalues $(s,t) \in T/W$ to the element
+\[\begin{pmatrix}-s-t & st \\ 1 & 0\end{pmatrix} \in G.\]
+In order to describe the multiplicative Hitchin section, let us use a framing that lands in the Steinberg section, say $(a_\infty, b_\infty,c_\infty, d_\infty) = (0,-1,1,0)$.  Then the moduli space $\mc M(z_1,z_2)$ as above with this framing can be identified with the smooth affine quadric surface 
+    \begin{equation*}
+        a_0d_0 - b_0^2  = m^2 .
+    \end{equation*}
+The multiplicative Hitchin section lies within the locus where $d_0=0$, i.e. to the pair of lines $b_0 = \pm im$ inside our quadric surface.  It is equivalent to one of these lines; which one depends on a choice of 
+     
+\end{remark}
+
 
 More general explicit cases of $\mhiggs^\fr_G(C)$ with parametrization by Darboux coordinates for $C = \bb{CP}^1$ and $G=\GL_n$ case are discussed in \cite{FrassekPestun}.
   
@@ -1097,9 +1109,9 @@ Generic fibers of the multiplicative Hitchin fibration, in the rational case, ar
 \end{prop}
 
 \begin{proof}
-In order to check this we need to describe the subspace of the tangent space to $\mhiggs^\fr_G(C,D,\omega^\vee)$ at a point $(P,g)$ tangent to the Hitchin fiber in our \v Cech description.  Recall that the tangent space to $\mhiggs^\fr_G(C,D,\omega^\vee)$ can be identified as the space of \v Cech cocycles $(\alpha_0, \{\alpha_i\}, \alpha_\infty, \{\beta_i\}, \beta_\infty)$, where in particular the $\beta_i$ and $\beta_\infty$ are local sections of the adjoint bundle $\gg_P$.  We will show that, for a \v Cech cocycle lying tangent to the Hitchin fiber, the elements $\beta_i, \beta_\infty$ must be valued in the associated bundle of centralizers $\mf c_g$ of $g$.  Having established this the claim follows because the operator $\Ad_g$, and therefore the operator $(\Ad_g^*)^{-1}$, acts trivially on the centralizer of $g$.  Replacing this operator with the identity in our expression for the symplectic form from Lemma \ref{sym_nondegeneracy_lemma} results in a symmetric expression.  Since it's also antisymmetric, it must vanish, which implies the desired isotropic condition.
+In order to check this we need to describe the subspace of the tangent space to the moduli space $\mhiggs^\fr_G(C,D,\omega^\vee)$ at a point $(P,g)$ tangent to the Hitchin fiber in our \v Cech description.  Recall that the tangent space to $\mhiggs^\fr_G(C,D,\omega^\vee)$ can be identified as the space of \v Cech cocycles $(\alpha_0, \{\alpha_i\}, \alpha_\infty, \{\beta_i\}, \beta_\infty)$, where in particular the $\beta_i$ and $\beta_\infty$ are local sections of the adjoint bundle $\gg_P$.  We will show that, for a \v Cech cocycle lying tangent to the Hitchin fiber, the elements $\beta_i, \beta_\infty$ must be valued in the associated bundle of centralizers $\mf c_g$ of $g$.  Having established this the claim follows because the operator $\Ad_g$, and therefore the operator $(\Ad_g^*)^{-1}$, acts trivially on the centralizer of $g$.  Replacing this operator with the identity in our expression for the symplectic form from Lemma \ref{sym_nondegeneracy_lemma} results in a symmetric expression.  Since it's also antisymmetric, it must vanish, which implies the desired isotropic condition.
 
-So it remains to establish this restriction on tangent vectors to the Hitchin fiber.  Note that $\beta_i$ lies in $\mf c_g$ if and only if $\alpha_i - \alpha_0 = 0$.  If the derivative $\d \pi$ of the multiplicative Hitchin map annihilates a cocycle, then in particular the elements $\alpha_i - \alpha_0$ are functions without poles at $z_i$.  Indeed, the cocycle condition implies that $\alpha_i - \alpha_0$ has the same singularity type as $g$, in particular, by the genericity assumption, it has the same singularity type as a regular semisimple element, so it has regular semisimple degree.  On the other hand, being in the kernel of $\d \pi$ means vanishing under the map $\gg(\!(z)\!) \to \mf t(\!(z)\!)/W$, so in particular having nilpotent degree -- the two conditions together implies the degree vanishes.  That means that the tangent vectors to the Hitchin fiber -- which are annihilated by $\d \pi$ -- are cohomologous to cocycles with $\alpha_i - \alpha_0 = 0$ as required.
+So it remains to establish this restriction on tangent vectors to the Hitchin fiber.  Note that $\beta_i$ lies in $\mf c_g$ if and only if $\alpha_i - \alpha_0 = 0$.  If the derivative $\d \pi$ of the multiplicative Hitchin map annihilates a cocycle, then in particular the elements $\alpha_i - \alpha_0$ are functions without poles at $z_i$.  Indeed, the cocycle condition implies that $\alpha_i - \alpha_0$ has the same residue as $\Ad_g$ applied to a regular function, in particular, by the genericity assumption, its residue is regular semisimple.  On the other hand, being in the kernel of $\d \pi$ means vanishing under the map $\gg(\!(z)\!) \to \mf t(\!(z)\!)/W$ -- the two conditions together implies that the simple pole of $\alpha_i - \alpha_0$ has zero residue.  That means that the tangent vectors to the Hitchin fiber -- which are annihilated by $\d \pi$ -- are cohomologous to cocycles with $\alpha_i - \alpha_0 = 0$ as required.
 \end{proof}
 
 We'll now begin the comparison between the pairing described above and the symplectic structure on the moduli space of periodic monopoles.
@@ -1233,10 +1245,11 @@ Now, let us consider the large $R$ limit.  We'd like to note that the following 
 \[ \left\lvert \int_{\RR^3/(L_{R \frac {1-|\zeta|^2}{1+|\zeta|^2},\frac{\eps}{1+|\zeta|^2}})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol - \int_{\RR^3/(L_{R,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert.\]
 Rescaling the radii of the circles only rescales the pairing by an overall constant, so we can rewrite this as 
 \[ R\left\lvert \frac {1-|\zeta|^2}{1+|\zeta|^2} \int_{\RR^3/(L_{1,\frac{\eps}{1+|\zeta|^2}})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol - \int_{\RR^3/(L_{1,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert\]
-in which we recall that $\zeta = \frac \eps {2\pi R}$.  Write $\delta^{(i)}\mc A_\zeta$ for the image of the deformation $\delta^{(i)}\mc A$ under the diffeomorphism induced by identifying the $\frac{\eps}{1+|\zeta|^2}$-twisted product with the $\eps$-twisted product, so $\delta^{(i)}\mc A_\zeta(z,t) = \delta^{(i)}\mc A(z-\frac{\eps}{1+|\zeta|^2},t)$.  Note that when we perform the integral the pairing between $\delta^{(1)}\mc A$ and $\delta^{(2)}\mc A$ and the pairing between $\delta^{(1)}\mc A_\zeta$ and $\delta^{(2)}\mc A_\zeta$ coincide.  In other words our difference of pairings becomes
+in which we recall that $\zeta = \frac \eps {2\pi R}$.  Write $\delta^{(i)}\mc A_\zeta$ for the image of the deformation $\delta^{(i)}\mc A$ under the diffeomorphism induced by identifying the $\frac{\eps}{1+|\zeta|^2}$-twisted product with the $\eps$-twisted product, so $\delta^{(i)}\mc A_\zeta(z,t) = \delta^{(i)}\mc A(z-\frac{\eps}{1+|\zeta|^2},t)$.  Note that when we perform the integral the pairing between $\delta^{(1)}\mc A$ and $\delta^{(2)}\mc A$ and the pairing between $\delta^{(1)}\mc A_\zeta$ and $\delta^{(2)}\mc A_\zeta$ coincide.  In other words, our difference of pairings becomes
 \begin{align*} 
-R\left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \frac {1-|\zeta|^2}{1+|\zeta|^2} \kappa(\delta^{(1)} \mc A_\zeta, \delta^{(2)} \mc A_\zeta)  -  \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert &= R \left\lvert \frac {1-|\zeta|^2}{1+|\zeta|^2} - 1 \right\rvert \left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert \\
-&= \left\lvert\frac {2R |\eps|^2}{4 \pi^2 R^2 + |\eps|^2} \right \rvert \left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert.
+&R\left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \frac {1-|\zeta|^2}{1+|\zeta|^2} \kappa(\delta^{(1)} \mc A_\zeta, \delta^{(2)} \mc A_\zeta)  -  \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert \\
+&\quad = R \left\lvert \frac {1-|\zeta|^2}{1+|\zeta|^2} - 1 \right\rvert \left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert \\
+&\quad = \left\lvert\frac {2R |\eps|^2}{4 \pi^2 R^2 + |\eps|^2} \right \rvert \left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert.
 \end{align*}
 This converges to zero pointwise as $R \to \infty$.  The same calculation proves convergence for the other symplectic structures in the hyperk\"ahler family, and therefore convergence for the difference of the two complex structures.
 \end{proof}
@@ -1272,10 +1285,12 @@ The Poisson Lie group $G_1[[z^{-1}]]$ has the structure of an ind-scheme using t
 \OO(G_1[[z^{-1}]]) &= \underset n \lim \OO(G_1[[z^{-1}]]_n) \\
 &\iso \underset n \lim \sym(\gg_1^*[[z^{-1}]]_n).
 \end{align*}
-The Poisson bracket is compatible with this filtration, in the sense that it defines a map $\{,\} \colon \OO(G_1[[z^{-1}]]_m) \otimes \OO(G_1[[z^{-1}]]_n) \to \OO(G_1[[z^{-1}]]_{m+n})$ for each $m$ and $n$.
+The Poisson bracket is compatible with this filtration, in the sense that it defines a map 
+\[\{,\} \colon \OO(G_1[[z^{-1}]]_m) \otimes \OO(G_1[[z^{-1}]]_n) \to \OO(G_1[[z^{-1}]]_{m+n})\] 
+for each $m$ and $n$.
 
 \begin{theorem} \label{Poisson_Lie_Comparison_thm}
-The map $r_\infty \colon \mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee) \to G_1[[z^{-1}]]$ is Poisson.  That is, the pullback of the Poisson structure on $\OO(G_1[[z^{-1}]])$ coincides with the Poisson bracket on $\OO(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$. 
+The map $r_\infty \colon \mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee) \to G_1[[z^{-1}]]$ is Poisson.  That is, the pullback of the Poisson structure on $\OO(G_1[[z^{-1}]])$ coincides with the Poisson bracket on the space of regular functions on the moduli space $\OO(\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee))$ of multiplicative Higgs bundles. 
 \end{theorem}
 
 \begin{proof}
@@ -1763,9 +1778,8 @@ Yangian module obtained by quantization of
 the symplectic leaf $\mhiggs_G(C,D)$ contains
 (as a quotient) finite-dimensional Drinfeld
 module specified by Drinfeld polynomials $d_{i,z}$.
-On the side of quiver gauge theories this specializion
-is known as 4d to 2d specialization by 1104.3021v2
-and 1103.5726v3. This spealization leads
+On the side of quiver gauge theories this specialization
+is known as 4d to 2d specialization by \cite{ChenDoreyHollowoodLee, DoreyHollowoodLee}. This specialization leads
 to the Bethe ansatz equations with finite
 dimensional representations of Yangians and finite
 number of Bethe roots. 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.17)  2 DEC 2018 17:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.17)  4 DEC 2018 17:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -527,13 +527,7 @@ r-cle $\OML/cmm/m/it/10.95 S[]$\OT1/cmr/m/n/10.95 , un-der the iden-ti-fi-ca-ti
 on $[][](\OML/cmm/m/it/10.95 E\OT1/cmr/m/n/10.95 ) =
  []
 
-[22] [23] [24] <xymatrix 3x1 98>
-Overfull \hbox (28.4806pt too wide) detected at line 840
-\OMS/cmsy/m/n/10.95 F[] \OT1/cmr/m/n/10.95 = [] \OMS/cmsy/m/n/10.95 
-[] \U/msb/m/n/10.95 C
- []
-
-[25] [26] [27]
+[22] [23] [24] <xymatrix 3x1 98> [25] [26] [27]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 955.
@@ -549,14 +543,14 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 [28] [29]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1052.
+(hyperref)                removing `math shift' on input line 1062.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1052.
+(hyperref)                removing `math shift' on input line 1062.
 
 [30]
-Overfull \hbox (7.22888pt too wide) detected at line 1068
+Overfull \hbox (7.22888pt too wide) detected at line 1078
 \OML/cmm/m/it/10.95 !\OT1/cmr/m/n/10.95 ((\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10
 .95 []\OMS/cmsy/m/n/10.95 g\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95 f\OML/cmm
 /m/it/10.95 ^^L[]\OMS/cmsy/m/n/10.95 g\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ;
@@ -573,81 +567,40 @@ n/10.95 )\OMS/cmsy/m/n/10.95 j[]\OML/cmm/m/it/10.95 ; ^^Z[]\OT1/cmr/m/n/10.95 (
 cmm/m/it/10.95 ;
  []
 
-<xymatrix 3x2 292> [31]
-Overfull \hbox (18.8104pt too wide) in paragraph at lines 1100--1101
-[]\OT1/cmr/m/n/10.95 In or-der to check this we need to de-scribe the sub-space
- of the tan-gent space to $[][](\OML/cmm/m/it/10.95 C; D; ![]\OT1/cmr/m/n/10.95
- )$
- []
-
-
-Underfull \vbox (badness 2343) has occurred while \output is active []
-
- [32]
-[33] [34] [35] [36]
-Overfull \hbox (48.71176pt too wide) in paragraph at lines 1240--1240
-[] 
- []
-
-[37]
-Overfull \hbox (37.75404pt too wide) in paragraph at lines 1274--1276
-\OT1/cmr/m/n/10.95 The Pois-son bracket is com-pat-i-ble with this fil-tra-tion
-, in the sense that it de-fines a map $\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95
- ; \OMS/cmsy/m/n/10.95 g [] [] O\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 G[]\OT1
-/cmr/m/n/10.95 [[\OML/cmm/m/it/10.95 z[]\OT1/cmr/m/n/10.95 ]][]) \OMS/cmsy/m/n/
-10.95 
-
- []
-
-
-Overfull \hbox (19.47748pt too wide) in paragraph at lines 1278--1279
-\OT1/cmr/m/n/10.95 of the Pois-son struc-ture on $\OMS/cmsy/m/n/10.95 O\OT1/cmr
-/m/n/10.95 (\OML/cmm/m/it/10.95 G[]\OT1/cmr/m/n/10.95 [[\OML/cmm/m/it/10.95 z[]
-\OT1/cmr/m/n/10.95 ]])$ co-in-cides with the Pois-son bracket on $\OMS/cmsy/m/n
-/10.95 O\OT1/cmr/m/n/10.95 ([][]([][]\OML/cmm/m/it/10.95 ; D; ![]\OT1/cmr/m/n/1
-0.95 ))$. 
- []
-
-[38] [39] [40]
-Underfull \vbox (badness 1221) has occurred while \output is active []
-
- [41]
+<xymatrix 3x2 292> [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41]
 [42]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1455.
+(hyperref)                removing `math shift' on input line 1469.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1455.
+(hyperref)                removing `math shift' on input line 1469.
 
-[43] [44] [45] [46] (./Mult_Hitchin_11_18_draft.bbl [47]
+[43] [44] [45] [46] [47] (./Mult_Hitchin_11_18_draft.bbl [48]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48]
+ [49]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [49])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1828.
+ [50])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1842.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [50]
 [51]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1828.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1842.
  (./Mult_Hitchin_11_18_draft.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1828.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1828.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1842.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1842.
 
 Package rerunfilecheck Info: File `Mult_Hitchin_11_18_draft.out' has not change
 d.
 (rerunfilecheck)             Checksum: 55B447B45B39A269225ADE6B1A0BB077;2165.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1828.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1842.
  ) 
 Here is how much of TeX's memory you used:
- 10161 strings out of 494910
- 137307 string characters out of 6179835
- 280052 words of memory out of 5000000
+ 10162 strings out of 494910
+ 137322 string characters out of 6179835
+ 280054 words of memory out of 5000000
  12836 multiletter control sequences out of 15000+600000
  19016 words of font info for 75 fonts, out of 8000000 for 9000
  197 hyphenation exceptions out of 8191
@@ -679,10 +632,10 @@ ls/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbol
 s/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
 /msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xypic/xycmat10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on Mult_Hitchin_11_18_draft.pdf (51 pages, 597245 bytes).
+Output written on Mult_Hitchin_11_18_draft.pdf (51 pages, 598794 bytes).
 PDF statistics:
- 1023 PDF objects out of 1200 (max. 8388607)
- 931 compressed objects within 10 object streams
- 318 named destinations out of 1000 (max. 500000)
+ 1026 PDF objects out of 1200 (max. 8388607)
+ 934 compressed objects within 10 object streams
+ 319 named destinations out of 1000 (max. 500000)
  225 words of extra memory for PDF output out of 10000 (max. 10000000)
 
