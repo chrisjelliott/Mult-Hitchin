@@ -1056,8 +1056,8 @@ In order to describe the multiplicative Hitchin section, let us use a framing th
         a_0d_0 + b_0^2  = m^2 .
     \end{equation*}
 The multiplicative Hitchin section lies within the locus where $d_0=0$, i.e. to the pair of lines $b_0 = \pm m$ inside our quadric surface.  The fixed framing at infinity picks out the line $b_0 = m$, or the locus of matrices of the form 
-\[g(z) = \begin{pmatrix} \frac{z-a_0}{z-m} & -1 \\ 1 & 0\end{pmatrix}.\]
-In Poisson coordinates $a,b$ as above, the multiplicative Hitchin section is equivalent to the Lagrangian line $a = \pm m$: a section of the projection map onto the space $\CC^\times$ on which $b$ is a coordinate.     
+\[g(z) = \begin{pmatrix} \frac{a_0}{z-m} & -1 \\ 1 & 0\end{pmatrix}.\]
+In Poisson coordinates $a,b$ as above, the multiplicative Hitchin section is equivalent to the Lagrangian line $a = m$: a section of the projection map onto the space $\CC^\times$ on which $b$ is a coordinate.     
 \end{remark}
 
 More general explicit cases of $\mhiggs^\fr_G(C)$ with parametrization by Darboux coordinates for $C = \bb{CP}^1$ and $G=\GL_n$ case are discussed in \cite{FrassekPestun}.
@@ -1393,7 +1393,23 @@ We say that $g(z)$ has \emph{$q$-generalized eigenvalues} $y(z) \in T[[z^{-1}]]$
 
 This idea appeared previously in \cite{NekrasovPestun, NekrasovPestunShatashvili}.  For example, in the undeformed case, the generalized eigenvalues have a very geometric meaning: they are equivalent to a sequence of algebraic functions defining the cameral cover at a point $t(z)$ in the Hitchin base.  To see this, it's easiest to use a slightly different representation of the multiplicative Hitchin section, packaging the singularity datum in a more uniform way. 
 
-Choose a point $b(z)$ in the multiplicative Hitchin base $B(D,\omega^\vee)$. By clearing denominators, we can identify $b(z)$ with a canonical polynomial $t(z)$ in $T[z]$ of fixed degree, with fixed top degree term. \chris{...}
+Choose a point $b(z)$ in the multiplicative Hitchin base $B(D,\omega^\vee)$. By clearing denominators, we can identify $b(z)$ with a canonical polynomial $t(z)$ in $T[z]$ of fixed degree $d$, with fixed top degree term.  Specifically, one finds
+\[d_i = \sum_{z_j \in D} \omega^\vee_{z_j}(\lambda_i)\]
+where $\lambda_i$ is the $i^\text{th}$ fundamental weight.  We'll denote the locus of polynomials of this form by $T[z]_d$.
+
+We define an embedding from $T[z]_d$ into $G[[z^{-1}]]$ as follows.  First, we encode the data of the coloured divisor $(D, \omega^\vee)$ in terms of a $T$-valued polynomial.  That is, we set 
+\[p_i(z) = \prod_{z_j \in D} (z-z_j)^{\omega^\vee_{z_j}(\lambda_j)}.\]
+\begin{definition}
+The \emph{$p$-twisted multiplicative Hitchin section} is the image of the map $\sigma' \colon T[z]_d \to G[[z^{-1}]]$ defined by
+\begin{equation}
+\label{eq:steinberg}
+\sigma'(t(z)) = \prod_{i=1}^r \exp\left(t_{i}(z) e_i\right) \sigma_i p_i(z)^{\omega^\vee_i}
+\end{equation}
+where $\omega^\vee_i$ is the $i^\text{th}$ fundamental coweight.
+\end{definition}
+
+One can define the $q$-triangularization of a point in this $p$-twisted section exactly as in the ordinary case.
+\chris{Make sense of the connection between the two definitions.}
  
 \chris{further motivation, then definition of the $q$-character.  We're in the rational case, so I think the definition we want is the one first appearing due to Knight \cite{Knight}}
 \begin{definition}
@@ -1472,7 +1488,7 @@ and that indeed coincides with the expression for the $q$-characters for the $A_
 
 One approach to proving Conjecture \ref{qchar_conjecture} would be to follow the following algorithm.
 \begin{enumerate}
-\item \chris{todo: edit for consistency} There exists $U_{+}$ gauge transformation 
+\item \chris{todo: edit for compatibility} There exists $U_{+}$ gauge transformation 
 where $u_{i,z}$ are Laurent polynomials in $y_{i,q^{\mathbb{Z}} z}$
 and $p_{i, q^{\mathbb{Z}} z}$ to a $q$-triangularized element of $G[[z^{-1}]]$.
 
@@ -1515,7 +1531,7 @@ The quasi-diagonalized $T$-form of the $q$-connection has apparent singularities
 
 
  \begin{remark}
-The paper \cite{KoroteevSageZeitlin} contains a proof of specialization of the main theorem of this section to the case of $G = \SL_n$ \chris{if we're in adjoint type shouldn't it be $\mr{PSL}_n$ instead?} with a special form of the coloured divisor $(D,\omega^\vee)$ where the $T$-valued polynomials $p(z)$ encoding their positions and orders can be effectively presented as the ratio of Drinfeld polynomials shifted by $\eps$, so that effectively $p_{i,z} = d_{i}(z)/d_{i}(z - \eps)$.  This special form for the singularity datum means that the Yangian module obtained by quantization of the symplectic leaf $\mhiggs_G(C,D)$ contains (as a quotient) the finite-dimensional Drinfeld module specified by the Drinfeld polynomials $d_{i,z}$. In the language of quiver gauge theory, this specialization is known as 4d to 2d specialization \cite{ChenDoreyHollowoodLee, DoreyHollowoodLee}. This specialization leads to the Bethe ansatz equations with finite dimensional representations of Yangians and finite number of Bethe roots. 
+The paper \cite{KoroteevSageZeitlin} contains a proof of the specialization of the main conjecture of this section to the case of $G = \SL_n$ \chris{if we're in adjoint type shouldn't it be $\mr{PSL}_n$ instead?} with a special form of the coloured divisor $(D,\omega^\vee)$ where the $T$-valued polynomials $p(z)$ encoding their positions and orders can be effectively presented as the ratio of Drinfeld polynomials shifted by $\eps$, so that effectively $p_{i,z} = d_{i}(z)/d_{i}(z - \eps)$.  This special form for the singularity datum means that the Yangian module obtained by quantization of the symplectic leaf $\mhiggs_G(C,D)$ contains (as a quotient) the finite-dimensional Drinfeld module specified by the Drinfeld polynomials $d_{i,z}$. In the language of quiver gauge theory, this specialization is known as 4d to 2d specialization \cite{ChenDoreyHollowoodLee, DoreyHollowoodLee}. This specialization leads to the Bethe ansatz equations with finite dimensional representations of Yangians and finite number of Bethe roots. 
 \end{remark}
 
 \begin{remark}
