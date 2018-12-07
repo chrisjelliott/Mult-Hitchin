@@ -1364,9 +1364,9 @@ could we write down explicitly q-oper for the GL2 that we added to this manuscri
 
 \section{$q$-Opers and $q$-Characters}
 
-In this section we will discuss the space of $q$-Opers in more depth.  In particular we will connect the geometric setup described in this paper, in terms of multiplicative Higgs bundles, to the gauge theoretic story studied by the second author and collaborators \cite{NekrasovPestunShatashvili,Kimura:2015rgi,Nekrasov:2015wsu}.  The main goal of this subsection will be to describe and motivate a connection between $q$-Opers and the $q$-character maps from the theory of quantum groups.  In order to make our statements as concrete as possible it will be useful to first describe the Steinberg section of a semisimple group explicitly.
+In this final section we will discuss the space of $q$-Opers in more depth.  In particular we will connect the geometric setup described in this paper, in terms of multiplicative Higgs bundles, to the gauge theoretic story studied by the second author and collaborators \cite{NekrasovPestunShatashvili,Kimura:2015rgi,Nekrasov:2015wsu}.  The main goal of this subsection will be to describe and motivate a connection between $q$-Opers and the $q$-character maps from the theory of quantum groups.  In order to make our statements as concrete as possible it will be useful to first describe the Steinberg section of a semisimple group explicitly.
 
-Throughout this section, assume that $G$ is a simple simply-laced Lie group of adjoint type with Lie algebra $\gg$.  Let $\Delta = \{\alpha_1, \ldots, \alpha_r\}$ be the set of simple roots of $\gg$.  In order to define the Steinberg section uniquely we'll fix a \emph{pinning} on $G$.  That is, choose a Borel subgroup $B \sub G$ with maximal torus $T$ and unipotent radical $U$, and choose a generator $e_i$ for each simple root space $\gg_{\alpha_i}$.
+Throughout this section, assume that $G$ is a simple, simply-laced and simply-connected Lie group with Lie algebra $\gg$.  Let $\Delta = \{\alpha_1, \ldots, \alpha_r\}$ be the set of simple roots of $\gg$.  In order to define the Steinberg section uniquely we'll fix a \emph{pinning} on $G$.  That is, choose a Borel subgroup $B \sub G$ with maximal torus $T$ and unipotent radical $U$, and choose a generator $e_i$ for each simple root space $\gg_{\alpha_i}$.
 
 We'll also choose an element $\sigma_i \in N(T)$ in the normalizer of $T$ representing each element of the Weyl group $W = N(T)/T$.  The Steinberg section will be independent of this choice up to conjugation by a unique element of $T$, and independent of the ordering on the set of simple roots.
 
@@ -1376,7 +1376,7 @@ The \emph{Steinberg section} of $G$ associated to a choice of pinning is the ima
 Steinberg proved \cite[Theorem 1.4]{Steinberg} that, after restriction to the regular locus in $G$, the map $\sigma$ defines a section of the Chevalley map $\chi \colon G \to T/W$.
 \end{definition}
 
-\begin{definition}
+\begin{definition} \label{mhitch_section_def}
 Fix a coloured divisor $(D,\omega^\vee)$ The \emph{multiplicative Hitchin section} of the map $\pi \colon \mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee) \to \mc B(D,\omega^\vee)$ is the image $\mhitch^\fr_G(\bb{CP}^1, D, \omega^\vee)$ of the map defined by post-composing a meromorphic $T/W$-valued function on $\bb{CP}^1$ with the Steinberg map $\sigma$.
 \end{definition}
 
@@ -1398,29 +1398,33 @@ Choose a point $b(z)$ in the multiplicative Hitchin base $B(D,\omega^\vee)$. By 
 where $\lambda_i$ is the $i^\text{th}$ fundamental weight.  We'll denote the locus of polynomials of this form by $T[z]_d$.
 
 We define an embedding from $T[z]_d$ into $G[[z^{-1}]]$ as follows.  First, we encode the data of the coloured divisor $(D, \omega^\vee)$ in terms of a $T$-valued polynomial.  That is, we set 
-\[p_i(z) = \prod_{z_j \in D} (z-z_j)^{\omega^\vee_{z_j}(\lambda_j)}.\]
+\[p_i(z) = \prod_{z_j \in D} (z-z_j)^{\omega^\vee_{z_j}(\omega_j)}\]
+where $\omega_j$ is the $j^{\text{th}}$ fundamental weight.
+
 \begin{definition}
 The \emph{$p$-twisted multiplicative Hitchin section} is the image of the map $\sigma' \colon T[z]_d \to G[[z^{-1}]]$ defined by
 \begin{equation}
 \label{eq:steinberg}
-\sigma'(t(z)) = \prod_{i=1}^r \exp\left(t_{i}(z) e_i\right) \sigma_i p_i(z)^{\omega^\vee_i}
+\sigma'(t(z)) = \prod_{i=1}^r \exp\left(t_{i}(z) e_i\right) \sigma_i p_i(z)^{-\omega^\vee_i}
 \end{equation}
 where $\omega^\vee_i$ is the $i^\text{th}$ fundamental coweight.
 \end{definition}
 
 One can define the $q$-triangularization of a point in this $p$-twisted section exactly as in the ordinary case.
-\chris{Make sense of the connection between the two definitions.}
+
+Now, how does this definition relate to Definition \ref{mhitch_section_def}?  
+\chris{Make sense of the connection between the two definitions.  Is it as simple as multiplying by $(p_i(z)^{-\omega^\vee_i})$ viewed as an element of $T[[z^{-1}]]$?}
  
 \chris{further motivation, then definition of the $q$-character.  We're in the rational case, so I think the definition we want is the one first appearing due to Knight \cite{Knight}}
 \begin{definition}
 The \emph{$q$-character} associated to \chris{...} is the map
-\[\chi_q \colon \]
+\[\chi_q \colon G[[z^{-1}]] \to T[[z]]\]
 \chris{... generated by the Weyl action?  Merge with the below:}
 
 Then quiver gauge theory $q$-characters are generated by the iWeil reflections of the form
  \cite{NekrasovPestun,NekrasovPestunShatashvili,Nekrasov:2015wsu} (we follow conventions of \cite{Kimura:2015rgi} for shifts)
 \begin{equation}
-  y_{i,z} \mapsto    (y_{i, z q^{-1}}^{-1} \prod_{e: i \to j} y_{j, z} \prod_{e: j\to i} y_{j,q^{-1} z})  p_{i, q^{-1} z}
+  w \cdot_q y_i(z)) = y_{i}(z q^{-1})^{-1} \Bigg(\prod_{e: i \to j} y_j(z) \Bigg) \Bigg(\prod_{e: j\to i} y_j(q^{-1} z)\Bigg)  p_{i}( q^{-1} z).
 \end{equation}
 \end{definition}
 
@@ -1450,11 +1454,9 @@ We would like to triangularize this to obtain a matrix of the form
     1 & y^{-1} 
   \end{pmatrix}.
 \end{equation*}
-First, let $q=1$.  It's easy to solve the equation $g^t = ug^y u^{-1}$ explicitly.  One finds a solution with $t = y + y^{-1}$, after conjugation by the element $u = - y^{-1}$.  As the conjecture tells us to expect, $t$ is identified with a Weyl invariant polynomial in $\mathbb{C}[y, y^{-1}]$ which starts from the highest weight monomial $y$. 
+It's easy to solve the equation $g^t = u(q^{-1}z)g^y(z) u^{-1}(z)$ explicitly.  One finds a solution with $t(z) = y(z) + y(q^{-1}z)^{-1}$, after conjugation by the element $u(z) = - y(z)^{-1}$.  As the conjecture tells us to expect, $t(z)$ is identified with a $q$-twisted Weyl invariant polynomial in $\mathbb{C}[y, y^{-1}]$ which starts from the highest weight monomial $y(z)$. 
 
-For general $q$, \chris{todo, but need to decide whether to write additively or multiplicatively.}
-
- \item We can also make concrete calculations for type $A_2$.  For more direct comparison with the formulae in the literature we'll use the alternative formulation discussed above involving polynomials $p_i(z)$ encoding the singularity datum $(D, \omega^\vee)$.  We label positive roots as $\alpha_1, \alpha_2$ and $\alpha_3:=\alpha_1 + \alpha_2$ and parametrize a $U[[z^{-1}]]$-valued
+ \item We can also make concrete calculations for type $A_2$.  For more direct comparison with the formulae in the literature we'll use the $p$-twisted formulation discussed above involving polynomials $p_i(z)$ encoding the singularity datum $(D, \omega^\vee)$.  We label positive roots as $\alpha_1, \alpha_2$ and $\alpha_3:=\alpha_1 + \alpha_2$ and parametrize a $U[[z^{-1}]]$-valued
   gauge transformation $u(z)$ the by collection of functions  
  $(u_{i}(z))_{\alpha_i  \in \Delta^{+}}$ 
   \begin{equation}
