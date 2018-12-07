@@ -13,45 +13,45 @@ Warning--empty journal in KapustinHolo
 Warning--empty journal in PestunStringMath
 Warning--there's a number but no volume in Shapiro
 Warning--there's a number but no volume in Steinberg
-You've used 90 entries,
+You've used 91 entries,
             2543 wiz_defined-function locations,
-            1130 strings with 18337 characters,
-and the built_in function-call counts, 34298 in all, are:
-= -- 3525
-> -- 1423
-< -- 62
-+ -- 470
-- -- 454
-* -- 2476
-:= -- 5614
-add.period$ -- 282
-call.type$ -- 90
-change.case$ -- 517
-chr.to.int$ -- 86
-cite$ -- 100
-duplicate$ -- 1417
-empty$ -- 2539
-format.name$ -- 582
-if$ -- 6964
+            1137 strings with 18462 characters,
+and the built_in function-call counts, 34654 in all, are:
+= -- 3563
+> -- 1431
+< -- 63
++ -- 472
+- -- 456
+* -- 2503
+:= -- 5670
+add.period$ -- 285
+call.type$ -- 91
+change.case$ -- 522
+chr.to.int$ -- 87
+cite$ -- 101
+duplicate$ -- 1432
+empty$ -- 2569
+format.name$ -- 586
+if$ -- 7036
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 94
-newline$ -- 455
-num.names$ -- 270
-pop$ -- 427
+missing$ -- 95
+newline$ -- 460
+num.names$ -- 273
+pop$ -- 430
 preamble$ -- 1
-purify$ -- 615
+purify$ -- 621
 quote$ -- 0
-skip$ -- 1158
+skip$ -- 1169
 stack$ -- 0
-substring$ -- 2057
-swap$ -- 198
-text.length$ -- 62
-text.prefix$ -- 39
+substring$ -- 2089
+swap$ -- 199
+text.length$ -- 63
+text.prefix$ -- 40
 top$ -- 0
-type$ -- 696
+type$ -- 704
 warning$ -- 10
-while$ -- 351
-width$ -- 94
-write$ -- 1165
+while$ -- 355
+width$ -- 95
+write$ -- 1178
 (There were 10 warnings)

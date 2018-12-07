@@ -1,0 +1,52 @@
+\begin{thebibliography}{CDHL11}
+
+\bibitem[CDHL11]{ChenDoreyHollowoodLee}
+Heng-Yu Chen, Nick Dorey, Timothy~J. Hollowood, and Sungjay Lee.
+\newblock A new 2d/4d duality via integrability.
+\newblock {\em J. High Energy Phys.}, (9):040, 16, 2011.
+
+\bibitem[DLH11]{DoreyHollowoodLee}
+Nick Dorey, Sungjay Lee, and Timothy~J. Hollowood.
+\newblock Quantization of integrable systems and a 2d/4d duality.
+\newblock {\em J. High Energy Phys.}, (10):077, 42, 2011.
+
+\bibitem[Kni95]{Knight}
+Harold Knight.
+\newblock Spectra of tensor products of finite-dimensional representations of
+  {Y}angians.
+\newblock {\em J. Algebra}, 174(1):187--196, 1995.
+
+\bibitem[KP18]{Kimura:2015rgi}
+Taro Kimura and Vasily Pestun.
+\newblock Quiver {W}-algebras.
+\newblock {\em Letters in Mathematical Physics}, 108(6):1351--1381, 2018.
+
+\bibitem[KSZ18]{KoroteevSageZeitlin}
+Peter Koroteev, Daniel Sage, and Anton Zeitlin.
+\newblock {$(\SL(N), q)$}-opers, the {$q$}-{L}anglands correspondence, and
+  quantum/classical duality.
+\newblock {\em arXiv preprint arXiv:1811.09937}, 2018.
+
+\bibitem[Nek16]{Nekrasov:2015wsu}
+Nikita Nekrasov.
+\newblock {BPS/CFT} correspondence: non-perturbative {D}yson-{S}chwinger
+  equations and {$qq$}-characters.
+\newblock {\em Journal of High Energy Physics}, 2016(3):181, 2016.
+
+\bibitem[NP12]{NekrasovPestun}
+Nikita Nekrasov and Vasily Pestun.
+\newblock {Seiberg-Witten} geometry of four dimensional {$\mathcal N= 2$}
+  quiver gauge theories.
+\newblock {\em arXiv preprint arXiv:1211.2240}, 2012.
+
+\bibitem[NPS18]{NekrasovPestunShatashvili}
+Nikita Nekrasov, Vasily Pestun, and Samson Shatashvili.
+\newblock Quantum geometry and quiver gauge theories.
+\newblock {\em Comm. Math. Phys.}, 357(2):519--567, 2018.
+
+\bibitem[Ste65]{Steinberg}
+Robert Steinberg.
+\newblock Regular elements of semisimple algebraic groups.
+\newblock {\em Inst. Hautes \'{E}tudes Sci. Publ. Math.}, (25):49--80, 1965.
+
+\end{thebibliography}

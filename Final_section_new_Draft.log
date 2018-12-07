@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.17)  7 DEC 2018 17:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.17)  7 DEC 2018 16:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Mult_Hitchin_11_18_draft.tex
-(./Mult_Hitchin_11_18_draft.tex
+**Final_section_new_Draft.tex
+(./Final_section_new_Draft.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 5 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsart.cls
@@ -381,34 +381,31 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@layoutvoffset=\dimen159
 \Gm@dimlist=\toks33
 )
-(/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
-\CommentStream=\write4
-
-Excluding comment 'comment')
 \c@definition=\count123
- (./Mult_Hitchin_11_18_draft.aux)
-\openout1 = `Mult_Hitchin_11_18_draft.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Try loading font information for U+msa on input line 121.
+(./Final_section_new_Draft.aux)
+\openout1 = `Final_section_new_Draft.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Try loading font information for U+msa on input line 120.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 121.
+LaTeX Font Info:    Try loading font information for U+msb on input line 120.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -427,9 +424,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \makeMPintoPDFobject=\count129
 \everyMPtoPDFconversion=\toks35
 )
-Package xypdf Info: Line width: 0.43799pt on input line 121.
+Package xypdf Info: Line width: 0.43799pt on input line 120.
 \AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring OFF on input line 121.
+Package hyperref Info: Link coloring OFF on input line 120.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -438,13 +435,13 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count130
 )
-LaTeX Info: Redefining \ref on input line 121.
-LaTeX Info: Redefining \pageref on input line 121.
-LaTeX Info: Redefining \nameref on input line 121.
+LaTeX Info: Redefining \ref on input line 120.
+LaTeX Info: Redefining \pageref on input line 120.
+LaTeX Info: Redefining \nameref on input line 120.
 
-(./Mult_Hitchin_11_18_draft.out) (./Mult_Hitchin_11_18_draft.out)
-\@outlinefile=\write5
-\openout5 = `Mult_Hitchin_11_18_draft.out'.
+(./Final_section_new_Draft.out) (./Final_section_new_Draft.out)
+\@outlinefile=\write4
+\openout4 = `Final_section_new_Draft.out'.
 
 
 *geometry* driver: auto-detecting
@@ -482,180 +479,74 @@ LaTeX Info: Redefining \nameref on input line 121.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Class amsart Warning: Abstract should precede \maketitle in AMS document classe
-s; reported on input line 124.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 122.
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 125.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 122.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 122.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 122.
+
+LaTeX Font Info:    Try loading font information for U+euf on input line 126.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2]
-[3]
-Overfull \hbox (8.2233pt too wide) in paragraph at lines 240--241
-\OT1/cmr/m/n/10.95 the Pois-son struc-ture on $\OMS/cmsy/m/n/10.95 O\OT1/cmr/m/
-n/10.95 (\OML/cmm/m/it/10.95 G[]\OT1/cmr/m/n/10.95 [[\OML/cmm/m/it/10.95 z[]\OT
-1/cmr/m/n/10.95 ]])$ co-in-cides with the Pois-son bracket on $\OMS/cmsy/m/n/10
-.95 O\OT1/cmr/m/n/10.95 ([][]([][]\OML/cmm/m/it/10.95 ; D; ![]\OT1/cmr/m/n/10.9
-5 ))$. 
- []
+LaTeX Warning: Reference `GL2_example_section' on page 2 undefined on input lin
+e 172.
 
-[4]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 293.
+[2] (./Final_section_new_Draft.bbl [3])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
+ [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
+ (./Final_section_new_Draft.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 238.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
+Package rerunfilecheck Info: File `Final_section_new_Draft.out' has not changed
+.
+(rerunfilecheck)             Checksum: BA9900B5FEF2D2AF1A6A7DEACFB8265F;108.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 293.
+LaTeX Warning: There were undefined references.
 
-[5]
-Underfull \vbox (badness 4048) has occurred while \output is active []
-
- [6]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 328.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 328.
-
-[7] [8] [9] [10] <xymatrix 2x2 154> [11] [12] <xymatrix 4x4 533> [13] [14]
-[15] [16] [17] [18] [19] [20] <xymatrix 2x2 182> [21]
-Overfull \hbox (1.30017pt too wide) in paragraph at lines 736--738
-\OT1/cmr/m/n/10.95 where $[]([])$ acts si-mul-ta-ne-ously on $[]$ and on the ci
-r-cle $\OML/cmm/m/it/10.95 S[]$\OT1/cmr/m/n/10.95 , un-der the iden-ti-fi-ca-ti
-on $[][](\OML/cmm/m/it/10.95 E\OT1/cmr/m/n/10.95 ) =
- []
-
-[22] [23] [24] <xymatrix 3x1 98> [25] [26] [27]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 957.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 957.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 957.
-
-[28] [29]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1066.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1066.
-
-[30]
-Overfull \hbox (7.22888pt too wide) detected at line 1082
-\OML/cmm/m/it/10.95 !\OT1/cmr/m/n/10.95 ((\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10
-.95 []\OMS/cmsy/m/n/10.95 g\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95 f\OML/cmm
-/m/it/10.95 ^^L[]\OMS/cmsy/m/n/10.95 g\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ;
- \OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 []\OMS/cmsy/m/n/
-10.95 g\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 ^^L[]\OMS
-/cmsy/m/n/10.95 g\OT1/cmr/m/n/10.95 )) = [] []\OMS/cmsy/m/n/10.95 h\OML/cmm/m/i
-t/10.95 ^^Z[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 [] \OT1/cmr/m/n/10.95 + \
-OML/cmm/m/it/10.95 []\OT1/cmr/m/n/10.95 )\OMS/cmsy/m/n/10.95 j[]\OML/cmm/m/it/
-10.95 ; ^^Z[]\OT1/cmr/m/n/10.95 ([][])[](\OML/cmm/m/it/10.95 ^^L[]\OT1/cmr/m/n/
-10.95 )\OMS/cmsy/m/n/10.95 i ^^@ h\OML/cmm/m/it/10.95 ^^Z[]\OT1/cmr/m/n/10.95 (
-\OML/cmm/m/it/10.95 [] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 []\OT1/cmr/m/
-n/10.95 )\OMS/cmsy/m/n/10.95 j[]\OML/cmm/m/it/10.95 ; ^^Z[]\OT1/cmr/m/n/10.95 (
-[][])[](\OML/cmm/m/it/10.95 ^^L[]\OT1/cmr/m/n/10.95 )\OMS/cmsy/m/n/10.95 i\OML/
-cmm/m/it/10.95 ;
- []
-
-<xymatrix 3x2 292> [31]
-Underfull \vbox (badness 1205) has occurred while \output is active []
-
- [32]
-[33] [34] [35] [36] [37] [38] [39] [40] [41]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1365.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1365.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1365.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1365.
-
-[42] [43] [44]
-Overfull \hbox (7.23944pt too wide) in paragraph at lines 1507--1512
-[][]\OT1/cmr/bx/n/10.95 Remark 8.8. []\OT1/cmr/m/n/10.95 ([]Chris: todo, edit f
-or com-pat-i-bil-ity[]) The quasi-diagonalized $\OML/cmm/m/it/10.95 T$\OT1/cmr/
-m/n/10.95 -form of the $\OML/cmm/m/it/10.95 q$\OT1/cmr/m/n/10.95 -connection
- []
-
-[45] Excluding 'comment' comment. (./Mult_Hitchin_11_18_draft.bbl [46]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [47]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [48])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1997.
-
-[49]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1997.
- (./Mult_Hitchin_11_18_draft.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1997.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1997.
-
-Package rerunfilecheck Info: File `Mult_Hitchin_11_18_draft.out' has not change
-d.
-(rerunfilecheck)             Checksum: D6431D6A0AC1B45D0505D52808E695C1;1982.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1997.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 238.
  ) 
 Here is how much of TeX's memory you used:
- 10167 strings out of 494910
- 137504 string characters out of 6179835
- 279909 words of memory out of 5000000
- 12864 multiletter control sequences out of 15000+600000
- 17505 words of font info for 70 fonts, out of 8000000 for 9000
+ 9660 strings out of 494910
+ 130626 string characters out of 6179835
+ 270625 words of memory out of 5000000
+ 12635 multiletter control sequences out of 15000+600000
+ 14407 words of font info for 59 fonts, out of 8000000 for 9000
  197 hyphenation exceptions out of 8191
- 34i,19n,32p,3305b,541s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,8n,32p,3304b,502s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/s
-ymbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xypic/xycmat
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on Mult_Hitchin_11_18_draft.pdf (49 pages, 577853 bytes).
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Final_section_new_Draft.pdf (4 pages, 202962 bytes).
 PDF statistics:
- 971 PDF objects out of 1000 (max. 8388607)
- 883 compressed objects within 9 object streams
- 295 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 152 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
+ 31 named destinations out of 1000 (max. 500000)
+ 17 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -343,6 +343,12 @@ Anton Kapustin.
   operators, and {S}-duality.
 \newblock 2006.
 
+\bibitem[Kni95]{Knight}
+Harold Knight.
+\newblock Spectra of tensor products of finite-dimensional representations of
+  {Y}angians.
+\newblock {\em J. Algebra}, 174(1):187--196, 1995.
+
 \bibitem[Kon03]{KontsevichQuantization}
 Maxim Kontsevich.
 \newblock Deformation quantization of {Poisson} manifolds.
