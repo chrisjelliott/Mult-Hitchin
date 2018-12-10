@@ -66,6 +66,7 @@
 \newcommand{\SL}{\mathrm{SL}}
 \newcommand{\GL}{\mathrm{GL}}
 \newcommand{\SU}{\mathrm{SU}}
+\newcommand{\PGL}{\mathrm{PGL}}
 \newcommand{\spin}{\mathrm{Spin}}
 \newcommand{\Spin}{\mathrm{Spin}}
 \newcommand{\so}{\mathfrak{so}}
@@ -1397,16 +1398,16 @@ In this setup $q$ is the automorphism of the formal disk obtained by restricting
 
 These $q$-generalized eigenvalues appeared previously in \cite{NekrasovPestun, NekrasovPestunShatashvili}.  For example, in the undeformed case, the generalized eigenvalues have a very geometric meaning: they are equivalent to a sequence of algebraic functions defining the cameral cover at a point $t(z)$ in the Hitchin base.  To see this, it's easiest to use a slightly different representation of the multiplicative Hitchin section, packaging the singularity datum in a more uniform way. 
 
-Choose a point $b(z)$ in the multiplicative Hitchin base $B(D,\omega^\vee)$. By clearing denominators, we can identify $b(z)$ with a canonical polynomial $t(z)$ in $T[z]$ of fixed degree $d$, with fixed top degree term.  Specifically, one finds
+Choose a point $b(z)$ in the multiplicative Hitchin base $B(D,\omega^\vee)$. By clearing denominators, we can identify $b(z)$ with a canonical polynomial $t(z)$ in $T[z]/W$ of fixed degree $d$, with fixed top degree term.  Specifically, one finds
 \[d_i = \sum_{z_j \in D} \omega^\vee_{z_j}(\lambda_i)\]
 where $\lambda_i$ is the $i^\text{th}$ fundamental weight.  We'll denote the locus of polynomials of this form by $T[z]_d$.
 
-We define an embedding from $T[z]_d$ into $G[[z^{-1}]]$ as follows.  First, we encode the data of the coloured divisor $(D, \omega^\vee)$ in terms of a $T$-valued polynomial.  That is, we set 
+We define an embedding from $T[z]_d/W$ into $G[[z^{-1}]]$ as follows.  First, we encode the data of the coloured divisor $(D, \omega^\vee)$ in terms of a $T$-valued polynomial.  That is, we set 
 \[p_i(z) = \prod_{z_j \in D} (z-z_j)^{\omega^\vee_{z_j}(\omega_j)}\]
 where $\omega_j$ is the $j^{\text{th}}$ fundamental weight.
 
 \begin{definition}
-The \emph{$p$-twisted multiplicative Hitchin section} is the image of the map $\sigma' \colon T[z]_d \to G[[z^{-1}]]$ defined by
+The \emph{$p$-twisted multiplicative Hitchin section} is the image of the map $\sigma' \colon T[z]_d/W \to G[[z^{-1}]]$ defined by
 \begin{equation}
 \label{eq:steinberg}
 \sigma'(t(z)) = \prod_{i=1}^r \exp\left(t_{i}(z) e_i\right) \sigma_i p_i(z)^{-\omega^\vee_i}
@@ -1419,12 +1420,14 @@ One can define the $q$-triangularization of a point in this $p$-twisted section 
 Now, how does this definition relate to Definition \ref{mhitch_section_def}?  
 \chris{Make sense of the connection between the two definitions.  Is it as simple as multiplying by $(p_i(z)^{-\omega^\vee_i})$ viewed as an element of $T[[z^{-1}]]$?}
 
-We can now see where the cameral cover appears.  The cameral cover associated to a point $b(z)$ in the multiplicative Hitchin base is, to put it briefly, obtained away from the singular locus as the fiber product $\mc C_b^\circ = (\bb{CP}^1_z \bs D) \times_{T/W} T$, where the map $\bb{CP}^1_z \bs D \to T/W$ is the meromorphic map corresponding to $b(z)$.  In other words, the closed points of $\mc C_b$ are simply pairs $(z_0, t_0) \in (\bb{CP}^1 \bs D) \times T$ such that $b(z_0) = [t_0]$ in $T/W$.  One can obtain the cameral curve as the graph of a meromorphic function $\bb{CP}^1 \to T$ by ``averaging'' the function $b$ over the Weyl group orbits.  In other words, consider the $W$-action on the space of  \chris{todo, complete}
+We can now see where the cameral cover appears.  The cameral cover associated to a point $b(z)$ in the multiplicative Hitchin base is, to put it briefly, obtained away from the singular locus as the fiber product $\mc C_b^\circ = (\bb{CP}^1_z \bs D) \times_{T/W} T$, where the map $\bb{CP}^1_z \bs D \to T/W$ is the meromorphic map corresponding to $b(z)$.  In other words, the closed points of $\mc C^\circ_b$ are simply pairs $(z_0, t_0) \in (\bb{CP}^1 \bs D) \times T$ such that $b(z_0) = [t_0]$ in $T/W$.  One can obtain the cameral curve as the graph of a meromorphic function $\bb{CP}^1 \to T$ by ``averaging'' the function $b$ over the Weyl group orbits.  That is, on a contractible local patch in the complement of the ramification locus define $t(z)$ to be the sum of the $|W|$ distinct lifts of $b(z)$ to $T$-valued functions, times $1/|W|$ -- these glue to form a global $T$-valued function on the curve $\bb{CP}^1_z \bs D$.
+
+The result is, in particular, and after restricting to a formal neighbourhood of $\infty$, a map from $T[z]_d/W$ to $T[[z^{-1}]]$.  We claim this map -- constructing the defining equations for the cameral curve from a point in the multiplicative Hitchin base -- is inverse \chris{up to an affine transformation} to the map sending the multiplicative Hitchin section to its set of generalized eigenvalues. \chris{Maybe this motivational story should come after the conjecture instead.  The idea is going to be that if we start with the $y$ coordinates and map to the $t$'s, that means projecting down to the base then applying the section, so it's the character map.  The expectation is that this holds after $q$-deformation as well.}
  
-\chris{further motivation, then definition of the $q$-character.  We're in the rational case, so I think the definition we want is the one first appearing due to Knight \cite{Knight}}
+\chris{further motivation, then definition of the $q$-character.  We're in the rational case, so I think the definition we want is the one first appearing due to Knight \cite[Definition 1]{Knight}, which is a map from the ring of finite-dimensional representations of the Yangian, e.g. given by Drinfeld polynomials, to $T_1[[z^{-1}]]$.}
 \begin{definition}
 The \emph{$q$-character} associated to \chris{...} is the map
-\[\chi_q \colon G[[z^{-1}]] \to T[[z]]\]
+\[\chi_q \colon G[[z^{-1}]] \to T_1[[z^{-1}]]/W\]
 \chris{... generated by the Weyl action?  Actually I don't know what the correct source and target are.  Merge with the below:}
 
 Then quiver gauge theory $q$-characters are generated by the iWeil reflections of the form
@@ -1442,7 +1445,7 @@ Generalizing this story, after $q$-deformation, we conjecture the following surp
 \[E \colon \mc B(D,\omega^\vee) \to T[[z^{-1}]] \sub G[[z^{-1}]]\]
 given by applying the multiplicative Hitchin section then computing its generalized eigenvalues.  
 
-\item The composite $\chi_q \circ E \colon \mc B(D,\omega^\vee) \to T[[z^{-1}]]/W$ is an affine map whose image coincides with the image of the restriction map $r_\infty \colon \mc B(D,\omega^\vee) \to T_1[[z^{-1}]]$.
+\item The composite $\chi_q \circ E \colon \mc B(D,\omega^\vee) \to T_1[[z^{-1}]]/W$ is an affine map whose image coincides with the image of the restriction map $r_\infty \colon \mc B(D,\omega^\vee) \to T_1[[z^{-1}]]/W$.
 \end{enumerate}
 \end{conjecture}
 
@@ -1467,7 +1470,7 @@ We would like to triangularize this to obtain a matrix of the form
 It's easy to solve the equation $g^t = u(q^{-1}z)g^y(z) u^{-1}(z)$ explicitly.  One finds a solution with $t(z) = y(z) + y(q^{-1}z)^{-1}$, after conjugation by the element $u(z) = - y(z)^{-1}$.  As the conjecture tells us to expect, $t(z)$ is identified with a $q$-twisted Weyl invariant polynomial in $\mathbb{C}[y, y^{-1}]$ which starts from the highest weight monomial $y(z)$. 
 
  \item We can also make concrete calculations for type $A_2$.  For more direct comparison with the formulae in the literature we'll use the $p$-twisted formulation discussed above involving polynomials $p_i(z)$ encoding the singularity datum $(D, \omega^\vee)$.  We label positive roots as $\alpha_1, \alpha_2$ and $\alpha_3:=\alpha_1 + \alpha_2$ and parametrize a $U[[z^{-1}]]$-valued
-  gauge transformation $u(z)$ the by collection of functions  
+  gauge transformation $u(z)$ by the collection of functions  
  $(u_{i}(z))_{\alpha_i  \in \Delta^{+}}$ 
   \begin{equation}
     u(z) = \prod_{3,2,1} \exp( u_{i}(z) e_{\alpha_i})
@@ -1500,8 +1503,8 @@ and that indeed coincides with the expression for the $q$-characters for the $A_
 
 One approach to proving Conjecture \ref{qchar_conjecture} would be to follow the following algorithm.
 \begin{enumerate}
-\item \chris{todo: edit for compatibility} There exists $U_{+}$ gauge transformation 
-where $u_{i,z}$ are Laurent polynomials in $y_{i,q^{\mathbb{Z}} z}$
+\item \chris{todo: edit for compatibility} There exists a $U[[t^{-1}]]$-valued gauge transformation 
+where $u_{i}(z)$ are Laurent polynomials in $y_{i,q^{\mathbb{Z}} z}$
 and $p_{i, q^{\mathbb{Z}} z}$ to a $q$-triangularized element of $G[[z^{-1}]]$.
 
 \item The $t_{i,z}$ are Laurent polynomials in $y_{i,q^{\mathbb{Z}} z}$
@@ -1534,35 +1537,28 @@ To complete a constructive proof of this form one could try to follow the algori
 \begin{remark}
 \chris{todo, edit for compatibility}
 The quasi-diagonalized $T$-form of the $q$-connection has apparent singularities (even away from the divisor $D$)  where the functions $y_{i}(z)$ have zeroes and poles.  However, these singularities are cancelled in pairs between the monomials
- related by the iWeyl reflections in $t_{i}(z)$.
- This property has been called regularity of the $q$-character in the quantum group representation theory literature\cite{FrenkelReshetikhin1,FrenkelReshetikhin2} and in the gauge theory construction 
+ related by the iWeyl reflections in $t_{i}(z)$.  This property has been called 11regularity of the $q$-character'' in the quantum group representation theory literature \cite{FrenkelReshetikhin1,FrenkelReshetikhin2} as well as in the gauge theoretic construction of
  \cite{NekrasovPestunShatashvili,Nekrasov:2015wsu,NekrasovPestun,Kimura:2015rgi}.
  
- The meromorphic functions $y_{i,z}$ can be expressed as ratios of the form $y_{i,z} = Q_{i,z}/Q_{i,q^{-1}z}$ \vasily{check $q^{-1} z$ vs $q z$}, and the zeroes of the $Q$ functions are known as \emph{Bethe roots} in the context of the Bethe ansatz equations.  In this language, the Bethe ansatz equations are precisely the equations which ensures that  that poles in $t_{i,z}$ are cancelled. 
+ The meromorphic functions $y_{i}(z)$ can be expressed as ratios of the form $y_{i}(z) = Q_{i}(z)/Q_i(q^{-1}z)$ \vasily{check $q^{-1} z$ vs $q z$}, and the zeroes of the functions denoted $Q_i$ are known as \emph{Bethe roots} in the context of the Bethe ansatz equations.  In this language, the Bethe ansatz equations are precisely the equations which ensures that poles in $t_{i}(z)$ are cancelled. 
 \end{remark}
 
-
  \begin{remark}
-The paper \cite{KoroteevSageZeitlin} contains a proof of the specialization of the main conjecture of this section to the case of $G = \SL_n$ \chris{if we're in adjoint type shouldn't it be $\mr{PSL}_n$ instead?} with a special form of the coloured divisor $(D,\omega^\vee)$ where the $T$-valued polynomials $p(z)$ encoding their positions and orders can be effectively presented as the ratio of Drinfeld polynomials shifted by $\eps$, so that effectively $p_{i,z} = d_{i}(z)/d_{i}(z - \eps)$.  This special form for the singularity datum means that the Yangian module obtained by quantization of the symplectic leaf $\mhiggs_G(C,D)$ contains (as a quotient) the finite-dimensional Drinfeld module specified by the Drinfeld polynomials $d_{i,z}$. In the language of quiver gauge theory, this specialization is known as 4d to 2d specialization \cite{ChenDoreyHollowoodLee, DoreyHollowoodLee}. This specialization leads to the Bethe ansatz equations with finite dimensional representations of Yangians and finite number of Bethe roots. 
+The paper \cite{KoroteevSageZeitlin} contains a proof of the specialization of the main conjecture of this section to the case of $G = \SL_n$ \chris{if we're in adjoint type shouldn't it be $\mr{PGL}_n$ instead?} with a special form of the coloured divisor $(D,\omega^\vee)$ where the $T$-valued polynomials $p(z)$ encoding their positions and orders can be effectively presented as the ratio of Drinfeld polynomials shifted by $\eps$, so that effectively $p_{i,z} = d_{i}(z)/d_{i}(z - \eps)$.  This special form for the singularity datum means that the Yangian module obtained by quantization of the symplectic leaf $\mhiggs_G(C,D)$ contains (as a quotient) the finite-dimensional Drinfeld module specified by the Drinfeld polynomials $d_{i,z}$. In the language of quiver gauge theory, this specialization is known as 4d to 2d specialization \cite{ChenDoreyHollowoodLee, DoreyHollowoodLee}. This specialization leads to the Bethe ansatz equations with finite dimensional representations of Yangians and finite number of Bethe roots. 
 \end{remark}
 
 \begin{remark}
-\chris{todo: edit for compatibility} One can now try to test the consistency
-  of the conjecture \ref{eq:classical-q-langlands} as follows.
-  Take $G = \SL_2$ (simply-connected form)
-  and $G^\vee = \mr{PSL}_2$ (adjoint-form).
-
-  In particular, we claim that under the equivalent of \ref{eq:classical-q-langlands} :
+\chris{todo: edit for compatibility.  I'm actually pretty confused about this remark, for a few reasons.  One is that the base is stacky (with $W$ action whereas the opers are not.} One can now try to test the consistency
+  of the conjecture \ref{eq:classical-q-langlands} in a simple example as follows \chris{as we stated it didn't we assume the group was self-dual?}.  Take $G$ to be the group $\SL_2$ (simply-connected form), with Langlands dual group $G^\vee = \mr{PGL}_2$ (adjoint-form).  In particular, we claim that under the equivalent of \ref{eq:classical-q-langlands} we have an isomorphism of affine schemes:
 
 ( the spectrum $B_{G}$  of the ring of commuting Hamiltonians
   of the integrable system $\mhiggs_{G}$ (this commuting ring
   is generated by the  fundamental character $\mathrm{tr}_{R_{\omega_1}} g(z)$ for $g \in G$  where $R_{\omega_1}$ is 2-dimensional $SL_2$ representation,
   the spectrum $B_{G}$ is the base of the integrable system $\mhiggs_{G}$) ) 
   
-
 {  \center{ is isomorphic to}}
 
-(  the oper for $\check G = PSL_2$  (adjoint form) which is also nicely
+(  the oper for $\check G = \PGL_2$  (adjoint form) which is also nicely
 parametrized 
 by $t(z) = y + y^{-1}$ ) 
 \end{remark}
