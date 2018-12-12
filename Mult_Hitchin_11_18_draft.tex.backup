@@ -247,6 +247,30 @@ From this point of view it's natural to try to understand how our moduli spaces 
 The article \cite{GKLO}, as well as its generalizations such as the work of Kamnitzer, Webster, Weekes and Yacobi \cite{KWWY}, view these $Y(\gg)$-modules as quantizing certain moduli spaces of monopoles on $\RR^3$, and not of monopoles on $\RR^2 \times S^1$.  These two points of view are expected to be related by a version of the Nahm transform, as we'll discuss in Example \ref{Nahm_example} below.  In brief, by considering appropriate dual limits of the moduli space of instantons on a 4-torus one obtains either the moduli space of periodic monopoles in the rational case, or the moduli space of monopoles on $\RR^3$ (perhaps with certain restrictions as in the work of Finkelberg, Kuznetsov and Rybnikov on trigonometric Zastava spaces \cite{FKR}).
 \end{remark}
 
+\vasily{Chris, I am not sure I can agree with this suggestion that
+  the two pictures are related by Nahm transform. The Nahm transform
+  would swap the gauge group rank and the degree of the divisor.
+  I think that instead we have  naive  direct asymptotical relation by sending
+the radius $R$ of our vertical circle to infinity.  Assume that we consider the case that
+  corresponds to he mHiggs field regular at infinity.
+  In this case we have trivial asymptotics of monopole fields on $\mathbb{C} \times S^1_{R}$ at infinity. The hyperKahler metric on moduli space
+  of monopoles on $\mathbb{C} \times S^1_{R}$ does depend on $R$. But,
+  as we discussed, the holomorphic sympletic structure at twistor parameter
+  $\zeta = 0$  does not depend on $R$. Therefore, let us send $R$ to infinity, but keep all Dirac singularities located at the same finite value of $t$.
+  In this case, the monopole fields far away in vertical direction $t$ would
+  approach the same trivial asymptotics like if the vertical circle $S^1_{R}$ is cut at $t \to \pi R$ and $ t \to -\pi R$. 
+  The monopole solutions on $\mathbb{C}$ times infinite circle $S^1$ would
+  match exactly the solutions on $\mathbb{C}$ times $\mathbb{R}$
+  with trivial boundary conditions at inifinity. If you agree, perhaps you could rewrite this statement in a bit more precise way? }
+
+
+  
+  
+
+
+  
+
+
 \subsection{Moduli Spaces in Supersymmetric Gauge Theory} \label{intro_gauge_section}
 Having discussed three points of view on our moduli space in geometric representation theory, let us move on to explain some of the ways in which multiplicative Higgs bundles / periodic monopoles arise naturally in the world of supersymmetric gauge theory.  Firstly, these moduli spaces appeared in work of the second author, Nekrasov and Shatashvili \cite{NekrasovPestun, NekrasovPestunShatashvili} concerning the Seiberg-Witten integrable systems of 4d $\mc N=2$ ADE quiver gauge theories.  Let $\gg$ be a simple Lie algebra of ADE type.  One can define an $\mc N=2$ superconformal 4d gauge theory modelled on the Dynkin diagram of $\gg$.  To define this theory one must specify masses $m_{i,j}$ for fundamental hypermultiplets associated to the vertices of the Dynkin diagram, so $i = 1,\ldots,r$ varies over the vertices of the Dynkin diagram and $j=1, \ldots,w_i$ is an index parameterizing the number of hypermultiplets at each vertex.  Let us assume we're in the generic situation, where the masses are all distinct.
 
@@ -321,7 +345,7 @@ In Section \ref{quantization_section} we discuss the quantization of our moduli 
 
 Finally, in Section \ref{qchar_section} we discuss the relationship between the multiplicative analogue of the space of opers and the $q$-character, motivated by the origin of the multiplicative Hitchin system in quiver gauge theory.
 
-The preliminary results of this work were announced by the second author at String-Math 2017 \cite{PestunStringMath}, and presented at the Berkeley String-Math seminar (November 27, 2017) and the ETH Z\"urich Mathematical Physics Seminar (November 7, 2017).  They were also presented by the first author at the University of Edinburgh Geometry Seminar (April 18, 2018), the Northeastern University Geometry, Physics, and Representation Theory Seminar (November 15, 2018) and the Yale University Geometry, Symmetry and Physics Seminar (November 26, 2018). \chris{Is it normal to include all of this information about presentations?  I haven't seen it included before beyond the initial announcement and would propose that we remove everything other than the String-Math announcement unless there's a reason to include it.}
+The preliminary results of this work were announced by the second author at String-Math 2017 \cite{PestunStringMath}.
 
 \subsection{Acknowledgements}
 We would like to thank David Jordan, Davide Gaiotto, Dennis Gaitsgory, Nikita Nekrasov, Kevin Costello and especially Pavel Safronov for helpful conversations about this work. The calculation of twists of 5d and 6d supersymmetric gauge theories was performed independently by Dylan Butson, and we would like to thank him for sharing his forthcoming manuscript. CE would like to thank the Perimeter Institute for Theoretical Physics for supporting research on this project. Research at Perimeter Institute is supported by the Government of Canada through Industry Canada and by the Province of Ontario through the Ministry of Economic Development \& Innovation. We acknowledge the support of IH\'ES.  This project has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (QUASIFT grant agreement 677368).
@@ -491,6 +515,11 @@ The Donagi-Gaitsgory fiber is, according to the main theorem of \cite{DonagiGait
 \begin{remark} \label{q_opers_remark}
 Like in the case of the ordinary Hitchin system, the multiplicative Hitchin system admits a canonical Hitchin section.  One can construct this section using the Steinberg section (the multiplicative analogue of the Kostant section) \cite{Steinberg}.  This is a section of the map $G/G \to T/W$, canonical after choosing a Borel subgroup $B$ with maximal torus $T$ and a basis vector for each simple root space.  The \emph{multiplicative Hitchin section} is the map $\sigma \colon \mc B(C,D,\omega^\vee) \to \mhiggs_G(C,D,\omega^\vee)$ defined by post-composition with the Steinberg section.  One can use this section to define the moduli space of \emph{$q$-opers} for the group $G$ and the curve $\bb{CP}^1$ with its framing at infinity.  We'll discuss the hyperk\"ahler structure on the moduli space of multiplicative Higgs bundles in Section \ref{hyperkahler_section}.  In particular we'll show that when one rotates to $q$ in the twistor sphere one obtains the moduli space of $q$-connections on $\bb{CP}^1$.  The moduli space of $q$-opers is defined to be the Hitchin section, but viewed as a subspace of $\qconn^{\fr}_G(\bb{CP}^1,D,\omega^\vee)$.  For a more detailed discussion of the multiplicative Hitchin section and $q$-opers see Section \ref{qchar_section}. 
 \end{remark}
+
+\vasily{Chris, do we have Steinberg section for arbitrary reductive $G$?
+  Or to construct Steinberg section we need to assume more about $G$, like
+  asking $G$ to be simple, asking anything about $\pi_1(G)$ or  center of $G$, and so on? } 
+
 
 \subsection{Stability Conditions}
 For comparison to results in the literature it is important that we briefly discuss the role of stability conditions for difference connections.  In our main example of interest -- the rational case -- these conditions won't play a role, but they do appear in the comparison results between $q$-connections and monopoles in the literature for more general curves.  For definitions for general $G$ we refer to \cite{Smith}, although see also \cite{AnchoucheBiswas} on polystable $G$-bundles.  In what follows we fix a choice of $0 < t_0 < 2\pi R$.
@@ -740,6 +769,23 @@ Let $G$ and $G^\vee$ be Langlands dual simple Lie groups, and say that $G$ arose
 where $\mr{Out}(\wt G)$ acts simultaneously on $\wt G$ and on the circle $S^1_B$, under the identification $\mhiggs_{\wt G}(E) = \bun_{\wt G}(E \times S^1_B)$.  As above, this equivalence should be compatible with the Fourier-Mukai transform relating the categories for the maximal tori.
 \end{conjecture}
 
+\vasily{Chris, now I am very worried about this conjecture to have
+  a potential to be correct in principe as stated. If we introduce singularities
+  with $\check G$-coweight colored divisor on the left, what in principle
+  could it correspond on the right? 
+  Assuming simply laced case, if we take $\check G = PSL(2)$, the left side
+  could be decorated by the divisor valued in the minimal fundamental
+  co-weights of $PSL(2)$ which are isomorphic to the minimal
+  weights of $G = SL(2)$ of the 2-dimensional defining representation of $SL(2)$
+  . How these singularities could be encoded on the $\tilde G$ right side?
+  The co-weight lattice of $SL(2)$ is weight lattice of $PSL(2)$, and
+  the minimal non-zero weights for $PSL(2)$ there are twice as large
+  as minimal weigths for $SL(2)$, so there is no room to insert such small
+  singularity on the right... Any ideas how to improve. Or, perhaps we could try minimal explicit example of $SL(2)$ and try to compute explicitly the
+  dual firation along the same base, and see with what
+  kind of mHiggs we could identify the dual fibration. is?}
+
+
 \section{Periodic Monopoles} \label{periodic_monopole_section}
 Moduli spaces of $q$-connections on a Riemann surface $C$ are closely related to moduli spaces of periodic monopoles, i.e. monopoles on 3-manifolds that fiber over the circle (more specifically, with fiber $C$ and monodromy determined by $q$).  Let $G_\RR$ be a compact Lie group whose complexification is $G$.  The discussion in this section will mostly follow that of \cite{CharbonneauHurtubise, Smith}.
 
@@ -964,7 +1010,7 @@ Fix $G=\GL_2$.  We'll work in the rational case, so we'll work over the curve $C
 Consider the connected component of $\mhiggs^\fr_{G}(\bb{CP}^1, D, \omega^{\vee})$ consisting of those multiplicative Higgs bundles whose underlying $G$-bundle is trivializable.  Fixing the framing fixes a trivialization of the underlying $G$-bundle, which means this connected component of the moduli space can be identified with the space of $G$-valued
 rational functions $g(z)$ on $\CC$ with certain singularity conditions that we can write down explicitly.
 
-As our first explicit example we will consider the moduli space with two singularities at distinct points the points $z_1$ and $z_2$ in $\CC$.  Fix the corresponding coweights to be the generators $\omega^\vee_{z_1} = (1,0)$ and $\omega^\vee_{z_2} = (0,-1)$ in the defining basis of the coweight lattice of $\GL_2$.  We'll denote the zero connected component in the moduli space of multiplicative Higgs bundles by $\mc M(z_1,z_2)$.
+As our first explicit example we will consider the moduli space with two singularities at distinct points $z_1$ and $z_2$ in $\CC$.  Fix the corresponding coweights to be the generators $\omega^\vee_{z_1} = (1,0)$ and $\omega^\vee_{z_2} = (0,-1)$ in the defining basis of the coweight lattice of $\GL_2$.  We'll denote the zero connected component in the moduli space of multiplicative Higgs bundles by $\mc M(z_1,z_2)$.
  
 The zero connected component of our moduli space  $\mhiggs_{G}^\fr(C, D, \omega^{\vee})$ can then be identified with the space of functions $g(z)$ valued in $2 \times 2$ matrices 
    \begin{equation*}
@@ -1005,6 +1051,8 @@ for an element $(a_0, b_0, c_0, d_0) \in \CC^4$ such that
  (a_\infty z - a_0)( d_\infty z - d_0) -   (b_\infty z - b_0)(c_\infty z -c_0) =
      (z - z_1)(z- z_2) (a_\infty d_\infty - b_\infty c_\infty).
    \end{equation*}
+   \vasily{Somewhere subscripts $1,2$ vs $0,1$ are interchanged for $z$}
+
    The above equation translates into the system of a linear
    equation and a quadric equation on $(a_0, b_0, c_0, d_0) \in \CC^4$, so our moduli space is encoded by the following complex affine variety:
    \begin{multline*}
@@ -1425,8 +1473,8 @@ The \emph{$q$-character} associated to \chris{...} is the map
 \[\chi_q \colon G[[z^{-1}]] \to T_1[[z^{-1}]]/W\]
 \chris{... generated by the Weyl action?  Actually I don't know what the correct source and target are.  Merge with the below:}
 
-Then quiver gauge theory $q$-characters are generated by the iWeil reflections of the form
- \cite{NekrasovPestun,NekrasovPestunShatashvili,Nekrasov:2015wsu} (we follow conventions of \cite{Kimura:2015rgi} for shifts)
+Then quiver gauge theory $q$-characters are generated by the Weyl reflections of the form
+ \cite{NekrasovPestun,NekrasovPestunShatashvili,Nekrasov:2015wsu} (following the conventions from \cite{Kimura:2015rgi} for shifts)
 \begin{equation}
   w \cdot_q y_i(z)) = y_{i}(z q^{-1})^{-1} \Bigg(\prod_{e: i \to j} y_j(z) \Bigg) \Bigg(\prod_{e: j\to i} y_j(q^{-1} z)\Bigg)  p_{i}( q^{-1} z).
   \label{iWeyl_action}
@@ -1499,31 +1547,15 @@ and that indeed coincides with the expression for the $q$-characters for the $A_
 
 One approach to proving Conjecture \ref{qchar_conjecture} would be to follow the following algorithm.
 \begin{enumerate}
-\item \chris{todo: edit for compatibility} There exists a $U[[t^{-1}]]$-valued gauge transformation whose coefficients are Laurent polynomials in $y_{i}(q^{\mathbb{Z}} z)$ and $p_{i}(q^{\mathbb{Z}}z)$ sending a $q$-triangularized element of $G[[z^{-1}]]$.
+\item Choose an element $b$ of $B_-[[z^{-1}]]$ with generalized eigenvalues $y_i(z)$. There exists an element $u$ of $U[[z^{-1}]]$ whose coefficients are Laurent polynomials in $y_{i}(q^{\mathbb{Z}} z)$ and $p_{i}(q^{\mathbb{Z}}z)$, so that $t(z) = u(q^{-1}z)b(z)u(z)^{-1}$ lies in the multiplicative Hitchin section.
 
-\item The $t_{i,z}$ are Laurent polynomials in $y_{i,q^{\mathbb{Z}} z}$
-and $p_{i, q^{\mathbb{Z}} z}$.
+\item The non-trivial coefficients $t_i(z)$ of $t(z)$ are themselves Laurent polynomials in $y_{i}(q^{\mathbb{Z}} z)$
+and $p_{i}(q^{\mathbb{Z}} z)$ with highest order term $y_i(z)$.
 
-\item The Laurent polynomial $t_{i,z}$  in $y_{i,q^{\mathbb{Z}} z}$
-and $p_{i, q^{\mathbb{Z}} z}$ starts from the highest weight monomial $y_{i,z}$, i.e. 
+\item Finally, we need to verify the key property of the $q$-character.  That is, the Laurent polynomial $t_{i}(z)$ is invariant under the $q$-shifted $p$-shifted Weyl group action (in \cite{NekrasovPestun} this was called the iWeyl action).  More specifically, $t_{i}(z)$ must be invariant under the transformation
 \begin{equation*}
-  t_{i,z} = y_{i,z} + \dots 
-\end{equation*}
-
-\item And the key property of being q-character:
-the Laurent polynomial $t_{i,z}$ in  $y_{i,q^{\mathbb{Z}} z}$
-and $p_{i, q^{\mathbb{Z}} z}$ is invariant under $q$-shifted $p$-shifted Weyl group action (iWeyl): for every monomial that contains as
-a factor, say $y_{i,q^{a} z}$, there is also
-another monomial obtained as image of the iWeyl action
-\begin{equation*}
-    y_{i,z} \mapsto    (y_{i, z q^{-1}}^{-1} \prod_{e: i \to j} y_{j, z} \prod_{e: j\to i} y_{j,q^{-1} z})  p_{i, q^{-1} z} 
+    y_{i}(z) \mapsto y_{i}(q^{-1}z)^{-1} \Bigg(\prod_{e: i \to j} y_j(z) \Bigg)\Bigg(\prod_{e: j\to i} y_j(q^{-1} z)\Bigg)  p_i(q^{-1} z).
   \end{equation*}
-e.g. the second monomial in the $q$-character is always like 
-  \begin{equation*}
-  t_{i,z} = y_{i,z} + (y_{i, z q^{-1}}^{-1} \prod_{e: i \to j} y_{j, z} \prod_{e: j\to i} y_{j,q^{-1} z})  p_{i, q^{-1} z}  + \dots 
-  \end{equation*}
-and so on...
-  
 \end{enumerate}
 
 To complete a constructive proof of this form one could try to follow the algorithm appearing in \cite[Page 11-12]{STSSevostyanov},   see also \cite{Sevostyanov1}.  One would need to modify this proof by a twist that introduces the required singularity datum.

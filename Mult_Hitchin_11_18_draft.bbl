@@ -424,6 +424,12 @@ Vasily Pestun.
 \newblock Lecture, String-Math, Hamburg, 28 July 2017,
   \url{https://stringmath2017.desy.de/sites/sites_conferences/site_stringmath2017/content/e45470/e56510/e56567/SM-Pestun.pdf}.
 
+\bibitem[Pop11]{Popov}
+Vladimir Popov.
+\newblock Cross-sections, quotients, and representation rings of semisimple
+  algebraic groups.
+\newblock {\em Transform. Groups}, 16(3):827--856, 2011.
+
 \bibitem[PR01]{PolishchukRothstein}
 Alexander Polishchuk and Mitchell Rothstein.
 \newblock Fourier transform for {$D$}-algebras, {I}.
