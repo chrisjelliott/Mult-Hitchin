@@ -424,6 +424,12 @@ Vasily Pestun.
 \newblock Lecture, String-Math, Hamburg, 28 July 2017,
   \url{https://stringmath2017.desy.de/sites/sites_conferences/site_stringmath2017/content/e45470/e56510/e56567/SM-Pestun.pdf}.
 
+\bibitem[Pop11]{Popov}
+Vladimir Popov.
+\newblock Cross-sections, quotients, and representation rings of semisimple
+  algebraic groups.
+\newblock {\em Transform. Groups}, 16(3):827--856, 2011.
+
 \bibitem[PR01]{PolishchukRothstein}
 Alexander Polishchuk and Mitchell Rothstein.
 \newblock Fourier transform for {$D$}-algebras, {I}.
@@ -446,12 +452,6 @@ Jacques Sauloy.
 \newblock In {\em Th\'{e}ories asymptotiques et \'{e}quations de
   {P}ainlev\'{e}}, volume~14 of {\em S\'{e}min. Congr.}, pages 249--280. Soc.
   Math. France, Paris, 2006.
-
-\bibitem[Sev02]{Sevostyanov1}
-Alexei Sevostyanov.
-\newblock Drinfeld-{S}okolov reduction for quantum groups and deformations of
-  {$W$}-algebras.
-\newblock {\em Selecta Math. (N.S.)}, 8(4):637--703, 2002.
 
 \bibitem[Sev11]{Sevostyanov}
 Alexey Sevostyanov.
