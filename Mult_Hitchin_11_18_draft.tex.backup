@@ -1429,13 +1429,10 @@ meromorphic function $\bb{CP}^1 \to T$ by
 taking all images $y$ under the projection $T \to T/W$, $y \mapsto [y]$ where elements of $T$ are
 coordinatized as  $\prod_{i = 1}^{r} y_i^{\alpha_i^{\vee}}$ where $\alpha_i^{\vee}$ are simple coroots.
 Then, on a contractible local patch in the complement of the ramification locus define $t_i(z)$ to be the sum 
-\[t_i(z) = \sum_{\wt b} \omega_i(\wt b(z)),\]
-where the sum is over all local lifts of the $T/W$-valued function $b(z)$, and where $\omega_i \colon T \to \mathbb{C}^{\times}$ is the $u^\text{th}$ fundamental weight. Because of the $W$-invariance, for each $i$ these local descriptions glue together to define a global $\mathbb{C}$-valued function on the curve $\bb{CP}^1_z \bs D$.
-
-\vasily{I have updated the above paragraph, but now we need to fix the below paragraph}
+\[t_i(z) = \sum_{y \text{ over } b} \omega_i(y(z)),\]
+where the sum is over all local lifts $y$ of the $T/W$-valued function $b(z)$, and where $\omega_i \colon T \to \mathbb{C}^{\times}$ is the $u^\text{th}$ fundamental weight. Because of the $W$-invariance, for each $i$ these local descriptions glue together to define a global $\mathbb{C}$-valued function on the curve $\bb{CP}^1_z \bs D$.
 
 
-The result is, in particular, and after restricting to a formal neighbourhood of $\infty$, a map from $T[z]_d/W$ to $T[[z^{-1}]]$.  We claim this map -- constructing the defining equations for the cameral curve from a point in the multiplicative Hitchin base -- is inverse (potentially up to an affine transformation) to the map sending the multiplicative Hitchin section to its set of generalized eigenvalues.  More generally, the averaging procedure still makes sense after $q$-deformation, yielding a ``$q$-cameral curve''.  We conjecture the following surprising relationship between the space of $q$-opers (or, rather, the multiplicative Hitchin section with the $q$-deformed adjoint action) and the $q$-character.
  
 \begin{conjecture} \label{qchar_conjecture}
 \begin{enumerate}
@@ -1498,6 +1495,8 @@ which implies in turn that
 \end{equation*}
 and that indeed coincides with the expression for the $q$-characters for the $A_2$ quiver appearing in
 \cite{Nekrasov:2015wsu,NekrasovPestunShatashvili,NekrasovPestun,Kimura:2015rgi}.
+
+\item The first example for which the condition that the composite map in Conjecture \ref{qchar_conjecture} is a non-trivial affine isomorphism occurs for the $D_4$ Dynkin diagram, for instance for the group $G = \SO(8)$.  In that case, even for $q=1$ we find the composite $E^* \circ \chi$ is not quite the identity, but rather than map sending $(t_1,t_2,t_3,t_4)$ to $(t_1,t_2+1,t_3,t_4)$.  One sees this by considering the $G$-modules associated to irreducible finite-dimensional highest weight modules of the Yangian $Y(\gg)$ in the limit $q \to 1$: the module induced in this way from the fundamental weight $\omega_2$ splits, and includes a trivial irreducible summand. \chris{add a reference?}
 \end{enumerate}
 \end{examples}
 
