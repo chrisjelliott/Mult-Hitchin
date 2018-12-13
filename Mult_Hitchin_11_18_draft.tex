@@ -5,7 +5,7 @@
 \usepackage[all, cmtip]{xy}
 \usepackage[pdftex, bookmarks=true, linkbordercolor={0 0 1}]{hyperref}
 \usepackage[margin=1in]{geometry}
-\usepackage{comment}
+\usepackage[titletoc,title]{appendix}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{11pt}
@@ -123,7 +123,7 @@
 
 \maketitle 
 \begin{abstract}
-Multiplicative Hitchin systems are analogues of Hitchin's integrable system based on moduli spaces of $G$-Higgs bundles on a curve $C$ where the Higgs field is group-valued, rather than Lie algebra valued.  We discuss the relationship between several occurences of these moduli spaces in geometry and supersymmetric gauge theory with a particular focus on the case where $C = \bb{CP}^1$ with a fixed framing at infinity.  In this case we prove that the identification between multiplicative Higgs bundles and periodic monopoles proved by Charbonneau and Hurtubise can be promoted to an equivalence of hyperk\"ahler spaces, and analyze the twistor rotation for the multiplicative Hitchin system.  We also discuss quantization of these moduli spaces, yielding the modules for the Yangian $Y(\gg)$ discovered by Gerasimov, Kharchev, Lebedev and Oblezin.
+Multiplicative Hitchin systems are analogues of Hitchin's integrable system based on moduli spaces of $G$-Higgs bundles on a curve $C$ where the Higgs field is group-valued, rather than Lie algebra valued.  We discuss the relationship between several occurences of these moduli spaces in geometry and supersymmetric gauge theory, with a particular focus on the case where $C = \bb{CP}^1$ with a fixed framing at infinity.  In this case we prove that the identification between multiplicative Higgs bundles and periodic monopoles proved by Charbonneau and Hurtubise can be promoted to an equivalence of hyperk\"ahler spaces, and analyze the twistor rotation for the multiplicative Hitchin system.  We also discuss quantization of these moduli spaces, yielding the modules for the Yangian $Y(\gg)$ discovered by Gerasimov, Kharchev, Lebedev and Oblezin.
 \end{abstract}
 
 \section{Introduction}
@@ -133,9 +133,6 @@ In this paper, we will compare five different perspectives an a single moduli sp
 Let us begin by presenting these five perspectives, before explaining their inter-relationships.  Let $C$ be a Riemann surface, and let $G$ be a reductive complex Lie group.
 
 
-%\begin{enumerate}
-
-% \item 
 \subsection{Multiplicative Higgs Bundles}
 We'll first describe the moduli space that motivates the
 ``multiplicative Hitchin system'' terminology.  Say that a
@@ -179,12 +176,11 @@ coweight $\omega^\vee_{z_i}$ at each puncture $z_i$.
  \end{theorem}
 
 \subsection{Moduli Space of Monopoles}
-%\item Consider now another, a priori different, representation-theoretic moduli space.  Let $M$ be a Riemannian 3-manifold, and let $G_\RR$ be a compact connected Lie group.  The moduli space of \emph{$G_\RR$-monopoles} on $M$ is the moduli space of triples $(P,A,\Phi)$, consisting of a smooth principal $G_\RR$-bundle $P$ equipped with a connection $A$ and a section $\Phi$ of the associated bundle $\gg_{P}$, together satisfying the \emph{Bogomolny equation}: $\ast F_A = \d_A \Phi$. 
 
 If we focus on the example where real three-dimensional Riemannian
 manifold $M = C \times S^1$ splits as the product of a compact Riemann
 surface and a circle, for the rational case $C = \CC$ the moduli space
-of monopoles on $M$ was studied in by Cherkis and Kapustin
+of monopoles on $M$ was studied by Cherkis and Kapustin
 \cite{CherkisKapustin1,CherkisKapustin2,CherkisKapustin3} from the
 perspective of the Coulomb branch of vacua of 4d $\mathcal{N}=2$
 supersymmetric gauge theory. For general $C$ the moduli space of
@@ -214,11 +210,6 @@ The morphism $H$,  discussed first by Cherkis and Kapustin in \cite{CherkisKapus
 defines the value of the multiplicative Higgs field at $z \in C$ to be equal to
 the holonomy of the monopole connection (complexified by the scalar field) along the fiber circle $\{z\} \times S^{1} \subset M$.
 
-
-
-
-
-
 One of our main goals in this paper is to compare -- in the rational case -- the symplectic structure on the moduli space of multiplicative Higgs fields analogous to the symplectic structure defined by Hurtubise and Markman in the elliptic case, and the hyperk\"ahler structure on the moduli space of periodic monopoles, defined by realizing the moduli space of periodic monopoles as a hyperk\"ahler quotient.  We prove that they coincide.
 
 \begin{theorem}[See Theorem \ref{symplectic_comparison_thm}]
@@ -232,7 +223,6 @@ One of our main goals in this paper is to compare -- in the rational case -- the
 
 In particular, the symplectic structure on the multiplicative Higgs moduli space extends to a hyperk\"ahler structure, as we discussed in point 1 above.
 
-%\item 
 \subsection{Poisson-Lie Groups}
 The third perspective that we'll consider connects our moduli spaces directly to the theory of Poisson Lie groups and Lie bialgebras, and leads to an interesting connection to quantum groups upon quantization.  By the \emph{rational Poisson Lie group} we'll mean the group $G_1[[z^{-1}]]$ consisting of $G$-valued power series in $z^{-1}$ with constant term $1$.  More precisely this is an ind-algebraic group: it is expressed as a direct limit of algebraic varieties $G_1[[z^{-1}]]_n$ with an associative multiplication $G_1[[z^{-1}]]_m \times G_1[[z^{-1}]]_n \to G_1[[z^{-1}]]_{m+n}$.  The Poisson structure on this group can be thought of as coming from a Manin triple: specifically the triple $(G(\!(z^{-1})\!), G_1[[z^{-1}]], G[z])$, where $G(\!(z)\!)$ is equipped with the residue pairing (see Section \ref{quantization_section} for more details).  
 
@@ -289,7 +279,6 @@ instantons.  It would be interesting to study this elliptic Hitchin
 system in the full, singular setting.
 \end{remark}
 
-% \item
 \subsection{Multiplicative $q$-Geometric Langlands Correspondence}
 The final perspective we'll consider is perhaps the most interesting from our point of view, because it suggests that the categorical geometric Langlands conjecture of Beilinson and Drinfeld might admit a multiplicative analogue, built from the multiplicative Hitchin system instead of the ordinary Hitchin system.  Again, we'll describe a moduli space coming from supersymmetric gauge theory, but in a quite different setting to that of perspective 4 above.
 
@@ -302,7 +291,6 @@ where $T^*[1]X$ denotes the ``1-shifted cotangent space'' of $X$.
 \end{claimnum}
 
 This story leads us to a ``multiplicative'' analogue of the approach to geometric Langlands introduced by Kapustin and Witten \cite{KapustinWitten}.  When we take the radius of $S^1$ to zero we recover Kapustin's partially topological twist \cite{KapustinHolo} of 4d $\mc N=4$ super Yang-Mills, which degenerates to Kapustin-Witten's A- and B-topologically twisted theories.  By ``multiplicative geometric Langlands'' we mean a version of the geometric Langlands conjecture modelled on the multiplicative Hitchin system instead of the ordinary Hitchin system, where the radius of this circle is kept positive.  For more details on what this means, see Section \ref{Langlands_section}.
-%\end{enumerate}
 
 \begin{remark}[Derived geometry]
   We'll use the language of derived algebraic geometry in several places in this paper, mainly in Sections \ref{mhiggs_def_section} and \ref{twist_section}.  While we believe this perspective provides a clear way of thinking about the moduli spaces we're interested in studying, the derived language is not necessary when we state and prove the main results of this paper.  We hope that the majority of the paper is understandable without a derived geometry background.  There are several clear and references explaining the point of view of derived algebraic geometry, for instance the survey articles of To\"en \cite{ToenOverview,ToenSurvey}.  A comprehensive account of the theory of derived geometry can be found in the book of Gaitsgory and Rozenblyum \cite{GRvol1, GRvol2}.  We'll also refer a few times to the theory of shifted symplectic structures.  This theory was developed by Pantev, To\"en, Vaqui\'e and Vezzosi \cite{PTVV}, and we also recommend the explanations in \cite{Calaque}.  From the physical point of view, the ideas of derived geometry appear in classical field theory through the Batalin-Vilkovisky formalism, and through Pantev, To\"en, Vaqui\'e and Vezzosi's derived version of the AKSZ construction of symplectic structures on mapping spaces \cite{AKSZ}. 
@@ -1399,21 +1387,19 @@ In this setup $q$ is the automorphism of the formal disk obtained by restricting
 
 It's sometimes useful to use a slightly different representation of the multiplicative Hitchin section, packaging the singularity datum in a more uniform way. 
 
-Choose a point $b(z)$ in the multiplicative Hitchin base $B(D,\omega^\vee)$. By clearing denominators, we can identify $b(z)$ with a canonical polynomial $t(z)$ in $T[z]/W$ of fixed degree $d$, with fixed top degree term.  Specifically, one finds
+Choose a point $b(z)$ in the multiplicative Hitchin base $B(D,\omega^\vee)$. By clearing denominators, we can identify $b(z)$ with a canonical polynomial $t'(z)$ in $T[z]/W$ of fixed degree $d$, with fixed top degree term.  Specifically, one finds
 \[d_i = \sum_{z_j \in D} \omega^\vee_{z_j}(\lambda_i)\]
 where $\lambda_i$ is the $i^\text{th}$ fundamental weight.  We'll denote the locus of polynomials of this form by $T[z]_d$.
 
 We define an embedding from $T[z]_d/W$ into $G[[z^{-1}]]$ as follows.  First, we encode the data of the coloured divisor $(D, \omega^\vee)$ in terms of a $T$-valued polynomial.  That is, we set 
-\[p_i(z) = \prod_{z_j \in D} (z-z_j)^{\omega^\vee_{z_j}(\omega_j)}\]
+\[p_i(z) = \prod_{z_j \in D} (z-z_j)^{\omega^\vee_{z_j}(\omega_i)}\]
 where $\omega_j$ is the $j^{\text{th}}$ fundamental weight.
-
-\vasily{should it be $\omega_j \to \omega_{i}$ in the exponent?}
 
 \begin{definition}
 The \emph{$p$-twisted multiplicative Hitchin section} is the image of the map $\sigma' \colon T[z]_d/W \to G(z)$ defined by
 \begin{equation}
 \label{eq:steinberg}
-\sigma'(t(z)) = \prod_{i=1}^r \exp\left(t_{i}(z) e_i\right) \sigma_i p_i(z)^{-\omega^\vee_i}
+\sigma'(t(z)) = \prod_{i=1}^r \exp\left(t'_{i}(z) e_i\right) \sigma_i p_i(z)^{-\omega^\vee_i}
 \end{equation}
 where $\omega^\vee_i$ is the $i^\text{th}$ fundamental coweight.
 \end{definition}
@@ -1428,12 +1414,12 @@ The \emph{$q$-character} is an algebra homomorphism
 from the ring of finite-dimensional representations of the Yangian to the ring of functions on $T_1[[z^{-1}]]$, first defined by Knight \cite{Knight}.  Given a choice of singularity datum $(D,\omega^\vee)$ one can define a linear map $\mc B(D, \omega^\vee)^* \to \mr{Rep}(Y(\gg))$ generated by the map identifying a coordinate functional on the multiplicative Hitchin base space with the irreducible representation with the given highest weight.  We'll abusively also denote the composite map $\mc B(D, \omega^\vee)^* \to \OO(T_1[[z^{-1}]])$ by $\chi_q$.
 \end{definition}
 
-The  $p$-twisted fundamental $q$-characters $t_i(z)$ are obtained by recursive Weyl reflections of the form \cite{NekrasovPestun,NekrasovPestunShatashvili,Nekrasov:2015wsu} (following the conventions from \cite{Kimura:2015rgi} for shifts)
+The $p$-twisted fundamental $q$-characters $t'_i(z)$ are obtained by recursive Weyl reflections of the form \cite{NekrasovPestun,NekrasovPestunShatashvili,Nekrasov:2015wsu} (following the conventions from \cite{Kimura:2015rgi} for shifts)
 \begin{equation}
   w \cdot_q y_i(z)) = y_{i}(z q^{-1})^{-1} \Bigg(\prod_{e: i \to j} y_j(z) \Bigg) \Bigg(\prod_{e: j\to i} y_j(q^{-1} z)\Bigg)  p_{i}( q^{-1} z).
   \label{iWeyl_action}
 \end{equation}
-starting from the highest weight monomial $t_i(z) = y_i(z) +  w \cdot_q y_i(z)) + \dots $. 
+starting from the highest weight monomial $t'_i(z) = y_i(z) +  w \cdot_q y_i(z)) + \dots $. 
 
 These formulae appeared previously in \cite{NekrasovPestun, NekrasovPestunShatashvili} and
 should be interpreted as $p$-twisted version of the $q$-Weyl reflections of \cite{FrenkelReshetikhin2,FrenkelReshetikhinSTS,FrenkelReshetikhin1,Frenkel2001}.
@@ -1442,36 +1428,39 @@ In the undeformed case, the $y(z)$-functions have a very geometric meaning: they
 meromorphic function $\bb{CP}^1 \to T$ by
 taking all images $y$ under the projection $T \to T/W$, $y \mapsto [y]$ where elements of $T$ are
 coordinatized as  $\prod_{i = 1}^{r} y_i^{\alpha_i^{\vee}}$ where $\alpha_i^{\vee}$ are simple coroots.
-Then, on a contractible local patch in the complement of the ramification locus define $t_i(z)$ to be the sum of fundamental weight $\omega_i: T \to \mathbb{C}^{\times}$ evaluated on $W$-orbit of $b(z)$ lift
-to $T$-valued functions. Because of $W$-invariance such sum $t_i(z)$
-is a global $\mathbb{C}$-valued function on the curve $\bb{CP}^1_z \bs D$.
+Then, on a contractible local patch in the complement of the ramification locus define $t_i(z)$ to be the sum 
+\[t_i(z) = \sum_{y \text{ over } b} \omega_i(y(z)),\]
+where the sum is over all local lifts $y$ of the $T/W$-valued function $b(z)$, and where $\omega_i \colon T \to \mathbb{C}^{\times}$ is the $u^\text{th}$ fundamental weight. Because of the $W$-invariance, for each $i$ these local descriptions glue together to define a global $\mathbb{C}$-valued function on the curve $\bb{CP}^1_z \bs D$.
 
-\vasily{I have updated the above paragraph, but now we need to fix the below paragraph}
+In the classical limit $q=1$ the procedure of taking generalized eigenvalues and the character map are closely related, simply because the multiplicative Hitchin section is a section of the Hitchin fibration.  The character map, evaluated in the fundamental representations associated to the fundamental weights $\omega_1, \ldots, \omega_r$, is essentially the Chevalley map sending a matrix to its characteristic polynomial.  In other words it is essentially the multiplicative Hitchin fibration itself.  Therefore, we find that 
+\[\chi(t_i)(\sigma(b(z))) = t_i(z)\]
+up to an affine isomorphism.  The same holds when we replace $\sigma(b(z))$ by $y(z)$, its triangularization, because the maps $\chi(t_i)$ are adjoint-invariant.
 
-
-The result is, in particular, and after restricting to a formal neighbourhood of $\infty$, a map from $T[z]_d/W$ to $T[[z^{-1}]]$.  We claim this map -- constructing the defining equations for the cameral curve from a point in the multiplicative Hitchin base -- is inverse (potentially up to an affine transformation) to the map sending the multiplicative Hitchin section to its set of generalized eigenvalues.  More generally, the averaging procedure still makes sense after $q$-deformation, yielding a ``$q$-cameral curve''.  We conjecture the following surprising relationship between the space of $q$-opers (or, rather, the multiplicative Hitchin section with the $q$-deformed adjoint action) and the $q$-character.
+We conjecture that this relationship survives after $q$-deformation, yielding the following relationship between $q$-opers and the $q$-character.  This expectation is motivated in part by the multiplicative geometric Langlands Conjecture \ref{multLanglands} applied to the canonical coisotropic A-brane -- quantizing the ring of Poisson commuting functions on the multiplicative Hitchin system -- whose Langlands dual is expected to be precisely the brane of $q$-opers.
  
 \begin{conjecture} \label{qchar_conjecture}
 \begin{enumerate}
 \item For any $q$, every element of $g(z)$ of $\mhitch^\fr_G(\bb{CP}^1, D, \omega^\vee)$ has a unique $q$ generalized eigenvalue, and therefore there is a well-defined map
 \[E_q \colon \mc B(D,\omega^\vee) \to T[[z^{-1}]] \sub G[[z^{-1}]]\]
-given by applying the multiplicative Hitchin section then computing its $q$generalized eigenvalues.  
+given by applying the multiplicative Hitchin section then computing its $q$-generalized eigenvalues.  
 
 \item The composite $E_q^* \circ \chi_q \colon \mc B(D,\omega^\vee)^* \to \OO(\mc B(D,\omega^\vee))$ is an affine isomorphism onto the space of linear functionals $\mc B(D,\omega^\vee)^* \sub \OO(\mc B(D,\omega^\vee))$.
 \end{enumerate}
 \end{conjecture}
 
+Let's demonstrate this conjecture in a few examples.  In each case we'll describe the multiplicative Hitchin section, and then calculate an inverse to the map sending a point $t(z)$ in the base space $\mc B(D,\omega^\vee)$ to the corresponding generalized eigenvalue map for the Hitchin section $y(z)$.  If $y_i(t(z))$ is the $i^\text{th}$ $q$-generalized eigenvalue of the multiplicative Hitchin section, we must verify that $\chi_q(y_i(t)) = t_i$, the $i^\text{th}$ coordinate map (up to an affine isomorphism).
+
 \begin{examples}
 \begin{enumerate}
- \item In type $A_1$ we can calculate everything very explicitly.  We've already described the multiplicative Hitchin section in Section \ref{GL2_example_section}: it consists of matrices of the form
+ \item In type $A_1$ we can calculate everything very explicitly, and so verify the conjecture in this example.  We've already described the multiplicative Hitchin section in Section \ref{GL2_example_section}: for $G = \SL_2$, for instance, it consists of matrices of the form
 \begin{equation*}
   g^{t} =
   \begin{pmatrix}
     t   & - 1 \\
     1 & 0
-  \end{pmatrix}.
+  \end{pmatrix},
 \end{equation*}
-We would like to triangularize this to obtain a matrix of the form
+where $t$ is a rational function with fixed denominator of degree $d$, and arbitrary numerator of degree less than $d$.  We would like to triangularize this to obtain a matrix of the form
 \begin{equation*}
   g^{y} =
   \begin{pmatrix}
@@ -1479,37 +1468,39 @@ We would like to triangularize this to obtain a matrix of the form
     1 & y^{-1} 
   \end{pmatrix}.
 \end{equation*}
-It's easy to solve the equation $g^t = u(q^{-1}z)g^y(z) u^{-1}(z)$ explicitly.  One finds a solution with $t(z) = y(z) + y(q^{-1}z)^{-1}$, after conjugation by the element $u(z) = - y(z)^{-1}$.  As the conjecture tells us to expect, $t(z)$ is identified with a $q$-twisted Weyl invariant polynomial in $\mathbb{C}[y, y^{-1}]$ which starts from the highest weight monomial $y(z)$. 
+It's easy to solve the equation $g^t = u(q^{-1}z)g^y(z) u^{-1}(z)$ explicitly.  One finds a solution with $t(z) = y(z) + y(q^{-1}z)^{-1}$, after conjugation by the element $u(z) = - y(z)^{-1}$.  As the conjecture tells us to expect, $t(z)$ is identified with a $q$-twisted Weyl invariant polynomial in $\mathbb{C}[y, y^{-1}]$ which starts from the highest weight monomial $y(z)$.   This is enough to identify it with the $q$-character as required.
 
- \item We can also make concrete calculations for type $A_2$.  For more direct comparison with the formulae in the literature we'll use the $p$-twisted formulation discussed above involving polynomials $p_i(z)$ encoding the singularity datum $(D, \omega^\vee)$.  We label positive roots as $\alpha_1, \alpha_2$ and $\alpha_3:=\alpha_1 + \alpha_2$ and parametrize a $U[[z^{-1}]]$-valued
+ \item We can also make concrete calculations for type $A_2$, again verifying Conjecture \ref{qchar_conjecture}.  For more direct comparison with the formulae in the literature we'll use the $p$-twisted formulation discussed above involving polynomials $p_i(z)$ encoding the singularity datum $(D, \omega^\vee)$.  We label positive roots as $\alpha_1, \alpha_2$ and $\alpha_3:=\alpha_1 + \alpha_2$ and parametrize a $U[[z^{-1}]]$-valued
   gauge transformation $u(z)$ by the collection of functions  
  $(u_{i}(z))_{\alpha_i  \in \Delta^{+}}$ 
-  \begin{equation}
+  \begin{equation*}
     u(z) = \prod_{3,2,1} \exp( u_{i}(z) e_{\alpha_i})
-  \end{equation}
+  \end{equation*}
 Then solving the equation 
-\begin{equation}
+\begin{equation*}
 g^t(z) =  u(q^{-1} z)^{-1} g^y(z) u(z)
-\end{equation}
-for $u_{1}(z), u_{2}(z), u_{3}(z)$ and $t_{1}(z), t_{2}(z)$  we find that
+\end{equation*}
+for $u_{1}(z), u_{2}(z), u_{3}(z)$ and $t'_{1}(z), t'_{2}(z)$  we find that
 \begin{equation*}
 \begin{aligned}
 & u_{1}(z) = p_{1}(z) u_{2}(q^{-1} z)-p_{1}(z) y_{2}(z) y_{1}(z)^{-1} \\
 & u_{2}(z) =  -p_{2}(z) y_{2}(z)^{-1} \\
 & u_{3}(z) = -p_{1}(z) p_{2}(z) y_{1}(z)^{-1} \\
-& t_{1}(z) = y_{1}(z)-u_{1}(q^{-1}z) \\
-& t_{2}(z) = y_{2}(z) - y_{1}(z) u_{2}(q^{-1}z)-u_{3}(q^{-1}z) \\
+& t'_{1}(z) = y_{1}(z)-u_{1}(q^{-1}z) \\
+& t'_{2}(z) = y_{2}(z) - y_{1}(z) u_{2}(q^{-1}z)-u_{3}(q^{-1}z) \\
 \end{aligned}
 \end{equation*}
 which implies in turn that
 \begin{equation*}
   \begin{aligned}
-    t_{1}(z) =y_{1}(z)  +  \frac{p_{1}(q^{-1}z) y_{2}(q^{-1}z)}{y_{1}(q^{-1}z)} + \frac{p_{1}(q^{-1}z) p_{2}(q^{-2} z)}{ y_{2}(q^{-2} z)}\\
-    t_{2}(z) = y_{2}(z)  +\frac{y_{1}(z) p_{2}(q^{-1}z)}{y_{2}(q^{-1}z)}+   \frac{p_{1}(q^{-1}z) p_{2}(q^{-1}z)}{y_{1}(q^{-1}z)}
+    t'_{1}(z) =y_{1}(z)  +  \frac{p_{1}(q^{-1}z) y_{2}(q^{-1}z)}{y_{1}(q^{-1}z)} + \frac{p_{1}(q^{-1}z) p_{2}(q^{-2} z)}{ y_{2}(q^{-2} z)}\\
+    t'_{2}(z) = y_{2}(z)  +\frac{y_{1}(z) p_{2}(q^{-1}z)}{y_{2}(q^{-1}z)}+   \frac{p_{1}(q^{-1}z) p_{2}(q^{-1}z)}{y_{1}(q^{-1}z)}
   \end{aligned}
 \end{equation*}
 and that indeed coincides with the expression for the $q$-characters for the $A_2$ quiver appearing in
 \cite{Nekrasov:2015wsu,NekrasovPestunShatashvili,NekrasovPestun,Kimura:2015rgi}.
+
+\item The first example for which the condition that the composite map in Conjecture \ref{qchar_conjecture} is a non-trivial affine isomorphism occurs for the $D_4$ Dynkin diagram, for instance for the group $G = \SO(8)$.  In that case, even for $q=1$ we find the composite $E^* \circ \chi$, i.e. the result of applying the character map in the fundamental representations given by fundamental weights $(\omega_1, \omega_2,\omega_2,\omega_4)$ to the Steinberg section, is not quite the identity, but rather than map sending $(t_1,t_2,t_3,t_4)$ to $(t_1,t_2+1,t_3,t_4)$.  One sees this by considering the $G$-modules associated to irreducible finite-dimensional highest weight modules of the Yangian $Y(\gg)$ in the limit $q \to 1$: the 29-dimensional module induced in this way from the fundamental weight $\omega_2$ splits as the sum of the 28 dimensional adjoint representation associated to the fundamental weight $\omega_2$ and the trivial representation.  We include some calculations verifying the conjecture for $G=\SO(8)$ in Appendix \ref{D4_appendix}.
 \end{enumerate}
 \end{examples}
 
@@ -1525,10 +1516,9 @@ The paper \cite{KoroteevSageZeitlin} studies the specialization of the main conj
 
 
 
-
-
 \appendix
-\section{$D_4$ example}
+\section{$q$-Character Calculations for $G=\SO(8)$} \label{D4_appendix}
+
 
 We will compute triangulization of the $p$-twisted $q$-oper in the example of the $\mhiggs_{G}$ based on $G = SO(8)$ with
 $D_{4} \simeq \mathfrak{so}(8)$ Lie algebra. 
@@ -1623,9 +1613,9 @@ Y_{i,k} \to y_i(q^{k}z) \\ P_{i,k} \to p_i(q^{k} z)\\ T_{i,k} \to t_{i}(q^{k} z)
  
 
 
+
 \bibliographystyle{alpha}
 \bibliography{Mult_Hitchin}
-%\printbibliography
 
 \textsc{Institut des Hautes \'Etudes Scientifiques}\\
 \textsc{35 Route de Chartres, Bures-sur-Yvette, 91440, France}\\
