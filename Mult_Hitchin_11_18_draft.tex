@@ -1523,6 +1523,106 @@ The meromorphic functions $y_{i}(z)$ can be expressed as ratios of the form $y_{
 The paper \cite{KoroteevSageZeitlin} studies the specialization of the main conjecture of this section to the case where $G = \SL_n$ and one fixes a special form of the coloured divisor $(D,\omega^\vee)$ where the $T$-valued polynomials $p(z)$ encoding their positions and orders can be effectively presented as the ratio of Drinfeld polynomials rescaled by $q$, so that effectively $p_i(z) = d_{i}(z)/d_{i}(q^{-1}z)$.  This special form for the singularity datum means that the Yangian module obtained by quantization of the symplectic leaf $\mhiggs_G(C,D)$ contains (as a quotient) the finite-dimensional Drinfeld module specified by the Drinfeld polynomials $d_{i}(z)$. In the language of quiver gauge theory, this specialization is known as 4d to 2d specialization \cite{ChenDoreyHollowoodLee, DoreyHollowoodLee}. This specialization leads to the Bethe ansatz equations with finite dimensional representations of Yangians and finite number of Bethe roots. 
 \end{remark}
 
+
+
+
+
+\appendix
+\section{$D_4$ example}
+
+We will compute triangulization of the $p$-twisted $q$-oper in the example of the $\mhiggs_{G}$ based on $G = SO(8)$ with
+$D_{4} \simeq \mathfrak{so}(8)$ Lie algebra. 
+We label the simple roots as $\alpha_i$ with $i = 1, \dots, 4$, and we fix the Cartan matrix to be 
+\begin{equation}
+\langle \alpha_i^{\vee}, \alpha_j \rangle  =
+\begin{pmatrix}
+ 2 & -1 & 0 & 0 \\
+ -1 & 2 & -1 & -1 \\
+ 0 & -1 & 2 & 0 \\
+ 0 & -1 & 0 & 2 \\
+\end{pmatrix}
+\end{equation}
+We label the positive roots as $\alpha_1, \dots, \alpha_{12}$ with 
+\begin{equation}
+\begin{array}{l}
+ \alpha _5= \alpha _1+\alpha _2 \\
+ \alpha _6= \alpha _2+\alpha _3 \\
+ \alpha _7= \alpha _2+\alpha _4 \\
+ \alpha _8= \alpha _1+\alpha _2+\alpha _3 \\
+ \alpha _9= \alpha _1+\alpha _2+\alpha _4 \\
+ \alpha _{10}= \alpha _2+\alpha _3+\alpha _4 \\
+ \alpha _{11}= \alpha _1+\alpha _2+\alpha _3+\alpha _4 \\
+ \alpha _{12}= \alpha _1+2 \alpha _2+\alpha _3+\alpha _4 \\
+\end{array}
+\end{equation}
+
+
+Solving for the $q$-gauge transformation that  triangualizes the $p$-twisted $q$-oper (\ref{eq:steinberg}) to bring it to the $B_{-}$ valued
+$q$-connection of the form $ \prod_{i} \exp(f_i y_i^{-1}) y_i^{\alpha_i^{\vee}} p_i^{-\omega_i^{\vee}}$ (where $(e_i, f_i)$ label
+standard Chevalley generators in positive and negative simple root spaces respectively) we find 
+\begin{equation}
+\begin{array}{l}
+ u_{3,0}= -\frac{P_{3,0}}{Y_{3,0}} \\
+ u_{4,0}= -\frac{P_{4,0}}{Y_{4,0}} \\
+ u_{10,0}= -\frac{P_{2,0} P_{3,0} P_{4,0}}{Y_{2,0}} \\
+ u_{11,0}= -\frac{P_{1,0} P_{2,0} P_{3,0} P_{4,0}}{Y_{1,0}} \\
+ u_{2,0}= -\frac{P_{1,-1} P_{2,-1} P_{2,0} P_{3,-1} P_{4,-1}}{Y_{1,-1}}-\frac{P_{2,-1} P_{2,0} P_{3,-1} P_{4,-1} Y_{1,0}}{Y_{2,-1}}-\frac{P_{2,0} P_{4,-1} Y_{3,0}}{Y_{4,-1}}-\frac{P_{2,0} P_{3,-1} P_{4,-1} Y_{2,0}}{Y_{3,-1}
+   Y_{4,-1}}-\frac{P_{2,0} Y_{3,0} Y_{4,0}}{Y_{2,0}}-\frac{P_{2,0} P_{3,-1} Y_{4,0}}{Y_{3,-1}} \\
+ u_{6,0}= -\frac{P_{2,0} P_{3,0} P_{4,-1}}{Y_{4,-1}}-\frac{P_{2,0} P_{3,0} Y_{4,0}}{Y_{2,0}} \\
+ u_{7,0}= -\frac{P_{2,0} P_{4,0} Y_{3,0}}{Y_{2,0}}-\frac{P_{2,0} P_{3,-1} P_{4,0}}{Y_{3,-1}} \\
+ u_{12,0}= -\frac{P_{1,0} P_{3,0} P_{4,0} P_{2,0}^2 Y_{3,0} Y_{4,0}}{Y_{1,0} Y_{2,0}}-\frac{P_{1,0} P_{3,-1} P_{3,0} P_{4,0} P_{2,0}^2 Y_{4,0}}{Y_{1,0} Y_{3,-1}}-\frac{P_{1,0} P_{2,-1} P_{3,-1} P_{3,0} P_{4,-1} P_{4,0}
+   P_{2,0}^2}{Y_{2,-1}}-\frac{P_{1,0} P_{3,0} P_{4,-1} P_{4,0} P_{2,0}^2 Y_{3,0}}{Y_{1,0} Y_{4,-1}}-\frac{P_{1,0} P_{3,-1} P_{3,0} P_{4,-1} P_{4,0} P_{2,0}^2 Y_{2,0}}{Y_{1,0} Y_{3,-1} Y_{4,-1}} \\
+ u_{1,0}= -\frac{P_{1,-2} P_{1,0} P_{2,-2} P_{2,-1} P_{3,-2} P_{4,-2}}{Y_{1,-2}}-\frac{P_{1,0} P_{2,-2} P_{2,-1} P_{3,-2} P_{4,-2} Y_{1,-1}}{Y_{2,-2}}-\frac{P_{1,0} P_{2,-1} P_{4,-2} Y_{3,-1}}{Y_{4,-2}}-\frac{P_{1,0} P_{2,-1}
+   P_{3,-2} P_{4,-2} Y_{2,-1}}{Y_{3,-2} Y_{4,-2}}-\frac{P_{1,0} Y_{2,0}}{Y_{1,0}}-\frac{P_{1,0} P_{2,-1} Y_{3,-1} Y_{4,-1}}{Y_{2,-1}}-\frac{P_{1,0} P_{2,-1} P_{3,-2} Y_{4,-1}}{Y_{3,-2}} \\
+ u_{5,0}= -\frac{P_{1,-1} P_{1,0} P_{2,0} P_{3,-1} P_{4,-1} Y_{3,-1} Y_{4,-1} P_{2,-1}^2}{Y_{1,-1} Y_{2,-1}}-\frac{P_{1,0} P_{2,0} P_{3,-1} P_{4,-1} Y_{1,0} Y_{3,-1} Y_{4,-1} P_{2,-1}^2}{Y_{2,-1}^2}-\frac{P_{1,-1} P_{1,0}
+   P_{2,0} P_{3,-2} P_{3,-1} P_{4,-1} Y_{4,-1} P_{2,-1}^2}{Y_{1,-1} Y_{3,-2}}-\frac{P_{1,0} P_{2,0} P_{3,-2} P_{3,-1} P_{4,-1} Y_{1,0} Y_{4,-1} P_{2,-1}^2}{Y_{2,-1} Y_{3,-2}}-\frac{P_{1,-1} P_{1,0} P_{2,-2} P_{2,0} P_{3,-2}
+   P_{3,-1} P_{4,-2} P_{4,-1} P_{2,-1}^2}{Y_{2,-2}}-\frac{P_{1,-1} P_{1,0} P_{2,0} P_{3,-1} P_{4,-2} P_{4,-1} Y_{3,-1} P_{2,-1}^2}{Y_{1,-1} Y_{4,-2}}-\frac{P_{1,0} P_{2,0} P_{3,-1} P_{4,-2} P_{4,-1} Y_{1,0} Y_{3,-1}
+   P_{2,-1}^2}{Y_{2,-1} Y_{4,-2}}-\frac{P_{1,0} P_{2,0} P_{3,-2} P_{3,-1} P_{4,-2} P_{4,-1} Y_{1,0} P_{2,-1}^2}{Y_{3,-2} Y_{4,-2}}-\frac{P_{1,-1} P_{1,0} P_{2,0} P_{3,-2} P_{3,-1} P_{4,-2} P_{4,-1} Y_{2,-1} P_{2,-1}^2}{Y_{1,-1}
+   Y_{3,-2} Y_{4,-2}}-\frac{P_{1,-1} P_{1,0} P_{2,0} P_{3,-1} P_{4,-1} Y_{2,0} P_{2,-1}}{Y_{1,-1} Y_{1,0}}-\frac{2 P_{1,0} P_{2,0} P_{3,-1} P_{4,-1} Y_{2,0} P_{2,-1}}{Y_{2,-1}}-\frac{P_{1,0} P_{2,0} P_{4,-1} Y_{3,-1} Y_{3,0}
+   P_{2,-1}}{Y_{2,-1}}-\frac{P_{1,0} P_{2,0} P_{3,-2} P_{4,-1} Y_{3,0} P_{2,-1}}{Y_{3,-2}}-\frac{P_{1,0} P_{2,0} P_{3,-1} Y_{4,-1} Y_{4,0} P_{2,-1}}{Y_{2,-1}}-\frac{P_{1,0} P_{2,0} P_{3,-1} P_{4,-2} Y_{4,0}
+   P_{2,-1}}{Y_{4,-2}}-\frac{P_{1,0} P_{2,0} P_{3,-2} P_{3,-1} P_{4,-1} Y_{2,0} P_{2,-1}}{Y_{3,-2} Y_{3,-1}}-\frac{P_{1,0} P_{2,0} P_{3,-1} P_{4,-2} P_{4,-1} Y_{2,0} P_{2,-1}}{Y_{4,-2} Y_{4,-1}}-\frac{P_{1,0} P_{2,0} Y_{3,0}
+   Y_{4,0}}{Y_{1,0}}-\frac{P_{1,0} P_{2,0} P_{3,-1} Y_{2,0} Y_{4,0}}{Y_{1,0} Y_{3,-1}}-\frac{P_{1,0} P_{2,0} P_{4,-1} Y_{2,0} Y_{3,0}}{Y_{1,0} Y_{4,-1}}-\frac{P_{1,0} P_{2,0} P_{3,-1} P_{4,-1} Y_{2,0}^2}{Y_{1,0} Y_{3,-1} Y_{4,-1}}
+   \\
+ u_{8,0}= -\frac{P_{1,0} P_{2,-1} P_{2,0} P_{3,0} P_{4,-1} Y_{3,-1}}{Y_{2,-1}}-\frac{P_{1,0} P_{2,-1} P_{2,0} P_{3,-2} P_{3,0} P_{4,-1}}{Y_{3,-2}}-\frac{P_{1,0} P_{2,0} P_{3,0} P_{4,-1} Y_{2,0}}{Y_{1,0} Y_{4,-1}}-\frac{P_{1,0}
+   P_{2,0} P_{3,0} Y_{4,0}}{Y_{1,0}} \\
+ u_{9,0}= -\frac{P_{1,0} P_{2,0} P_{4,0} Y_{3,0}}{Y_{1,0}}-\frac{P_{1,0} P_{2,-1} P_{2,0} P_{3,-1} P_{4,0} Y_{4,-1}}{Y_{2,-1}}-\frac{P_{1,0} P_{2,0} P_{3,-1} P_{4,0} Y_{2,0}}{Y_{1,0} Y_{3,-1}}-\frac{P_{1,0} P_{2,-1} P_{2,0}
+   P_{3,-1} P_{4,-2} P_{4,0}}{Y_{4,-2}} \\
+\end{array}
+\end{equation}
+and consequently 
+\begin{equation}
+\begin{array}{l}
+ T_{1,0}= \frac{P_{1,-3} P_{1,-1} P_{2,-3} P_{2,-2} P_{3,-3} P_{4,-3}}{Y_{1,-3}}+\frac{P_{1,-1} P_{2,-3} P_{2,-2} P_{3,-3} P_{4,-3} Y_{1,-2}}{Y_{2,-3}}+\frac{P_{1,-1} P_{2,-2} P_{4,-3} Y_{3,-2}}{Y_{4,-3}}+\frac{P_{1,-1} P_{2,-2}
+   P_{3,-3} P_{4,-3} Y_{2,-2}}{Y_{3,-3} Y_{4,-3}}+\frac{P_{1,-1} Y_{2,-1}}{Y_{1,-1}}+\frac{P_{1,-1} P_{2,-2} Y_{3,-2} Y_{4,-2}}{Y_{2,-2}}+\frac{P_{1,-1} P_{2,-2} P_{3,-3} Y_{4,-2}}{Y_{3,-3}}+Y_{1,0} \\
+ T_{2,0}= \frac{P_{1,-2} P_{1,-1} P_{2,-1} P_{3,-2} P_{4,-2} Y_{3,-2} Y_{4,-2} P_{2,-2}^2}{Y_{1,-2} Y_{2,-2}}+\frac{P_{1,-1} P_{2,-1} P_{3,-2} P_{4,-2} Y_{1,-1} Y_{3,-2} Y_{4,-2} P_{2,-2}^2}{Y_{2,-2}^2}+\frac{P_{1,-2} P_{1,-1}
+   P_{2,-1} P_{3,-3} P_{3,-2} P_{4,-2} Y_{4,-2} P_{2,-2}^2}{Y_{1,-2} Y_{3,-3}}+\frac{P_{1,-1} P_{2,-1} P_{3,-3} P_{3,-2} P_{4,-2} Y_{1,-1} Y_{4,-2} P_{2,-2}^2}{Y_{2,-2} Y_{3,-3}}+\frac{P_{1,-2} P_{1,-1} P_{2,-3} P_{2,-1} P_{3,-3}
+   P_{3,-2} P_{4,-3} P_{4,-2} P_{2,-2}^2}{Y_{2,-3}}+\frac{P_{1,-2} P_{1,-1} P_{2,-1} P_{3,-2} P_{4,-3} P_{4,-2} Y_{3,-2} P_{2,-2}^2}{Y_{1,-2} Y_{4,-3}}+\frac{P_{1,-1} P_{2,-1} P_{3,-2} P_{4,-3} P_{4,-2} Y_{1,-1} Y_{3,-2}
+   P_{2,-2}^2}{Y_{2,-2} Y_{4,-3}}+\frac{P_{1,-1} P_{2,-1} P_{3,-3} P_{3,-2} P_{4,-3} P_{4,-2} Y_{1,-1} P_{2,-2}^2}{Y_{3,-3} Y_{4,-3}}+\frac{P_{1,-2} P_{1,-1} P_{2,-1} P_{3,-3} P_{3,-2} P_{4,-3} P_{4,-2} Y_{2,-2}
+   P_{2,-2}^2}{Y_{1,-2} Y_{3,-3} Y_{4,-3}}+\frac{P_{1,-2} P_{2,-1} P_{3,-2} P_{4,-2} Y_{1,0} P_{2,-2}}{Y_{1,-2}}+\frac{P_{1,-2} P_{1,-1} P_{2,-1} P_{3,-2} P_{4,-2} Y_{2,-1} P_{2,-2}}{Y_{1,-2} Y_{1,-1}}+\frac{2 P_{1,-1} P_{2,-1}
+   P_{3,-2} P_{4,-2} Y_{2,-1} P_{2,-2}}{Y_{2,-2}}+\frac{P_{1,-1} P_{2,-1} P_{4,-2} Y_{3,-2} Y_{3,-1} P_{2,-2}}{Y_{2,-2}}+\frac{P_{1,-1} P_{2,-1} P_{3,-3} P_{4,-2} Y_{3,-1} P_{2,-2}}{Y_{3,-3}}+\frac{P_{1,-1} P_{2,-1} P_{3,-2}
+   Y_{4,-2} Y_{4,-1} P_{2,-2}}{Y_{2,-2}}+\frac{P_{1,-1} P_{2,-1} P_{3,-2} P_{4,-3} Y_{4,-1} P_{2,-2}}{Y_{4,-3}}+\frac{P_{2,-1} P_{3,-2} P_{4,-2} Y_{1,-1} Y_{1,0} P_{2,-2}}{Y_{2,-2}}+\frac{P_{1,-1} P_{2,-1} P_{3,-3} P_{3,-2}
+   P_{4,-2} Y_{2,-1} P_{2,-2}}{Y_{3,-3} Y_{3,-2}}+\frac{P_{1,-1} P_{2,-1} P_{3,-2} P_{4,-3} P_{4,-2} Y_{2,-1} P_{2,-2}}{Y_{4,-3} Y_{4,-2}}+Y_{2,0}+\frac{P_{1,-1} P_{2,-1} Y_{3,-1} Y_{4,-1}}{Y_{1,-1}}+\frac{P_{2,-1} Y_{1,0}
+   Y_{3,-1} Y_{4,-1}}{Y_{2,-1}}+\frac{P_{2,-1} P_{3,-2} Y_{1,0} Y_{4,-1}}{Y_{3,-2}}+\frac{P_{1,-1} P_{2,-1} P_{3,-2} Y_{2,-1} Y_{4,-1}}{Y_{1,-1} Y_{3,-2}}+\frac{P_{2,-1} P_{4,-2} Y_{1,0} Y_{3,-1}}{Y_{4,-2}}+\frac{P_{1,-1} P_{2,-1}
+   P_{4,-2} Y_{2,-1} Y_{3,-1}}{Y_{1,-1} Y_{4,-2}}+\frac{P_{1,-1} P_{2,-1} P_{3,-2} P_{4,-2} Y_{2,-1}^2}{Y_{1,-1} Y_{3,-2} Y_{4,-2}}+\frac{P_{2,-1} P_{3,-2} P_{4,-2} Y_{1,0} Y_{2,-1}}{Y_{3,-2} Y_{4,-2}} \\
+ T_{3,0}= \frac{P_{1,-1} P_{2,-2} P_{2,-1} P_{3,-1} P_{4,-2} Y_{3,-2}}{Y_{2,-2}}+\frac{P_{1,-1} P_{2,-2} P_{2,-1} P_{3,-3} P_{3,-1} P_{4,-2}}{Y_{3,-3}}+\frac{P_{2,-1} P_{3,-1} P_{4,-2} Y_{1,0}}{Y_{4,-2}}+\frac{P_{1,-1} P_{2,-1}
+   P_{3,-1} P_{4,-2} Y_{2,-1}}{Y_{1,-1} Y_{4,-2}}+\frac{P_{1,-1} P_{2,-1} P_{3,-1} Y_{4,-1}}{Y_{1,-1}}+\frac{P_{2,-1} P_{3,-1} Y_{1,0} Y_{4,-1}}{Y_{2,-1}}+\frac{P_{3,-1} Y_{2,0}}{Y_{3,-1}}+Y_{3,0} \\
+ T_{4,0}= \frac{P_{1,-1} P_{2,-1} P_{4,-1} Y_{3,-1}}{Y_{1,-1}}+\frac{P_{2,-1} P_{4,-1} Y_{1,0} Y_{3,-1}}{Y_{2,-1}}+\frac{P_{1,-1} P_{2,-2} P_{2,-1} P_{3,-2} P_{4,-1} Y_{4,-2}}{Y_{2,-2}}+\frac{P_{2,-1} P_{3,-2} P_{4,-1}
+   Y_{1,0}}{Y_{3,-2}}+\frac{P_{1,-1} P_{2,-1} P_{3,-2} P_{4,-1} Y_{2,-1}}{Y_{1,-1} Y_{3,-2}}+\frac{P_{1,-1} P_{2,-2} P_{2,-1} P_{3,-2} P_{4,-3} P_{4,-1}}{Y_{4,-3}}+\frac{P_{4,-1} Y_{2,0}}{Y_{4,-1}}+Y_{4,0} \\
+\end{array}
+\end{equation}
+where we use shortcuts
+\begin{equation*}
+\begin{aligned}
+Y_{i,k} \to y_i(q^{k}z) \\ P_{i,k} \to p_i(q^{k} z)\\ T_{i,k} \to t_{i}(q^{k} z)
+\end{aligned}
+\end{equation*}
+ with $i, k \in \mathbb{Z}$. 
+
+ The formulas for $T_{i}$ match the $p$-twisted $q$-characters computed in quiver gauge theory \cite{NekrasovPestunShatashvili},
+ see e.g. example of $qq$-characters with $q_2 \to 1$ limit printed in \cite{Nekrasov:2015wsu}. 
+ 
+
+
 \bibliographystyle{alpha}
 \bibliography{Mult_Hitchin}
 %\printbibliography
