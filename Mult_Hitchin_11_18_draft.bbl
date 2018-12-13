@@ -229,6 +229,13 @@ Michael Finkelberg, Alexander Kuznetsov, Leonid Rybnikov, and Galyna
 \newblock Towards a cluster structure on trigonometric zastava.
 \newblock {\em Selecta Math. (N.S.)}, 24(1):187--225, 2018.
 
+\bibitem[FM01]{Frenkel2001}
+Edward Frenkel and Evgeny Mukhin.
+\newblock Combinatorics of q-characters of finite-dimensional representations
+  of quantum affine algebras.
+\newblock {\em Communications in Mathematical Physics}, 216(1):23--57, Jan
+  2001.
+
 \bibitem[FN11]{FrenkelNgo}
 Edward Frenkel and Bao~Ch{\^a}u Ng{\^o}.
 \newblock Geometrization of trace formulas.
@@ -452,6 +459,12 @@ Jacques Sauloy.
 \newblock In {\em Th\'{e}ories asymptotiques et \'{e}quations de
   {P}ainlev\'{e}}, volume~14 of {\em S\'{e}min. Congr.}, pages 249--280. Soc.
   Math. France, Paris, 2006.
+
+\bibitem[Sev02]{Sevostyanov1}
+Alexei Sevostyanov.
+\newblock Drinfeld-{S}okolov reduction for quantum groups and deformations of
+  {$W$}-algebras.
+\newblock {\em Selecta Math. (N.S.)}, 8(4):637--703, 2002.
 
 \bibitem[Sev11]{Sevostyanov}
 Alexey Sevostyanov.
