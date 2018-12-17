@@ -7,6 +7,18 @@ Boudjemaa Anchouche and Indranil Biswas.
   a compact {K}\"ahler manifold.
 \newblock {\em Amer. J. Math.}, 123(2):207--228, 2001.
 
+\bibitem[AFM97a]{Arutyunov:1996vy}
+G.~E. Arutyunov, S.~A. Frolov, and P.~B. Medvedev.
+\newblock {Elliptic Ruijsenaars-Schneider model from the cotangent bundle over
+  the two-dimensional current group}.
+\newblock {\em J. Math. Phys.}, 38:5682--5689, 1997.
+
+\bibitem[AFM97b]{Arutyunov:1996uw}
+G.~E. Arutyunov, S.~A. Frolov, and P.~B. Medvedev.
+\newblock {Elliptic Ruijsenaars-Schneider model via the Poisson reduction of
+  the affine Heisenberg double}.
+\newblock {\em J. Phys.}, A30:5051--5063, 1997.
+
 \bibitem[AFO17]{AFO}
 Mina Aganagic, Edward Frenkel, and Andrei Okounkov.
 \newblock Quantum {$q$}-{Langlands} correspondence.
@@ -45,6 +57,12 @@ Laurent Baulieu.
 \newblock {$\mathrm{SU}(5)$}-invariant decomposition of ten-dimensional
   {Yang--Mills} supersymmetry.
 \newblock {\em Physics Letters B}, 698(1):63--67, 2011.
+
+\bibitem[BDOZ03]{Braden:2003gf}
+H.~W. Braden, V.~A. Dolgushev, M.~A. Olshanetsky, and A.~V. Zotov.
+\newblock {Classical R matrices and the Feigin-Odesskii algebra via Hamiltonian
+  and Poisson reductions}.
+\newblock {\em J. Phys.}, A36:6979--7000, 2003.
 
 \bibitem[BF99]{BezrukavnikovFinkelbergI}
 Roman Bezrukavnikov and Michael Finkelberg.
@@ -115,6 +133,11 @@ Sergey Cherkis and Anton Kapustin.
 Sergey Cherkis and Anton Kapustin.
 \newblock {Hyper-K\"ahler} metrics from periodic monopoles.
 \newblock {\em Physical Review D}, 65(8):084015, 2002.
+
+\bibitem[CLOZ07]{Chernyakov:2007}
+Yu. {Chernyakov}, A.~M. {Levin}, M.~{Olshanetsky}, and A.~{Zotov}.
+\newblock {Quadratic algebras related to elliptic curves}.
+\newblock {\em arXiv e-prints}, page arXiv:0710.1072, October 2007.
 
 \bibitem[Cos11]{CostelloBook}
 Kevin Costello.
@@ -402,11 +425,25 @@ Valerio Melani and Pavel Safronov.
 \newblock Derived coisotropic structures {II}: stacks and quantization.
 \newblock {\em arXiv preprint arXiv:1704.03201}, 2017.
 
+\bibitem[Nek96]{NekrasovThesis}
+Nikita Nekrasov.
+\newblock {\em Four dimensional holomorphic theories}.
+\newblock PhD thesis, Princeton University, 1996.
+\newblock \url{http://media.scgp.stonybrook.edu/papers/prdiss96.pdf}.
+
 \bibitem[Nek16]{Nekrasov:2015wsu}
 Nikita Nekrasov.
 \newblock {BPS/CFT} correspondence: non-perturbative {D}yson-{S}chwinger
   equations and {$qq$}-characters.
 \newblock {\em Journal of High Energy Physics}, 2016(3):181, 2016.
+
+\bibitem[Nek17]{NekrasovStringMath}
+Nikita Nekrasov.
+\newblock Open-closed (little) string duality and chern-simons-bethe/gauge
+  correspondence.
+\newblock 2017.
+\newblock Lecture, String-Math, Hamburg, 28 July 2017,
+  \url{https://stringmath2017.desy.de/sites/sites_conferences/site_stringmath2017/content/e45470/e56510/e56566/SM-Nekrasov.pdf}.
 
 \bibitem[NP12]{NekrasovPestun}
 Nikita Nekrasov and Vasily Pestun.
@@ -418,6 +455,19 @@ Nikita Nekrasov and Vasily Pestun.
 Nikita Nekrasov, Vasily Pestun, and Samson Shatashvili.
 \newblock Quantum geometry and quiver gauge theories.
 \newblock {\em Comm. Math. Phys.}, 357(2):519--567, 2018.
+
+\bibitem[NS09a]{Nekrasov:2009rc}
+Nikita~A. Nekrasov and Samson~L. Shatashvili.
+\newblock {Quantization of Integrable Systems and Four Dimensional Gauge
+  Theories}.
+\newblock In {\em {Proceedings, 16th International Congress on Mathematical
+  Physics (ICMP09): Prague, Czech Republic, August 3-8, 2009}}, pages 265--289,
+  2009.
+
+\bibitem[NS09b]{Nekrasov:2009ui}
+Nikita~A. Nekrasov and Samson~L. Shatashvili.
+\newblock {Quantum integrability and supersymmetric vacua}.
+\newblock {\em Prog. Theor. Phys. Suppl.}, 177:105--119, 2009.
 
 \bibitem[Pau98]{Pauly}
 Marc Pauly.

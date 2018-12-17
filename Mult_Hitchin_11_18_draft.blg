@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Mult_Hitchin_11_18_draft.aux
 The style file: alpha.bst
 Database file #1: Mult_Hitchin.bib
@@ -10,48 +10,49 @@ Warning--empty publisher in CostelloSH
 Warning--there's a number but no volume in DoreyHollowoodLee
 Warning--empty journal in EagerSaberiWalcher
 Warning--empty journal in KapustinHolo
+Warning--empty journal in NekrasovStringMath
 Warning--empty journal in PestunStringMath
 Warning--there's a number but no volume in Shapiro
 Warning--there's a number but no volume in Steinberg
-You've used 93 entries,
+You've used 101 entries,
             2543 wiz_defined-function locations,
-            1150 strings with 18741 characters,
-and the built_in function-call counts, 35408 in all, are:
-= -- 3643
-> -- 1458
-< -- 64
-+ -- 480
-- -- 464
-* -- 2563
-:= -- 5792
-add.period$ -- 291
-call.type$ -- 93
-change.case$ -- 533
-chr.to.int$ -- 89
-cite$ -- 103
-duplicate$ -- 1461
-empty$ -- 2627
-format.name$ -- 597
-if$ -- 7187
-int.to.chr$ -- 5
+            1199 strings with 20489 characters,
+and the built_in function-call counts, 39004 in all, are:
+= -- 4018
+> -- 1624
+< -- 68
++ -- 540
+- -- 522
+* -- 2800
+:= -- 6359
+add.period$ -- 317
+call.type$ -- 101
+change.case$ -- 584
+chr.to.int$ -- 95
+cite$ -- 112
+duplicate$ -- 1615
+empty$ -- 2868
+format.name$ -- 665
+if$ -- 7949
+int.to.chr$ -- 7
 int.to.str$ -- 0
-missing$ -- 97
-newline$ -- 470
-num.names$ -- 279
-pop$ -- 436
+missing$ -- 104
+newline$ -- 512
+num.names$ -- 303
+pop$ -- 477
 preamble$ -- 1
-purify$ -- 634
+purify$ -- 694
 quote$ -- 0
-skip$ -- 1193
+skip$ -- 1343
 stack$ -- 0
-substring$ -- 2147
-swap$ -- 201
-text.length$ -- 64
-text.prefix$ -- 41
+substring$ -- 2363
+swap$ -- 249
+text.length$ -- 68
+text.prefix$ -- 43
 top$ -- 0
-type$ -- 720
-warning$ -- 10
-while$ -- 364
-width$ -- 97
-write$ -- 1204
-(There were 10 warnings)
+type$ -- 784
+warning$ -- 11
+while$ -- 393
+width$ -- 105
+write$ -- 1310
+(There were 11 warnings)
