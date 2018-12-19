@@ -1,3 +1,25 @@
+%%% add references 
+
+%%% G.E.Arutyunov, ∗ S.A.Frolov  and P.B.Medvedev ‡
+%%% https://arxiv.org/pdf/hep-th/9608013.pdf
+%%% https://arxiv.org/pdf/hep-th/9607170.pdf
+
+%%% Yu.Chernyakov,† A.M.Levin,♦‡ M.Olshanetsky,† A.Zotov†‡
+%%% https://arxiv.org/pdf/hep-th/0301121.pdf
+%%% https://arxiv.org/pdf/0710.1072.pdf
+
+
+%%% bibitem[NPhD]{NPhD} N.~Nekrasov, \emph{Four dimensional holomorphic theories%%% }, PhD. thesis, Princeton University, 1996, available from
+%%% {\tt http://scgp.stonybrook.edu/people/faculty/bios/nikita-nekrasov}
+
+%%% NS https://arxiv.org/abs/0901.4748
+%%% NS https://arxiv.org/abs/0908.4052
+
+
+
+
+
+
 \documentclass[11pt, oneside, reqno]{amsart}
 
 \usepackage{amsmath, amsthm, amssymb}
@@ -163,7 +185,24 @@ coweight $\omega^\vee_{z_i}$ at each puncture $z_i$.
  
  Fix a curve $C$ and consider the \emph{moduli space of multiplicative Higgs bundles} on $C$ with prescribed singularities lying at the points $D = \{z_1, \ldots, z_k\}$, with degrees $\omega_{z_1}^\vee, \ldots, \omega_{z_k}^\vee$ respectively.  We denote this moduli space by $\mhiggs_G(C,D,\omega^\vee)$.
  
- Moduli spaces of multiplicative Higgs bundles have been studied in the literature previously, though they've more often been referred to simply as ``moduli spaces of $G$-pairs''.  The earliest descriptions of these moduli spaces that we're aware of occur in the work of Hurtubise and Markman \cite{HurtubiseMarkman, HurtubiseMarkman1}.  Their work was motivated by the desire to understand the elliptic Skylanin Poisson brackets on loop groups, and to that end they mainly studied the case where the underlying curve $C$ is elliptic -- we'll refer back to their work throughout the paper.  From a different perspective, the moduli space of multiplicative Higgs bundles was also studied by Frenkel and Ng\^o \cite[Section 4]{FrenkelNgo} as part of their geometrization of the trace formula.  Further work was done following their definition by Bouthier \cite{Bouthier2, Bouthier1}, who gave an alternative construction of the moduli space as the space of sections of a vector bundle associated to a fixed singuarity datum defined using the Vinberg semigroup (see Remark \ref{Bouthier_remark}).  
+ Moduli spaces of multiplicative Higgs bundles have been studied in
+ the literature previously, though they've more often been referred to
+ simply as ``moduli spaces of $G$-pairs''.  The earliest mathematical
+ descriptions of these moduli spaces that we're aware of for any
+ reductive group $G$ occur in the work of Hurtubise and Markman
+ \cite{HurtubiseMarkman, HurtubiseMarkman1}.  Their work was motivated
+ by the desire to understand the elliptic Skylanin Poisson brackets on
+ loop groups, and to that end they mainly studied the case where the
+ underlying curve $C$ is elliptic -- we'll refer back to their work
+ throughout the paper.  Independently, 'moduli space of $G$-pairs' on
+ elliptic curve for $G = GL(N)$ was analyzed earlier in the literature
+ on integrable systems by Arutyunov, Frolov, and Medvedev
+ \cite{Arutyunov:1996vy,Arutyunov:1996uw} for $G$-pairs of zero
+ degree and later by Braden, Chernyakov, Dolgushev, Levin, Olshanetsky
+ and Zotov \cite{Chernyakov:2007,Braden:2003gf} for $G$-pairs of non-zero
+ degree.
+
+ From a different perspective, the moduli space of multiplicative Higgs bundles was also studied by Frenkel and Ng\^o \cite[Section 4]{FrenkelNgo} as part of their geometrization of the trace formula.  Further work was done following their definition by Bouthier \cite{Bouthier2, Bouthier1}, who gave an alternative construction of the moduli space as the space of sections of a vector bundle associated to a fixed singuarity datum defined using the Vinberg semigroup (see Remark \ref{Bouthier_remark}).  
  
  The moduli space of multiplicative Higgs bundles admits a version of the Hitchin fibration, just like the ordinary moduli space of Higgs bundles.  Intuitively, this map is defined using the Chevalley map $\chi \colon G \to T/W$ (for instance if $G = \GL_n$, the map sending a matrix to its characteristic polynomial): the multiplicative Higgs field is, in particular, a meromorphic $G$-valued function, and the multiplicative Hitchin fibration post-composes this function with $\chi$.  See Section \ref{Hitchin_system_section} for a more detailed definition.
  
@@ -238,9 +277,14 @@ The article \cite{GKLO}, as well as its generalizations such as the work of Kamn
 \end{remark}
 
 \subsection{Moduli Spaces in Supersymmetric Gauge Theory} \label{intro_gauge_section}
-Having discussed three points of view on our moduli space in geometric representation theory, let us move on to explain some of the ways in which multiplicative Higgs bundles / periodic monopoles arise naturally in the world of supersymmetric gauge theory.  Firstly, these moduli spaces appeared in work of the second author, Nekrasov and Shatashvili \cite{NekrasovPestun, NekrasovPestunShatashvili} concerning the Seiberg-Witten integrable systems of 4d $\mc N=2$ ADE quiver gauge theories.  Let $\gg$ be a simple Lie algebra of ADE type.  One can define an $\mc N=2$ superconformal 4d gauge theory modelled on the Dynkin diagram of $\gg$.  To define this theory one must specify masses $m_{i,j}$ for fundamental hypermultiplets associated to the vertices of the Dynkin diagram, so $i = 1,\ldots,r$ varies over the vertices of the Dynkin diagram and $j=1, \ldots,w_i$ is an index parameterizing the number of hypermultiplets at each vertex.  Let us assume we're in the generic situation, where the masses are all distinct.
+Having discussed three points of view on our moduli space in geometric representation theory, let us move on to explain some of the ways in which multiplicative Higgs bundles / periodic monopoles arise naturally in the world of supersymmetric gauge theory.
 
-The paper \cite{NekrasovPestun} studied the Seiberg-Witten integrable system associated to this theory, so in particular the hyperk\"ahler moduli space $\mf P$ occuring as the target of the $\mc N=4$ supersymmetric sigma model obtained by compactifying the 4d theory on a circle.  In particular, it proved the following.
+The general relation between supersymmetric gauge theory and quantum integrable systems relevant for the present
+work was proposed by Nekrasov and Shatashvili in \cite{Nekrasov:2009ui,Nekrasov:2009rc}.
+
+Concretely, the moduli spaces of periodic monopoles (and implicitly its quantization) appeared in work of the second author, Nekrasov and Shatashvili \cite{NekrasovPestun, NekrasovPestunShatashvili} concerning the Seiberg-Witten integrable systems of 4d $\mc N=2$ ADE quiver gauge theories.  Let $\gg$ be a simple Lie algebra of ADE type.  One can define an $\mc N=2$ superconformal 4d gauge theory modelled on the Dynkin diagram of $\gg$.  To define this theory one must specify masses $m_{i,j}$ for fundamental hypermultiplets associated to the vertices of the Dynkin diagram, so $i = 1,\ldots,r$ varies over the vertices of the Dynkin diagram and $j=1, \ldots,w_i$ is an index parameterizing the number of hypermultiplets at each vertex.  Let us assume we're in the generic situation, where the masses are all distinct.
+
+The paper \cite{NekrasovPestun} studied the Seiberg-Witten integrable system associated to this theory, so in particular the hyperk\"ahler moduli space $\mf P$, the Coulomb branch of the moduli space of vacua,  occuring as the target of the $\mc N=4$ supersymmetric sigma model obtained by compactifying the 4d theory on a circle.  In particular, it proved the following.
 
 \begin{theorem}[{\cite[Section 8.1]{NekrasovPestun}}]
 Let $G$ be a simple Lie group with ADE Lie algebra $\gg$.  The phase space $\mf P$ is isomorphic, as a hyperk\"ahler manifold, to the moduli space $\mon_G^\fr(\bb{CP}^1 \times S^1,D \times\{0\},\omega^\vee)$ of periodic monopoles, where $D = \{m_{i,j}\}$, and where the residue $\omega^\vee_{m_{i,j}}$ is the fundamental coweight corresponding to the vertex $i$ of the Dynkin diagram of $\gg$.
@@ -648,7 +692,36 @@ This is the shifted cotangent space whose base is the moduli space of $G$-bundle
 \begin{remark} \label{Kapustin_twist_remark}
 This supersymmetric gauge theory story should be compared to several recent twisting calculations in the literature.  Firstly, the minimal twist of 5d $\mc N=2$ gauge theory was discussed by Qiu and Zabzine \cite{QiuZabzine} on quite general contact five-manifolds.  They described the twisted equations of motion in terms of the Haydys-Witten equations.
 
-A recent article of Costello and Yagi \cite{CostelloYagi} also described a relationship between multiplicative Higgs moduli spaces and twisted supersymmetric gauge theory in yet another context.  They calculated the twist of 6d $\mc N=(1,1)$ gauge theory, but with respect to yet another twisting supercharge $Q$ with the property that the image of $[Q,-]$ in $\CC^6$ is five-dimensional.  They then consider this theory on $\RR^2 \times C \times \Sigma$, and place it in the $\Omega$-background in the $\RR^2$ directions.  They argue that the resulting theory is Costello's four-dimensional Chern-Simons theory \cite{CostelloYangian}, whose moduli stack of derived classical solutions can be identified with $\map(C \times \Sigma_{\mr{dR}}, BG)$.  Costello and Yagi go on to argue via a sequence of string dualities that this theory is dual to the ADE quiver gauge theories discussed in \cite{NekrasovPestun, NekrasovPestunShatashvili}.  From another point of view, dualities of this form were also discussed by Ashwinkumar, Tan and Zhao \cite{AshwinkumarTanZhao}.
+A recent article of Costello and Yagi \cite{CostelloYagi} also described a relationship between multiplicative Higgs moduli spaces and twisted supersymmetric gauge theory in yet another context.  They calculated the twist of 6d $\mc N=(1,1)$ gauge theory, but with respect to yet another twisting supercharge $Q$ with the property that the image of $[Q,-]$ in $\CC^6$ is five-dimensional.  They then consider this theory on $\RR^2 \times C \times \Sigma$, and place it in the $\Omega$-background in the $\RR^2$ directions.  They argue that the resulting theory is four-dimensional Chern-Simons theory 
+on $C \times \Sigma$ holomorphic on $C$ and topological in $\Sigma$.
+
+The $C$-holomorphic $\Sigma$-topological 4d Chern-Simons on $C \times \Sigma$  was introduced for the first time that we're aware of
+by Nekrasov in his Ph.D. thesis (page 89 of \cite{NekrasovThesis}), where it was also conjectured that such Chern-Simons theory
+leads to the quantum affine algebras with spectral parameter on $C$. The idea was recently revived by Costello \cite{CostelloYangian}),
+the moduli stack of derived classical solutions of 4d Chern-Simons on $C \times \Sigma$ can be identified with $\map(C \times \Sigma_{\mr{dR}}, BG)$.
+Nekrasov in \cite{NekrasovStringMath} and Costello and Yagi in \cite{CostelloYagi}  go on to argue via a sequence of string dualities that
+this 4d CS theory is dual to the ADE quiver gauge theories discussed in \cite{NekrasovPestun, NekrasovPestunShatashvili}.
+
+Morally speaking, the 4d Chern-Simons theory of \cite{NekrasovThesis} and \cite{CostelloYangian} on $C_{\mathrm{Dol}} \times \Sigma_{\mathrm{dR}}$ with $\Sigma_{\mathrm{dR}} = S^{1}_{dR} \times \mathbb{R}_{\mathrm{time}}$ quantizes in the path formalism the holomorphic symplectic phase space of the solutions to the Bogomolny monopole equations on $C_{\mathrm{Dol}} \times S^{1}_{\mathrm{dR}}$, in the same way as
+the ordinary 3d Cherns-Simons theory on $C_{\mathrm{dR}} \times \mathbb{R}_{\mathrm{time}}$  quantized the moduli space
+of flat connections on the Riemann surface $C_{\mathrm{dR}}$ in the work of Witten \cite{witten1989}.
+While Costello \cite{CostelloYangian} considers Wilson operators,  we consider
+Dirac singularties of the monopoles or, equivalently, t'Hooft operators.
+
+
+
+From another point of view, dualities of this form were also discussed by Ashwinkumar, Tan and Zhao \cite{AshwinkumarTanZhao}.
+
+
+
+
+
+
+
+
+
+
+
 \end{remark}
 
 \subsection{Langlands Duality} \label{Langlands_section}
