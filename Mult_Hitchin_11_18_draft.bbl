@@ -8,13 +8,13 @@ Boudjemaa Anchouche and Indranil Biswas.
 \newblock {\em Amer. J. Math.}, 123(2):207--228, 2001.
 
 \bibitem[AFM97a]{Arutyunov:1996vy}
-G.~E. Arutyunov, S.~A. Frolov, and P.~B. Medvedev.
+Gleb Arutyunov, Sergey Frolov, and Peter Medvedev.
 \newblock {Elliptic Ruijsenaars-Schneider model from the cotangent bundle over
   the two-dimensional current group}.
 \newblock {\em J. Math. Phys.}, 38:5682--5689, 1997.
 
 \bibitem[AFM97b]{Arutyunov:1996uw}
-G.~E. Arutyunov, S.~A. Frolov, and P.~B. Medvedev.
+Gleb Arutyunov, Sergey Frolov, and Peter Medvedev.
 \newblock {Elliptic Ruijsenaars-Schneider model via the Poisson reduction of
   the affine Heisenberg double}.
 \newblock {\em J. Phys.}, A30:5051--5063, 1997.
@@ -59,7 +59,7 @@ Laurent Baulieu.
 \newblock {\em Physics Letters B}, 698(1):63--67, 2011.
 
 \bibitem[BDOZ03]{Braden:2003gf}
-H.~W. Braden, V.~A. Dolgushev, M.~A. Olshanetsky, and A.~V. Zotov.
+Harry Braden, Vasily Dolgushev, Mikhail Olshanetsky, and Andrei Zotov.
 \newblock {Classical R matrices and the Feigin-Odesskii algebra via Hamiltonian
   and Poisson reductions}.
 \newblock {\em J. Phys.}, A36:6979--7000, 2003.
@@ -135,9 +135,9 @@ Sergey Cherkis and Anton Kapustin.
 \newblock {\em Physical Review D}, 65(8):084015, 2002.
 
 \bibitem[CLOZ07]{Chernyakov:2007}
-Yu. {Chernyakov}, A.~M. {Levin}, M.~{Olshanetsky}, and A.~{Zotov}.
-\newblock {Quadratic algebras related to elliptic curves}.
-\newblock {\em arXiv e-prints}, page arXiv:0710.1072, October 2007.
+Yurii {Chernyakov}, Andrey {Levin}, Mikhail {Olshanetsky}, and Andrei {Zotov}.
+\newblock Quadratic algebras related to elliptic curves.
+\newblock {\em arXiv e-prints}, page arXiv:0710.1072, Oct 2007.
 
 \bibitem[Cos11]{CostelloBook}
 Kevin Costello.
@@ -254,8 +254,8 @@ Michael Finkelberg, Alexander Kuznetsov, Leonid Rybnikov, and Galyna
 
 \bibitem[FM01]{Frenkel2001}
 Edward Frenkel and Evgeny Mukhin.
-\newblock Combinatorics of q-characters of finite-dimensional representations
-  of quantum affine algebras.
+\newblock Combinatorics of {$q$}-characters of finite-dimensional
+  representations of quantum affine algebras.
 \newblock {\em Communications in Mathematical Physics}, 216(1):23--57, Jan
   2001.
 
@@ -439,8 +439,8 @@ Nikita Nekrasov.
 
 \bibitem[Nek17]{NekrasovStringMath}
 Nikita Nekrasov.
-\newblock Open-closed (little) string duality and chern-simons-bethe/gauge
-  correspondence.
+\newblock Open-closed (little) string duality and
+  {C}hern-{S}imons-{B}ethe/gauge correspondence.
 \newblock 2017.
 \newblock Lecture, String-Math, Hamburg, 28 July 2017,
   \url{https://stringmath2017.desy.de/sites/sites_conferences/site_stringmath2017/content/e45470/e56510/e56566/SM-Nekrasov.pdf}.

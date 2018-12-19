@@ -13,7 +13,7 @@ year = "1989"
 
 
 @article{Arutyunov:1996vy,
-      author         = "Arutyunov, Gleb and Frolov, Sergey and Medvedev, Peter",
+      author         = "Arutyunov, G. E. and Frolov, S. A. and Medvedev, P. B.",
       title          = "{Elliptic Ruijsenaars-Schneider model from the cotangent
                         bundle over the two-dimensional current group}",
       journal        = "J. Math. Phys.",
@@ -30,7 +30,7 @@ year = "1989"
 
 
 @article{Arutyunov:1996uw,
-      author         = "Arutyunov, Gleb and Frolov, Sergey and Medvedev, Peter",
+      author         = "Arutyunov, G. E. and Frolov, S. A. and Medvedev, P. B.",
       title          = "{Elliptic Ruijsenaars-Schneider model via the Poisson
                         reduction of the affine Heisenberg double}",
       journal        = "J. Phys.",
@@ -47,8 +47,8 @@ year = "1989"
 
 
 @ARTICLE{Chernyakov:2007,
-       author = {{Chernyakov}, Yurii and {Levin}, Andrey and {Olshanetsky}, Mikhail and {Zotov},
-        Andrei},
+       author = {{Chernyakov}, Yu. and {Levin}, A.~M. and {Olshanetsky}, M. and {Zotov},
+        A.},
         title = {Quadratic algebras related to elliptic curves},
       journal = {arXiv e-prints},
      keywords = {Nonlinear Sciences - Exactly Solvable and Integrable Systems},
@@ -64,8 +64,8 @@ archivePrefix = {arXiv},
 }
 
 @article{Braden:2003gf,
-      author         = "Braden, Harry and Dolgushev, Vasily and Olshanetsky, Mikhail
-                        and Zotov, Andrei",
+      author         = "Braden, H. W. and Dolgushev, V. A. and Olshanetsky, M. A.
+                        and Zotov, A. V.",
       title          = "{Classical R matrices and the Feigin-Odesskii algebra via
                         Hamiltonian and Poisson reductions}",
       journal        = "J. Phys.",
