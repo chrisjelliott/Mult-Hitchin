@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2018.4.15)  21 DEC 2018 14:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2018.4.15)  21 DEC 2018 15:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -604,42 +604,43 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1567.
 
 
-Overfull \hbox (29.72763pt too wide) in paragraph at lines 1620--1620
+Overfull \hbox (29.72763pt too wide) in paragraph at lines 1619--1619
 [] 
  []
 
 [47]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [48]
-Overfull \hbox (30.22444pt too wide) in paragraph at lines 1640--1640
+Overfull \hbox (30.22444pt too wide) in paragraph at lines 1639--1639
 [] 
  []
 
-[49] (./Mult_Hitchin_11_18_draft.bbl [50] [51]
+
+Underfull \vbox (badness 3557) has occurred while \output is active []
+
+ [48]
+(./Mult_Hitchin_11_18_draft.bbl [49] [50]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52]
+ [51]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [53])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1663.
+ [52])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1662.
 
-[54]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1663.
+[53]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1662.
  (./Mult_Hitchin_11_18_draft.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1663.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1663.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1662.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1662.
 
 Package rerunfilecheck Info: File `Mult_Hitchin_11_18_draft.out' has not change
 d.
 (rerunfilecheck)             Checksum: 0B0CE162AAF04F01E88FF06BF1780D81;2069.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1663.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1662.
  ) 
 Here is how much of TeX's memory you used:
- 10280 strings out of 493013
- 139818 string characters out of 6133343
- 303739 words of memory out of 5000000
+ 10279 strings out of 493013
+ 139811 string characters out of 6133343
+ 304816 words of memory out of 5000000
  13210 multiletter control sequences out of 15000+600000
  17505 words of font info for 70 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
@@ -675,10 +676,10 @@ exmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2016
 ive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/xypic/xycmat10.pfb></usr/local/texliv
 e/2016/texmf-dist/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on Mult_Hitchin_11_18_draft.pdf (54 pages, 602149 bytes).
+Output written on Mult_Hitchin_11_18_draft.pdf (53 pages, 601966 bytes).
 PDF statistics:
- 1048 PDF objects out of 1200 (max. 8388607)
- 954 compressed objects within 10 object streams
- 314 named destinations out of 1000 (max. 500000)
+ 1044 PDF objects out of 1200 (max. 8388607)
+ 951 compressed objects within 10 object streams
+ 313 named destinations out of 1000 (max. 500000)
  217 words of extra memory for PDF output out of 10000 (max. 10000000)
 
