@@ -58,6 +58,11 @@ Laurent Baulieu.
   {Yang--Mills} supersymmetry.
 \newblock {\em Physics Letters B}, 698(1):63--67, 2011.
 
+\bibitem[BD97]{BDHitchin}
+Alexander Beilinson and Vladimir Drinfeld.
+\newblock Quantization of hitchin’s integrable system and hecke eigensheaves,
+  1997.
+
 \bibitem[BDOZ03]{Braden:2003gf}
 Harry Braden, Vasily Dolgushev, Mikhail Olshanetsky, and Andrei Zotov.
 \newblock {Classical R matrices and the Feigin-Odesskii algebra via Hamiltonian
@@ -424,6 +429,11 @@ Valerio Melani and Pavel Safronov.
 Valerio Melani and Pavel Safronov.
 \newblock Derived coisotropic structures {II}: stacks and quantization.
 \newblock {\em arXiv preprint arXiv:1704.03201}, 2017.
+
+\bibitem[MV05]{MukhinVarchenko}
+Evgeny Mukhin and Alexander Varchenko.
+\newblock Discrete {M}iura opers and solutions of the {B}ethe ansatz equations.
+\newblock {\em Communications in mathematical physics}, 256(3):565--588, 2005.
 
 \bibitem[Nek96]{NekrasovThesis}
 Nikita Nekrasov.

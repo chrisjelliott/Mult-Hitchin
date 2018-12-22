@@ -1,25 +1,3 @@
-%%% add references 
-
-%%% G.E.Arutyunov, ∗ S.A.Frolov  and P.B.Medvedev ‡
-%%% https://arxiv.org/pdf/hep-th/9608013.pdf
-%%% https://arxiv.org/pdf/hep-th/9607170.pdf
-
-%%% Yu.Chernyakov,† A.M.Levin,♦‡ M.Olshanetsky,† A.Zotov†‡
-%%% https://arxiv.org/pdf/hep-th/0301121.pdf
-%%% https://arxiv.org/pdf/0710.1072.pdf
-
-
-%%% bibitem[NPhD]{NPhD} N.~Nekrasov, \emph{Four dimensional holomorphic theories%%% }, PhD. thesis, Princeton University, 1996, available from
-%%% {\tt http://scgp.stonybrook.edu/people/faculty/bios/nikita-nekrasov}
-
-%%% NS https://arxiv.org/abs/0901.4748
-%%% NS https://arxiv.org/abs/0908.4052
-
-
-
-
-
-
 \documentclass[11pt, oneside, reqno]{amsart}
 
 \usepackage{amsmath, amsthm, amssymb}
@@ -187,14 +165,8 @@ coweight $\omega^\vee_{z_i}$ at each puncture $z_i$.
  
  Moduli spaces of multiplicative Higgs bundles have been studied in
  the literature previously, though they've more often been referred to
- simply as ``moduli spaces of $G$-pairs''.  The earliest mathematical
- descriptions of these moduli spaces that we're aware of is in the work of Arutyunov, Frolov, and Medvedev
- \cite{Arutyunov:1996vy,Arutyunov:1996uw} in the integrable systems literature, for $G = \GL(n)$-pairs of zero
- degree on an elliptic curve, extended by Braden, Chernyakov, Dolgushev, Levin, Olshanetsky
- and Zotov \cite{Chernyakov:2007,Braden:2003gf} to $\GL(n)$-pairs of non-zero
- degree.  For a general reductive group $G$, the first description that we're aware of appears in the work of Hurtubise and Markman
- \cite{HurtubiseMarkman, HurtubiseMarkman1}, from a more geometric perspective.  Their work was motivated
- by the desire to understand the elliptic Skylanin Poisson brackets on
+ simply as ``moduli spaces of $G$-pairs''.  The earliest mathematical  descriptions of these moduli spaces that we're aware of is in the work of Arutyunov, Frolov, and Medvedev \cite{Arutyunov:1996vy,Arutyunov:1996uw} in the integrable systems literature, for $G = \GL(n)$-pairs of zero degree on an elliptic curve, extended by Braden, Chernyakov, Dolgushev, Levin, Olshanetsky
+ and Zotov \cite{Chernyakov:2007,Braden:2003gf} to $\GL(n)$-pairs of non-zero degree.  For a general reductive group $G$, moduli spaces of $G$-pairs were studied in the work of Hurtubise and Markman \cite{HurtubiseMarkman, HurtubiseMarkman1}, from a more geometric perspective.  Their work was motivated by the desire to understand the elliptic Skylanin Poisson brackets on
  loop groups, and to that end they too mainly studied the case where the
  underlying curve $C$ is elliptic -- we'll refer back to their work
  throughout the paper.  
@@ -1388,7 +1360,7 @@ This result should be compared to the conjecture made in \cite[Chapter 8.1]{Nekr
 \end{remark}
 
 \begin{remark}[$q$-Opers and Quantization]
-Finally, let us refer back to Remark \ref{q_opers_remark} and discuss the brane of $q$-opers, and the associated structures that should arise after quantization.  Recall that the multiplicative Hitchin system has a natural section defined by post-composition with the Steinberg section $T/W \to G/G$.  The moduli space of $q$-opers is the subspace of $\qconn_G(C,D,\omega^\vee)$ defined to be the multiplicative Hitchin section after rotating to the point $q$ in the twistor sphere of complex structures.
+Finally, let us refer back to Remark \ref{q_opers_remark} and discuss the brane of $q$-opers, and the associated structures that should arise after quantization.  Recall that the multiplicative Hitchin system has a natural section defined by post-composition with the Steinberg section $T/W \to G/G$.  The moduli space of $q$-opers is the subspace of $\qconn_G(C,D,\omega^\vee)$ defined to be the multiplicative Hitchin section after rotating to the point $q$ in the twistor sphere of complex structures.  A difference version of the moduli space of opers was studied in the work of Mukhin and Varchenko \cite{MukhinVarchenko}; it would be valuable to compare this definition, directly in the language of difference operators, with our approach to opers via the multiplicative Hitchin section, paralleling the work of Beilinson and Drinfeld in the additive case \cite[Section 3.1]{BDHitchin}.
 
 Now, we expect that the space of $q$-opers will, in the rational case, be Lagrangian, and therefore will admit a canonical $\bb P_0$-structure -- a $-1$-shifted Poisson structure -- on its derived algebra of functions.  It would be interesting to study the quantization of this $\bb P_0$-algebra, and to investigate its relationship with the $q$-W algebras of Sevostyanov \cite{Knight,STSSevostyanov, Sevostyanov}, of Aganagic-Frenkel-Okounkov \cite{AFO}, and of Avan-Frappat-Ragoucy \cite{AvanFrappatRagoucy}.  We'll now proceed to discuss some first steps in this direction.  Preliminary results were announced by the second author at String-Math 2017 \cite{PestunStringMath}.  
 \end{remark}
@@ -1552,15 +1524,10 @@ The meromorphic functions $y_{i}(z)$ can be expressed as ratios of the form $y_{
 \end{remark}
 
  \begin{remark}
-   Some of the results in the recent paper by Koroteev, Sage and Zeitlin \cite{KoroteevSageZeitlin} seem to overlap
-   with the specialization of the main conjecture
-   of this section to $G  = SL(N)$ and the special form of the
-   coweight coloured divisor $(D,\omega^\vee)$ such
-   that the functions $p_i(z)$ encoding $(D,\omega^\vee)$ can
-   be related to the ratio of Drinfeld polynomials $\rho_i(z)/\rho_i(q^{-1} z)$
-   in Bethe ansatz equations. 
-   This special form for the singularity datum means that the Yangian module obtained by quantization of the symplectic leaf $\mhiggs_G(C,D)$ contains (as a quotient) the finite-dimensional Drinfeld module specified by the Drinfeld polynomials $\rho_{i}(z)$. In the relation to Bethe ansatz equations
-   in quiver gauge theory \cite{NekrasovPestunShatashvili}, this specialization is known as 4d to 2d specialization and was first studied by Chen, Dorey, Hollowood, Lee \cite{ChenDoreyHollowoodLee, DoreyHollowoodLee}. 
+   Some of the results in a recent paper by Koroteev, Sage and Zeitlin \cite{KoroteevSageZeitlin} seem to overlap
+   with the specialization of the main conjecture of this section to the group $G  = \SL(N)$, in the case where the the
+   coweight coloured divisor $(D,\omega^\vee)$ takes a particular form: where the functions $p_i(z)$ encoding $(D,\omega^\vee)$ can be related to the ratio of Drinfeld polynomials $\rho_i(z)/\rho_i(q^{-1} z)$ in the Bethe ansatz equations. 
+   This special form for the singularity datum means that the Yangian module obtained by quantization of the symplectic leaf $\mhiggs_G(C,D, \omega^\vee)$ contains (as a quotient) the finite-dimensional Drinfeld module specified by the Drinfeld polynomials $\rho_{i}(z)$. In the relation to the occurence of the Bethe ansatz equations in quiver gauge theory \cite{NekrasovPestunShatashvili}, this specialization is known as 4d to 2d specialization, and was first studied by Chen, Dorey, Hollowood and Lee \cite{ChenDoreyHollowoodLee, DoreyHollowoodLee}. 
 \end{remark}
 
 \appendix

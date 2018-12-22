@@ -14,45 +14,45 @@ Warning--empty journal in NekrasovStringMath
 Warning--empty journal in PestunStringMath
 Warning--there's a number but no volume in Shapiro
 Warning--there's a number but no volume in Steinberg
-You've used 102 entries,
+You've used 104 entries,
             2543 wiz_defined-function locations,
-            1205 strings with 20586 characters,
-and the built_in function-call counts, 39360 in all, are:
-= -- 4056
-> -- 1632
+            1215 strings with 20863 characters,
+and the built_in function-call counts, 40088 in all, are:
+= -- 4129
+> -- 1670
 < -- 69
-+ -- 542
-- -- 524
-* -- 2827
-:= -- 6415
-add.period$ -- 320
-call.type$ -- 102
-change.case$ -- 589
-chr.to.int$ -- 96
-cite$ -- 113
-duplicate$ -- 1630
-empty$ -- 2898
-format.name$ -- 669
-if$ -- 8021
++ -- 554
+- -- 536
+* -- 2877
+:= -- 6534
+add.period$ -- 325
+call.type$ -- 104
+change.case$ -- 601
+chr.to.int$ -- 98
+cite$ -- 115
+duplicate$ -- 1654
+empty$ -- 2953
+format.name$ -- 683
+if$ -- 8169
 int.to.chr$ -- 7
 int.to.str$ -- 0
-missing$ -- 105
-newline$ -- 517
-num.names$ -- 306
-pop$ -- 480
+missing$ -- 106
+newline$ -- 526
+num.names$ -- 312
+pop$ -- 493
 preamble$ -- 1
-purify$ -- 700
+purify$ -- 714
 quote$ -- 0
-skip$ -- 1354
+skip$ -- 1381
 stack$ -- 0
-substring$ -- 2395
-swap$ -- 250
+substring$ -- 2434
+swap$ -- 252
 text.length$ -- 69
 text.prefix$ -- 44
 top$ -- 0
-type$ -- 792
+type$ -- 808
 warning$ -- 11
-while$ -- 397
-width$ -- 106
-write$ -- 1323
+while$ -- 405
+width$ -- 108
+write$ -- 1346
 (There were 11 warnings)
