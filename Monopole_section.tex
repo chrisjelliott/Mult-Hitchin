@@ -1,0 +1,241 @@
+\documentclass[11pt, oneside, reqno]{amsart}
+
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[all, cmtip]{xy}
+\usepackage[pdftex, bookmarks=true, linkbordercolor={0 0 1}]{hyperref}
+\usepackage[margin=1in]{geometry}
+\usepackage[titletoc,title]{appendix}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{11pt}
+
+\theoremstyle{definition} \newtheorem{definition}{Definition}[section]
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{prop}[definition]{Proposition}
+\newtheorem{conjecture}[definition]{Conjecture}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{construction}[definition]{Construction}
+\newtheorem{observation}[definition]{Observation}
+\newtheorem{assumption}[definition]{Assumption}
+\newtheorem{claimnum}[definition]{Claim}
+\newtheorem*{nonum}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{claim}{Claim}
+\newtheorem*{subclaim}{Subclaim}
+\newtheorem*{fact}{Fact}
+\newtheorem*{problem}{Problem}
+\newtheorem*{ack}{Acknowledgements}
+
+\theoremstyle{definition} \newtheorem{remark}[definition]{Remark}
+\theoremstyle{definition} \newtheorem{remarks}[definition]{Remarks}
+\theoremstyle{definition} \newtheorem{question}[definition]{Question}
+\theoremstyle{definition} \newtheorem*{note}{Note}
+\theoremstyle{definition} \newtheorem{example}[definition]{Example}
+\theoremstyle{definition} \newtheorem{examples}[definition]{Examples}
+
+\newtheorem{pseudoconj}[definition]{Pseudo-Conjecture}
+
+
+\renewcommand{\gg}{\mathfrak{g}}
+
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\mr}[1]{\mathrm{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\mf}[1]{\mathfrak{#1}}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\bo}[1]{\boldsymbol{#1}}
+
+\newcommand{\inj}{\hookrightarrow}
+\newcommand{\bs}{\ \backslash \ }
+\newcommand{\dd}{\partial}
+\newcommand{\del}{\partial}
+
+\newcommand{\ul}[1]{\underline{#1}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\PGL}{\mathrm{PGL}}
+\newcommand{\spin}{\mathrm{Spin}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\so}{\mathfrak{so}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\renewcommand{\sp}{\mathfrak{sp}}
+\newcommand{\gl}{\mathfrak{gl}}
+
+\newcommand{\sfe}{\mathsf{e}}
+\newcommand{\sff}{\mathsf{f}}
+\newcommand{\sfh}{\mathsf{h}}
+\newcommand{\sfs}{\mathsf{s}}
+\newcommand{\frakq}{\mathfrak{q}}
+
+\newcommand{\sub}{\subseteq}
+\newcommand{\iso}{\cong}
+
+\DeclareMathOperator{\coh}{Coh}
+\DeclareMathOperator{\higgs}{Higgs}
+\DeclareMathOperator{\bun}{Bun}
+\DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\spec}{Spec}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\EOM}{EOM}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\dvol}{dvol}
+\DeclareMathOperator{\aut}{Aut}
+\DeclareMathOperator{\sym}{Sym}
+\DeclareMathOperator{\Flat}{Flat}
+\DeclareMathOperator{\mhiggs}{mHiggs}
+\DeclareMathOperator{\mon}{Mon}
+\DeclareMathOperator{\diff}{Diff}
+\DeclareMathOperator{\Hol}{Hol}
+\DeclareMathOperator{\mhitch}{mHitch}
+
+\newcommand{\map}{\ul{\mr{Map}}}
+\newcommand{\qconn}{q\text{-Conn}}
+\newcommand{\conn}{\text{-Conn}}
+\newcommand{\epsconn}{\varepsilon\text{-Conn}}
+\renewcommand{\d}{\mathrm{d}}
+\newcommand{\fr}{\mathrm{fr}}
+\newcommand{\ad}{\mr{ad}}
+\newcommand{\Ad}{\mr{Ad}}
+\newcommand{\HT}{\mr{HT}}
+
+\title{Multiplicative Hitchin Systems and Supersymmetric Gauge Theory}
+\author{Chris Elliott \and Vasily Pestun}
+\date{\today}
+
+\newcommand{\chris}[1]{(\textcolor{red}{Chris: #1})}
+\newcommand{\vasily}[1]{(\textcolor{blue}{Vasily: #1})}
+
+\begin{document}
+ 
+\setcounter{section}{3} 
+ 
+\section{Periodic Monopoles} \label{periodic_monopole_section}
+Moduli spaces of $q$-connections on a Riemann surface $C$ are closely related to moduli spaces of periodic monopoles, i.e. monopoles on 3-manifolds that fiber over the circle (more specifically, with fiber $C$ and monodromy determined by $q$).  Let $G_\RR$ be a compact Lie group whose complexification is $G$.  The discussion in this section will mostly follow that of \cite{CharbonneauHurtubise, Smith}.
+
+Write $M = C\times_q S^1_R$ for the $C$-bundle over $S^1$ with monodromy given by the automorphism $q$.  More precisely, $M$ is the Riemannian 3-manifold obtained by gluing the ends of the product $C \times [0,2\pi R]$ of Riemannian manifolds by the isometry $(x,2\pi R) \sim (q(x), 0)$.
+
+\begin{definition}
+A \emph{monopole} on the Riemannian 3-manifold $M = C \times_q S^1_R$ is a smooth principal $G_\RR$-bundle $\bo P$ equipped with a connection $A$ and a section $\Phi$ of the associated bundle $\gg_{\bo P}$ satisfying the Bogomolny equation 
+\[\ast F_A = \d_A \Phi.\]
+\end{definition}
+
+\begin{remark}
+We should emphasise the difference between the Riemannian 3-manifold $M = C \times_q S^1_R$ appearing in this section and the derived stack $C \times_q S^1_B$ (the mapping torus) appearing in the previous section.  These should be thought of as smooth and algebraic realizations of the same object (justified by the comparison Theorem \ref{monopole_qconn_comparison_thm}) but they are a priori defined in different mathematical contexts.
+\end{remark}
+
+We can rephrase the data of a monopole on $M$ as follows.  Let $C_0 = C \times \{0\}$ be the fiber over $0$ in $S^1$, viewed as a Riemann surface.  Let $P$ be the restriction of the complexified bundle $\bo P_\CC$ to $C_0$.  Consider first the restriction of the complexification of $A$ to a connection $A_0$ on $P$ over $C_0$.  The $(0,1)$ part of $A_0$ automatically defines a holomorphic structure on $P$.  We can introduce an additional piece of structure on this holomorphic $G$-bundle.  In order to do so we can decompose the Bogomolny equation into one real and one complex equation as follows.
+\begin{align*}
+F_{A_0} - \nabla_t \Phi \dvol_{C_0} &= 0 \\
+[\ol{\del}_{A_0}, \nabla_t - i\Phi \d t] &= 0 
+\end{align*}
+where $\nabla_t$ is the component of the covariant derivative $\d_A$ normal to $C_0$.  
+
+\begin{remark}
+Note that the complex equation only depends on a complex structure on the curve $C$, and only the real equation depends on the full Riemannian metric.
+\end{remark}
+
+\begin{definition} 
+From now on we'll use the notation $\mc A$ for the combination $\nabla_t - i\Phi \d t$: an element of the space $\Omega^0(M, \gg_P)\d t$ of sections of the complex vector bundle $\gg_P$ which is holomorphic after restriction to the curve $C_0$. 
+\end{definition}
+
+Let us now introduce singularities into the story.  We'll keep the description brief, referring the reader to \cite{CharbonneauHurtubise, Smith} for details.
+\begin{definition}
+Let $D \sub M$ be a finite subset.  Let $\omega^\vee$ be a choice of coweight for $G$.  A monopole on $M \bs D$ has \emph{Dirac singularity} at $z \in D$ with charge $\omega^\vee$ if locally on a neighborhood of $z$ in $M$ it is obtained by pulling back under $\omega^\vee$ the standard Dirac monopole solution to the Bogomolny equation, where $\Phi$ is spherically symmetric with a simple pole at $z$, and the restriction of a connection $A$ to a two-sphere $S^2$ enclosing the singularity defines a $U(1)$ bundle on this $S^2$ of degree $1$ so that
+    \[\frac{1}{2\pi} \int_{S^2} F = 1 .\]
+  See e.g. \cite[Section 2.2]{CharbonneauHurtubise} for a more detailed description.
+\end{definition}
+
+We can also introduce a framing (or a reduction of structure group as in the trigonometric example, though we won't consider the latter in this paper).  As usual let $c \in C$ be a point fixed by the automorphism $q$.
+\begin{definition}
+  A monopole on $M$ with \emph{framing} at the point $c \in C$ is a monopole $(\bo P,A,\Phi)$ on $M$ (possibly with Dirac singularities at $D$) along with a trivialization of the restriction of $\bo P$ to the circle $\{c\} \times S^1_R$, with the condition that the holonomy of $\mc A$ around this circle lies in a fixed conjugacy class $f \in G/G$.
+\end{definition}
+
+The moduli theory of monopoles on general compact 3-manifolds was described by Pauly \cite{Pauly}.  In this paper we'll be interested in moduli spaces $\mon_G(M, D, \omega^\vee)$ of monopoles on 3-manifolds of the form $M = C \times S^1$, with prescribed Dirac singularities and possibly with a fixed framing at a point in $C$.  
+
+Let us begin to address the relationship between periodic monopoles and $q$-connections.  We will first recall the comparison theorem between multiplicative Higgs bundles and periodic monopoles proved by Charbonneau--Hurtubise \cite{CharbonneauHurtubise} for $\GL_n$, and Smith \cite{Smith} for general $G$. This approach was first suggested by Kapustin-Cherkis \cite{CherkisKapustin2} under the name `spectral data'. 
+
+\begin{theorem}[Charbonneau--Hurtubise, Smith] \label{CHS_thm}
+There is an analytic isomorphism between the moduli space of polystable monopoles on $C \times S^1$ with Dirac singularities at $D \times \{t_0\}$ (and a possible framing on $\{c\} \times S^1$) and the moduli space of multiplicative Higgs bundles on $C$ with singularities at $D$ and framing at $\{c\}$.  More precisely there is an analytic isomorphism
+\[H \colon \mon^{(\fr)}_G(C \times S^1, D \times \{t_0\}, \omega^\vee) \to \mhiggs_G^{\text{ps,(fr)}}(C, D, \omega^\vee)\]
+given by the holonomy map around $S^1$, i.e. sending a monopole $(\bo P, \mc A)$ to the holomorphic bundle $P = (\bo P_\CC)|_{C_0}$ with multiplicative Higgs field $g = \Hol_{S^1}(\mc A) \colon P \to P$.
+\end{theorem}
+
+\begin{remark}
+Note that in this statement we assumed that all the singularities occur in the same location in $S^1$, i.e. in the same slice $C \times {t_0}$.  This assumption is not necessary, but there is a constraint on the possible locations of the singularities as explained in \cite[Proposition 3.5]{CharbonneauHurtubise}.  
+\end{remark}
+
+We would like to generalize this theorem to cover the twisted product $C \times_q S^1$ given by an automorphism $q$ of the curve $C$.  The most important example -- for the purposes of the present paper -- is the translation automorphism of $\bb{CP}^1$ sending $z$ to $z + \eps$, fixing the framing point $\infty$.  This automorphism is an isometry for the flat metric on $\RR^2$ but \emph{not} for the round metric on $\bb{CP}^1$, which means that the moduli space of monopoles on the twisted product is only defined for the flat metric, and therefore that we'll have to generalize slightly the theorem of Charbonneau--Hurtubise and Smith to include the flat metric, with its singularity at infinity.
+
+\begin{remark}
+The moduli space of periodic monopoles on $\RR^2 \times S^1$ specifically has been studied in the mathematics literature by Foscolo \cite{FoscoloDef} , applying the analytic techniques of deformation theory to earlier work on periodic monopoles by Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin2}. This analysis considers a less restrictive boundary condition at infinity in $\RR^2$ than a framing, and therefore requires more sophisticated analysis than we'll need to consider in the present paper.
+\end{remark}
+
+In this case -- where we consider the 3-manifold $M = \bb{CP}^1 \times_\eps S^1$ with the flat Riemannian metric, singular at $\{\infty\} \times S^1$ -- the moduli space of periodic monopoles can be obtained as a hyperk\"ahler quotient.  Let us fix Dirac singularities at $D \times \{t_0\}$, and a framing at $\infty$.  Consider the infinite-dimensional vector space $\mc V$ consisting of pairs $(A,\Phi)$ where $A$ is a connection on a fixed principal $G_\RR$-bundle $\bo P$ on $M$, $\Phi$ is a section of $\gg_{\bo P}$, and the pairs $(A,\Phi)$ have a Dirac singularity with charge $\omega^\vee_{z_i}$ at each $(z_i,t_0)$ in $D \times \{t_0\}$.  Let $\mc G$ be the group of gauge transformations of the bundle $\bo P$.
+
+The hyperk\"ahler moment map is given by the Bogomolny functional, namely
+\begin{align*}
+\mu \colon \mc V &\to \Omega^1(M \bs (D \times \{t_0\}); (\gg_\RR)_{\bo P}) \\
+(A,\Phi) &\mapsto \ast F_A - \d_A \Phi.
+\end{align*}
+
+\begin{definition} \label{monopole_moduli_def}
+Let $D$ be a finite subset $\{(z_1,t_0), \ldots, (z_k, t_0)\}$ of points in $M = \bb{CP}^1 \times S^1_R$, and let $\omega^\vee_{i}$ be a choice of coweight for each point in $D$. The moduli space $\mon_G(M, D, \omega^\vee)$ is the hyperk\"ahler quotient
+\[\mon_G(M, D, \omega^\vee) = \mu^{-1}(0) / \mc G.\]
+\end{definition}
+
+\begin{remark} \label{flat_metric_remark}
+Note that this definition still makes sense when we use the flat Riemannian metric on $\bb{CP}^1$, which is singular at the point $z = \infty$.  If $A$ is a gauge field on $\bb{CP}^1 \times S^1$ where the pair $(A,\Phi)$ have Dirac singularities at $D \times \{t_0\}$, then the Hodge dual $\ast_{\mr{flat}} (F_A)|_{\CC}$ in $\Omega^1((\CC \times S^1) \bs (D \times \{t_0\}; (\gg_\RR)_{\bo P})$ extends by zero to a 1-form on $(\bb{CP}^1 \times S^1) \bs (D \times \{t_0\})$.  Indeed, for the Hodge dual of a 2-form $\ast_{\mr{flat}} (F_A)|_\CC = |z|^{-2} \ast_{\mr{round}} F_A$.  The hyperk\"ahler moment map is, therefore, still well-defined.
+\end{remark}
+
+\begin{theorem} \label{monopole_qconn_comparison_thm}
+There is an analytic isomorphism between the moduli space of polystable monopoles on $\bb{CP}^1 \times_q S^1$ with Dirac singularities at $D \times \{t_0\}$ and a framing on $\{\infty\} \times S^1$, and the moduli space of $\eps$-connections on $\bb{CP}^1$ with singularities at $D$ and framing at $\{\infty\}$.  More precisely there is an analytic isomorphism
+\[H \colon \mon^{\fr}_G(\bb{CP}^1 \times_\eps S^1, D \times \{t_0\}, \omega^\vee) \to \epsconn_G^{\text{ps,fr}}(\bb{CP}^1, D, \omega^\vee)\]
+given by the holonomy map around $S^1$, i.e. sending a monopole $(\bo P, \mc A)$ to the holomorphic bundle $P = (\bo P_\CC)|_{\bb{CP}^1 \times \{0\}}$ with $q$-connection $g = \Hol_{S^1}(\mc A) \colon P \to \eps^*(P)$.
+\end{theorem}
+
+\begin{proof}
+There are two subtleties that we need to deal with in order to extend Theorem \ref{CHS_thm} to this more general setting.  First, we need to account for the twist by $\eps$: this is fairly straightforward, by an argument that only uses the fact that the translation $\eps$ lies in the connected component of the identity in the automorphism group of our Riemann surface.  Second, we need to make sure that the argument still works when we study solutions to the Bogomolny equation for the flat metric on $\RR^2$: the argument developed by Charbonneau and Hurtubise builds on a theorem of Simpson which applies only for curves of finite volume, so we must ensure that Simpson's argument can still be applied on $\RR^2 \bs D$, as long as the monopoles have a second order zero at $\infty$ (guaranteed by the existence of the framing).
+
+We'll begin by considering injectivity.  Let $(\bo P, \mc A)$ and $(\bo P', \mc A')$ be a pair of periodic monopoles on $\bb{CP}^1 \times_\eps S^1$ with images $(P,g)$ and $(P', g')$ respectively, and choose a bundle isomorphism $\tau \colon P \to P'$ intertwining the $\eps$-connections $g$ and $g'$.  One observes first that $\bo P$ and $\bo P'$ are also isomorphic $G$-bundles since, by intertwining with the $q$-connections, we have an isomorphism $\bo P|_{\bb{CP}^1 \times \{t\}} \to \bo P'|_{\bb{CP}^1 \times \{t\}}$ for every $t \in S^1$.  To match the monopole structures, we use the same argument as in \cite[Proposition 5.6]{Smith}. 
+
+Now, let us consider surjectivity.  We extend the argument of Charbonneau--Hurtubise and Smith in two steps, in order to account for the two new subtleties described above.  We begin by extending a holomorphic $G$-bundle $P$ on $\bb{CP}^1 \times \{0\}$ with $\eps$-connection $g$ to a $G$-bundle on $M \bs (D \times \{t_0\}) = (\bb{CP}^1 \times_\eps S^1_R) \bs (D \times \{t_0\})$  Let $\gamma \colon [-2\pi R,2\pi R] \to \aut(\CC)$ be the straight line with $\gamma(-2\pi R) = -\eps$, $\gamma(0)=0$ and $\gamma(2\pi R) = \eps$.  Let $\wt M$ be the 3-manifold
+\[\wt M = ((-2\pi R, 2\pi R) \times \bb{CP}^1) \bs \bigcup_{j=1}^k (A^+_j \cup A^-_j)\]
+where $A^+_j$ is the arc $\{(t+ t_0,\gamma(t)(z_j)) \colon t \in (0, 2\pi R - t_0]\}$ and $A^-_j$ is the arc $\{(t + t_0 - 4 \pi R,\gamma(t)(z_j)) \colon t \in [2\pi R-t_0, 2 \pi R)\}$.
+
+Let $\pi \colon \wt M \to \bb{CP}^1$ be the projection sending $(t,z)$ to $\gamma(t)(z)$.  The bundle $P$ pulls back to a bundle $\pi^*(P)$ on $\wt M$.  We obtain a bundle on $M \bs (D \times t_0)$ by applying the identification $(t,z) \sim (t - 2 \pi R, q(z))$.  This bundle extends to an $S^1$-invariant holomorphic $G$-bundle on $M \times S^1$.  The remainder of the proof -- verifying the existence of the monopole structure associated to an appropriate choice of hermitian structure -- consists of local analysis which is independent of the value of the parameter $\eps$. 
+
+In order to construct the monopole structure, we must extend the key theorem of Simpson \cite[Theorem 1]{Simpson} upon which Charbonneau and Hurtubise's argument relies.  Specifically, Simpson's theorem applies only to curves with finite volume.  In the proof of Simpson's theorem, this assumption is used in the statement of \cite[Proposition 5.3]{Simpson}, and particularly in Lemma 5.4 of its proof.  To remove this assumption, we need to restrict the sections $s$ to have $\|s\|_{L^1} < \infty$ in a contractible open neighbourhood of $\infty$ disjoint from the divisor $D$ (the analysis near the Dirac singularities has already been performed by Charbonneau--Hurtubise).  In his proof of Theorem 1, Simpson applies these results to an initial metric $K$, and a new metric $H_t = Ke^{s_t}$ obtained by solving the heat equation.  
+
+Now, $H_t$ arises as a solution to the heat equation 
+\[H^{-1} \frac{\d H}{\d t} = -i \Lambda F_H^\perp\]
+where $\Lambda$ is the adjoint of the operator wedging with the standard K\"ahler form $\omega$ on $\CC$.  If we work in a neighbourhood of $\infty$, we can assume that we're working with a flat initial metric $K$, which means we're looking for a solution to the heat equation on flat $\RR^2$: the equation 
+\[\left(\frac {\d}{\d t} + \Delta\right)e^{s_t} = 0\]
+where $\Delta$ is the Laplacian for the flat metric on $\RR^2$.  Therefore, in particular, $s_t$ has a second order zero at $\infty \in \bb{CP}^1$, and therefore it has finite $L^1$ norm as required. 
+\end{proof}
+
+\begin{remark}
+Mochizuki \cite{Mochizuki} proved a stronger result in the rational case for the group $G = \GL_n$.  He allows not just a framing at infinity in $\bb{CP}^1$ but also a singularity encoded in terms of a $B$-reduction of the bundle.  Again, we won't work in this generality in the present paper.
+\end{remark} 
+
+\bibliographystyle{alpha}
+\bibliography{Mult_Hitchin}
+
+\textsc{Institut des Hautes \'Etudes Scientifiques}\\
+\textsc{35 Route de Chartres, Bures-sur-Yvette, 91440, France}\\
+\texttt{celliott@ihes.fr}\\ 
+\texttt{pestun@ihes.fr}
+ 
+\end{document}
