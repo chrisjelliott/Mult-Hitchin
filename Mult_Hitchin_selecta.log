@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.17)  9 MAR 2019 19:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.17)  4 FEB 2019 18:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Mult_Hitchin_11_18_draft.tex
-(./Mult_Hitchin_11_18_draft.tex
+**Mult_Hitchin_selecta.tex
+(./Mult_Hitchin_selecta.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 5 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsart.cls
@@ -389,29 +389,29 @@ Package: appendix 2009/09/02 v1.2b extra appendix facilities
 )
 \c@definition=\count126
 
-(./Mult_Hitchin_11_18_draft.aux)
-\openout1 = `Mult_Hitchin_11_18_draft.aux'.
+(./Mult_Hitchin_selecta.aux)
+\openout1 = `Mult_Hitchin_selecta.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Try loading font information for U+msa on input line 122.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Try loading font information for U+msa on input line 123.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 122.
+LaTeX Font Info:    Try loading font information for U+msb on input line 123.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -430,9 +430,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \makeMPintoPDFobject=\count132
 \everyMPtoPDFconversion=\toks35
 )
-Package xypdf Info: Line width: 0.43799pt on input line 122.
+Package xypdf Info: Line width: 0.43799pt on input line 123.
 \AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring OFF on input line 122.
+Package hyperref Info: Link coloring OFF on input line 123.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -441,13 +441,13 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count133
 )
-LaTeX Info: Redefining \ref on input line 122.
-LaTeX Info: Redefining \pageref on input line 122.
-LaTeX Info: Redefining \nameref on input line 122.
+LaTeX Info: Redefining \ref on input line 123.
+LaTeX Info: Redefining \pageref on input line 123.
+LaTeX Info: Redefining \nameref on input line 123.
 
-(./Mult_Hitchin_11_18_draft.out) (./Mult_Hitchin_11_18_draft.out)
+(./Mult_Hitchin_selecta.out) (./Mult_Hitchin_selecta.out)
 \@outlinefile=\write4
-\openout4 = `Mult_Hitchin_11_18_draft.out'.
+\openout4 = `Mult_Hitchin_selecta.out'.
 
 
 *geometry* driver: auto-detecting
@@ -462,8 +462,8 @@ LaTeX Info: Redefining \nameref on input line 122.
 * v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=469.75502pt
-* \textheight=650.43001pt
+* \textwidth=355.65944pt
+* \textheight=526.37598pt
 * \oddsidemargin=0.0pt
 * \evensidemargin=0.0pt
 * \topmargin=-22.0pt
@@ -486,74 +486,228 @@ LaTeX Info: Redefining \nameref on input line 122.
 
 
 Class amsart Warning: Abstract should precede \maketitle in AMS document classe
-s; reported on input line 125.
+s; reported on input line 126.
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 126.
+LaTeX Font Info:    Try loading font information for U+euf on input line 127.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
-[3]
-Overfull \hbox (8.2233pt too wide) in paragraph at lines 239--240
-\OT1/cmr/m/n/10.95 the Pois-son struc-ture on $\OMS/cmsy/m/n/10.95 O\OT1/cmr/m/
-n/10.95 (\OML/cmm/m/it/10.95 G[]\OT1/cmr/m/n/10.95 [[\OML/cmm/m/it/10.95 z[]\OT
-1/cmr/m/n/10.95 ]])$ co-in-cides with the Pois-son bracket on $\OMS/cmsy/m/n/10
-.95 O\OT1/cmr/m/n/10.95 ([][]([][]\OML/cmm/m/it/10.95 ; D; ![]\OT1/cmr/m/n/10.9
-5 ))$. 
+)
+Overfull \hbox (1.6702pt too wide) in paragraph at lines 141--167
+ \OT1/cmr/m/n/10.95 1.1.\OT1/cmr/bx/n/10.95 Multiplicative Higgs Bun-dles.[][] 
+\OT1/cmr/m/n/10.95 We'll first de-scribe the mod-uli space
  []
 
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (12.9905pt too wide) in paragraph at lines 168--169
+\OT1/cmr/m/it/10.95 bun-dles \OT1/cmr/m/n/10.95 on $\OML/cmm/m/it/10.95 C$ \OT1
+/cmr/m/n/10.95 with pre-scribed sin-gu-lar-i-ties ly-ing at the points $\OML/cm
+m/m/it/10.95 D \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 z[
+]; [] ; z[]\OMS/cmsy/m/n/10.95 g$\OT1/cmr/m/n/10.95 ,
+ []
+
+[2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
 [4]
+Overfull \hbox (18.66739pt too wide) in paragraph at lines 243--244
+[][]\OT1/cmr/bx/n/10.95 Theorem 1.4 \OT1/cmr/m/n/10.95 (See The-o-rem []7.1[])\
+OT1/cmr/bx/n/10.95 . []\OT1/cmr/m/n/10.95 The map $[][]([][]\OML/cmm/m/it/10.95
+ ; D; ![]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 G[]\OT1
+/cmr/m/n/10.95 [[\OML/cmm/m/it/10.95 z[]\OT1/cmr/m/n/10.95 ]]$,
+ []
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 293.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 293.
+Overfull \hbox (6.64417pt too wide) in paragraph at lines 243--244
+\OMS/cmsy/m/n/10.95 O\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 G[]\OT1/cmr/m/n/10
+.95 [[\OML/cmm/m/it/10.95 z[]\OT1/cmr/m/n/10.95 ]])$ co-in-cides with the Pois-
+son bracket on $\OMS/cmsy/m/n/10.95 O\OT1/cmr/m/n/10.95 ([][]([][]\OML/cmm/m/it
+/10.95 ; D; ![]\OT1/cmr/m/n/10.95 ))$. 
+ []
 
 [5] [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 327.
+(hyperref)                removing `math shift' on input line 297.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 327.
+(hyperref)                removing `math shift' on input line 297.
 
-[7] [8] [9] [10] <xymatrix 2x2 154> [11] [12] <xymatrix 4x4 533> [13] [14]
-[15] [16] [17] [18] [19] [20] [21] <xymatrix 2x2 182>
-Overfull \hbox (1.30017pt too wide) in paragraph at lines 740--742
-\OT1/cmr/m/n/10.95 where $[]([])$ acts si-mul-ta-ne-ously on $[]$ and on the ci
-r-cle $\OML/cmm/m/it/10.95 S[]$\OT1/cmr/m/n/10.95 , un-der the iden-ti-fi-ca-ti
-on $[][](\OML/cmm/m/it/10.95 E\OT1/cmr/m/n/10.95 ) =
+[7] [8] [9]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 331.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 331.
+
+[10]
+Overfull \hbox (13.63815pt too wide) in paragraph at lines 375--376
+[]\OT1/cmr/m/n/10.95 One can iden-tify $[][](\U/msb/m/n/10.95 B\OT1/cmr/m/n/10.
+95 )$ with the dou-ble quo-tient stack $\OML/cmm/m/it/10.95 L[]G  \OMS/cmsy/m/n
+/10.95 n  \OML/cmm/m/it/10.95 LG=L[]G$\OT1/cmr/m/n/10.95 ,
  []
 
-[22] [23] [24] <xymatrix 3x1 98> [25] [26] [27] [28]
+[11]
+Overfull \hbox (47.42097pt too wide) detected at line 394
+\OML/cmm/m/it/10.95 q[][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 C; D; \OMS/cms
+y/m/n/10.95 ^^V \OML/cmm/m/it/10.95 ![]\OT1/cmr/m/n/10.95 ) = \OML/cmm/m/it/10.
+95 q[][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 C; D\OT1/cmr/m/n/10.95 ) \OMS/c
+msy/m/n/10.95 ^^B[] [] \OML/cmm/m/it/10.95 :
+ []
+
+[12] [13] [14]
+Underfull \vbox (badness 5431) has occurred while \output is active []
+
+ [15]
+<xymatrix 2x2 154> [16] [17] [18]
+Overfull \hbox (23.19754pt too wide) in paragraph at lines 514--515
+[][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 C\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n
+/10.95 ^^B[] [][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 C  \OMS/cmsy/m/n/10.95
+ n  \OML/cmm/m/it/10.95 D\OT1/cmr/m/n/10.95 )$ where the map $\OML/cmm/m/it/10.
+95 g [] []  [][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 C\OT1/cmr/m/n/10.95 ) \
+OMS/cmsy/m/n/10.95 ! [][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 C  \OMS/cmsy/m
+/n/10.95 n  \OML/cmm/m/it/10.95 D\OT1/cmr/m/n/10.95 )$
+ []
+
+<xymatrix 4x4 533> [19] [20] [21] [22]
+Overfull \hbox (6.11255pt too wide) in paragraph at lines 585--587
+\OT1/cmr/m/n/10.95 where $\OML/cmm/m/it/10.95 V$ \OT1/cmr/m/n/10.95 is the five
+-dimensional defin-ing rep-re-sen-ta-tion of $[](5; \U/msb/m/n/10.95 C\OT1/cmr/
+m/n/10.95 ) [] [](4; \U/msb/m/n/10.95 C\OT1/cmr/m/n/10.95 )$,
+ []
+
+
+Overfull \hbox (10.18242pt too wide) in paragraph at lines 585--587
+\OT1/cmr/m/n/10.95 there's a unique non-trivial way of defin-ing an ad-di-tiona
+l bracket $^^@ [] []  [][](\OML/cmm/m/it/10.95 S \OMS/cmsy/m/n/10.95 
+
+ []
+
+
+Overfull \hbox (5.18263pt too wide) detected at line 589
+\U/euf/m/n/10.95 A[] \OT1/cmr/m/n/10.95 = ([](4; \U/msb/m/n/10.95 C\OT1/cmr/m/n
+/10.95 ) \OMS/cmsy/m/n/10.95 ^^H []\OT1/cmr/m/n/10.95 (2\OML/cmm/m/it/10.95 k[]
+\OT1/cmr/m/n/10.95 ; \U/msb/m/n/10.95 C\OT1/cmr/m/n/10.95 )[] \OMS/cmsy/m/n/10.
+95 ^^H []\OT1/cmr/m/n/10.95 (2\OML/cmm/m/it/10.95 k[]\OT1/cmr/m/n/10.95 ; \U/ms
+b/m/n/10.95 C\OT1/cmr/m/n/10.95 )[] \OMS/cmsy/m/n/10.95 ^^H \OML/cmm/m/it/10.95
+ V\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^H \OT1/cmr/m/n/10.95 ^^E(\OML/cmm/
+m/it/10.95 S[] \OMS/cmsy/m/n/10.95 
+ \OML/cmm/m/it/10.95 W[] \OMS/cmsy/m/n/10.95 ^^H \OML/cmm/m/it/10.95 S[] \OMS/c
+msy/m/n/10.95 
+ \OML/cmm/m/it/10.95 W[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ;
+ []
+
+[23] [24] [25] [26] [27] [28]
+Overfull \hbox (55.3595pt too wide) in paragraph at lines 686--687
+\OT1/cmr/m/n/10.95 crete. In each case, by ``B-branes'' we'll just mean the cat
+-e-gory $[](\OML/cmm/m/it/10.95 q[][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 C;
+ D; ![]\OT1/cmr/m/n/10.95 ))$
+ []
+
+
+Overfull \hbox (2.92816pt too wide) in paragraph at lines 686--687
+\OT1/cmr/m/n/10.95 of co-her-ent sheaves. By ``A-branes'' we'll mean some ver-s
+ion of $\OML/cmm/m/it/10.95 q[]$\OT1/cmr/m/it/10.95 -difference
+ []
+
+[29] [30] <xymatrix 2x2 182> [31] [32] [33]
+Overfull \hbox (3.06961pt too wide) in paragraph at lines 817--819
+\OT1/cmr/m/n/10.95 the holo-mor-phic bun-dle $\OML/cmm/m/it/10.95 P \OT1/cmr/m/
+n/10.95 = ([][])\OMS/cmsy/m/n/10.95 j[]$ \OT1/cmr/m/n/10.95 with $\OML/cmm/m/it
+/10.95 q$\OT1/cmr/m/n/10.95 -connection $\OML/cmm/m/it/10.95 g \OT1/cmr/m/n/10.
+95 = [][](\OMS/cmsy/m/n/10.95 A\OT1/cmr/m/n/10.95 ) [] [] \OML/cmm/m/it/10.95 P
+ \OMS/cmsy/m/n/10.95 !
+ []
+
+[34] [35]
+Overfull \hbox (9.82803pt too wide) in paragraph at lines 845--847
+\OT1/cmr/m/n/10.95 where $\OMS/cmsy/m/n/10.95 G$ \OT1/cmr/m/n/10.95 is the grou
+p of gauge trans-for-ma-tions of $[]$ and $\OML/cmm/m/it/10.95 ^^V [] [] \OMS/c
+msy/m/n/10.95 V ! \OT1/cmr/m/n/10.95 
+[](\OML/cmm/m/it/10.95 M\OT1/cmr/m/n/10.95 ; (\U/euf/m/n/10.95 g[]\OT1/cmr/m/n/
+10.95 )[])$
+ []
+
+<xymatrix 3x1 98>
+Overfull \hbox (102.46281pt too wide) detected at line 851
+[] \OMS/cmsy/m/n/10.95 
+[] \U/msb/m/n/10.95 C
+ []
+
+[36] [37]
+Overfull \hbox (45.95827pt too wide) in paragraph at lines 901--902
+[][]\OT1/cmr/bx/n/10.95 Proposition 4.17 \OT1/cmr/m/n/10.95 ([[], Propo-si-tion
+ 3.1.3])\OT1/cmr/bx/n/10.95 . []\OT1/cmr/m/n/10.95 The tan-gent space of $[][](
+\OML/cmm/m/it/10.95 C; D; ![]\OT1/cmr/m/n/10.95 )$
+ []
+
+
+Overfull \hbox (8.09927pt too wide) in paragraph at lines 909--910
+[][]\OT1/cmr/bx/n/10.95 Corollary 4.19. []\OT1/cmr/m/n/10.95 In the ra-tio-nal 
+case, the mod-uli space $[][]([][]\OML/cmm/m/it/10.95 ; D; ![]\OT1/cmr/m/n/10.9
+5 )$
+ []
+
+
+Overfull \hbox (7.14037pt too wide) in paragraph at lines 917--918
+\OT1/cmr/m/n/10.95 de-scrip-tion on the mono-pole side. We de-fine a cover $\OM
+S/cmsy/m/n/10.95 U \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.9
+5 U[]; U[]; [] ; U[]; U[]\OMS/cmsy/m/n/10.95 g$
+ []
+
+[38] [39]
+Overfull \hbox (34.48302pt too wide) in paragraph at lines 941--942
+[]\OT1/cmr/m/n/10.95 Explicitly a 0-cochain in this []Cech com-plex is given by
+ $(\OML/cmm/m/it/10.95 []; \OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 []\OMS/cm
+sy/m/n/10.95 g\OML/cmm/m/it/10.95 ; []; ^^L[]; \OMS/cmsy/m/n/10.95 f\OML/cmm/m
+/it/10.95 ^^L[]\OMS/cmsy/m/n/10.95 g\OT1/cmr/m/n/10.95 )$
+ []
+
+
+Overfull \hbox (7.18015pt too wide) in paragraph at lines 954--955
+[][]\OT1/cmr/bx/n/10.95 Proposition 4.20. []\OT1/cmr/m/n/10.95 The de-riv-a-tiv
+e $d\OML/cmm/m/it/10.95 H [] [] \U/msb/m/n/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cm
+m/m/it/10.95 U[] \OMS/cmsy/m/n/10.95 ^^B \OML/cmm/m/it/10.95 S[]\OT1/cmr/m/n/10
+.95 ; \OMS/cmsy/m/n/10.95 F[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ! \U/msb/
+m/n/10.95 H[]\OT1/cmr/m/n/10.95 (\U/msb/m/n/10.95 D[]\OT1/cmr/m/n/10.95 ; \OMS/
+cmsy/m/n/10.95 F[]\OT1/cmr/m/n/10.95 )$
+ []
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 962.
+(hyperref)                removing `math shift' on input line 966.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 962.
+(hyperref)                removing `subscript' on input line 966.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 962.
+(hyperref)                removing `math shift' on input line 966.
 
-[29] [30]
+[40]
+Overfull \hbox (12.79968pt too wide) detected at line 1008
+\OML/cmm/m/it/10.95 a\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 z\OT1/cmr/m/n/10.9
+5 ) = []\OML/cmm/m/it/10.95 ;  b\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 z\OT1/c
+mr/m/n/10.95 ) = []\OML/cmm/m/it/10.95 ;  c\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10
+.95 z\OT1/cmr/m/n/10.95 ) = []\OML/cmm/m/it/10.95 ;  d\OT1/cmr/m/n/10.95 (\OML/
+cmm/m/it/10.95 z\OT1/cmr/m/n/10.95 ) = []\OML/cmm/m/it/10.95 ;
+ []
+
+[41] [42]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1076.
+(hyperref)                removing `math shift' on input line 1080.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1076.
+(hyperref)                removing `math shift' on input line 1080.
 
-
-Overfull \hbox (7.22888pt too wide) detected at line 1092
+[43]
+Overfull \hbox (121.32446pt too wide) detected at line 1096
 \OML/cmm/m/it/10.95 !\OT1/cmr/m/n/10.95 ((\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10
 .95 []\OMS/cmsy/m/n/10.95 g\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95 f\OML/cmm
 /m/it/10.95 ^^L[]\OMS/cmsy/m/n/10.95 g\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ;
@@ -570,86 +724,278 @@ n/10.95 )\OMS/cmsy/m/n/10.95 j[]\OML/cmm/m/it/10.95 ; ^^Z[]\OT1/cmr/m/n/10.95 (
 cmm/m/it/10.95 ;
  []
 
-[31] <xymatrix 3x2 292> [32] [33] [34] [35] [36] [37] [38] [39] [40] [41]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1368.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1368.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1368.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1368.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [42]
-[43] [44] [45] [46]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1534.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1534.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1534.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1534.
+<xymatrix 3x2 292> [44] [45] [46]
+Overfull \hbox (2.7632pt too wide) in paragraph at lines 1152--1153
+\OT1/cmr/m/n/10.95 It's given by the in-verse of the op-er-a-tor $[][][][]$ whi
+ch sends a pair $(\OML/cmm/m/it/10.95 b[]; b[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/
+n/10.95 2
+ []
 
 [47]
-Overfull \hbox (29.72763pt too wide) in paragraph at lines 1579--1579
+Overfull \hbox (76.18735pt too wide) in paragraph at lines 1182--1183
+[]\OT1/cmr/m/n/10.95 On the other hand, we can eval-u-ate the pair-ing $\OML/cm
+m/m/it/10.95 ![]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 []; []\OT1/cmr/m/n/10
+.95 ) = \OML/cmm/m/it/10.95 ![]\OT1/cmr/m/n/10.95 (d[](\OML/cmm/m/it/10.95 b[]\
+OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 d[](\OML/cmm/m/it/1
+0.95 b[]\OT1/cmr/m/n/10.95 ))$
+ []
+
+
+Overfull \hbox (8.24202pt too wide) in paragraph at lines 1191--1191
+[] 
+ []
+
+[48] [49]
+Overfull \hbox (22.71173pt too wide) in paragraph at lines 1217--1218
+[]\OT1/cmr/m/n/10.95 This is an in-stance of hy-perk^^?ahler re-duc-tion. In-de
+ed the infinite-dimensional
+ []
+
+
+Overfull \hbox (57.5172pt too wide) detected at line 1218
+\OML/cmm/m/it/10.95 ![]\OT1/cmr/m/n/10.95 ((\OML/cmm/m/it/10.95 A; \OT1/cmr/m/n
+/10.95 ^^H)\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 A[]; \
+OT1/cmr/m/n/10.95 ^^H[])) = [][] [] d\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 d\
+OML/cmm/m/it/10.95 y\OT1/cmr/m/n/10.95 d\OML/cmm/m/it/10.95 t;
+ []
+
+[50] [51] [52]
+Overfull \hbox (8.8608pt too wide) detected at line 1263
+\OML/cmm/m/it/10.95 R []
+ []
+
+[53] [54] [55] [56]
+Overfull \hbox (88.6415pt too wide) in paragraph at lines 1336--1337
+[]\OT1/cmr/m/n/10.95 Likewise, we can study de-for-ma-tion quan-ti-za-tion for 
+the al-ge-bra $\OMS/cmsy/m/n/10.95 O\OT1/cmr/m/n/10.95 ([][]([][]\OML/cmm/m/it/
+10.95 ; D; ![]\OT1/cmr/m/n/10.95 ))$
+ []
+
+
+Overfull \hbox (11.19722pt too wide) in paragraph at lines 1339--1340
+[][]\OT1/cmr/bx/n/10.95 Definition 7.4. []\OT1/cmr/m/n/10.95 The quan-tum al-ge
+-bra of func-tions $\OMS/cmsy/m/n/10.95 O[]\OT1/cmr/m/n/10.95 ([][]([][]\OML/cm
+m/m/it/10.95 ; D; ![]\OT1/cmr/m/n/10.95 ))$
+ []
+
+
+Overfull \hbox (54.65427pt too wide) in paragraph at lines 1339--1340
+\OT1/cmr/m/n/10.95 is a choice of de-for-ma-tion quan-ti-za-tion of the Pois-so
+n al-ge-bra $\OMS/cmsy/m/n/10.95 O\OT1/cmr/m/n/10.95 ([][]([][]\OML/cmm/m/it/10
+.95 ; D; ![]\OT1/cmr/m/n/10.95 ))$.
+ []
+
+
+Overfull \hbox (2.4288pt too wide) in paragraph at lines 1342--1343
+\OMS/cmsy/m/n/10.95 O\OT1/cmr/m/n/10.95 ([][]([][]\OML/cmm/m/it/10.95 ; D; ![]\
+OT1/cmr/m/n/10.95 ))$ there's no au-to-matic guar-an-tee that we can choose
+ []
+
+[57] [58] [59]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1372.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1372.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1372.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1372.
+
+
+Overfull \hbox (1.53232pt too wide) in paragraph at lines 1391--1392
+\OT1/cmr/m/n/10.95 map $\OML/cmm/m/it/10.95 ^^Y$ \OT1/cmr/m/n/10.95 af-ter re-s
+trict-ing to the con-nected com-po-nent in $[][]([][]\OML/cmm/m/it/10.95 ; D; !
+[]\OT1/cmr/m/n/10.95 )$
+ []
+
+[60]
+Overfull \hbox (82.50328pt too wide) in paragraph at lines 1396--1397
+\OT1/cmr/m/n/10.95 abu-sively iden-tify $\OML/cmm/m/it/10.95 g\OT1/cmr/m/n/10.9
+5 (\OML/cmm/m/it/10.95 z\OT1/cmr/m/n/10.95 )$ with its im-age un-der the re-str
+ic-tion map $\OML/cmm/m/it/10.95 r[] [] []  [][]\OT1/cmr/m/n/10.95 ([][]\OML/cm
+m/m/it/10.95 ; D; ![]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 !
+ []
+
+[61] [62]
+Overfull \hbox (33.04947pt too wide) in paragraph at lines 1460--1461
+[]\OT1/cmr/m/n/10.95 For any $\OML/cmm/m/it/10.95 q$\OT1/cmr/m/n/10.95 , ev-ery
+ el-e-ment of $\OML/cmm/m/it/10.95 g\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 z\O
+T1/cmr/m/n/10.95 )$ of $[][]([][]\OML/cmm/m/it/10.95 ; D; ![]\OT1/cmr/m/n/10.95
+ )$
+ []
+
+
+Overfull \hbox (22.11748pt too wide) in paragraph at lines 1464--1465
+\OT1/cmr/m/n/10.95 mor-phism onto the space of lin-ear func-tion-als $\OMS/cmsy
+/m/n/10.95 B\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 D; ![]\OT1/cmr/m/n/10.95 )[
+] \OMS/cmsy/m/n/10.95 ^^R O\OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 B\OT1/cmr/m/
+n/10.95 (\OML/cmm/m/it/10.95 D; ![]\OT1/cmr/m/n/10.95 ))$. 
+ []
+
+[63] [64]
+Overfull \hbox (8.8248pt too wide) in paragraph at lines 1525--1526
+[][]\OT1/cmr/bx/n/10.95 Remark 8.10. []\OT1/cmr/m/n/10.95 Af-ter tri-an-gu-lar-
+iz-ing, an el-e-ment of the mul-ti-plica-tive Hitchin
+ []
+
+[65]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1539.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1539.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1539.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1539.
+
+[66]
+Overfull \hbox (143.82321pt too wide) in paragraph at lines 1584--1584
 [] 
  []
 
 
-Overfull \hbox (30.22444pt too wide) in paragraph at lines 1599--1599
+Underfull \vbox (badness 7064) has occurred while \output is active []
+
+ [67]
+Overfull \hbox (144.32002pt too wide) in paragraph at lines 1604--1604
 [] 
  []
 
-[48] (./Mult_Hitchin_11_18_draft.bbl [49]
+[68]
+Overfull \hbox (10.85956pt too wide) in paragraph at lines 1614--1615
+[]\OT1/cmr/m/n/10.95 The for-mu-lae for these $\OML/cmm/m/it/10.95 t[]\OT1/cmr/
+m/n/10.95 (\OML/cmm/m/it/10.95 z\OT1/cmr/m/n/10.95 )$ match the for-mu-lae for 
+$\OML/cmm/m/it/10.95 p$\OT1/cmr/m/n/10.95 -twisted $\OML/cmm/m/it/10.95 q$\OT1/
+cmr/m/n/10.95 -characters
+ []
+
+(./Mult_Hitchin_selecta.bbl
+Underfull \hbox (badness 1303) in paragraph at lines 27--31
+[]\OT1/cmr/m/n/9 Gleb Aru-tyunov, Sergey Frolov, and Pe-ter Medvedev. El-lip-ti
+c Ruijsenaars-
+ []
+
+
+Underfull \hbox (badness 1303) in paragraph at lines 33--37
+[]\OT1/cmr/m/n/9 Gleb Aru-tyunov, Sergey Frolov, and Pe-ter Medvedev. El-lip-ti
+c Ruijsenaars-
+ []
+
+[69]
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no ™ in font cmr9!
- [50]
+
+Underfull \hbox (badness 6893) in paragraph at lines 78--82
+[]\OT1/cmr/m/n/9 Alexis Bouthier. La fi-bra-tion de Hitchin-Frenkel-Ng^o et son
+ com-plexe
+ []
+
+
+Underfull \hbox (badness 4779) in paragraph at lines 120--124
+[]\OT1/cmr/m/n/9 Beno^^^Pt Char-bon-neau and Jacques Hur-tubise. Sin-gu-lar Her
+mitian-Einstein
+ []
+
+
+Underfull \hbox (badness 2221) in paragraph at lines 148--151
+[]\OT1/cmr/m/n/9 Sergey Cherkis and An-ton Ka-pustin. Hyper-K^^?ahler met-rics 
+from pe-ri-odic
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51]
+ [70]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1622.
+ [71]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[53]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1622.
- (./Mult_Hitchin_11_18_draft.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1622.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1622.
+ [72]
+Underfull \hbox (badness 6859) in paragraph at lines 450--456
+[]\OT1/cmr/m/n/9 Nikita Nekrasov. Open-closed (lit-tle) string du-al-ity and Ch
+ern-Simons-
+ []
 
-Package rerunfilecheck Info: File `Mult_Hitchin_11_18_draft.out' has not change
-d.
+
+Underfull \hbox (badness 10000) in paragraph at lines 450--456
+\OT1/cmr/m/n/9 2017, []$\OT1/cmtt/m/n/9 https : / / stringmath2017 . desy . de 
+/ sites / sites _ conferences / site _
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [73]
+Underfull \hbox (badness 5954) in paragraph at lines 493--498
+[]\OT1/cmr/m/n/9 Vasily Pes-tun. Pe-ri-odic Monopoles and qOp-ers. 2017. Lec-tu
+re, String-
+ []
+
+
+Underfull \hbox (badness 5652) in paragraph at lines 493--498
+\OT1/cmr/m/n/9 Math, Ham-burg, 28 July 2017, []$\OT1/cmtt/m/n/9 https : / / str
+ingmath2017 . desy . de / sites /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--498
+\OT1/cmtt/m/n/9 sites _ conferences / site _ stringmath2017 / content / e45470 
+/ e56510 / e56567 /
+ []
+
+
+Underfull \hbox (badness 5203) in paragraph at lines 545--548
+[]\OT1/cmr/m/n/9 Benjamin H Smith. Sin-gu-lar $\OML/cmm/m/it/9 G$\OT1/cmr/m/n/9
+ -monopoles on $\OML/cmm/m/it/9 S[] \OMS/cmsy/m/n/9 ^^B \OT1/cmr/m/n/9 ^^F$. \O
+T1/cmr/m/it/9 arXiv preprint
+ []
+
+
+Underfull \hbox (badness 3635) in paragraph at lines 575--578
+[]\OT1/cmr/m/n/9 Edward Wit-ten. Topo-log-i-cal quan-tum field the-ory. \OT1/cm
+r/m/it/9 Comm. Math. Phys.\OT1/cmr/m/n/9 ,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [74])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1627.
+
+[75]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1627.
+ (./Mult_Hitchin_selecta.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1627.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1627.
+
+Package rerunfilecheck Info: File `Mult_Hitchin_selecta.out' has not changed.
 (rerunfilecheck)             Checksum: 0B0CE162AAF04F01E88FF06BF1780D81;2069.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1622.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1627.
  ) 
 Here is how much of TeX's memory you used:
- 10262 strings out of 494910
- 138838 string characters out of 6179835
- 297957 words of memory out of 5000000
- 12942 multiletter control sequences out of 15000+600000
+ 10281 strings out of 494910
+ 138913 string characters out of 6179835
+ 286248 words of memory out of 5000000
+ 12939 multiletter control sequences out of 15000+600000
  17505 words of font info for 70 fonts, out of 8000000 for 9000
  197 hyphenation exceptions out of 8191
- 34i,19n,32p,3305b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,19n,32p,3301b,497s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{definition.8.8} has been referenced but does not 
 exist, replaced by a fixed one
 
@@ -679,10 +1025,10 @@ ymbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sy
 mbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sym
 bols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xypic/xycmat10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on Mult_Hitchin_11_18_draft.pdf (53 pages, 602830 bytes).
+Output written on Mult_Hitchin_selecta.pdf (75 pages, 619979 bytes).
 PDF statistics:
- 1046 PDF objects out of 1200 (max. 8388607)
- 953 compressed objects within 10 object streams
- 313 named destinations out of 1000 (max. 500000)
+ 1144 PDF objects out of 1200 (max. 8388607)
+ 1028 compressed objects within 11 object streams
+ 335 named destinations out of 1000 (max. 500000)
  217 words of extra memory for PDF output out of 10000 (max. 10000000)
 

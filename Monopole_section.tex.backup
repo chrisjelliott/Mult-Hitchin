@@ -188,7 +188,7 @@ In this case -- where we consider the 3-manifold $M = \bb{CP}^1 \times_\eps S^1$
 The hyperk\"ahler moment map is given by the Bogomolny functional, namely
 \begin{align*}
 \mu \colon \mc V &\to \Omega^1(M \bs (D \times \{t_0\}); (\gg_\RR)_{\bo P}) \\
-(A,\Phi) &\mapsto \ast F_A - \d_A \Phi.
+(A,\Phi) &\mapsto \ast (F_A)|_{\CC \times_\eps S^1}- \d_A \Phi|_{\CC \times_\eps S^1}.
 \end{align*}
 
 \begin{definition} \label{monopole_moduli_def}
@@ -198,7 +198,6 @@ Let $D$ be a finite subset $\{(z_1,t_0), \ldots, (z_k, t_0)\}$ of points in $M =
 
 \begin{remark} \label{flat_metric_remark}
 Note that this definition still makes sense when we use the flat Riemannian metric on $\bb{CP}^1$, which is singular at the point $z = \infty$.  If $A$ is a gauge field on $\bb{CP}^1 \times S^1$ where the pair $(A,\Phi)$ have Dirac singularities at $D \times \{t_0\}$, then the Hodge dual $\ast_{\mr{flat}} (F_A)|_{\CC}$ in $\Omega^1((\CC \times S^1) \bs (D \times \{t_0\}; (\gg_\RR)_{\bo P})$ extends by zero to a 1-form on $(\bb{CP}^1 \times S^1) \bs (D \times \{t_0\})$.  Indeed, for the Hodge dual of a 2-form $\ast_{\mr{flat}} (F_A)|_\CC = |z|^{-2} \ast_{\mr{round}} F_A$.  The hyperk\"ahler moment map is, therefore, still well-defined.
-\chris{Check signs: do I want the Hodge dual of a 1-form instead?}.
 \end{remark}
 
 \begin{theorem} \label{monopole_qconn_comparison_thm}
@@ -212,15 +211,19 @@ There are two subtleties that we need to deal with in order to extend Theorem \r
 
 We'll begin by considering injectivity.  Let $(\bo P, \mc A)$ and $(\bo P', \mc A')$ be a pair of periodic monopoles on $\bb{CP}^1 \times_\eps S^1$ with images $(P,g)$ and $(P', g')$ respectively, and choose a bundle isomorphism $\tau \colon P \to P'$ intertwining the $\eps$-connections $g$ and $g'$.  One observes first that $\bo P$ and $\bo P'$ are also isomorphic $G$-bundles since, by intertwining with the $q$-connections, we have an isomorphism $\bo P|_{\bb{CP}^1 \times \{t\}} \to \bo P'|_{\bb{CP}^1 \times \{t\}}$ for every $t \in S^1$.  To match the monopole structures, we use the same argument as in \cite[Proposition 5.6]{Smith}. 
 
-Now, let us consider surjectivity.  We extend the argument of Charbonneau--Hurtubise and Smith in two steps, in order to account for the two new subtleties described above.  We begin by extending a holomorphic $G$-bundle $P$ on $\bb{CP}^1 \times \{0\}$ with $\eps$-connection $g$ to a $G$-bundle on $M \bs (D \times \{t_0\}) = (\bb{CP}^1 \times_\eps S^1_R) \bs (D \times \{t_0\})$  Let $\gamma \colon [-2\pi R,2\pi R] \to \aut(\bb{CP}^1)$ be a geodesic with $\gamma(-2\pi R) = -\eps$, $\gamma(0)=1$ and $\gamma(2\pi R) = \eps$.  Let $\wt M$ be the 3-manifold
+Now, let us consider surjectivity.  We extend the argument of Charbonneau--Hurtubise and Smith in two steps, in order to account for the two new subtleties described above.  We begin by extending a holomorphic $G$-bundle $P$ on $\bb{CP}^1 \times \{0\}$ with $\eps$-connection $g$ to a $G$-bundle on $M \bs (D \times \{t_0\}) = (\bb{CP}^1 \times_\eps S^1_R) \bs (D \times \{t_0\})$  Let $\gamma \colon [-2\pi R,2\pi R] \to \aut(\CC)$ be the straight line with $\gamma(-2\pi R) = -\eps$, $\gamma(0)=0$ and $\gamma(2\pi R) = \eps$.  Let $\wt M$ be the 3-manifold
 \[\wt M = ((-2\pi R, 2\pi R) \times \bb{CP}^1) \bs \bigcup_{j=1}^k (A^+_j \cup A^-_j)\]
 where $A^+_j$ is the arc $\{(t+ t_0,\gamma(t)(z_j)) \colon t \in (0, 2\pi R - t_0]\}$ and $A^-_j$ is the arc $\{(t + t_0 - 4 \pi R,\gamma(t)(z_j)) \colon t \in [2\pi R-t_0, 2 \pi R)\}$.
 
 Let $\pi \colon \wt M \to \bb{CP}^1$ be the projection sending $(t,z)$ to $\gamma(t)(z)$.  The bundle $P$ pulls back to a bundle $\pi^*(P)$ on $\wt M$.  We obtain a bundle on $M \bs (D \times t_0)$ by applying the identification $(t,z) \sim (t - 2 \pi R, q(z))$.  This bundle extends to an $S^1$-invariant holomorphic $G$-bundle on $M \times S^1$.  The remainder of the proof -- verifying the existence of the monopole structure associated to an appropriate choice of hermitian structure -- consists of local analysis which is independent of the value of the parameter $\eps$. 
 
-In order to construct the monopole structure, we must extend the key theorem of Simpson \cite[Theorem 1]{Simpson} upon which Charbonneau and Hurtubise's argument relies.  Specifically, Simpson's theorem applies only to curves with finite volume.  In the proof of Simpson's theorem, this assumption is used in the statement of \cite[Proposition 5.3]{Simpson}, and particularly in Lemma 5.4 of its proof.  To remove this assumption, we need to restrict the sections $s$ to have $\|s\|_{L^1} < \infty$ in a contractible open neighbourhood of $\infty$ disjoint from the divisor $D$ (the analysis near the Dirac singularities has already been performed by Charbonneau--Hurtubise).  In his proof of Theorem 1, Simpson applies these results to an initial metric $K$, and a new metric $H_t = Ke^{s_t}$ obtained by solving the heat equation.  Now, because $H_t$ arises as a solution to the heat equation 
-\[H^{-1} \frac{\d H}{\d t} = -i \Lambda F_H^\perp,\]
-working in a neighbourhood of $\infty$ with flat initial metric, the section $s_t$ has a second order zero at $\infty \in \bb{CP}^1$, which ensures that it has finite $L^1$ norm as required. 
+In order to construct the monopole structure, we must extend the key theorem of Simpson \cite[Theorem 1]{Simpson} upon which Charbonneau and Hurtubise's argument relies.  Specifically, Simpson's theorem applies only to curves with finite volume.  In the proof of Simpson's theorem, this assumption is used in the statement of \cite[Proposition 5.3]{Simpson}, and particularly in Lemma 5.4 of its proof.  To remove this assumption, we need to restrict the sections $s$ to have $\|s\|_{L^1} < \infty$ in a contractible open neighbourhood of $\infty$ disjoint from the divisor $D$ (the analysis near the Dirac singularities has already been performed by Charbonneau--Hurtubise).  In his proof of Theorem 1, Simpson applies these results to an initial metric $K$, and a new metric $H_t = Ke^{s_t}$ obtained by solving the heat equation.  
+
+Now, $H_t$ arises as a solution to the heat equation 
+\[H^{-1} \frac{\d H}{\d t} = -i \Lambda F_H^\perp\]
+where $\Lambda$ is the adjoint of the operator wedging with the standard K\"ahler form $\omega$ on $\CC$.  If we work in a neighbourhood of $\infty$, we can assume that we're working with a flat initial metric $K$, which means we're looking for a solution to the heat equation on flat $\RR^2$: the equation 
+\[\left(\frac {\d}{\d t} + \Delta\right)e^{s_t} = 0\]
+where $\Delta$ is the Laplacian for the flat metric on $\RR^2$.  Therefore, in particular, $s_t$ has a second order zero at $\infty \in \bb{CP}^1$, and therefore it has finite $L^1$ norm as required. 
 \end{proof}
 
 \begin{remark}
