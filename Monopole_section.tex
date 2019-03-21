@@ -191,6 +191,12 @@ The hyperk\"ahler moment map is given by the Bogomolny functional, namely
 (A,\Phi) &\mapsto \ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1}- \d_A \Phi|_{\CC \times_\eps S^1}.
 \end{align*}
 
+\vasily{In the common conventions, e.g. \url{https://projecteuclid.org/euclid.jdg/1214443066} hyperk\"ahler moment map takes value in $Lie(\mc G) \otimes \mathbb{R}^3$ where $\mathbb{R}^3$ is the space of imaginary quaternions. 
+  We'll split $\mathbb{R}^{3} \simeq \mathbb{C} \oplus \mathbb{R}$ into complex part
+  and real part by picking a point on a twistor sphere, so that $\mu  = 0$
+  splits into a complex equation and real equation. But we should not discard complex
+equation as, I am afraid, we do in the above definition }
+
 \begin{definition} \label{monopole_moduli_def}
 Let $D$ be a finite subset $\{(z_1,t_0), \ldots, (z_k, t_0)\}$ of points in $M = \bb{CP}^1 \times S^1_R$, and let $\omega^\vee_{i}$ be a choice of coweight for each point in $D$. The moduli space $\mon_G(M, D, \omega^\vee)$ is the hyperk\"ahler quotient
 \[\mon_G(M, D, \omega^\vee) = \mu^{-1}(0) / \mc G.\]
@@ -199,6 +205,8 @@ Let $D$ be a finite subset $\{(z_1,t_0), \ldots, (z_k, t_0)\}$ of points in $M =
 \begin{remark} \label{flat_metric_remark}
 Note that this definition still makes sense when we use the flat Riemannian metric on $\bb{CP}^1$, which is singular at the point $z = \infty$.  If $A$ is a gauge field on $\bb{CP}^1 \times_\eps S^1$ where the pair $(A,\Phi)$ have Dirac singularities at $D \times \{t_0\}$, then the Hodge dual $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1}$ in $\Omega^1((\CC \times_\eps S^1) \bs (D \times \{t_0\}; (\gg_\RR)_{\bo P})$ extends by zero to a 1-form on $(\bb{CP}^1 \times_\eps S^1) \bs (D \times \{t_0\})$.  Indeed, for the Hodge dual of a 2-form $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1} = |z|^{-2} \ast_{\mr{round}} F_A$.  The hyperk\"ahler moment map is, therefore, still well-defined.
 \end{remark}
+
+\vasily{May be we should  clarify the factor of $|z|^{-2}$ or say asymptotically at $z \to \infty$?  In fact I am getting a factor $(1+|z|^2/4)^{-2}$ for radius $1$, could you check?} 
 
 \begin{theorem} \label{monopole_qconn_comparison_thm}
 There is an analytic isomorphism between the moduli space of polystable monopoles on $\bb{CP}^1 \times_q S^1$ with Dirac singularities at $D \times \{t_0\}$ and a framing on $\{\infty\} \times S^1$, and the moduli space of $\eps$-connections on $\bb{CP}^1$ with singularities at $D$ and framing at $\{\infty\}$.  More precisely there is an analytic isomorphism
@@ -209,7 +217,12 @@ given by the holonomy map around $S^1$, i.e. sending a monopole $(\bo P, \mc A)$
 \begin{proof}
 There are two subtleties that we need to deal with in order to extend Theorem \ref{CHS_thm} to this more general setting.  First, we need to account for the twist by $\eps$: this is fairly straightforward, by an argument that only uses the fact that the translation $\eps$ lies in the connected component of the identity in the automorphism group of our Riemann surface.  Second, we need to make sure that the argument still works when we study solutions to the Bogomolny equation for the flat metric on $\RR^2$: the argument developed by Charbonneau and Hurtubise builds on a theorem of Simpson which applies only for curves of finite volume, so we must ensure that Simpson's argument can still be applied on $\RR^2 \bs D$, as long as the monopoles have a second order zero at $\infty$ (guaranteed by the existence of the framing).
 
-We'll begin by considering injectivity.  Let $(\bo P, \mc A)$ and $(\bo P', \mc A')$ be a pair of periodic monopoles on $\bb{CP}^1 \times_\eps S^1$ with images $(P,g)$ and $(P', g')$ respectively, and choose a bundle isomorphism $\tau \colon P \to P'$ intertwining the $\eps$-connections $g$ and $g'$.  One observes first that $\bo P$ and $\bo P'$ are also isomorphic $G$-bundles since, by intertwining with the $q$-connections, we have an isomorphism $\bo P|_{\bb{CP}^1 \times \{t\}} \to \bo P'|_{\bb{CP}^1 \times \{t\}}$ for every $t \in S^1$.  To match the monopole structures, we use the same argument as in \cite[Proposition 5.6]{Smith}. 
+We'll begin by considering injectivity.  Let $(\bo P, \mc A)$ and $(\bo P', \mc A')$ be a pair of periodic monopoles on $\bb{CP}^1 \times_\eps S^1$ with images $(P,g)$ and $(P', g')$ respectively, and choose a bundle isomorphism $\tau \colon P \to P'$ intertwining the $\eps$-connections $g$ and $g'$.  One observes first that $\bo P$ and $\bo P'$ are also isomorphic $G$-bundles since, by intertwining with the $q$-connections, we have an isomorphism $\bo P|_{\bb{CP}^1 \times \{t\}} \to \bo P'|_{\bb{CP}^1 \times \{t\}}$ for every $t \in S^1$.  To match the monopole structures, we use the same argument as in \cite[Proposition 5.6]{Smith}.
+
+\vasily{We've defined $q$-connection as a holonomy around the complete circle 
+$S^1$ (from $0$ to $2 \pi$ in the $t$ coordinates). But in the paragraph above
+we need to intertwine by a morphism from a bundle $P$ defined at a curve $C$ at 
+ $t=0$ to a bundle defined at a curve $C$ at arbitrary $t$?  }
 
 Now, let us consider surjectivity.  We extend the argument of Charbonneau--Hurtubise and Smith in two steps, in order to account for the two new subtleties described above.  We begin by extending a holomorphic $G$-bundle $P$ on $\bb{CP}^1 \times \{0\}$ with $\eps$-connection $g$ to a $G$-bundle on $M \bs (D \times \{t_0\}) = (\bb{CP}^1 \times_\eps S^1_R) \bs (D \times \{t_0\})$.  Let $\wt M$ be the 3-manifold
 \[\wt M = ((-2\pi R, 2\pi R) \times \bb{CP}^1) \bs \bigcup_{j=1}^k (A^+_j \cup A^-_j)\]
@@ -225,6 +238,8 @@ where $\Lambda$ is the adjoint of the operator wedging with the standard K\"ahle
 \[\left(\frac {\d}{\d t} + \Delta\right)e^{s_t} = 0\]
 where $\Delta$ is the Laplacian for the flat metric on $\RR^2$.  Therefore, in particular, $s_t$ has a second order zero at $\infty \in \bb{CP}^1$, and therefore it has finite $L^1$ norm as required. 
 \end{proof}
+\vasily{Sorry, I did not get the last sentence.  The statement about a second order   zero at $\infty$ applies for any $t$? What is the boundary conditions at $t=0$ for the heat equations, or it does not matter?Also, to be sure, the $t$ on this page is not the $t$ that parametrizes the $S^1$ circle on the previous page, correct? }
+
 
 \begin{remark}
 Mochizuki \cite{Mochizuki} proved a stronger result in the rational case for the group $G = \GL_n$.  He allows not just a framing at infinity in $\bb{CP}^1$ but also a singularity encoded in terms of a $B$-reduction of the bundle.  Again, we won't work in this generality in the present paper.
