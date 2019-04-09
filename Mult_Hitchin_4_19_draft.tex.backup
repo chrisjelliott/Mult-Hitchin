@@ -312,7 +312,7 @@ The following section, Section \ref{twist_section}, stands alone from the rest o
 
 In Section \ref{periodic_monopole_section} we discuss the moduli space of periodic monopoles and its identification with the moduli space of multiplicative Higgs bundles.  We describe the tangent space to the moduli space from both points of view, which we'll then use in the following section, Section \ref{symp_section}.  Here we prove our main result, identifying the symplectic structures on the moduli spaces of periodic monopoles and on multiplicative Higgs bundles.
 
-Having done this, in Section \ref{hyperkahler_section} we can transfer the hyperk\"ahler structure on the moduli space of periodic monopoles across to the multiplicative Hitchin system.  The main thing we can do is to identify the twistor rotation on this moduli space: after rotating to a point $\eps$ in the twistor sphere we identify the holomorphic symplectic moduli space with the moduli space of $\eps$-difference connections, i.e. $G$-bundles $P$ with an isomorphism between $P$ and its translate by $\eps$.
+Having done this, in Section \ref{hyperkahler_section} we can transfer the hyperk\"ahler structure on the moduli space of periodic monopoles across to the multiplicative Hitchin system.  The main thing we can do is to identify the twistor rotation on this moduli space: after rotating to a point $\eps$ in the twistor sphere we identify the holomorphic symplectic moduli space with a subspace of the moduli space of $\eps$-difference connections, i.e. $G$-bundles $P$ with an isomorphism between $P$ and its translate by $\eps$.
 
 In Section \ref{quantization_section} we discuss the quantization of our moduli spaces.  We identify the moduli spaces of multiplicative Higgs bundles with symplectic leaves in the rational Poisson Lie group, and then after quantization we identify the quantized algebra of functions on our moduli spaces with modules for the Yangian as first constructed by Gerasimov, Kharchev, Lebedev and Oblezin. 
 
@@ -1099,7 +1099,7 @@ We begin analysis of the general case by briefly discussing the holomorphic symp
 \omega_{\mr{mon}}(\delta^{(1)} \mc A, \delta^{(2)} \mc A) &= \int_{M} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d \ol{z} \\
 &= \sum_{i=1}^k \int_{U_i \times S^1} \kappa(\alpha_i, \alpha'_i) \d z \d \ol{z} \d t
 \end{align*}
-where the contributions to the integral away from the $U_i$ vanish.  \chris{remark on why it's non-degenerate and closed?}  We'll discuss this further in Section \ref{hyperkahler_section}.
+where the contributions to the integral away from the $U_i$ vanish.  This pairing is manifestly non-degenerate and closed.  We'll discuss this symplectic pairing further in Section \ref{hyperkahler_section}.
 
 \begin{remark}
 From now on we'll write $\langle - , - \rangle$ to denote the residue pairing between elements of $L\gg$.  That is, 
@@ -1223,7 +1223,6 @@ The moduli space $\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee)$ has the structure of a
 \end{corollary}
 
 \section{Hyperk\"ahler Structures} \label{hyperkahler_section}
-\chris{major fixes to this section needed}
 The results of the previous section imply that the symplectic structure on $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ extends canonically to a hyperk\"ahler structure.  In this section we'll compare the twistor rotation with the deformation to the moduli space of $\eps$-connections. We'll show that in an appropriate limit, by passing to a point $\eps$ in the twistor sphere we obtain a complex manifold equivalent to the moduli space of $\eps$-connections as a deformation of the moduli space of multiplicative Higgs bundles, at least on a subvariety determined as the image of the holonomy map for the flat metric.
 
 Let us begin by describing the hyperk\"ahler structure on the moduli space of periodic monopoles and how the holomorphic symplectic structure varies under rotation in the twistor sphere.  We'll begin by recalling that the moduli space of periodic monopoles can be described as a hyperk\"ahler quotient as in the work of Atiyah and Hitchin \cite{AtiyahHitchin}.  In a context with more general boundary data at $\infty$ this was demonstrated by Cherkis and Kapustin \cite{CherkisKapustin3} for the group $\SU(2)$, see also Foscolo \cite{FoscoloDef}[Theorem 7.12].  In the case of $\bb{CP}^1$ with a fixed framing the analysis is much easier.
@@ -1269,12 +1268,13 @@ Let $\left(\mr{Image}(H)\right)_{\zeta,R}$ be the family of complex manifolds ob
 \end{theorem}
 
 \begin{remark}
-According to Conjecture \chris{...}, the 
+According to Conjecture \ref{open_image_conjecture}, the space $\mr{Image}(H)$ is open in the moduli space of multiplicative Higgs bundles (the subspace obtained by imposing a suitable stability condition) and therefore the result identifies an open subspace of the moduli space of $\eps$-connections with the twistor deformation of the moduli space of Higgs bundles. 
 \end{remark}
 
 \begin{proof}
-\chris{edit here}
-First let us note that the 3-manifolds $\bb{CP}^1 \times_\eps S^1_R$ for varying values of $R$ and $\eps$ are all diffeomorphic (via a diffeomorphism fixing the circle at $\infty$).  This means that we can identify the moduli spaces in question as smooth manifolds by choosing such a diffeomorphism.  Then, according to Theorem \ref{monopole_qconn_comparison_thm} it's enough to show that the complex structure on $\mon_G^{\text{ps,fr}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ at the point $\zeta$ converges to the complex structure on the $\eps$-deformation $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_\eps S^1_R,D,\omega^\vee)$.  The key observation that we'll use is that, fixing $2 \pi \zeta R = \eps$ we can identify the rotated lattice with a \emph{sheared} lattice.  Namely, when we rotate the rank one lattice $L_{R,0} = (0,0,2\pi R)\ZZ$ by $\zeta$ we obtain the lattice
+First let us note that the 3-manifolds $\bb{CP}^1 \times_\eps S^1_R$ for varying values of $R$ and $\eps$ are all diffeomorphic (via a diffeomorphism fixing the circle at $\infty$).  This means that we can identify the moduli spaces in question as smooth manifolds by choosing such a diffeomorphism.  In particular, by composing this identification with the holonomy map $H$, we obtain a canonical embedding $\mr{Image}(H)_{\zeta,R} \to \epsconn^{\text{ps,fr}}_G(\bb{CP}^1,D,\omega^\vee)$.  
+
+Now, according to Theorem \ref{monopole_qconn_comparison_thm} it's enough to show that the complex structure on $\mon_G^{\text{ps,fr}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ at the point $\zeta$ converges to the complex structure on the $\eps$-deformation $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_\eps S^1_R,D,\omega^\vee)$.  The key observation that we'll use is that, fixing $2 \pi \zeta R = \eps$ we can identify the rotated lattice with a \emph{sheared} lattice.  Namely, when we rotate the rank one lattice $L_{R,0} = (0,0,2\pi R)\ZZ$ by $\zeta$ we obtain the lattice
 \[\zeta(L_{R,0}) = \frac {1}{1+|\zeta|^2} (\mr{Re}(\eps), \mr{Im}(\eps), 2\pi R (1-|\zeta|^2) )\ZZ.\]
 We can view the quotient of $\RR^3$ by the rotated lattice as a sheared lattice with different radius and shear.  Specifically, we identify
 \[\RR^3 / \zeta(L_{R,0}) \iso \RR^2 \times_{\frac{\eps}{1+|\zeta|^2}} S^1_{R \frac {1-|\zeta|^2}{1+|\zeta|^2}}.\]

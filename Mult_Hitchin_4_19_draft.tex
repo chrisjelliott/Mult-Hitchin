@@ -485,7 +485,7 @@ The Donagi-Gaitsgory fiber is, according to the main theorem of \cite{DonagiGait
 Like in the case of the ordinary Hitchin system, in good examples the multiplicative Hitchin system admits a canonical Hitchin section.  One can construct this section using the Steinberg section (the multiplicative analogue of the Kostant section) \cite{Steinberg}.  This is a section of the map $G/G \to T/W$, canonical after choosing a Borel subgroup $B$ with maximal torus $T$ and a basis vector for each simple root space, and well defined as long as $G$ is simply connected \footnote{By a theorem of Popov \cite{Popov} this condition is necessary for semisimple $G$.  A section also exists for $G = \GL_n$, but we aren't aware of a necessary and sufficient condition for general reductive groups.}.  The \emph{multiplicative Hitchin section} is the map $\sigma \colon \mc B(C,D,\omega^\vee) \to \mhiggs_G(C,D,\omega^\vee)$ defined by post-composition with the Steinberg section.  One can use this section to define the moduli space of \emph{$q$-opers} for the group $G$ and the curve $\bb{CP}^1$ with its framing at infinity.  We'll discuss the hyperk\"ahler structure on the moduli space of multiplicative Higgs bundles in Section \ref{hyperkahler_section}.  In particular we'll show that when one rotates to $q$ in the twistor sphere one obtains the moduli space of $q$-connections on $\bb{CP}^1$.  The moduli space of $q$-opers is defined to be the Hitchin section, but viewed as a subspace of $\qconn^{\fr}_G(\bb{CP}^1,D,\omega^\vee)$.  For a more detailed discussion of the multiplicative Hitchin section and $q$-opers see Section \ref{qchar_section}. 
 \end{remark}
 
-\subsection{Stability Conditions}
+\subsection{Stability Conditions} \label{stability_section}
 For comparison to results in the literature it is important that we briefly discuss the role of stability conditions for difference connections.  In our main example of interest -- the rational case -- these conditions won't play a role, but they do appear in the comparison results between $q$-connections and monopoles in the literature for more general curves.  For definitions for general $G$ we refer to \cite{Smith}, although see also \cite{AnchoucheBiswas} on polystable $G$-bundles.  In what follows we fix a choice of $0 < t_0 < 2\pi R$.
 
 \begin{definition}
@@ -500,6 +500,10 @@ The $q$-connection $(P,g)$ is \emph{polystable} if there exists a (not necessari
 \end{definition}
 
 Below we'll write $\qconn_G^{\text{ps}}(C, D, \omega^\vee) \sub \qconn_G(C,D,\omega^\vee)$ for the moduli space of polystable $q$-connections.  This moduli space is a smooth algebraic variety of finite type, at least when $q$ is the identity \cite{CharbonneauHurtubise,Smith}.  
+
+\begin{example}
+An example of a multiplicative Higgs bundle on $\bb{CP}^1$ which is not polystable, for the group $G = \SL_2$, is provided by taking the trivial $G$-bundle $P$ and the constant multiplicative Higgs field with value \[g = \begin{pmatrix}1&1\\0&1\end{pmatrix}.\]  The multiplicative Higgs field does not fix a maximal torus in $G$, so the pair $(P,g)$ cannot be reduced to any non-trivial Levi subgroup.  On the other hand, for the upper triangular Borel subgroup $B \sub G$ we have $\deg_\chi(P_B, g) = 0$, so $(P,g)$ is not stable.
+\end{example}
 
 \subsection{Poisson Structures from Derived Geometry}
 As we mentioned above in Remark \ref{Elliptic_AKSZ_remark}, in the case where $C$ is an elliptic curve and there are no punctures there is a symplectic structure on $\mhiggs_G(C)$ given by the AKSZ formalism.  More generally, when we do have punctures, we expect the moduli space $\mhiggs_G(C,D)$ to have a Poisson structure with a clear origin story coming from the theory of derived Poisson geometry.  In this section we'll explain what this story looks like.  However, we emphasise that there are technical obstructions to making this story precise with current technology: this section should be viewed as motivation for the structures we'll discuss in the rest of the paper.  On the other hand, readers who aren't familiar with derived symplectic geometry can freely skip this section.  We refer the reader to \cite{CPTVV} for the theory of derived Poisson structures and to \cite{MelaniSafronov1, MelaniSafronov2, Spaide} for that of derived coisotropic structures.  We would like to thank Pavel Safronov for explaining many of the ideas discussed in this section to us.
@@ -854,6 +858,8 @@ Let us discuss several pieces of evidence supporting this conjecture.
  
  \item \chris{Dimension counting -- analogous to a result of Moore, Royston and Van den Bleeken \cite{MooreRoystonVandenBleeken} on $\RR^3$.}
 \end{enumerate}
+
+We should remark on how we might expect to describe the image of the map $H$.  Just as in the case of a curve of finite volume, we expect the image of $H$ to consist of $\eps$-connections satisfying a suitable polystability condition.  This condition might not, however, coincide precisely with polystability for an $\eps$-connection as defined in Section \ref{stability_section}: there might be a further condition on the value of the framing.  \chris{to elaborate on this}
 
 \subsection{Deformation Theory} \label{def_section}
 In the next section we'll compare symplectic forms on these moduli spaces.  In order to do so it will be important to understand the tangent spaces at a point of the source and target.  There's a natural description of these tangent spaces in terms of the hypercohomology of certain cochain complexes.
