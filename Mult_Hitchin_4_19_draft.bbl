@@ -1,5 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{MRVdB14}
+\begin{thebibliography}{KWWY14}
 
 \bibitem[AB01]{AnchoucheBiswas}
 Boudjemaa Anchouche and Indranil Biswas.
@@ -287,11 +287,6 @@ Lorenzo Foscolo.
 \newblock Deformation theory of periodic monopoles (with singularities).
 \newblock {\em Comm. Math. Phys.}, 341(1):351--390, 2016.
 
-\bibitem[Fos17]{FoscoloGluing}
-Lorenzo Foscolo.
-\newblock A gluing construction for periodic monopoles.
-\newblock {\em Int. Math. Res. Not. IMRN}, (24):7504--7550, 2017.
-
 \bibitem[FP18]{FrassekPestun}
 Rouven Frassek and Vasily Pestun.
 \newblock A family of {$\GL(r)$} multiplicative {Higgs} bundles on rational
@@ -421,15 +416,15 @@ Yves Laszlo.
 \newblock About {$G$}-bundles over elliptic curves.
 \newblock {\em Ann. Inst. Fourier (Grenoble)}, 48(2):413--424, 1998.
 
-\bibitem[Moc17]{Mochizuki}
+\bibitem[Moc17a]{MochizukiKH}
+Takuro Mochizuki.
+\newblock Kobayashi-hitchin correspondence for analytically stable bundles.
+\newblock {\em arXiv preprint arXiv:1712.08978}, 2017.
+
+\bibitem[Moc17b]{Mochizuki}
 Takuro Mochizuki.
 \newblock Periodic monopoles and difference modules.
 \newblock {\em arXiv preprint arXiv:1712.08981}, 2017.
-
-\bibitem[MRVdB14]{MooreRoystonVandenBleeken}
-Gregory Moore, Andrew Royston, and Dieter Van~den Bleeken.
-\newblock Parameter counting for singular monopoles on {$\mathbb{R}^3$}.
-\newblock {\em Journal of High Energy Physics}, 2014(10):142, 2014.
 
 \bibitem[MS16]{MelaniSafronov1}
 Valerio Melani and Pavel Safronov.

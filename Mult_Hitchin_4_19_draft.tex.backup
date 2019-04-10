@@ -312,7 +312,7 @@ The following section, Section \ref{twist_section}, stands alone from the rest o
 
 In Section \ref{periodic_monopole_section} we discuss the moduli space of periodic monopoles and its identification with the moduli space of multiplicative Higgs bundles.  We describe the tangent space to the moduli space from both points of view, which we'll then use in the following section, Section \ref{symp_section}.  Here we prove our main result, identifying the symplectic structures on the moduli spaces of periodic monopoles and on multiplicative Higgs bundles.
 
-Having done this, in Section \ref{hyperkahler_section} we can transfer the hyperk\"ahler structure on the moduli space of periodic monopoles across to the multiplicative Hitchin system.  The main thing we can do is to identify the twistor rotation on this moduli space: after rotating to a point $\eps$ in the twistor sphere we identify the holomorphic symplectic moduli space with a subspace of the moduli space of $\eps$-difference connections, i.e. $G$-bundles $P$ with an isomorphism between $P$ and its translate by $\eps$.
+Having done this, in Section \ref{hyperkahler_section} we can transfer the hyperk\"ahler structure on the moduli space of periodic monopoles across to the multiplicative Hitchin system.  The main thing we can do is to identify the twistor rotation on this moduli space: after rotating to a point $\eps$ in the twistor sphere we identify the holomorphic symplectic moduli space with the moduli space of $\eps$-difference connections, i.e. $G$-bundles $P$ with an isomorphism between $P$ and its translate by $\eps$.
 
 In Section \ref{quantization_section} we discuss the quantization of our moduli spaces.  We identify the moduli spaces of multiplicative Higgs bundles with symplectic leaves in the rational Poisson Lie group, and then after quantization we identify the quantized algebra of functions on our moduli spaces with modules for the Yangian as first constructed by Gerasimov, Kharchev, Lebedev and Oblezin. 
 
@@ -486,9 +486,9 @@ Like in the case of the ordinary Hitchin system, in good examples the multiplica
 \end{remark}
 
 \subsection{Stability Conditions} \label{stability_section}
-For comparison to results in the literature it is important that we briefly discuss the role of stability conditions for difference connections.  In our main example of interest -- the rational case -- these conditions won't play a role, but they do appear in the comparison results between $q$-connections and monopoles in the literature for more general curves.  For definitions for general $G$ we refer to \cite{Smith}, although see also \cite{AnchoucheBiswas} on polystable $G$-bundles.  In what follows we fix a choice of $0 < t_0 < 2\pi R$.
+For comparison to results in the literature it is important that we briefly discuss the role of stability conditions for difference connections.  In our main example of interest -- the rational case -- these conditions will take a relatively simple form, but they do appear more generally in the comparison results between $q$-connections and monopoles in the literature for more general curves.  For definitions for general $G$ we refer to \cite{Smith}, although see also \cite{AnchoucheBiswas} on polystable $G$-bundles.  In what follows we fix a choice of $0 < t_0 < 2\pi R$.
 
-\begin{definition}
+\begin{definition} \label{polystable_def}
 Let $(P,g)$ be a $q$-connection on a curve $C$, and let $\chi$ be a character of $G$.  The \emph{$\chi$-degree} of $(P,g)$ is defined to be 
 \[\deg_\chi(P,g) = \deg(P \times_\chi \CC) - \frac {t_0}{2\pi R} \sum_{i=1}^k \deg(\chi \circ \omega^\vee_{z_i}).\]
 
@@ -504,6 +504,17 @@ Below we'll write $\qconn_G^{\text{ps}}(C, D, \omega^\vee) \sub \qconn_G(C,D,\om
 \begin{example}
 An example of a multiplicative Higgs bundle on $\bb{CP}^1$ which is not polystable, for the group $G = \SL_2$, is provided by taking the trivial $G$-bundle $P$ and the constant multiplicative Higgs field with value \[g = \begin{pmatrix}1&1\\0&1\end{pmatrix}.\]  The multiplicative Higgs field does not fix a maximal torus in $G$, so the pair $(P,g)$ cannot be reduced to any non-trivial Levi subgroup.  On the other hand, for the upper triangular Borel subgroup $B \sub G$ we have $\deg_\chi(P_B, g) = 0$, so $(P,g)$ is not stable.
 \end{example}
+
+In our main example of interest -- the rational setting where $C = \bb{CP}^1$ with a fixed framing at infinity -- we will impose an additional stability condition on the value of the framing. 
+
+\begin{definition}
+A $q$-connection $(P,g)$ on $\bb{CP}^1$ with a fixed framing $g_\infty$ at $\infty$ is polystable if it is polystable as in Definition \ref{polystable_def}, and the framing value $g_\infty \in G/G$ is semisimple.
+\end{definition}
+
+\begin{remark}
+We'll see the origin of this condition in Section \ref{periodic_monopole_section}.  For now, observe that the element $g_\infty$ determines an $S^1$-equivariant holomorphic $G$-bundle on an elliptic curve, where $S^1$ acts on $T^2$ by rotating one of the two circles.  This $G$-bundle is polystable if $g_\infty$ is semisimple, which ensures that the $G$-bundle admits a reduction of structure group to an $H$-bundle.
+\end{remark}
+
 
 \subsection{Poisson Structures from Derived Geometry}
 As we mentioned above in Remark \ref{Elliptic_AKSZ_remark}, in the case where $C$ is an elliptic curve and there are no punctures there is a symplectic structure on $\mhiggs_G(C)$ given by the AKSZ formalism.  More generally, when we do have punctures, we expect the moduli space $\mhiggs_G(C,D)$ to have a Poisson structure with a clear origin story coming from the theory of derived Poisson geometry.  In this section we'll explain what this story looks like.  However, we emphasise that there are technical obstructions to making this story precise with current technology: this section should be viewed as motivation for the structures we'll discuss in the rest of the paper.  On the other hand, readers who aren't familiar with derived symplectic geometry can freely skip this section.  We refer the reader to \cite{CPTVV} for the theory of derived Poisson structures and to \cite{MelaniSafronov1, MelaniSafronov2, Spaide} for that of derived coisotropic structures.  We would like to thank Pavel Safronov for explaining many of the ideas discussed in this section to us.
@@ -830,36 +841,27 @@ Let $D$ be a finite subset $\{(z_1,t_0), \ldots, (z_k, t_0)\}$ of points in $M =
 Note that the Bogomolny functional $\mu$ makes sense when we use the flat Riemannian metric on $\bb{CP}^1$, which is singular at the point $z = \infty$.  If $A$ is a gauge field on $\bb{CP}^1 \times_\eps S^1$ where the pair $(A,\Phi)$ have Dirac singularities at $D \times \{t_0\}$, then the Hodge dual $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1}$ in $\Omega^1((\CC \times_\eps S^1) \bs (D \times \{t_0\}; (\gg_\RR)_{\bo P})$ extends by zero to a 1-form on $(\bb{CP}^1 \times_\eps S^1) \bs (D \times \{t_0\})$.  Indeed, for the Hodge dual of a 2-form $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1} = (1+|z|^2/4)^{-1} \ast_{\mr{round}} F_A$.  The hyperk\"ahler moment map is, therefore, still well-defined.
 \end{remark}
 
-While we aren't able to use the argument of Charbonneau and Hurtubise in this case of the flat metric -- since their proof relies on a result of Simpson \cite{Simpson} that only applies when the curve $C$ has finite volume -- we can at least still verify the holonomy map is injective.
+Now, in the case of the flat metric we can generalize Theorem \ref{CHS_thm} to include the $\eps$-deformation.  To do so we'll crucially use results of Mochizuki \cite{MochizukiKH} following earlier work of Biquard and Jardim \cite{BiquardJardim}.
 
 \begin{theorem} \label{monopole_qconn_comparison_thm}
-There is an injective map from the moduli space of polystable monopoles on $\bb{CP}^1 \times_q S^1$ with Dirac singularities at $D \times \{t_0\}$ and a framing on $\{\infty\} \times S^1$, and the moduli space of $\eps$-connections on $\bb{CP}^1$ with singularities at $D$ and framing at $\{\infty\}$.  More precisely there is an analytic injection
-\[H \colon \mon^{\fr}_G(\bb{CP}^1 \times_\eps S^1, D \times \{t_0\}, \omega^\vee) \to \epsconn_G^{\text{fr}}(\bb{CP}^1, D, \omega^\vee)\]
+There is an isomorphism between the moduli space of polystable monopoles on $\bb{CP}^1 \times_q S^1$ with Dirac singularities at $D \times \{t_0\}$ and a semisimple framing on $\{\infty\} \times S^1$, and the moduli space of polystable $\eps$-connections on $\bb{CP}^1$ with singularities at $D$ and framing at $\{\infty\}$.  More precisely there is an analytic isomorphism
+\[H \colon \mon^{\fr}_G(\bb{CP}^1 \times_\eps S^1, D \times \{t_0\}, \omega^\vee) \to \epsconn_G^{\text{ps,fr}}(\bb{CP}^1, D, \omega^\vee)\]
 given by the holonomy map around $S^1$, i.e. sending a monopole $(\bo P, \mc A)$ to the holomorphic bundle $P = (\bo P_\CC)|_{\bb{CP}^1 \times \{0\}}$ with $\eps$-connection $g = \Hol_{S^1}(\mc A) \colon P \to \eps^*(P)$.
 \end{theorem}
 
 \begin{proof}
-Let $(\bo P, \mc A)$ and $(\bo P', \mc A')$ be a pair of periodic monopoles on $\bb{CP}^1 \times_\eps S^1$ with images $(P,g)$ and $(P', g')$ respectively, and choose a bundle isomorphism $\tau \colon P \to P'$ intertwining the $\eps$-connections $g$ and $g'$.  One observes first that $\bo P$ and $\bo P'$ are also isomorphic $G$-bundles since, firstly, we have an isomorphism $\bo P|_{\bb{CP}^1 \times \{t_0\}} \to \eps^*\bo P'|_{\bb{CP}^1 \times \{t_0\}}$ at the special value $t_0$, and because the holomorphic structure on $\bo P|_{\bb{CP}^1 \times \{t\}}$ varies smoothly in $t$ and the moduli space of holomorphic $G$-bundles on $\bb{CP}^1$ is discrete, we correspondingly have an isomorphism $\bo P|_{\bb{CP}^1 \times \{t\}} \to \bo P'|_{\bb{CP}^1 \times \{t\}}$ for every $t \in S^1$.  To match the monopole structures, we use the same argument as in \cite[Proposition 5.6]{Smith}.
+First we'll establish injectivity.  Let $(\bo P, \mc A)$ and $(\bo P', \mc A')$ be a pair of periodic monopoles on $\bb{CP}^1 \times_\eps S^1$ with images $(P,g)$ and $(P', g')$ respectively, and choose a bundle isomorphism $\tau \colon P \to P'$ intertwining the $\eps$-connections $g$ and $g'$.  One observes first that $\bo P$ and $\bo P'$ are also isomorphic $G$-bundles since, firstly, we have an isomorphism $\bo P|_{\bb{CP}^1 \times \{t_0\}} \to \eps^*\bo P'|_{\bb{CP}^1 \times \{t_0\}}$ at the special value $t_0$, and because the holomorphic structure on $\bo P|_{\bb{CP}^1 \times \{t\}}$ varies smoothly in $t$ and the moduli space of holomorphic $G$-bundles on $\bb{CP}^1$ is discrete, we correspondingly have an isomorphism $\bo P|_{\bb{CP}^1 \times \{t\}} \to \bo P'|_{\bb{CP}^1 \times \{t\}}$ for every $t \in S^1$.  To match the monopole structures, we use the same argument as in \cite[Proposition 5.6]{Smith}.
+
+For surjectivity, we again use the same argument as Charbonneau--Hurtubise and Smith, but with an important modification.  Charbonneau and Hurtubise use a crucial result of Simpson \cite[Theorem 1]{Simpson} on the existence of Hermitian Yang-Mills metrics on surfaces.  Simpson's argument only applies to K\"ahler metrics with finite volume, which isn't the case here.  We can, however, replace Simpson's theorem with a theorem of Mochizuki \cite[Corollary 3.13]{MochizukiKH} in the case of the curve $\CC$.
+
+In order to apply Mochizuki's theorem it is necessary to verify the assumption of analytic stability.  We can use \cite[Lemma 4.5]{CharbonneauHurtubise} which says that Mochizuki's definition of degree coincides with the definition from Section \ref{stability_section}. \chris{...}
+
+With this established, we can apply the proof of \cite[Proposition 5.2]{Smith} using Mochizuki's theorem in place of Simpson's.  The local analysis at the singularities if independent of the value of $\eps$ so applies identically.
 \end{proof}
 
-What about the image of the holonomy map? We conjecture that, as in the compact case, the only obstruction to lifting an $\eps$-connection to a periodic monopole is given by a stability condition.
-
-\begin{conjecture} \label{open_image_conjecture}
-The holonomy map $H$ of Theorem \ref{monopole_qconn_comparison_thm} has open image in $\epsconn_G^{\text{fr}}(\bb{CP}^1, D, \omega^\vee)$.
-\end{conjecture}
-
-Let us discuss several pieces of evidence supporting this conjecture.
-\begin{enumerate}
- \item We begin with the case where the group $G_\RR = \SO(3)$.  In this case, Foscolo \cite{FoscoloDef, FoscoloGluing} studied the moduli space of periodic monopoles with Dirac singularities and a regular singularity at infinity.  In particular he showed that the real dimension of this moduli space was $4(k-1)$ where $k$ is the total charge of the monopole, given by the sum of the charge at each Dirac singularity and the charge at infinity.  In the special case where there is no singularity at infinity, this agrees with   the dimension of the moduli space of multiplicative Higgs bundles, as we'll see in Corollary \ref{dim_of_moduli_space_cor}, and therefore\chris{...}
- 
- \item More generally, if $G = \GL_n$, Mochizuki \cite{Mochizuki} studied a more general situation, allowing not just a framing at infinity in $\bb{CP}^1$ but also a singularity encoded in terms of a $B$-reduction of the bundle.  Mochizuki  \chris{...}
- 
- \item \chris{Simpson's argument from \cite{Simpson} with appropriate bounds.}
- 
- \item \chris{Dimension counting -- analogous to a result of Moore, Royston and Van den Bleeken \cite{MooreRoystonVandenBleeken} on $\RR^3$.}
-\end{enumerate}
-
-We should remark on how we might expect to describe the image of the map $H$.  Just as in the case of a curve of finite volume, we expect the image of $H$ to consist of $\eps$-connections satisfying a suitable polystability condition.  This condition might not, however, coincide precisely with polystability for an $\eps$-connection as defined in Section \ref{stability_section}: there might be a further condition on the value of the framing.  \chris{to elaborate on this}
+\begin{remark}
+In \cite{Mochizuki}, Mochizuki establishes a more general result, where rather than a framing at infinity one allows a regular singularity -- such monopoles are referred to as ``Generalized Cherkis-Kapustin (GCK) monopoles''.
+\end{remark}
 
 \subsection{Deformation Theory} \label{def_section}
 In the next section we'll compare symplectic forms on these moduli spaces.  In order to do so it will be important to understand the tangent spaces at a point of the source and target.  There's a natural description of these tangent spaces in terms of the hypercohomology of certain cochain complexes.
@@ -1229,7 +1231,7 @@ The moduli space $\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee)$ has the structure of a
 \end{corollary}
 
 \section{Hyperk\"ahler Structures} \label{hyperkahler_section}
-The results of the previous section imply that the symplectic structure on $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ extends canonically to a hyperk\"ahler structure.  In this section we'll compare the twistor rotation with the deformation to the moduli space of $\eps$-connections. We'll show that in an appropriate limit, by passing to a point $\eps$ in the twistor sphere we obtain a complex manifold equivalent to the moduli space of $\eps$-connections as a deformation of the moduli space of multiplicative Higgs bundles, at least on a subvariety determined as the image of the holonomy map for the flat metric.
+The results of the previous section imply that the symplectic structure on $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ extends canonically to a hyperk\"ahler structure.  In this section we'll compare the twistor rotation with the deformation to the moduli space of $\eps$-connections. We'll show that in an appropriate limit, by passing to a point $\eps$ in the twistor sphere we obtain a complex manifold equivalent to the moduli space of $\eps$-connections as a deformation of the moduli space of multiplicative Higgs bundles.
 
 Let us begin by describing the hyperk\"ahler structure on the moduli space of periodic monopoles and how the holomorphic symplectic structure varies under rotation in the twistor sphere.  We'll begin by recalling that the moduli space of periodic monopoles can be described as a hyperk\"ahler quotient as in the work of Atiyah and Hitchin \cite{AtiyahHitchin}.  In a context with more general boundary data at $\infty$ this was demonstrated by Cherkis and Kapustin \cite{CherkisKapustin3} for the group $\SU(2)$, see also Foscolo \cite{FoscoloDef}[Theorem 7.12].  In the case of $\bb{CP}^1$ with a fixed framing the analysis is much easier.
 
@@ -1270,15 +1272,13 @@ where we identify $\zeta$ with an element of $\SO(3)$ and apply this rotation to
 Now, we'll perform our identification of the twistor deformation on the multiplicative Higgs side by rewriting this twistor rotation in a somewhat different way in the large $R$ limit.  In this limit we can identify the twistor rotation with the deformation obtained by replacing the product $\bb{CP}^1 \times S^1_R$ with the product twisted by an automorphism of $\RR^2$.  More precisely, the rotated symplectic structure can then be described in the following way.
 
 \begin{theorem} \label{HK_rotation_thm}
-Let $\left(\mr{Image}(H)\right)_{\zeta,R}$ be the family of complex manifolds obtained by pulling back the holomorphic symplectic structure $\omega_{\zeta,R}$ on $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ at $\zeta$ in the twistor sphere to the image of the holonomy map $H \colon \mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times S^1_R,D,\omega^\vee) \inj \mhiggs^{\text{fr}}_G(\bb{CP}^1,D,\omega^\vee)$.  There is a canonical embedding $\mr{Image}(H)_{\zeta,R} \to \epsconn^{\text{ps,fr}}_G(\bb{CP}^1,D,\omega^\vee)$.  In the limit where $R \to \infty$ with $2 \pi \zeta R = \eps$ fixed this embedding becomes holomorphic symplectic, in the sense that the holomorphic symplectic structures converge pointwise over the tangent bundle to the moduli space of monopoles. 
+Let $\left(\mhiggs^{\text{ps,fr}}_G(\bb{CP}^1,D,\omega^\vee)\right)_{\zeta,R}$ be the family of complex manifolds obtained by pulling back the holomorphic symplectic structure $\omega_{\zeta,R}$ on $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ at $\zeta$ in the twistor sphere to the moduli space of polystable framed multiplicative Higgs bundles.  In the limit where $R \to \infty$ with $2 \pi \zeta R = \eps$ fixed, the canonical smooth isomorphism
+\[\left(\mhiggs^{\text{ps,fr}}_G(\bb{CP}^1,D,\omega^\vee)\right)_{\zeta,R} \to \epsconn^{\text{ps,fr}}_G(\bb{CP}^1,D,\omega^\vee)\]
+becomes holomorphic symplectic, in the sense that the holomorphic symplectic structures converge pointwise over the tangent bundle to the moduli space of monopoles. 
 \end{theorem}
 
-\begin{remark}
-According to Conjecture \ref{open_image_conjecture}, the space $\mr{Image}(H)$ is open in the moduli space of multiplicative Higgs bundles (the subspace obtained by imposing a suitable stability condition) and therefore the result identifies an open subspace of the moduli space of $\eps$-connections with the twistor deformation of the moduli space of Higgs bundles. 
-\end{remark}
-
 \begin{proof}
-First let us note that the 3-manifolds $\bb{CP}^1 \times_\eps S^1_R$ for varying values of $R$ and $\eps$ are all diffeomorphic (via a diffeomorphism fixing the circle at $\infty$).  This means that we can identify the moduli spaces in question as smooth manifolds by choosing such a diffeomorphism.  In particular, by composing this identification with the holonomy map $H$, we obtain a canonical embedding $\mr{Image}(H)_{\zeta,R} \to \epsconn^{\text{ps,fr}}_G(\bb{CP}^1,D,\omega^\vee)$.  
+First let us note that the 3-manifolds $\bb{CP}^1 \times_\eps S^1_R$ for varying values of $R$ and $\eps$ are all diffeomorphic (via a diffeomorphism fixing the circle at $\infty$).  This means that we can identify the moduli spaces in question as smooth manifolds by choosing such a diffeomorphism.  
 
 Now, according to Theorem \ref{monopole_qconn_comparison_thm} it's enough to show that the complex structure on $\mon_G^{\text{ps,fr}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ at the point $\zeta$ converges to the complex structure on the $\eps$-deformation $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_\eps S^1_R,D,\omega^\vee)$.  The key observation that we'll use is that, fixing $2 \pi \zeta R = \eps$ we can identify the rotated lattice with a \emph{sheared} lattice.  Namely, when we rotate the rank one lattice $L_{R,0} = (0,0,2\pi R)\ZZ$ by $\zeta$ we obtain the lattice
 \[\zeta(L_{R,0}) = \frac {1}{1+|\zeta|^2} (\mr{Re}(\eps), \mr{Im}(\eps), 2\pi R (1-|\zeta|^2) )\ZZ.\]

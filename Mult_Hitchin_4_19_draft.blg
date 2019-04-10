@@ -3,58 +3,56 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Mult_Hitchin_4_19_draft.aux
 The style file: alpha.bst
 Database file #1: Mult_Hitchin.bib
-Warning--I didn't find a database entry for "MochizukiKM"
 Warning--there's a number but no volume in ChenDoreyHollowoodLee
 Warning--there's a number but no series in CostelloBook
 Warning--can't use both volume and number fields in CostelloSH
 Warning--empty publisher in CostelloSH
 Warning--there's a number but no volume in DoreyHollowoodLee
 Warning--empty journal in EagerSaberiWalcher
-Warning--there's a number but no volume in FoscoloGluing
 Warning--empty journal in KapustinHolo
 Warning--empty journal in NekrasovStringMath
 Warning--empty journal in PestunStringMath
 Warning--there's a number but no volume in Shapiro
 Warning--there's a number but no volume in Steinberg
-You've used 107 entries,
+You've used 106 entries,
             2543 wiz_defined-function locations,
-            1232 strings with 21386 characters,
-and the built_in function-call counts, 41290 in all, are:
-= -- 4252
-> -- 1722
+            1224 strings with 21200 characters,
+and the built_in function-call counts, 40770 in all, are:
+= -- 4199
+> -- 1697
 < -- 70
-+ -- 572
-- -- 553
-* -- 2977
-:= -- 6731
-add.period$ -- 334
-call.type$ -- 107
-change.case$ -- 619
-chr.to.int$ -- 101
-cite$ -- 119
-duplicate$ -- 1697
-empty$ -- 3042
-format.name$ -- 704
-if$ -- 8408
-int.to.chr$ -- 7
++ -- 563
+- -- 544
+* -- 2926
+:= -- 6648
+add.period$ -- 331
+call.type$ -- 106
+change.case$ -- 612
+chr.to.int$ -- 99
+cite$ -- 117
+duplicate$ -- 1682
+empty$ -- 3004
+format.name$ -- 694
+if$ -- 8305
+int.to.chr$ -- 8
 int.to.str$ -- 0
-missing$ -- 109
-newline$ -- 541
-num.names$ -- 321
-pop$ -- 504
+missing$ -- 108
+newline$ -- 536
+num.names$ -- 318
+pop$ -- 501
 preamble$ -- 1
-purify$ -- 735
+purify$ -- 727
 quote$ -- 0
-skip$ -- 1415
+skip$ -- 1404
 stack$ -- 0
-substring$ -- 2521
-swap$ -- 255
+substring$ -- 2473
+swap$ -- 254
 text.length$ -- 70
 text.prefix$ -- 45
 top$ -- 0
-type$ -- 832
-warning$ -- 12
-while$ -- 418
-width$ -- 111
-write$ -- 1385
-(There were 13 warnings)
+type$ -- 824
+warning$ -- 11
+while$ -- 412
+width$ -- 110
+write$ -- 1371
+(There were 11 warnings)
