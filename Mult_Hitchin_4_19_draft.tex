@@ -505,15 +505,15 @@ Below we'll write $\qconn_G^{\text{ps}}(C, D, \omega^\vee) \sub \qconn_G(C,D,\om
 An example of a multiplicative Higgs bundle on $\bb{CP}^1$ which is not polystable, for the group $G = \SL_2$, is provided by taking the trivial $G$-bundle $P$ and the constant multiplicative Higgs field with value \[g = \begin{pmatrix}1&1\\0&1\end{pmatrix}.\]  The multiplicative Higgs field does not fix a maximal torus in $G$, so the pair $(P,g)$ cannot be reduced to any non-trivial Levi subgroup.  On the other hand, for the upper triangular Borel subgroup $B \sub G$ we have $\deg_\chi(P_B, g) = 0$, so $(P,g)$ is not stable.
 \end{example}
 
-\chris{I've written the below, but actually it might be a consequence of Charbonneau and Hurtubise's stability condition.  What do you think?}
-In our main example of interest -- the rational setting where $C = \bb{CP}^1$ with a fixed framing at infinity -- we will impose an additional stability condition constraining the value of the framing. 
+\chris{re-edited this definition}
+In our main example of interest -- the rational setting where $C = \bb{CP}^1$ with a fixed framing at infinity -- we will impose an additional stability condition constraining the 1-jet of the framing.  We'll discuss why this condition is necessary in Section \ref{periodic_monopole_section}.
 
-\begin{definition}
-A $q$-connection $(P,g)$ on $\bb{CP}^1$ with a fixed framing $g_\infty$ at $\infty$ is polystable if it is polystable as in Definition \ref{polystable_def}, and the framing value $g_\infty \in G/G$ is semisimple.
+\begin{definition} \label{rational_stability_def}
+A $q$-connection $(P,g)$ on $\bb{CP}^1$ with a fixed framing $g_\infty$ at $\infty$ is polystable if it is polystable as in Definition \ref{polystable_def}, and when we take the Taylor expansion $g = g_\infty + g_\infty^{(1)}z^{-1} + g_\infty^{(2)}z^{-2} + \cdots$ of the multiplicative Higgs field $g$ at $\infty$, both $g_\infty$ and $g^{(1)}_\infty$ are semisimple elements of $G$.
 \end{definition}
 
 \begin{remark}
-We'll see the origin of this condition in Section \ref{periodic_monopole_section}.  For now, observe that the element $g_\infty$ determines an $S^1$-equivariant holomorphic $G$-bundle on an elliptic curve, where $S^1$ acts on $T^2$ by rotating one of the two circles.  This $G$-bundle is polystable if $g_\infty$ is semisimple, which ensures that the $G$-bundle admits a reduction of structure group to an $H$-bundle.
+We observe that the element $g_\infty$ determines an $S^1$-equivariant holomorphic $G$-bundle on an elliptic curve, where $S^1$ acts on $T^2$ by rotating one of the two circles.  This $G$-bundle is polystable if $g_\infty$ is semisimple, which ensures that the $G$-bundle admits a reduction of structure group to an $H$-bundle.
 \end{remark}
 
 \subsection{Poisson Structures from Derived Geometry}
@@ -854,7 +854,7 @@ First we'll establish injectivity.  Let $(\bo P, \mc A)$ and $(\bo P', \mc A')$ 
 
 For surjectivity, we again use the same argument as Charbonneau--Hurtubise and Smith, but with an important modification.  Charbonneau and Hurtubise use a crucial result of Simpson \cite[Theorem 1]{Simpson} on the existence of Hermitian Yang-Mills metrics on surfaces.  Simpson's argument only applies to K\"ahler metrics with finite volume, which isn't the case here.  We can, however, replace Simpson's theorem with a theorem of Mochizuki \cite[Corollary 3.13]{MochizukiKH} in the case of the curve $\CC$.
 
-In order to apply Mochizuki's theorem it is necessary to verify the assumption of analytic stability.  We can use \cite[Lemma 4.5]{CharbonneauHurtubise} which says that Mochizuki's definition of degree coincides with the definition from Section \ref{stability_section}. \chris{I'm stil not quite sure how to deal with stability here.}
+In order to apply Mochizuki's theorem it is necessary to verify the assumption of analytic stability.  We can use \cite[Lemma 4.5]{CharbonneauHurtubise} which says that Mochizuki's definition of degree coincides with the definition from Section \ref{stability_section}.  We will also use the condition on the 1-jet from Definition \ref{rational_stability_def}. \chris{edit to incorporate argument including first order condition}
 
 With this established, we can apply the proof of \cite[Proposition 5.2]{Smith} using Mochizuki's theorem in place of Simpson's.  The local analysis at the singularities if independent of the value of $\eps$ so applies identically.
 \end{proof}
