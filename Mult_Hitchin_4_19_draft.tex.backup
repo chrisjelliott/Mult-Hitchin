@@ -505,16 +505,15 @@ Below we'll write $\qconn_G^{\text{ps}}(C, D, \omega^\vee) \sub \qconn_G(C,D,\om
 An example of a multiplicative Higgs bundle on $\bb{CP}^1$ which is not polystable, for the group $G = \SL_2$, is provided by taking the trivial $G$-bundle $P$ and the constant multiplicative Higgs field with value \[g = \begin{pmatrix}1&1\\0&1\end{pmatrix}.\]  The multiplicative Higgs field does not fix a maximal torus in $G$, so the pair $(P,g)$ cannot be reduced to any non-trivial Levi subgroup.  On the other hand, for the upper triangular Borel subgroup $B \sub G$ we have $\deg_\chi(P_B, g) = 0$, so $(P,g)$ is not stable.
 \end{example}
 
-In our main example of interest -- the rational setting where $C = \bb{CP}^1$ with a fixed framing at infinity -- we will impose an additional stability condition on the value of the framing. 
+In our main example of interest -- the rational setting where $C = \bb{CP}^1$ with a fixed framing at infinity -- we will impose an additional stability condition constraining the value of the framing.  We'll discuss why this condition is necessary in Section \ref{periodic_monopole_section} \chris{explanation to be added}.
 
-\begin{definition}
-A $q$-connection $(P,g)$ on $\bb{CP}^1$ with a fixed framing $g_\infty$ at $\infty$ is polystable if it is polystable as in Definition \ref{polystable_def}, and the framing value $g_\infty \in G/G$ is semisimple.
+\begin{definition} \label{rational_stability_def}
+A $q$-connection $(P,g)$ on $\bb{CP}^1$ with a fixed framing $g_\infty$ at $\infty$ is polystable if it is polystable as in Definition \ref{polystable_def}, and the chosen framing $g_\infty$ is regular semisimple.
 \end{definition}
 
 \begin{remark}
-We'll see the origin of this condition in Section \ref{periodic_monopole_section}.  For now, observe that the element $g_\infty$ determines an $S^1$-equivariant holomorphic $G$-bundle on an elliptic curve, where $S^1$ acts on $T^2$ by rotating one of the two circles.  This $G$-bundle is polystable if $g_\infty$ is semisimple, which ensures that the $G$-bundle admits a reduction of structure group to an $H$-bundle.
+We observe that the element $g_\infty$ determines an $S^1$-equivariant holomorphic $G$-bundle on an elliptic curve, where $S^1$ acts on $T^2$ by rotating one of the two circles.  This $G$-bundle is polystable if $g_\infty$ is semisimple, which ensures that the $G$-bundle admits a reduction of structure group to an $H$-bundle.
 \end{remark}
-
 
 \subsection{Poisson Structures from Derived Geometry}
 As we mentioned above in Remark \ref{Elliptic_AKSZ_remark}, in the case where $C$ is an elliptic curve and there are no punctures there is a symplectic structure on $\mhiggs_G(C)$ given by the AKSZ formalism.  More generally, when we do have punctures, we expect the moduli space $\mhiggs_G(C,D)$ to have a Poisson structure with a clear origin story coming from the theory of derived Poisson geometry.  In this section we'll explain what this story looks like.  However, we emphasise that there are technical obstructions to making this story precise with current technology: this section should be viewed as motivation for the structures we'll discuss in the rest of the paper.  On the other hand, readers who aren't familiar with derived symplectic geometry can freely skip this section.  We refer the reader to \cite{CPTVV} for the theory of derived Poisson structures and to \cite{MelaniSafronov1, MelaniSafronov2, Spaide} for that of derived coisotropic structures.  We would like to thank Pavel Safronov for explaining many of the ideas discussed in this section to us.
@@ -753,7 +752,6 @@ Let $G$ and $G^\vee$ be Langlands dual simple Lie groups, and say that $G$ arose
 where $\mr{Out}(\wt G)$ acts simultaneously on $\wt G$ and on the circle $S^1_B$, under the identification $\mhiggs_{\wt G}(E) = \bun_{\wt G}(E \times S^1_B)$.  As above, this equivalence should be compatible with the Fourier-Mukai transform relating the categories for the maximal tori.
 \end{conjecture}
 
-
 \section{Periodic Monopoles} \label{periodic_monopole_section}
 Moduli spaces of $q$-connections on a Riemann surface $C$ are closely related to moduli spaces of periodic monopoles, i.e. monopoles on 3-manifolds that fiber over the circle (more specifically, with fiber $C$ and monodromy determined by $q$).  Let $G_\RR$ be a compact Lie group whose complexification is $G$.  The discussion in this section will mostly follow that of \cite{CharbonneauHurtubise, Smith}.
 
@@ -791,8 +789,9 @@ Let $D \sub M$ be a finite subset.  Let $\omega^\vee$ be a choice of coweight fo
 \end{definition}
 
 We can also introduce a framing (or a reduction of structure group as in the trigonometric example, though we won't consider the latter in this paper).  As usual let $c \in C$ be a point fixed by the automorphism $q$.
+
 \begin{definition}
-  A monopole on $M$ with \emph{framing} at the point $c \in C$ is a monopole $(\bo P,A,\Phi)$ on $M$ (possibly with Dirac singularities at $D$) along with a trivialization of the restriction of $\bo P$ to the circle $\{c\} \times S^1_R$, with the condition that the holonomy of $\mc A$ around this circle lies in a fixed conjugacy class $f \in G/G$.
+A monopole on $M$ with \emph{framing} at the point $c \in C$ is a monopole $(\bo P,A,\Phi)$ on $M$ (possibly with Dirac singularities at $D$) along with a trivialization of the restriction of $\bo P$ to the circle $\{c\} \times S^1_R$, with the condition that the holonomy of $\mc A$ around this circle lies in a fixed conjugacy class $f \in G/G$.
 \end{definition}
 
 The moduli theory of monopoles on general compact 3-manifolds was described by Pauly \cite{Pauly}.  In this paper we'll be interested in moduli spaces $\mon_G(M, D, \omega^\vee)$ of monopoles on 3-manifolds of the form $M = C \times S^1$, with prescribed Dirac singularities and possibly with a fixed framing at a point in $C$.  
@@ -815,7 +814,12 @@ We would like to generalize this theorem to cover the twisted product $C \times_
 The moduli space of periodic monopoles on $\RR^2 \times S^1$ specifically has been studied in the mathematics literature by Foscolo \cite{FoscoloDef} , applying the analytic techniques of deformation theory to earlier work on periodic monopoles by Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin2}. This analysis considers a less restrictive boundary condition at infinity in $\RR^2$ than a framing -- the Higgs field may admit a regular singularity at infinity -- and therefore requires more sophisticated analysis than we'll need to consider in the present paper.
 \end{remark}
 
-\chris{I've rewritten this part a bit, but I'm worried that it's not enough to establish the existence of the hyperk\"ahler metric.  What do you think?}
+\begin{definition} \label{monopole_moduli_def}
+Let $D$ be a finite subset $\{(z_1,t_0), \ldots, (z_k, t_0)\}$ of points in $\bb{CP}^1 \times_\eps S^1_R$, and let $\omega^\vee_{i}$ be a choice of coweight for each point in $D$. The moduli space $\mon^\fr_G(\bb{CP}^1 \times_\eps S^1_R, D, \omega^\vee)$ is the moduli space of smooth principal $G_\RR$-bundles $\bo P$ on $\bb{CP}^1 \times_\eps S^1_R$ equipped with a connection $A$ and a section $\Phi$ of the associated bundle $\gg_{\bo P}$, so that the restriction of $(A,\Phi)$ to the open subset $\CC \times_\eps S^1_R$ satisfyies the Bogomolny equation for the flat metric.
+\end{definition}
+
+
+\chris{whole subsection needs replacing}
 In this case -- where we consider the 3-manifold $M = \bb{CP}^1 \times_\eps S^1$ with the flat Riemannian metric, which is singular at $\{\infty\} \times S^1$ -- the moduli space of periodic monopoles can be obtained as a hyperk\"ahler quotient.  Let us fix Dirac singularities at $D \times \{t_0\}$, and a framing at $\infty$.  Consider the infinite-dimensional vector space $\mc V$ consisting of pairs $(A,\Phi)$ where $A$ is a connection on a fixed principal $G_\RR$-bundle $\bo P$ on $M$, $\Phi$ is a section of $\gg_{\bo P}$, and the pairs $(A,\Phi)$ have a Dirac singularity with charge $\omega^\vee_{z_i}$ at each $(z_i,t_0)$ in $D \times \{t_0\}$.  Let $\mc G$ be the group of gauge transformations of the bundle $\bo P$.
 
 The hyperk\"ahler moment map is given by the Bogomolny functional, namely
@@ -826,13 +830,7 @@ The hyperk\"ahler moment map is given by the Bogomolny functional, namely
 
 Here the Lie algebra $\mr{Lie}(\mc G)$ of the gauge group is the space of sections in $\Omega^0(M \bs (D \times \{t_0\}); (\gg_\RR)_{\bo P})$ that vanish at $\{\infty\} \times S^1$, so $\mc G \otimes \RR^3$ is identified with the space of sections in $\Omega^1(M \bs (D \times \{t_0\}); (\gg_\RR)_{\bo P})$ likewise vanishing at $\infty$.
 
-\vasily{In the common conventions, e.g. \url{https://projecteuclid.org/euclid.jdg/1214443066} hyperk\"ahler moment map takes value in $Lie(\mc G) \otimes \mathbb{R}^3$ where $\mathbb{R}^3$ is the space of imaginary quaternions. 
-  We'll split $\mathbb{R}^{3} \simeq \mathbb{C} \oplus \mathbb{R}$ into complex part
-  and real part by picking a point on a twistor sphere, so that $\mu  = 0$
-  splits into a complex equation and real equation. But we should not discard complex
-equation as, I am afraid, we do in the above definition } \chris{I rewrote the above a bit, but I don't think we're discarding the complex equation here?}
-
-\begin{definition} \label{monopole_moduli_def}
+\begin{definition}
 Let $D$ be a finite subset $\{(z_1,t_0), \ldots, (z_k, t_0)\}$ of points in $M = \bb{CP}^1 \times S^1_R$, and let $\omega^\vee_{i}$ be a choice of coweight for each point in $D$. The moduli space $\mon_G(M, D, \omega^\vee)$ is the hyperk\"ahler quotient
 \[\mon_G(M, D, \omega^\vee) = \mu^{-1}(0) / \mc G.\]
 \end{definition}
@@ -840,6 +838,7 @@ Let $D$ be a finite subset $\{(z_1,t_0), \ldots, (z_k, t_0)\}$ of points in $M =
 \begin{remark} \label{flat_metric_remark}
 Note that the Bogomolny functional $\mu$ makes sense when we use the flat Riemannian metric on $\bb{CP}^1$, which is singular at the point $z = \infty$.  If $A$ is a gauge field on $\bb{CP}^1 \times_\eps S^1$ where the pair $(A,\Phi)$ have Dirac singularities at $D \times \{t_0\}$, then the Hodge dual $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1}$ in $\Omega^1((\CC \times_\eps S^1) \bs (D \times \{t_0\}; (\gg_\RR)_{\bo P})$ extends by zero to a 1-form on $(\bb{CP}^1 \times_\eps S^1) \bs (D \times \{t_0\})$.  Indeed, for the Hodge dual of a 2-form $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1} = (1+|z|^2/4)^{-1} \ast_{\mr{round}} F_A$.  The hyperk\"ahler moment map is, therefore, still well-defined.
 \end{remark}
+\chris{end of section needing replacing}
 
 Now, in the case of the flat metric we can generalize Theorem \ref{CHS_thm} to include the $\eps$-deformation.  To do so we'll crucially use results of Mochizuki \cite{MochizukiKH} following earlier work of Biquard and Jardim \cite{BiquardJardim}.
 
@@ -854,9 +853,16 @@ First we'll establish injectivity.  Let $(\bo P, \mc A)$ and $(\bo P', \mc A')$ 
 
 For surjectivity, we again use the same argument as Charbonneau--Hurtubise and Smith, but with an important modification.  Charbonneau and Hurtubise use a crucial result of Simpson \cite[Theorem 1]{Simpson} on the existence of Hermitian Yang-Mills metrics on surfaces.  Simpson's argument only applies to K\"ahler metrics with finite volume, which isn't the case here.  We can, however, replace Simpson's theorem with a theorem of Mochizuki \cite[Corollary 3.13]{MochizukiKH} in the case of the curve $\CC$.
 
-In order to apply Mochizuki's theorem it is necessary to verify the assumption of analytic stability.  We can use \cite[Lemma 4.5]{CharbonneauHurtubise} which says that Mochizuki's definition of degree coincides with the definition from Section \ref{stability_section}. \chris{...}
+Now, let us consider surjectivity.  We extend the argument of Charbonneau--Hurtubise and Smith in two steps, in order to account for the two new subtleties described above.  We begin by extending a holomorphic $G$-bundle $P$ on $\bb{CP}^1 \times \{0\}$ with $\eps$-connection $g$ to a $G$-bundle on $M \bs (D \times \{t_0\}) = (\bb{CP}^1 \times_\eps S^1_R) \bs (D \times \{t_0\})$.  Let $\wt M$ be the 3-manifold
+\[\wt M = ((-2\pi R, 2\pi R) \times \bb{CP}^1) \bs \bigcup_{j=1}^k (A^+_j \cup A^-_j)\]
+where $A^+_j$ is the line $\{(t+ t_0,z_j + t \eps/{2\pi R}) \colon t \in (0, 2\pi R - t_0]\}$ and $A^-_j$ is the line $\{(t + t_0 - t \pi R,z_j + 4 \eps/{2\pi R}) \colon t \in [2\pi R-t_0, 2 \pi R)\}$.
+Let $\pi \colon \wt M \to \bb{CP}^1$ be the projection sending $(t,z)$ to $z + t\eps/2 \pi R$. The bundle $P$ pulls back to a bundle $\pi^*(P)$ on $\wt M$. We obtain a bundle on $M \bs (D \times t_0)$ by applying the identification $(t,z) \sim (t - 2 \pi R, q(z))$. This bundle extends to an $S^1$-invariant holomorphic $G$-bundle on $M \times S^1$. The remainder of the proof -- verifying the existence of the monopole structure associated to an appropriate choice of hermitian structure -- consists of local analysis which is independent of the value of the parameter $\eps$. 
 
-With this established, we can apply the proof of \cite[Proposition 5.2]{Smith} using Mochizuki's theorem in place of Simpson's.  The local analysis at the singularities if independent of the value of $\eps$ so applies identically.
+In order to construct the monopole, we will apply Mochizuki's theorem.  It is necessary to verify that the assumptions of \cite[Corollary 3.13]{MochizukiKH} hold.  We choose a hermitian metric on the holomorphic $G$-bundle constructed above, so that near each singularity the corresponding Chern connection described a Dirac singularity of the specified charge, and so that the Taylor expansion at infinity takes the form $g(z) = g_\infty + O(z^{-2})$ -- i.e. so that it has the appropriate framing, and no term of order $z^{-1}$.  The result of this choice is that the quantity $|\Lambda F(h_0)|$ is bounded, near infinity, by $(1 +\|z\|^2)^{-2}$.
+
+We must also verify analytic stability of the associated vector bundle to our $G$-bundle upon a choice of faithful representation.  To do this, we'll use Charbonneau and Hurtubise's result \cite[Lemma 4.5]{CharbonneauHurtubise}, which says that Mochizuki's definition of degree coincides with the definition from Section \ref{stability_section}.  That is, since $|\Lambda F(h_0)|$ is integrable in a neighbourhood of infinity, we can identify its integral with the algebraic definition of the degree.  Therefore, since our bundle is polystable in the sense of Section \ref{stability_section}, it is analytically polystable, and therefore we can apply Mochizuki's result.
+
+With this established, we can apply the proof of \cite[Proposition 5.2]{Smith} using Mochizuki's theorem in place of Simpson's.  The local analysis at the singularities is independent of the value of $\eps$.
 \end{proof}
 
 \begin{remark}
@@ -1231,6 +1237,7 @@ The moduli space $\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee)$ has the structure of a
 \end{corollary}
 
 \section{Hyperk\"ahler Structures} \label{hyperkahler_section}
+\chris{need to include a description of the hyperk\"ahler quotient here, moved from Section \ref{periodic_monopole_section}, but including the further symplectic reduction}
 The results of the previous section imply that the symplectic structure on $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ extends canonically to a hyperk\"ahler structure.  In this section we'll compare the twistor rotation with the deformation to the moduli space of $\eps$-connections. We'll show that in an appropriate limit, by passing to a point $\eps$ in the twistor sphere we obtain a complex manifold equivalent to the moduli space of $\eps$-connections as a deformation of the moduli space of multiplicative Higgs bundles.
 
 Let us begin by describing the hyperk\"ahler structure on the moduli space of periodic monopoles and how the holomorphic symplectic structure varies under rotation in the twistor sphere.  We'll begin by recalling that the moduli space of periodic monopoles can be described as a hyperk\"ahler quotient as in the work of Atiyah and Hitchin \cite{AtiyahHitchin}.  In a context with more general boundary data at $\infty$ this was demonstrated by Cherkis and Kapustin \cite{CherkisKapustin3} for the group $\SU(2)$, see also Foscolo \cite{FoscoloDef}[Theorem 7.12].  In the case of $\bb{CP}^1$ with a fixed framing the analysis is much easier.
