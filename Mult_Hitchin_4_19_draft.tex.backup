@@ -818,28 +818,6 @@ The moduli space of periodic monopoles on $\RR^2 \times S^1$ specifically has be
 Let $D$ be a finite subset $\{(z_1,t_0), \ldots, (z_k, t_0)\}$ of points in $\bb{CP}^1 \times_\eps S^1_R$, and let $\omega^\vee_{i}$ be a choice of coweight for each point in $D$. The moduli space $\mon^\fr_G(\bb{CP}^1 \times_\eps S^1_R, D, \omega^\vee)$ is the moduli space of smooth principal $G_\RR$-bundles $\bo P$ on $\bb{CP}^1 \times_\eps S^1_R$ equipped with a connection $A$ and a section $\Phi$ of the associated bundle $\gg_{\bo P}$, so that the restriction of $(A,\Phi)$ to the open subset $\CC \times_\eps S^1_R$ satisfyies the Bogomolny equation for the flat metric.
 \end{definition}
 
-
-\chris{whole subsection needs replacing}
-In this case -- where we consider the 3-manifold $M = \bb{CP}^1 \times_\eps S^1$ with the flat Riemannian metric, which is singular at $\{\infty\} \times S^1$ -- the moduli space of periodic monopoles can be obtained as a hyperk\"ahler quotient.  Let us fix Dirac singularities at $D \times \{t_0\}$, and a framing at $\infty$.  Consider the infinite-dimensional vector space $\mc V$ consisting of pairs $(A,\Phi)$ where $A$ is a connection on a fixed principal $G_\RR$-bundle $\bo P$ on $M$, $\Phi$ is a section of $\gg_{\bo P}$, and the pairs $(A,\Phi)$ have a Dirac singularity with charge $\omega^\vee_{z_i}$ at each $(z_i,t_0)$ in $D \times \{t_0\}$.  Let $\mc G$ be the group of gauge transformations of the bundle $\bo P$.
-
-The hyperk\"ahler moment map is given by the Bogomolny functional, namely
-\begin{align*}
-\mu \colon \mc V &\to \mr{Lie}(\mc G) \otimes \RR^3 \\
-(A,\Phi) &\mapsto \ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1}- \d_A \Phi|_{\CC \times_\eps S^1}.
-\end{align*}
-
-Here the Lie algebra $\mr{Lie}(\mc G)$ of the gauge group is the space of sections in $\Omega^0(M \bs (D \times \{t_0\}); (\gg_\RR)_{\bo P})$ that vanish at $\{\infty\} \times S^1$, so $\mc G \otimes \RR^3$ is identified with the space of sections in $\Omega^1(M \bs (D \times \{t_0\}); (\gg_\RR)_{\bo P})$ likewise vanishing at $\infty$.
-
-\begin{definition}
-Let $D$ be a finite subset $\{(z_1,t_0), \ldots, (z_k, t_0)\}$ of points in $M = \bb{CP}^1 \times S^1_R$, and let $\omega^\vee_{i}$ be a choice of coweight for each point in $D$. The moduli space $\mon_G(M, D, \omega^\vee)$ is the hyperk\"ahler quotient
-\[\mon_G(M, D, \omega^\vee) = \mu^{-1}(0) / \mc G.\]
-\end{definition}
-
-\begin{remark} \label{flat_metric_remark}
-Note that the Bogomolny functional $\mu$ makes sense when we use the flat Riemannian metric on $\bb{CP}^1$, which is singular at the point $z = \infty$.  If $A$ is a gauge field on $\bb{CP}^1 \times_\eps S^1$ where the pair $(A,\Phi)$ have Dirac singularities at $D \times \{t_0\}$, then the Hodge dual $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1}$ in $\Omega^1((\CC \times_\eps S^1) \bs (D \times \{t_0\}; (\gg_\RR)_{\bo P})$ extends by zero to a 1-form on $(\bb{CP}^1 \times_\eps S^1) \bs (D \times \{t_0\})$.  Indeed, for the Hodge dual of a 2-form $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1} = (1+|z|^2/4)^{-1} \ast_{\mr{round}} F_A$.  The hyperk\"ahler moment map is, therefore, still well-defined.
-\end{remark}
-\chris{end of section needing replacing}
-
 Now, in the case of the flat metric we can generalize Theorem \ref{CHS_thm} to include the $\eps$-deformation.  To do so we'll crucially use results of Mochizuki \cite{MochizukiKH} following earlier work of Biquard and Jardim \cite{BiquardJardim}.
 
 \begin{theorem} \label{monopole_qconn_comparison_thm}
@@ -858,7 +836,10 @@ Now, let us consider surjectivity.  We extend the argument of Charbonneau--Hurtu
 where $A^+_j$ is the line $\{(t+ t_0,z_j + t \eps/{2\pi R}) \colon t \in (0, 2\pi R - t_0]\}$ and $A^-_j$ is the line $\{(t + t_0 - t \pi R,z_j + 4 \eps/{2\pi R}) \colon t \in [2\pi R-t_0, 2 \pi R)\}$.
 Let $\pi \colon \wt M \to \bb{CP}^1$ be the projection sending $(t,z)$ to $z + t\eps/2 \pi R$. The bundle $P$ pulls back to a bundle $\pi^*(P)$ on $\wt M$. We obtain a bundle on $M \bs (D \times t_0)$ by applying the identification $(t,z) \sim (t - 2 \pi R, q(z))$. This bundle extends to an $S^1$-invariant holomorphic $G$-bundle on $M \times S^1$. The remainder of the proof -- verifying the existence of the monopole structure associated to an appropriate choice of hermitian structure -- consists of local analysis which is independent of the value of the parameter $\eps$. 
 
-In order to construct the monopole, we will apply Mochizuki's theorem.  It is necessary to verify that the assumptions of \cite[Corollary 3.13]{MochizukiKH} hold.  We choose a hermitian metric on the holomorphic $G$-bundle constructed above, so that near each singularity the corresponding Chern connection described a Dirac singularity of the specified charge, and so that the Taylor expansion at infinity takes the form $g(z) = g_\infty + O(z^{-2})$ -- i.e. so that it has the appropriate framing, and no term of order $z^{-1}$.  The result of this choice is that the quantity $|\Lambda F(h_0)|$ is bounded, near infinity, by $(1 +\|z\|^2)^{-2}$.
+In order to construct the monopole, we will apply Mochizuki's theorem.  It is necessary to verify that the assumptions of \cite[Corollary 3.13]{MochizukiKH} hold.  We must choose a hermitian metric on the vector bundle associated to the holomorphic $G$-bundle constructed above under a faithful representation $\rho$, so that the holonomy around $S^1$ describes the $\eps$-connection $g$, so that near each singularity the corresponding Chern connection described a Dirac singularity of the specified charge, and so that the Taylor expansion at infinity takes the form $g(z) = g_\infty + O(z^{-2})$ -- i.e. so that it has the appropriate framing, and no term of order $z^{-1}$.  The result of this choice will then be that the quantity $|\Lambda F(h_0)|$ is bounded, near infinity, by $(1 +\|z\|^2)^{-2}$, as required by Mochizuki.  We build our metric using a partition of unity, so away from a neighbourhood of $\infty$, the metric coincides with the metric described by Charbonneau and Hurtubise.  On a neighbourhood of infinity, first let us eliminate the $\eps$ parameter by choosing an analytic isomorphism between $D \times_\eps S^1_R \times S^1$ and $D \times S^1_R \times S^1$, where $D$ is a disk around infinity.  We can describe a hermitian metric on $D^\times \times S^1_R \times S^1$, constant in the second $S^1$ factor, by the formula
+\[h_0(z,t) = (\rho(g(z))^\dagger)^{t/2\pi R}\rho(g(z))^{t/2\pi R}.\]
+
+Now, to verify the bound on the growth of $|\Lambda F(h_0)|$, we'll use the fact that our framing $g_\infty$ at infinity was regular semisimple.  Because the regular semisimple locus is open in $G$, the group element $g(z)$ is regular semisimple everywhere in a sufficiently small disk around infinity.  We can, therefore, choose a local gauge transformation on the disk making $g(z)$ valued in the maximal torus $T$ centralizing $g_\infty$ in this neighbourhood.  If $g(z)$ is $T$-valued then $|\Lambda F(h_0)|$
 
 We must also verify analytic stability of the associated vector bundle to our $G$-bundle upon a choice of faithful representation.  To do this, we'll use Charbonneau and Hurtubise's result \cite[Lemma 4.5]{CharbonneauHurtubise}, which says that Mochizuki's definition of degree coincides with the definition from Section \ref{stability_section}.  That is, since $|\Lambda F(h_0)|$ is integrable in a neighbourhood of infinity, we can identify its integral with the algebraic definition of the degree.  Therefore, since our bundle is polystable in the sense of Section \ref{stability_section}, it is analytically polystable, and therefore we can apply Mochizuki's result.
 
@@ -1232,6 +1213,7 @@ agreeing with the expression coming from $\mr{mHiggs}$.
 
 In particular the non-degenerate pairing on the multiplicative Higgs moduli space is determined by a closed 2-form, and the multiplicative Hitchin fibers are Lagrangian.
 
+\chris{Todo: replace the below corollary, since it's only true after further symplectic reduction.}
 \begin{corollary}
 The moduli space $\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee)$ has the structure of a completely integrable system.
 \end{corollary}
@@ -1241,6 +1223,21 @@ The moduli space $\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee)$ has the structure of a
 The results of the previous section imply that the symplectic structure on $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ extends canonically to a hyperk\"ahler structure.  In this section we'll compare the twistor rotation with the deformation to the moduli space of $\eps$-connections. We'll show that in an appropriate limit, by passing to a point $\eps$ in the twistor sphere we obtain a complex manifold equivalent to the moduli space of $\eps$-connections as a deformation of the moduli space of multiplicative Higgs bundles.
 
 Let us begin by describing the hyperk\"ahler structure on the moduli space of periodic monopoles and how the holomorphic symplectic structure varies under rotation in the twistor sphere.  We'll begin by recalling that the moduli space of periodic monopoles can be described as a hyperk\"ahler quotient as in the work of Atiyah and Hitchin \cite{AtiyahHitchin}.  In a context with more general boundary data at $\infty$ this was demonstrated by Cherkis and Kapustin \cite{CherkisKapustin3} for the group $\SU(2)$, see also Foscolo \cite{FoscoloDef}[Theorem 7.12].  In the case of $\bb{CP}^1$ with a fixed framing the analysis is much easier.
+
+\chris{Old section, re-inserted for editing.}  The moduli space of periodic monopoles can be obtained as a hyperk\"ahler quotient.  Let us fix Dirac singularities at $D \times \{t_0\}$, and a framing at $\infty$.  Consider the infinite-dimensional vector space $\mc V$ consisting of pairs $(A,\Phi)$ where $A$ is a connection on a fixed principal $G_\RR$-bundle $\bo P$ on $M$, $\Phi$ is a section of $\gg_{\bo P}$, and the pairs $(A,\Phi)$ have a Dirac singularity with charge $\omega^\vee_{z_i}$ at each $(z_i,t_0)$ in $D \times \{t_0\}$.  Let $\mc G$ be the group of gauge transformations of the bundle $\bo P$.
+
+The hyperk\"ahler moment map is given by the Bogomolny functional, namely
+\begin{align*}
+\mu \colon \mc V &\to \mr{Lie}(\mc G) \otimes \RR^3 \\
+(A,\Phi) &\mapsto \ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1}- \d_A \Phi|_{\CC \times_\eps S^1}.
+\end{align*}
+
+Here the Lie algebra $\mr{Lie}(\mc G)$ of the gauge group is the space of sections in $\Omega^0(M \bs (D \times \{t_0\}); (\gg_\RR)_{\bo P})$ that vanish at $\{\infty\} \times S^1$, so $\mc G \otimes \RR^3$ is identified with the space of sections in $\Omega^1(M \bs (D \times \{t_0\}); (\gg_\RR)_{\bo P})$ likewise vanishing at $\infty$.
+
+\begin{remark} \label{flat_metric_remark}
+Note that the Bogomolny functional $\mu$ makes sense when we use the flat Riemannian metric on $\bb{CP}^1$, which is singular at the point $z = \infty$.  If $A$ is a gauge field on $\bb{CP}^1 \times_\eps S^1$ where the pair $(A,\Phi)$ have Dirac singularities at $D \times \{t_0\}$, then the Hodge dual $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1}$ in $\Omega^1((\CC \times_\eps S^1) \bs (D \times \{t_0\}; (\gg_\RR)_{\bo P})$ extends by zero to a 1-form on $(\bb{CP}^1 \times_\eps S^1) \bs (D \times \{t_0\})$.  Indeed, for the Hodge dual of a 2-form $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1} = (1+|z|^2/4)^{-1} \ast_{\mr{round}} F_A$.  The hyperk\"ahler moment map is, therefore, still well-defined.
+\end{remark}
+\chris{end of inserted section, to edit in.}
 
 Recall from Definition \ref{monopole_moduli_def} that the moduli space of periodic monopoles on $\bb{CP}^1$ with a fixed framing at $\infty$ and fixed Dirac singularities can be described as the quotient 
 \[\mon_G^{\fr}(\bb{CP}^1 \times_\eps S^1_R, D, \omega^\vee) = \mu^{-1}(0)/\mc G,\]
