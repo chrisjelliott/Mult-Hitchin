@@ -52,6 +52,7 @@
 \newcommand{\dd}{\partial}
 \newcommand{\del}{\partial}
 
+
 \newcommand{\ul}[1]{\underline{#1}}
 \newcommand{\ol}[1]{\overline{#1}}
 
@@ -84,6 +85,7 @@
 \newcommand{\sub}{\subseteq}
 \newcommand{\iso}{\cong}
 
+\DeclareMathOperator{\tr}{Tr}
 \DeclareMathOperator{\coh}{Coh}
 \DeclareMathOperator{\higgs}{Higgs}
 \DeclareMathOperator{\bun}{Bun}
@@ -101,7 +103,6 @@
 \DeclareMathOperator{\diff}{Diff}
 \DeclareMathOperator{\Hol}{Hol}
 \DeclareMathOperator{\mhitch}{mHitch}
-\DeclareMathOperator{\tr}{Tr}
 
 \newcommand{\map}{\ul{\mr{Map}}}
 \newcommand{\qconn}{q\text{-Conn}}
@@ -175,9 +176,15 @@ coweight $\omega^\vee_{z_i}$ at each puncture $z_i$.
  
  The moduli space of multiplicative Higgs bundles admits a version of the Hitchin fibration, just like the ordinary moduli space of Higgs bundles.  Intuitively, this map is defined using the Chevalley map $\chi \colon G \to T/W$ (for instance if $G = \GL_n$, the map sending a matrix to its characteristic polynomial): the multiplicative Higgs field is, in particular, a meromorphic $G$-valued function, and the multiplicative Hitchin fibration post-composes this function with $\chi$.  See Section \ref{Hitchin_system_section} for a more detailed definition.
  
- While the structure of the multiplicative fibration makes sense for any curve, it only defines a completely integrable system -- in particular there is only a natural symplectic structure on the total space -- in the very special situation where the curve $C$ is Calabi-Yau.  That is, $C$ must be either $\CC$, $\CC^\times$ or an elliptic curve.  In this paper we'll be most interested in the ``rational'' case, where $C = \CC$.  We use a specific boundary condition at infinity: we consider multiplicative Higgs bundles on $\bb{CP}^1$ with a fixed framing at infinity.  In other words we study the moduli space $\mhiggs^{\text{fr}}_G(\bb{CP}^1,D,\omega^\vee)$ of multiplicative Higgs bundles on $\bb{CP}^1$ with prescribed singularities lying at the points $D = \{z_1, \ldots, z_k\}$, with local data at the singuarities encoded by $\omega_{z_1}^\vee, \ldots, \omega_{z_k}^\vee$ respectively, and with a fixed framing at $\infty$.  This moduli space is a smooth algebraic variety with dimension depending on the coweights we chose
+ While the structure of the multiplicative fibration makes sense for any curve, it only defines a completely integrable system -- in particular there is only a natural symplectic structure on the total space -- in the very special situation where the curve $C$ is Calabi-Yau.  That is, $C$ must be either $\CC$, $\CC^\times$ or an elliptic curve.  In this paper we'll be most interested in the ``rational'' case, where $C = \CC$.  We use a specific boundary condition at infinity: we consider multiplicative Higgs bundles on $\bb{CP}^1$ with a fixed framing at infinity.  In other words we study the moduli space $\mhiggs^{\text{fr}}_G(\bb{CP}^1,D,\omega^\vee)$ of multiplicative Higgs bundles on $\bb{CP}^1$ with prescribed singularities lying at the points $D = \{z_1, \ldots, z_k\}$, with local data at the singuarities encoded by $\omega_{z_1}^\vee, \ldots, \omega_{z_k}^\vee$ respectively, and with a fixed framing at $\infty$.  This moduli space is a smooth algebraic variety with dimension depending on the coweights we chose.
+
+ \vasily{Come back here and insert adjective 'reduced' moduli space
+   in a sentence about hyperKahler structure with a reference to
+   un updated theorem down the section..}
  
- In the case where $C$ is Calabi-Yau the moduli space of multiplicative Higgs bundles admits a one-parameter deformation; from the above point of view, the moduli space is hyperk\"ahler so we can rotate the complex structure within the twistor sphere.  The result of this deformation also has a natural interpretation in terms of \emph{$\eps$-connections}.  That is, $G$-bundles $P$ on $C$ equipped with an isomorphism $P \to \eps^*P$ between $P$ and its translate by $\eps \in \CC$.  We can summarize this identification as follows.
+ 
+ 
+ In the case where $C$ is Calabi-Yau the \vasily{reduced} moduli space of multiplicative Higgs bundles admits a one-parameter deformation; from the above point of view, the moduli space is hyperk\"ahler so we can rotate the complex structure within the twistor sphere.  The result of this deformation also has a natural interpretation in terms of \emph{$\eps$-connections}.  That is, $G$-bundles $P$ on $C$ equipped with an isomorphism $P \to \eps^*P$ between $P$ and its translate by $\eps \in \CC$.  We can summarize this identification as follows.
  
  \begin{theorem} [See Theorem \ref{HK_rotation_thm}]
  The moduli space $\mhiggs^{\text{fr}}_G(\bb{CP}^1,D,\omega^\vee)$, given the complex structure at $\eps \in \CC \sub \bb{CP}^1$ in the twistor sphere can be identified (in the limit where an auxiliary parameter is taken to $\infty$) with the moduli space $\epsconn^{\text{fr}}_G(\bb{CP}^1,D,\omega^\vee)$ of framed $\eps$-connections on $\bb{CP}^1$.
@@ -253,7 +260,10 @@ Concretely, the moduli spaces of periodic monopoles (and implicitly its quantiza
 The paper \cite{NekrasovPestun} studied the Seiberg-Witten integrable system associated to this theory, so in particular the hyperk\"ahler moduli space $\mf P$, the Coulomb branch of the moduli space of vacua,  occuring as the target of the $\mc N=4$ supersymmetric sigma model obtained by compactifying the 4d theory on a circle.  In particular, it proved the following.
 
 \begin{theorem}[{\cite[Section 8.1]{NekrasovPestun}}]
-Let $G$ be a simple Lie group with ADE Lie algebra $\gg$.  The phase space $\mf P$ is isomorphic, as a hyperk\"ahler manifold, to the moduli space $\mon_G^\fr(\bb{CP}^1 \times S^1,D \times\{0\},\omega^\vee)$ of periodic monopoles, where $D = \{m_{i,j}\}$, and where the residue $\omega^\vee_{m_{i,j}}$ is the fundamental coweight corresponding to the vertex $i$ of the Dynkin diagram of $\gg$.
+Let $G$ be a simple Lie group with ADE Lie algebra $\gg$.  The phase space $\mf P$ is isomorphic, as a hyperk\"ahler manifold, to the moduli space $\mon_G^\fr(\bb{CP}^1 \times S^1,D \times\{0\},\omega^\vee)$ of periodic monopoles, 
+\vasily{need to replace $\mathbb{CP}^{1}$ by $\mathbb{R}^2$ and insert
+  the point about symplectic reduction by fixing the $z^{-1}$ coefficient}
+where $D = \{m_{i,j}\}$, and where the residue $\omega^\vee_{m_{i,j}}$ is the fundamental coweight corresponding to the vertex $i$ of the Dynkin diagram of $\gg$.
 \end{theorem}
 
 \begin{remark}
@@ -287,6 +297,8 @@ into $\bun^{\mr{ss}}_G(E_q)$: this moduli space is closely related to
 the moduli space of instantons on $C \times E_q$, i.e. doubly periodic
 instantons.  It would be interesting to study this elliptic Hitchin
 system in the full, singular setting.
+\vasily{Let us insert a reference to Jardim Biquard about instantons on
+  $\mathbb{\mathbb{R}}^2 \times T^2$} 
 \end{remark}
 
 \subsection{Multiplicative $q$-Geometric Langlands Correspondence}
@@ -422,6 +434,12 @@ The most important examples for our purposes are given by the following rational
 
 \begin{remark}
 In the rational case, the moduli space of framed $q$-difference connections now depends on a new parameter: the value of the framing $g_\infty \in G/G$.  From the point of view of the ADE quiver gauge theory, as in Section \ref{intro_gauge_section}, this value -- or rather its image in $H/W$ -- corresponds to the value of the gauge coupling constants in the quiver gauge theory.
+\vasily{A physical regime of finite gauge coupling constants $\mathfrak{q}_i$
+  correspond to a regular semi-simple framing
+  with conjugacy class given by $[g_{\inf}]  = \prod_{i} \mathfrak{q}_{i}^{-\check \omega_i}$ where $i$ runs over the nodes of a quiver, and $\mathfrak{q_i} \in \mathbb{C}$ is exponentiated coupling constant $\mathfrak{q}_{i} = \exp (2 \pi i \tau_i)$ in the $i$-th factor of the quiver theory, so that a contribution
+  of instanton
+  with second Chern class $k_i$ with respect to the $i$-th
+  factor of the gauge group is counted with weight $\mathfrak{q}_{i}^{k_i}$}
 \end{remark}
 
 \begin{remark} \label{Elliptic_AKSZ_remark}
@@ -459,7 +477,9 @@ We need to verify that the image of a point in $\mhiggs_G(C,D,\omega^\vee)$ unde
 Note that the base stack that we're defining here is not exactly the same as the base of the integrable system defined in \cite{HurtubiseMarkman}.  The difference comes from the way in which we treat the Weyl group quotient; the Hurtubise-Markman base is an algebraic variety defined essentially by taking the part of our space of sections where $W$ acts freely as an open subset, then constructing a compactification using techniques from toric geometry.
 \end{remark}
 
-We'll show in Section \ref{general_symplectic_sec} that this fibration defines a completely integrable system in the rational case where $C = \bb{CP}^1$ with a framing at $\infty$.  More specifically, we'll describe a non-degenerate pairing on the tangent space of the multiplicative Higgs moduli space, and in Proposition \ref{Hitchin_isotropic_prop} we'll show that the multiplicative Hitchin fibers are isotropic for this pairing.  Then, by comparison to the symplectic structure on periodic monopoles, we'll see that the pairing was symplectic.
+We'll show in Section \ref{general_symplectic_sec} that this fibration defines a completely integrable system in the rational case where $C = \bb{CP}^1$ with a framing at $\infty$.  \vasily{If we consider the symplectically
+  reduced version, otherwise we have non-compact $H$ fibers.} 
+More specifically, we'll describe a non-degenerate pairing on the tangent space of the multiplicative Higgs moduli space, and in Proposition \ref{Hitchin_isotropic_prop} we'll show that the multiplicative Hitchin fibers are isotropic for this pairing.  Then, by comparison to the symplectic structure on periodic monopoles, we'll see that the pairing was symplectic.
 
 Here, we'll first observe that the generic fibers are half-dimensional tori, which will ultimately imply that the multiplicative Hitchin system is generically a Lagrangian fibration.  Computing the fibers of the Hitchin fibration works similarly to the non-singular case: a point in the base is, in particular, a map $C \bs D \to T/W$.  Suppose this map lands in the regular locus $T^{\mr{reg}}/W$, then an element of the fiber over this point defines, in particular, a map $C \bs D \to BT/W$.  We would like to argue that the fiber consists of $T$-bundles on the cameral cover $\wt C$: a $W$-fold cover of $C$ ramified at the divisor $D$.
 
@@ -480,10 +500,12 @@ To conclude this discussion we'll discuss dimensions and the geometry of the mul
 \[\dim \mc B(C,D,\omega^\vee) = \sum_{z_i \in D} \langle \rho, \omega^\vee_{z_i} \rangle,\]
 where $\rho$ is the Weyl vector.  On the other hand the dimension of the total space is calculated in Corollary \ref{dim_of_moduli_space_cor} to be $2 \sum_{z_i \in D} \langle \rho, \omega^\vee_{z_i} \rangle$.  The base is indeed half-dimensional, therefore so is the fiber.
 
-The Donagi-Gaitsgory fiber is, according to the main theorem of \cite{DonagiGaitsgory}, equivalent to the moduli space of $W$-equivariant $T$-bundles on the cameral curve $\wt C$ up to a discrete correction involving the root datum of $G$.  In particular it is generically an abelian variety.  The multiplicative Hitchin fiber is isogenous to this abelian variety, since the map from the multiplicative Hitchin fiber to the Donagi-Gaitsgory fiber is surjective and \'etale.
+The Donagi-Gaitsgory fiber is, according to the main theorem of \cite{DonagiGaitsgory}, equivalent to the moduli space of $W$-equivariant $T$-bundles on the cameral curve $\wt C$ up to a discrete correction involving the root datum of $G$.  In particular it is generically an abelian variety.  \vasily{Need to insert a point about symplectic reduction. Otherwise we have $H$
+ (centralizer of $g_{inf}$) as a component of fibers}
+The multiplicative Hitchin fiber is isogenous to this abelian variety, since the map from the multiplicative Hitchin fiber to the Donagi-Gaitsgory fiber is surjective and \'etale.
 
 \begin{remark} \label{q_opers_remark}
-Like in the case of the ordinary Hitchin system, in good examples the multiplicative Hitchin system admits a canonical Hitchin section.  One can construct this section using the Steinberg section (the multiplicative analogue of the Kostant section) \cite{Steinberg}.  This is a section of the map $G/G \to T/W$, canonical after choosing a Borel subgroup $B$ with maximal torus $T$ and a basis vector for each simple root space, and well defined as long as $G$ is simply connected \footnote{By a theorem of Popov \cite{Popov} this condition is necessary for semisimple $G$.  A section also exists for $G = \GL_n$, but we aren't aware of a necessary and sufficient condition for general reductive groups.}.  The \emph{multiplicative Hitchin section} is the map $\sigma \colon \mc B(C,D,\omega^\vee) \to \mhiggs_G(C,D,\omega^\vee)$ defined by post-composition with the Steinberg section.  One can use this section to define the moduli space of \emph{$q$-opers} for the group $G$ and the curve $\bb{CP}^1$ with its framing at infinity.  We'll discuss the hyperk\"ahler structure on the moduli space of multiplicative Higgs bundles in Section \ref{hyperkahler_section}.  In particular we'll show that when one rotates to $q$ in the twistor sphere one obtains the moduli space of $q$-connections on $\bb{CP}^1$.  The moduli space of $q$-opers is defined to be the Hitchin section, but viewed as a subspace of $\qconn^{\fr}_G(\bb{CP}^1,D,\omega^\vee)$.  For a more detailed discussion of the multiplicative Hitchin section and $q$-opers see Section \ref{qchar_section}. 
+Like in the case of the ordinary Hitchin system, in good examples the multiplicative Hitchin system admits a canonical Hitchin section.  One can construct this section using the Steinberg section (the multiplicative analogue of the Kostant section) \cite{Steinberg}.  This is a section of the map $G/G \to T/W$, canonical after choosing a Borel subgroup $B$ with maximal torus $T$ and a basis vector for each simple root space, and well defined as long as $G$ is simply connected \footnote{By a theorem of Popov \cite{Popov} this condition is necessary for semisimple $G$.  A section also exists for $G = \GL_n$, but we aren't aware of a necessary and sufficient condition for general reductive groups.}.  The \emph{multiplicative Hitchin section} is the map $\sigma \colon \mc B(C,D,\omega^\vee) \to \mhiggs_G(C,D,\omega^\vee)$ defined by post-composition with the Steinberg section.  One can use this section to define the moduli space of \emph{$q$-opers} for the group $G$ and the curve $\bb{CP}^1$ with its framing at infinity.  We'll discuss the hyperk\"ahler structure on the \vasily{reduced} moduli space of multiplicative Higgs bundles in Section \ref{hyperkahler_section}.  In particular we'll show that when one rotates to $q$ in the twistor sphere one obtains the moduli space of $q$-connections on $\bb{CP}^1$.  The moduli space of $q$-opers is defined to be the Hitchin section, but viewed as a subspace of $\qconn^{\fr}_G(\bb{CP}^1,D,\omega^\vee)$.  For a more detailed discussion of the multiplicative Hitchin section and $q$-opers see Section \ref{qchar_section}. 
 \end{remark}
 
 \subsection{Stability Conditions} \label{stability_section}
@@ -492,6 +514,15 @@ For comparison to results in the literature it is important that we briefly disc
 \begin{definition} \label{polystable_def}
 Let $(P,g)$ be a $q$-connection on a curve $C$, and let $\chi$ be a character of $G$.  The \emph{$\chi$-degree} of $(P,g)$ is defined to be 
 \[\deg_\chi(P,g) = \deg(P \times_\chi \CC) - \frac {t_0}{2\pi R} \sum_{i=1}^k \deg(\chi \circ \omega^\vee_{z_i}).\]
+
+\vasily{Shall we explain how this formula is the $S^1$ average of the
+  conventionally defined degree (the first Chern class) of
+  holomorphic vector bundle restricted to $C \times \{t\}$ for $t \in S^1$?}
+
+\vasily{Did we assume here that all singularities are positioned at $t_0$?
+  But then I confused, because Charbonneau - Hurtubise's and Mochizuki's
+  formula do not depend in the end on a choice of origin in $S^1$ due
+ to the total constraint on the degrees}
 
 A $q$-connection $(P,g)$ on $C$ is \emph{stable} if for every maximal parabolic subgroup $H \sub G$ with Levi decomposition $H = LN$ and every reduction of structure group $(P_H, g)$ to $H$, we have
 \[\deg_\chi(P_H, g) < 0\]
@@ -507,11 +538,21 @@ An example of a multiplicative Higgs bundle on $\bb{CP}^1$ which is not polystab
 \end{example}
 
 In our main example of interest -- the rational setting where $C = \bb{CP}^1$ with a fixed framing at infinity -- we will impose an additional stability condition constraining the value of the framing.  We'll discuss why this condition is necessary in Section \ref{periodic_monopole_section} \chris{explanation to be added}.
+\vasily{Are we going to say $g_{inf}$ is regular semi-simple? I think
+  we should say that this is sufficient condition for mHiggs bundle
+  to be poly-stable in a sense that it is sufficient condition
+  for harmonic metric and monopole to exist, but we don't know
+  today if $g_{inf}$ regular semi-simple is a necessary condition
+  of poly-stability. I can imagine a tower of conditions on higher $z^{-k}$-orders
+in the degenerate blocks of $z^{-{k-1}}$ orders}.
+
 
 \begin{definition} \label{rational_stability_def}
 A $q$-connection $(P,g)$ on $\bb{CP}^1$ with a fixed framing $g_\infty$ at $\infty$ is polystable if it is polystable as in Definition \ref{polystable_def}, and the chosen framing $g_\infty$ is regular semisimple.
 \end{definition}
 
+\vasily{I would suggest we'll make the logic more precise. Let's \emph{define}
+  polystable $q$-connection as those for which harmonic metrics (monopoles) exists. Then the theorem [based on Mochizuki] will be that if  $g_{\inf}$ is regular semi-simple and definition like \ref{polystable_def} holds for subbundles  then  $q$-connection is poly-stable. But we don't know today if can put 'if and only if' in the above statement}
 \begin{remark}
 We observe that the element $g_\infty$ determines an $S^1$-equivariant holomorphic $G$-bundle on an elliptic curve, where $S^1$ acts on $T^2$ by rotating one of the two circles.  This $G$-bundle is polystable if $g_\infty$ is semisimple, which ensures that the $G$-bundle admits a reduction of structure group to an $H$-bundle.
 \end{remark}
@@ -811,6 +852,13 @@ Note that in this statement we assumed that all the singularities occur in the s
 
 We would like to generalize this theorem to cover the twisted product $C \times_q S^1$ given by an automorphism $q$ of the curve $C$.  The most important example -- for the purposes of the present paper -- is the translation automorphism of $\bb{CP}^1$ sending $z$ to $z + \eps$, fixing the framing point $\infty$.  This automorphism is an isometry for the flat metric on $\RR^2$ but \emph{not} for the round metric on $\bb{CP}^1$, which means that the moduli space of monopoles on the twisted product is only defined for the flat metric, and therefore that we'll have to generalize slightly the theorem of Charbonneau--Hurtubise and Smith to include the flat metric, with its singularity at infinity.
 
+\vasily{May be we need to be carefull with the word 'only' in the above
+  sentence? I think it is true, if we want to fix a metric first such
+  that whatever is $\epsilon$, there is a well-defined moduli space of monopoles
+  on the $\epsilon$-twisted product (i.e. uniformly defined). But if we
+  first pick $\epsilon$ and fix it,  then there are many possibilities
+to pick a metric on the quotient $\mathbb{C}/\epsilon \mathbb{Z}$ (a cylinder)}
+
 \begin{remark}
 The moduli space of periodic monopoles on $\RR^2 \times S^1$ specifically has been studied in the mathematics literature by Foscolo \cite{FoscoloDef} , applying the analytic techniques of deformation theory to earlier work on periodic monopoles by Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin2}. This analysis considers a less restrictive boundary condition at infinity in $\RR^2$ than a framing -- the Higgs field may admit a regular singularity at infinity -- and therefore requires more sophisticated analysis than we'll need to consider in the present paper.
 \end{remark}
@@ -822,7 +870,7 @@ Let $D$ be a finite subset $\{(z_1,t_0), \ldots, (z_k, t_0)\}$ of points in $\bb
 Now, in the case of the flat metric we can generalize Theorem \ref{CHS_thm} to include the $\eps$-deformation.  To do so we'll crucially use results of Mochizuki \cite{MochizukiKH} following earlier work of Biquard and Jardim \cite{BiquardJardim}.
 
 \begin{theorem} \label{monopole_qconn_comparison_thm}
-There is an isomorphism between the moduli space of polystable monopoles on $\bb{CP}^1 \times_q S^1$ with Dirac singularities at $D \times \{t_0\}$ and a semisimple framing on $\{\infty\} \times S^1$, and the moduli space of polystable $\eps$-connections on $\bb{CP}^1$ with singularities at $D$ and framing at $\{\infty\}$.  More precisely there is an analytic isomorphism
+There is an isomorphism between the moduli space of polystable monopoles on $\bb{CP}^1 \times_q S^1$ \vasily{perhaps replace $\mathbb{CP}^{1}$ with $\mathbb{R}^2$ or $\mathbb{C}$ and say with flat metric on it} with Dirac singularities at $D \times \{t_0\}$ and a \vasily{shall we add regular?} semisimple framing on $\{\infty\} \times S^1$, and the moduli space of polystable $\eps$-connections on $\bb{CP}^1$ with singularities at $D$ and framing at $\{\infty\}$.  More precisely there is an analytic isomorphism
 \[H \colon \mon^{\fr}_G(\bb{CP}^1 \times_\eps S^1, D \times \{t_0\}, \omega^\vee) \to \epsconn_G^{\text{ps,fr}}(\bb{CP}^1, D, \omega^\vee)\]
 given by the holonomy map around $S^1$, i.e. sending a monopole $(\bo P, \mc A)$ to the holomorphic bundle $P = (\bo P_\CC)|_{\bb{CP}^1 \times \{0\}}$ with $\eps$-connection $g = \Hol_{S^1}(\mc A) \colon P \to \eps^*(P)$.
 \end{theorem}
@@ -837,7 +885,12 @@ Now, let us consider surjectivity.  We extend the argument of Charbonneau--Hurtu
 where $A^+_j$ is the line $\{(t+ t_0,z_j + t \eps/{2\pi R}) \colon t \in (0, 2\pi R - t_0]\}$ and $A^-_j$ is the line $\{(t + t_0 - t \pi R,z_j + 4 \eps/{2\pi R}) \colon t \in [2\pi R-t_0, 2 \pi R)\}$.
 Let $\pi \colon \wt M \to \bb{CP}^1$ be the projection sending $(t,z)$ to $z + t\eps/2 \pi R$. The bundle $P$ pulls back to a bundle $\pi^*(P)$ on $\wt M$. We obtain a bundle on $M \bs (D \times t_0)$ by applying the identification $(t,z) \sim (t - 2 \pi R, q(z))$. This bundle extends to an $S^1$-invariant holomorphic $G$-bundle on $M \times S^1$. The remainder of the proof -- verifying the existence of the monopole structure associated to an appropriate choice of hermitian structure -- consists of local analysis which is independent of the value of the parameter $\eps$. 
 
-In order to construct the monopole, we will apply Mochizuki's theorem.  It is necessary to verify that the assumptions of \cite[Corollary 3.13]{MochizukiKH} hold.  We must choose a hermitian metric on the vector bundle associated to the holomorphic $G$-bundle constructed above under a faithful representation $\rho$, so that the holonomy around $S^1$ describes the $\eps$-connection $g$, so that near each singularity the corresponding Chern connection described a Dirac singularity of the specified charge, and so that the Taylor expansion at infinity takes the form $g(z) = g_\infty + O(z^{-2})$ -- i.e. so that it has the appropriate framing, and no term of order $z^{-1}$.  The result of this choice will then be that the quantity $|\tr \Lambda F(h_0)|$ is bounded, near infinity, by $(1 +\|z\|^2)^{-2}$, as required by Mochizuki.  We build our metric using a partition of unity, so away from a neighbourhood of $\infty$, the metric coincides with the metric described by Charbonneau and Hurtubise.  On a neighbourhood of infinity, first let us eliminate the $\eps$ parameter by choosing an analytic isomorphism between $D \times_\eps S^1_R \times S^1$ and $D \times S^1_R \times S^1$, where $D$ is a disk around infinity.  We can describe a hermitian metric on $D^\times \times S^1_R \times S^1$, constant in the second $S^1$ factor, by the formula
+In order to construct the monopole, we will apply Mochizuki's theorem.  It is necessary to verify that the assumptions of \cite[Corollary 3.13]{MochizukiKH} hold.  We must choose a hermitian metric on the vector bundle associated to the holomorphic $G$-bundle constructed above under a faithful representation $\rho$, so that the holonomy around $S^1$ describes the $\eps$-connection $g$, so that near each singularity the corresponding Chern connection described a Dirac singularity of the specified charge, and so that the Taylor expansion at infinity takes the form $g(z) = g_\infty + O(z^{-2})$ -- i.e. so that it has the appropriate framing, and no term of order $z^{-1}$. \vasily{I'll correct this statement tomorrow:
+  we'll be able to choose metric such that it has $1 + O(1)/z + O(1)/\bar{z} + O(1)/z \bar{z} + \dots $, so when we hit it with laplacian we'll get $O(1)/|z|^4 + \dots $}
+
+
+
+  The result of this choice will then be that the quantity $|\tr \Lambda F(h_0)|$ is bounded, near infinity, by $(1 +\|z\|^2)^{-2}$, as required by Mochizuki.  We build our metric using a partition of unity, so away from a neighbourhood of $\infty$, the metric coincides with the metric described by Charbonneau and Hurtubise.  On a neighbourhood of infinity, first let us eliminate the $\eps$ parameter by choosing an analytic isomorphism between $D \times_\eps S^1_R \times S^1$ and $D \times S^1_R \times S^1$, where $D$ is a disk around infinity.  We can describe a hermitian metric on $D^\times \times S^1_R \times S^1$, constant in the second $S^1$ factor, by the formula
 \[h_0(z,t) = (\rho(g(z))^\dagger)^{t/2\pi R}\rho(g(z))^{t/2\pi R}.\]
 
 Now, to verify the bound on the growth of $|\Lambda F(h_0)|$, we'll use the fact that our framing $g_\infty$ at infinity was regular semisimple.  Because the regular semisimple locus is open in $G$, the group element $g(z)$ is regular semisimple everywhere in a sufficiently small disk around infinity.  We can, therefore, choose a local gauge transformation on the disk making $g(z)$ valued in the maximal torus $T$ centralizing $g_\infty$ in this neighbourhood.  If $g(z)$ is $T$-valued then $h_0(z,t)$ is a function of $\|z\|^{-2}$, and so $|\tr \Lambda F(h_0)|$ automatically has the required decay condition.  If $A$ and $A'$ are related to one another by an isomorphism of holomorphic vector bundles on $D \times T^2$ then the functions $|\tr \Lambda F(A)|$ and $|\tr \Lambda F(A')|$ are equal, so the bound on $T$-valued functions implies the same bound on regular semisimple $G$-valued functions.
