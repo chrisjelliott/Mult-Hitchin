@@ -1080,7 +1080,25 @@ Then we can write $\mc F$ as the sheaf of complexes
 where now $\Ad_g$ is just the map $X \mapsto [(X,-X)]$.
 
 \vasily{What happened  with $(-D)$ of the first definition of $\mathcal{F}_{P,g}$ 
-  when we've written the second definition of $\mathcal{F}_{P,g}$? } 
+  when we've written the second definition of $\mathcal{F}_{P,g}$? }
+
+\vasily{If I try to relate the second definition (which I understand)
+  to the first one (where I am confused) where in the RHS we have only one copy of $\gg_{P}$,
+  I could do this by fixing elements in the first copy of $\gg_{P}$ to 0
+of the second definition  using the quotient by $(X, - gXg^{-1})$. This would imply
+  that $\mathrm{Ad}_{g}: \gg_{P} \to \gg_{P}$  of the first
+  definition is the operator 
+  \begin{equation}
+    X \mapsto g X g^{-1} - X
+  \end{equation}
+  Is it what you mean? But then I have troubles parsing the computations in the next
+  paragraphs. Also, if so, I would suggest to denote this operator  as $\mathrm{Ad}_{g} - 1$
+  since $\mathrm{Ad}_{g}$ usually denotes the operation
+  \begin{equation}
+  X \mapsto g X g^{-1}
+  \end{equation}
+  }
+
 
 \begin{remark}
   If one introduces a framing at a point $c \in C$ then we must correspondingly twist the complex $\mc F$ above by the line bundle $\OO(-c)$ on $C$, i.e. we restrict to deformations that preserve the framing and therefore are zero at the point $c$.  So in that case we define
@@ -1176,7 +1194,14 @@ Being a 0-cocycle means that $(\alpha_\infty - \alpha_0)|_{U^\times_\infty} = \m
   of gauge transformations on framed $C = \mathbb{CP}^{1}$...
 } 
 
-
+\vasily{Alternatively, if I assume that yours $Ad_{g}$ means really $Ad_{g} - 1$
+  as in my remark on page 30, then my intuition about the gauge transformation
+  matches. For regular semi-simple $g(z)$, the operator $X \mapsto  g(z) X g(z)^{-1}  - X$
+  is not-isomorphism. If we denote as the Cartan the centralizer of $g(z)$,
+  then this operator is isomorphism on root spaces and its kernel and cokernel is the Cartan.
+  The displacement in the direction of root spaces is the displacement
+  along the Hitchin fibers. The displacement along the Cartan is the displacement
+  along the base. }
 
 Now, rather than describing the tangent space to the moduli space of monopoles we'll define a complex that maps to it which we can define locally with respect to the cover $\mc U$.  Consider the open cover $\mc U \times S^1 = \{U_i \times S^1\}$ of $M = C \times S^1$.  For each element $U_i$ of the cover we can define a map
 \begin{align*}
@@ -1465,11 +1490,20 @@ Generic fibers of the multiplicative Hitchin fibration, in the rational case, ar
   In order to check this we need to describe the subspace of the tangent space to the moduli space $\mhiggs^\fr_G(C,D,\omega^\vee)$ at a point $(P,g)$ tangent to the Hitchin fiber in our \v Cech description.  Recall that the tangent space to $\mhiggs^\fr_G(C,D,\omega^\vee)$ can be identified as the space of \v Cech cocycles $(\alpha_0, \{\alpha_i\}, \alpha_\infty, \{\beta_i\}, \beta_\infty)$, where in particular the $\beta_i$ and $\beta_\infty$ are local sections of the adjoint bundle $\gg_P$.  We will show that, for a \v Cech cocycle lying tangent to the Hitchin fiber, the elements $\beta_i, \beta_\infty$ must be valued in the associated bundle of centralizers $\mf c_g$ of $g$.  Having established this the claim follows because the operator $\Ad_g$, and therefore the operator $(\Ad_g^*)^{-1}$, acts trivially on the centralizer of $g$. \vasily{Trivially means as identity or as zero? If as identity, then perhaps
     your $Ad_{g}$ takes $X \mapsto g X g^{-1}$, and if zero then your $Ad_{g}$ takes $X \mapsto g X g^{-1} - X$
     for $X \in \gg, g \in G$. Please resolve what your $Ad_g$ actually means?? I would expect
-  the second option, but it seems your proofs imply the former?}
+    the second option, but it seems your proofs imply the former?}
+
+  \vasily{With the second option, if $\Ad_{g}$ stands for $ X \mapsto gXg^{-1} - X$,
+    I would say that the tangent space to Hitchin fibers is a variation
+    that in any local chart is removable by a local gauge transformation.
+    I would say that tangent to the Hitchin fibers is in the local image
+    of $\Ad_{g}$ in each local chart. To be in the Hithin fiber, for me,
+    is a constraint on $\alpha$, while $\beta$ could be anything. In your presentation
+    it is somewhat opposite. I am very confused here.
+  }
  Replacing this operator with the identity in our expression for the symplectic form from Lemma \ref{sym_nondegeneracy_lemma} results in a symmetric expression.  Since it's also antisymmetric, it must vanish, which implies the desired isotropic condition.
 
 So it remains to establish this restriction on tangent vectors to the Hitchin fiber.  Note that $\beta_i$ lies in $\mf c_g$ if and only if $\alpha_i - \alpha_0 = 0$.  If the derivative $\d \pi$ of the multiplicative Hitchin map annihilates a cocycle, then in particular the elements $\alpha_i - \alpha_0$ are functions without poles at $z_i$.  Indeed, the cocycle condition implies that $\alpha_i - \alpha_0$ has the same residue as $\Ad_g$ applied to a regular function, in particular, by the genericity assumption, its residue is regular semisimple.  On the other hand, being in the kernel of $\d \pi$ means vanishing under the map $\gg(\!(z)\!) \to \mf t(\!(z)\!)/W$
-\vasily{Multiplicative Hitchin map $\pi$ is from $G((z)) \to T((z))/W$. We are considering
+\vasily{Multiplicative Hitchin map $\pi$ is  $G((z)) \to T((z))/W$. We are considering
   the derivative $d \pi$ at generic mHiggs field $g(z)$ (far away from identity). How
 did we define map $\gg(\!(z)\!) \to \mf t(\!(z)\!)/W$}
 
@@ -1502,7 +1536,11 @@ where $\delta g$ is represented on $U_i$ by a pair $(b^L, b^R) \in \ad(g)$.  Her
 \vasily{Again I'am having troubles understanding this computation since I'am confused what
   your $\Ad_g$ and  $\Ad_{g}^{*}$ mean.. If everything is represented by matrices, please
   could you write explicitly defintion of $\Ad_{g}$ and $\Ad_{g}^{*}$ action on elements $X \in \gg$ with $g \in G$?}
-We can compute the composite operator $(\Ad_g^*)^{-1}\Ad_g^{-1}$ on $\mr{ad}(P)(U^\times_i)$.  It's given by the inverse of the operator $\Ad_g\Ad_g^*$ which sends a pair $(b^L, b^R) \in \mr{ad}(P)(U^\times_i)$ to $(b^L - b^R, b^R - b^L) \sim (b^L + g^{-1} b^L g, b^R - g b^R g^{-1})$.  Denote this by $((1+A_g)b^L,(1-A_{g^{-1}})b^R)$.  We can describe the inverse using the expansion $(1+A_g)^{-1} = 1 - A_g + A_g^2 + \cdots$.  After applying our gauge transformation above the remaining degree of freedom in $\alpha_i$ is its $z^{-1}$ term.  Each time we apply $A$ it raises the order in $z$ of this term by one, so only the linear summand $-A_g$ of $(1+A_g)^{-1}$ contributes to the residue pairing.  In the pairing we need to use the invariant pairing on $\gg((z)) \oplus \gg((z))$ that vanishes on the subalgebra spanned by $(X, A_g(X))$, so we take the difference of the residue / Killing form pairings on the two summands.
+We can compute the composite operator $(\Ad_g^*)^{-1}\Ad_g^{-1}$ on $\mr{ad}(P)(U^\times_i)$.  It's given by the inverse of the operator $\Ad_g\Ad_g^*$ which sends a pair $(b^L, b^R) \in \mr{ad}(P)(U^\times_i)$ to $(b^L - b^R, b^R - b^L) \sim (b^L + g^{-1} b^L g, b^R - g b^R g^{-1})$.  Denote this by $((1+A_g)b^L,(1-A_{g^{-1}})b^R)$.  We can describe the inverse using the expansion $(1+A_g)^{-1} = 1 - A_g + A_g^2 + \cdots$.  After applying our gauge transformation above the remaining degree of freedom in $\alpha_i$ is its $z^{-1}$ term.  Each time we apply $A$ it raises the order in $z$ of this term by one, so only the linear summand $-A_g$ of $(1+A_g)^{-1}$ contributes to the residue pairing. 
+\vasily{I am still not sure what $A_{g}$ is. If $A_{g}: X \to g X g^{-1}$, then $1 - A_{g-1}$
+  has kernel and cokernel along the Cartan, so I can't invert. If $A_{g}: X \to g X g^{-1} - 1$,
+  then $1 + A_{g} : X \to g X g^{-1}$ and then we don't need to use power series to invert. I am afraid I don't understand this computation with either guess...}
+ In the pairing we need to use the invariant pairing on $\gg((z)) \oplus \gg((z))$ that vanishes on the subalgebra spanned by $(X, A_g(X))$, so we take the difference of the residue / Killing form pairings on the two summands.
 \begin{align*}
 \omega(\delta g, \delta g') &= \frac 12 \sum_{i=1}^d  - \langle \rho_g^*A_g b^{'L}_i, \rho_g^*b^{R}_i \rangle - \langle \rho_g^*b^{'L}_i, \rho_g^*A_{g^{-1}}b^{R}_i \rangle- (b \leftrightarrow b') \\ 
 &= \sum_{i=1}^d \langle b^L_ig^{-1}, b^{'R}_i g^{-1} \rangle  - (b \leftrightarrow b')
