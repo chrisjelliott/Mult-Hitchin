@@ -1,0 +1,399 @@
+\documentclass[11pt, oneside, reqno]{amsart}
+
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[all, cmtip]{xy}
+\usepackage[pdftex, bookmarks=true, linkbordercolor={0 0 1}]{hyperref}
+\usepackage[margin=1in]{geometry}
+\usepackage[titletoc,title]{appendix}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{11pt}
+
+\theoremstyle{definition} \newtheorem{definition}{Definition}[section]
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{prop}[definition]{Proposition}
+\newtheorem{conjecture}[definition]{Conjecture}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{construction}[definition]{Construction}
+\newtheorem{observation}[definition]{Observation}
+\newtheorem{assumption}[definition]{Assumption}
+\newtheorem{claimnum}[definition]{Claim}
+\newtheorem*{nonum}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{claim}{Claim}
+\newtheorem*{subclaim}{Subclaim}
+\newtheorem*{fact}{Fact}
+\newtheorem*{problem}{Problem}
+\newtheorem*{ack}{Acknowledgements}
+
+\theoremstyle{definition} \newtheorem{remark}[definition]{Remark}
+\theoremstyle{definition} \newtheorem{remarks}[definition]{Remarks}
+\theoremstyle{definition} \newtheorem{question}[definition]{Question}
+\theoremstyle{definition} \newtheorem*{note}{Note}
+\theoremstyle{definition} \newtheorem{example}[definition]{Example}
+\theoremstyle{definition} \newtheorem{examples}[definition]{Examples}
+
+\newtheorem{pseudoconj}[definition]{Pseudo-Conjecture}
+
+
+\renewcommand{\gg}{\mathfrak{g}}
+
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\mr}[1]{\mathrm{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\mf}[1]{\mathfrak{#1}}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\bo}[1]{\boldsymbol{#1}}
+
+\newcommand{\inj}{\hookrightarrow}
+\newcommand{\bs}{\ \backslash \ }
+\newcommand{\dd}{\partial}
+\newcommand{\del}{\partial}
+
+
+\newcommand{\ul}[1]{\underline{#1}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\PGL}{\mathrm{PGL}}
+\newcommand{\spin}{\mathrm{Spin}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\so}{\mathfrak{so}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\renewcommand{\sp}{\mathfrak{sp}}
+\newcommand{\gl}{\mathfrak{gl}}
+
+\newcommand{\sfe}{\mathsf{e}}
+\newcommand{\sff}{\mathsf{f}}
+\newcommand{\sfh}{\mathsf{h}}
+\newcommand{\sfs}{\mathsf{s}}
+
+\newcommand{\frakq}{\mathfrak{q}}
+
+\newcommand{\sub}{\subseteq}
+\newcommand{\iso}{\cong}
+
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\coh}{Coh}
+\DeclareMathOperator{\higgs}{Higgs}
+\DeclareMathOperator{\bun}{Bun}
+\DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\spec}{Spec}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\EOM}{EOM}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\dvol}{dvol}
+\DeclareMathOperator{\aut}{Aut}
+\DeclareMathOperator{\sym}{Sym}
+\DeclareMathOperator{\Flat}{Flat}
+\DeclareMathOperator{\mhiggs}{mHiggs}
+\DeclareMathOperator{\mon}{Mon}
+\DeclareMathOperator{\diff}{Diff}
+\DeclareMathOperator{\Hol}{Hol}
+\DeclareMathOperator{\mhitch}{mHitch}
+
+\newcommand{\map}{\ul{\mr{Map}}}
+\newcommand{\qconn}{q\text{-Conn}}
+\newcommand{\conn}{\text{-Conn}}
+\newcommand{\epsconn}{\varepsilon\text{-Conn}}
+\renewcommand{\d}{\mathrm{d}}
+\newcommand{\fr}{\mathrm{fr}}
+\newcommand{\ad}{\mr{ad}}
+\newcommand{\Ad}{\mr{Ad}}
+\newcommand{\HT}{\mr{HT}}
+
+\title{Multiplicative Hitchin Systems and Supersymmetric Gauge Theory}
+\author{Chris Elliott \and Vasily Pestun}
+\date{\today}
+
+\newcommand{\chris}[1]{(\textcolor{red}{Chris: #1})}
+\newcommand{\vasily}[1]{(\textcolor{blue}{Vasily: #1})}
+
+\begin{document}
+
+\section{Notes on Sklyanin bracket on Poisson - Lie group
+  and symplectic leaves}
+
+Consider a multiplicative Higgs field on $C = \mathbb{P}^{1}$
+with fixed framing at infinity. Because the $C = \mathbb{P}^{1}$ the
+gauge bundle is fixed. We choose a component where the gauge bundle is trivial.
+Then all degrees of freedom are concentrated
+in the meromorphic Higgs field $g: C \to G$.
+
+\subsection{Poisson structure on $G(C)$} 
+Let $\kappa$ be a Killing form $\kappa: \gg \otimes \gg \to \mathbb{C}$.
+Then $\kappa^{-1}: \gg^{*} \to \gg$.
+
+Sklyanin has defined a Poisson bracket on evaluation functions on $G(C)$ for $C = (\mathbb{C}_z, dz)$ as follows. 
+
+Let $\phi: G \to \mathbb{C}$ be a differentiable function on $G$. For $z \in C$
+denote $\phi_{z} =  \phi \circ ev_{z} : G(C) \to \mathbb{C}$ a composition
+of evaluation morphism  $ev_{z}: G(C) \to G$ in point $z$ and a function $\phi$.
+Similarly $\psi_{w}$ is evaluation of $\psi: G \to \mathbb{C}$ at $w \in C$.
+
+Sklyanin defined a Poisson bracket on evaluation functions on $G(C)$ as follows
+\begin{equation}
+\label{eq:Sklyanin}
+  \{ \psi_{w}, \phi_{z} \} = \frac{1}{w - z}(\langle \nabla_{L} \psi_w, \chi^{-1} \nabla_{L} \phi_{z}
+\rangle  - \langle \nabla_{R} \psi_{w},  \chi^{-1} \nabla_{R} \phi_{z}\rangle)
+\end{equation}
+
+where $\nabla_{L}\phi , \nabla_{R}\phi \in \gg^{*} $ denote the left and right differentials
+of a function $\phi$ on $G$. For any $X \in \gg$
+\begin{equation}
+  \langle X, \nabla_{L} \phi \rangle := \frac{d}{dt} \phi(e^{Xt} g),
+  \qquad \langle X, \nabla_{R} \phi \rangle := \frac{d}{dt} \phi(g e^{Xt})
+\end{equation}
+
+Sklyanin's Poisson structure can be also understood as follows. Let $\phi$ be a function
+on Poisson manifold $M$ equipped with a Poisson structure $\pi \in \Gamma(M,\Lambda^2 T_{M})$,
+equivalently with $\pi \in \Gamma(M, \hom (T_{M}^{*}, T_{M}))$. 
+
+A vector field $X_{\phi} = \pi d \phi $ associated to a function $\phi$ and Poisson structure $\pi$ is called Hamiltonian vector field. For a point $m \in M$, a tangent space to a symplectic
+leaf through $m$ is spanned by Hamiltonian vector fields passing through $m$, 
+that is by the image of $\pi$ at $m$.
+
+Let us explore the structure of these vector fields. We write a vector field on $G$
+as a difference $(X^L, X^R)$  of left vector field $L_{X^L}$ and right vector field $R_{X^R}$
+for $X^L, X^R \in \gg$ modulo the equivalence relation.
+
+In matrix notations, for $g \in G$ we have
+\begin{equation}
+  \delta g = X^L g + g X^R 
+\end{equation}
+and consequently there is equivalence 
+\begin{equation}
+  (X^L, X^R) \sim (X^L + g X g^{-1}, X^R -  X)
+\end{equation}
+
+Denote the adjoint operator $X \mapsto g X g^{-1}$ for $X \in \gg, g \in G$ by $A_{g}: \gg \to \gg$.
+Then the equivalence is
+\begin{equation}
+\label{eq:equivalence}
+    (X^L, X^R) \sim (X^L + A_{g} X , X^{R} -  X) \sim (X^{L} +  A_{g} X^{R}, 0) 
+\end{equation}
+
+
+Modulo such equivalence, Sklyanin's Poisson bracket (\ref{eq:Sklyanin}) implies
+that a vector field associated to an evaluation Hamiltonian $\phi_z$ is represented by
+left and right components as follows 
+\begin{equation}
+\label{eq:Xphiz}
+X_{\phi_z} (w) =  \frac{1}{w - z} ( \chi^{-1} \nabla_{L} \phi_z,  - \chi^{-1}\nabla_{R} \phi_{z})
+\end{equation}
+
+
+\begin{lemma}\label{phitoX}
+  Fix an element $g \in \mhiggs^{\fr}_{D}$ represented by a $G$-valued
+  meromorphic function $g(z)$ with singularities at $D$.    If $\phi$ is a differentiable function and $z$ is away from $D$, then $X_{\phi_z}$
+  belongs to the tangent space to $\mhiggs^{\fr}_{D}$. 
+\end{lemma}
+\begin{proof}
+  Let us bring the vector field (\ref{eq:Xphiz}) into equivalence frame $(X^{L}, 0)$ using
+  (\ref{eq:equivalence}). We get
+  \begin{equation}
+\label{eq:xlw0}
+(X^L_{\phi_z} (w) , 0) =  \frac{1}{w - z} ( \chi^{-1} \nabla_{L} \phi_z  - A_{g_{w}} (\chi^{-1}\nabla_{R} \phi_{z}))
+  \end{equation}
+  We need to check three points to ensure that $(X^L_{\phi_z} (w) , 0) $ is a deformation
+  of $g$ in tangent direction to $\mhiggs^{\fr}_{D}$
+  \begin{enumerate}
+  \item in each chart there exists equivalence frame in which $X(w) \sim (\tilde X_{\phi_{z}}^{L}(w), \tilde X_{\phi_{z}}^{R}(w))$  are regular sections (as functions of $w$)
+  \item $X(w = \infty) = 0$
+  \end{enumerate}
+  To check (1) we need to look on the potential singularities as $w \to z$ or as $w \to z_i$.
+  There is no singularity as $w \to z$ since (\ref{eq:xlw0}) can be written
+  as
+  \begin{equation}
+    \frac{1}{w - z} ( A_{g_z}( \chi^{-1} \nabla_{R} \phi_z)  - A_{g_{w}} (\chi^{-1}\nabla_{R} \phi_{z}))
+  \end{equation}
+  and since $g(w)$ is analytic in $w \to z$ the ratio is also analytic at $w \to z$.
+  There is also no singularity as $w \to z_i$ in the original frame (\ref{eq:Xphiz}) 
+  (or equivalently, the singularity of (\ref{eq:xlw0}) near $w \to z_i$ 
+  is in the image of $A_{g_{w}}$ of analytic function as (\ref{eq:Xphiz}) requires.)
+ The (2) is clear since $g_{w}$ is finite at $w \to \infty$. 
+\end{proof}
+
+We've just shown that $\mathrm{Im} \, \pi \subset T_{\mhiggs^{\fr}_{D}}$ where
+$\pi$ is Sklyanin's Poisson structure. To complete the argument that
+tangent space to $\mhiggs^{\fr}_{D}$ is isomorphic to the image of $\pi$ (and that would
+imply that $\mhiggs^{\fr}_{D}$ is a symplectic leaf for $(G(C), \pi)$) we'll
+need to show the reverse direction: $T_{\mhiggs^{\fr}_{D}} \subset \mathrm{Im} \pi$.
+That means for any $X \in T_{\mhiggs^{\fr}_{D}} $ we'd like to find a Hamiltonian
+function $\phi$ on $G(C)$ such that $X = X_{\phi} = \pi d \phi$.
+
+Let's analyze some properties. 
+
+
+
+\begin{lemma}
+ If $\phi$ is an adjoint invariant function on $G$, then
+$\nabla_{L} \phi  = \nabla_{R} \phi$ and consequently $X_{\phi}$ is
+a vector field generating adjoint transformation. 
+\end{lemma}
+\begin{proof}
+  If $\phi$ is adjoint invariant then
+  \begin{equation}
+    \frac{d}{dt} \phi(e^{Xt} g e^{-Xt}) = 0
+  \end{equation}
+  and consequently $\nabla_{L} \phi - \nabla_{R} \phi  = 0$. Therefore $X_{\phi}$ is
+  of the form $(X, -X)$, which is a form of a vector field generating adjoint
+  transformation. 
+\end{proof}
+
+\begin{corollary}
+  If $\psi_{w}$ and $\phi_{z}$ are adjoint invariant functions then they Poisson commute 
+  \begin{equation}
+    \{ \psi_{w}, \phi_{z} \} = 0
+  \end{equation}
+\end{corollary}
+
+Consequently, this immediately implies that intersection
+of the fibers of the multiplicative Hitchin
+projection $G(C) \to T(C)/W$ where $T$ is the maximal torus and $W$ is the Weyl group (generated
+by adjoint invariant functions) with symplectic leaves are isotropic subspaces of symplectic leaves.
+
+
+
+
+
+\subsection{Symplectic structure on symplectic leaves in $G(C)$}
+
+Now we consider a symplectic leaf in $G(C)$. 
+
+In this subsection we'll try to prove
+\begin{lemma}
+Let $G$ be a reductive group.
+In the Poisson-Lie group $(\mhiggs^{fr}, \pi)$ with Sklyanin's bracket $\pi$
+on the space of meromorphic functions $G(C)$ with fixed framing at infinity $c \in C$
+consider a subspace  $\mhiggs^{fr}_{D}$
+defined 
+  by fixing singularity of $g$ at $D$ where $D$ is a divisor colored in dominant co-weights of $G$. Then $\mhiggs^{fr}_{D}$ is a symplectic leaf in $(\mhiggs^{fr}, \pi)$. 
+\end{lemma}
+
+We'll try to show this at the level of tangent spaces in a nice point $g \in \mhiggs^{fr}$.  For any deformation $\delta g $ of $g$ that
+preserves the singularity divisor $D$ of $g$ we want to find a Hamiltonian
+function $\phi$ for Sklyanin's bracket such that its vector field
+$X_\phi = \delta g$.  (The other direction we've already shown in lemma \ref{phitoX}.)
+
+
+First let's compute the tangent space of $\mhiggs_{D}^{\fr}$ at point $g$.
+Assume that $g$ is regular semi-simple near singularities. That means assume
+that there is a punctured neighborhood $U_i^{\times} = U_{i} \setminus \{z_i \}$ of each singularity $z_i \in D $ in which $g(z)$ is regular semi-simple for $z \in U_{i}^{\times}$. 
+With this assumption, the operator $A_{g}(z): \gg \to \gg$ is diagonalizable in $U_{i}^{\times}$.
+\newcommand{\hh}{\mathfrak{h}}
+Pick ($z$-dependent) Cartan sublagebra $\hh_{z} \subset \gg$  for $z \in U_{i}^{\times}$
+to be the centralizer of $g(z)$ in analytic way in $z$. 
+
+Then we have ($z$-dependent) splitting of $\gg$ to the Cartan $\hh_z$ and the root spaces 
+$\gg = \hh_{z} \oplus \sum_{\alpha} \gg_{\alpha,z}$. 
+If $g(z)$ has Dirac singularity of co-weight $\omega^{\vee}$ in $z_i$ with $[g(z) ] \sim z^{-\omega_i^{\vee}}$, then  $A_{g}$ has eigenvalue $ (z - z_i)^{- (\alpha, \omega^{\vee}_{i})}$ on $\gg_{\alpha}$
+in the leading order. Let $e_{\alpha, z}$ be a generator of $\gg_{\alpha, z}$.
+
+Below we'll need a technical assumption on $g(z)$ in $U_{i}^{\times}$ that the splitting
+$\hh_{z} \oplus \sum_{\alpha} \gg_{\alpha,z}$ extends analytically from $U_{i}^{\times}$ to $U_{i}$,
+i.e. there is a limit 
+ \[ e_{\alpha, z_i} = \lim_{z \to z_i} e_{\alpha, z}\] 
+\vasily{The existence of this limit will be probably implied by the
+  assumption that $g(z)$ is regular semi-simple in the punctured
+  neighborhood $U_{i}^{\times}$ and has the form $ g_L(z) (z-z_i)^{-\omega_{i}^{\vee}} g_{R}(z)$
+  where $g_{L}(z), g_{R}(z)$ are analytic in $U_i$. }
+
+
+\begin{lemma}
+  The tangent space of $\mhiggs^{\fr}_{D}$ to $g$ with semi-simple singularities 
+  $D = \{(z_i, \omega^{\vee}_{i})\}$ in an equivalence frame with
+  vanishing right vector field component $X = (X^{L}, 0)$ is isomorphic to the
+  space of meromorphic $\gg$-valued functions $X^{L}$ of the form
+  \begin{equation}
+\label{eq:XL}
+    X^{L} = \sum_{i} \sum_{\alpha: \langle \alpha, \omega_i^{\vee} \rangle > 0 }
+    \sum_{k_{i, \alpha} = 1}^{ \langle \alpha , \omega_i^{\vee} \rangle} e_{\alpha,{z_i}} x_{i, \alpha, k_{i, \alpha}} (z - z_i)^{-\langle \alpha, \omega_i^{\vee}\rangle }, \qquad x_{i, \alpha, k_{i, \alpha}} \in \mathbb{C}
+  \end{equation}
+  and consequently at $g$ with regular semi-simple singularities we have smooth
+  tangent space of $\mhiggs^{\fr}_{D}$ of dimension 
+  \begin{equation}
+\dim T_{\mhiggs^{\fr}_{D}} = \sum_{i} \sum_{\alpha: \langle \alpha, \omega_i^{\vee} \rangle > 0 } \langle \alpha, \omega_i^{\vee} \rangle = 2 \sum_{i} \langle \rho, \omega^{\vee}_i\rangle 
+  \end{equation}
+  where $\rho$ is the Weyl weight vector
+  \begin{equation}
+    \rho = \frac 1 2 \sum_{\alpha > 0} \alpha 
+  \end{equation}
+\end{lemma}
+\begin{proof}
+  In the framing $(X^{L}, X^{R}) \sim (X^{L} - A_{g} X^{R}, 0 )$ the singular
+  part of $X^{L}$ in $U_{i}^{\times}$ in the subspace generated by $e_{\alpha, z_i}$
+  is in the image of $A_{g}$ applied to an analytic section generated by $e_{\alpha, z_i}$,
+  and consequently, there is an equivalence frame $(X^{L}, X^{R}) \sim (\tilde X^{R}, \tilde X^{R})$
+  in which $\tilde X^{L}, \tilde X^{R}$ are both analytic in $U_{i}$. 
+\end{proof}
+
+After we've identified the tangent space to $\mhiggs_{D}^{\fr}$ we'd like to show that
+there is a symplectic structure on $\mhiggs_{D}^{\fr}$ compatible with Sklyanin's Poisson
+bracket on $\mhiggs_{D}^{\fr}$, and compute explicit formula for this symplectic
+structure evaluated on deformations $X$ and $X'$
+\begin{equation}
+   \Omega ((X^{L}, X^{R}), (X^{L'}, X^{R'}) = ...
+ \end{equation}
+
+ A compatibility of symplectic structure $\Omega$ on a symplectic leaf $S$ in a Poisson space $M$
+ with Poisson structure on $M$  means that for any two Hamiltonian functions $\phi, \psi$ on $M$
+ we've got
+ \begin{equation}
+   \Omega(X_{\psi}, X_{\phi}) = \pi (d\phi, d \psi)
+ \end{equation}
+ where $X_{\psi}, X_{\phi}$ are Hamiltonian vector fields in $T_{S}$ generated by $\phi, \psi$:
+ \begin{equation}
+   X_{\psi} = \pi d \psi, \qquad X_{\psi} = \pi d \phi 
+ \end{equation}
+
+ Equivalently, we want to find symplectic form $\Omega: T_{S} \to T_{S}^{*} $ such
+ that for any hamiltonian function $\phi$ on $M$ and any vector field $X$ in $T_{S}$ we
+ have
+ \begin{equation}
+   \Omega(X, \pi d \phi) = d_{X} \phi 
+ \end{equation}
+ 
+ Let's try to find a hamiltonian function that generates vector field $X^{L}$.
+
+ Consider the variation of the one-form $g^{-1} dg$ and $dg g^{-1}$ with respect to
+ \begin{equation}
+   \delta g  = X_L g  + g X_{R}
+ \end{equation}
+ we get
+ \begin{equation}
+   \begin{aligned}
+     \delta ( dg g^{-1}) =   g d X_{R} g^{-1} + [d - dg g^{-1}, X_L] \\
+     \delta ( g^{-1} dg) =  [d + g^{-1} dg, X_{R}] + g^{-1} dX_L g 
+   \end{aligned}
+ \end{equation}
+ 
+ 
+
+
+
+
+
+\bibliographystyle{alpha}
+\bibliography{Mult_Hitchin}
+
+\textsc{Institut des Hautes \'Etudes Scientifiques}\\
+\textsc{35 Route de Chartres, Bures-sur-Yvette, 91440, France}\\
+\texttt{celliott@ihes.fr}\\ 
+\texttt{pestun@ihes.fr}
+ 
+\end{document}
+

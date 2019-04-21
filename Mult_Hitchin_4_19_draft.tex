@@ -2104,8 +2104,7 @@ in the meromorphic Higgs field $g: C \to G$.
 Let $\kappa$ be a Killing form $\kappa: \gg \otimes \gg \to \mathbb{C}$.
 Then $\kappa^{-1}: \gg^{*} \to \gg$.
 
-Sklyanin has defined a Poisson bracket on functions that are
-evaluated pointwise (is there a better name?) on the loop group $G(C)$ as follows.
+Sklyanin has defined a Poisson bracket on evaluation functions on $G(C)$ for $C = (\mathbb{C}_z, dz)$ as follows. 
 
 Let $\phi: G \to \mathbb{C}$ be a differentiable function on $G$. For $z \in C$
 denote $\phi_{z} =  \phi \circ ev_{z} : G(C) \to \mathbb{C}$ a composition
@@ -2135,23 +2134,31 @@ leaf through $m$ is spanned by Hamiltonian vector fields passing through $m$,
 that is by the image of $\pi$ at $m$.
 
 Let us explore the structure of these vector fields. We write a vector field on $G$
-as a linear combination $(X_1, X_2)$  of left vector field $L_{X_1}$ and right vector field $R_{X_2}$
-for $X_1, X_2 \in \gg$ modulo the equivalence relation.
+as a difference $(X^L, X^R)$  of left vector field $L_{X^L}$ and right vector field $R_{X^R}$
+for $X^L, X^R \in \gg$ modulo the equivalence relation.
 
 In matrix notations, for $g \in G$ we have
 \begin{equation}
-  \delta g = X_1 g + g X_2 
+  \delta g = X^L g - g X^R 
 \end{equation}
 and consequently there is equivalence 
 \begin{equation}
-  (X_1, X_2) \sim (X_1 + X, X_2 - g^{-1} X g)
+  (X^L, X^R) \sim (X^L + g X g^{-1}, X^R +  X)
 \end{equation}
+
+Denote the adjoint operator $X \mapsto g X g^{-1}$ for $X \in \gg, g \in G$ by $A_{g}: \gg \to \gg$.
+Then the equivalence is
+\begin{equation}
+\label{eq:equivalence}
+    (X^L, X^R) \sim (X^L + A_{g} X , X^{R} +  X) \sim (X^{L} -  A_{g} X^{R}, 0) 
+\end{equation}
+
 
 Modulo such equivalence, Sklyanin's Poisson bracket (\ref{eq:Sklyanin}) implies
 that a vector field associated to an evaluation Hamiltonian $\phi_z$ is represented by
 left and right components as follows 
 \begin{equation}
-X_{\phi} =  \frac{1}{w - z} ( \chi^{-1} \nabla_{L} \phi_z, - \chi^{-1}\nabla_{R} \phi_{z})
+X_{\phi} (w) =  \frac{1}{w - z} ( \chi^{-1} \nabla_{L} \phi_z,  \chi^{-1}\nabla_{R} \phi_{z})
 \end{equation}
 
 
@@ -2182,7 +2189,7 @@ of the fibers of the multiplicative Hitchin
 projection $G(C) \to T(C)/W$ where $T$ is the maximal torus and $W$ is the Weyl group (generated
 by adjoint invariant functions) with symplectic leaves are isotropic subspaces of symplectic leaves.
 
-We can also 
+
 
 
 
@@ -2199,11 +2206,95 @@ of meromorphic function $G(C)$ with a given framing at infinity $c \in C$
   by fixing singularity of $g$ at $D$. Then $\mhiggs^{fr}_{D}$ is a symplectic leaf in $\mhiggs^{fr}$. 
 \end{lemma}
 
-We'll try to show this at the level of deformations. Consider $g \in \mhiggs^{fr}$. We need
-to consider vector fields $X_{\phi}$ passing through $g$ for all hamiltonian functions $\phi$
-and show that these vector fields do not move the singularities $D$ of $g$. And in the other direction,
-for any deformation $\delta g $ of $g$ that preserves the singularity of $g$ we want to find a Hamiltonian function $\phi$ for Sklyanin's bracket such that its vector field $X_\phi = \delta g$.
-This will prove that $\mhiggs^{fr}_{D}$ is a symplectic leaf in $\mhiggs^{fr}$
+We'll try to show this at the level of deformations. Consider
+$g \in \mhiggs^{fr}$.  For any deformation $\delta g $ of $g$ that
+preserves the singularity divisor $D$ of $g$ we want to find a Hamiltonian
+function $\phi$ for Sklyanin's bracket such that its vector field
+$X_\phi = \delta g$.  (In other direction we'd need consider vector
+fields $X_{\phi}$ passing through $g$ for all hamiltonian functions
+$\phi$ and show that these vector fields do not move the singularities
+$D$ of $g$).
+
+
+First let's compute the tangent space of $\mhiggs_{D}^{\fr}$ at point $g$.
+Assume that $g$ is regular semi-simple near singularities. That means assume
+that there is a punctured neighborhood $U_i^{\times} = U_{i} \setminus \{z_i \}$ of each singularity $z_i \in D $ in which $g(z)$ is regular semi-simple for $z \in U_{i}^{\times}$. 
+With this assumption, the operator $A_{g}(z): \gg \to \gg$ is diagonalizable in $U_{i}^{\times}$.
+\newcommand{\hh}{\mathfrak{h}}
+Pick ($z$-dependent) Cartan sublagebra $\hh_{z} \subset \gg$  for $z \in U_{i}^{\times}$
+to be the centralizer of $g(z)$ in analytic way in $z$. 
+
+Then we have ($z$-dependent) splitting of $\gg$ to the Cartan $\hh_z$ and the root spaces 
+$\gg = \hh_{z} \oplus \sum_{\alpha} \gg_{\alpha,z}$. 
+If $g(z)$ has Dirac singularity of co-weight $\omega^{\vee}$ in $z_i$ with $[g(z) ] \sim z^{-\omega_i^{\vee}}$, then  $A_{g}$ has eigenvalue $ (z - z_i)^{- (\alpha, \omega^{\vee}_{i})}$ on $\gg_{\alpha}$
+in the leading order. Let $e_{\alpha, z}$ be a generator of $\gg_{\alpha, z}$.
+
+Below we'll need a technical assumption on $g(z)$ in $U_{i}^{\times}$ that the splitting
+$\hh_{z} \oplus \sum_{\alpha} \gg_{\alpha,z}$ extends analytically from $U_{i}^{\times}$ to $U_{i}$,
+i.e. there is a limit 
+ \[ e_{\alpha, z_i} = \lim_{z \to z_i} e_{\alpha, z}\] 
+\vasily{I think it will be probably implied by the
+  assumption that $g(z)$ is regular semi-simple in the punctured
+  neighborhood $U_{i}^{\times}$ and has the form $ g_L(z) (z-z_i)^{-\omega_{i}^{\vee}} g_{R}(z)$
+  where $g_{L}(z), g_{R}(z)$ are analytic in $U_i$. }
+
+
+\begin{lemma}
+  The tangent space of $\mhiggs^{\fr}_{D}$ to $g$ with semi-simple singularities 
+  $D = \{(z_i, \omega^{\vee}_{i})\}$ in an equivalence frame with
+  vanishing right vector field component $X = (X^{L}, 0)$ is isomorphic to the
+  space of meromorphic $\gg$-valued functions $X^{L}$ of the form
+  \begin{equation}
+    X^{L} = \sum_{i} \sum_{\alpha: \langle \alpha, \omega_i^{\vee} \rangle > 0 }
+    \sum_{k_{i, \alpha} = 1}^{ \langle \alpha , \omega_i^{\vee} \rangle} e_{\alpha,{z_i}} x_{i, \alpha, k_{i, \alpha}} (z - z_i)^{-\langle \alpha, \omega_i^{\vee}\rangle }, \qquad x_{i, \alpha, k_{i, \alpha}} \in \mathbb{C}
+  \end{equation}
+  and consequently at $g$ with regular semi-simple singularities we have smooth
+  tangent space of $\mhiggs^{\fr}_{D}$ of dimension 
+  \begin{equation}
+\dim T_{\mhiggs^{\fr}_{D}} = \sum_{i} \sum_{\alpha: \langle \alpha, \omega_i^{\vee} \rangle > 0 } \langle \alpha, \omega_i^{\vee} \rangle = 2 \sum_{i} \langle \rho, \omega^{\vee}_i\rangle 
+  \end{equation}
+  where $\rho$ is the Weyl weight vector
+  \begin{equation}
+    \rho = \frac 1 2 \sum_{\alpha > 0} \alpha 
+  \end{equation}
+\end{lemma}
+\begin{proof}
+  In the framing $(X^{L}, X^{R}) \sim (X^{L} - A_{g} X^{R}, 0 )$ the singular
+  part of $X^{L}$ in $U_{i}^{\times}$ in the subspace generated by $e_{\alpha, z_i}$
+  is in the image of $A_{g}$ applied to an analytic section generated by $e_{\alpha, z_i}$,
+  and consequently, there is an equivalence frame $(X^{L}, X^{R}) \sim (\tilde X^{R}, \tilde X^{R})$
+  in which $\tilde X^{L}, \tilde X^{R}$ are both analytic in $U_{i}$. 
+\end{proof}
+
+After we've identified the tangent space to $\mhiggs_{D}^{\fr}$ we'd like to show that
+there is a symplectic structure on $\mhiggs_{D}^{\fr}$ compatible with Sklyanin's Poisson
+bracket on $\mhiggs_{D}^{\fr}$, and compute explicit formula for this symplectic
+structure evaluated on deformations $X$ and $X'$
+\begin{equation}
+   \Omega ((X^{L}, X^{R}), (X^{L'}, X^{R'}) = ...
+ \end{equation}
+
+ A compatibility of symplectic structure $\Omega$ on a symplectic leaf $S$ in a Poisson space $M$
+ with Poisson structure on $M$  means that for any two Hamiltonian functions $\phi, \psi$ on $M$
+ we've got
+ \begin{equation}
+   \Omega(X_{\psi}, X_{\phi}) = \pi (d\phi, d \psi)
+ \end{equation}
+ where $X_{\psi}, X_{\phi}$ are Hamiltonian vector fields in $T_{S}$ generated by $\phi, \psi$:
+ \begin{equation}
+   X_{\psi} = \pi d \psi, \qquad X_{\psi} = \pi d \phi 
+ \end{equation}
+
+ Equivalently, we want to find symplectic form $\Omega: T_{S} \to T_{S}^{*} $ such
+ that for any hamiltonian function $\phi$ on $M$ and any vector field $X$ in $T_{S}$ we
+ have
+ \begin{equation}
+   \Omega(X, \pi d \phi) = d_{X} \phi 
+ \end{equation}
+ 
+ 
+
+
 
 
 
