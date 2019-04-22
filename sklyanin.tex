@@ -474,7 +474,7 @@ T_g \mhiggs^\fr_D \ar[r]^{\d i} &T_g {G_1(C)}.
 where the map $\omega^\vee_g$ induced from the symplectic structure is an isomorphism, the map $\d i$ is injective, and its dual $\d i^\vee$ is surjective.  Concretely -- just to make sure we're clear on functional analysis -- the tangent space $T_g {G_1(C)}$ is the subspace of the colimit $T_g G_1[[z^{-1}]] = \colim_n \gg_1[z^{-1}]/z^{-n}$ consisting of jets of rational functions, so the map $\d i^\vee$ is defined as the limit of the linear duals of the projected maps $\tau_n \circ \d i \colon T_g \mhiggs^\fr_D \to \gg_1[z^{-1}]/z^{-n}$.
 
 \begin{lemma} \label{commuting_diagram_lemma}
-Lemma \ref{lemma:OmegaPi} implies that this square commutes.
+This square of linear maps commutes, i.e. $\pi_g = \d i \omega^\vee_g \d i^\vee$.
 \end{lemma}
 
 \begin{proof}
@@ -495,7 +495,7 @@ where $\omega_g$ is the non-degenerate pairing on $T_g \mhiggs^\fr_D$ given by t
 \omega_g(\omega^\vee_g \d i^\vee(\alpha'_\infty), \omega^\vee\d i^\vee(\beta_\infty)) &= \pi_g(\alpha'_\infty, \beta_\infty)\\
 &= \pi_g(\alpha'_\infty)(\beta_\infty).
 \end{align*}
-In particular $\alpha_\infty = \alpha'_\infty$, and so the diagram commutes.
+In particular, since this holds for every $\beta_\infty$, we have $\alpha_\infty = \alpha'_\infty$, and so the diagram commutes.
 \end{proof}
 
 \begin{corollary}
@@ -506,7 +506,7 @@ There is an inclusion $\im(\d i) \sub \im(\pi_g)$.
 Let $X_\infty = \d i X$ be a vector field in the image of $\d i$.  Because $\omega^\vee_g$ and $\d i^\vee$ are surjective, we can find a covector $\alpha_\infty \in T^*_g {G_1(C)}$ so that $\d i \omega^\vee_g \d i^\vee(\alpha_\infty) = X_\infty$.  By Lemma \ref{commuting_diagram_lemma}, $\d i \omega^\vee_g \d i^\vee(\alpha) = \pi_g(\alpha_\infty)$, so $X_\infty$ is in the image of $\pi_g$ as required.
 \end{proof}
 
-In particular, combining this with Lemma \ref{phitoX}, $\im(\d i) = \im(\phi_g)$.
+In particular, combining this with Lemma \ref{phitoX}, $\im(\d i) = \im(\pi_g)$.
 
 
 
