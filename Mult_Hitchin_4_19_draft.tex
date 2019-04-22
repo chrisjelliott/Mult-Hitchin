@@ -111,6 +111,7 @@
 \newcommand{\epsconn}{\varepsilon\text{-Conn}}
 \renewcommand{\d}{\mathrm{d}}
 \newcommand{\fr}{\mathrm{fr}}
+\newcommand{\red}{\mathrm{red}}
 \newcommand{\ad}{\mr{ad}}
 \newcommand{\Ad}{\mr{Ad}}
 \newcommand{\HT}{\mr{HT}}
@@ -177,15 +178,13 @@ coweight $\omega^\vee_{z_i}$ at each puncture $z_i$.
  
  The moduli space of multiplicative Higgs bundles admits a version of the Hitchin fibration, just like the ordinary moduli space of Higgs bundles.  Intuitively, this map is defined using the Chevalley map $\chi \colon G \to T/W$ (for instance if $G = \GL_n$, the map sending a matrix to its characteristic polynomial): the multiplicative Higgs field is, in particular, a meromorphic $G$-valued function, and the multiplicative Hitchin fibration post-composes this function with $\chi$.  See Section \ref{Hitchin_system_section} for a more detailed definition.
  
- While the structure of the multiplicative fibration makes sense for any curve, it only defines a completely integrable system -- in particular there is only a natural symplectic structure on the total space -- in the very special situation where the curve $C$ is Calabi-Yau.  That is, $C$ must be either $\CC$, $\CC^\times$ or an elliptic curve.  In this paper we'll be most interested in the ``rational'' case, where $C = \CC$.  We use a specific boundary condition at infinity: we consider multiplicative Higgs bundles on $\bb{CP}^1$ with a fixed framing at infinity.  In other words we study the moduli space $\mhiggs^{\text{fr}}_G(\bb{CP}^1,D,\omega^\vee)$ of multiplicative Higgs bundles on $\bb{CP}^1$ with prescribed singularities lying at the points $D = \{z_1, \ldots, z_k\}$, with local data at the singuarities encoded by $\omega_{z_1}^\vee, \ldots, \omega_{z_k}^\vee$ respectively, and with a fixed framing at $\infty$.  This moduli space is a smooth algebraic variety with dimension depending on the coweights we chose.
+ While the structure of the multiplicative fibration makes sense for any curve, it only defines a completely integrable system -- in particular there is only a natural symplectic structure on the total space -- in the very special situation where the curve $C$ is Calabi-Yau.  That is, $C$ must be either $\CC$, $\CC^\times$ or an elliptic curve.  In this paper we'll be most interested in the ``rational'' case, where $C = \CC$.  We use a specific boundary condition at infinity: we consider multiplicative Higgs bundles on $\bb{CP}^1$ with a fixed framing at infinity.  In other words we study the moduli space $\mhiggs^{\text{fr}}_G(\bb{CP}^1,D,\omega^\vee)$ of multiplicative Higgs bundles on $\bb{CP}^1$ with prescribed singularities lying at the points $D = \{z_1, \ldots, z_k\}$, with local data at the singuarities encoded by $\omega_{z_1}^\vee, \ldots, \omega_{z_k}^\vee$ respectively, and with a fixed framing at $\infty$.  This moduli space is a smooth algebraic variety with dimension depending on the coweights we chose.  In order to obtain a genuine integrable system we will need to take the Hamiltonian reduction of our moduli space with respect to the adjoint action by the maximal torus $T$ of $G$.  Until we do this the moduli space has the structure of a Lagrangian fibration where the generic fibers look like a product of a compact torus and an affine torus -- a copy of $T$ itself.  We call this Hamiltonian reduction the ``reduced'' moduli space of multiplicative Higgs bundles.
 
  \vasily{Come back here and insert adjective 'reduced' moduli space
    in a sentence about hyperKahler structure with a reference to
-   un updated theorem down the section..}
+   un updated theorem down the section..} \chris{sentence added.}
  
- 
- 
- In the case where $C$ is Calabi-Yau the \vasily{reduced} moduli space of multiplicative Higgs bundles admits a one-parameter deformation; from the above point of view, the moduli space is hyperk\"ahler so we can rotate the complex structure within the twistor sphere.  The result of this deformation also has a natural interpretation in terms of \emph{$\eps$-connections}.  That is, $G$-bundles $P$ on $C$ equipped with an isomorphism $P \to \eps^*P$ between $P$ and its translate by $\eps \in \CC$.  We can summarize this identification as follows.
+ In the case where $C$ is Calabi-Yau the (reduced) moduli space of multiplicative Higgs bundles admits a one-parameter deformation; from the above point of view, the moduli space is hyperk\"ahler so we can rotate the complex structure within the twistor sphere.  The result of this deformation also has a natural interpretation in terms of \emph{$\eps$-connections}.  That is, $G$-bundles $P$ on $C$ equipped with an isomorphism $P \to \eps^*P$ between $P$ and its translate by $\eps \in \CC$.  We can summarize this identification as follows.
  
  \begin{theorem} [See Theorem \ref{HK_rotation_thm}]
  The moduli space $\mhiggs^{\text{fr}}_G(\bb{CP}^1,D,\omega^\vee)$, given the complex structure at $\eps \in \CC \sub \bb{CP}^1$ in the twistor sphere can be identified (in the limit where an auxiliary parameter is taken to $\infty$) with the moduli space $\epsconn^{\text{fr}}_G(\bb{CP}^1,D,\omega^\vee)$ of framed $\eps$-connections on $\bb{CP}^1$.
@@ -292,14 +291,8 @@ If one considers gauge theories that are not necessarily conformal, but only asy
 \end{align*}
 The last statement is a theorem of Looijenga (see e.g. \cite{Laszlo}): $LG/_q LG$ denotes the $q$-twisted adjoint quotient of the loop group $LG$: so $g(z)$ acts by $h(z) \mapsto g(qz)^{-1}h(z)g(z)$.  
 
-Without singularities, therefore, the elliptic analogue of our
-multiplicative Hitchin system should be the space of maps from $C$
-into $\bun^{\mr{ss}}_G(E_q)$: this moduli space is closely related to
-the moduli space of instantons on $C \times E_q$, i.e. doubly periodic
-instantons.  It would be interesting to study this elliptic Hitchin
-system in the full, singular setting.
-\vasily{Let us insert a reference to Jardim Biquard about instantons on
-  $\mathbb{\mathbb{R}}^2 \times T^2$} 
+Without singularities, therefore, the elliptic analogue of our multiplicative Hitchin system should be the space of maps from $C$
+into $\bun^{\mr{ss}}_G(E_q)$: this moduli space is closely related to the moduli space of instantons on $C \times E_q$, i.e. doubly periodic instantons.  Moduli spaces of this form for the group $\SL_2$, including their hyperk\"ahler structures, have been studied by Biquard and Jardim \cite{BiquardJardim}.  In particular, the relationship between the elliptic version of the Hitchin system for $G = \SL_2$ and the space of doubly periodic $\SU(2)$-instantons is provided by \cite[Theorem 0.2]{BiquardJardim}.
 \end{remark}
 
 \subsection{Multiplicative $q$-Geometric Langlands Correspondence}
@@ -506,7 +499,7 @@ The Donagi-Gaitsgory fiber is, according to the main theorem of \cite{DonagiGait
 The multiplicative Hitchin fiber is isogenous to this abelian variety, since the map from the multiplicative Hitchin fiber to the Donagi-Gaitsgory fiber is surjective and \'etale.
 
 \begin{remark} \label{q_opers_remark}
-Like in the case of the ordinary Hitchin system, in good examples the multiplicative Hitchin system admits a canonical Hitchin section.  One can construct this section using the Steinberg section (the multiplicative analogue of the Kostant section) \cite{Steinberg}.  This is a section of the map $G/G \to T/W$, canonical after choosing a Borel subgroup $B$ with maximal torus $T$ and a basis vector for each simple root space, and well defined as long as $G$ is simply connected \footnote{By a theorem of Popov \cite{Popov} this condition is necessary for semisimple $G$.  A section also exists for $G = \GL_n$, but we aren't aware of a necessary and sufficient condition for general reductive groups.}.  The \emph{multiplicative Hitchin section} is the map $\sigma \colon \mc B(C,D,\omega^\vee) \to \mhiggs_G(C,D,\omega^\vee)$ defined by post-composition with the Steinberg section.  One can use this section to define the moduli space of \emph{$q$-opers} for the group $G$ and the curve $\bb{CP}^1$ with its framing at infinity.  We'll discuss the hyperk\"ahler structure on the \vasily{reduced} moduli space of multiplicative Higgs bundles in Section \ref{hyperkahler_section}.  In particular we'll show that when one rotates to $q$ in the twistor sphere one obtains the moduli space of $q$-connections on $\bb{CP}^1$.  The moduli space of $q$-opers is defined to be the Hitchin section, but viewed as a subspace of $\qconn^{\fr}_G(\bb{CP}^1,D,\omega^\vee)$.  For a more detailed discussion of the multiplicative Hitchin section and $q$-opers see Section \ref{qchar_section}. 
+Like in the case of the ordinary Hitchin system, in good examples the multiplicative Hitchin system admits a canonical Hitchin section.  One can construct this section using the Steinberg section (the multiplicative analogue of the Kostant section) \cite{Steinberg}.  This is a section of the map $G/G \to T/W$, canonical after choosing a Borel subgroup $B$ with maximal torus $T$ and a basis vector for each simple root space, and well defined as long as $G$ is simply connected \footnote{By a theorem of Popov \cite{Popov} this condition is necessary for semisimple $G$.  A section also exists for $G = \GL_n$, but we aren't aware of a necessary and sufficient condition for general reductive groups.}.  The \emph{multiplicative Hitchin section} is the map $\sigma \colon \mc B(C,D,\omega^\vee) \to \mhiggs_G(C,D,\omega^\vee)$ defined by post-composition with the Steinberg section.  One can use this section to define the moduli space of \emph{$q$-opers} for the group $G$ and the curve $\bb{CP}^1$ with its framing at infinity.  We'll discuss the hyperk\"ahler structure on the reduced moduli space of multiplicative Higgs bundles in Section \ref{hyperkahler_section}.  In particular we'll show that when one rotates to $q$ in the twistor sphere one obtains the moduli space of $q$-connections on $\bb{CP}^1$.  The moduli space of $q$-opers is defined to be the Hitchin section, but viewed as a subspace of $\qconn^{\fr}_G(\bb{CP}^1,D,\omega^\vee)$.  For a more detailed discussion of the multiplicative Hitchin section and $q$-opers see Section \ref{qchar_section}. 
 \end{remark}
 
 \subsection{Stability Conditions} \label{stability_section}
@@ -851,14 +844,14 @@ given by the holonomy map around $S^1$, i.e. sending a monopole $(\bo P, \mc A)$
 Note that in this statement we assumed that all the singularities occur in the same location in $S^1$, i.e. in the same slice $C \times {t_0}$.  This assumption is not necessary, but there is a constraint on the possible locations of the singularities as explained in \cite[Proposition 3.5]{CharbonneauHurtubise}.  
 \end{remark}
 
-We would like to generalize this theorem to cover the twisted product $C \times_q S^1$ given by an automorphism $q$ of the curve $C$.  The most important example -- for the purposes of the present paper -- is the translation automorphism of $\bb{CP}^1$ sending $z$ to $z + \eps$, fixing the framing point $\infty$.  This automorphism is an isometry for the flat metric on $\RR^2$ but \emph{not} for the round metric on $\bb{CP}^1$, which means that the moduli space of monopoles on the twisted product is only defined for the flat metric, and therefore that we'll have to generalize slightly the theorem of Charbonneau--Hurtubise and Smith to include the flat metric, with its singularity at infinity.
+We would like to generalize this theorem to cover the twisted product $C \times_q S^1$ given by an automorphism $q$ of the curve $C$.  The most important example -- for the purposes of the present paper -- is the translation automorphism of $\bb{CP}^1$ sending $z$ to $z + \eps$, fixing the framing point $\infty$.  This automorphism is an isometry for the flat metric on $\RR^2$ but \emph{not} for the round metric on $\bb{CP}^1$, which means that the moduli space of monopoles on the $\eps$-family of twisted products is only defined for the flat metric, and therefore that we'll have to generalize slightly the theorem of Charbonneau--Hurtubise and Smith to include the flat metric, with its singularity at infinity.
 
 \vasily{May be we need to be carefull with the word 'only' in the above
   sentence? I think it is true, if we want to fix a metric first such
   that whatever is $\epsilon$, there is a well-defined moduli space of monopoles
   on the $\epsilon$-twisted product (i.e. uniformly defined). But if we
   first pick $\epsilon$ and fix it,  then there are many possibilities
-to pick a metric on the quotient $\mathbb{C}/\epsilon \mathbb{Z}$ (a cylinder)}
+to pick a metric on the quotient $\mathbb{C}/\epsilon \mathbb{Z}$ (a cylinder)} \chris{I slightly changed the wording here.}
 
 \begin{remark}
 The moduli space of periodic monopoles on $\RR^2 \times S^1$ specifically has been studied in the mathematics literature by Foscolo \cite{FoscoloDef} , applying the analytic techniques of deformation theory to earlier work on periodic monopoles by Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin2}. This analysis considers a less restrictive boundary condition at infinity in $\RR^2$ than a framing -- the Higgs field may admit a regular singularity at infinity -- and therefore requires more sophisticated analysis than we'll need to consider in the present paper.
