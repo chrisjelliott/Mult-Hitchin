@@ -85,7 +85,8 @@
 \newcommand{\sub}{\subseteq}
 \newcommand{\iso}{\cong}
 
-\DeclareMathOperator{\tr}{Tr}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\rank}{rank}
 \DeclareMathOperator{\coh}{Coh}
 \DeclareMathOperator{\higgs}{Higgs}
 \DeclareMathOperator{\bun}{Bun}
@@ -893,7 +894,7 @@ In order to construct the monopole, we will apply Mochizuki's theorem.  It is ne
   The result of this choice will then be that the quantity $|\tr \Lambda F(h_0)|$ is bounded, near infinity, by $(1 +\|z\|^2)^{-2}$, as required by Mochizuki.  We build our metric using a partition of unity, so away from a neighbourhood of $\infty$, the metric coincides with the metric described by Charbonneau and Hurtubise.  On a neighbourhood of infinity, first let us eliminate the $\eps$ parameter by choosing an analytic isomorphism between $D \times_\eps S^1_R \times S^1$ and $D \times S^1_R \times S^1$, where $D$ is a disk around infinity.  We can describe a hermitian metric on $D^\times \times S^1_R \times S^1$, constant in the second $S^1$ factor, by the formula
 \[h_0(z,t) = (\rho(g(z))^\dagger)^{t/2\pi R}\rho(g(z))^{t/2\pi R}.\]
 
-Now, to verify the bound on the growth of $|\Lambda F(h_0)|$, we'll use the fact that our framing $g_\infty$ at infinity was regular semisimple.  Because the regular semisimple locus is open in $G$, the group element $g(z)$ is regular semisimple everywhere in a sufficiently small disk around infinity.  We can, therefore, choose a local gauge transformation on the disk making $g(z)$ valued in the maximal torus $T$ centralizing $g_\infty$ in this neighbourhood.  If $g(z)$ is $T$-valued then $h_0(z,t)$ is a function of $\|z\|^{-2}$, and so $|\tr \Lambda F(h_0)|$ automatically has the required decay condition.  If $A$ and $A'$ are related to one another by an isomorphism of holomorphic vector bundles on $D \times T^2$ then the functions $|\tr \Lambda F(A)|$ and $|\tr \Lambda F(A')|$ are equal, so the bound on $T$-valued functions implies the same bound on regular semisimple $G$-valued functions.
+Now, to verify the bound on the growth of $|\Lambda F(h_0)|$, we'll use the fact that our framing $g_\infty$ at infinity was regular semisimple.  Because the regular semisimple locus is open in $G$, the group element $g(z)$ is regular semisimple everywhere in a sufficiently small disk around infinity.  We can, therefore, choose a local gauge transformation on the disk making $g(z)$ valued in the maximal torus $T$ centralizing $g_\infty$ in this neighbourhood.  If $g(z)$ is $T$-valued then $h_0(z,t)$ is a function of $\|z\|^{-2}$ \vasily{I'll make it more precise later}, and so $|\tr \Lambda F(h_0)|$ automatically has the required decay condition.  If $A$ and $A'$ are related to one another by an isomorphism of holomorphic vector bundles on $D \times T^2$ then the functions $|\tr \Lambda F(A)|$ and $|\tr \Lambda F(A')|$ are equal, so the bound on $T$-valued functions implies the same bound on regular semisimple $G$-valued functions.
 
 We must also verify analytic stability of the associated vector bundle to our $G$-bundle upon a choice of faithful representation.  To do this, we'll use Charbonneau and Hurtubise's result \cite[Lemma 4.5]{CharbonneauHurtubise}, which says that Mochizuki's definition of degree coincides with the definition from Section \ref{stability_section}.  That is, since $|\tr \Lambda F(h_0)|$ is integrable in a neighbourhood of infinity, we can identify its integral with the algebraic definition of the degree.  Therefore, since our bundle is polystable in the sense of Section \ref{stability_section}, it is analytically polystable, and therefore we can apply Mochizuki's result.
 
@@ -907,7 +908,7 @@ In \cite{Mochizuki}, Mochizuki establishes a more general result, where rather t
 \subsection{Deformation Theory} \label{def_section}
 In the next section we'll compare symplectic forms on these moduli spaces.  In order to do so it will be important to understand the tangent spaces at a point of the source and target.  There's a natural description of these tangent spaces in terms of the hypercohomology of certain cochain complexes.
 
-From now on we'll focus on the example we're most interested in.  That is, we'll exclusively study the rational situation where $C = \bb{CP}^1$ and we fix a framing point $c = \infty$.  In this case we can use the description as a hyperk\"ahler reduction.  For more general deformation theory calculations we refer to Foscolo \cite{FoscoloDef} (though the results in that paper are more broadly applicable).  Recall that we can write
+From now on we'll focus on the example we're most interested in.  That is, we'll exclusively study the rational situation where $C = \bb{CP}^1$ and we fix a framing point $c = \infty$.  In this case we can use the description as a hyperk\"ahler reduction.\vasily{for a flat metric on $\mathbb{CP}^1$. May be for clarity, in sentences with words hyperKahler it would be better to relace $\mathbb{CP}^1$ by $\mathbb{C}$?} For more general deformation theory calculations we refer to Foscolo \cite{FoscoloDef} (though the results in that paper are more broadly applicable).  Recall that we can write
 \[\mon^{(\fr)}_G(C \times_q S^1, D \times \{t_0\}, \omega^\vee) \iso \mu^{-1}(0)/ \mc G\]
 where $\mc G$ is the group of gauge transformations of $\bo P$ and $\mu \colon \mc V \to \Omega^1(M; (\gg_R)_{\bo P})$ is the Bogomolny functional $(A,\Phi) \mapsto \ast F_A - \d_A \Phi$.  The tangent complex to this hyperk\"ahler quotient at a point $(\bo P, \mc A)$ can be written as $\Omega^0(M \!\bs\! D; (\gg_\RR)_{\bo P})[1] \to \bb T_{\mu^{-1}(0)}$ where $\bb T_{\mu^{-1}(0)}$ is the tangent complex to the zero locus of the moment map, concentrated in non-negative degrees. Roughly speaking $\bb T_{\mu^{-1}(0)} = \bb T_{\mc V} \overset {\d\mu} \to \Omega^1(M; (\gg_R)_{\bo P})[-1]$.  
 
@@ -916,6 +917,31 @@ More explicitly, following \cite{FoscoloDef} define $\mc F^{\mr{mon}}_{\bo P, \m
 \Omega^0(M \!\bs\! D; (\gg_\RR)_{\bo P}) \ar[r]^(.36){\d_1} &\Omega^1(M \!\bs\! D; (\gg_\RR)_{\bo P}) \oplus \Omega^0(M \!\bs\! D; (\gg_\RR)_{\bo P}) \ar[r]^(.64){\d_2} &\Omega^1(M \!\bs\! D; (\gg_\RR)_{\bo P})
 }\right) \otimes_\RR \CC\]
 placed in degrees $-1$, 0 and 1 where $\d_1(g) = -(\d_A(g),[\Phi, g])$ and $\d_2(a,\psi) = \ast \d_A(a) - \d_A(\psi) + [\Phi,a]$.  Write $\d_{\mr{mon}}$ for the total differential.
+
+\vasily{Around this point we should explain that we fix $1/z$ asymptotics
+  of the fields to get a moduli space of reduced dimension (real dimension 
+is reduced by $4 \mathrm{rank} (G)$),  and that this fixation corresponds to fixing the
+  center of mass in Foscolo's paper. Consider the definition 4.1 and Lemma 3.7
+  for notations of Foscolo. The $1/z$ asymptotics of the fields
+  is controlled by the parameter $(z_0, t_0)$ in Lemma 3.7
+  and by $(\mu, \alpha)$ in Definition 4.1. These $1/r$ coefficients
+  are collectively referred as \emph{the center of the monopole} $q$.
+  There is a remark after definition 4.1 which says that we must
+  fix these asymptotics to get a nice $L^2$-integrable deformation theory.
+  Indeed, deformation theory of monopoles on $\mathbb{R}^2 \times S^1$ yields
+  a full metric (hyperKahler) on the moduli space, not just a holomorphic
+  symplectic structure.  }
+
+\vasily{
+ As we discussed, on mHiggs side, the Kahler $(1,1)$ form
+  (at twistor point $\zeta = 0$) comes from the AKSZ pull-back
+  of $ \frac{i}{2} dz \wedge d{\bar z}$ Kahler form on $\mathbb{C}$.
+  The integral over $\mathbb{C}$ defining this AKSZ pull-back
+  is convergent when variations of the fields have faster decay
+  than $1/z$.}
+  
+
+
 
 \begin{remark}
 Here we have chosen a point in the twistor sphere, forgetting the hyperk\"ahler structure and retaining a holomorphic symplectic structure.  In other words we have identified the target of the hyperk\"ahler moment map -- the space of imaginary quaternions -- with $\RR \oplus \CC$, which is equivalent to choosing a point in the unit sphere of the imaginary quaternions: the twistor sphere.  
@@ -937,6 +963,70 @@ If one introduces a framing at a point $c \in C$ then we must correspondingly tw
 \end{remark}
 
 The following is proved in \cite{FoscoloDef}.
+
+\vasily{Notice that Foscolo fix $1/z$ coefficients, i.e.  he constructs
+what correspond to the reduced moduli space of mHiggs bundles of complex dimension $2(\rho, w_{total}^{\vee}) - 2 \mathrm{rank}(G)$. See his theorem 1.4 which says real dimension is $4 k - 4$,
+the definition 4.1 and the comment after it. We need to correct the logic
+accordingly.}
+
+\vasily{I suggest that we'll make the following claims.}
+
+\vasily{
+  1. For $C = \mathbb{CP}^{1}$ with finite volume we have isomorphism
+  of mHiggs and Mon as holomorphic symplectic spaces of dimension $2 (\rho ,\omega)$.}
+
+\vasily{
+  2. The holomorphic symplectic form does not depend on the Kahler
+  symplectic form on the base curve $C$. Therefore, one can formally take
+  a limit of infinite volume of Kahler form on $C$ in this comparison of holomorphic symplectic forms on moduli spaces}
+
+
+\vasily{ For $C = \mathbb{C}$ with flat metric we have isomorphism of
+  symplectically reduced-mHiggs with regular semi-simple framing by
+  action of Cartan $H$ at infinity with Hamiltonians given by $1/z$
+  coefficients and Kapustin-Cherkis-Foscolo monopoles moduli space
+  with fixed center of mass. Either
+  side of comparison has complex dimension $2(\rho, w_{total}^{\vee}) - 2 \mathrm{rank}(G)$.}
+
+\vasily{  Moreover, the Kapustin-Cherkis-Foscolo construction
+  on the monopole side which reduces the real dimension
+  by $4 \rank(G)$ compared to the finite-volume case
+  can be also interpreted as extra $\rank(G)$-hyperKahler quotient
+  at infinity after the infinite-dimensional hyperKahler quotient defined
+  by the Bogomolny equations. 
+  Namely, in addition to Bogomolny equations, Foscolo fixes $\rank(G)$ complex parameters $\mu$ in $\Phi$
+  and $\rank(G)$ real parameters in $A$, all together $3 \rank(G)$
+  real parameters controlling $1/r$ coefficients of monopole fields.
+  Then Foscolo divides by the compact $H_{\mathbb{R}}$ at infinity (in his
+  case $SO(2)$)  -- see 'reduction of structure group to SO(2)' at page 8 of Foscolo.}
+
+\vasily{With this understanding of the case of $C = \mathbb{C}$ of infinite volume
+  we need to correct statements in this section.
+  I think a cheap way to do the corrections, is (1) keep 'holomorphic
+  symplectic statements' (but not hyperKahler statements) 
+  that compare monopoles and (unreduced) framed Higgs on $\mathbb{CP}^1$
+  of finite volume. (2) explain that for framed Higgs on $\mathbb{CP}^1$
+  with regular semi-simple framing
+  we can define nicely holomorphic symplectic reduced space
+  of comlex dimension decreased by $2 \rank(G)$
+  (3) this reduced space is isomorphic as holomorphic sympletic
+  to Kapustin-Cherkis-Foscolo moduli space of monopoles
+  with fixed center of mass. In particular this reduced
+  space supports hyperKahler metric obtained by
+  the AKSZ pullback of the Kahler form on $C \times S^1$
+  by the variation of the monopole (given
+  a reduced mHiggs field,  the monopole is uniquely defined
+   by the heat flow of Mochizuki). 
+  (4) this reduced space supports algebraic integrable system with
+  compact fibers outside of discriminant locus of positive co-dimension
+  and is isomorphic to Coulomb branches of quiver gauge theories
+  (for simply-laced $G$)
+ }
+
+  
+
+
+
  
 \begin{prop}
 The tangent space of $\mon_G(S^1 \times C, D \times \{t_0\}, \omega^\vee)$ at the point $(\bo P,\mc A)$ is quasi-isomorphic to the hypercohomology $\bb H^0(C \times S^1; \mc F'_{(\bo P,\mc A)})$ of a subsheaf $\mc F' \sub \mc F^{\mr{mon}}$ where growth conditions are imposed on the degree 0 part of $\mc F^{\mr{mon}}$ near the singularities.
@@ -1143,7 +1233,16 @@ where $q(z)$ is a polynomial of degree less than $d$ (so the section is $d$-dime
 More general explicit cases of $\mhiggs^\fr_G(C)$ with parametrization by Darboux coordinates for $C = \bb{CP}^1$ and $G=\GL_n$ case are discussed in \cite{FrassekPestun}.
   
 \subsection{Symplectic Structures for General $G$} \label{general_symplectic_sec}
-We begin analysis of the general case by briefly discussing the holomorphic symplectic structure on the moduli space of periodic monopoles on $\bb{CP}^1$ following the work of Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin3}.  In the flat case, this structure arises from the description we gave as a hyperk\"ahler quotient, but we can equally consider the moduli space of framed monopoles on $\bb{CP}^1 \times S^1$ for any choice of K\"ahler metric on $\bb{CP}^1$.  To describe the symplectic structure specifically, let $\delta^{(1)} \mc A$ and $\delta^{(2)} \mc A$ be two tangent vectors at $(\bo P, \mc A)$ to the moduli space of monopoles.  Recall that $\mc A$ denotes the combination $\nabla_t - i\Phi \d t$.  Choose representatives for these two tangent vectors of the form $\alpha_i$ and $\alpha'_i$ respectively in the \v Cech resolution we described in Section \ref{def_section}.  Then we can write the holomorphic symplectic form coming from the hyperk\"ahler reduction in terms of the symplectic pairing on the infinite-dimensional vector space $\mc V$, which is given by the Killing form $\kappa$ on $\gg$ along with the wedge pairing of differential forms.  So summing over the local patches in our \v Cech resolution we can write the holomorphic symplectic pairing as
+We begin analysis of the general case by briefly discussing the holomorphic symplectic structure on the moduli space of periodic monopoles on $\bb{CP}^1$\vasily{let's be carefull here, perhaps 'periodic monopoles' on $\mathbb{R}^3$ or simply
+  'monopoles' on $C \times S^1$?} 
+  following the work of Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin3}.  In the flat case, this structure arises from the description we gave as a hyperk\"ahler quotient, \vasily{Shall we say HyperKahler quotient in the situation where we indeed have
+  a full hyperKahler structure (with twistor space)? Namely, for $C = \mathbb{C}$ with flat metric
+  and fixed $1/z$-coefficients. In other siutations we should say
+  holomorphic symplectic quotient and Kahler quotient. It would be good
+  to explain that a choice of any Kahler metric on $C$ induces Kahler
+  metric on moduli space of monopoles, but only for hyperKahler metric
+  on $C \times S^1 \times S^1$ we'll get hyperKahler metric on the moduli
+  space of Monopoles.} but we can equally consider the moduli space of framed monopoles on $\bb{CP}^1 \times S^1$ for any choice of K\"ahler metric on $\bb{CP}^1$.  To describe the symplectic structure specifically, let $\delta^{(1)} \mc A$ and $\delta^{(2)} \mc A$ be two tangent vectors at $(\bo P, \mc A)$ to the moduli space of monopoles.  Recall that $\mc A$ denotes the combination $\nabla_t - i\Phi \d t$.  Choose representatives for these two tangent vectors of the form $\alpha_i$ and $\alpha'_i$ respectively in the \v Cech resolution we described in Section \ref{def_section}.  Then we can write the holomorphic symplectic form coming from the hyperk\"ahler reduction \vasily{replace by holomorphic symplectic reduction} in terms of the symplectic pairing on the infinite-dimensional vector space $\mc V$, which is given by the Killing form $\kappa$ on $\gg$ along with the wedge pairing of differential forms.  So summing over the local patches in our \v Cech resolution we can write the holomorphic symplectic pairing as
 \begin{align*}
 \omega_{\mr{mon}}(\delta^{(1)} \mc A, \delta^{(2)} \mc A) &= \int_{M} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d \ol{z} \\
 &= \sum_{i=1}^k \int_{U_i \times S^1} \kappa(\alpha_i, \alpha'_i) \d z \d \ol{z} \d t
@@ -1156,7 +1255,7 @@ From now on we'll write $\langle - , - \rangle$ to denote the residue pairing be
 \end{remark}
 
 \begin{remark}
-While the moduli space of monopoles on $C \times S^1$ depended on a choice of K\"ahler metric on $C$, note that the formula for the above symplectic structure only depends on the complex structure on $\bb{CP}^1$: it is independent of the choice of K\"ahler representative.
+While the \vasily{Kahler metric on the} moduli space of monopoles on $C \times S^1$ depended on a choice of K\"ahler metric on $C$, note that the formula for the above symplectic structure only depends on the complex structure on $\bb{CP}^1$: it is independent of the choice of K\"ahler representative.
 \end{remark}
 
 Our goal in this section will be describe a symplectic structure on the moduli space of multiplicative Higgs bundles -- the rational analogue of Hurtubise and Markman's symplectic structure -- and then prove that it's equivalent to this symplectic form under the equivalence between multiplicative Higgs bundles and periodic monopoles.
@@ -1188,7 +1287,12 @@ We need only verify that the pairing described is non-degenerate.  It suffices t
 If we do not fix local data at the punctures, the full moduli space $\mhiggs_G^\fr(\bb{CP}^1,D)$, or indeed the moduli space $\mhiggs_G^{\text{fr,sing}}(\bb{CP}^1)$ with arbitrary singularities, will have an ind-Poisson structure, analogous to the ind-Poisson structure in the elliptic moduli space of Hurtubise and Markman.  One uses the filtration discussed in Remark \ref{ind_structure_remark} in order to define this structure: one needs to check that the moduli space  $\mhiggs_G^\fr(\bb{CP}^1,D, \preceq \omega^\vee)$ is Poisson, and that the inclusion of the symplectic moduli space $\mhiggs_G^\fr(\bb{CP}^1,D, \omega^\vee)$ is a Poisson map.  We won't discuss this in any more detail here, except to remark that this should follow using the techniques of \cite[Section 7]{HurtubiseMarkman}.  We will, however, discuss the close relationship between this Poisson structure and the rational Poisson Lie group, and the consequences for quantization, in Section \ref{quantization_section}.
 \end{remark}
 
-In fact the moduli space is not only symplectic, but the total space of a completely integrable system -- the multiplicative Hitchin system described in Definition \ref{mult_Hitchin_system_def}.  We already know that the generic fibers are half-dimensional tori, it remains to verify that they're isotropic.
+In fact the moduli space is not only symplectic, but the total space of a completely integrable system -- the multiplicative Hitchin system described in Definition \ref{mult_Hitchin_system_def}.  
+\vasily{Shall we discuss here the symplectic reduction by fixing
+  the $1/z$ coefficients in the Hamiltonians. Otherwise we'll
+  need to say what we mean by algebraic integrable system,
+do we allow $(C^{*})^{rank}$ components in generic fibers?} 
+We already know that the generic fibers are half-dimensional tori, it remains to verify that they're isotropic.
 
 \begin{prop} \label{Hitchin_isotropic_prop}
 Generic fibers of the multiplicative Hitchin fibration, in the rational case, are isotropic.
@@ -1291,6 +1395,7 @@ Here the Lie algebra $\mr{Lie}(\mc G)$ of the gauge group is the space of sectio
 \begin{remark} \label{flat_metric_remark}
 Note that the Bogomolny functional $\mu$ makes sense when we use the flat Riemannian metric on $\bb{CP}^1$, which is singular at the point $z = \infty$.  If $A$ is a gauge field on $\bb{CP}^1 \times_\eps S^1$ where the pair $(A,\Phi)$ have Dirac singularities at $D \times \{t_0\}$, then the Hodge dual $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1}$ in $\Omega^1((\CC \times_\eps S^1) \bs (D \times \{t_0\}; (\gg_\RR)_{\bo P})$ extends by zero to a 1-form on $(\bb{CP}^1 \times_\eps S^1) \bs (D \times \{t_0\})$.  Indeed, for the Hodge dual of a 2-form $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1} = (1+|z|^2/4)^{-1} \ast_{\mr{round}} F_A$.  The hyperk\"ahler moment map is, therefore, still well-defined.
 \end{remark}
+\vasily{Please check the power of $(1+|z|^2/4)$. I am getting $-2$, not $-1$?}
 \chris{end of inserted section, to edit in.}
 
 Recall from Definition \ref{monopole_moduli_def} that the moduli space of periodic monopoles on $\bb{CP}^1$ with a fixed framing at $\infty$ and fixed Dirac singularities can be described as the quotient 
@@ -1305,6 +1410,14 @@ where
 This is an instance of hyperk\"ahler reduction.  Indeed the infinite-dimensional space $\mc V$ admits a hyperk\"ahler structure with symplectic forms defined by
 \[\omega_i((A,\Phi),(A',\Phi')) = \int_{\bb{CP}^1 \times_\eps S^1_R} \left(\kappa(A_i,\Phi') - \kappa(\Phi, A_i') + \sum_{j,k=1,2,3} \eps_{ijk} \kappa(A_j,A'_k)\right) \d x \d y \d t, \]
 where $i=1,2,3$, and where $A$ can be written as $A_1 \d t + A_2 \d x + A_3 \d y$ with respect to a choice $\d z = \d (x + iy)$ of meromorphic volume form on $\bb{CP}^1$ with a second order pole at $\infty$.  This descends to a hyperk\"ahler structure on the quotient; see \cite[Section 1.4.2]{FoscoloThesis}.
+
+\vasily{Let's replace $\mathbb{CP}^1$ in the above formula by $\mathbb{R}^2$
+  so that it would be obvious we are taking Euclidean metric. Otherwise
+  we don't have hyperKahler quotient, but only holomorphic symplectic + Kahler
+  quotient. In other words, I believe that the above formula
+  can't be defined just from fixing a holomorhic 1-form on $C$. We have to
+  pick also a flat Kahler metric to define it for all $i=1,2,3$
+with correct }
 
 Let us restrict to the case where $\eps=0$ for now.  Consider the holomorphic symplectic structure $\omega_2 + i \omega_3$.  We can alternatively write the formula above for this choice of holomorphic symplectic structure in the form
 \[\omega((A_0, \mc A), (A_0', \mc A')) = \int_{\bb{CP}^1 \times S^1_R} \kappa(A_0, \mc A') - \kappa(\mc A, A_0') \d x \d y \d t,\]
@@ -1402,10 +1515,40 @@ The map $r_\infty \colon \mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee) \to G_1[[z^{-1}]
 \end{theorem}
 
 \begin{proof}
-We just need to compute the pullback of the Poisson bracket on $\OO(G_1[[z^{-1}]])$ under $r_\infty$.  This Poisson bracket is most easily described in terms of the rational $r$-matrix: that is, we have an element $r$ in $\gg_1[[z^{-1}]] \otimes \gg_1[[w^{-1}]]$ defined by the formula $\frac \Omega {z-w}$ where $\Omega$ is the quadratic Casimir element of $\gg$.  The pairing defining the Poisson structure is given by contracting two cotangent vectors with the bivector field whose value at $g \in G_1[[z^{-1}]]$ is $(1 \otimes \Ad_g - \Ad_g \otimes 1)(r)$.  Concretely, given a pair of elements $X$ and $X'$ in the cotangent space $T^*_{G_1[[z^{-1}]], g}$, this computes the pairing
+We just need to compute the pullback of the Poisson bracket on $\OO(G_1[[z^{-1}]])$ under $r_\infty$.  This Poisson bracket is most easily described in terms of the rational $r$-matrix: that is, we have an element $r$ in $\gg_1[[z^{-1}]] \otimes \gg_1[[w^{-1}]]$ defined by the formula $\frac \Omega {z-w}$ where $\Omega$ is the quadratic Casimir element of $\gg$.  The pairing defining the Poisson structure is given by contracting two cotangent vectors with the bivector field whose value at $g \in G_1[[z^{-1}]]$ is $(1 \otimes \Ad_g - \Ad_g \otimes 1)(r)$.
+\vasily{Chris, could you explain this bivector or give a reference?
+  What I see in the literature, e.g. Semenoff-Tian-Shansky or Hurtubise-Markman
+  is another formula. They define Poisson bracket to be (equation (2.8) in HM
+  \url{https://arxiv.org/abs/math/0107010v1} ) given by 
+  $\{\phi, \psi \} = \frac 1 2  \langle r (\nabla_L \phi, \nabla_L\psi \rangle
+  - \frac  1 2 \langle r (\nabla_R \phi, \nabla_R \psi) $. Here $\nabla_L$ and
+  $\nabla_R$ denote the left and right gradients, so their formula 
+is the difference of left.left  and right.right. But in your formula it looks
+  like left.right - right.left. Perhaps your formula is equivalent, but I can't find
+the derivation. Could you elaborate or give a citation? }
+
+  Concretely, given a pair of elements $X$ and $X'$ in the cotangent space $T^*_{G_1[[z^{-1}]], g}$, this computes the pairing
 \[(X, X') \mapsto \int \kappa(X, g X' g^{-1}) - \kappa(g X g^{-1},X')\d z,\]
-where $X$, for example, is identified with a $\gg^*$-valued meromorphic function on $\CC$, vanishing at $\infty$, via pullback under the right multiplication by $g^{-1}$ map.  Now, suppose the element $g$ is in the image of the restriction map $r_\infty$ for fixed local data $(D,\omega^\vee)$.  Then we note that the map $r_\infty^*$ sends a cotangent vector $X$ to the meromorphic global section $(b^L, b^R) = (gX, -Xg)$ of the bundle $\ad(g) \iso \ad(g)^*$ -- identifying the bundle with its dual using the invariant pairing  -- and so with this identification, our expression yields the formula
+where $X$, for example, is identified with a $\gg^*$-valued meromorphic function on $\CC$, vanishing at $\infty$, via pullback under the \vasily{left? or switch
+$g$ and $g^{-1}$ around $X'$} right multiplication by $g^{-1}$ map.  
+\vasily{What is the integration contour here? If I take the
+  integration contour around $ z= \infty$, then computation
+  of the integral by the residue gives the value equal
+  to the residue at $ z = \infty$. But for $g = 1 + O(1/z)$ and for
+  $X = O(1/z), X' = O(1/z)$ I get residue of $O(1/z^2)$ and that is zero
+  for any $X, X'$... I am very confused with this definition}
+  
+
+Now, suppose the element $g$ is in the image of the restriction map $r_\infty$ for fixed local data $(D,\omega^\vee)$.  Then we note that the map $r_\infty^*$ sends a cotangent vector $X$ to the meromorphic global section $(b^L, b^R) = (gX, -Xg)$ of the bundle $\ad(g) \iso \ad(g)^*$ -- identifying the bundle with its dual using the invariant pairing  -- and so with this identification, our expression yields the formula
 \[(X,X') \mapsto \int \kappa(b^Lg^{-1}, b^{'R}g^{-1}) - \kappa(b^{'L}g^{-1}, b^{R}g^{-1})\d z.\]
+
+\vasily{Again, what is the integration contour here? I am also confused
+  with wording 'meromorphic global section'. As far as I remember our discussions about symplectic structures, we wanted $(b^L)_{i}, (b^R)_{i}$ to be 
+  holomorphic in every chart $U_i$ cotaining singularity $z_i$.
+  If we don't impose regularity of $(b^L)_i, (b^R)_i$ in chart $U_i$,
+   I am getting zero from the integration by evaluation
+of this integral by a residue at infinity.... I am confused here} 
+
 This recovers the expression given for the symplectic form in Proposition \ref{qconn_symp_description} by applying the residue formula.
 \end{proof}
 
