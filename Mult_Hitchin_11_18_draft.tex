@@ -84,6 +84,7 @@
 \newcommand{\sub}{\subseteq}
 \newcommand{\iso}{\cong}
 
+
 \DeclareMathOperator{\coh}{Coh}
 \DeclareMathOperator{\higgs}{Higgs}
 \DeclareMathOperator{\bun}{Bun}
@@ -812,11 +813,6 @@ The hyperk\"ahler moment map is given by the Bogomolny functional, namely
 (A,\Phi) &\mapsto \ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1}- \d_A \Phi|_{\CC \times_\eps S^1}.
 \end{align*}
 
-\vasily{In the common conventions, e.g. \url{https://projecteuclid.org/euclid.jdg/1214443066} hyperk\"ahler moment map takes value in $Lie(\mc G) \otimes \mathbb{R}^3$ where $\mathbb{R}^3$ is the space of imaginary quaternions. 
-  We'll split $\mathbb{R}^{3} \simeq \mathbb{C} \oplus \mathbb{R}$ into complex part
-  and real part by picking a point on a twistor sphere, so that $\mu  = 0$
-  splits into a complex equation and real equation. But we should not discard complex
-equation as, I am afraid, we do in the above definition }
 
 \begin{definition} \label{monopole_moduli_def}
 Let $D$ be a finite subset $\{(z_1,t_0), \ldots, (z_k, t_0)\}$ of points in $M = \bb{CP}^1 \times S^1_R$, and let $\omega^\vee_{i}$ be a choice of coweight for each point in $D$. The moduli space $\mon_G(M, D, \omega^\vee)$ is the hyperk\"ahler quotient
@@ -827,7 +823,6 @@ Let $D$ be a finite subset $\{(z_1,t_0), \ldots, (z_k, t_0)\}$ of points in $M =
 Note that this definition still makes sense when we use the flat Riemannian metric on $\bb{CP}^1$, which is singular at the point $z = \infty$.  If $A$ is a gauge field on $\bb{CP}^1 \times_\eps S^1$ where the pair $(A,\Phi)$ have Dirac singularities at $D \times \{t_0\}$, then the Hodge dual $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1}$ in $\Omega^1((\CC \times_\eps S^1) \bs (D \times \{t_0\}; (\gg_\RR)_{\bo P})$ extends by zero to a 1-form on $(\bb{CP}^1 \times_\eps S^1) \bs (D \times \{t_0\})$.  Indeed, for the Hodge dual of a 2-form $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1} = (1+|z|^2/4)^{-1} \ast_{\mr{round}} F_A$.  The hyperk\"ahler moment map is, therefore, still well-defined.
 \end{remark}
 
-\vasily{May be we should  clarify the factor of $|z|^{-2}$ or say asymptotically at $z \to \infty$?  In fact I am getting a factor $(1+|z|^2/4)^{-2}$ for radius $1$, could you check?} \chris{You're right, but I get $(1+|z|^2/4)^{-1}$.  In general if the metric transforms like $g' = f^2 g$ then the Hodge star of a $p$-form on an $n$-manifold transforms like $\ast_{g'} = f^{n-2p} \ast_g$, so here we have $n=3$, $p=2$, $g = g_{\mr{flat}}$ and $g'=g_{\mr{round}}$, so $f^2 = (1+|z|^2/4)^{-2}$.}
 
 \begin{theorem} \label{monopole_qconn_comparison_thm}
 There is an injective map from the moduli space of polystable monopoles on $\bb{CP}^1 \times_q S^1$ with Dirac singularities at $D \times \{t_0\}$ and a framing on $\{\infty\} \times S^1$, and the moduli space of $\eps$-connections on $\bb{CP}^1$ with singularities at $D$ and framing at $\{\infty\}$.  More precisely there is an analytic injection
@@ -876,12 +871,16 @@ Here we have chosen a point in the twistor sphere, forgetting the hyperk\"ahler 
 \begin{remark} \label{monopole_holo_restriction_rmk}
 If we restrict $\mc F^{\mr{mon}}_{\bo P, \mc A}$ to a slice $C_t = C \times \{t\}$ in the $t$-direction we can identify it with a complex of the form
 \[\Omega^\bullet(C_t; \gg_P)[1] \overset {[\Phi,-]} \to \Omega^\bullet(C_t; \gg_P)\]
-with total differential given by $\d_A$ on each of the two factors along with the differential $[\Phi,-]$ mixing the two factors.  These two summands each split up into the sum of a Dolbeault complex on $C$ with its dual.  That is, there's a natural subcomplex of the form
+with total differential given by $\d_A$ on each of the two factors along with the differential $[\Phi,-]$ mixing the two factors. 
+
+
+ These two summands each split up into the sum of a Dolbeault complex on $C$ with its dual.  That is, there's a natural subcomplex of the form
 \[\Omega^{0,\bullet}(C_t; \gg_P)[1] \overset {[\Phi,-]} \to i \Omega^{0,\bullet}(C_t; \gg_P) \d t\]
 where the internal differentials on the two factors are now given by $\ol \dd_{A_0}$.  This complex is in turn quasi-isomorphic to the complex
 \[\Omega^\bullet(S^1; \Omega^{0,\bullet}(C_t;\gg_P))[1]\]
 with total differential $\ol \dd_{A_0} + \d_{\mc A}$.
 \end{remark}
+
 
 \begin{remark}
 If one introduces a framing at a point $c \in C$ then we must correspondingly twist the complex $\mc F^{\mr{mon}}$ above by the line bundle $\OO(c)$ on $C$ -- i.e. we restrict to sections that vanish at the framing point.  So in that case we define
@@ -896,7 +895,14 @@ The tangent space of $\mon_G(S^1 \times C, D \times \{t_0\}, \omega^\vee)$ at th
 
 Now let us consider the tangent complex to the moduli space of $q$-connections.  For the arguments in this article we'll only need to carefully consider the case $q=\id$ of multiplicative Higgs bundles, but we'll include some remarks regarding the more general case.  In this case the calculation was performed by Bottacin \cite{Bottacin}, see also \cite[Section 4]{HurtubiseMarkman}. Fix a multiplicative Higgs bundle $(P,g)$ on $C$.  We consider the sheaf of cochain complexes on $C$
 \[\mc F_{(P,g)} = (\gg_P[1] \overset {\Ad_g} {\to} \gg_P(-D))\]
-in degrees $-1$ and 0 with differential given by the adjoint action of $g$.  More precisely let $L_g$ and $R_g$ be the bundle maps $\gg_P \to \gg_P$ obtained as the derivative of left- and right-multiplication.  Then $\Ad_g = L_g - R_g$.  We can alternatively phrase this, as in \cite[Section 4]{HurtubiseMarkman}, as follows.  Define $\ad(g)$ to be the vector bundle
+
+in degrees $-1$ and 0 with differential given by the adjoint action of $g$.  More precisely let $L_g$ and $R_g$ be the bundle maps $\gg_P \to \gg_P$ obtained as the derivative of left- and right-multiplication.  
+
+Then $\Ad_g = L_g - R_g$.  
+
+
+We can alternatively phrase this, as in \cite[Section 4]{HurtubiseMarkman}, as follows.  
+Define $\ad(g)$ to be the vector bundle
 \[\ad(g) = (\gg_P \oplus \gg_P)/\{(X, -g X g^{-1}): X \in \gg_P\}.\]
 Then we can write $\mc F$ as the sheaf of complexes
 \[\mc F_{(P,g)} = (\gg_P[1] \overset {\Ad_g} {\to} \ad(g))\]
@@ -912,6 +918,9 @@ For more general $q$ we should modify this description by replacing $g$ by a $q$
 \[\mc F_{(P,g)} = (\gg_P[1] \overset {\Ad_g} {\to} \ad(g))\]
 just as in the untwisted case.
 \end{remark}
+
+
+
 
 This complex defines the deformation theory of the moduli space of multiplicative Higgs bundles.
 
@@ -929,10 +938,12 @@ In the rational case, the moduli space $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)
 \end{corollary}
 
 \begin{proof}
-One can use the same argument as \cite{HurtubiseMarkman} (see also \cite[Proposition 5.6]{CharbonneauHurtubise}), with the additional observation that tensoring by the line bundle $\OO(-\infty)$ kills the outer cohomology groups ($\bb H^{-1}$ and $\bb H^1$ with our degree conventions, which differ from the conventions of loc. cit. by one).  Indeed, $\bb H^{-1}$ consists of sections of $\gg_P$ that are annihilated by $\Ad_g$ (given for generic $g$ by constant sections valued in $\mf z_{\gg}$) while vanish at $\infty$, which are necessarily 0.  Likewise we can use the equivalence between the sheaf $\mc F_{(P,g)}$ and its Serre dual to see that $\bb H^1$ also vanishes.  Finally the Euler characteristic of the two step complex is unchanged by tensoring by $\OO(-\infty)$. 
+  One can use the same argument as \cite{HurtubiseMarkman} (see also \cite[Proposition 5.6]{CharbonneauHurtubise}), with the additional observation that tensoring by the line bundle $\OO(-\infty)$ kills the outer cohomology groups ($\bb H^{-1}$ and $\bb H^1$ with our degree conventions, which differ from the conventions of loc. cit. by one).  Indeed, $\bb H^{-1}$ consists of sections of $\gg_P$ that are annihilated by $\Ad_g$ (given for generic $g$ by constant sections valued in $\mf z_{\gg}$) while vanish at $\infty$, which are necessarily 0.  Likewise we can use the equivalence between the sheaf $\mc F_{(P,g)}$ and its Serre dual to see that $\bb H^1$ also vanishes.  Finally the Euler characteristic of the two step complex is unchanged by tensoring by $\OO(-\infty)$.
 \end{proof}
 
-In order to calculate with this hypercohomology group we'll use a \v Cech resolution.  This will be straightforward for the multiplicative Higgs moduli space, and we'll use the isomorphism of Theorem \ref{monopole_qconn_comparison_thm} to give an analogous description on the monopole side.    We define a cover $\mc U = \{U_0, U_1, \ldots, U_k, U_\infty\}$ of $C$ as follows.  Let $U_i$ be a contractible open neighborhood of the point $z_i$ and let $U_\infty$ be a contractible analytic open neighborhood of $c \in C$, all chosen to be pairwise disjoint.  Let $U_0$.  Finally let $U_0 = C \bs (D \cup \{c\})$.  Since the $U_i$ are contractible and the remaining subset $C \bs (D \cup \{c\})$ is an affine algebraic curve, which means that for any quasi-coherent sheaf of cochain complexes the higher cohomology groups vanish.  Likewise for the intersections: the punctured open sets $U_i^\times$ are analytic open sets of an affine curve.  
+
+In order to calculate with this hypercohomology group we'll use a \v Cech resolution.  This will be straightforward for the multiplicative Higgs moduli space, and we'll use the isomorphism of Theorem \ref{monopole_qconn_comparison_thm} to give an analogous description on the monopole side.    We define a cover $\mc U = \{U_0, U_1, \ldots, U_k, U_\infty\}$ of $C$ as follows.  Let $U_i$ be a contractible open neighborhood of the point $z_i$ and let $U_\infty$ be a contractible analytic open neighborhood of $c \in C$, all chosen to be pairwise disjoint. 
+ Let $U_0$.  Finally let $U_0 = C \bs (D \cup \{c\})$.  Since the $U_i$ are contractible and the remaining subset $C \bs (D \cup \{c\})$ is an affine algebraic curve, which means that for any quasi-coherent sheaf of cochain complexes the higher cohomology groups vanish.  Likewise for the intersections: the punctured open sets $U_i^\times$ are analytic open sets of an affine curve.  
 
 Specify a representative 0-cocycle $(\alpha_\infty, \{\alpha_i\}, \alpha_0, \beta_\infty, \{\beta_i\})$ for the \v Cech cohomology group with respect to our chosen cover $\mc U$.  Explicitly a 0-cochain is given by the following data:
 \begin{align*}
@@ -944,7 +955,12 @@ Specify a representative 0-cocycle $(\alpha_\infty, \{\alpha_i\}, \alpha_0, \bet
 \end{align*}
 where the notation $(\pm 1)$ indicates tensoring by the line bundle $\OO(\pm 1)$.
 
+  
+
+
 Being a 0-cocycle means that $(\alpha_\infty - \alpha_0)|_{U^\times_\infty} = \mr{Ad}_g(\beta_\infty)$ and $(\alpha_i - \alpha_0)|_{U^\times_i} = \mr{Ad}_g(\beta_i)$ for each $i$.  We consider 0-cocycles modulo 0-coboundaries of the form $(\mr{Ad}_g(f_\infty), \{\mr{Ad}_g(f_i)\}, \mr{Ad}_g(f_0), (f_\infty -  f_0)|_{U_\infty^\times}, \{(f_i - f_0)|_{U_i^\times}\})$.  In fact $\mr{Ad}_g$ is an isomorphism on $U_0$ for the sections $\alpha_0$ of $\gg_P$ that occur: those with no poles or zeroes in $U_0$.  That means that we can add a coboundary to force $\alpha_0=0$. 
+
+
 
 Now, rather than describing the tangent space to the moduli space of monopoles we'll define a complex that maps to it which we can define locally with respect to the cover $\mc U$.  Consider the open cover $\mc U \times S^1 = \{U_i \times S^1\}$ of $M = C \times S^1$.  For each element $U_i$ of the cover we can define a map
 \begin{align*}
@@ -952,7 +968,8 @@ Now, rather than describing the tangent space to the moduli space of monopoles w
 &\iso \gg_P(U_i)[1] \to \gg_P(U_i)(D|_{U_i}) \\
 &\iso \mc F(U_i)
 \end{align*}
-where we restrict the sheaf $\mc F'$ whose hypercohomology calculated the monopole tangent complex to the holomorphic part of the slice at $\{t\} \in S^1$.  Altogether this defines a map from the \v Cech cohomology with respect to this cover to the tangent complex of the moduli space of monopoles.  That is, we have an explicit map
+where we restrict the sheaf $\mc F'$ whose hypercohomology calculated the monopole tangent complex to the holomorphic part of the slice at $\{t\} \in S^1$. 
+    Altogether this defines a map from the \v Cech cohomology with respect to this cover to the tangent complex of the moduli space of monopoles.  That is, we have an explicit map
 \[{\mr {\check H}}^\bullet(M, \mc U \times S^1, \mc F') \to \bb H^\bullet(M; \mc F')\]
 that factors through the (isomorphic) tangent complex of the moduli space of multiplicative Higgs bundles.  To verify this we need only note that these maps commute with the differentials in the \v Cech complex, i.e. with the restriction to the intersection of a pair of open sets. 
 
@@ -964,7 +981,12 @@ Explicitly a 0-cochain in this \v Cech complex is given by $(\alpha_\infty, \{\a
  \beta_\infty &\in \Omega^0_\CC(U_\infty^\times \times S^1; \gg_{\bo P_\CC}) \\
  \beta_i &\in \Omega^0_\CC(U_i^\times \times S^1; \gg_{\bo P_\CC}) \text{ for } i=1,\ldots,k.
 \end{align*}
-Here we write $\mc F^{\mr{mon}}_0$ to indicate the degree 0 term in the cochain complex.  There's a similar condition for being a 0-cocycle involving the differential $\d_{\mr{mon}}$. 
+  
+Here we write $\mc F^{\mr{mon}}_0$ to indicate the degree 0 term in the cochain complex.  There's a similar condition for being a 0-cocycle involving the differential $\d_{\mr{mon}}$.
+
+
+  
+
 
 To conclude this subsection it will also be important to have an explicit description of the derivative of the holonomy map $H$ as a map between tangent spaces.  We can describe this map using our \v Cech resolutions on each contractible open set $U_i$ individually.
 
@@ -1095,11 +1117,15 @@ where $q(z)$ is a polynomial of degree less than $d$ (so the section is $d$-dime
 More general explicit cases of $\mhiggs^\fr_G(C)$ with parametrization by Darboux coordinates for $C = \bb{CP}^1$ and $G=\GL_n$ case are discussed in \cite{FrassekPestun}.
   
 \subsection{Symplectic Structures for General $G$} \label{general_symplectic_sec}
-We begin analysis of the general case by briefly discussing the holomorphic symplectic structure on the moduli space of periodic monopoles on $\bb{CP}^1$ following the work of Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin3}.  This structure arises from the description we gave as a hyperk\"ahler quotient.  To describe it specifically, let $\delta^{(1)} \mc A$ and $\delta^{(2)} \mc A$ be two tangent vectors at $(\bo P, \mc A)$ to the moduli space of monopoles.  Recall that $\mc A$ denotes the combination $\nabla_t - i\Phi \d t$.  Choose representatives for these two tangent vectors of the form $\alpha_i$ and $\alpha'_i$ respectively  in the \v Cech resolution we described above.  Then we can write the holomorphic symplectic form coming from the hyperk\"ahler reduction in terms of the symplectic pairing on the infinite-dimensional vector space $\mc V$, which is given by the Killing form $\kappa$ on $\gg$ along with the wedge pairing of differential forms.  So summing over the local patches in our \v Cech resolution we can write it as
+We begin analysis of the general case by briefly discussing the holomorphic symplectic structure on the moduli space of periodic monopoles on $\bb{CP}^1$ following the work of Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin3}.  This structure arises from the description we gave as a hyperk\"ahler quotient.  To describe it specifically, let $\delta^{(1)} \mc A$ and $\delta^{(2)} \mc A$ be two tangent vectors at $(\bo P, \mc A)$ to the moduli space of monopoles.  Recall that $\mc A$ denotes the combination $\nabla_t - i\Phi \d t$.
+
+Choose representatives for these two tangent vectors of the form $\alpha_i$ and $\alpha'_i$ respectively  in the \v Cech resolution we described above.  Then we can write the holomorphic symplectic form coming from the hyperk\"ahler reduction in terms of the symplectic pairing on the infinite-dimensional vector space $\mc V$, which is given by the Killing form $\kappa$ on $\gg$ along with the wedge pairing of differential forms.  So summing over the local patches in our \v Cech resolution we can write it as
 \begin{align*}
 \omega_{\mr{mon}}(\delta^{(1)} \mc A, \delta^{(2)} \mc A) &= \int_{M} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \d \ol{z} \\
 &= \sum_{i=1}^k \int_{U_i \times S^1} \kappa(\alpha_i, \alpha'_i) \d z \d \ol{z} \d t
 \end{align*}
+
+
 where the contributions to the integral away from the $U_i$ vanish.  We'll discuss this further in Section \ref{hyperkahler_section}
 
 Our goal in this section will be describe a symplectic structure on the moduli space of multiplicative Higgs bundles -- the rational analogue of Hurtubise and Markman's symplectic structure -- and then prove that it's equivalent to this symplectic form under the equivalence between multiplicative Higgs bundles and periodic monopoles.
@@ -1115,6 +1141,7 @@ There is a natural non-degenerate anti-symmetric pairing on the moduli space $\m
 where we use the Killing form to identify $\beta'_i$ with a $\gg^*$-valued form, and where $\rho_g^*$ is the pullback along the right multiplication by $g$.  In this expression the sum is over $i=1,\ldots,k$ and $i=\infty$.
 \end{lemma}
 
+
 \begin{remark}
 How should we think about this structure?  There's an intuitive description, just as one sees in Hurtubise and Markman's elliptic moduli space.  The pairing is induced from the natural equivalence between the tangent and cotangent spaces of the moduli space of multiplicative Higgs bundles as described in Section \ref{def_section}.  That is, there's a map of complexes of sheaves
 \[\xymatrix{
@@ -1129,9 +1156,8 @@ At this point we will not prove that the pairing is a symplectic structure: we w
 \end{remark}
 
 \begin{proof}
-We need only verify that the pairing described is non-degenerate.  It suffices to check non-degeneracy for each individual summand, i.e. that for fixed $i$, given $\alpha_i$ if the expression $\langle \rho_g^*(\alpha_i)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta'_i) \rangle$ vanishes for all $\beta'_i$ then $\alpha_i=0$ (and the same with $\alpha$ and $\beta$ interchanged).  This is immediate because the residue pairing $\langle - , - \rangle$ is non-degenerate and the map $(\Ad_g^*)^{-1}$ is an isomorphism on the open set $U^\times_i$.
+We need only verify that the pairing described is non-degenerate.  It suffices to check non-degeneracy for each individual summand, i.e. that for fixed $i$, given $\alpha_i$ if the expression $\langle \rho_g^*(\alpha_i)|_{U^\times_i}, \rho_g^*(\Ad_g^*)^{-1}(\beta'_i) \rangle$ vanishes for all $\beta'_i$ then $\alpha_i=0$ (and the same with $\alpha$ and $\beta$ interchanged).  This is immediate because the residue pairing $\langle - , - \rangle$ is non-degenerate and the map $(\Ad_g^*)^{-1}$ is an isomorphism on the open set $U^\times_i$. 
 \end{proof}
-
 \begin{remark}
 If we do not fix local data at the punctures, the full moduli space $\mhiggs_G^\fr(\bb{CP}^1,D)$, or indeed the moduli space $\mhiggs_G^{\text{fr,sing}}(\bb{CP}^1)$ with arbitrary singularities, will have an ind-Poisson structure, analogous to the ind-Poisson structure in the elliptic moduli space of Hurtubise and Markman.  One uses the filtration discussed in Remark \ref{ind_structure_remark} in order to define this structure: one needs to check that the moduli space  $\mhiggs_G^\fr(\bb{CP}^1,D, \preceq \omega^\vee)$ is Poisson, and that the inclusion of the symplectic moduli space $\mhiggs_G^\fr(\bb{CP}^1,D, \omega^\vee)$ is a Poisson map.  We won't discuss this in any more detail here, except to remark that this should follow using the techniques of \cite[Section 7]{HurtubiseMarkman}.  We will, however, discuss the close relationship between this Poisson structure and the rational Poisson Lie group, and the consequences for quantization, in Section \ref{quantization_section}.
 \end{remark}
@@ -1145,7 +1171,8 @@ Generic fibers of the multiplicative Hitchin fibration, in the rational case, ar
 \begin{proof}
 In order to check this we need to describe the subspace of the tangent space to the moduli space $\mhiggs^\fr_G(C,D,\omega^\vee)$ at a point $(P,g)$ tangent to the Hitchin fiber in our \v Cech description.  Recall that the tangent space to $\mhiggs^\fr_G(C,D,\omega^\vee)$ can be identified as the space of \v Cech cocycles $(\alpha_0, \{\alpha_i\}, \alpha_\infty, \{\beta_i\}, \beta_\infty)$, where in particular the $\beta_i$ and $\beta_\infty$ are local sections of the adjoint bundle $\gg_P$.  We will show that, for a \v Cech cocycle lying tangent to the Hitchin fiber, the elements $\beta_i, \beta_\infty$ must be valued in the associated bundle of centralizers $\mf c_g$ of $g$.  Having established this the claim follows because the operator $\Ad_g$, and therefore the operator $(\Ad_g^*)^{-1}$, acts trivially on the centralizer of $g$.  Replacing this operator with the identity in our expression for the symplectic form from Lemma \ref{sym_nondegeneracy_lemma} results in a symmetric expression.  Since it's also antisymmetric, it must vanish, which implies the desired isotropic condition.
 
-So it remains to establish this restriction on tangent vectors to the Hitchin fiber.  Note that $\beta_i$ lies in $\mf c_g$ if and only if $\alpha_i - \alpha_0 = 0$.  If the derivative $\d \pi$ of the multiplicative Hitchin map annihilates a cocycle, then in particular the elements $\alpha_i - \alpha_0$ are functions without poles at $z_i$.  Indeed, the cocycle condition implies that $\alpha_i - \alpha_0$ has the same residue as $\Ad_g$ applied to a regular function, in particular, by the genericity assumption, its residue is regular semisimple.  On the other hand, being in the kernel of $\d \pi$ means vanishing under the map $\gg(\!(z)\!) \to \mf t(\!(z)\!)/W$ -- the two conditions together implies that the simple pole of $\alpha_i - \alpha_0$ has zero residue.  That means that the tangent vectors to the Hitchin fiber -- which are annihilated by $\d \pi$ -- are cohomologous to cocycles with $\alpha_i - \alpha_0 = 0$ as required.
+So it remains to establish this restriction on tangent vectors to the Hitchin fiber.  Note that $\beta_i$ lies in $\mf c_g$ if and only if $\alpha_i - \alpha_0 = 0$.  If the derivative $\d \pi$ of the multiplicative Hitchin map annihilates a cocycle, then in particular the elements $\alpha_i - \alpha_0$ are functions without poles at $z_i$.  Indeed, the cocycle condition implies that $\alpha_i - \alpha_0$ has the same residue as $\Ad_g$ applied to a regular function, in particular, by the genericity assumption, its residue is regular semisimple.  On the other hand, being in the kernel of $\d \pi$ means vanishing under the map $\gg(\!(z)\!) \to \mf t(\!(z)\!)/W$
+ -- the two conditions together implies that the simple pole of $\alpha_i - \alpha_0$ has zero residue.  That means that the tangent vectors to the Hitchin fiber -- which are annihilated by $\d \pi$ -- are cohomologous to cocycles with $\alpha_i - \alpha_0 = 0$ as required.
 \end{proof}
 
 We'll now begin the comparison between the pairing described above and the symplectic structure on the moduli space of periodic monopoles.
@@ -1202,6 +1229,7 @@ On the other hand, we can evaluate the pairing $\omega_{\mr{Mon}}(\alpha_i,\alph
 \omega_{\mr{Mon}}(\{\alpha_i\},\{\alpha'_i\}) &= \sum_{i=0,\ldots,k,\infty} \int_{U_i} \kappa(\d_{\mr{mon}}(b_i) \wedge \d_{\mr{mon}}(b_i')) \d z - (b \leftrightarrow b')\\
 &= \sum_{i=1,\ldots,k,\infty} \int_{\dd \bb D_i \times [0,2\pi]} \kappa(b_i - b_0, \d_{\mr{mon}}(b'_i)) \d z - (b \leftrightarrow b')
 \end{align*}
+
 using here the fact that $\d_{\mr{mon}}b_i = \d_{\mr{mon}} b_0$ on $U_i \cap U_0$ and that $\d_{\mr{mon}} b_i(t) = 0$ when $t = 0$ or $2\pi$.  By Stokes' theorem we then have
 \begin{align*}
  \omega_{\mr{Mon}}(\{\alpha_i\},\{\alpha'_i\})&= \sum_{i=1,\ldots,k,\infty} \oint_{\dd \bb D_i} \kappa(b_i^R - b_0^R, b_i^{'R}) - \kappa(b_i^L - b_0^L, b_i^{'L}) - (b \leftrightarrow b') \\
