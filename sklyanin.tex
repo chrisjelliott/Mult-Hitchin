@@ -138,7 +138,10 @@ the space of framed meromorphic Higgs fields by $\mhiggs^{\fr} = G_1(C)$.
 
 \subsection{Poisson structure on $G_1(C)$} 
 Let $\kappa$ be a Killing form $\kappa: \gg \otimes \gg \to \mathbb{C}$.
-Then $\kappa^{-1}: \gg^{*} \to \gg$.
+Then $\kappa^{-1}: \gg^{*} \to \gg$. Also we'll assume  (without loosing generality, yes?)
+that $\kappa$ is choosen such that
+there is a faithful $G$-representation $\rho$ such that 
+$\tr\rho(X) \rho(X') = c_\rho \kappa(X, X') $ for $X , X' \in \gg$. 
 
 Sklyanin has defined a Poisson bracket on evaluation functions on $G_1(C)$ for $C = (\mathbb{C}_z, dz)$ as follows. 
 
@@ -209,7 +212,7 @@ X_{\phi_z} (w) =  \frac{1}{w - z} ( \chi^{-1} \nabla_{L} \phi_z,  - \chi^{-1}\na
 \begin{lemma}\label{phitoX}
   Fix an element $g \in \mhiggs^{\fr}_{D}$ represented by a $G$-valued
   meromorphic function $g(z)$ with singularities at $D$.    If $\phi$ is a differentiable function and $z$ is away from $D$, then $X_{\phi_z}$
-  belongs to the tangent space to $\mhiggs^{\fr}_{D}$. 
+  belongs to the tangent space to $\mhiggs^{\fr}_{D}$, so we have $\mathrm{im} \, \pi \subset T_{g}\mhiggs^{\fr}_D$. 
 \end{lemma}
 \begin{proof}
   Let us bring the vector field (\ref{eq:Xphiz}) into equivalence frame $(X^{L}, 0)$ using
@@ -264,19 +267,23 @@ structure on $T_{g}(\mhiggs^{\fr}_{D})$ given by the residue formula to the $\ma
  \end{equation}
 
  Let $X, X'$ be vectors in the tangent space to $\mhiggs^{\fr}_D$ at a point $g$.
- Then we have the residue formula  for $\Omega(X, X')$ derived in section .. from the AKSZ pullback
- of the symplectic structure on Calabi-Yau curve $(C, dz)$: 
+
+ Consider the bilinear form $\Omega(X, X')$ (motivated by the monopole
+ computations in another section...) 
  \begin{equation}
 \label{eq:Omega}
-   \Omega(X, X')  = \frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  dw 
-\langle  X^{L}_{i} X^{L'}_{0} \rangle  - \langle X^{R}_{i}  X^{R'}_{0} \rangle 
+   \Omega(X, X')  = \frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  dw (
+\langle  X^{L}_{i} X^{L'}_{0} \rangle  - \langle X^{R}_{i}  X^{R'}_{0} \rangle )
 \end{equation}
 where we have choosen the equivalence frames (\ref{eq:equivalence0}) in $U_i$' and $U_0$ such that $X_i^{L}, X_i^{R}$ are regular in small disks $U_i$'s around $z_i$, and $X_0^{L}, X_{0}^{R}$ are regular in
 the rest $U_0  = C \setminus \{\tilde D\}$.
-Here $\tilde D = D \cup \{ c \}$, and $\langle, \rangle$ means Killing form $\langle, \rangle = \chi: \gg \otimes \gg \to \mathbb{C}$. 
+Here $\tilde D = D \cup \{ c \}$, and $\langle, \rangle$ means Killing form $\langle, \rangle = \chi: \gg \otimes \gg \to \mathbb{C}$.
+
+We don't yet assume that $\Omega$ is non-degenerate or antisymmetric. In fact, we'll show
+that these properties of $\Omega$  we'll be implied by the arguments below. 
 
 \begin{lemma}\label{lemma:OmegaPi}
-  The symplectic structure (\ref{eq:Omega}) on $T_{\mhiggs^{\fr}_{D}}$ 
+  The bilinear form (\ref{eq:Omega}) on $T_{\mhiggs^{\fr}_{D}}$ 
 restricted to the $\mathrm{im} \, \pi \subset T_{\mhiggs^{\fr}_{D}}$  is compatible
   with Sklyanin's Poisson structure $\pi$ on $\mhiggs^{\fr} = G_1(C)$.
 \end{lemma}
@@ -284,7 +291,7 @@ restricted to the $\mathrm{im} \, \pi \subset T_{\mhiggs^{\fr}_{D}}$  is compati
   Given two hamiltonian functions $\phi_{z_1}, \psi_{z_2}$ where $z_1, z_2$ are regular
   points away from $\tilde D$ we'd like to check
   that Sklyanin's Poisson bracket (\ref{eq:Sklyanin})  
-is compatible (\ref{eq:compatibility}) with symplectic structure (\ref{eq:Omega})
+is compatible (\ref{eq:compatibility}) with bilinear form  (\ref{eq:Omega})
 \begin{equation}
   \Omega(X_{\psi_{z_1}}, X_{\phi_{z_2}})  = - \{\psi_{z_1}, \phi_{z_2}\}
 \end{equation}
@@ -301,7 +308,7 @@ by compositition with $\chi^{-1}$. )
     (X_{\phi_{z_2}})_{0} = ((X_{\phi_{z_2}}^{L}, X_{\phi_{z_2}}^{R}))_{0} = ( \frac{1}{w - z_2} ( A_{g_{z_2}} \nabla_R \phi_{z_2} - A_{g_{w}} \nabla_{R} \phi_{z_2}), 0) 
   \end{aligned}
 \end{equation}
-Then the definition of symplectic structure (\ref{eq:Omega}) gives
+Then the definition of the bilinear form (\ref{eq:Omega}) gives
 \begin{equation}
   \label{eq:pairing}
   \Omega(X_{\psi_{z_1}}, X_{\phi_{z_2}}) = \frac{1}{2 \pi \imath }
@@ -310,6 +317,7 @@ Then the definition of symplectic structure (\ref{eq:Omega}) gives
 \end{equation}
 The integrand is regular everywhere on $U_0 \setminus \{z_1, z_2\}$, and since
 \begin{equation}
+\label{eq:residue}
   \sum_{i \in \tilde D} \oint_{\partial U_i }  = - \oint_{\partial U_0} 
 \end{equation}
 the result (\ref{eq:pairing}) is a minus sum of residues in $w = z_1$ and $w = z_2$
@@ -327,8 +335,8 @@ $\langle A_{g} X, A_{g} X' \rangle = \langle X, X' \rangle $,
 and the relation between left and right gradient $\nabla_{L} \phi_{w} = A_{g_w} \nabla_{R} \phi_w$.
 \end{proof}
 
-So we've shown (pointwise) that restriction of symplectic form on $T_{\mhiggs^{\fr}_{D}}$
-  to the subspace $\mathrm{im} \pi \subset T_{\mhiggs^{\fr}}$ is compatible with
+So we've shown (pointwise) that restriction of the bilinear form $\Omega$ on $T_g\mhiggs^{\fr}_{D}$
+  to the subspace $\mathrm{im} \pi \subset T_g\mhiggs^{\fr}$ is compatible with
 Sklyanin's Poisson structure $\pi$.
 
 To complete the argument  $(\mhiggs^{\fr}_{D}, \Omega)$ is
@@ -375,7 +383,7 @@ by adjoint invariant functions) with symplectic leaves are isotropic subspaces o
 Now we consider a symplectic leaf in $G_1(C)$. 
 
 In this subsection we'll try to prove
-\begin{theorem}
+\begin{theorem}\label{theorem:symplectic_leaf}
   Let $G$ be a reductive group. We'll take the underlying $G$-principal bundle on $C$
   to be trivial bundle with a framing at $c \in C$. 
 In the Poisson-Lie group $(\mhiggs^{fr}, \pi)$ with Sklyanin's bracket $\pi$
@@ -437,18 +445,98 @@ i.e. there is a limit
 \begin{proof}
   In the framing $(X^{L}, X^{R}) \sim (X^{L} + A_{g} X^{R}, 0 )$ the singular
   part of $X^{L}$ in $U_{i}^{\times}$ in the subspace generated by $e_{\alpha, z_i}$
-  is in the image of $A_{g}$ applied to an analytic section generated by $e_{\alpha, z_i}$,
-  and consequently, there is an equivalence frame $(X^{L}, X^{R}) \sim (\tilde X^{R}, \tilde X^{R})$
-  in which $\tilde X^{L}, \tilde X^{R}$ are both analytic in $U_{i}$. 
+  is in the image of $A_{g}$ applied to a regular section generated by $e_{\alpha, z_i}$,
+  and consequently, there is an equivalence frame $(X^{L}, X^{R}) \sim (\tilde X^{R}, \tilde X^{R})$   in which $\tilde X^{L}, \tilde X^{R}$ are both regular in $U_{i}$. 
 \end{proof}
 
 After we've described the tangent space  $T_{\mhiggs_{D}^{\fr}}$ (more precisely its fiber
-a nice poly-stable point $g$ )   we'd like to show that
-every vector in $T_{g}(\mhiggs_{D}^{\fr})$ is generated by some hamiltonian function
-with respect Sklyanin's Poisson structure on $(G_1(C), \pi)$.
+a nice poly-stable base point $g_0$ )   we'd like to show that
+for every vector $X$ in $T_{g_0}(\mhiggs_{D}^{\fr})$ there is a 
+hamiltonian function $\phi$ on $G(C)$ such that $X$ is generated by $\phi$ at $g_0$ with respect Sklyanin's Poisson structure on $(G_1(C), \pi)$
+\begin{equation}
+  \forall X \in  T_{g_0}( \mhiggs_{D}^{\fr}) \qquad \exists \phi: X  = \pi d_{g}\phi(g) |_{g_0}
+\end{equation}
 This we'll show that $\mathrm{im} \pi = T_{\mhiggs_{D}^{\fr}}$
 and complete the symplectic leaf theorem since equivalence of $\Omega$ restricted to
-$\mathrm{im} \pi $ with $\pi$ is already shown in the lemma \ref{lemma:OmegaPi}. 
+$\mathrm{im} \pi $ with $\pi$ is already shown in the lemma \ref{lemma:OmegaPi}.
+
+
+Suppose that $X$ in $T_{g_0}( \mhiggs_{D}^{\fr}) $ is cast in the equivalence frame (\ref{eq:equivalence0}) in the format $X = ((X^{L}, X^{R}))_{i}$ where $(X^{L}, X^{R})_{i}$ are regular
+in each patch $U_i$ around $z_i \in \tilde D$. Here is a construction of $\phi$ (of course not unique) such that $X = X_{\phi}$.
+
+
+\begin{lemma}\label{xtophi}
+  For any $X \in T_{g} \mhiggs^{\fr}_{D}$ there is a local potential (hamiltonian function)
+  $\phi$ on $G_1(C)$ such that $X = \pi d \phi|_{g} $ and this function $\phi(\tilde g)$
+  in a in a local neighborhood of the base point $g$
+  can be constructed 
+  concretely for example by the formula \footnote{recall
+  that we assumed that we have a faithful representation $\rho$
+  of reductive group  $G$ such that $\tr\rho(X) \rho(X') = c_\rho \kappa(X, X')$, hopefully
+we don't loose any generality here}
+\begin{equation}
+  \phi(\tilde g) : = -\frac 1 2 \sum_{z_i \in \tilde D} \frac{1}{2 \pi \imath c_\rho} \oint_{\partial U_{i}} 
+dz  \tr \rho( \tilde g_z  g_z^{-1}) \rho(X^{L}_i - A_{ g_z} X_{i}^{R}) 
+\end{equation}
+\end{lemma}
+  
+\begin{proof}
+The left gradient of $\phi(\tilde g)$ under $ \delta \tilde g = Y^{L} \tilde g$ at $\tilde g = g$ is
+\begin{equation}
+  Y^{L} \nabla_{L} \phi|_{\tilde g = g}  = - \frac 1 2  \sum_{z_i \in \tilde D} \frac{1}{2 \pi \imath } \oint_{\partial U_{i}}  dz
+ \langle  Y^{L} , (X^{L}_i - A_{g_z} X_i^R) ) 
+\end{equation}
+so 
+\begin{equation}
+  \nabla_{L} \phi|_{\tilde g = g}  = -\frac 1 2  \sum_{z_i \in \tilde D} \frac{1}{2 \pi \imath } \oint_{\partial U_{i}}  dz
+ (X^{L}_i - A_{g_z} X_i^R) 
+\end{equation}
+where we've identified $\gg$ and $\gg^{*}$ using the Killing form $\langle , \rangle$. 
+
+Now we'll compute Sklyanin's Hamiltonian vector field in the left frame
+$(X_{\phi}^{L}, 0)$ by the equation (\ref{eq:xlw0}) (and using that $\nabla_{R} \phi  =
+A_{g^{-1}} \nabla_{L} \phi$):
+\begin{multline}
+  (X^{L}_\phi, 0) = -\frac 1 2 \sum_{i \in \tilde D} \frac{1}{2 \pi \imath} \oint_{\partial U_i}
+  \frac{dz}{w - z} ( (X_i^{L} - A_{g_z} X_i^{R})  - A_{g_w} A_{g_z}^{-1} (X_i^{L} - A_{g_z} X_i^{R}),0) =\\
+=  -\frac 1 2 \sum_{i \in \tilde D} \frac{1}{2 \pi \imath} \oint_{\partial U_i}
+\frac{dz}{w - z} ( (X_i^{L}  + A_{g_w} X_i^{R}) - (A_{g_z} X_i^{R} +  A_{g_{w}} A_{g_{z}}^{-1} X_i^{L}),0) \\
+ = -\frac 1 2  \sum_{i \in \tilde D} \frac{1}{2 \pi \imath} \oint_{\partial U_i}
+ \frac{dz}{w - z} ( (X_i^{L}  + A_{g_w} X_i^{R}) - (X_0^{L} + A_{g_z} X_0^{R}- X_{i}^{L} +  A_{g_{w}} ( A_{g_{z}}^{-1} X_0^{L} + X_0^{R} - X_{i}^{R})),0)= \\
+  = -\frac 1 2  \sum_{i \in \tilde D} \frac{1}{2 \pi \imath} \oint_{\partial U_i}
+    \frac{dz}{w - z} ( 2 (X_i^{L}  + A_{g_w} X_i^{R}) - (X_0^{L} + A_{g_z} X_0^{R} +  A_{g_{w}} ( A_{g_{z}}^{-1} X_0^{L} + X_0^{R} )),0)
+  \end{multline}
+  Now, as function of $z$, the first term of the numerator of the integrand is regular in each $U_i$, and the second term of the numerator is regular in $U_0$. Therefore,
+  the first term  evaluates to the residue at $z = w$ while the second is zero if $w \in U_i$,
+  and inversely,  the second term evaluates to a residue at $z = w$
+ while the first is zero if $w \in U_0$. (Assume that $w$ is not on the integration
+  contour, as we can always move it away.)
+Either way, if $w \in U_i$ we have from the residue in the first term
+  \begin{equation}
+    (X^{L}_\phi, 0)(w) = \mathrm{res}_{z = w} \frac{dz}{ z - w} (X_{i}^{L} + A_{g_w} X_{i}^{R}) =
+    (X_{i}^{L} + A_{g_w} X_{i}^{R})(w), \qquad w \in U_i
+  \end{equation}
+  and if $ w \in U_0$ we have from the residue in the second term by (\ref{eq:residue})
+  \begin{equation}
+    (X^{L}_\phi, 0)(w) = \frac 1 2 \mathrm{res}_{z = w} \frac{dz}{ z - w} (X_0^{L} + A_{g_z} X_0^{R} +  A_{g_{w}} ( A_{g_{z}}^{-1} X_0^{L} + X_0^{R} )) =
+   ( X_{0}^{L} + A_{g_w} X_{0}^{R})(w), \qquad w \in U_0 
+  \end{equation}
+  and thus $X_\phi$ in the left equivalence
+  frame $(X^{L}_{\phi}, 0)$ in each patch matches the vector field $X$ that we've started
+  in the same left equivalence frame $(X^{L}, X^{R}) \sim (X^{L} + A_{g} X^{R}, 0 )$.
+\end{proof}
+  
+
+\begin{proof}[proof of theorem \ref{theorem:symplectic_leaf}]
+Now we've shown in lemma \ref{phitoX} that $\mathrm{im}\, \pi \subset T_{g} \mhiggs^{\fr}_{D}$
+and in lemma \ref{xtophi} that $ T_{g} \mhiggs^{\fr}_{D} \subset \mathrm{im}\, \pi$,
+hence $\im \pi =  T_{g} \mhiggs^{\fr}_{D}$. In combination with lemma \ref{lemma:OmegaPi}
+on compatibility of $\pi$ and $\Omega$ this implies that $\mhiggs^{\fr}_{D}$ is
+a symplectic leaf for Poisson-Lie group $(G_1(C), \pi)$ of framed rational $G$-valued functions
+on $C$ equipped with  with Sklyanin's Poisson structure $\pi$.
+\end{proof}
+
+
 
 
  % Consider the variation of the one-form $g^{-1} dg$ and $dg g^{-1}$ with respect to
@@ -462,9 +550,15 @@ $\mathrm{im} \pi $ with $\pi$ is already shown in the lemma \ref{lemma:OmegaPi}.
  %     \delta ( g^{-1} dg) =  [d + g^{-1} dg, X_{R}] + g^{-1} dX_L g 
  %   \end{aligned}
  % \end{equation}
- 
+
+
+
  
 \chris{Is there something wrong with the following formal argument that your Lemma \ref{lemma:OmegaPi} suffices?}
+\vasily{Alternatively, we'll also give the following argument which
+  would be applicable if we also show that $\Omega$
+  is a non-degenerate  bilinear form on $T_{g} \mhiggs^{\fr}_{D}$. }
+
 
 Let me write $i \colon \mhiggs^\fr_D \to G_1(C)$ for the inclusion map, and fix a point $g \in \mhiggs^\fr_D$.  So we have a diagram of linear maps
 \[\xymatrix{
