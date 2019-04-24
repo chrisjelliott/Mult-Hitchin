@@ -1051,6 +1051,7 @@ Now, we expect that the space of $q$-opers will, in the rational case, be Lagran
 \part{Hyperk\"ahler Structures}
 
 \section{Periodic Monopoles} \label{periodic_monopole_section}
+\subsection{Monopole Definitions}
 Moduli spaces of $q$-connections on a Riemann surface $C$ are closely related to moduli spaces of periodic monopoles, i.e. monopoles on 3-manifolds that fiber over the circle (more specifically, with fiber $C$ and monodromy determined by $q$).  Let $G_\RR$ be a compact Lie group whose complexification is $G$.  The discussion in this section will mostly follow that of \cite{CharbonneauHurtubise, Smith}.
 
 Write $M = C\times_q S^1_R$ for the $C$-bundle over $S^1$ with monodromy given by the automorphism $q$.  More precisely, $M$ is the Riemannian 3-manifold obtained by gluing the ends of the product $C \times [0,2\pi R]$ of Riemannian manifolds by the isometry $(x,2\pi R) \sim (q(x), 0)$.
@@ -1094,6 +1095,39 @@ A monopole on $M$ with \emph{framing} at the point $c \in C$ is a monopole $(\bo
 
 The moduli theory of monopoles on general compact 3-manifolds was described by Pauly \cite{Pauly}.  In this paper we'll be interested in moduli spaces $\mon_G(M, D, \omega^\vee)$ of monopoles on 3-manifolds of the form $M = C \times S^1$, with prescribed Dirac singularities and possibly with a fixed framing at a point in $C$.  
 
+\subsection{Hyperk\"ahler Structures on Periodic Monopoles} \label{HK_monopole_section}
+
+\chris{This section needs a rewrite but I've inserted what we already had as a starting point.}
+
+Let us begin by describing the hyperk\"ahler structure on the moduli space of periodic monopoles and how the holomorphic symplectic structure varies under rotation in the twistor sphere.  We'll begin by recalling that the moduli space of periodic monopoles can be described as a hyperk\"ahler quotient as in the work of Atiyah and Hitchin \cite{AtiyahHitchin}.  In a context with more general boundary data at $\infty$ this was demonstrated by Cherkis and Kapustin \cite{CherkisKapustin3} for the group $\SU(2)$, see also Foscolo \cite{FoscoloDef}[Theorem 7.12].  In the case of $\bb{CP}^1$ with a fixed framing the analysis is much easier.
+
+The moduli space of periodic monopoles can be obtained as a hyperk\"ahler quotient.  Let us fix Dirac singularities at $D'$, and a framing at $\infty$.  Consider the infinite-dimensional vector space $\mc V$ consisting of pairs $(A,\Phi)$ where $A$ is a connection on a fixed principal $G_\RR$-bundle $\bo P$ on $M$, $\Phi$ is a section of $\gg_{\bo P}$, and the pairs $(A,\Phi)$ have a Dirac singularity with charge $\omega^\vee_{z_i}$ at each $(z_i,t_i)$ in $D'$.  Let $\mc G$ be the group of gauge transformations of the bundle $\bo P$.
+
+The hyperk\"ahler moment map is given by the Bogomolny functional, namely
+\begin{align*}
+\mu \colon \mc V &\to \mr{Lie}(\mc G) \otimes \RR^3 \\
+(A,\Phi) &\mapsto \ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1}- \d_A \Phi|_{\CC \times_\eps S^1}.
+\end{align*}
+
+Here the Lie algebra $\mr{Lie}(\mc G)$ of the gauge group is the space of sections in $\Omega^0(M \bs (D'); (\gg_\RR)_{\bo P})$ that vanish at $\{\infty\} \times S^1$, so $\mc G \otimes \RR^3$ is identified with the space of sections in $\Omega^1(M \bs (D'); (\gg_\RR)_{\bo P})$ likewise vanishing at $\infty$.
+
+\vasily{XXX: In the common conventions, e.g. \url{https://projecteuclid.org/euclid.jdg/1214443066} hyperk\"ahler moment map takes value in $Lie(\mc G) \otimes \mathbb{R}^3$ where $\mathbb{R}^3$ is the space of imaginary quaternions. 
+  We'll split $\mathbb{R}^{3} \simeq \mathbb{C} \oplus \mathbb{R}$ into complex part
+  and real part by picking a point on a twistor sphere, so that $\mu  = 0$
+  splits into a complex equation and real equation. But we should not discard complex
+equation as, I am afraid, we do in the above definition } \chris{I don't understand your comment, but this section needs to be substantially rewritten to deal with stability etc anyway.}
+
+\begin{remark} \label{flat_metric_remark}
+Note that the Bogomolny functional $\mu$ makes sense when we use the flat Riemannian metric on $\bb{CP}^1$, which is singular at the point $z = \infty$.  If $A$ is a gauge field on $\bb{CP}^1 \times_\eps S^1$ where the pair $(A,\Phi)$ have Dirac singularities at $D'$, then the Hodge dual $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1}$ in $\Omega^1((\CC \times_\eps S^1) \bs (D'; (\gg_\RR)_{\bo P})$ extends by zero to a 1-form on $(\bb{CP}^1 \times_\eps S^1) \bs (D')$.  Indeed, for the Hodge dual of a 2-form $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1} = (1+|z|^2/4)^{-1} \ast_{\mr{round}} F_A$.  The hyperk\"ahler moment map is, therefore, still well-defined.
+\end{remark}
+\vasily{May be we should  clarify the factor of $|z|^{-2}$ or say asymptotically at $z \to \infty$?  In fact I am getting a factor $(1+|z|^2/4)^{-2}$ for radius $1$, could you check?} 
+
+\chris{You're right, but I get $(1+|z|^2/4)^{-1}$.  In general if the metric transforms like $g' = f^2 g$ then the Hodge star of a $p$-form on an $n$-manifold transforms like $\ast_{g'} = f^{n-2p} \ast_g$, so here we have $n=3$, $p=2$, $g = g_{\mr{flat}}$ and $g'=g_{\mr{round}}$, so $f^2 = (1+|z|^2/4)^{-2}$.}
+
+\vasily{Please check the power of $(1+|z|^2/4)$. I am getting $-2$, not $-1$. Just in case,
+  when we scale metric on $C$ we don't touch the metric along $S^1$, we keep fixed the radius of the verical $S^1$.}
+
+\subsection{Periodic Monopoles and $q$-Connections}
 Let us begin to address the relationship between periodic monopoles and $q$-connections.  We will first recall the comparison theorem between multiplicative Higgs bundles and periodic monopoles proved by Charbonneau--Hurtubise \cite{CharbonneauHurtubise} for $\GL_n$, and Smith \cite{Smith} for general $G$. This approach was first suggested by Kapustin-Cherkis \cite{CherkisKapustin2} under the name `spectral data'. 
 
 \begin{definition}
@@ -1162,43 +1196,12 @@ In \cite{Mochizuki}, Mochizuki establishes a more general result, where rather t
 
 \chris{This was the argument that we made in the old section 5.2, but because the hypercohomology description there was wrong, we'll only end up using bits and pieces of that analysis.  I haven't merged anything in yet.}
 
-\section{Hyperk\"ahler Structures and Twistor Rotation} \label{hyperkahler_section}
+\section{Comparison of Hyperk\"ahler Structures and Twistor Rotation} \label{hyperkahler_section}
 \chris{need to include a description of the hyperk\"ahler quotient here, moved from Section \ref{periodic_monopole_section}, but including the further symplectic reduction}
+
 The results of the previous section imply that the symplectic structure on $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ extends canonically to a hyperk\"ahler structure.  In this section we'll compare the twistor rotation with the deformation to the moduli space of $\eps$-connections. We'll show that in an appropriate limit, by passing to a point $\eps$ in the twistor sphere we obtain a complex manifold equivalent to the moduli space of $\eps$-connections as a deformation of the moduli space of multiplicative Higgs bundles.
 
-Let us begin by describing the hyperk\"ahler structure on the moduli space of periodic monopoles and how the holomorphic symplectic structure varies under rotation in the twistor sphere.  We'll begin by recalling that the moduli space of periodic monopoles can be described as a hyperk\"ahler quotient as in the work of Atiyah and Hitchin \cite{AtiyahHitchin}.  In a context with more general boundary data at $\infty$ this was demonstrated by Cherkis and Kapustin \cite{CherkisKapustin3} for the group $\SU(2)$, see also Foscolo \cite{FoscoloDef}[Theorem 7.12].  In the case of $\bb{CP}^1$ with a fixed framing the analysis is much easier.
-
-\chris{Old section, re-inserted for editing.}  The moduli space of periodic monopoles can be obtained as a hyperk\"ahler quotient.  Let us fix Dirac singularities at $D'$, and a framing at $\infty$.  Consider the infinite-dimensional vector space $\mc V$ consisting of pairs $(A,\Phi)$ where $A$ is a connection on a fixed principal $G_\RR$-bundle $\bo P$ on $M$, $\Phi$ is a section of $\gg_{\bo P}$, and the pairs $(A,\Phi)$ have a Dirac singularity with charge $\omega^\vee_{z_i}$ at each $(z_i,t_i)$ in $D'$.  Let $\mc G$ be the group of gauge transformations of the bundle $\bo P$.
-
-
-
-The hyperk\"ahler moment map is given by the Bogomolny functional, namely
-\begin{align*}
-\mu \colon \mc V &\to \mr{Lie}(\mc G) \otimes \RR^3 \\
-(A,\Phi) &\mapsto \ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1}- \d_A \Phi|_{\CC \times_\eps S^1}.
-\end{align*}
-
-Here the Lie algebra $\mr{Lie}(\mc G)$ of the gauge group is the space of sections in $\Omega^0(M \bs (D'); (\gg_\RR)_{\bo P})$ that vanish at $\{\infty\} \times S^1$, so $\mc G \otimes \RR^3$ is identified with the space of sections in $\Omega^1(M \bs (D'); (\gg_\RR)_{\bo P})$ likewise vanishing at $\infty$.
-
-\vasily{XXX: In the common conventions, e.g. \url{https://projecteuclid.org/euclid.jdg/1214443066} hyperk\"ahler moment map takes value in $Lie(\mc G) \otimes \mathbb{R}^3$ where $\mathbb{R}^3$ is the space of imaginary quaternions. 
-  We'll split $\mathbb{R}^{3} \simeq \mathbb{C} \oplus \mathbb{R}$ into complex part
-  and real part by picking a point on a twistor sphere, so that $\mu  = 0$
-  splits into a complex equation and real equation. But we should not discard complex
-equation as, I am afraid, we do in the above definition } \chris{I don't understand your comment, but this section needs to be substantially rewritten to deal with stability etc anyway.}
-
-
-
-\begin{remark} \label{flat_metric_remark}
-Note that the Bogomolny functional $\mu$ makes sense when we use the flat Riemannian metric on $\bb{CP}^1$, which is singular at the point $z = \infty$.  If $A$ is a gauge field on $\bb{CP}^1 \times_\eps S^1$ where the pair $(A,\Phi)$ have Dirac singularities at $D'$, then the Hodge dual $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1}$ in $\Omega^1((\CC \times_\eps S^1) \bs (D'; (\gg_\RR)_{\bo P})$ extends by zero to a 1-form on $(\bb{CP}^1 \times_\eps S^1) \bs (D')$.  Indeed, for the Hodge dual of a 2-form $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1} = (1+|z|^2/4)^{-1} \ast_{\mr{round}} F_A$.  The hyperk\"ahler moment map is, therefore, still well-defined.
-\end{remark}
-\vasily{May be we should  clarify the factor of $|z|^{-2}$ or say asymptotically at $z \to \infty$?  In fact I am getting a factor $(1+|z|^2/4)^{-2}$ for radius $1$, could you check?} 
-
-\chris{You're right, but I get $(1+|z|^2/4)^{-1}$.  In general if the metric transforms like $g' = f^2 g$ then the Hodge star of a $p$-form on an $n$-manifold transforms like $\ast_{g'} = f^{n-2p} \ast_g$, so here we have $n=3$, $p=2$, $g = g_{\mr{flat}}$ and $g'=g_{\mr{round}}$, so $f^2 = (1+|z|^2/4)^{-2}$.}
-
-\vasily{Please check the power of $(1+|z|^2/4)$. I am getting $-2$, not $-1$. Just in case,
-  when we scale metric on $C$ we don't touch the metric along $S^1$, we keep fixed the radius of the verical $S^1$.}
-
-Recall from Definition \ref{monopole_moduli_def} that the moduli space of periodic monopoles on $\bb{CP}^1$ with a fixed framing at $\infty$ and fixed Dirac singularities can be described as the quotient 
+Recall from Section \ref{HK_monopole_section} that the moduli space of periodic monopoles on $\bb{CP}^1$ with a fixed framing at $\infty$ and fixed Dirac singularities can be described as the quotient 
 \[\mon_G^{\fr}(\bb{CP}^1 \times_\eps S^1_R, D, \omega^\vee) = \mu^{-1}(0)/\mc G,\]
 where 
 \begin{itemize}
