@@ -138,28 +138,39 @@ the space of framed meromorphic Higgs fields by $\mhiggs^{\fr} = G_1(C)$.
 
 \subsection{Poisson structure on $G_1(C)$} 
 Let $\kappa$ be a Killing form $\kappa: \gg \otimes \gg \to \mathbb{C}$.
-Then $\kappa^{-1}: \gg^{*} \to \gg$. Also we'll assume  (without loosing generality, yes?)
-that $\kappa$ is choosen such that
+Then $\kappa^{-1}: \gg^{*} \to \gg$. Also we'll assume  without loosing generality that $\kappa$ is choosen such that
 there is a faithful $G$-representation $\rho$ such that 
-$\tr\rho(X) \rho(X') = c_\rho \kappa(X, X') $ for $X , X' \in \gg$. \chris{In this expression $\rho(X)$ should presumably be $\d \rho(X)$, the representation of the Lie algebra.  It's true that a complex group $G$ is reductive iff it has a faithful representation, and therefore its Lie algebra has a pairing of this form.}
+$\tr d\rho(X) d\rho(X') = c_\rho \kappa(X, X') $ for $X , X' \in \gg$
+where $d\rho$ denotes the associated representation of the Lie algebra of $G$,
+and $c_{\rho}$ is a non-zero complex number.  \chris{In this expression $\rho(X)$ should presumably be $\d \rho(X)$, the representation of the Lie algebra.  It's true that a complex group $G$ is reductive iff it has a faithful representation, and therefore its Lie algebra has a pairing of this form.}
+\vasily{Sure, I agree. I tried to improve the phrasing.
+  Please feel free to edit the phrase when it feels that you can
+  improve} 
 
 Sklyanin has defined a Poisson bracket on evaluation functions on $G_1(C)$ for $C = (\mathbb{C}_z, dz)$ as follows. 
 
-Let $\phi: G \to \mathbb{C}$ be a differentiable function on $G$. For $z \in C$
-denote $\phi_{z} =  \phi \circ ev_{z} : G_1(C) \to \mathbb{C}$ a composition
-of evaluation morphism  $ev_{z}: G_1(C) \to G$ in point $z$ and a function $\phi$.
-Similarly $\psi_{w}$ is evaluation of $\psi: G \to \mathbb{C}$ at $w \in C$.
+Let $\phi: G \to \mathbb{C}$ be a rational function on $G$.
+For $z \in C$ denote $\phi_{z} =  \phi \circ ev_{z} : G_1(C) \to \mathbb{C}$ a composition of evaluation morphism  $ev_{z}: G_1(C) \to G$ in point $z$ and a function $\phi$. Notice that the domain of definition of
+$\phi_{z}$ is not the whole space $G_{1}(C)$ but a subspace of
+$G$-valued functions which are regular at $z$. 
+
+Similarly $\psi_{w}$ is evaluation of $\psi: G \to \mathbb{C}$ at $w \in C$. 
+
 \chris{I'm a bit confused here.  The group $G_1(C)$ is supposed to be the group of rational functions on $\bb{CP}^1$ with value 1 at $\infty$, correct?  In that case $\phi_z$ is not defined on all of $G_1(C)$, only the subspace of functions without a pole at $z$.  Are you defining a bracket on a larger space of partial functions on $G_1(C)$, or maybe on a smaller group than the group of rational functions?}
+\vasily{Sure, I agree. Let's see if this restriction brings any problems downstairs}
 
 Sklyanin defined a Poisson bracket on evaluation functions on $G_1(C)$ as follows
 \begin{equation}
 \label{eq:Sklyanin}
-  \{ \psi_{w}, \phi_{z} \} = \frac{1}{w - z}(\langle \nabla_{L} \psi_w, \chi^{-1} \nabla_{L} \phi_{z}
-\rangle  - \langle \nabla_{R} \psi_{w},  \chi^{-1} \nabla_{R} \phi_{z}\rangle)
+  \{ \psi_{w}, \phi_{z} \} = \frac{1}{w - z}(\langle \nabla_{L} \psi_w, \kappa^{-1} \nabla_{L} \phi_{z}
+\rangle  - \langle \nabla_{R} \psi_{w},  \kappa^{-1} \nabla_{R} \phi_{z}\rangle)
 \end{equation}
-\chris{what is $\chi$ here?  Below it's used for the Killing form?}
+\chris{what is $\kappa$ here?  Below it's used for the Killing form?}
+\vasily{yes, I corrected}
 
 \chris{I think this coincides, under the inclusion $G_1(C) \inj G_1[[z^{-1}]]$, with the Poisson bracket defined on the group of formal power series in $G$, as in \cite[Theorem 3.10]{Williams}.  If we make sure of this then we can combine the current discussion involving $G_1[[z^{-1}]]$ with the discussion here.}
+
+\vasily{It definitely should be true. Let's try to argue}
 
 where $\nabla_{L}\phi , \nabla_{R}\phi \in \gg^{*} $ denote the left and right differentials
 of a function $\phi$ on $G$. For any $X \in \gg$
@@ -197,13 +208,16 @@ Then the equivalence is
     (X^L, X^R) \sim (X^L + A_{g} X , X^{R} -  X) \sim (X^{L} +  A_{g} X^{R}, 0) 
 \end{equation}
 
+\vasily{Do notations make sense in the above paragraph, and the
+  terminology \emph{equivalence} is suitable? If you like, please improve}
+
 
 Modulo such equivalence, Sklyanin's Poisson bracket (\ref{eq:Sklyanin}) implies
 that a vector field associated to an evaluation Hamiltonian $\phi_z$ is represented by
 left and right components as follows 
 \begin{equation}
 \label{eq:Xphiz}
-X_{\phi_z} (w) =  \frac{1}{w - z} ( \chi^{-1} \nabla_{L} \phi_z,  - \chi^{-1}\nabla_{R} \phi_{z})
+X_{\phi_z} (w) =  \frac{1}{w - z} ( \kappa^{-1} \nabla_{L} \phi_z,  - \kappa^{-1}\nabla_{R} \phi_{z})
 \end{equation}
 
 
@@ -215,28 +229,49 @@ X_{\phi_z} (w) =  \frac{1}{w - z} ( \chi^{-1} \nabla_{L} \phi_z,  - \chi^{-1}\na
 
 \chris{So the argument below is assuming that the cotangent space to the big space $G_1(C)$ at $g$ is generated by the derivatives of evaluation functions in some sense.  In what sense exactly?  Well most likely, first we want to note that all 1-forms on $G_1(C)$ are exact, so it suffices to check that evaluation functions generate $\OO(G_1(C))$ as an algebra.  Now we maybe still need to be careful with functional analysis because this group is infinite-dimensional (so we need to understand what kind of functions we are talking about), we maybe want to say that $G_1(C)$ is the (filtered) colimit over $(D,\omega^\vee$ of the spaces of functions with poles on fixed subsets $D$ with degree bounded by coweights $\omega^\vee$ (i.e. our $\mhiggs_D$ spaces), so then $\OO(G_1(C))$ is the (cofiltered) limit of the algebras of polynomial functions on these finite-dimensional varieties. The evaluation functions here, on each finite-dimensional space, are algebraic as long as the $\phi$ are algebraic, and they do seem to generate (though with infinitely many relations).  But one should clarify that the functions in $\OO(G_1(C))$ are in fact formal sequences of linear combinations of equivalence classes (under the relations) of evaluation functions for each coloured divisor $(D, \omega^\vee)$.  Did you have something simpler in mind?}
 
+\vasily{I agree, I didn't really pay 
+attention to the distinction between the cotangent
+  space and the derivatives of evaluations functions. For the
+  sake of notations I used derivatives of the evaluation functions.
+  But perhaps the proof below will not loose anything if instead
+  of $(\nabla_{L} \phi_z)$ we'll write, say, $\alpha_z$, for an element
+  of the cotangent space evaluated at $z$ dual to the left
+  vector fields at $z$? Instead of $\nabla_{R} \phi_{z}$ we'll write
+  $A_{g_{z}}^{-1} \alpha_z$. The issue that remains is then an issue
+  of functional analysis: what is the dual space? Here we've considered
+  a subspace in the dual space: this subspace
+ is generated by the evaluation functionals.
+  Should we consider the distributions to make it correct? If
+  you have suggestions, I'll be happy if we can improve. 
+} 
+
 \begin{proof}
   Let us bring the vector field (\ref{eq:Xphiz}) into equivalence frame $(X^{L}, 0)$ using
   (\ref{eq:equivalence}). We get
   \begin{equation}
 \label{eq:xlw0}
-(X^L_{\phi_z} (w) , 0) =  \frac{1}{w - z} ( \chi^{-1} \nabla_{L} \phi_z  - A_{g_{w}} (\chi^{-1}\nabla_{R} \phi_{z}), 0 )
+(X^L_{\phi_z} (w) , 0) =  \frac{1}{w - z} ( \kappa^{-1} \nabla_{L} \phi_z  - A_{g_{w}} (\kappa^{-1}\nabla_{R} \phi_{z}), 0 )
   \end{equation}
-  We need to check three \chris{only two below?} points to ensure that $(X^L_{\phi_z} (w) , 0) $ is a deformation
+Here and below by a subscript $g_{z}$ we denote evaluation $g_{z}: = g(z)$. 
+  We need to check two \chris{only two below?} \vasily{correct} points to ensure that $(X^L_{\phi_z} (w) , 0) $ is a deformation
   of $g$ in tangent direction to $\mhiggs^{\fr}_{D}$
   \begin{enumerate}
   \item in each chart there exists equivalence frame in which $X(w) \sim (\tilde X_{\phi_{z}}^{L}(w), \tilde X_{\phi_{z}}^{R}(w))$  are regular sections (as functions of $w$).
   \item $X(w = \infty) = 0$.
   \end{enumerate}
-  \chris{As well as checking that the deformation doesn't create any new singularities outside of $D$, do we need to check something saying that the deformations don't increase the fixed degree given by $\omega^\vee$ of the singularities at $D$?}
+  \chris{As well as checking that the deformation doesn't create any new singularities outside of $D$, do we need to check something saying that the deformations don't increase the fixed degree given by $\omega^\vee$ of the singularities at $D$?}\vasily{Yes, I agree. And this actually follows from (1) where we demand
+    that $X(w) \sim (\tilde X_{\phi_{z}}^{L}(w), \tilde X_{\phi_{z}}^{R}(w))$
+  are regular in each chart, right?}
+
+
   To check (1) we need to look on the potential singularities as $w \to z$ or as $w \to z_i$.
   There is no singularity as $w \to z$ since (\ref{eq:xlw0}) can be rewritten
   as
   \begin{equation}
 \label{eq:sklyanin-left}
-(X^L_{\phi_z} (w) , 0)  =     \frac{1}{w - z} ( A_{g_z}( \chi^{-1} \nabla_{R} \phi_z)  - A_{g_{w}} (\chi^{-1}\nabla_{R} \phi_{z}),0)
+(X^L_{\phi_z} (w) , 0)  =     \frac{1}{w - z} ( A_{g_z}( \kappa^{-1} \nabla_{R} \phi_z)  - A_{g_{w}} (\kappa^{-1}\nabla_{R} \phi_{z}),0)
   \end{equation}
-  and since $g(w)$ is regular \chris{In notation, do $g_w$ and $g(w)$ mean the same thing?} in $w \to z$ the ratio is also regular at $w \to z$.
+  and since $g(w)$ is regular \chris{In notation, do $g_w$ and $g(w)$ mean the same thing?} \vasily{right, I inserted a sentence after (7)} in $w \to z$ the ratio is also regular at $w \to z$.
   There is also no singularity as $w \to z_i$ in the original frame (\ref{eq:Xphiz}) 
   (or equivalently, the singularity of (\ref{eq:xlw0}) near $w \to z_i$ 
   is in the image of $A_{g_{w}}$ of regular functions by (\ref{eq:Xphiz})).
@@ -280,7 +315,77 @@ structure on $T_{g}(\mhiggs^{\fr}_{D})$ given by the residue formula to the $\ma
 \end{equation}
 where we have choosen the equivalence frames (\ref{eq:equivalence0}) in $U_i$' and $U_0$ such that $X_i^{L}, X_i^{R}$ are regular in small disks $U_i$'s around $z_i$, and $X_0^{L}, X_{0}^{R}$ are regular in
 the rest $U_0  = C \setminus \{\tilde D\}$. \chris{Do we need to say something to justify that this is well-defined when we choose different equivalence frames?  I also wonder whether this can be rephrased in terms of a \v Cech complex, like we had before?}
-Here $\tilde D = D \cup \{ c \}$, and $\langle, \rangle$ means Killing form $\langle, \rangle = \chi: \gg \otimes \gg \to \mathbb{C}$.
+
+\vasily{I agree, let's justify}  
+
+1. Let's check invariance under a change of equivalence frame 
+as in (\ref{eq:equivalence0}). First we consider the change
+of equivalence frame in the second argument. 
+The parameter of a change is denoted $X_0'$ in the patch $U_0$. The section $X_{0}'$ is regular in $U_{0}$. 
+\begin{multline}
+   \Omega(X, \tilde X') - \Omega( X,X')  = \frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  dw (
+   \langle  X^{L}_{i} ,  X^{L'}_{0} + A_{g_{w}} X_{0}' \rangle  - \langle X^{R}_{i} ,  X^{R'}_{0} - X_{0}'\rangle ) - \\
+   \frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  dw (
+   \langle  X^{L}_{i} ,  X^{L'}_{0} \rangle  - \langle X^{R}_{i} ,  X^{R'}_{0} \rangle )   =
+\frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  dw (
+\langle   X_{i}^{L},   A_{g_{w}}X^{'}_{0} \rangle  + \langle  X_{i}^{R},  X^{'}_{0} \rangle ) = \\
+\frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  dw (
+\langle   A_{g_{w}^{-1}}  X_{i}^{L} + X_{i}^{R}, X_{0}' \rangle )  =\\
+\frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  dw (
+\langle   A_{g_{w}^{-1}}  X_{0}^{L} + X_{0}^{R}, X_{0}' \rangle )  =
+- \frac{1}{2 \pi \imath} \oint_{\partial U_0} dw (
+\langle   A_{g_{w}^{-1}}  X_{0}^{L} + X_{0}^{R}, X_{0}' \rangle )  = 0 \\
+\end{multline}
+
+We used that $A_{g_{w}^{-1}}  X_{i}^{L} + X_{i}^{R}$ (variation of $g$ in the right frame)
+is invariant across the patches, $A_{g_{w}^{-1}}  X_{i}^{L} + X_{i}^{R} = A_{g_{w}^{-1}}  X_{0}^{L} + X_{0}^{R}$,
+in the next to the final equality, and the fact that the integrand is regular on $U_0$ in the final equality
+and the residue formula in the final equality. 
+
+2. Since we've proven the invariance under the change of equivalence frame in the second argument,
+let's set $X_{0}^{R'} = 0$ by a suitable change of equivalence frame,
+and in this equivalence frame we have $X_{0}^{L'} = X_i^{L'} + A_{g} X_i^{R'}$
+on overlaps of $U_i$ and $U_0$,  hence
+the original formula becomes 
+\begin{equation}
+\Omega(X, X') =   \frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  dw (
+\langle  X^{L}_{i}, X_i^{L'} + A_{g} X_i^{R'} \rangle 
+\end{equation}
+Since $\langle X_i^{L}, X_{i}^{L'} \rangle $ is regular on $U_i$ this term is dropped and we get
+\begin{equation}
+\label{eq:drop-right}
+  \Omega(X, X') =   \frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  dw (
+\langle  X^{L}_{i},  A_{g} X_i^{R'} \rangle  =  \frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  dw (
+\langle  A_{g^{-1}} X^{L}_{i},   X_i^{R'} \rangle 
+\end{equation}
+
+On the other hand, we can set in the original formula by a suitable change
+of framing in the second argument $X_0^{L'} = 0$, and in this equivalence
+frame we have $X_0^{R'} =  X_{i}^{R'}  + A_{g^{-1}} X_{i}^{L'}$ on the
+overlaps of $U_i$ and $U_0$, and consequently, the original formula becomes
+given by
+\begin{equation}
+\label{eq:drop-left}
+  \Omega(X, X') =   -\frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  dw (
+\langle  X^{R}_{i},  A_{g^{-1}} X_i^{L'} \rangle 
+\end{equation}
+Comparing (\ref{eq:drop-left}) with (\ref{eq:drop-right}) we see that we've proved that $\Omega(X,X')$ is anti-symmetric.
+
+
+3. Since in (1.) we've proved that $\Omega(X,X')$ is invariant under
+the change of equivalence frame in the second argument, and in (2.) we've proved
+antisymmetry of $\Omega(X, X')$ (using (1.)), we obtain that $\Omega(X, X')$ is also
+invariant under the change of equivalence frame in the first argument.
+
+\vasily{I hope this answers the remark about equivalence}
+
+\vasily{I've got till here ----------------------  } 
+
+
+
+
+
+Here $\tilde D = D \cup \{ c \}$, and $\langle, \rangle$ means Killing form $\langle, \rangle = \kappa: \gg \otimes \gg \to \mathbb{C}$.
 
 We don't yet assume that $\Omega$ is non-degenerate or antisymmetric. In fact, we'll show
 that these properties of $\Omega$  we'll be implied by the arguments below. 
@@ -303,8 +408,8 @@ while $X_{\phi_{z_2}}$ is regular in $C \setminus \tilde D$.
 The equivalence frame regular in $\tilde D$ can be taken as in  (\ref{eq:Xphiz}),
 and the equivalence frame regular in $C \setminus \tilde D$ can be taken
 as in (\ref{eq:xlw0}). Thus we'll take (in this computation we'll omit writing inverse
-Killing form $\chi^{-1}: \gg^{*} \to \gg $ redefining gradient $\nabla$ to take values in $\gg$ instead of $\gg^{*}$
-by compositition with $\chi^{-1}$. )
+Killing form $\kappa^{-1}: \gg^{*} \to \gg $ redefining gradient $\nabla$ to take values in $\gg$ instead of $\gg^{*}$
+by compositition with $\kappa^{-1}$. )
 \begin{equation}
   \begin{aligned}
     (X_{\psi_{z_1}})_{i} = ((X_{\psi_{z_1}}^{L}, X_{\psi_{z_1}}^{R}))_{i} =  \frac{1}{w - z_1} (A_{g_{z_1}} \nabla_R \psi_{z_1},   \nabla_{R} \psi_{z_1}) \\
