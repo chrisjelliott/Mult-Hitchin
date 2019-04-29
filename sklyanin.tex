@@ -138,14 +138,14 @@ the space of framed meromorphic Higgs fields by $\mhiggs^{\fr} = G_1(C)$.
 
 \subsection{Poisson structure on $G_1(C)$} 
 Let $\kappa$ be a Killing form $\kappa: \gg \otimes \gg \to \mathbb{C}$.
-Then $\kappa^{-1}: \gg^{*} \to \gg$. Also we'll assume  without loosing generality that $\kappa$ is choosen such that
+Then $\kappa^{-1} \colon \gg^{*} \to \gg$. Also we'll assume  without losing generality that $\kappa$ is choosen such that
 there is a faithful $G$-representation $\rho$ such that 
 $\tr d\rho(X) d\rho(X') = c_\rho \kappa(X, X') $ for $X , X' \in \gg$
 where $d\rho$ denotes the associated representation of the Lie algebra of $G$,
 and $c_{\rho}$ is a non-zero complex number.  \chris{In this expression $\rho(X)$ should presumably be $\d \rho(X)$, the representation of the Lie algebra.  It's true that a complex group $G$ is reductive iff it has a faithful representation, and therefore its Lie algebra has a pairing of this form.}
 \vasily{Sure, I agree. I tried to improve the phrasing.
   Please feel free to edit the phrase when it feels that you can
-  improve} 
+  improve} \chris{Ok, thanks, we can adjust the phrasing when we merge with the main document.}
 
 Sklyanin has defined a Poisson bracket on evaluation functions on $G_1(C)$ for $C = (\mathbb{C}_z, dz)$ as follows. 
 
@@ -165,8 +165,6 @@ Sklyanin defined a Poisson bracket on evaluation functions on $G_1(C)$ as follow
   \{ \psi_{w}, \phi_{z} \} = \frac{1}{w - z}(\langle \nabla_{L} \psi_w, \kappa^{-1} \nabla_{L} \phi_{z}
 \rangle  - \langle \nabla_{R} \psi_{w},  \kappa^{-1} \nabla_{R} \phi_{z}\rangle)
 \end{equation}
-\chris{what is $\kappa$ here?  Below it's used for the Killing form?}
-\vasily{yes, I corrected}
 
 \chris{I think this coincides, under the inclusion $G_1(C) \inj G_1[[z^{-1}]]$, with the Poisson bracket defined on the group of formal power series in $G$, as in \cite[Theorem 3.10]{Williams}.  If we make sure of this then we can combine the current discussion involving $G_1[[z^{-1}]]$ with the discussion here.}
 
@@ -209,7 +207,7 @@ Then the equivalence is
 \end{equation}
 
 \vasily{Do notations make sense in the above paragraph, and the
-  terminology \emph{equivalence} is suitable? If you like, please improve}
+  terminology \emph{equivalence} is suitable? If you like, please improve} \chris{Yes, the notations and terminology make sense here.}
 
 
 Modulo such equivalence, Sklyanin's Poisson bracket (\ref{eq:Sklyanin}) implies
@@ -253,16 +251,12 @@ attention to the distinction between the cotangent
 (X^L_{\phi_z} (w) , 0) =  \frac{1}{w - z} ( \kappa^{-1} \nabla_{L} \phi_z  - A_{g_{w}} (\kappa^{-1}\nabla_{R} \phi_{z}), 0 )
   \end{equation}
 Here and below by a subscript $g_{z}$ we denote evaluation $g_{z}: = g(z)$. 
-  We need to check two \chris{only two below?} \vasily{correct} points to ensure that $(X^L_{\phi_z} (w) , 0) $ is a deformation
+  We need to check two points to ensure that $(X^L_{\phi_z} (w) , 0) $ is a deformation
   of $g$ in tangent direction to $\mhiggs^{\fr}_{D}$
   \begin{enumerate}
   \item in each chart there exists equivalence frame in which $X(w) \sim (\tilde X_{\phi_{z}}^{L}(w), \tilde X_{\phi_{z}}^{R}(w))$  are regular sections (as functions of $w$).
   \item $X(w = \infty) = 0$.
   \end{enumerate}
-  \chris{As well as checking that the deformation doesn't create any new singularities outside of $D$, do we need to check something saying that the deformations don't increase the fixed degree given by $\omega^\vee$ of the singularities at $D$?}\vasily{Yes, I agree. And this actually follows from (1) where we demand
-    that $X(w) \sim (\tilde X_{\phi_{z}}^{L}(w), \tilde X_{\phi_{z}}^{R}(w))$
-  are regular in each chart, right?}
-
 
   To check (1) we need to look on the potential singularities as $w \to z$ or as $w \to z_i$.
   There is no singularity as $w \to z$ since (\ref{eq:xlw0}) can be rewritten
@@ -271,7 +265,7 @@ Here and below by a subscript $g_{z}$ we denote evaluation $g_{z}: = g(z)$.
 \label{eq:sklyanin-left}
 (X^L_{\phi_z} (w) , 0)  =     \frac{1}{w - z} ( A_{g_z}( \kappa^{-1} \nabla_{R} \phi_z)  - A_{g_{w}} (\kappa^{-1}\nabla_{R} \phi_{z}),0)
   \end{equation}
-  and since $g(w)$ is regular \chris{In notation, do $g_w$ and $g(w)$ mean the same thing?} \vasily{right, I inserted a sentence after (7)} in $w \to z$ the ratio is also regular at $w \to z$.
+  and since $g(w)$ is regular in $w \to z$ the ratio is also regular at $w \to z$.
   There is also no singularity as $w \to z_i$ in the original frame (\ref{eq:Xphiz}) 
   (or equivalently, the singularity of (\ref{eq:xlw0}) near $w \to z_i$ 
   is in the image of $A_{g_{w}}$ of regular functions by (\ref{eq:Xphiz})).
@@ -314,9 +308,7 @@ structure on $T_{g}(\mhiggs^{\fr}_{D})$ given by the residue formula to the $\ma
 \langle  X^{L}_{i} X^{L'}_{0} \rangle  - \langle X^{R}_{i}  X^{R'}_{0} \rangle )
 \end{equation}
 where we have choosen the equivalence frames (\ref{eq:equivalence0}) in $U_i$' and $U_0$ such that $X_i^{L}, X_i^{R}$ are regular in small disks $U_i$'s around $z_i$, and $X_0^{L}, X_{0}^{R}$ are regular in
-the rest $U_0  = C \setminus \{\tilde D\}$. \chris{Do we need to say something to justify that this is well-defined when we choose different equivalence frames?  I also wonder whether this can be rephrased in terms of a \v Cech complex, like we had before?}
-
-\vasily{I agree, let's justify}  
+the rest $U_0  = C \setminus \{\tilde D\}$. 
 
 1. Let's check invariance under a change of equivalence frame 
 as in (\ref{eq:equivalence0}). First we consider the change
@@ -379,12 +371,7 @@ invariant under the change of equivalence frame in the first argument.
 \vasily{I hope the paragraphs above justify that $\Omega$ is well-defined
   (does not depend on the choice of equivalence frames across the patches
   in each argument. We've also got antisymmetry on the way, and a couple
-of equivalent presentation of the formula for $\Omega$} 
-
-\vasily{I've got till here ----------------------  } 
-
-
-
+of equivalent presentation of the formula for $\Omega$} \chris{Yes, looks fine, thanks.}
 
 
 Here $\tilde D = D \cup \{ c \}$, and $\langle, \rangle$ means Killing form $\langle, \rangle = \kappa: \gg \otimes \gg \to \mathbb{C}$.
@@ -451,7 +438,7 @@ which gives
     The second term came from the residue at $w=z_2$. 
 In the third to the fourth line of the computation we used that Killing form is adjoint invariant
 $\langle A_{g} X, A_{g} X' \rangle = \langle X, X' \rangle $,
-and the relation between left and right gradient $\nabla_{L} \phi_{z_i} = A_{g_{z_i}} \nabla_{R} \phi_{z_i}$}
+and the relation between left and right gradient $\nabla_{L} \phi_{z_i} = A_{g_{z_i}} \nabla_{R} \phi_{z_i}$} \chris{I think I see: so the point is that you're choosing representatives of the equivalence classes so that the residue at $z_2$ vanishes?}
 \end{proof}
 
 So we've shown (pointwise) that restriction of the bilinear form $\Omega$ on $T_g\mhiggs^{\fr}_{D}$
@@ -520,7 +507,7 @@ $X_\phi = \delta g$.  (The other direction we've already shown in lemma \ref{phi
 
 
 First let's compute the tangent space of $\mhiggs_{D}^{\fr}$ at point $g$.
-Assume that $g$ is regular semi-simple near singularities. That means assume
+Assume that $g$ is regular semi-simple near singularities \chris{I'm trying to see, but this is a non-trivial condition picking out only a dense open subset of $\mhiggs_{D}^{\fr}$, right?  Is it enough to check every tangent vector is Hamiltonian only on a dense subset?}. That means assume
 that there is a punctured neighborhood $U_i^{\times} = U_{i} \setminus \{z_i \}$ of each singularity $z_i \in D $ in which $g(z)$ is regular semi-simple for $z \in U_{i}^{\times}$. 
 With this assumption, the operator $A_{g}(z): \gg \to \gg$ is diagonalizable in $U_{i}^{\times}$.
 \newcommand{\hh}{\mathfrak{h}}
@@ -529,7 +516,7 @@ to be the centralizer of $g(z)$ in analytic way in $z$.
 
 Then we have ($z$-dependent) splitting of $\gg$ to the Cartan $\hh_z$ and the root spaces 
 $\gg = \hh_{z} \oplus \sum_{\alpha} \gg_{\alpha,z}$. 
-If $g(z)$ has Dirac singularity of co-weight $\omega^{\vee}$ in $z_i$ with $[g(z) ] \sim z^{-\omega_i^{\vee}}$, then  $A_{g}$ has eigenvalue $ (z - z_i)^{- (\alpha, \omega^{\vee}_{i})}$ on $\gg_{\alpha}$
+If $g(z)$ has Dirac singularity of co-weight $\omega^{\vee}$ in $z_i$ with $[g(z)] \sim z^{-\omega_i^{\vee}}$, then  $A_{g}$ has eigenvalue $ (z - z_i)^{- (\alpha, \omega^{\vee}_{i})}$ on $\gg_{\alpha}$
 in the leading order. Let $e_{\alpha, z}$ be a generator of $\gg_{\alpha, z}$.
 
 Below we'll need a technical assumption on $g(z)$ in $U_{i}^{\times}$ that the splitting
@@ -539,7 +526,7 @@ i.e. there is a limit
 \vasily{The existence of this limit will be probably implied by the
   assumption that $g(z)$ is regular semi-simple in the punctured
   neighborhood $U_{i}^{\times}$ and has the form $ g_L(z) (z-z_i)^{-\omega_{i}^{\vee}} g_{R}(z)$
-  where $g_{L}(z), g_{R}(z)$ are analytic in $U_i$. }
+  where $g_{L}(z), g_{R}(z)$ are analytic in $U_i$. } \chris{I'm a bit confused: a splitting of what exactly, given that $g$ is $G$-valued not $\gg$-valued?  In the formula $\ref{eq:XL}$ below you're defining a $\gg$-valued function, so I don't see why you needed to write $e_{\alpha,{z_i}}$ instead of just $e_\alpha$ (choosing a basis vector for the root space in a way that doesn't vary)?}
 
 
 \begin{lemma}
@@ -626,6 +613,7 @@ A_{g^{-1}} \nabla_{L} \phi$):
   = -\frac 1 2  \sum_{i \in \tilde D} \frac{1}{2 \pi \imath} \oint_{\partial U_i}
     \frac{dz}{w - z} ( 2 (X_i^{L}  + A_{g_w} X_i^{R}) - (X_0^{L} + A_{g_z} X_0^{R} +  A_{g_{w}} ( A_{g_{z}}^{-1} X_0^{L} + X_0^{R} )),0)
   \end{multline}
+  \chris{To clarify, in the third line you're using that $\sum \oint (X^L_i + X^L_0) = 0$ for any choice of potentials?  This sounds like Stokes' theorem but I don't quite see it in this context.}
   Now, as function of $z$, the first term of the numerator of the integrand is regular in each $U_i$, and the second term of the numerator is regular in $U_0$. Therefore,
   the first term  evaluates to the residue at $z = w$ while the second is zero if $w \in U_i$,
   and inversely,  the second term evaluates to a residue at $z = w$
@@ -657,6 +645,7 @@ since $\pi$ is Poisson, the bilinear form $\Omega$ is non-degenerate, closed, an
 and so $\Omega$ is actually a  symplectic structure on $\mhiggs^{\fr}_{D}$. 
 \end{proof}
 
+\chris{Ok, I've read through this calculation and it looks good to me, modulo the small confusions I commented on.}
 
 
 
@@ -678,7 +667,7 @@ and so $\Omega$ is actually a  symplectic structure on $\mhiggs^{\fr}_{D}$.
 \chris{Is there something wrong with the following formal argument that your Lemma \ref{lemma:OmegaPi} suffices?}
 \vasily{Alternatively, we'll also give the following argument which
   would be applicable if we also show that $\Omega$
-  is a non-degenerate  bilinear form on $T_{g} \mhiggs^{\fr}_{D}$. }
+  is a non-degenerate  bilinear form on $T_{g} \mhiggs^{\fr}_{D}$. } \chris{Probably no reason to include this in the paper.}
 
 
 Let me write $i \colon \mhiggs^\fr_D \to G_1(C)$ for the inclusion map, and fix a point $g \in \mhiggs^\fr_D$.  So we have a diagram of linear maps
