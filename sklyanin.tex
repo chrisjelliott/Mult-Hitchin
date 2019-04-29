@@ -362,8 +362,7 @@ Since $\langle X_i^{L}, X_{i}^{L'} \rangle $ is regular on $U_i$ this term is dr
 On the other hand, we can set in the original formula by a suitable change
 of framing in the second argument $X_0^{L'} = 0$, and in this equivalence
 frame we have $X_0^{R'} =  X_{i}^{R'}  + A_{g^{-1}} X_{i}^{L'}$ on the
-overlaps of $U_i$ and $U_0$, and consequently, the original formula becomes
-given by
+overlaps of $U_i$ and $U_0$, and consequently, the original formula is transformed into
 \begin{equation}
 \label{eq:drop-left}
   \Omega(X, X') =   -\frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  dw (
@@ -377,7 +376,10 @@ the change of equivalence frame in the second argument, and in (2.) we've proved
 antisymmetry of $\Omega(X, X')$ (using (1.)), we obtain that $\Omega(X, X')$ is also
 invariant under the change of equivalence frame in the first argument.
 
-\vasily{I hope this answers the remark about equivalence}
+\vasily{I hope the paragraphs above justify that $\Omega$ is well-defined
+  (does not depend on the choice of equivalence frames across the patches
+  in each argument. We've also got antisymmetry on the way, and a couple
+of equivalent presentation of the formula for $\Omega$} 
 
 \vasily{I've got till here ----------------------  } 
 
@@ -387,8 +389,11 @@ invariant under the change of equivalence frame in the first argument.
 
 Here $\tilde D = D \cup \{ c \}$, and $\langle, \rangle$ means Killing form $\langle, \rangle = \kappa: \gg \otimes \gg \to \mathbb{C}$.
 
-We don't yet assume that $\Omega$ is non-degenerate or antisymmetric. In fact, we'll show
-that these properties of $\Omega$  we'll be implied by the arguments below. 
+We don't yet assume that $\Omega$ is non-degenerate.\vasily{adjective
+  anti-symmetric is removed since now we've shown anti-symmetry
+  and consistency of the definition of $\Omega$ on the previous page} We'll show
+that these properties of $\Omega$  we'll be implied by the arguments below.
+
 
 \begin{lemma}\label{lemma:OmegaPi}
   The bilinear form (\ref{eq:Omega}) on $T_{\mhiggs^{\fr}_{D}}$ 
@@ -399,7 +404,7 @@ restricted to the $\mathrm{im} \, \pi \subset T_{\mhiggs^{\fr}_{D}}$  is compati
   Given two hamiltonian functions $\phi_{z_1}, \psi_{z_2}$ where $z_1, z_2$ are regular
   points away from $\tilde D$ we'd like to check
   that Sklyanin's Poisson bracket (\ref{eq:Sklyanin})  
-is compatible (\ref{eq:compatibility}) with bilinear form  (\ref{eq:Omega})
+is compatible (\ref{eq:compatibility}) with the bilinear form  (\ref{eq:Omega})
 \begin{equation}
   \Omega(X_{\psi_{z_1}}, X_{\phi_{z_2}})  = - \{\psi_{z_1}, \phi_{z_2}\}
 \end{equation}
@@ -431,17 +436,22 @@ The integrand is regular everywhere on $U_0 \setminus \{z_1, z_2\}$, and since
 the result (\ref{eq:pairing}) is a minus sum of residues in $w = z_1$ and $w = z_2$
 which gives
   \begin{multline}
+\label{eq:z1z2residue}
    \Omega(X_{\psi_{z_1}}, X_{\phi_{z_2}}) = - (\res_{w = z_1}  + \res_{w = z_2}) \frac{dw }{(w - z_1)(w - z_2)} \langle A_{g_{z_1}} \nabla_{R} \psi_{z_1},
    A_{g_{z_2}} \nabla_{R} \phi_{z_2}  - A_{g_w} \nabla_{R} \phi_{z_2} \rangle \\
-   =   \frac{1}{z_1 - z_2}  \langle A_{g_{z_1}} \nabla_{R} \psi_{z_1} , A_{g_{z_1}} \nabla_{R} \phi_{z_2}\rangle   - \frac{1}{z_1 - z_2}  \langle A_{g_{z_1}} \nabla_{R} \psi_{z_1} , A_{g_{z_2}} \nabla_{R} \phi_{z_2} \rangle =\\
+   =   \frac{-1}{z_1 - z_2}  \langle A_{g_{z_1}} \nabla_{R} \psi_{z_1} , A_{g_{z_2}} \nabla_{R} \phi_{z_2}  - A_{g_{z_1}} \nabla_{R} \phi_{z_2} \rangle   - \frac{-1}{z_1 - z_2}  \langle A_{g_{z_1}} \nabla_{R} \psi_{z_1} , A_{g_{z_2}} \nabla_{R} \phi_{z_2}  - A_{g_{z_2}} \nabla_{R} \phi_{z_2}   \rangle =\\
+      =   \frac{-1}{z_1 - z_2}  \langle A_{g_{z_1}} \nabla_{R} \psi_{z_1} ,  - A_{g_{z_1}} \nabla_{R} \phi_{z_2} \rangle   - \frac{-1}{z_1 - z_2}  \langle A_{g_{z_1}} \nabla_{R} \psi_{z_1} ,  - A_{g_{z_2}} \nabla_{R} \phi_{z_2}   \rangle =\\
    = \frac{1}{z_1 - z_2} (\langle \nabla_{R} \psi_{z_1} , \nabla_{R} \phi_{z_2}\rangle - 
    \langle  \nabla_{L} \psi_{z_1} , \nabla_{L} \phi_{z_2} \rangle ) =
    - \{\psi_{z_1}, \phi_{z_2} \} 
   \end{multline}
   \chris{I'm not following part of the argument here.  We're using a calculation of $\frac 1{w-z_2}(A_{g_{z_2}} \nabla_{R} \phi_{z_2}  - A_{g_w} \nabla_{R} \phi_{z_2})$ in the limit $w\to z_2$?}
-In the computation we used that Killing form is adjoint invariant
+  \vasily{I've added more intermediate steps. There are two terms in the second line in (\ref{eq:z1z2residue}).
+    The first term came from  the residue at $w=z_1$.
+    The second term came from the residue at $w=z_2$. 
+In the third to the fourth line of the computation we used that Killing form is adjoint invariant
 $\langle A_{g} X, A_{g} X' \rangle = \langle X, X' \rangle $,
-and the relation between left and right gradient $\nabla_{L} \phi_{w} = A_{g_w} \nabla_{R} \phi_w$.
+and the relation between left and right gradient $\nabla_{L} \phi_{z_i} = A_{g_{z_i}} \nabla_{R} \phi_{z_i}$}
 \end{proof}
 
 So we've shown (pointwise) that restriction of the bilinear form $\Omega$ on $T_g\mhiggs^{\fr}_{D}$
@@ -485,6 +495,7 @@ by adjoint invariant functions) with symplectic leaves are isotropic subspaces o
 
 
 
+\vasily{OK, I repsponded to comments until here (Mon Apr 29, 9:41 AM)}
 
 
 \subsection{Symplectic structure on symplectic leaves in $G_1(C)$}
