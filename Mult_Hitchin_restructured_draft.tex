@@ -39,6 +39,7 @@
 
 
 \renewcommand{\gg}{\mathfrak{g}}
+\newcommand{\hh}{\mathfrak{h}}
 
 \newcommand{\bb}[1]{\mathbb{#1}}
 \newcommand{\mr}[1]{\mathrm{#1}}
@@ -104,6 +105,7 @@
 \DeclareMathOperator{\diff}{Diff}
 \DeclareMathOperator{\Hol}{Hol}
 \DeclareMathOperator{\mhitch}{mHitch}
+\DeclareMathOperator{\colim}{colim}
 
 \newcommand{\map}{\ul{\mr{Map}}}
 \newcommand{\qconn}{q\text{-Conn}}
@@ -899,35 +901,80 @@ The symplectic structures we'll build on the rational moduli spaces of multiplic
 
 Consider the infinite-type moduli space $\mhiggs^{\text{fr,sing}}(\bb{CP}^1)$ of multiplicative Higgs bundles with arbitrary singularities.  There is a map
 \[r_\infty \colon \mhiggs^{\text{fr,sing}}(\bb{CP}^1) \to G_1[[z^{-1}]],\]
-defined by restricting a multiplicative Higgs bundle to a formal neighborhood of infinity.  In particular we can restrict $r_\infty$ to any of the finite-dimensional subspaces $\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee)$ (the symplectic leaves).  Here the notation $G_1[[z^{-1}]]$ denotes Taylor series in $G$ with constant term 1.  Recall that $G_1[[z^{-1}]]$ is a Poisson Lie group, with Poisson structure defined by the Manin triple $(G(\!(z)\!), G[[z]], G_1[[z^{-1}]])$ (see \cite{Shapiro, Williams}).
+defined by restricting a multiplicative Higgs bundle to a formal neighborhood of infinity.  In particular we can restrict $r_\infty$ to any of the finite-dimensional subspaces $\mhiggs^\fr_G(\bb{CP}^1,D,\omega^\vee)$ (the symplectic leaves).  Here the notation $G_1[[z^{-1}]]$ denotes Taylor series in $G$ with constant term 1.  Recall that $G_1[[z^{-1}]]$ is a Poisson Lie group, with Poisson structure defined by the Manin triple $(G(\!(z)\!), G[[z]], G_1[[z^{-1}]])$ (\cite{DrinfeldICM}, see also \cite{Shapiro, Williams}). 
 
-The Poisson Lie group $G_1[[z^{-1}]]$ has the structure of an ind-scheme using the filtration where $G_1[[z^{-1}]]_n$ consists of $G$-valued polynomials in $z^{-1}$ with identity constant term and where the matrix elements in a fixed faithful representation have degree at most $n$.  When we talk about the Poisson algebra $\OO(G_1[[z^{-1}]])$ of regular functions on $G_1[[z^{-1}]]$, we are therefore referring to the limit over $n \in \ZZ_{\ge 0}$ of the finitely generated algebras $\OO(G_1[[z^{-1}]]_n)$.  Due to the condition on the constant term the group $G_1[[z^{-1}]]$ is nilpotent, which means we can identify its algebra of functions with the algebra of functions on the Lie algebra.  That is:
+The Poisson Lie group $G_1[[z^{-1}]]$ has the structure of an ind-scheme using the filtration where $G_1[[z^{-1}]]_n$ consists of $G$-valued polynomials in $z^{-1}$ with identity constant term and where the matrix elements in a fixed faithful representation have degree at most $n$.  When we talk about the Poisson algebra $\OO(G_1[[z^{-1}]])$ of regular functions on $G_1[[z^{-1}]]$, we are therefore referring to the colimit over $n \in \ZZ_{\ge 0}$ of the finitely generated algebras $\OO(G_1[[z^{-1}]]_n)$.  Due to the condition on the constant term the group $G_1[[z^{-1}]]$ is nilpotent, which means we can identify its algebra of functions with the algebra of functions on the Lie algebra.  That is:
 \begin{align*}
-\OO(G_1[[z^{-1}]]) &= \underset n \lim \OO(G_1[[z^{-1}]]_n) \\
-&\iso \underset n \lim \sym(\gg_1^*[[z^{-1}]]_n).
+\OO(G_1[[z^{-1}]]) &= \underset n \colim \OO(G_1[[z^{-1}]]_n) \\
+&\iso \underset n \colim \sym(\gg_1[[z^{-1}]]_n^*).
 \end{align*}
 The Poisson bracket is compatible with this filtration, in the sense that it defines a map 
 \[\{,\} \colon \OO(G_1[[z^{-1}]]_m) \otimes \OO(G_1[[z^{-1}]]_n) \to \OO(G_1[[z^{-1}]]_{m+n})\] 
 for each $m$ and $n$.
 
-We describe the Poisson structure on $G_1[[z^{-1}]]$ concretely, using a description due to Sklyanin \chris{insert citation}
+We can describe the Poisson structure on $G_1[[z^{-1}]]$ concretely, using the rational classical $r$-matrix \chris{insert citation}.  Define
+\[r = \frac \Omega{z-w} = \Omega \sum_{i=0}^\infty z^{-i-1}w^i \in \gg^{\otimes 2}[w][[z^{-1}]],\] 
+where $\Omega$ is the quadratic Casimir element in $\gg^{\otimes 2}$ associated to a non-degenerate invariant pairing $\kappa$.  If $f$ is a function in $\OO(G_1[[z^{-1}]])$, let $\nabla_L(f)$ and $\nabla_R(f)$ be the $\gg[z]$-valued functions on $G_1[[z^{-1}]]$ obtained from the left- and right-invariant vector fields respectively on the group.  In these terms, the Poisson bracket can be calculated as 
+\[\{f_1, f_2\}(g) = \langle r, \nabla_L(f_1)(g) \otimes \nabla_L(f_2)(g) - \nabla_R(f_1)(g) \otimes \nabla_R(f_2)(g)\rangle,\]
+where here $\langle - , - \rangle$ denotes the residue pairing on $\gg(\!(z^{-1})\!)^{\otimes 2}$.  We'll sometimes call this the \emph{Sklyanin Poisson structure} on $G_1[[z^{-1}]]$ \cite{Sklyanin}.
 
-\chris{Exposition on the Sklyanin bracket from the other file to be inserted here (needs thought about $G_1(C)$ versus $G_1[[z^{-1}]]$).}
+\begin{example} \label{ev_function_example}
+Let's investigate the Poisson bracket of some specific functions.  Let $u$ and $v$ be points in $\CC$, and let $\phi$ and $\psi \colon G \to \CC$ be algebraic functions.  Associated to these pairs we can define \emph{evaluation functions} $\phi_u$ and $\psi_v$ on a subgroup of $G_1[[z^{-1}]]$ by setting
+\begin{align*}
+\phi_v \colon \{g \in G_1[[z^{-1}]] \colon g(v) \text{ converges}\} &\to \CC \\
+g &\mapsto \phi(g(v)).
+\end{align*}
+The left and right derivatives $\nabla_L(\phi_v)(g)$ and $\nabla_R(\phi_v)(g)$ of the evaluation function at $g$ can be paired with a vector field $X$ by 
+\[
+  (X, \nabla_{L}(\phi_u)) := \frac{\d}{\d t} \phi(e^{X(u)t} g(u)),
+  \qquad (X, \nabla_{R}(\phi_u)) \rangle := \frac{\d}{\d t} \phi(g(u) e^{X(u)t}).
+\]
 
-\subsection{Multiplicative Higgs bundles as Symplectic Leaves}
+If $g$ is a point in $G_1[[z^{-1}]]$ where $g(v)$ and $g(u)$ both converge, we can calculate the value of the Poisson bracket $\{\phi_u, \psi_v\}$ at $g$.  
+\begin{align*}
+\{\phi_u, \psi_v\}(g) &= \langle \frac \Omega {z-w}, \nabla_L(\phi_u)(g)(z) \otimes \nabla_L(\psi_v)(g)(w) - \nabla_R(\phi_u)(g)(z) \otimes \nabla_R(\psi_v)(g)(w)\rangle \\
+&= \frac 1 {u-v} (\kappa(\nabla_L^0(\phi)(g(u)), \nabla_L^0(\psi)(g(v))) - \kappa(\nabla_R^0(\phi)(g(u)), \nabla_R^0(\psi)(g(v)))),
+\end{align*}
+where now $\nabla_L^0$ and $\nabla_R^0$ denote the left and right derivatives on the finite-dimensional group $G$, rather than the infinite-dimensional group $G_1[[z^{-1}]]$.
+\end{example}
 
-\chris{To insert here.  1) Some commentary on the tangent space to $\mhiggs_G^\fr(\bb{CP}^1, D, \omega^\vee)$.  As you can see I've inserted something from the old file, which we might edit or remove. 2) A definition of the pairing on $\mhiggs_G^\fr(\bb{CP}^1, D, \omega^\vee)$.  3) Arguments from sklyanin.tex that the restriction map $r_\infty$ is Poisson, and that the Poisson structure on $\mhiggs$ is non-degenerate for each $(D,\omega^\vee)$.}
+%\begin{lemma} \label{evaluation_vector_fields_generate_lemma}
+%Let $g$ be an element of $G_1[[z^{-1}]]$ representing a rational function $\bb{CP}^1 \to G$.  The cotangent space $T^*_g G_1[[z^{-1}]]$ is generated by the set of derivatives of evaluation vector fields $\{\d \phi_u(g)\}$, where $u$ ranges over points in $\CC$ where $g$ is regular, and $\phi$ ranges over algebraic functions $G \to \CC$.
+%\end{lemma}
 
+%\begin{proof}
+%We can first identify the cotangent space $T^*_g G_1[[z^{-1}]]$ with the Lie algebra $\gg_0[[z^{-1}]]^*$ using the left-invariant vector field; the image of $\d \phi_u(g)$ under this identification is exactly $\nabla_L(\phi_u)$.  We realize the infinite-dimensional Lie algebra as the colimit over $n$ of finite-dimensional Lie algebras $\gg_n^*$ as in Section \ref{Poisson_Lie_section}.  Write $p_n \colon \gg_0[[z^{-1}]] \to \gg_n$ for the canonical projection.  
+
+%We can pair our element $\nabla_L(\phi_u)$ with monomials of the form $g_0 z^{-i}$ in $\gg_0[[z^{-1}]]$, where $g_0$ is in $\gg$ and $i \ge 0$, the result is
+%\[(\nabla_{L} \phi_u, g_0 z^{-}i) = \frac{\d}{\d t} \phi(e^{g_0 u^{-i} t} g(u))|_{t=0}.\]
+%In particular, for any choice of $g_0$ and $i$ we can find $u$ and $\phi$ such that this pairing is non-vanishing.
+%\chris{I'm missing something here...}
+%\end{proof}
+
+We'll conclude this subsection with some observations about vector fields generated by adjoint invariant evaluation functions $\phi_u$ that will be useful for understanding the integrable system structure on multiplicative Higgs moduli spaces. 
+\begin{lemma}
+ If $\phi$ is an adjoint invariant function on the group $G$, then
+$\nabla_{L} \phi_u  = \nabla_{R} \phi_u$. 
+\end{lemma}
+
+\begin{proof}
+  If $\phi$ is adjoint invariant then
+  \[
+    \frac{\d}{\d t} \phi(e^{Xt} g e^{-Xt}) = 0
+  \]
+  and consequently $\nabla_{L} \phi_u - \nabla_{R} \phi_u  = 0$. 
+\end{proof}
+
+\begin{corollary}\label{cor:poisson-commuting}
+  If $\phi$ and $\psi$ are adjoint invariant functions then the evaluation functions $\phi_u$ and $\psi_v$ Poisson commute.
+\end{corollary}
+
+This will tell us that the restrictions of the fibers of the Chevalley map $G_1[[z^{-1}]] \to T[[z^{-1}]]/W$ to a moduli space $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$ under the restriction map are isotropic for the Sklyanin Poisson structure.
+
+\subsection{Deformations of Multiplicative Higgs Bundles}
 We'll begin this section by considering the tangent complex to the moduli space of $q$-connections.  For the arguments in this article we'll only need to carefully consider the case $q=\id$ of multiplicative Higgs bundles, but we'll include some remarks regarding the more general case.  In this case the calculation was performed by Bottacin \cite{Bottacin}, see also \cite[Section 4]{HurtubiseMarkman}. We begin with an illustrative description of the deformation complex, then use a more careful description gollowing Hurtubise and Markman.  Fix a multiplicative Higgs bundle $(P,g)$ on $C$.  We consider the sheaf of cochain complexes on $C$
 \[\mc F_{(P,g)} = (\gg_P[1] \overset {A_g} {\to} \gg_P(D))\]
 in degrees $-1$ and 0 with differential given by the adjoint action of $g$.  More precisely let $L_g$ and $R_g$ be the bundle maps $\gg_P \to \gg_P$ obtained as the derivative of left- and right-multiplication by $g$ maps, viewed as automorphisms of the $G$-bundle $P$ away from the singularities of $P$.  Then $A_g = L_g - R_g$.  We can alternatively phrase this, in a way that avoids analyzing the extension across the singularities, as in \cite[Section 4]{HurtubiseMarkman}.  
-
-\vasily{I am not sure I understand what it means. You mean
-  the left and right multiplication by the group element of $g$? Usually $L_{g}$ and $R_{g}$
-  are maps from  the tangent space at the unity of the group (and that is the Lie algebra)
-  to the tangent space at a group element $g \in G$. But you are writing a map $L_{g}$ (or a map $R_{g}$)
-  from a Lie algebra to a Lie algebra. I am not sure what it means. Could write
-  more explicitly the definition of $L_{g}, R_{g} : \gg \to \gg$ ?} \chris{I've changed things a bit.  In the proofs later I'll try to modify them to use Hurtubise and Markman's description instead.}
  
 Define $\ad(g)$ to be the vector bundle
 \[\ad(g) = (\gg_P \oplus \gg_P)/\{(X, -g X g^{-1}): X \in \gg_P\}.\]
@@ -949,15 +996,6 @@ For more general $q$ we should modify this description by replacing $g$ by a $q$
 \[\mc F_{(P,g)} = (\gg_P[1] \overset {A_g} {\to} \ad(g))\]
 just as in the untwisted case.
 \end{remark}
-
-\vasily{In the computation on $ C = \mathbb{CP}^1$ with a framing,
-  can we just drop the $\gg_{P}[1]$ term,
-  since we have exactly 0-dimensional space of global
-  (holomorphic) sections
-  of $\gg_{P}[1]\otimes \mathcal{O}(-c)$. And in the
-  consequent computations, can we drop the $\beta$-terms? Could we
-set all $\beta$-s to zero on $C = \mathbb{CP}^{1}$ with framing?}
-\chris{I'm so confused here, because you're right (and I added a remark), but that makes my whole description of the symplectic form dead wrong -- we can't use Hurtubise--Markman at all, the map from the cotangent to tangent spaces doesn't come from a map of these complexes, but at best a map for some resolutions thereof!}
 
 This complex defines the deformation theory of the moduli space of multiplicative Higgs bundles.
 
@@ -983,16 +1021,278 @@ In the rational case with our framing at infinity, when additionally $P$ is the 
 with differential induced from the map $A_g$.  Since the cohomology of the two steps are concentrated in degrees 0 and 1, there are no further differentials in the spectral sequence.  If $P$ is trivial, the first term, $H^\bullet(\bb{CP}^1; \gg_P(-c))$, vanishes identically, so in particular we have the following.
 
 \begin{corollary}
-The tangent space to $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$ at the point $(P,g)$ with $P$ trivial is quasi-isomorphic to the space of global sections $H^0(\bb{CP}^1; \ad(g)(-c))$ of the sheaf $\ad(g)(-c)$.
+The tangent space to $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$ at the point $(P,g)$ with $P$ trivial is quasi-isomorphic to the space of global sections $H^0(\bb{CP}^1; \ad(g)(-c))$ of the sheaf $\ad(g)(-c)$.  In other words, to pairs $(X^L, X^R)$ of $\gg$-valued functions on $\bb{CP}^1$ vanishing at infinity, modulo the equivalence relation
+\begin{equation}\label{eq:equivalence} 
+(X^L, X^R) \sim (X^L + X, X^R - gXg^{-1}).
+\end{equation}
 \end{corollary}
 
-\chris{Description of the symplectic structure, and comparison to Skylanin / proof that it's non-degenerate, will go here.}
+\begin{remark} \label{atlas_remark}
+In what follows we will use a standard atlas for $\bb{CP}^1$ associated to our choice $D$ of divisor.  We cover $\bb{CP}^1$ by open subsets $\{U_0, U_1, \ldots, U_k, U_\infty\}$, where for $i=1, \ldots, k$ $U_i$ is a small open disk around $z_i \in D$, $U_\infty$ is a small open disk around $\infty$, and $U_0$ is 
+\[U_0 = \bb{CP}^1 \bs (V_1 \cup V_2 \cup \cdots \cup V_k \cup V_\infty)\]
+for $V_i \sub U_i$ closed sub-disks.
+\end{remark}
 
+\subsection{Multiplicative Higgs bundles as Symplectic Leaves}
+We'll now investigate the restriction of the Sklyanin Poisson structure on $G_1[[z^{-1}]]$ to our finite-dimensional moduli spaces of multiplicative Higgs bundles, $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$.  Let $g$ be a point in $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$; we'll abuse notation and also write $g$ for its image under the restriction map $r_\infty$ to a formal neighbourhood of infinity.
+
+Choose $u \in \CC \bs D$, and let $\phi_u$ be an evaluation function as in Example \ref{ev_function_example}.  We can identify the Hamiltonian vector field associated to $\phi_u$ using the Sklyanin Poisson structure.  In terms of left and right components, it is represented as
+\begin{equation}
+\label{eq:Xphiz}
+X_{\phi_u}(w) =  \frac{1}{w - z} (\nabla_{L} \phi_u,  - \nabla_{R} \phi_u),
+\end{equation}
+where we've identified $\gg$ and $\gg^*$ using the Killing form $\kappa$.  We must first check that this gives a well-defined vector field on the moduli space $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$, not just on the Poisson Lie group.
+
+\begin{lemma}\label{phitoX}
+  If $\phi$ is an algebraic function on $G$, and $u$ is a point in $\CC \bs D$, then the Hamiltonian vector field $X_{\phi_u}$ on $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$ belongs to the tangent space to $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$.  
+\end{lemma}
+
+\begin{proof}
+  Let us pass to a representative for the Hamiltonian vector field \ref{eq:Xphiz} of the form $(X^{L}, 0)$ using the equivalence relation \ref{eq:equivalence}. We get
+  \begin{equation}
+\label{eq:xlw0}
+(X^L_{\phi_u} (z) , 0) =  \frac{1}{z - u} (\nabla_{L} \phi_u  - \Ad_{g(z)} (\nabla_{R} \phi_{u}), 0 )
+  \end{equation}
+  We need to check two points to ensure that $(X^L_{\phi_z} (w) , 0)$ is a deformation
+  of $g$ in tangent direction to $\mhiggs^{\fr}_{D}$
+  \begin{enumerate}
+  \item in each chart in $\bb{CP}^1$ there exists an equivalence frame in which $X(z) \sim (\tilde X_{\phi_{u}}^{L}(z), \tilde X_{\phi_{u}}^{R}(z))$  are regular sections (as functions of $z$).
+  \item $X(z) \to 0$ as $z \to \infty$.
+  \end{enumerate}
+
+  To check (1) we need to look on the potential singularities as $z \to u$ or as $z \to z_i$.  There is no singularity as $z \to u$ since the representative \ref{eq:xlw0} can be rewritten as
+  \begin{equation}
+\label{eq:sklyanin-left}
+(X^L_{\phi_u}(z) , 0)  =     \frac{1}{z - u} (\Ad_{g(u)}(\nabla_{R} \phi_u)  - \Ad_{g(z)} (\nabla_{R} \phi_{u}),0)
+  \end{equation}
+  and since $g(z)$ is regular in the limit $z \to u$ the ratio is also regular as $z \to u$.
+  
+  There is also no singularity as $z \to z_i$ in the original equivalence frame \ref{eq:Xphiz} (or equivalently, the singularity of \ref{eq:xlw0} near $z \to z_i$  is in the image under $\Ad_{g(z)}$ of the space of regular functions by \ref{eq:Xphiz}).
+ 
+ Point (2) is clear since $g(z)$ is regular at $z = \infty$. 
+\end{proof}
+
+Write $\pi \colon T^*_g G_1[[z^{-1}]] \to T_g G_1[[z^{-1}]]$ for the map induced by the Sklyanin Poisson structure.  We've just shown that the image under $\pi$ of the space of evaluation covectors -- derivatives of evaluation functions -- is contained in the tangent space $T_{g}\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$.  We'll now compare the Sklyanin Poisson structure with the restriction to $\mr{im}(\pi)$ of a natural formula for a symplectic structure on $T_{g}\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$ given by a sum over residues.
+
+ Recall that a symplectic structure $\Omega$ on a subspace $S \sub M$ of a Poisson manifold is compatible with the Poisson structure if, for any two Hamiltonian functions $\phi, \psi$ on $M$, we have an equality
+ \begin{equation}
+\label{eq:compatibility}
+   \Omega(X_{\psi}, X_{\phi}) = \pi (d\phi, d \psi),
+ \end{equation}
+ where $X_{\psi}, X_{\phi}$ are Hamiltonian vector fields in $T_{S}$ generated by $\phi$ and  $\psi$, i.e.
+ \begin{equation}
+   X_{\psi} = \pi d \psi, \qquad X_{\phi} = \pi d \phi.
+ \end{equation}
+So, in other words, we want to find an explicit symplectic form $\Omega: T_{S} \to T_{S}^{*} $ such that for any Hamiltonian function $\phi$ on $M$ and any vector field $X$ in $T_{S}$ we have
+ \begin{equation}
+   \Omega(X, \pi d \phi) = d_{X} \phi 
+ \end{equation}
+
+Let $X$ and $X'$ be vectors in the tangent space to our moduli space $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$ at a point $g$. Consider the bilinear form $\Omega(X, X')$ defined by the sum of residues over the set $\tilde D := D \cup \{\infty\}$,
+ \begin{equation}
+\label{eq:Omega}
+   \Omega(X, X')  = \frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  \d w (
+\kappa(X^{L}_{i}, X^{L'}_{0})  - \kappa( X^{R}_{i},  X^{R'}_{0})),
+\end{equation}
+where we have choosen equivalence frames in the open subsets $U_i$ and $U_0$ defined in Remark \ref{atlas_remark} such that $X_i^{L}, X_i^{R}$ are regular in the open subset $U_i$.
+
+\begin{prop}
+The bilinear form $\Omega(X, X')$ is well-defined, i.e. independent of the choice of representative $(X^L_i, X^R_i)$ in each chart $U_i$, and anti-symmetric.
+\end{prop}
+
+\begin{proof}
+First we consider the change of equivalence frame in the second argument.  So let $X'$ and $\tilde X'$ be two representatives of the same equivalence class differing by $X_0'$ in the patch $U_0$. The section $X_{0}'$ is regular in $U_{0}$. 
+\begin{align*}
+   \Omega(X, \tilde X') - \Omega( X,X')  &= \frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  \d z (
+   \kappa(  X^{L}_{i} ,  X^{L'}_{0} + \Ad_{g(z)} X_{0}' )  - \kappa( X^{R}_{i} ,  X^{R'}_{0} - X_{0}') ) \\
+   &\qquad - \frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  \d z (
+   \kappa(  X^{L}_{i} ,  X^{L'}_{0} )  - \kappa( X^{R}_{i} ,  X^{R'}_{0} ) ) \\  
+   &= \frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  \d z (
+\kappa(   X_{i}^{L},   \Ad_{g(z)}X^{'}_{0} )  + \kappa(  X_{i}^{R},  X^{'}_{0} ) ) \\ 
+&= \frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  \d z (\kappa(   \Ad_{g(z)^{-1}}  X_{i}^{L} + X_{i}^{R}, X_{0}' ) ) \\ 
+&= \frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  \d z (\kappa(   \Ad_{g(z)^{-1}}  X_{0}^{L} + X_{0}^{R}, X_{0}' ) ) \\ 
+&= - \frac{1}{2 \pi \imath} \oint_{\partial U_0} \d z (\kappa(   \Ad_{g(z)^{-1}}  X_{0}^{L} + X_{0}^{R}, X_{0}' ) ) \\ 
+&= 0 
+\end{align*}
+
+We used that $\Ad_{g(z)^{-1}}  X_{i}^{L} + X_{i}^{R}$ (the right variation of $g$) is invariant across the patches, and the fact that the integrand is regular on $U_0$ in the final equality.
+
+Now, since we've proven invariance under the change of equivalence frame in the second argument, let's set $X_{0}^{R'} = 0$ by a suitable change of equivalence frame.  In this equivalence frame we have $X_{0}^{L'} = X_i^{L'} + \Ad_{g} X_i^{R'}$
+on the overlap between $U_i$ and $U_0$, hence the original formula for the bilinear pairing becomes 
+\[
+\Omega(X, X') =   \frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  \d z (
+\langle  X^{L}_{i}, X_i^{L'} + \Ad_{g} X_i^{R'} \rangle 
+\]
+Since $\langle X_i^{L}, X_{i}^{L'} \rangle $ is regular on $U_i$ this term vanishes and we get
+\begin{equation}
+\label{eq:drop-right}
+  \Omega(X, X') =   \frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  \d z (
+\langle  X^{L}_{i},  \Ad_{g} X_i^{R'} \rangle  =  \frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  \d z (
+\langle  \Ad_{g^{-1}} X^{L}_{i},   X_i^{R'} \rangle 
+\end{equation}
+
+On the other hand, we can set $X_0^{L'} = 0$ in the original formula by a suitable change
+of framing in the second argument, and in this equivalence frame we have $X_0^{R'} =  X_{i}^{R'}  + \Ad_{g^{-1}} X_{i}^{L'}$ on the
+overlaps between $U_i$ and $U_0$, and consequently, the original formula is transformed into the form
+\begin{equation}
+\label{eq:drop-left}
+  \Omega(X, X') =   -\frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  \d w (
+\langle  X^{R}_{i},  \Ad_{g^{-1}} X_i^{L'} \rangle 
+\end{equation}
+Comparing the expression \ref{eq:drop-left} with \ref{eq:drop-right} we have demonstrated that $\Omega(X,X')$ is anti-symmetric.
+
+To conclude, we've proven that $\Omega(X,X')$ is invariant under a change of equivalence frame in the second argument, and so by the anti-symmetry we obtain that $\Omega(X, X')$ is also invariant under a change of equivalence frame in the first argument.
+\end{proof}
+
+\begin{remark}
+Note that we don't yet assume that $\Omega$ is non-degenerate: we will demonstrate this as part of Theorem \ref{theorem:symplectic_leaf} below.
+\end{remark}
+
+\begin{lemma}\label{lemma:OmegaPi}
+The restriction of the bilinear form (\ref{eq:Omega}) to the $\mr{im}(\pi) \sub T_g \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$  is compatible with Sklyanin's Poisson structure $\pi$ on $G_1[[z^{-1}]]$.
+\end{lemma}
+
+\begin{proof}
+  Given two evaluation functions $\phi_{u}$ and $\psi_{v}$, where $u$ and $v$ are points in $\CC \bs D$, we'd like to check
+  that Sklyanin's Poisson bracket is compatible (in the sense of \ref{eq:compatibility}) with the bilinear form $\Omega$, so
+\begin{equation}
+  \Omega(X_{\psi_{u}}, X_{\phi_{v}})  = - \{\psi_{u}, \phi_{v}\}.
+\end{equation}
+First we'll choose equivalence frames such that the Hamiltonian vector field $X_{\phi_{u}}$ is regular at $\tilde D$, and $X_{\psi_{v}}$ is regular in $\bb{CP}^1 \setminus \tilde D$.  The equivalence frame regular in $\tilde D$ can be taken as in  (\ref{eq:Xphiz}),
+and the equivalence frame regular in $C \setminus \tilde D$ can be taken
+as in (\ref{eq:xlw0}). That is, we'll take
+\begin{align*}
+    (X_{\phi_{u}})_{i} &= ((X_{\phi_{u}}^{L}, X_{\phi_{u}}^{R}))_{i} \\
+    &=  \frac{1}{z - u} \left(\Ad_{g(u)} \nabla_R \phi_{u},   \nabla_{R} \phi_{u}\right) \\
+    (X_{\psi_{v}})_{0} &= ((X_{\psi_{v}}^{L}, X_{\psi_{v}}^{R}))_{0} \\
+    &= \frac{1}{z - v} \left(\left( \Ad_{g(v)} \nabla_R \psi_{v} - \Ad_{g(z)} \nabla_{R} \psi_{v}\right), 0\right).
+\end{align*}
+Then the definition of the bilinear form $\Omega$ in this equivalence frame becomes
+\begin{equation}
+  \label{eq:pairing}
+  \Omega(X_{\phi_{u}}, X_{\psi_{v}}) = \frac{1}{2 \pi \imath }
+  \sum_{z_i \in \tilde D} \oint_{\partial U_i} \frac{\d z}{(z - u)(z - v)} \langle \Ad_{g(u)} \nabla_{R} \phi_{u},
+  \Ad_{g(v)} \nabla_{R} \psi_{v}  - \Ad_{g(z)} \nabla_{R} \psi_{v} \rangle.
+\end{equation}
+The integrand is regular everywhere on $U_0 \setminus \{u, v\}$, and since
+\[\sum_{i \in \tilde D} \oint_{\partial U_i } f(z) \d z  = - \oint_{\partial U_0} f(z) \d z\]
+the pairing (\ref{eq:pairing}) is given as a sum of residues at $w = u$ and $w = v$.  Explicitly:
+  \begin{align*}
+   \Omega(X_{\phi_{u}}, X_{\psi_{v}}) &= - (\res_{z = u}  + \res_{z = v}) \frac{\d z}{(z - u)(z - v)} \langle \Ad_{g(u)} \nabla_{R} \phi_{u},   \Ad_{g(v)} \nabla_{R} \psi_{v}  - \Ad_{g(z)} \nabla_{R} \psi_{v} \rangle \\
+   &=   \frac{-1}{u - v}  \langle \Ad_{g(u)} \nabla_{R} \phi_{u} , \Ad_{g(v)} \nabla_{R} \psi_{v}  - \Ad_{g(u)} \nabla_{R} \psi_{v} \rangle  \\
+   &\quad - \frac{-1}{u - v}  \langle \Ad_{g(u)} \nabla_{R} \phi_{u} , \Ad_{g(v)} \nabla_{R} \psi_{v}  - \Ad_{g(v)} \nabla_{R} \psi_{v}   \rangle \\
+      &=   \frac{-1}{u - v}  \langle \Ad_{g(u)} \nabla_{R} \phi_{u} ,  - \Ad_{g(u)} \nabla_{R} \psi_{v} \rangle   - \frac{-1}{u - v}  \langle \Ad_{g(u)} \nabla_{R} \phi_{u} ,  - \Ad_{g(v)} \nabla_{R} \psi_{v}   \rangle \\
+   &= \frac{1}{u - v} (\langle \nabla_{R} \phi_{u} , \nabla_{R} \psi_{v}\rangle - 
+   \langle  \nabla_{L} \phi_{u} , \nabla_{L} \psi_{v} \rangle ) \\
+   &=  - \{\phi_{u}, \psi_{v} \}.
+  \end{align*}
+\end{proof}
+
+To complete the argument that $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$ is a symplectic leaf for the Sklyanin Poisson structure on $G_1[[z^{-1}]]$ we need to show that in fact, we have an identification 
+\[\mr{im}(\pi) = T_g \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee).\]
+That means for any tangent vector $X \in T_g \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$ we'd like to find a Hamiltonian
+function $\phi$ on $G_1[[z^{-1}]]$ such that $X = X_{\phi} = \pi d \phi$.
+
+\begin{theorem}\label{theorem:symplectic_leaf}
+The restriction map $r_\infty \colon \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee) \to G_1[[z^{-1}]]$ to a formal neighbourhood of infinity is the inclusion of a symplectic leaf for the Sklyanin Poisson structure.
+\end{theorem}
+
+We'll show this at the level of tangent spaces at a point $g$ in $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$.  For any deformation $\delta g $ of $g$ that preserves the singularity divisor $D$ of $g$ we want to find a Hamiltonian function $\phi$ for Sklyanin's bracket such that the associated Hamiltonian vector field $X_\phi = \delta g$; we've already shown the opposite inclusion in Lemma \ref{phitoX}.
+
+First let's give an explicit basis for the tangent space of $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$ at a point $g$.  Assume that the restriction of $g$ to each punctured open neighbourhood $U^\times_i$ of a point in $D$ is regular semi-simple valued.  With this assumption, the operator $\Ad_{g}(z): \gg \to \gg$ is diagonalizable in $U_{i}^{\times}$.  We have a family of Cartan sublagebras $\hh_{z} \subset \gg$ parameterized by $z \in U_{i}^{\times}$, where $\hh_z$ centralizes the regular semisimple elements $g(z)$.  We then have a ($z$-dependent) decomposition of $\gg$ into the Cartan $\hh_z$ and the root spaces:
+\[\gg = \hh_{z} \oplus \sum_{\alpha} \gg_{\alpha,z}.\]
+Since the family $g(z)$ has a singularity of co-weight $\omega_{z_i}^{\vee}$ in $z_i$ with $[g(z)] \sim z^{-\omega_{z_i}^{\vee}}$, the operator $\Ad_{g}$ has eigenvalue $ (z - z_i)^{- (\alpha, \omega^{\vee}_{z_i})}$ on $\gg_{\alpha}$
+in leading order. Let $e_{\alpha, z}$ be a generator of $\gg_{\alpha, z}$.
+
+Below we'll need a technical assumption on $g(z)$ in $U_{i}^{\times}$: that the splitting
+$\hh_{z} \oplus \sum_{\alpha} \gg_{\alpha,z}$ extends analytically from $U_{i}^{\times}$ to $U_{i}$,
+i.e. that there is a limit 
+ \[ e_{\alpha, z_i} = \lim_{z \to z_i} e_{\alpha, z}.\] 
+ 
+\vasily{The existence of this limit will be probably implied by the
+  assumption that $g(z)$ is regular semi-simple in the punctured
+  neighborhood $U_{i}^{\times}$ and has the form $ g_L(z) (z-z_i)^{-\omega_{i}^{\vee}} g_{R}(z)$
+  where $g_{L}(z), g_{R}(z)$ are analytic in $U_i$. } 
+
+
+\begin{lemma}
+  Assuming $g(z)$ has regular semisimple values near each singularity, the tangent space of $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$ at $g$ is isomorphic to the space of meromorphic $\gg$-valued functions $X^{L}$ of the form
+  \begin{equation}
+\label{eq:XL}
+    X^{L} = \sum_{i} \sum_{\alpha: \langle \alpha, \omega_{z_i}^{\vee} \rangle > 0 }
+    \sum_{k_{i, \alpha} = 1}^{ \langle \alpha , \omega_{z_i}^{\vee} \rangle} e_{\alpha,{z_i}} x_{i, \alpha, k_{i, \alpha}} (z - z_i)^{-\langle \alpha, \omega_{z_i}^{\vee}\rangle }, \qquad x_{i, \alpha, k_{i, \alpha}} \in \mathbb{C}
+  \end{equation}
+  and consequently the tangent space $T_g \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$ has dimension 
+  \begin{equation}
+\dim T_g \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee) = \sum_{i} \sum_{\alpha: \langle \alpha, \omega_{z_i}^{\vee} \rangle > 0 } \langle \alpha, \omega_{z_i}^{\vee} \rangle = 2 \sum_{i} \langle \rho, \omega^{\vee}_{z_i}\rangle 
+  \end{equation}
+  where $\rho = \frac 1 2 \sum_{\alpha > 0} \alpha$ is the Weyl vector.
+\end{lemma}
+
+\begin{proof}
+  In the framing $(X^{L}, X^{R}) \sim (X^{L} + \Ad_{g} X^{R}, 0 )$, the singular
+  part of $X^{L}$ in $U_{i}^{\times}$ in the subspace generated by $e_{\alpha, z_i}$
+  is in the image of the operator $\Ad_{g}$ applied to a regular section generated by $e_{\alpha, z_i}$.  Consequently, there is an equivalence frame $(X^{L}, X^{R}) \sim (\tilde X^{R}, \tilde X^{R})$  in which $\tilde X^{L}$ and $\tilde X^{R}$ are both regular in $U_{i}$. 
+\end{proof}
+
+Having described the tangent space to $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$ at $g$, we'd like to show that for every tangent vector $X$ there is a Hamiltonian function $\phi$ on $G_1[[z^{-1}]]$ such that $X = X_\phi$ with respect to Sklyanin's Poisson structure on $G_1[[z^{-1}]]$.  Suppose that is $X$ is represented in the equivalence class by $((X^{L}, X^{R}))_{i}$, where $(X^{L}, X^{R})_{i}$ are regular in each chart $U_i$ around $z_i \in \tilde D$.  We'll describe a Hamiltonian for $X$ in the following way.
+
+\begin{lemma}\label{xtophi}
+  For any $X \in T_{g} \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$ there is a Hamiltonian potential $\phi$ on $G_1[[z^{-1}]]$ such that $X = \pi \d \phi|_{g}$.  For $\tilde g$ in a local neighborhood of $g$, a potential $\phi$ is given by the formula 
+\[
+  \phi(\tilde g) : = -\frac 1 2 \sum_{z_i \in \tilde D} \frac{1}{2 \pi \imath c_\rho} \oint_{\partial U_{i}} 
+dz  \tr \rho( \tilde g_z  g_z^{-1}) \rho(X^{L}_i - \Ad_{ g_z} X_{i}^{R}),
+\]
+where $\rho$ is a faithful representation of $G$ and we use a non-degenerate pairing of the form $\tr\rho(X) \rho(X') = c_\rho \kappa(X, X')$.
+\end{lemma}
+  
+\begin{proof}
+The left gradient of $\phi(\tilde g)$ under $ \delta \tilde g = Y^{L} \tilde g$ at $\tilde g = g$ is given by
+\begin{equation}
+  Y^{L} \nabla_{L} \phi|_{\tilde g = g}  = - \frac 1 2  \sum_{z_i \in \tilde D} \frac{1}{2 \pi \imath } \oint_{\partial U_{i}}  \d z
+ \langle  Y^{L} , (X^{L}_i - \Ad_{g_z} X_i^R) ) 
+\end{equation}
+so 
+\begin{equation}
+  \nabla_{L} \phi|_{\tilde g = g}  = -\frac 1 2  \sum_{z_i \in \tilde D} \frac{1}{2 \pi \imath } \oint_{\partial U_{i}}  \d z
+ (X^{L}_i - \Ad_{g_z} X_i^R) 
+\end{equation}
+where we've identified $\gg$ and $\gg^{*}$ using the pairing $\kappa$. 
+
+Now we'll compute Sklyanin's Hamiltonian vector field in the left frame $(X_{\phi}^{L}, 0)$ using the equation (\ref{eq:xlw0}) (and using the fact that $\nabla_{R} \phi  = \Ad_{g^{-1}} \nabla_{L} \phi$).  We find
+\begin{align*}
+  X^{L}_\phi &= -\frac 1 2 \sum_{i \in \tilde D} \frac{1}{2 \pi \imath} \oint_{\partial U_i}
+  \frac{\d z}{w - z}  (X_i^{L} - \Ad_{g_z} X_i^{R})  - \Ad_{g_w} \Ad_{g_z}^{-1} (X_i^{L} - \Ad_{g_z} X_i^{R}) \\
+&=  -\frac 1 2 \sum_{i \in \tilde D} \frac{1}{2 \pi \imath} \oint_{\partial U_i}
+\frac{\d z}{w - z}  (X_i^{L}  + \Ad_{g_w} X_i^{R}) - (\Ad_{g_z} X_i^{R} +  \Ad_{g(z)} \Ad_{g_{z}}^{-1} X_i^{L}) \\
+ &= -\frac 1 2  \sum_{i \in \tilde D} \frac{1}{2 \pi \imath} \oint_{\partial U_i}
+ \frac{\d z}{w - z}  (X_i^{L}  + \Ad_{g_w} X_i^{R}) - (X_0^{L} + \Ad_{g_z} X_0^{R}- X_{i}^{L} +  \Ad_{g(z)} ( \Ad_{g_{z}}^{-1} X_0^{L} + X_0^{R} - X_{i}^{R})) \\
+  &= -\frac 1 2  \sum_{i \in \tilde D} \frac{1}{2 \pi \imath} \oint_{\partial U_i}
+    \frac{\d z}{w - z} 2 (X_i^{L}  + \Ad_{g_w} X_i^{R}) - (X_0^{L} + \Ad_{g_z} X_0^{R} +  \Ad_{g(z)} ( \Ad_{g_{z}}^{-1} X_0^{L} + X_0^{R} )).
+  \end{align*}
+Now, as a function of $z$, the first term of the numerator of the integrand is regular in each chart $U_i$ for $I \in \tilde D$, and the second term of the numerator is regular in the remaining chart $U_0$. Therefore the first term evaluates to the residue at $z = w$ while the second is zero if $w \in U_i$, and the second term evaluates to a residue at $z = w$ while the first is zero if $w \in U_0$. (Assume without loss of generality that $w$ is not on the integration).  Either way, if $w \in U_i$ we have, from the residue in the first term,
+  \[
+    (X^{L}_\phi, 0)(w) = \mathrm{res}_{z = w} \frac{\d z}{ z - w} (X_{i}^{L} + \Ad_{g_w} X_{i}^{R}) =
+    (X_{i}^{L} + \Ad_{g_w} X_{i}^{R})(w),
+  \]
+  and if $ w \in U_0$ we have, from the residue in the second term,
+  \begin{align*}
+    (X^{L}_\phi, 0)(w) &= \frac 1 2 \mathrm{res}_{z = w} \frac{\d z}{ z - w} (X_0^{L} + \Ad_{g_z} X_0^{R} +  \Ad_{g(z)} ( \Ad_{g_{z}}^{-1} X_0^{L} + X_0^{R} )) \\
+    &= ( X_{0}^{L} + \Ad_{g_w} X_{0}^{R})(w).
+  \end{align*}
+  Thus $X_\phi$, in the left equivalence frame $(X^{L}_{\phi}, 0)$ in each chart, coincides with the vector field $X$ that we've started
+  in the same left equivalence frame $(X^{L}, X^{R}) \sim (X^{L} + \Ad_{g} X^{R}, 0)$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{theorem:symplectic_leaf}]
+We've shown in Lemma \ref{phitoX} that $\mathrm{im}(\pi) \subset T_{g} \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$ and in Lemma \ref{xtophi} that $T_{g} \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee) \subset \mathrm{im}(\pi)$, hence $\mr{im}(\pi) = T_{g} \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$. In combination with Lemma \ref{lemma:OmegaPi} proving the compatibility of the Poisson structure $\pi$ and the bilinear form $\Omega$, this implies that $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$ is
+a symplectic leaf for the Poisson-Lie group $G_1[[z^{-1}]]$. In particular, since $\pi$ is Poisson, the bilinear form $\Omega$ is non-degenerate and closed, and so the form $\Omega$ actually defines a symplectic structure on the moduli space $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$. \chris{todo: deal with evaluation covectors vs all covectors here.}
+\end{proof}
 
 \begin{remark} \label{shapiro_leaves_remark}
 It's instructive to compare this calculation with the work of Shapiro \cite{Shapiro} on symplectic leaves for the rational Poisson Lie group.  According to Shapiro, and for the group $G = \SL_n$, there are symplectic leaves in $G_1[[z^{-1}]]$ indexed by Smith normal forms, i.e. by a sequence $d_1, \ldots, d_n$ of polynomials where $d_i | d_{i+1}$ for each $i$.  This data is equivalent to a dominant coweight coloured divisor $(D,\omega^\vee)$ in the following way.  The data of the sequence of polynomials is equivalent to the data of an increasing sequence $(D_1, \ldots, D_n)$ of $n$ effective divisors in $\bb{CP}^1$ disjoint from $\infty$: the tuples of roots of the polynomials $d_i$.  Let $D = \{z_1, \ldots, z_k\}$ be the support of the largest divisor $D_n$, and for each $z_j$ let $\omega^\vee_{z_j} = (m_1, \ldots, m_n)$ be the dominant coweight where $m_i$ is the order of the root $z_j$ in the polynomial $d_i$.  The dominant coweight Shapiro refers to as the ``type'' of a leaf is, therefore, the sum of all these coweights.
 
-To be a little more precise, Shapiro proves that for $G = \SL_n$ these symplectic leaves span the Poisson subgroup $\mc G \sub G_1[[z^{-1}]]$ of elements that can be factorized as the product of a polynomial element in $G_1[z^{-1}]$ and a monic $\CC$-valued power series.  In fact, the map $r_\infty$ (for any group, not necessarily $G = \SL_n$) factors through the subgroup $\mc G$: the Taylor expansion of all \emph{rational} $G$ valued functions can be factorized in this way.  As a consequence, Theorem \ref{Poisson_Lie_Comparison_thm} implies that our symplectic leaves for the group $\SL_n$ agree with Shapiro's symplectic leaves.
+To be a little more precise, Shapiro proves that for $G = \SL_n$ these symplectic leaves span the Poisson subgroup $\mc G \sub G_1[[z^{-1}]]$ of elements that can be factorized as the product of a polynomial element in $G_1[z^{-1}]$ and a monic $\CC$-valued power series.  In fact, the map $r_\infty$ (for any group, not necessarily $G = \SL_n$) factors through the subgroup $\mc G$: the Taylor expansion of all \emph{rational} $G$ valued functions can be factorized in this way.  As a consequence, Theorem \ref{theorem:symplectic_leaf} implies that our symplectic leaves for the group $\SL_n$ agree with Shapiro's symplectic leaves.
 \end{remark}
 
 
