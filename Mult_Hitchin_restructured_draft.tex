@@ -963,7 +963,7 @@ In particular this tells us the following.
 The intersection of the image of $r_\infty \colon \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee) \to G_1[[z^{-1}]]$ with a fiber of the Chevalley map $\chi \colon G_1[[z^{-1}]] \to T[[z^{-1}]]/W$ is isotropic for the Sklyanin Poisson structure.
 \end{corollary}
 
-\subsection{Deformations of Multiplicative Higgs Bundles}
+\subsection{Deformations of Multiplicative Higgs Bundles} \label{def_section}
 We'll begin this section by considering the tangent complex to the moduli space of $q$-connections.  For the arguments in this article we'll only need to carefully consider the case $q=\id$ of multiplicative Higgs bundles, but we'll include some remarks regarding the more general case.  In this case the calculation was performed by Bottacin \cite{Bottacin}, see also \cite[Section 4]{HurtubiseMarkman}. We begin with an illustrative description of the deformation complex, then use a more careful description gollowing Hurtubise and Markman.  Fix a multiplicative Higgs bundle $(P,g)$ on $C$.  We consider the sheaf of cochain complexes on $C$
 \[\mc F_{(P,g)} = (\gg_P[1] \overset {A_g} {\to} \gg_P(D))\]
 in degrees $-1$ and 0 with differential given by the adjoint action of $g$.  More precisely let $L_g$ and $R_g$ be the bundle maps $\gg_P \to \gg_P$ obtained as the derivative of left- and right-multiplication by $g$ maps, viewed as automorphisms of the $G$-bundle $P$ away from the singularities of $P$.  Then $A_g = L_g - R_g$.  We can alternatively phrase this, in a way that avoids analyzing the extension across the singularities, as in \cite[Section 4]{HurtubiseMarkman}.  
@@ -1025,7 +1025,7 @@ In what follows we will use a standard atlas for $\bb{CP}^1$ associated to our c
 for $V_i \sub U_i$ closed sub-disks.
 \end{remark}
 
-\subsection{Multiplicative Higgs bundles as Symplectic Leaves}
+\subsection{Multiplicative Higgs bundles as Symplectic Leaves} \label{symplectic_leaf_section}
 We'll now investigate the restriction of the Sklyanin Poisson structure on $G_1[[z^{-1}]]$ to our finite-dimensional moduli spaces of multiplicative Higgs bundles, $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$.  Let $g$ be a point in $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$; we'll abuse notation and also write $g$ for its image under the restriction map $r_\infty$ to a formal neighbourhood of infinity.
 
 Choose $u \in \CC \bs D$, and let $\phi_u$ be an evaluation function as in Example \ref{ev_function_example}.  We can identify the Hamiltonian vector field associated to $\phi_u$ using the Sklyanin Poisson structure.  In terms of left and right components, it is represented as
@@ -1282,6 +1282,15 @@ It's instructive to compare this calculation with the work of Shapiro \cite{Shap
 To be a little more precise, Shapiro proves that for $G = \SL_n$ these symplectic leaves span the Poisson subgroup $\mc G \sub G_1[[z^{-1}]]$ of elements that can be factorized as the product of a polynomial element in $G_1[z^{-1}]$ and a monic $\CC$-valued power series.  In fact, the map $r_\infty$ (for any group, not necessarily $G = \SL_n$) factors through the subgroup $\mc G$: the Taylor expansion of all \emph{rational} $G$ valued functions can be factorized in this way.  As a consequence, Theorem \ref{theorem:symplectic_leaf} implies that our symplectic leaves for the group $\SL_n$ agree with Shapiro's symplectic leaves.
 \end{remark}
 
+\begin{remark}
+We can also compare this description of the symplectic structure $\Omega$ on our symplectic leaves with the symplectic structure on the moduli space of multiplicative Higgs bundles on an elliptic curve studied by Hurtubise and Markman \cite{HurtubiseMarkman}.  In order to construct a symplectic structure by a procedure analogous to their construction, we could describe a pairing induced from the natural equivalence between the tangent and cotangent spaces of the moduli space of multiplicative Higgs bundles as described in Section \ref{def_section}.  That is, there's a map of complexes of sheaves
+\[\xymatrix{
+(\mc F^\fr_{(P,g)})^*[1] \ar@{=}[r] \ar[d] &\Big(\gg^*_P(-D)[1] \otimes \OO(-c) \ar[d]^{\kappa \circ A_g^*} \ar[r]^{A_g^*} &\gg^*_P \otimes \OO(-c)\Big)\ar[d]^{A_g \circ \kappa^{-1}} \\
+\mc F^\fr_{(P,g)} \ar@{=}[r] &\Big(\gg_P[1] \otimes \OO(-c) \ar[r]^{A_g} &\gg_P(D) \otimes \OO(-c)\Big)
+}\]
+where here $\kappa$ denotes the isomorphism from $\gg_P \to \gg^*_P$ induced by the Killing form.  The top line is the Serre dual complex to the bottom line; note that the incorporation of the framing was necessary for this to be the case (that is, we're using the relative Calabi-Yau structure on the pair $(\bb{CP}^1, c)$).  Taking 0th hypercohomology we obtain a map from the cotangent space to the tangent space of our moduli space of multiplicative Higgs bundles.
+\end{remark}
+
 \subsection{Hamiltonian Reduction} \label{Reduced_section}
 
 Now, let us assume that we consider the moduli space of framed multiplicative Higgs bundles on $\bb{CP}^1$ where the framing at infinity is a regular semi-simple framing element $g_{\infty}$ of the group $G$.  Multiplication by the constant function with value $g_\infty$ allows us to identify the space $G_{g_\infty}[[z^{-1}]]$ of $G$-valued power series with constant term $g_\infty$ as a torsor for the Poisson Lie group $G_1[[z^{-1}]]$, so the moduli space of multiplicative Higgs bundles with framing value $g_\infty$ can still be viewed as a symplectic leaf in the Poisson Lie group.
@@ -1297,8 +1306,8 @@ Recall from Corollary \ref{cor:poisson-commuting} that adjoint invariant functio
 \begin{example}
 Let $\rho$ be a faithful representation of $G$, and let $u$ be an element of $\CC$. The \emph{evaluation character}  
 \begin{align*}
-\varphi_{\rho,u} \colon \{g \in G_1[[z^{-1}]] \colon g(v) \text{ converges}\} &\to \mathbb{C}\\
-g &\mapsto  \tr_{\rho} g(u)
+\varphi_{\rho,v} \colon \{g \in G_1[[z^{-1}]] \colon g(v) \text{ converges}\} &\to \mathbb{C}\\
+g &\mapsto  \tr_{\rho} g(v)
 \end{align*}
 is an adjoint invariant function. 
 \end{example}
@@ -1486,10 +1495,10 @@ We should emphasise the difference between the Riemannian 3-manifold $M = C \tim
 \end{remark}
 
 We can rephrase the data of a monopole on $M$ as follows.  Let $C_0 = C \times \{0\}$ be the fiber over $0$ in $S^1$, viewed as a Riemann surface.  Let $P$ be the restriction of the complexified bundle $\bo P_\CC$ to $C_0$.  Consider first the restriction of the complexification of $A$ to a connection $A_0$ on $P$ over $C_0$.  The $(0,1)$ part of $A_0$ automatically defines a holomorphic structure on $P$.  We can introduce an additional piece of structure on this holomorphic $G$-bundle.  In order to do so we can decompose the Bogomolny equation into one real and one complex equation as follows.
-\begin{align*}
-F_{A_0} - \nabla_t \Phi \dvol_{C_0} &= 0 \\
-[\ol{\del}_{A_0}, \nabla_t - i\Phi \d t] &= 0 
-\end{align*}
+\begin{align}
+F_{A_0} - \nabla_t \Phi \dvol_{C_0} &= 0 \label{Bogomolny_equation_real} \\
+[\ol{\del}_{A_0}, \nabla_t - i\Phi \d t] &= 0 \label{Bogomolny_equation_complex}
+\end{align}
 where $\nabla_t$ is the component of the covariant derivative $\d_A$ normal to $C_0$.  
 
 \begin{remark}
@@ -1516,95 +1525,111 @@ A monopole on $M$ with \emph{framing} at the point $c \in C$ is a monopole $(\bo
 The moduli theory of monopoles on general compact 3-manifolds was described by Pauly \cite{Pauly}.  In this paper we'll be interested in moduli spaces $\mon_G(M, D, \omega^\vee)$ of monopoles on 3-manifolds of the form $M = C \times S^1$, with prescribed Dirac singularities and possibly with a fixed framing at a point in $C$.  
 
 \subsection{Hyperk\"ahler Structures on Periodic Monopoles} \label{HK_monopole_section}
+Let us now describe the holomorphic symplectic and hyperk\"ahler structure on the moduli space of periodic monopoles.  We will first recall the idea that the moduli space of periodic monopoles can be described as a hyperk\"ahler quotient as in the work of Atiyah and Hitchin \cite{AtiyahHitchin}.  In a context with more general boundary data at $\infty$ this was demonstrated by Cherkis and Kapustin \cite{CherkisKapustin3} for the group $\SU(2)$, see also Foscolo \cite{FoscoloDef}[Theorem 7.12].  In the case of $\bb{CP}^1$ with a fixed framing the analysis is much easier.
 
-\chris{This section needs a rewrite but I've inserted what we already had as a starting point.}
+\begin{remark}
+\chris{discuss how formal the results in this section are}
+\end{remark}
 
-Let us begin by describing the hyperk\"ahler structure on the moduli space of periodic monopoles and how the holomorphic symplectic structure varies under rotation in the twistor sphere.  We'll begin by recalling that the moduli space of periodic monopoles can be described as a hyperk\"ahler quotient as in the work of Atiyah and Hitchin \cite{AtiyahHitchin}.  In a context with more general boundary data at $\infty$ this was demonstrated by Cherkis and Kapustin \cite{CherkisKapustin3} for the group $\SU(2)$, see also Foscolo \cite{FoscoloDef}[Theorem 7.12].  In the case of $\bb{CP}^1$ with a fixed framing the analysis is much easier.
+Consider the 3-manifold $M = \bb{CP}^1 \times S^1_R$.  Let us fix Dirac singularities at a divisor $D'$, and a regular semisimple framing $g_\infty$ at $\infty$.  For simplicity we'll consider only the sector corresponding to the trivial $G_\RR$-bundle.
 
-The moduli space of periodic monopoles can be obtained as a hyperk\"ahler quotient.  Let us fix Dirac singularities at $D'$, and a framing at $\infty$.  Consider the infinite-dimensional vector space $\mc V$ consisting of pairs $(A,\Phi)$ where $A$ is a connection on a fixed principal $G_\RR$-bundle $\bo P$ on $M$, $\Phi$ is a section of $\gg_{\bo P}$, and the pairs $(A,\Phi)$ have a Dirac singularity with charge $\omega^\vee_{z_i}$ at each $(z_i,t_i)$ in $D'$.  Let $\mc G$ be the group of gauge transformations of the bundle $\bo P$.
+\begin{definition}
+Let $\mc V$ be the infinite-dimensional vector space of pairs $(A,\Phi)$ where $A$ is a connection on the trivial $G_\RR$-bundle on $M$, $\Phi$ is a $\gg_\RR$-valued function, and where 
+\begin{enumerate}
+ \item The pairs $(A,\Phi)$ have a Dirac singularity with charge $\omega^\vee_{z_i}$ at each $(z_i,t_i)$ in $D'$.
+ \item The holonomy of $A + i \Phi \d t$ around the circle $\{\infty\} \times S^1$ at infinity is equal to $g_\infty \in G$. 
+\end{enumerate}
+  Let $\mc G$ be the group of $G_\RR$-valued smooth functions on $M$ with value 1 on $\{\infty\} \times S^1$, acting on $\mc V$.  Let $T$ be the group of constant functions on $M$ valued in the centralizer of the element $g_\infty \in G$, also acting on $\mc V$.
+\end{definition}
 
-The hyperk\"ahler moment map is given by the Bogomolny functional, namely
+The vector space $\mc V$ admits a holomorphic symplectic structure using the complex structure on $\bb{CP}^1$.  We write $A$ in coordinates as $A_0 \d z + \ol A_0 \d \ol z + A_t \d t$, and set $\mc A = (A_t + i \Phi) \d t$. One defines the holomorphic symplectic pairing as
+\begin{equation}
+ \label{holo_symp_structure_fields}
+ \omega_{\mr{hol}}((A,\Phi), (A',\Phi')) = \int_{\CC \times S^1_R} \kappa(A_0, \mc A') - \kappa(\mc A, A_0') \d z \d t.
+\end{equation}
+
+The holomorphic moment map is defined to be the complex part of the Bogomolny equations \ref{Bogomolny_equation_complex}.  That is, we define
 \begin{align*}
-\mu \colon \mc V &\to \mr{Lie}(\mc G) \otimes \RR^3 \\
-(A,\Phi) &\mapsto \ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1}- \d_A \Phi|_{\CC \times_\eps S^1}.
+\mu_\CC \colon \mc V &\to \mr{Lie}(\mc G) \otimes_\RR \CC \\
+(A,\Phi) &\mapsto [\ol{\del}_{A_0}, \mc A].
 \end{align*}
 
-Here the Lie algebra $\mr{Lie}(\mc G)$ of the gauge group is the space of sections in $\Omega^0(M \bs (D'); (\gg_\RR)_{\bo P})$ that vanish at $\{\infty\} \times S^1$, so $\mc G \otimes \RR^3$ is identified with the space of sections in $\Omega^1(M \bs (D'); (\gg_\RR)_{\bo P})$ likewise vanishing at $\infty$.
+\begin{lemma}
+The moduli space $\mon^\fr_G(\bb{CP}^1 \times S^1_R, D', \omega^\vee)$ of framed monopoles on $\bb{CP}^1 \times S^1_R$ is equivalent to the holomorphic symplectic reduction $\mu_\CC^{-1}(0)/\mc G_\CC$, and therefore inherits a holomorphic symplectic structure from \ref{holo_symp_structure_fields}. \chris{reference?}
+\end{lemma}
 
-\vasily{XXX: In the common conventions, e.g. \url{https://projecteuclid.org/euclid.jdg/1214443066} hyperk\"ahler moment map takes value in $Lie(\mc G) \otimes \mathbb{R}^3$ where $\mathbb{R}^3$ is the space of imaginary quaternions. 
-  We'll split $\mathbb{R}^{3} \simeq \mathbb{C} \oplus \mathbb{R}$ into complex part
-  and real part by picking a point on a twistor sphere, so that $\mu  = 0$
-  splits into a complex equation and real equation. But we should not discard complex
-equation as, I am afraid, we do in the above definition } \chris{I don't understand your comment, but this section needs to be substantially rewritten to deal with stability etc anyway.}
+In order to obtain a hyperk\"ahler structure on our moduli space, we will have to consider a further $T$-reduction identical to the reduction from Section \ref{Reduced_section}.
 
-\begin{remark} \label{flat_metric_remark}
-Note that the Bogomolny functional $\mu$ makes sense when we use the flat Riemannian metric on $\bb{CP}^1$, which is singular at the point $z = \infty$.  If $A$ is a gauge field on $\bb{CP}^1 \times_\eps S^1$ where the pair $(A,\Phi)$ have Dirac singularities at $D'$, then the Hodge dual $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1}$ in $\Omega^1((\CC \times_\eps S^1) \bs (D'; (\gg_\RR)_{\bo P})$ extends by zero to a 1-form on $(\bb{CP}^1 \times_\eps S^1) \bs (D')$.  Indeed, for the Hodge dual of a 2-form $\ast_{\mr{flat}} (F_A)|_{\CC \times_\eps S^1} = (1+|z|^2/4)^{-1} \ast_{\mr{round}} F_A$.  The hyperk\"ahler moment map is, therefore, still well-defined.
+\begin{definition}
+Let $\mc V_{\mr{red}}$ be the infinite-dimensional vector space of pairs $(A,\Phi)$ as above, satisfying the additional condition that there exists a neighbourhood $\{|z| > R\}$ of $\infty$ in $\bb{CP}^1$ on which  \chris{the values of $A$ and $\Phi$ in every character of $G_\RR$ go like $|z|^{-1-\tau}$.} \chris{Alternatively this should be the Hamiltonian reduction of $\mc V$ by the group $T$ with moment map $\res(\phi_{\rho_\omega, \infty}(A + i \Phi \d t))$ as in Section \ref{Reduced_section}, Hamiltonian for the holomorphic symplectic structure.}
+\end{definition}
+
+We can promote the holomorphic symplectic pairing on the reduced space $\mc V_{\mr{red}}$ to a hyperk\"ahler structure.  We choose coordinates $x,y$ on $\RR^2 \sub \bb{CP}^1$, and write $A = A_1 \d t + A_2 \d x + A_3 \d y$.  Then for $i=1,2,3$ we define a pairing on the space of fields by
+\begin{equation}
+\label{hyperkahler_structure_fields}
+\omega_i((A,\Phi),(A',\Phi')) = \int_{\RR^2 \times_\eps S^1_R} \left(\kappa(A_i,\Phi') - \kappa(\Phi, A_i') + \sum_{j,k=1,2,3} \eps_{ijk} \kappa(A_j,A'_k)\right) \d x \d y \d t.
+\end{equation}
+When we form the complex-valued pairing $\omega_2 + i \omega_3$, we recover the holomorphic symplectic pairing of \ref{holo_symp_structure_fields}.  We need to pass to the reduced space of fields for this hyperk\"ahler pairing to be well-defined -- on the full space $\mc V$ the pairing $\omega_1$ will generally involve a divergent integral.  We define 
+
+On the moduli space $\mc V_{\mr{red}}$ we can extend the holomorphic symplectic moment map to a hyperk\"ahler moment map, given by the Bogomolny functional for the flat metric on $\RR^2 \sub \bb{CP}^1$.  
+\begin{align}
+\mu_{\mr{HK}} \colon \mc V_{\mr{red}} &\to \mr{Lie}(\mc G) \otimes \RR^3 \\
+(A,\Phi) &\mapsto \ast_{\mr{flat}} (F_A)|_{\RR^2 \times S^1}- \d_A \Phi|_{\CC \times_\eps S^1}, \nonumber
+\end{align}
+where the group $\mc G \otimes \RR^3$ is identified with the space of sections in $\Omega^1(M \bs (D'); \gg_\RR)$ taking value 1 on the circle $\{\infty\} \times S^1$ at infinity.
+
+\begin{lemma}
+The hyperk\"ahler quotient $\mu_{\mr{HK}}^{-1}(0)/\mc G$ of $\mc V_{\mr{red}}$ is equivalent to the Hamiltonian reduction 
+\[\mon^\mr{red}_G(\bb{CP}^1 \times S^1_R, D', \omega^\vee) := \mon^\fr_G(\bb{CP}^1 \times S^1_R, D', \omega^\vee) /\!/ T\]
+of the moduli space of framed monopoles, by the adjoint action of the centralizer $T$ of the framing value $g_\infty$.
+\end{lemma}
+
+\begin{proof}
+The actions of the groups $\mc G$ and $T$ on $\mc V_{\mr{red}}$ commute, and the conditions $\mu_{\mr{hol}}(A,\Phi) = 0$ and $\res(\phi_{\rho_\omega, \infty}(A + i \Phi \d t)) = 0$ are $T$- and $\mc G$-invariant respectively, which means that the hyperk\"ahler and holomorphic symplectic reductions by $\mc G$ and $T$ commute, and therefore, as holomorphic symplectic manifolds, we can identify
+\begin{align*}
+\mu_{\mr{HK}}^{-1}(0)/\mc G &\iso (\mc V/\!/ T) /\!/ \mc G_\CC \\
+&\iso \left( \mu_{\CC}^{-1}(0)/(\mc G_\CC) \right) /\!/ T \\
+&\iso \mon^\fr_G(\bb{CP}^1 \times S^1_R, D', \omega^\vee) /\!/ T.
+\end{align*}
+\chris{sketchy}
+\end{proof}
+  
+We will now proceed with an informal description of the deformation complex of the moduli space of periodic monopoles.  The tangent complex to this hyperk\"ahler quotient at a point $(\bo P, \mc A)$ can be written as $\Omega^0(M \!\bs\! D; (\gg_\RR)_{\bo P})[1] \to \bb T_{\mu^{-1}(0)}$ where $\bb T_{\mu^{-1}(0)}$ is the tangent complex to the zero locus of the moment map, concentrated in non-negative degrees. Roughly speaking $\bb T_{\mu^{-1}(0)} = \bb T_{\mc V} \overset {\d\mu} \to \Omega^1(M; (\gg_R)_{\bo P})[-1]$.  
+
+More explicitly, and on $C \times S^1$ for a general Riemannian 2-manifold $C$, following \cite{FoscoloDef} define $\mc F^{\mr{mon}}_{\bo P, \mc A}$ to be the sheaf of cochain complexes
+\[\left(\xymatrix{
+\Omega^0(M \!\bs\! D; (\gg_\RR)_{\bo P}) \ar[r]^(.36){\d_1} &\Omega^1(M \!\bs\! D; (\gg_\RR)_{\bo P}) \oplus \Omega^0(M \!\bs\! D; (\gg_\RR)_{\bo P}) \ar[r]^(.64){\d_2} &\Omega^1(M \!\bs\! D; (\gg_\RR)_{\bo P})
+}\right) \otimes_\RR \CC\]
+placed in degrees $-1$, 0 and 1 where $\d_1(g) = -(\d_A(g),[\Phi, g])$ and $\d_2(a,\psi) = \ast \d_A(a) - \d_A(\psi) + [\Phi,a]$.  Write $\d_{\mr{mon}}$ for the total differential.
+  
+\begin{remark}
+Here we have chosen a point in the twistor sphere, forgetting the hyperk\"ahler structure and retaining a holomorphic symplectic structure.  In other words we have identified the target of the hyperk\"ahler moment map -- the space of imaginary quaternions -- with $\RR \oplus \CC$, which is equivalent to choosing a point in the unit sphere of the imaginary quaternions: the twistor sphere.  
 \end{remark}
-\vasily{May be we should  clarify the factor of $|z|^{-2}$ or say asymptotically at $z \to \infty$?  In fact I am getting a factor $(1+|z|^2/4)^{-2}$ for radius $1$, could you check?} 
 
-\chris{You're right, but I get $(1+|z|^2/4)^{-1}$.  In general if the metric transforms like $g' = f^2 g$ then the Hodge star of a $p$-form on an $n$-manifold transforms like $\ast_{g'} = f^{n-2p} \ast_g$, so here we have $n=3$, $p=2$, $g = g_{\mr{flat}}$ and $g'=g_{\mr{round}}$, so $f^2 = (1+|z|^2/4)^{-2}$.}
+\begin{remark} \label{monopole_holo_restriction_rmk}
+If we restrict the complexified complex $\mc F^{\mr{mon}}_{\bo P, \mc A} \otimes_\RR \CC$ to a slice $C_t = C \times \{t\}$ in the $t$-direction we can identify it with a complex of the form
+\[\Omega^\bullet(C_t; \gg_P)[1] \overset {[\Phi,-]} \to \Omega^\bullet(C_t; \gg_P)\]
+with total differential given by $\d_A$ on each of the two factors along with the differential $[\Phi,-]$ mixing the two factors. 
 
-\vasily{Please check the power of $(1+|z|^2/4)$. I am getting $-2$, not $-1$. Just in case,
-  when we scale metric on $C$ we don't touch the metric along $S^1$, we keep fixed the radius of the verical $S^1$.}
+These two summands each split up into the sum of a Dolbeault complex on $C$ and its dual.  That is, there's a natural subcomplex of the form
+\[\Omega^{0,\bullet}(C_t; \gg_P)[1] \overset {[\Phi,-]} \to i \Omega^{0,\bullet}(C_t; \gg_P) \d t\]
+where the internal differentials on the two factors are now given by $\ol \dd_{A_0}$.  This complex is in turn quasi-isomorphic to the complex
+\[\Omega^\bullet(S^1; \Omega^{0,\bullet}(C_t;\gg_P))[1]\]
+with total differential $\ol \dd_{A_0} + \d_{\mc A}$.
+\end{remark}
 
+\begin{remark}
+If one introduces a framing at a point $c \in C$ then we must correspondingly twist the complex $\mc F^{\mr{mon}}$ above by the line bundle $\OO(c)$ on $C$ -- i.e. we restrict to sections that vanish at the framing point.  So in that case we define
+\[\mc F^{\text{mon,fr}}_{(\bo P,\mc A)} = \mc F^{\mr{mon}}_{\bo P, \mc A} \otimes (\CC_{S^1} \boxtimes \OO(c)).\]
+\end{remark}
+
+The following is proved in \cite{FoscoloDef}.
+\begin{prop}
+The tangent space of $\mon_G(S^1 \times C, D', \omega^\vee)$ at the point $(\bo P,\mc A)$ is quasi-isomorphic to the hypercohomology $\bb H^0(C \times S^1; \mc F'_{(\bo P,\mc A)})$ of a subsheaf $\mc F' \sub \mc F^{\mr{mon}}$ where growth conditions are imposed on the degree 0 part of $\mc F^{\mr{mon}}$ near the singularities.
+\end{prop}
+  
 \subsection{Periodic Monopoles and $q$-Connections}
-
-\vasily{I suggest that we'll make the following claims.}
-
-\vasily{
-  1. For $C = \mathbb{CP}^{1}$ with finite volume we have isomorphism
-  of mHiggs and Mon as holomorphic symplectic spaces of dimension $2 (\rho ,\omega)$.}
-
-\vasily{
-  2. The holomorphic symplectic form does not depend on the Kahler
-  symplectic form on the base curve $C$. Therefore, one can formally take
-  a limit of infinite volume of Kahler form on $C$ in this comparison of holomorphic symplectic forms on moduli spaces}
-
-
-\vasily{ For $C = \mathbb{C}$ with flat metric we have isomorphism of
-  symplectically reduced-mHiggs with regular semi-simple framing by
-  action of Cartan $H$ at infinity with Hamiltonians given by $1/z$
-  coefficients and Kapustin-Cherkis-Foscolo monopoles moduli space
-  with fixed center of mass. Either
-  side of comparison has complex dimension $2(\rho, w_{total}^{\vee}) - 2 \mathrm{rank}(G)$.}
-
-\vasily{  Moreover, the Kapustin-Cherkis-Foscolo construction
-  on the monopole side which reduces the real dimension
-  by $4 \rank(G)$ compared to the finite-volume case
-  can be also interpreted as extra $\rank(G)$-hyperKahler quotient
-  at infinity after the infinite-dimensional hyperKahler quotient defined
-  by the Bogomolny equations. 
-  Namely, in addition to Bogomolny equations, Foscolo fixes $\rank(G)$ complex parameters $\mu$ in $\Phi$
-  and $\rank(G)$ real parameters in $A$, all together $3 \rank(G)$
-  real parameters controlling $1/r$ coefficients of monopole fields.
-  Then Foscolo divides by the compact $H_{\mathbb{R}}$ at infinity (in his
-  case $SO(2)$)  -- see 'reduction of structure group to SO(2)' at page 8 of Foscolo.}
-
-\vasily{With this understanding of the case of $C = \mathbb{C}$ of infinite volume
-  we need to correct statements in this section.
-  I think a cheap way to do the corrections, is (1) keep 'holomorphic
-  symplectic statements' (but not hyperKahler statements) 
-  that compare monopoles and (unreduced) framed Higgs on $\mathbb{CP}^1$
-  of finite volume. (2) explain that for framed Higgs on $\mathbb{CP}^1$
-  with regular semi-simple framing
-  we can define nicely holomorphic symplectic reduced space
-  of comlex dimension decreased by $2 \rank(G)$
-  (3) this reduced space is isomorphic as holomorphic sympletic
-  to Kapustin-Cherkis-Foscolo moduli space of monopoles
-  with fixed center of mass. In particular this reduced
-  space supports hyperKahler metric obtained by
-  the AKSZ pullback of the Kahler form on $C \times S^1$
-  by the variation of the monopole (given
-  a reduced mHiggs field,  the monopole is uniquely defined
-   by the heat flow of Mochizuki). 
-  (4) this reduced space supports algebraic integrable system with
-  compact fibers outside of discriminant locus of positive co-dimension
-  and is isomorphic to Coulomb branches of quiver gauge theories
-  (for simply-laced $G$)
- }
-
-
-Let us begin to address the relationship between periodic monopoles and $q$-connections.  We will first recall the comparison theorem between multiplicative Higgs bundles and periodic monopoles proved by Charbonneau--Hurtubise \cite{CharbonneauHurtubise} for $\GL_n$, and Smith \cite{Smith} for general $G$. This approach was first suggested by Kapustin-Cherkis \cite{CherkisKapustin2} under the name `spectral data'. 
+In this section we will begin to address the relationship between periodic monopoles and $q$-connections.  We will first recall the comparison theorem between multiplicative Higgs bundles and periodic monopoles proved by Charbonneau--Hurtubise \cite{CharbonneauHurtubise} for $\GL_n$, and Smith \cite{Smith} for general $G$. This approach was first suggested by Kapustin-Cherkis \cite{CherkisKapustin2} under the name `spectral data'. 
 
 \begin{definition}
 Write $D'$ for the finite subset $\{(z_1,t_1), \ldots, (z_k, t_k)\}$ of $D \times S^1$, where $D = \{z_1, \ldots, z_k\}$ is finite subset of $C$ and $0 < t_1 < t_2 < \cdots < t_k < 2\pi$ is a sequence of points in $S^1$ satisfying the condition of Remark \ref{t_stability_remark}.
@@ -1617,13 +1642,6 @@ given by the holonomy map around $S^1$, i.e. sending a monopole $(\bo P, \mc A)$
 \end{theorem}
 
 We would like to generalize this theorem to cover the twisted product $C \times_q S^1$ given by an automorphism $q$ of the curve $C$.  The most important example -- for the purposes of the present paper -- is the translation automorphism of $\bb{CP}^1$ sending $z$ to $z + \eps$, fixing the framing point $\infty$.  This automorphism is an isometry for the flat metric on $\RR^2$ but \emph{not} for the round metric on $\bb{CP}^1$, which means that the moduli space of monopoles on the $\eps$-family of twisted products is only defined for the flat metric, and therefore that we'll have to generalize slightly the theorem of Charbonneau--Hurtubise and Smith to include the flat metric, with its singularity at infinity.
-
-\vasily{May be we need to be carefull with the word 'only' in the above
-  sentence? I think it is true, if we want to fix a metric first such
-  that whatever is $\epsilon$, there is a well-defined moduli space of monopoles
-  on the $\epsilon$-twisted product (i.e. uniformly defined). But if we
-  first pick $\epsilon$ and fix it,  then there are many possibilities
-to pick a metric on the quotient $\mathbb{C}/\epsilon \mathbb{Z}$ (a cylinder)} \chris{I slightly changed the wording here.}
 
 \begin{remark}
 The moduli space of periodic monopoles on $\RR^2 \times S^1$ specifically has been studied in the mathematics literature by Foscolo \cite{FoscoloDef} , applying the analytic techniques of deformation theory to earlier work on periodic monopoles by Cherkis and Kapustin \cite{CherkisKapustin1, CherkisKapustin2}. This analysis considers a less restrictive boundary condition at infinity in $\RR^2$ than a framing -- the Higgs field may admit a regular singularity at infinity -- and therefore requires more sophisticated analysis than we'll need to consider in the present paper.
@@ -1642,8 +1660,7 @@ given by the holonomy map around $S^1$, i.e. sending a monopole $(\bo P, \mc A)$
 \end{theorem}
 
 \begin{proof}
-\chris{take care with ``special value'' $t_0$ and fix for stability condition -- todo.}
-First we'll establish injectivity.  Let $(\bo P, \mc A)$ and $(\bo P', \mc A')$ be a pair of periodic monopoles on $\bb{CP}^1 \times_\eps S^1$ with images $(P,g)$ and $(P', g')$ respectively, and choose a bundle isomorphism $\tau \colon P \to P'$ intertwining the $\eps$-connections $g$ and $g'$.  One observes first that $\bo P$ and $\bo P'$ are also isomorphic $G$-bundles since, firstly, we have an isomorphism $\bo P|_{\bb{CP}^1 \times \{t_0\}} \to \eps^*\bo P'|_{\bb{CP}^1 \times \{t_0\}}$ at the special value $t_0$, and because the holomorphic structure on $\bo P|_{\bb{CP}^1 \times \{t\}}$ varies smoothly in $t$ and the moduli space of holomorphic $G$-bundles on $\bb{CP}^1$ is discrete, we correspondingly have an isomorphism $\bo P|_{\bb{CP}^1 \times \{t\}} \to \bo P'|_{\bb{CP}^1 \times \{t\}}$ for every $t \in S^1$.  To match the monopole structures, we use the same argument as in \cite[Proposition 5.6]{Smith}.
+First we'll establish injectivity.  Let $(\bo P, \mc A)$ and $(\bo P', \mc A')$ be a pair of periodic monopoles on $\bb{CP}^1 \times_\eps S^1$ with images $(P,g)$ and $(P', g')$ respectively, and choose a bundle isomorphism $\tau \colon P \to P'$ intertwining the $\eps$-connections $g$ and $g'$.  One observes first that $\bo P$ and $\bo P'$ are also isomorphic $G$-bundles since, firstly, we have an isomorphism $\bo P|_{\bb{CP}^1 \times \{t_0\}} \to \eps^*\bo P'|_{\bb{CP}^1 \times \{t_0\}}$ at a value $t_0$ not equal to any of $t_1, \ldots, t_k$, and because the holomorphic structure on $\bo P|_{\bb{CP}^1 \times \{t\}}$ varies smoothly in $t$ and the moduli space of holomorphic $G$-bundles on $\bb{CP}^1$ is discrete, we correspondingly have an isomorphism $\bo P|_{\bb{CP}^1 \times \{t\}} \to \bo P'|_{\bb{CP}^1 \times \{t\}}$ for every $t \in S^1$.  To match the monopole structures, we use the same argument as in \cite[Proposition 5.6]{Smith}.
 
 For surjectivity, we again use the same argument as Charbonneau--Hurtubise and Smith, but with an important modification.  Charbonneau and Hurtubise use a crucial result of Simpson \cite[Theorem 1]{Simpson} on the existence of Hermitian Yang-Mills metrics on surfaces.  Simpson's argument only applies to K\"ahler metrics with finite volume, which isn't the case here.  We can, however, replace Simpson's theorem with a theorem of Mochizuki \cite[Corollary 3.13]{MochizukiKH} in the case of the curve $\CC$.
 
@@ -1670,7 +1687,71 @@ In \cite{Mochizuki}, Mochizuki establishes a more general result, where rather t
 
 \section{Comparison of Symplectic Structures}
 
-\chris{This was the argument that we made in the old section 5.2, but because the hypercohomology description there was wrong, we'll only end up using bits and pieces of that analysis.  I haven't merged anything in yet.}
+In this section, we'll show that the isomorphism of Theorem \ref{monopole_qconn_comparison_thm} provides an equivalence of holomorphic symplectic moduli spaces, where on the multiplicative Higgs side we have a holomorphic (indeed, algebraic) symplectic structure given in Section \ref{symplectic_leaf_section}, and on the monopole side we have a holomorphic symplectic form of AKSZ type discussed in Section \ref{HK_monopole_section} (specifically in equation \ref{holo_symp_structure_fields}).
+
+We'll begin by describing the derivative of the holonomy map $H \colon \mon_G^\fr(\bb{CP}^1 \times S^1, D, \omega^\vee) \to \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$. Let $\{U_0, U_1, \ldots, U_k, U_\infty\}$ be the open cover of $\bb{CP}^1$ defined in Remark \ref{atlas_remark}.  Given a tangent vector $(\delta A, \delta \Phi)$ to the moduli space of periodic monopoles at a point $(A,\Phi)$, let $(\delta A_i, \delta \Phi_i)$ denote its restriction to the open subset $U_i \times (0, 2\pi) \sub \bb{CP}^1 \times S^1$.  Choose a local potential $b_i \in \Omega^0(U_i \times (0,2\pi); \gg_\RR)$ for the tangent vector $(\delta A, \delta \Phi)$ on this patch, so that
+\begin{align*} 
+(\delta A_i, \delta \Phi_i) &= \d_{\mr{mon}} b_i \\
+&= (\d_A b_i, [\Phi, b_i].
+\end{align*}
+
+\begin{lemma} \label{local_derivative_description_lemma}
+The derivative $\d H$ of the holonomy map $H$ is given on an open patch $U_i \times (0,2\pi)$ by the formula
+\[\d H(\delta A_i, \delta \Phi_i) = \d H(\d_{\mr{mon}} b_i) = (b_i^L, b_i^R),\]
+where $b_i^L$ and $b_i^R$ are obtained as the limit of $b_i(t)$ as $t \to 0$ and $2\pi$ respectively.
+\end{lemma}
+
+\begin{proof}
+Note that the right-hand side is the derivative at $(A,\Phi)$ of the map $B_i \mapsto B_i(2\pi)H(\mc A)B_i(0)^{-1}$ where $B_i \in \Omega^0((U_i \times (0,2\pi)) \bs \{(z_i, t_i)\}; \gg_\RR)$.  This is the definition of the action of the group of gauge transformations on the holonomy $H(\mc A)$ from $t=0$ to $2\pi$.  The map is independent of the choice of local potential $b_i$ since \chris{?} \chris{needs fixing}
+\end{proof}
+
+\chris{This needs a lot of editing, also we need to discuss the role of the K\"ahler metric.}
+
+\begin{theorem} \label{symplectic_comparison_thm}
+The symplectic structure on $\mon_G^\fr(\bb{CP}^1 \times S^1,D \times\{0\},\omega^\vee)$ and the pullback of the non-degenerate pairing on $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ under the holonomy map $H$ coincide.
+\end{theorem}
+
+\begin{proof}
+  Let us begin by taking the symplectic form $\omega_{\mr{mHiggs}}$ on the moduli space $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ and evaluating it at the image under $\d H$ of two elements $(\alpha_i, \alpha'_i) = (\d_{\mr{mon}}(b_i), \d_{\mr{mon}}(b_i'))$.  Let us write $b_i(0) = b_i^L$ and $b_i(2\pi) = b_i^R$ for brevity.  Likewise for consistency with the calculations above let us denote the image $H(\mc A)$ under the holonomy map by $g$.
+  \vasily{Do we refer as $\d_{\mr{mon}}$ to Hermitian Yang-Mills monopole differential (using the compact
+    gauge group picture) or to the Dolbeault differential (using the analytic holomorphic polystable bundle picture)?}
+
+According to Proposition \ref{local_derivative_description_prop} we have
+\begin{align*}
+\omega_{\mr{mHiggs}}(\d H(\alpha_i), \d H(\alpha_i')) &= \omega_{\mr{mHiggs}}(\d H(\d_{\mr{mon}}(b_i)), \d H(\d_{\mr{mon}}(b_i'))) \\
+&= \omega_{\mr{mHiggs}}(b_i^Rg - gb_i^L,b_i^{'R}g - gb_i^{'L}).
+\end{align*}
+We can write this in terms of a pairing on the bundle $\ad(g)$.  Represent the class $b_i^Rg - gb_i^L$ by the pair $(b_i^Rg, -gb_i^L)$.  Then applying the description of $\omega_{\mr{mHiggs}}$ provided by Proposition \ref{qconn_symp_description} we have
+\begin{align*}
+\omega_{\mr{mHiggs}}(\d H(\alpha_i), \d H(\alpha_i')) &= \omega_{\mr{mHiggs}}((b_i^Rg, -gb_i^L),(b_i^{'R}g, -gb_i^{'L})) \\ 
+&= - \langle  b_i^R , g b_i'^L g^{-1}\rangle - (b \leftrightarrow b')
+\end{align*}
+where the remaining terms are killed by the antisymmetrization.
+
+On the other hand, we can evaluate the pairing $\omega_{\mr{Mon}}(\alpha_i,\alpha'_i) = \omega_{\mr{Mon}}(\d_{\mr{mon}}(b_i),\d_{\mr{mon}}(b_i'))$ via integration by parts. We'll compute the symplectic pairing for the full \v Cech complex, but it will split into a sum over open sets $U_i$.  The result is that 
+\begin{align*}
+\omega_{\mr{Mon}}(\{\alpha_i\},\{\alpha'_i\}) &= \sum_{i=0,\ldots,k,\infty} \int_{U_i} \kappa(\d_{\mr{mon}}(b_i) \wedge \d_{\mr{mon}}(b_i')) \d z - (b \leftrightarrow b')\\
+&= \sum_{i=1,\ldots,k,\infty} \int_{\dd \bb D_i \times [0,2\pi]} \kappa(b_i - b_0, \d_{\mr{mon}}(b'_i)) \d z - (b \leftrightarrow b')
+\end{align*}
+\vasily{XXX What is $d_{\mr{mon}}$ here, it is the same what was introduced on page
+ 28, i.e. the differential of the monopole self-dual complex?
+ I am confused because the differential on page 28 involves Hodge star.
+ I thought here we'd work with the differential induced
+ by the $(0,1)$ part of the connection $\mathcal{A}$,
+ that is $ d \bar z \nabla_{\bar z}  +  d t \nabla_{t}$. 
+?}
+
+using here the fact that $\d_{\mr{mon}}b_i = \d_{\mr{mon}} b_0$ on $U_i \cap U_0$ and that $\d_{\mr{mon}} b_i(t) = 0$ when $t = 0$ or $2\pi$.  By Stokes' theorem we then have
+\begin{align*}
+ \omega_{\mr{Mon}}(\{\alpha_i\},\{\alpha'_i\})&= \sum_{i=1,\ldots,k,\infty} \oint_{\dd \bb D_i} \kappa(b_i^R - b_0^R, b_i^{'R}) - \kappa(b_i^L - b_0^L, b_i^{'L}) - (b \leftrightarrow b') \\
+ &= \sum_{i=1,\ldots,k,\infty} \oint_{\dd \bb D_i} - \kappa(b_0^R, b_i^{'R}) + \kappa(b_0^L, b_i^{'L}) - (b \leftrightarrow b').
+\end{align*}
+Pick out the summand corresponding to $U_i$.  Choose our potentials so that on the boundary $\dd \bb D_i$ we have $b_0^L = b_0^{'L} = 0$.  We can do this by setting $b^{R} = \delta g g^{-1}$ since $g$ is non-singular on $U_0$.  This choice means that on $U_0 \cap U_i$, since $\delta g  = b_{i} ^R g - g b_i^L = b_0^{R} g $ we can make the identification $ b_0^{R} = b_{i}^{R} - g b_{i}^{L} g^{-1}$.  Therefore
+\[\omega_{\mr{Mon}}(\{\alpha_i\},\{\alpha'_i\}) = \sum_{i=1,\ldots,k,\infty} \langle(g b_i^{L} g^{-1}, b_i^{'R}\rangle \quad - \quad  (b \leftrightarrow b')\]
+agreeing with the expression coming from $\mr{mHiggs}$. 
+\end{proof}
+
+\chris{add comments on further Hamiltonian reduction of both sides.}
 
 \section{Comparison of Hyperk\"ahler Structures and Twistor Rotation} \label{hyperkahler_section}
 \chris{need to include a description of the hyperk\"ahler quotient here, moved from Section \ref{periodic_monopole_section}, but including the further symplectic reduction}
