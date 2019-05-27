@@ -1744,36 +1744,14 @@ We conclude this section with a remark on the further Hamiltonian reduction by t
 \end{corollary}
 
 \section{Comparison of Hyperk\"ahler Structures and Twistor Rotation} \label{hyperkahler_section}
-\chris{need to include a description of the hyperk\"ahler quotient here, moved from Section \ref{periodic_monopole_section}, but including the further symplectic reduction}
 
-The results of the previous section imply that the symplectic structure on $\mhiggs_G^{\text{ps,fr}}(\bb{CP}^1,D,\omega^\vee)$ extends canonically to a hyperk\"ahler structure.  In this section we'll compare the twistor rotation with the deformation to the moduli space of $\eps$-connections. We'll show that in an appropriate limit, by passing to a point $\eps$ in the twistor sphere we obtain a complex manifold equivalent to the moduli space of $\eps$-connections as a deformation of the moduli space of multiplicative Higgs bundles.
+The results of the previous section imply that the symplectic structure on $\mhiggs_G^{\text{red}}(\bb{CP}^1,D,\omega^\vee)$ extends canonically to a hyperk\"ahler structure.  In this section we'll compare the twistor rotation with the deformation to the moduli space of $\eps$-connections. We'll show that in an appropriate limit, by passing to a point $\eps$ in the twistor sphere we obtain a complex manifold equivalent to the moduli space of $\eps$-connections as a deformation of the moduli space of multiplicative Higgs bundles.
 
-Recall from Section \ref{HK_monopole_section} that the moduli space of periodic monopoles on $\bb{CP}^1$ with a fixed framing at $\infty$ and fixed Dirac singularities can be described as the quotient 
-\[\mon_G^{\fr}(\bb{CP}^1 \times_\eps S^1_R, D, \omega^\vee) = \mu^{-1}(0)/\mc G,\]
-where 
-\begin{itemize}
-\item The space $\mc V$ of fields is the space of pairs $(A,\Phi)$ consisting of framed connections $A$ on the trivial principal $G_\RR$-bundle $\bo P$ on $\bb{CP}^1 \times_\eps S^1_R$, $\Phi$ is a section of $\gg_{\bo P}$ vanishing at $\{\infty\} \times S^1_R$, and the pair $(A,\Phi)$ has a Dirac singularity with charge $\omega^\vee_{z_i}$ at each point $(z_i,t_i)$ in $D'$.
-\item $\mu \colon \mc V \to \Omega^1(\bb{CP}^1 \times_\eps S^1_R; (\gg_\RR)_{\bo P})/\gg_\RR$ is the map sending a monopole $(A, \Phi)$ to the $\gg_\RR$-valued 1-form $\ast F_A - \d_A \Phi$ vanishing at $\{\infty\} \times S^1_R$.  
-\item The group $\mc G$ of gauge transformations consists of automorphisms of the trivial bundle $\bo P$ fixing the framing.
-\end{itemize}
-
-This is an instance of hyperk\"ahler reduction.  Indeed the infinite-dimensional space $\mc V$ admits a hyperk\"ahler structure with symplectic forms defined by
-\[\omega_i((A,\Phi),(A',\Phi')) = \int_{\RR^2 \times_\eps S^1_R} \left(\kappa(A_i,\Phi') - \kappa(\Phi, A_i') + \sum_{j,k=1,2,3} \eps_{ijk} \kappa(A_j,A'_k)\right) \d x \d y \d t, \]
-where $i=1,2,3$, and where $A$ can be written as $A_1 \d t + A_2 \d x + A_3 \d y$ with respect to a choice $\d z = \d (x + iy)$ of meromorphic volume form on $\bb{CP}^1$ with a second order pole at $\infty$.  This descends to a hyperk\"ahler structure on the quotient; see \cite[Section 1.4.2]{FoscoloThesis}.
-
-Let us restrict to the case where $\eps=0$ for now.  Consider the holomorphic symplectic structure $\omega_2 + i \omega_3$.  We can alternatively write the formula above for this choice of holomorphic symplectic structure in the form
-\[\omega((A_0, \mc A), (A_0', \mc A')) = \int_{\bb{CP}^1 \times S^1_R} \kappa(A_0, \mc A') - \kappa(\mc A, A_0') \d x \d y \d t,\]
-where $A_0 = A_2 + i A_3$ and $\mc A = A_1 - i \Phi$.  
-
-\begin{remark}
-We can compare this to the expression described at the beginning of Section \ref{general_symplectic_sec}. Indeed, up to a factor of $i$ we can rewrite this expression as
-\[\omega((A_0, \mc A), (A_0', \mc A')) = \int_{\bb{CP}^1 \times S^1_R} \kappa(A_0\d z + \mc A \d t, A_0' \d z + \mc A' \d t) \d \ol{z}.\]
-This expression agrees with the symplectic pairing on monopoles in Section \ref{general_symplectic_sec} as a pairing of $\gg$-valued 1-forms on $\CC \times \RR$, which are holomorphic in the $\CC$-direction, where we set $\delta \mc A = A_0\d z + \mc A \d t$.
-\end{remark}
+Recall from Section \ref{HK_monopole_section} \chris{...}
 
 This description for the hyperk\"ahler structure also tells us clearly what should happen when we perform a rotation in the twistor sphere.  The following statement follows by identifying the holomorphic symplectic structure at $\eps$ in the twistor sphere by applying the corresponding rotation in $\SO(3)$ to the coordinates $x$, $y$ and $t$ on $\RR^3$ in the expression for the holomorphic symplectic structure at $0$.  Note that when we calculate the symplectic form as an integral as above, it's enough to take the integral over just $\RR^2 \times S^1_R$ instead of $\bb{CP}^1 \times S^1_R$.
 
-Notationally, from now on we'll write the holomorphic symplectic pairing in the abbreviated form $\kappa(A_0, \mc A') - \kappa(\mc A, A_0') = \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A)$, and we'll write $\dvol$ for the volume form $\d x \wedge \d y \wedge \d t$ on $\CC \times \RR \sub \bb{CP}^1 \times S^1_R$.
+Notationally, from now on we'll write the holomorphic symplectic pairing in the abbreviated form $\kappa(A_0, \mc A') - \kappa(\mc A, A_0') = \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A)$, and we'll write $\dvol$ for the volume form $\d x \wedge \d y \wedge \d t$ on $\CC \times (0,2\pi)\sub \bb{CP}^1 \times S^1_R$.
 
 \begin{prop}
 Let $\zeta$ be a point in the twistor sphere.  The holomorphic symplectic form on the moduli space $\mon_G^{\fr}(\bb{CP}^1 \times S^1_R, D, \omega^\vee)$ of periodic monopoles is given by the formula 
@@ -1785,24 +1763,24 @@ where we identify $\zeta$ with an element of $\SO(3)$ and apply this rotation to
 Now, we'll perform our identification of the twistor deformation on the multiplicative Higgs side by rewriting this twistor rotation in a somewhat different way in the large $R$ limit.  In this limit we can identify the twistor rotation with the deformation obtained by replacing the product $\bb{CP}^1 \times S^1_R$ with the product twisted by an automorphism of $\RR^2$.  More precisely, the rotated symplectic structure can then be described in the following way.
 
 \begin{theorem} \label{HK_rotation_thm}
-Let $\left(\mhiggs^{\text{ps,fr}}_G(\bb{CP}^1,D,\omega^\vee)\right)_{\zeta,R}$ be the family of complex manifolds obtained by pulling back the holomorphic symplectic structure $\omega_{\zeta,R}$ on $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ at $\zeta$ in the twistor sphere to the moduli space of polystable framed multiplicative Higgs bundles.  In the limit where $R \to \infty$ with $2 \pi \zeta R = \eps$ fixed, the canonical smooth isomorphism
-\[\left(\mhiggs^{\text{ps,fr}}_G(\bb{CP}^1,D,\omega^\vee)\right)_{\zeta,R} \to \epsconn^{\text{ps,fr}}_G(\bb{CP}^1,D,\omega^\vee)\]
+Let $\left(\mhiggs^{\text{red}}_G(\bb{CP}^1,D,\omega^\vee)\right)_{\zeta,R}$ be the family of complex manifolds obtained by pulling back the holomorphic symplectic structure $\omega_{\zeta,R}$ on $\mon_G^{\mr{red}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ at $\zeta$ in the twistor sphere to the moduli space of polystable framed multiplicative Higgs bundles.  In the limit where $R \to \infty$ with $2 \pi \zeta R = \eps$ fixed, the canonical smooth isomorphism
+\[\left(\mhiggs^{\text{red}}_G(\bb{CP}^1,D,\omega^\vee)\right)_{\zeta,R} \to \epsconn^{\text{red}}_G(\bb{CP}^1,D,\omega^\vee)\]
 becomes holomorphic symplectic, in the sense that the holomorphic symplectic structures converge pointwise over the tangent bundle to the moduli space of monopoles. 
 \end{theorem}
 
 \begin{proof}
 First let us note that the 3-manifolds $\bb{CP}^1 \times_\eps S^1_R$ for varying values of $R$ and $\eps$ are all diffeomorphic (via a diffeomorphism fixing the circle at $\infty$).  This means that we can identify the moduli spaces in question as smooth manifolds by choosing such a diffeomorphism.  
 
-Now, according to Theorem \ref{monopole_qconn_comparison_thm} it's enough to show that the complex structure on $\mon_G^{\text{ps,fr}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ at the point $\zeta$ converges to the complex structure on the $\eps$-deformation $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_\eps S^1_R,D,\omega^\vee)$.  The key observation that we'll use is that, fixing $2 \pi \zeta R = \eps$ we can identify the rotated lattice with a \emph{sheared} lattice.  Namely, when we rotate the rank one lattice $L_{R,0} = (0,0,2\pi R)\ZZ$ by $\zeta$ we obtain the lattice
+Now, according to Theorem \ref{monopole_qconn_comparison_thm} it's enough to show that the complex structure on $\mon_G^{\text{red}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ at the point $\zeta$ converges to the complex structure on the $\eps$-deformation $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_\eps S^1_R,D,\omega^\vee)$.  The key observation that we'll use is that, fixing $2 \pi \zeta R = \eps$ we can identify the rotated lattice with a \emph{sheared} lattice.  Namely, when we rotate the rank one lattice $L_{R,0} = (0,0,2\pi R)\ZZ$ by $\zeta$ we obtain the lattice
 \[\zeta(L_{R,0}) = \frac {1}{1+|\zeta|^2} (\mr{Re}(\eps), \mr{Im}(\eps), 2\pi R (1-|\zeta|^2) )\ZZ.\]
 We can view the quotient of $\RR^3$ by the rotated lattice as a sheared lattice with different radius and shear.  Specifically, we identify
 \[\RR^3 / \zeta(L_{R,0}) \iso \RR^2 \times_{\frac{\eps}{1+|\zeta|^2}} S^1_{R \frac {1-|\zeta|^2}{1+|\zeta|^2}}.\]
 
-In order to identify the desired complex structures it's enough to identify the full family of symplectic structures on the $\eps$-deformation with the appropriately rotated family of symplectic structures without deforming.  So, if we apply the twistor rotation by $\zeta$ to the holomorphic symplectic structure $\omega_2 + i\omega_3$ on $\mon_G^{\text{ps,fr}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ (the argument will be identical for the other points in the $\bb{CP}^1$ family of holomorphic symplectic structures) we obtain the pairing
+In order to identify the desired complex structures it's enough to identify the full family of symplectic structures on the $\eps$-deformation with the appropriately rotated family of symplectic structures without deforming.  So, if we apply the twistor rotation by $\zeta$ to the holomorphic symplectic structure $\omega_2 + i\omega_3$ on $\mon_G^{\text{red}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ (the argument will be identical for the other points in the $\bb{CP}^1$ family of holomorphic symplectic structures) we obtain the pairing
 \[\omega_\zeta(\delta^{(1)}\mc A, \delta^{(2)}\mc A) = \int_{\RR^3/(\zeta(L_{R,0}))} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol.\]
 On the other hand we can identify the holomorphic symplectic structure on $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_\eps S^1_R,D,\omega^\vee)$ as
 \[\omega_\zeta(\delta^{(1)}\mc A, \delta^{(2)}\mc A) = \int_{\RR^3/(L_{R,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol.\]
-In particular, by tuning the radius and the shear parameter the above calculation means there's a hyperk\"ahler equivalence between the moduli spaces $\mon_G^{\text{ps,fr}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ -- after rotating the twistor sphere by $\zeta$ -- and $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_{\frac{\eps}{1+|\zeta|^2}} S^1_{R \frac {1-|\zeta|^2}{1+|\zeta|^2}},D,\omega^\vee)$.  
+In particular, by tuning the radius and the shear parameter the above calculation means there's a hyperk\"ahler equivalence between the moduli spaces $\mon_G^{\text{red}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ -- after rotating the twistor sphere by $\zeta$ -- and $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_{\frac{\eps}{1+|\zeta|^2}} S^1_{R \frac {1-|\zeta|^2}{1+|\zeta|^2}},D,\omega^\vee)$.  
 
 Now, let us consider the large $R$ limit.  We'd like to note that the following difference of symplectic pairings converges to zero pointwise as $R\to \infty$.
 \[ \left\lvert \int_{\RR^3/(L_{R \frac {1-|\zeta|^2}{1+|\zeta|^2},\frac{\eps}{1+|\zeta|^2}})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol - \int_{\RR^3/(L_{R,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert.\]
