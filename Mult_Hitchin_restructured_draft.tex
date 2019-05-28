@@ -1390,12 +1390,6 @@ Assume that $\rho$ is a finite-dimensional irreducible representation with highe
   Therefore, the terms in \ref{eq:Xrho} corresponding to the lower weights $w'$ in the sum will be suppressed in the $\qq_k \to 0$ limit by the coefficient $\prod_{k} \qq_k^{n_k}$.
   
   More explicitly, take a collection of highest weight irreducible representations $\{\rho_{w}\}$ with linearly independent highest weights $w_{\rho}$ (for example, a set of fundamental weights). Then in the leading order in $\qq_k$, and in the limit $\qq_k \to 0$, the value $X_{\rho}$ is determined by the first term, with highest weight $w_{\rho}$, and the correction terms are given by polynomials in $\qq_k$ with zero constant term, therefore by expressions vanishing in the limit $\qq_k \to 0$. In particular, since the representations $\{\rho_w\}$ are linearly independent, the vector fields $X_{\rho_{w}}$ are also linearly independent in the limit where $\qq \to 0$.  Since linear independence is an open condition, it follows that the Hamiltonian vector fields $X_{\rho_w}$ are linearly independent for sufficiently small $|\qq_k|$.
-
-  \vasily{Chris, perhaps with a small push of thought we could prove that $X_{\rho_w}$
-    are linearly independent for a set of highest weight fundamental representations
-    for all $|\qq_k| < 1$?} \chris{I've thought about it a bit and so far haven't seen an argument.  What is here seems sufficient though?}
-  \vasily{I agree that what is here is sufficient to prove the lemma \ref{lemma:smallq}.
-    I was just wondering if the lemma holds for any semi-simple regular framing with $|\frakq_k| < 1$, which means for any value of the coupling constant in the quiver theory, not only for the very small coupling constants. If we don't have an idea how to make it stronger, we can leave as is. }
 \end{proof}
 
 \begin{remark}
@@ -1407,9 +1401,7 @@ We define the \emph{reduced moduli space} of multiplicative Higgs bundles to be 
 \begin{corollary}
   For a regular semi-simple element $g_\infty \in G$, with $|\qq_k|$ sufficiently small, there is a symplectic space $\mhiggs^\red_G(\bb{CP}^1, D, \omega^\vee)$ defined to be the symplectic reduction of $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$ by the centralizer $T$ of $g_\infty$, i.e.
   \[\mhiggs^\red_G(\bb{CP}^1, D, \omega^\vee) := (\res \phi_{\rho_{w}, \infty} )^{-1} (c_{w}) // T\]
-  where $\rho_{w}$ runs over a collection of irreducible highest weight representations with linearly independent highest weights $w$,  and $c_{w} \in \mathbb{C}$ \chris{generic?}.
-  \vasily{I think for sufficiently small $\frakq$ the statement holds  $\forall c_{w} \in \mathbb{C}$. I don't see for which $c_{w}$ the statement could break down. Do you have concern
-    about this?} This reduced moduli space has dimension
+  where $\rho_{w}$ runs over a collection of irreducible highest weight representations with linearly independent highest weights $w$,  and fixed $c_{w} \in \mathbb{C}$. This reduced moduli space has dimension
   \begin{equation}
     \label{eq:dim-reduced}
 \dim_{\mathbb{C}} \mhiggs^\red_G(\bb{CP}^1, D, \omega^\vee)  =    \dim_{\mathbb{C}}  \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee) - 2 \rank(G).
@@ -1423,43 +1415,27 @@ The reduced moduli space $\mhiggs^\red_G(\bb{CP}^1, D, \omega^\vee)$ is the tota
 \end{conjecture}
 
 \begin{remark}
-We've already argued that the total space is algebraic symplectic, and that the multiplicative Hitchin fibers are generically Lagrangian.  It only remains to verify that the fibers are generically complex tori.  When $G = \GL(r)$ one can verify the conjecture directly by computing the genus of the spectral curve with the Newton polygon. \chris{Vasily: if the argument is short we could insert a proof here, but I think it's also ok if we leave it out.}
+We've already argued that the total space is algebraic symplectic, and that the multiplicative Hitchin fibers are generically Lagrangian.  It only remains to verify that the fibers are generically complex tori.  When $G = \GL(r)$ one can verify the conjecture directly by computing the genus of the spectral curve with the Newton polygon. 
 \end{remark}
-\vasily{I'll put a couple of sentences below, please check/edit.}
 
-Just for illustration we'll consider a case of
-$\mhiggs^\red_G(\bb{CP}^1, D, \omega^\vee)$ for $G = \GL(r)$ with the divisor $D$
-given by a collection of $n$ points valued in $\omega_1^{\vee}$ and
-a collection of $n$ points valued in $\omega_{r-1}^{\vee}$ where $\omega_i^{\vee}$
-denotes a fundamental co-weight associated to the $i$-th node in the Dynkin diagram of $A_{r-1}$ numbered in increasing order from one end of the diagram. In this case the corresponding
-$A_{r-1}$ quiver gauge theory in \cite{NekrasovPestun} has gauge group $\prod_{i=1}^{r-1} SU(n_i)$ with $n_i = n$, and there are $n$ copies of fundamental matter multiplets attached
-to the node $1$, and $n$ copies for the anti-fundamental matter multiplets attached to the node $r-1$. The spectral curve is a planar curve in $C \times \mathbb{C}$ of the form (see e.g. \cite{NekrasovPestun})
-\begin{equation}
-  P(x,t) = 0
-\end{equation}
-where $P(x,t) = \sum_{i=0}^{r} t^{r-i} T_{i}(x)$ and $T_i(x)$ all have the same degree $n$.
-The Newton polygon of $P(x,t)$ is a $n \times r$ rectangle. By the genus formula of ??? \vasily{Chris, what would be correct reference for this? I recall the formula from string theory/elementary algebraic geometry lectures, but I don't know the  correct math citation. Though I found
-  \url{https://mathoverflow.net/questions/16615/calculating-the-genus-of-a-curve-using-the-newton-polygon}} the genus $g(P)$ of the spectral curve is the number of integral points in the interior of the Newton polygon: $g(P) = (n-1)(r-1)$. The fibers of the algebraic integrable system are identified with the Jacobian of the spectral curve, and hence we obtain that
+\begin{example}
+Consider the moduli spacee $\mhiggs^\red_{\GL(r)}(\bb{CP}^1, D, \omega^\vee)$ associated to a colored divisor $(D, \omega^\vee)$
+given by a collection of $n$ points valued in $\omega_1^{\vee}$, and a collection of $n$ points valued in $\omega_{r-1}^{\vee}$.  Here $\omega_i^{\vee}$ denotes the fundamental co-weight associated to the $i^\mr{th}$ node in the Dynkin diagram of $A_{r-1}$, numbered in increasing order from one end of the diagram. In this case, the corresponding $A_{r-1}$ quiver gauge theory in \cite{NekrasovPestun} has gauge group $\prod_{i=1}^{r-1} \SU(n_i)$ with $n_i = n$, and there are $n$ fundamental matter multiplets attached to the node $1$, and $n$ anti-fundamental matter multiplets attached to the node $r-1$. The spectral curve is a planar curve in $C \times \mathbb{C}$ of the form (see e.g. \cite{NekrasovPestun})
+\[P(x,t) = 0\]
+where $P(x,t) = \sum_{i=0}^{r} t^{r-i} T_{i}(x)$, and the $T_i(x)$ all have the same degree $n$.
+
+The Newton polygon of $P(x,t)$ is a $n \times r$ rectangle. By the genus formula for a generic plane curve \cite{Baker, Khovanskii}, the genus $g(P)$ of the spectral curve is equal to the number of integral points in the interior of the Newton polygon: $g(P) = (n-1)(r-1)$. The fibers of the algebraic integrable system are identified with the Jacobian of the spectral curve, and hence we obtain that
 the dimension of the fiber is $(n-1)(r-1)$.
 
-On the other hand, recall that the dimesion formula (\ref{eq:dim-reduced}) with (\ref{eq:dim-unreduced}) gives
-\begin{multline}
-  \dim \mhiggs^\red_G(\bb{CP}^1, D, \omega^\vee) =  \dim \mhiggs_{G_{ss}}(\bb{CP}^1, D, \omega^\vee) - 2 \rank G_{ss} = \sum_{i} 2 \langle \rho, \omega_i^{\vee} \rangle  - 2 (r-1)  =\\
-   = 2 n (r - 1)  - 2(r - 1) = 2(n-1)(r-1)
-\end{multline}
-where $G_{ss}$ denotes Lie group associated to the semi-simple component of the Lie algebra of $G$. \vasily{I mean that $Lie(G_{ss}) = [Lie(G), Lie(G)]$, i.e. through away the abelian part ffrom $G$ to get $G_{ss}$. Is there a way to say it in a more direct way?}. We see, that indeed, the dimension of the fiber of the Hitchin fibration is a half of the dimension of the total
-reduced moduli space $\mhiggs^{\red}_{G}(\bb{CP}^1, D, \omega^\vee)$. 
-
-
-
-
-
-
-
-
-
-
-
+On the other hand, recall that the dimension formula (\ref{eq:dim-reduced}) together with (\ref{eq:dim-unreduced}) gives
+\begin{align*}
+  \dim \mhiggs^\red_G(\bb{CP}^1, D, \omega^\vee) &=  \dim \mhiggs_{G_{ss}}(\bb{CP}^1, D, \omega^\vee) - 2 \rank G_{\mr{ss}} \\
+  &= \sum_{i} 2 \langle \rho, \omega_i^{\vee} \rangle  - 2 (r-1)  \\
+  &= 2 n (r - 1)  - 2(r - 1) \\ 
+  &= 2(n-1)(r-1),
+\end{align*}
+where $G_{\mr{ss}}$ denotes the maximal semisimple quotient of the reductive group $G$. We see that, indeed, the dimension of the fiber of the Hitchin fibration is half of the dimension of the total reduced moduli space $\mhiggs^{\red}_{G}(\bb{CP}^1, D, \omega^\vee)$. 
+\end{example}
 
 In Part \ref{part2} of the paper, we'll show that the reduced moduli space carries not only a symplectic structure, but a hyperk\"ahler structure, and that it can be identified with a hyperk\"ahler moduli space of periodic monopoles on $\RR^2$ with a framing at $\infty$.
 
@@ -1599,29 +1575,16 @@ The holomorphic moment map is defined to be the complex part of the Bogomolny eq
 \end{align*}
 
 \begin{lemma}
-  The moduli space $\mon^\fr_G(\bb{CP}^1 \times S^1_R, D', \omega^\vee)$ of framed monopoles on $\bb{CP}^1 \times S^1_R$ is equivalent to the holomorphic symplectic reduction $\mu_\CC^{-1}(0)/\mc G_\CC$, and therefore inherits a holomorphic symplectic structure from \ref{holo_symp_structure_fields}. \chris{reference?} \vasily{I am not sure what a good reference would be.
-    The relevant results in the math literature are:}
-  
-
-    F. Bottacin. Poisson structures on moduli spaces of sheaves over Poisson surfaces. Invent. Math., 121(2):421–436, 1995.
-
-    F. Bottacin.   Poisson structures on moduli spaces of framed vector bundles on surfaces. Math. Nachr., 220:33–44, 2000.
-
-    S. Mukai. Symplectic structure of the moduli space of sheaves on an abelian or K3 surface. Invent. Math.,
-    77(1):101–116, 1984.  (( proved non-degeneracy )) 
-
-    S. Mukai. Moduli of vector bundles on K3 surfaces and symplectic manifolds. Su ̄gaku, 39(3):216–235, 1987. 
-    Sugaku Expositions 1 (1988), no. 2, 139–174. (( proved closedness ))
-
-
-    \vasily{see also exposition in \url{http://preprints.ihes.fr/2011/M/M-11-27.pdf}}
-    
+  The moduli space $\mon^\fr_G(\bb{CP}^1 \times S^1_R, D', \omega^\vee)$ of framed monopoles on $\bb{CP}^1 \times S^1_R$ is equivalent to the holomorphic symplectic reduction $\mu_\CC^{-1}(0)/\mc G_\CC$, and therefore inherits a holomorphic symplectic structure from \ref{holo_symp_structure_fields}. \vasily{I am not sure what a good reference would be.
+    The relevant results in the math literature are ... see also exposition in \url{http://preprints.ihes.fr/2011/M/M-11-27.pdf}}
 \end{lemma}
+
+This holomorphic symplectic structure has been studied in the literature in an alternative guise: that of the moduli space of $G_\RR$-instantons on the 4-manifold $\bb{CP}^1 \times S^1 \times S^1$, from which our moduli space can be recovered under dimensional reduction \cite{Mukai1,Mukai2,Bottacin1,Bottacin2}. \chris{so these references seem to correspond to holomorphic symplectic structures on moduli of instantons on $\RR^4$ or $S^4$.  Can I clarify, what about the inclusion of Dirac singularities, and what about $\RR^2 \times S^1 \times S^1$ (maybe the latter follows already in an appropriate context)?  Also, do we need to say anything else for $G$ instead of $\GL(n)$?}
 
 In order to obtain a hyperk\"ahler structure on our moduli space, we will have to consider a further $T$-reduction identical to the reduction from Section \ref{Reduced_section}.
 
 \begin{definition}
-Let $\mc V_{\mr{red}}$ be the infinite-dimensional vector space of pairs $(A,\Phi)$ as above, satisfying the additional condition that there exists a neighbourhood $\{|z| > R\}$ of $\infty$ in $\bb{CP}^1$ on which, in any faithful representation of $G$, the matrix coefficients of $A$ and $\Phi$ have decay rate $O(|z|^{-1-\tau}$ for some $\tau > 0$, i.e. the first order coefficient of the Taylor expansion around $\infty$ should vanish. Equivalently, $\mc V_{\mr{red}}$ can be identified with the Hamiltonian reduction of the space $\mc V$ of fields by the group $T$, with moment map given by $\res(\phi_{\rho_\omega, \infty}(A_t + i \Phi))$ as in Section \ref{Reduced_section}. \chris{do we need e.g. another independent assumption on the growth rate of the curvature?} \vasily{I'am not sure. Does Mochizuki impose an assumption on the growth rate of the curvature? }
+Let $\mc V_{\mr{red}}$ be the infinite-dimensional vector space of pairs $(A,\Phi)$ as above, satisfying the additional condition that there exists a neighbourhood $\{|z| > R\}$ of $\infty$ in $\bb{CP}^1$ on which, in any faithful representation of $G$, the matrix coefficients of $A$ and $\Phi$ have decay rate $O(|z|^{-1-\tau}$ for some $\tau > 0$, i.e. the first order coefficient of the Taylor expansion around $\infty$ should vanish. Equivalently, $\mc V_{\mr{red}}$ can be identified with the Hamiltonian reduction of the space $\mc V$ of fields by the group $T$, with moment map given by $\res(\phi_{\rho_\omega, \infty}(A_t + i \Phi))$ as in Section \ref{Reduced_section}. \chris{do we need e.g. another independent assumption on the growth rate of the curvature?} \vasily{I'am not sure. Does Mochizuki impose an assumption on the growth rate of the curvature? } \chris{He doesn't seem to, but Foscolo does in \cite[Definition 4.1]{FoscoloDef} -- though there it looks like it follows from the bounds on the fields?}
 \end{definition}
 
 We can promote the holomorphic symplectic pairing on the reduced space $\mc V_{\mr{red}}$ to a hyperk\"ahler structure.  We choose coordinates $x,y$ on $\RR^2 \sub \bb{CP}^1$, and write $A = A_1 \d t + A_2 \d x + A_3 \d y$.  Then for $i=1,2,3$ we define a pairing on the space of fields by
@@ -1790,15 +1753,7 @@ On each open set $U_i$, we can use Stokes' theorem to expand the summands of the
 &= \left(\sum_{i=0,1,\ldots, k,\infty} \int_{\dd U_i \times (0,2\pi)} \kappa (b_i, \d_{\mc A}b_i') \right) + \left(\sum_{i=0,1,\ldots, k,\infty} \int_{U_i}\kappa(\ol \dd_{A_0} b_i, b_i'(2\pi) - b'_i(0)) \right) \\
 &= \sum_{i=1, \ldots, k, \infty} \int_{\dd U_i \times (0,2\pi)} \kappa (b_i - b_0, \d_{\mc A}b_i') 
 \end{align*}
-using the fact that $\d_{\mc A}b_i'$ and $\d_{\mc A}b_0'$ coincide on $\dd U_i \times (0,2\pi)$ to simplify the first summand, and the fact that $\ol \dd_{A_0} b_i'(0) = \ol \dd_{A_0} b_i'(2\pi)$ to eliminate the second summand. \chris{I'm concerned here going from the second to the third line.  If we're computing tangent vectors near zero that's fine, but in general it seems like we want a version of Stokes' theorem for covariant derivatives?  Equivalently some terms, like $\sum \int \kappa(\ol \dd_{A_0} b_i, [\mc A, b_i'])$ vanish, but I'm missing the reason why.}
-\vasily{I'll denote the covariant derivative as $D = d  + A$ to be brief,
-  and identify the Killing form with a trace in faithful representation. In the formulas
-  below the fields are considered in that representation. We consider terms of the form
-  $\tr Df \wedge Dg  = \tr D (f \wedge D g) - \tr f \wedge D D g$ for various $f,g$.
-  Since $D^2 = 0$, the second term with $DDg$ vanishes. You are asking about Stokes's theorem
-  for the  $\tr D (f \wedge Dg)$ term. Well, in matrix representation this term is
-  $ \tr d (f \wedge Dg)  + \tr [A,  (f \wedge Dg)]$, where $[,]$ denotes commutator. But the trace of the commutator vanishes, while the first term is exact with the usual de Rham operator.
-So the first term integrates to the boundary with the integrand $ f \wedge Dg$. Does this help? }
+using the fact that $\d_{\mc A}b_i'$ and $\d_{\mc A}b_0'$ coincide on $\dd U_i \times (0,2\pi)$ to simplify the first summand, and the fact that $\ol \dd_{A_0} b_i'(0) = \ol \dd_{A_0} b_i'(2\pi)$ to eliminate the second summand. 
 
 Now, taking the summands one-by-one, we can write
 \begin{align}
