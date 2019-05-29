@@ -1580,11 +1580,40 @@ The holomorphic moment map is defined to be the complex part of the Bogomolny eq
 \end{lemma}
 
 This holomorphic symplectic structure has been studied in the literature in an alternative guise: that of the moduli space of $G_\RR$-instantons on the 4-manifold $\bb{CP}^1 \times S^1 \times S^1$, from which our moduli space can be recovered under dimensional reduction \cite{Mukai1,Mukai2,Bottacin1,Bottacin2}. \chris{so these references seem to correspond to holomorphic symplectic structures on moduli of instantons on $\RR^4$ or $S^4$.  Can I clarify, what about the inclusion of Dirac singularities, and what about $\RR^2 \times S^1 \times S^1$ (maybe the latter follows already in an appropriate context)?  Also, do we need to say anything else for $G$ instead of $\GL(n)$?}
+\vasily{I would suggest to replace $\mathbb{CP}^1 \times S^1 \times S^1$
+  in the phrase above by ``holomorphic symplectic'' or by ``Calabi Yau'' surface. The Calabi-Yau $(2,0)$ form $\Omega$ on a complex
+  surface $S$ is what is needed to define
+  canonically the symplectic structure on the $Bun_{G}(S)$. I don't
+  think specialization to $G = GL(n)$ is important. In our discussion
+  you usually had some derived geometry argument why this true. I interpreted
+  you derived geometry argument as a claim that the formula in the next line is well defined.
+} 
+\begin{equation}
+  \omega(\delta A^{(1)}, \delta A^{(2)}) =
+  \tr \int_{S} \Omega \wedge \delta A^{(1)} \wedge \delta A^{(2)} 
+\end{equation}
+\vasily{and that this formula defines closed non-denerate gauge invariant symplectic
+  form on $Bun_{G}(S)$, where $A$ is the $(0,1)$-form of the connection $\bar \partial_{A} =\bar  \partial  + A$ of a given smooth $G$-bundle,
+  and this $A$ defines holomorphic structure on a $G$-bundle.
+  I think we shoud give the conceptual formula from the above line
+  and explain how it reduces under the dimensional reduction to
+  (\ref{holo_symp_structure_fields}). However, I have a correction
+  to (\ref{holo_symp_structure_fields}). In the usual conventions
+  the holomorphic structure on a smooth $G$-bundle is defined
+  by the $(0,1)$-part of the connection, i.e. by the $A = A_{\bar z} d \bar z$.  Then $\delta A^{(1)} \wedge \delta A^{(2)}$ is the $(0,2)$-form, and when wedged with $(2,0)$ form $\Omega$ we get $(2,2)$-form that we can integrate over $S$.
+  You current formula (\ref{holo_symp_structure_fields}) confusingly depends on $A_{z} dz$ instead of $A_{\bar z} d \bar z$, I think it is a mistake. We
+  also can cite \cite{HurtubiseMarkman}, please check their introduction
+  for the existence of the symplectic structure. I don't have better references
+which would deal with Dirac singularities. }
+
+
+  
 
 In order to obtain a hyperk\"ahler structure on our moduli space, we will have to consider a further $T$-reduction identical to the reduction from Section \ref{Reduced_section}.
 
 \begin{definition}
-Let $\mc V_{\mr{red}}$ be the infinite-dimensional vector space of pairs $(A,\Phi)$ as above, satisfying the additional condition that there exists a neighbourhood $\{|z| > R\}$ of $\infty$ in $\bb{CP}^1$ on which, in any faithful representation of $G$, the matrix coefficients of $A$ and $\Phi$ have decay rate $O(|z|^{-1-\tau}$ for some $\tau > 0$, i.e. the first order coefficient of the Taylor expansion around $\infty$ should vanish. Equivalently, $\mc V_{\mr{red}}$ can be identified with the Hamiltonian reduction of the space $\mc V$ of fields by the group $T$, with moment map given by $\res(\phi_{\rho_\omega, \infty}(A_t + i \Phi))$ as in Section \ref{Reduced_section}. \chris{do we need e.g. another independent assumption on the growth rate of the curvature?} \vasily{I'am not sure. Does Mochizuki impose an assumption on the growth rate of the curvature? } \chris{He doesn't seem to, but Foscolo does in \cite[Definition 4.1]{FoscoloDef} -- though there it looks like it follows from the bounds on the fields?}
+  Let $\mc V_{\mr{red}}$ be the infinite-dimensional vector space of pairs $(A,\Phi)$ as above, satisfying the additional condition that there exists a neighbourhood $\{|z| > R\}$ of $\infty$ in $\bb{CP}^1$ on which, in any faithful representation of $G$, the matrix coefficients of $A$ and $\Phi$ have decay rate $O(|z|^{-1-\tau}$ for some $\tau > 0$, i.e. the first order coefficient of the Taylor expansion around $\infty$ should vanish. Equivalently, $\mc V_{\mr{red}}$ can be identified with the Hamiltonian reduction of the space $\mc V$ of fields by the group $T$, with moment map given by $\res(\phi_{\rho_\omega, \infty}(A_t + i \Phi))$ as in Section \ref{Reduced_section}. \chris{do we need e.g. another independent assumption on the growth rate of the curvature?} \vasily{I'am not sure. Does Mochizuki impose an assumption on the growth rate of the curvature? } \chris{He doesn't seem to, but Foscolo does in \cite[Definition 4.1]{FoscoloDef} -- though there it looks like it follows from the bounds on the fields?}
+  \vasily{If we are referring in the long run to a theorem in Mochizuki's paper, I hope it is safe to state just the same assumptions as he does}
 \end{definition}
 
 We can promote the holomorphic symplectic pairing on the reduced space $\mc V_{\mr{red}}$ to a hyperk\"ahler structure.  We choose coordinates $x,y$ on $\RR^2 \sub \bb{CP}^1$, and write $A = A_1 \d t + A_2 \d x + A_3 \d y$.  Then for $i=1,2,3$ we define a pairing on the space of fields by
