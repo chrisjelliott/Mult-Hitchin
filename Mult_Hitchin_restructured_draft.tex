@@ -1514,10 +1514,10 @@ A \emph{monopole} on the Riemannian 3-manifold $M = C \times_q S^1_R$ is a smoot
 We should emphasise the difference between the Riemannian 3-manifold $M = C \times_q S^1_R$ appearing in this section and the derived stack $C \times_q S^1_B$ (the mapping torus) appearing in the previous section.  These should be thought of as smooth and algebraic realizations of the same object (justified by the comparison Theorem \ref{monopole_qconn_comparison_thm}) but they are a priori defined in different mathematical contexts.
 \end{remark}
 
-We can rephrase the data of a monopole on $M$ as follows.  Let $C_0 = C \times \{0\}$ be the fiber over $0$ in $S^1$, viewed as a Riemann surface.  Let $P$ be the restriction of the complexified bundle $\bo P_\CC$ to $C_0$.  Consider first the restriction of the complexification of $A$ to a connection $A_0$ on $P$ over $C_0$.  The $(0,1)$ part of $A_0$ automatically defines a holomorphic structure on $P$.  We can introduce an additional piece of structure on this holomorphic $G$-bundle.  In order to do so we can decompose the Bogomolny equation into one real and one complex equation as follows.
+We can rephrase the data of a monopole on $M$ as follows.  Let $C_0 = C \times \{0\}$ be the fiber over $0$ in $S^1$, viewed as a Riemann surface.  Let $P$ be the restriction of the complexified bundle $\bo P_\CC$ to $C_0$.  Consider first the restriction of the complexification of $A$ to a connection $A_{1,0}$ on $P$ over $C_0$.  The $(0,1)$ part of $A_{1,0}$ automatically defines a holomorphic structure on $P$.  We can introduce an additional piece of structure on this holomorphic $G$-bundle.  In order to do so we can decompose the Bogomolny equation into one real and one complex equation as follows.
 \begin{align}
-F_{A_0} - \nabla_t \Phi \dvol_{C_0} &= 0 \label{Bogomolny_equation_real} \\
-[\ol{\del}_{A_0}, \nabla_t - i\Phi \d t] &= 0 \label{Bogomolny_equation_complex}
+F_{A_{1,0}} - \nabla_t \Phi \dvol_{C_0} &= 0 \label{Bogomolny_equation_real} \\
+[\ol{\del}_{A_{1,0}}, \nabla_t - i\Phi \d t] &= 0 \label{Bogomolny_equation_complex}
 \end{align}
 where $\nabla_t$ is the component of the covariant derivative $\d_A$ normal to $C_0$.  
 
@@ -1562,58 +1562,28 @@ Let $\mc V$ be the infinite-dimensional vector space of pairs $(A,\Phi)$ where $
   Let $\mc G$ be the group of $G_\RR$-valued smooth functions on $M$ with value 1 on $\{\infty\} \times S^1$, acting on $\mc V$.  Let $T$ be the group of constant functions on $M$ valued in the centralizer of the element $g_\infty \in G$, also acting on $\mc V$.
 \end{definition}
 
-The vector space $\mc V$ admits a holomorphic symplectic structure using the complex structure on $\bb{CP}^1$.  We write $A$ in coordinates as $A_0 \d z + \ol A_0 \d \ol z + A_t \d t$, and set $\mc A = (A_t + i \Phi) \d t$. One defines the holomorphic symplectic pairing as
+The vector space $\mc V$ admits a holomorphic symplectic structure using the complex structure on $\bb{CP}^1$.  We write $A$ in coordinates as $A_{0,1} + A_{1,0}  + A_t \d t$, and set $\mc A = (A_t + i \Phi) \d t$. One defines the holomorphic symplectic pairing as
 \begin{equation}
  \label{holo_symp_structure_fields}
- \omega_{\mr{hol}}((A,\Phi), (A',\Phi')) = \int_{\CC \times S^1_R} \kappa(A_0, \mc A') - \kappa(\mc A, A_0') \d z \d t.
+ \omega_{\mr{hol}}((A,\Phi), (A',\Phi')) = \int_{\CC \times S^1_R} \kappa(A_{0,1}, \mc A') - \kappa(\mc A, A_{0,1}') \d z \d t.
 \end{equation}
 
 The holomorphic moment map is defined to be the complex part of the Bogomolny equations \ref{Bogomolny_equation_complex}.  That is, we define
 \begin{align*}
 \mu_\CC \colon \mc V &\to \mr{Lie}(\mc G) \otimes_\RR \CC \\
-(A,\Phi) &\mapsto [\ol{\del}_{A_0}, \mc A].
+(A,\Phi) &\mapsto [\ol{\del}_{A_{1,0}}, \mc A].
 \end{align*}
 
 \begin{lemma}
-  The moduli space $\mon^\fr_G(\bb{CP}^1 \times S^1_R, D', \omega^\vee)$ of framed monopoles on $\bb{CP}^1 \times S^1_R$ is equivalent to the holomorphic symplectic reduction $\mu_\CC^{-1}(0)/\mc G_\CC$, and therefore inherits a holomorphic symplectic structure from \ref{holo_symp_structure_fields}. \vasily{I am not sure what a good reference would be.
-    The relevant results in the math literature are ... see also exposition in \url{http://preprints.ihes.fr/2011/M/M-11-27.pdf}}
+  The moduli space $\mon^\fr_G(\bb{CP}^1 \times S^1_R, D', \omega^\vee)$ of framed monopoles on $\bb{CP}^1 \times S^1_R$ is equivalent to the holomorphic symplectic reduction $\mu_\CC^{-1}(0)/\mc G_\CC$, and therefore inherits a holomorphic symplectic structure from \ref{holo_symp_structure_fields}. 
 \end{lemma}
 
-This holomorphic symplectic structure has been studied in the literature in an alternative guise: that of the moduli space of $G_\RR$-instantons on the 4-manifold $\bb{CP}^1 \times S^1 \times S^1$, from which our moduli space can be recovered under dimensional reduction \cite{Mukai1,Mukai2,Bottacin1,Bottacin2}. \chris{so these references seem to correspond to holomorphic symplectic structures on moduli of instantons on $\RR^4$ or $S^4$.  Can I clarify, what about the inclusion of Dirac singularities, and what about $\RR^2 \times S^1 \times S^1$ (maybe the latter follows already in an appropriate context)?  Also, do we need to say anything else for $G$ instead of $\GL(n)$?}
-\vasily{I would suggest to replace $\mathbb{CP}^1 \times S^1 \times S^1$
-  in the phrase above by ``holomorphic symplectic'' or by ``Calabi Yau'' surface. The Calabi-Yau $(2,0)$ form $\Omega$ on a complex
-  surface $S$ is what is needed to define
-  canonically the symplectic structure on the $Bun_{G}(S)$. I don't
-  think specialization to $G = GL(n)$ is important. In our discussion
-  you usually had some derived geometry argument why this true. I interpreted
-  you derived geometry argument as a claim that the formula in the next line is well defined.
-} 
-\begin{equation}
-  \omega(\delta A^{(1)}, \delta A^{(2)}) =
-  \tr \int_{S} \Omega \wedge \delta A^{(1)} \wedge \delta A^{(2)} 
-\end{equation}
-\vasily{and that this formula defines closed non-denerate gauge invariant symplectic
-  form on $Bun_{G}(S)$, where $A$ is the $(0,1)$-form of the connection $\bar \partial_{A} =\bar  \partial  + A$ of a given smooth $G$-bundle,
-  and this $A$ defines holomorphic structure on a $G$-bundle.
-  I think we shoud give the conceptual formula from the above line
-  and explain how it reduces under the dimensional reduction to
-  (\ref{holo_symp_structure_fields}). However, I have a correction
-  to (\ref{holo_symp_structure_fields}). In the usual conventions
-  the holomorphic structure on a smooth $G$-bundle is defined
-  by the $(0,1)$-part of the connection, i.e. by the $A = A_{\bar z} d \bar z$.  Then $\delta A^{(1)} \wedge \delta A^{(2)}$ is the $(0,2)$-form, and when wedged with $(2,0)$ form $\Omega$ we get $(2,2)$-form that we can integrate over $S$.
-  You current formula (\ref{holo_symp_structure_fields}) confusingly depends on $A_{z} dz$ instead of $A_{\bar z} d \bar z$, I think it is a mistake. We
-  also can cite \cite{HurtubiseMarkman}, please check their introduction
-  for the existence of the symplectic structure. I don't have better references
-which would deal with Dirac singularities. }
-
-
-  
+This holomorphic symplectic structure has been studied in the literature in an alternative guise: that of the moduli space of $G_\RR$-instantons on a Calabi-Yau surface, from which our moduli space can be recovered under dimensional reduction \cite{Mukai1,Mukai2,Bottacin1,Bottacin2, HurtubiseMarkman}.   
 
 In order to obtain a hyperk\"ahler structure on our moduli space, we will have to consider a further $T$-reduction identical to the reduction from Section \ref{Reduced_section}.
 
 \begin{definition}
-  Let $\mc V_{\mr{red}}$ be the infinite-dimensional vector space of pairs $(A,\Phi)$ as above, satisfying the additional condition that there exists a neighbourhood $\{|z| > R\}$ of $\infty$ in $\bb{CP}^1$ on which, in any faithful representation of $G$, the matrix coefficients of $A$ and $\Phi$ have decay rate $O(|z|^{-1-\tau}$ for some $\tau > 0$, i.e. the first order coefficient of the Taylor expansion around $\infty$ should vanish. Equivalently, $\mc V_{\mr{red}}$ can be identified with the Hamiltonian reduction of the space $\mc V$ of fields by the group $T$, with moment map given by $\res(\phi_{\rho_\omega, \infty}(A_t + i \Phi))$ as in Section \ref{Reduced_section}. \chris{do we need e.g. another independent assumption on the growth rate of the curvature?} \vasily{I'am not sure. Does Mochizuki impose an assumption on the growth rate of the curvature? } \chris{He doesn't seem to, but Foscolo does in \cite[Definition 4.1]{FoscoloDef} -- though there it looks like it follows from the bounds on the fields?}
-  \vasily{If we are referring in the long run to a theorem in Mochizuki's paper, I hope it is safe to state just the same assumptions as he does}
+  Let $\mc V_{\mr{red}}$ be the infinite-dimensional vector space of pairs $(A,\Phi)$ as above, satisfying the additional condition that there exists a neighbourhood $\{|z| > R\}$ of $\infty$ in $\bb{CP}^1$ on which, in any faithful representation of $G$, the matrix coefficients of $A$ and $\Phi$ have decay rate $O(|z|^{-1-\tau}$ for some $\tau > 0$, i.e. the first order coefficient of the Taylor expansion around $\infty$ should vanish. Equivalently, $\mc V_{\mr{red}}$ can be identified with the Hamiltonian reduction of the space $\mc V$ of fields by the group $T$, with moment map given by $\res(\phi_{\rho_\omega, \infty}(A_t + i \Phi))$ as in Section \ref{Reduced_section}.
 \end{definition}
 
 We can promote the holomorphic symplectic pairing on the reduced space $\mc V_{\mr{red}}$ to a hyperk\"ahler structure.  We choose coordinates $x,y$ on $\RR^2 \sub \bb{CP}^1$, and write $A = A_1 \d t + A_2 \d x + A_3 \d y$.  Then for $i=1,2,3$ we define a pairing on the space of fields by
@@ -1666,9 +1636,9 @@ with total differential given by $\d_A$ on each of the two factors along with th
 
 These two summands each split up into the sum of a Dolbeault complex on $C$ and its dual.  That is, there's a natural subcomplex of the form
 \[\Omega^{0,\bullet}(C_t; \gg_P)[1] \overset {[\Phi,-]} \to i \Omega^{0,\bullet}(C_t; \gg_P) \d t\]
-where the internal differentials on the two factors are now given by $\ol \dd_{A_0}$.  This complex is in turn quasi-isomorphic to the complex
+where the internal differentials on the two factors are now given by $\ol \dd_{A_{0,1}}$.  This complex is in turn quasi-isomorphic to the complex
 \[\Omega^\bullet(S^1; \Omega^{0,\bullet}(C_t;\gg_P))[1]\]
-with total differential $\ol \dd_{A_0} + \d_{\mc A}$.
+with total differential $\ol \dd_{A_{0,1}} + \d_{\mc A}$.
 \end{remark}
 
 \begin{remark}
@@ -1743,10 +1713,10 @@ In \cite{Mochizuki}, Mochizuki establishes a more general result, where rather t
 
 In this section, we'll show that the isomorphism of Theorem \ref{monopole_qconn_comparison_thm} provides an equivalence of holomorphic symplectic moduli spaces, where on the multiplicative Higgs side we have a holomorphic (indeed, algebraic) symplectic structure given in Section \ref{symplectic_leaf_section} (specifically in equation \ref{eq:Omega}), and on the monopole side we have a holomorphic symplectic form of AKSZ type discussed in Section \ref{HK_monopole_section} (specifically in equation \ref{holo_symp_structure_fields}).
 
-We'll begin by describing the derivative of the holonomy map $H \colon \mon_G^\fr(\bb{CP}^1 \times S^1, D, \omega^\vee) \to \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$. Let $\{U_0, U_1, \ldots, U_k, U_\infty\}$ be the open cover of $\bb{CP}^1$ defined in Remark \ref{atlas_remark}.  Given a tangent vector $(\delta A_0, \delta \mc A)$ to the moduli space of periodic monopoles at a point $(A_0,\mc A)$, let $(\delta A_{0,i}, \delta \mc A_i)$ denote its restriction to the open subset $U_i \times (0, 2\pi) \sub \bb{CP}^1 \times S^1$.  Choose a local potential $b_i \in \Omega^0(U_i \times (0,2\pi); \gg_\RR)$ for the tangent vector $(\delta A_0, \delta \mc A)$ on this patch, so that
+We'll begin by describing the derivative of the holonomy map $H \colon \mon_G^\fr(\bb{CP}^1 \times S^1, D, \omega^\vee) \to \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$. Let $\{U_0, U_1, \ldots, U_k, U_\infty\}$ be the open cover of $\bb{CP}^1$ defined in Remark \ref{atlas_remark}.  Given a tangent vector $(\delta A_{1,0}, \delta \mc A)$ to the moduli space of periodic monopoles at a point $(A_{1,0},\mc A)$, let $(\delta A_{0,i}, \delta \mc A_i)$ denote its restriction to the open subset $U_i \times (0, 2\pi) \sub \bb{CP}^1 \times S^1$.  Choose a local potential $b_i \in \Omega^0(U_i \times (0,2\pi); \gg_\RR)$ for the tangent vector $(\delta A_{1,0}, \delta \mc A)$ on this patch, so that
 \begin{align*} 
 (\delta A_{0,i}, \delta \mc A_i) &= \d_{\mr{mon}} b_i \\
-&= (\ol \dd_{A_0} b_i, \mr d_{\mc A} b_i).
+&= (\ol \dd_{A_{0,1}} b_i, \mr d_{\mc A} b_i).
 \end{align*}
 
 \begin{lemma} \label{local_derivative_description_lemma}
@@ -1777,12 +1747,12 @@ Let us begin with the symplectic structure $\omega_{\mr{hol}}$ from Equation \re
 
 On each open set $U_i$, we can use Stokes' theorem to expand the summands of the symplectic form corresponding to charts.  That is, we have 
 \begin{align*}
-\omega_{\mr{hol}}(\{\d_{\mr{mon}}b_i\}, \{\d_{\mr{mon}}b_i'\}) &= \sum_{i=0,1,\ldots, k,\infty} \int_{U_i \times (0,2\pi)} \d z \, \kappa(\ol \dd_{A_0} b_i \wedge \d_{\mc A}b_i') - (b \leftrightarrow b') \\
-&= \sum_{i=0,1,\ldots, k,\infty} \int_{U_i \times (0,2\pi)} \d z \, \kappa((\ol \dd_{A_0} + \d_{\mc A})b_i, (\ol \dd_{A_0} + \d_{\mc A})b_i') \\
-&= \left(\sum_{i=0,1,\ldots, k,\infty} \int_{\dd U_i \times (0,2\pi)} \kappa (b_i, \d_{\mc A}b_i') \right) + \left(\sum_{i=0,1,\ldots, k,\infty} \int_{U_i}\kappa(\ol \dd_{A_0} b_i, b_i'(2\pi) - b'_i(0)) \right) \\
+\omega_{\mr{hol}}(\{\d_{\mr{mon}}b_i\}, \{\d_{\mr{mon}}b_i'\}) &= \sum_{i=0,1,\ldots, k,\infty} \int_{U_i \times (0,2\pi)} \d z \, \kappa(\ol \dd_{A_{0,1}} b_i \wedge \d_{\mc A}b_i') - (b \leftrightarrow b') \\
+&= \sum_{i=0,1,\ldots, k,\infty} \int_{U_i \times (0,2\pi)} \d z \, \kappa((\ol \dd_{A_{0,1}} + \d_{\mc A})b_i, (\ol \dd_{A_{0,1}} + \d_{\mc A})b_i') \\
+&= \left(\sum_{i=0,1,\ldots, k,\infty} \int_{\dd U_i \times (0,2\pi)} \kappa (b_i, \d_{\mc A}b_i') \right) + \left(\sum_{i=0,1,\ldots, k,\infty} \int_{U_i}\kappa(\ol \dd_{A_{0,1}} b_i, b_i'(2\pi) - b'_i(0)) \right) \\
 &= \sum_{i=1, \ldots, k, \infty} \int_{\dd U_i \times (0,2\pi)} \kappa (b_i - b_0, \d_{\mc A}b_i') 
 \end{align*}
-using the fact that $\d_{\mc A}b_i'$ and $\d_{\mc A}b_0'$ coincide on $\dd U_i \times (0,2\pi)$ to simplify the first summand, and the fact that $\ol \dd_{A_0} b_i'(0) = \ol \dd_{A_0} b_i'(2\pi)$ to eliminate the second summand. 
+using the fact that $\d_{\mc A}b_i'$ and $\d_{\mc A}b_0'$ coincide on $\dd U_i \times (0,2\pi)$ to simplify the first summand, and the fact that $\ol \dd_{A_{0,1}} b_i'(0) = \ol \dd_{A_{0,1}} b_i'(2\pi)$ to eliminate the second summand. 
 
 Now, taking the summands one-by-one, we can write
 \begin{align}
@@ -1810,7 +1780,7 @@ Given the fact that the symplectic structure on $\mhiggs_G^{\text{red}}(\bb{CP}^
 
 Recall from Section \ref{HK_monopole_section} that we inherit a hyperk\"ahler structure on the reduced moduli space of periodic monopoles on $\bb{CP}^1 \times S^1_R$ from the hyperk\"ahler structure on the infinite-dimensional reduced space of fields \ref{hyperkahler_structure_fields}.  This description for the hyperk\"ahler structure also tells us what should happen when we perform a rotation in the twistor sphere.  The following statement follows by identifying the holomorphic symplectic structure at $\eps$ in the twistor sphere by applying the corresponding rotation in $\SO(3)$ to the coordinates $x$, $y$ and $t$ on $\RR^3$ in the expression for the holomorphic symplectic structure at $0$.  Note that when we calculate the symplectic form as an integral as above, it's enough to take the integral over just $\RR^2 \times S^1_R$ instead of $\bb{CP}^1 \times S^1_R$.
 
-Notationally, from now on we'll write the holomorphic symplectic pairing in the abbreviated form $\kappa(A_0, \mc A') - \kappa(\mc A, A_0') = \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A)$, and we'll write $\dvol$ for the volume form $\d x \wedge \d y \wedge \d t$ on $\CC \times (0,2\pi R)\sub \bb{CP}^1 \times S^1_R$.
+Notationally, from now on we'll write the holomorphic symplectic pairing in the abbreviated form $\kappa(A_{1,0}, \mc A') - \kappa(\mc A, A_{1,0}') = \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A)$, and we'll write $\dvol$ for the volume form $\d x \wedge \d y \wedge \d t$ on $\CC \times (0,2\pi R)\sub \bb{CP}^1 \times S^1_R$.
 
 \begin{prop}
 Let $\zeta$ be a point in the twistor sphere.  The holomorphic symplectic form on the moduli space $\mon_G^{\fr}(\bb{CP}^1 \times S^1_R, D, \omega^\vee)$ of periodic monopoles is given by the formula 
