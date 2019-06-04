@@ -1724,8 +1724,11 @@ Let $\pi \colon \wt M \to \bb{CP}^1$ be the projection sending $(t,z)$ to $z + t
 
 In order to construct the monopole, we will apply Mochizuki's theorem.  It is necessary to verify that the assumptions of \cite[Corollary 3.13]{MochizukiKH} hold.  We must choose a hermitian metric on the vector bundle associated to the holomorphic $G$-bundle constructed above under a faithful representation $\rho$, so that the holonomy around $S^1$ describes the $\eps$-connection $g$, so that near each singularity the corresponding Chern connection described a Dirac singularity of the specified charge, and so that the Taylor expansion at infinity takes the form $g(z) = g_\infty +  g_1/z + g_2/\bar{z} + g_3/z \bar{z} + O(z^{-3})$ -- i.e. so that it has the appropriate framing, and so that its Laplacian has leading term of order $|z|^{-4}$. 
 
-The result of this choice will then be that the quantity $|\tr \Lambda F(h_0)|$ is bounded,\vasily{We should not have trace here, and let's define the operator
-  $\Lambda: \Omega^{1,1} \to \Omega^{0,0}$ as adjoint to the
+The result of this choice will then be that the quantity $|\tr \Lambda F(h_0)|$ is bounded, where the Lefschetz operator
+\[\Lambda \colon \Omega^{2}(C;\gg_P) \to \Omega^{0}(C; \gg_P)\]
+is the adjoint to wedging with the K\"ahler form.
+  
+  as adjoint to the
 wedge with the Kahler form} near infinity, by $(1 +\|z\|^2)^{-2}$, as required by Mochizuki.  We build our metric using a partition of unity, so away from a neighbourhood of $\infty$, the metric coincides with the metric described by Charbonneau and Hurtubise.  On a neighbourhood of infinity, first let us eliminate the $\eps$ parameter by choosing an analytic isomorphism between $D \times_\eps S^1_R \times S^1$ and $D \times S^1_R \times S^1$, where $D$ is a disk around infinity.  We can describe a hermitian metric on $D^\times \times S^1_R \times S^1$, constant in the second $S^1$ factor, by the formula
 \[h_0(z,t) = (\rho(g(z))^\dagger)^{t/2\pi R}\rho(g(z))^{t/2\pi R}.\]
 
