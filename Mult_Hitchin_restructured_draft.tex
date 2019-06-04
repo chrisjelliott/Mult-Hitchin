@@ -920,8 +920,8 @@ The left and right derivatives $\nabla_L(\phi_v)(g)$ and $\nabla_R(\phi_v)(g)$ o
 If $g$ is a point in $G_1[[z^{-1}]]$ where $g(v)$ and $g(u)$ both converge, we can calculate the value of the Poisson bracket $\{\phi_u, \psi_v\}$ at $g$.  
 \begin{align*}
 \{\phi_u, \psi_v\}(g) &= \left\langle \frac \Omega {z-w}, \nabla_L(\phi_u)(g)(z) \otimes \nabla_L(\psi_v)(g)(w) - \nabla_R(\phi_u)(g)(z) \otimes \nabla_R(\psi_v)(g)(w)\right\rangle \\
-&= \sum_{i=0}^\infty \kappa\left(\left. \frac{\d}{\d s} \phi(e^{u^{-1-i}s}g(u)) \right|_{s=0}, \left. \frac{\d}{\d t} \psi(e^{v^{i}t}g(v)) \right|_{t=0}\right) \\
-&\qquad \qquad \qquad \qquad \qquad \qquad - \kappa\left(\left. \frac{\d}{\d s} \phi(g(u) e^{u^{-1-i}s}) \right|_{s=0}, \left.\frac{\d}{\d t} \psi(g(v) e^{v^{i}t}) \right|_{t=0}\right)\\
+&= \left. \frac{\d}{\d t} \phi \otimes \psi(e^{\frac \Omega {z-w}(u,v)} g(u) \otimes g(v)) \right|_{t=0} - \left. \frac{\d}{\d t} \phi \otimes \psi(g(u) \otimes g(v) e^{\frac \Omega {z-w}(u,v)} ) \right|_{t=0} \\
+&= \frac 1 {u-v} \left( \left. \frac{\d}{\d t} \phi \otimes \psi(e^{\Omega} g(u) \otimes g(v)) \right|_{t=0} - \left. \frac{\d}{\d t} \phi \otimes \psi(g(u) \otimes g(v) e^{\Omega} ) \right|_{t=0} \right) \\
 &= \frac 1 {u-v} (\kappa(\nabla_L^0(\phi)(g(u)), \nabla_L^0(\psi)(g(v))) - \kappa(\nabla_R^0(\phi)(g(u)), \nabla_R^0(\psi)(g(v)))),
 \end{align*}
 where now $\nabla_L^0$ and $\nabla_R^0$ denote the left and right derivatives on the finite-dimensional group $G$, rather than the infinite-dimensional group $G_1[[z^{-1}]]$, and where we've used the canonical identification between $\gg$ and $\gg^*$.
