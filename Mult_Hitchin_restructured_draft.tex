@@ -1604,8 +1604,12 @@ This holomorphic symplectic structure has been studied in the literature in an a
 In order to obtain a hyperk\"ahler structure on our moduli space, we will have to consider a further $T$-reduction identical to the reduction from Section \ref{Reduced_section}.
 
 \begin{definition} \label{reduced_fields_def}
-\chris{fix value: $\frac cz + O(|z|^{-1-\tau})$.  Although, why should we: if we really are free to choose any $c$ (not just generic $c$) why not choose $c = 0$ and have a much easier to state definition?  I'm not convinced that Foscolo's Definition 4.1 gives the generalization you claimed: his $k_\infty$ is the singularity at infinity, which is zero for us.}
-  Let $\mc V_{\mr{red}}$ be the infinite-dimensional vector space of pairs $(A,\Phi)$ as above, satisfying the additional condition that there exists a neighbourhood $\{|z| > R\}$ of $\infty$ in $\bb{CP}^1$ on which, in any faithful representation of $G$, the matrix coefficients of $A$ and $\Phi$ have decay rate $O(|z|^{-1-\tau})$ for some $\tau > 0$, i.e. the first order coefficient of the Taylor expansion around $\infty$ should vanish. 
+  Fix a regular element $g_1 \in G$.  Let $\mc V_{\mr{red}}$ be the infinite-dimensional vector space of pairs $(A,\Phi)$ as above, satisfying the additional condition that there exists a neighbourhood $\{|z| > R\}$ of $\infty$ in $\bb{CP}^1$ on which the fields $A$ and $\Phi$ can be written in the form
+  \begin{align*}
+  A &=  \mr{Re}(g_1)z^{-1}\d t + a\\
+  \Phi &= - \mr{Im}(g_1)z^{-1} + \phi 
+  \end{align*}
+  where the matrix coefficients of $a$ and $\phi$ in any faithful representation $\rho$ of $G$ have decay rate $O(|z|^{-1-\tau})$ for some $\tau > 0$, i.e. the first order coefficient of the Taylor expansion around $\infty$ should be fixed. \chris{does this look correct?}
 \end{definition}
 
 We can promote the holomorphic symplectic pairing on the reduced space $\mc V_{\mr{red}}$ to a hyperk\"ahler structure.  We choose coordinates $x,y$ on $\RR^2 \sub \bb{CP}^1$, and write $A = A_1 \d t + A_2 \d x + A_3 \d y$.  Then for $i=1,2,3$ we define a pairing on the space of fields by
@@ -1623,16 +1627,20 @@ On the moduli space $\mc V_{\mr{red}}$ we can extend the holomorphic symplectic 
 \end{align}
 where the group $\mc G \otimes \RR^3$ is identified with the space of sections in $\Omega^1(M \bs (D'); \gg_\RR)$ taking value 1 on the circle $\{\infty\} \times S^1$ at infinity.
   
+Let $T' \sub T$ be a subtorus of the centralizer of the framing value $g_\infty$ with the same rank as the semisimple part of $G$, and define $\mu_T = \res \varphi_{\rho_w,\infty}$ to be the $\mf t'^*$-valued moment map as in Lemma \ref{lemma:smallq}.  We also fix $c = \{\rho_w(g_1)\}$ to be the element of $\mf t' \iso \mf t'^*$ associated to $g_1$ in Definition \ref{reduced_fields_def}. 
+  
 \begin{lemma}
-The hyperk\"ahler quotient $\mu_{\mr{HK}}^{-1}(0)/\mc G$ of $\mc V_{\mr{red}}$ is equivalent, as a holomorphic symplectic manifold, to the Hamiltonian reduction, defined by,
-\[\mon^\mr{red}_G(\bb{CP}^1 \times S^1_R, D', \omega^\vee) := \mon^\fr_G(\bb{CP}^1 \times S^1_R, D', \omega^\vee) /\!/ T'\]
-of the moduli space of framed monopoles, by the adjoint action of a subtorus $T' \sub T$ of the centralizer of the framing value $g_\infty$ with the same rank as the semisimple part of $G$ as in Lemma \ref{lemma:smallq}.
+Suppose that the intersection of $T'$ and the centralizer of $g_1$ is trivial.  Then the hyperk\"ahler quotient $\mu_{\mr{HK}}^{-1}(0)/\mc G$ of $\mc V_{\mr{red}}$ is equivalent, as a holomorphic symplectic manifold, to the following Hamiltonian reduction of the moduli space of framed monopoles:
+\begin{align*}
+\mon^\mr{red}_G(\bb{CP}^1 \times S^1_R, D', \omega^\vee) &:= \mon^\fr_G(\bb{CP}^1 \times S^1_R, D', \omega^\vee) /\!/ T'\\
+&= \mu_{T'}^{-1}(c)/T'.
+\end{align*}
 \end{lemma}
 
 \begin{proof}
-There is a map of holomorphic symplectic manifolds $\iota \colon \mu_{\mr{HK}}^{-1}(0)/\mc G \to \mon^\fr_G(\bb{CP}^1 \times S^1_R, D', \omega^\vee)$ induced by the inclusion $\mc V_{\mr{red}} \inj \mc V$.  This map lands in the zero locus for the moment map of the Hamiltonian $T'$ action, i.e. the map sending $(A_{0,1},\mc A)$ to $\res \varphi_{\rho_w,\infty}(\mc A)$ by definition of the reduced space $\mc V_{\red}$ of fields. Therefore, there is a holomorphic symplectic composite map 
+There is a map of holomorphic symplectic manifolds $\iota \colon \mu_{\mr{HK}}^{-1}(0)/\mc G \to \mon^\fr_G(\bb{CP}^1 \times S^1_R, D', \omega^\vee)$ induced by the inclusion $\mc V_{\mr{red}} \inj \mc V$.  This map lands in the locus $\mu^{-1}_{T'}(c)$ for the moment map of the Hamiltonian $T'$ action, i.e. the map sending $(A_{0,1},\mc A)$ to $\res \varphi_{\rho_w,\infty}(\mc A)$ by definition of the reduced space $\mc V_{\red}$ of fields. Therefore, there is a holomorphic symplectic composite map 
 \[f \colon \mu_{\mr{HK}}^{-1}(0)/\mc G \to \mon^\red_G(\bb{CP}^1 \times S^1_R, D', \omega^\vee)\] 
-between holomorphic symplectic manifolds of the same dimension.  The map $\iota$ meets each $T'$ orbit in a single point, so $f$ is an isomorphism. \chris{Second attempt, this is still a sketch but maybe we can see whether it can be fleshed out into a convincing argument?}
+between holomorphic symplectic manifolds of the same dimension.  By looking at the $z^{-1}$ terms in the Taylor expansion at $\infty$, we see that the map $\iota$ meets each $T'$ orbit in a single point, so $f$ is an isomorphism. \chris{Second attempt, this is still a sketch but maybe we can see whether it can be fleshed out into a convincing argument?}
 \end{proof}
 
 \subsection{Deformations of Periodic Monopoles} \label{monopole_def_section}
