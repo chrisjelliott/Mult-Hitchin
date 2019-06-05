@@ -1750,26 +1750,20 @@ In \cite{Mochizuki}, Mochizuki establishes a more general result, where rather t
 
 In this section, we'll show that the isomorphism of Theorem \ref{monopole_qconn_comparison_thm} provides an equivalence of holomorphic symplectic moduli spaces, where on the multiplicative Higgs side we have a holomorphic (indeed, algebraic) symplectic structure given in Section \ref{symplectic_leaf_section} (specifically in equation \ref{eq:Omega}), and on the monopole side we have a holomorphic symplectic form of AKSZ type discussed in Section \ref{HK_monopole_section} (specifically in equation \ref{holo_symp_structure_fields}).
 
-===== HEAD
-We'll begin by describing the derivative of the holonomy map $H \colon \mon_G^\fr(\bb{CP}^1 \times S^1, D, \omega^\vee) \to \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$. Let $\{U_0, U_1, \ldots, U_k, U_\infty\}$ be the open cover of $\bb{CP}^1$ defined in Remark \ref{atlas_remark}.  Given a tangent vector $(\delta A_{1,0}, \delta \mc A)$ \vasily{should it be $\delta A_{0,1}$?} to the moduli space of periodic monopoles at a point $(A_{1,0},\mc A)$, let $(\delta A_{0,i}, \delta \mc A_i)$ denote its restriction to the open subset $U_i \times (0, 2\pi) \sub \bb{CP}^1 \times S^1$. \vasily{Let's denote
-  the restriction by $(\delta A_{{0,1}}, \delta \mathcal{A})_i$, otherwise
-  it is a bit confusing to have subscript $(0,1)$ and then $(0,i)$,
- }
-
-
- Choose \vasily{let's remark that this choice is possible along
+We'll begin by describing the derivative of the holonomy map $H \colon \mon_G^\fr(\bb{CP}^1 \times S^1, D, \omega^\vee) \to \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$. Let $\{U_0, U_1, \ldots, U_k, U_\infty\}$ be the open cover of $\bb{CP}^1$ defined in Remark \ref{atlas_remark}.  Given a tangent vector $(\delta A_{0,1}, \delta \mc A)$ to the moduli space of periodic monopoles at a point $(A_{1,0},\mc A)$, let $(\delta A_{0,i}, \delta \mc A_i)$ denote its restriction to the open subset $U_i \times (0, 2\pi) \sub \bb{CP}^1 \times S^1$.  Choose \vasily{let's remark that this choice is possible along
    the variation of  monopoles precisely because we have
    that the curvature of the connection $D = \dd_{A_{0,1}} + d_{\mc A}$
-   vanishes by Bogomolny equations for monopoles} 
-   a local potential $b_i \in \Omega^0(U_i \times (0,2\pi); \gg_\RR)$ for the tangent vector $(\delta A_{1,0}, \delta \mc A)$ on this patch, so that
+   vanishes by Bogomolny equations for monopoles} a local potential $b_i \in \Omega^0(U_i \times (0,2\pi); \gg_\RR)$ for the tangent vector $(\delta A_{1,0}, \delta \mc A)$ on this patch, so that
 
-=======
-We'll begin by describing the derivative of the holonomy map $H \colon \mon_G^\fr(\bb{CP}^1 \times S^1, D, \omega^\vee) \to \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$. Let $\{U_0, U_1, \ldots, U_k, U_\infty\}$ be the open cover of $\bb{CP}^1$ defined in Remark \ref{atlas_remark}.  Given a tangent vector $(\delta A_{0,1}, \delta \mc A)$ to the moduli space of periodic monopoles at a point $(A_{1,0},\mc A)$, let $(\delta A_{0,i}, \delta \mc A_i)$ denote its restriction to the open subset $U_i \times (0, 2\pi) \sub \bb{CP}^1 \times S^1$.  Choose a local potential $b_i \in \Omega^0(U_i \times (0,2\pi); \gg_\RR)$ for the tangent vector $(\delta A_{1,0}, \delta \mc A)$ on this patch, so that
-========
 \begin{align*} 
 (\delta A_{0,i}, \delta \mc A_i) &= \d_{\mr{mon}} b_i \\
 &= (\ol \dd_{A_{0,1}} b_i, \mr d_{\mc A} b_i).
 \end{align*}
+\vasily{Let's denote
+  the restriction by $(\delta A_{{0,1}}, \delta \mathcal{A})_i$, otherwise
+  it is a bit confusing to have subscript $(0,1)$ and then $(0,i)$,
+ }
+
 
 \begin{lemma} \label{local_derivative_description_lemma}
 The derivative $\d H$ of the holonomy map $H$ is given on an open patch $U_i \times (0,2\pi)$ by the formula
@@ -1910,6 +1904,9 @@ First let us note that the 3-manifolds $\bb{CP}^1 \times_\eps S^1_R$ for varying
 
 Now, according to Theorem \ref{monopole_qconn_comparison_thm} it's enough to show that the complex structure on $\mon_G^{\text{red}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ at the point $\zeta$ converges to the complex structure on the $\eps$-deformation $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_\eps S^1_R,D,\omega^\vee)$.  The key observation that we'll use is that, fixing $2 \pi \zeta R = \eps$ we can identify the rotated lattice with a \emph{sheared} lattice.  Namely, when we rotate the rank one lattice $L_{R,0} = (0,0,2\pi R)\ZZ$ by $\zeta$ we obtain the lattice
 \[\zeta(L_{R,0}) = \frac {1}{1+|\zeta|^2} (\mr{Re}(\eps), \mr{Im}(\eps), 2\pi R (1-|\zeta|^2) )\ZZ.\]
+
+\vasily{I am not sure the factors of 2 are correctly placed. The length
+  of the generator of $\zeta(L_{R,0})$ depends on $\zeta$ in your formula above.Perhaps rescale the first two components by factor of 2?  } 
 We can view the quotient of $\RR^3$ by the rotated lattice as a sheared lattice with different radius and shear.  Specifically, we identify
 \[\RR^3 / \zeta(L_{R,0}) \iso \RR^2 \times_{\frac{\eps}{1+|\zeta|^2}} S^1_{R \frac {1-|\zeta|^2}{1+|\zeta|^2}}.\]
 
