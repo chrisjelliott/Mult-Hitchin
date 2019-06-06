@@ -919,27 +919,22 @@ The left and right derivatives $\nabla_L(\phi_v)(g)$ and $\nabla_R(\phi_v)(g)$ o
 \end{equation}
 
 
-If $g$ is a point in $G_1[[z^{-1}]]$ where $g(v)$ and $g(u)$ both converge, we can calculate the value of the Poisson bracket $\{\phi_u, \psi_v\}$ at $g$.  
+If $g$ is a point in $G_1[[z^{-1}]]$ where $g(v)$ and $g(u)$ both converge, we can calculate the value of the Poisson bracket $\{\phi_u, \psi_v\}$ at $g$, using a choice of basis $\{X^i\}$ for the Lie algebra $\gg$.  
 \begin{align*}
 \{\phi_u, \psi_v\}(g) &= \left\langle \frac \Omega {z-w}, \nabla_L(\phi_u)(g)(z) \otimes \nabla_L(\psi_v)(g)(w) - \nabla_R(\phi_u)(g)(z) \otimes \nabla_R(\psi_v)(g)(w)\right\rangle \\
-&= \left. \frac{\d}{\d t} \phi \otimes \psi(e^{\frac \Omega {z-w}(u,v)} g(u) \otimes g(v)) \right|_{t=0} - \left. \frac{\d}{\d t} \phi \otimes \psi(g(u) \otimes g(v) e^{\frac \Omega {z-w}(u,v)} ) \right|_{t=0} \\
-&= \frac 1 {u-v} \left( \left. \frac{\d}{\d t} \phi \otimes \psi(e^{\Omega} g(u) \otimes g(v)) \right|_{t=0} - \left. \frac{\d}{\d t} \phi \otimes \psi(g(u) \otimes g(v) e^{\Omega} ) \right|_{t=0} \right) \\
+ &= \sum_{i,j=1}^{\dim \gg} \sum_{k=0}^\infty \left\langle \Omega_{ij}X^i \otimes X^j z^{-k-1}w^k, \nabla_L(\phi_u)(g)(z) \otimes \nabla_L(\psi_v)(g)(w) - \nabla_R(\phi_u)(g)(z) \otimes \nabla_R(\psi_v)(g)(w)\right\rangle \\
+ &= \sum_{i,j,k} \Big\langle X^j,\frac{\d}{\d t} \left.\phi \left(e^{\Omega_{ij}u^{-k-1}w^kX^it}g(u)\right)\right|_{t=0} \otimes \nabla_L(\psi_v)(g)(w) \\
+ &\qquad\qquad\qquad\qquad\qquad\qquad\qquad -\left.\phi \left(g(u) e^{\Omega_{ij}u^{-k-1}w^kX^it}\right)\right|_{t=0} \otimes \nabla_R(\psi_v)(g)(w)\Big\rangle \\
+&= \sum_{i,j} \frac {\Omega_{ij}}{u-v} \left( \left.\frac{\d}{\d t} \phi(e^{X^i t}g(u))\right|_{t=0} \left.\frac{\d}{\d s} \psi(e^{X^i s}g(v))\right|_{s=0} - \left.\frac{\d}{\d t} \phi(g(u)e^{X^i t})\right|_{t=0} \left.\frac{\d}{\d s} \psi(g(v)e^{X^i s})\right|_{s=0} \right)\\
 &= \frac 1 {u-v} (\kappa(\nabla_L^0(\phi)(g(u)), \nabla_L^0(\psi)(g(v))) - \kappa(\nabla_R^0(\phi)(g(u)), \nabla_R^0(\psi)(g(v)))),
 \end{align*}
 where now $\nabla_L^0$ and $\nabla_R^0$ denote the left and right derivatives on the finite-dimensional group $G$, rather than the infinite-dimensional group $G_1[[z^{-1}]]$, and where we've used the canonical identification between $\gg$ and $\gg^*$.
-\vasily{Chris, do you have now an explanation for the above equality between
-  the first line and the second line in the above formula? 
-  I remember we had difficulties with the [[]] versus [] in our last discussion.
-  If it is not difficult, could you explain the transition from first line to the second line? Also, shouldn't we have here $\kappa^{-1}$ because we are pairing $\mathfrak{g}^{*}$ elements. } \chris{how's this?}
-
-\vasily{Sorry, do expressions in the second and the third line miss $t$ somewhere?} 
-
-\vasily{I'am confused what it means $e^{\frac{\Omega}{z-w}(u,v)}$, this expression is an element of what?  In (\ref{eq:left-right-gradient}) the exponent $X$ is an element of $\mathfrak{g}$. But in $\Omega$ we have $\mathfrak{g} \otimes \mathfrak{g}$... I am troubled here.  }
 
 \vasily{Sorry, I am again confused what does it mean $g(u) \otimes g(v)$, it is an element of what space?
   We agree that $g(u)$ is evaluation of the series $g \in G_1[[z^{-1}]]$ at $z=u$. Consequently $g(u)$ is an element
   of $G$, and $g(v)$ is an element of $G$.  What does it meant to take a tensor product of two elements of a group $G$?
   I am confused with the notation because $G$ is not a vector space or an algebra or a ring. I am having troubles here... } 
+\chris{fair complaints, I had in mind decomposing $\Omega$ as a sum of pure tensors, thought of as elements of $\gg \times \gg$, then applying the exponential map to the group $G \times G$, but from that point of view the expression wasn't clearly well-defined.  I rewrote it as you see above.}
 
 \end{example}
 
@@ -1619,8 +1614,8 @@ In order to obtain a hyperk\"ahler structure on our moduli space, we will have t
   A &=  \mr{Re}(g_1)z^{-1}\d t + a\\
   \Phi &= - \mr{Im}(g_1)z^{-1} + \phi 
   \end{align*}
-  where the matrix coefficients of $a$ and $\phi$ in any faithful representation $\rho$ of $G$ have decay rate $O(|z|^{-1-\tau})$ for some $\tau > 0$, i.e. the first order coefficient of the Taylor expansion around $\infty$ should be fixed. \chris{does this look correct?}
-  \vasily{OK, and what about the decay rate of $A_{z}, A_{\bar z}$? Are they assumed to decay also as fast as $a$, $\phi$ by Foscolo?} 
+  where the matrix coefficients of $a$ and $\phi$ in any faithful representation $\rho$ of $G$ have decay rate $O(|z|^{-1-\tau})$ for some $\tau > 0$, i.e. the first order coefficient of the Taylor expansion around $\infty$ should be fixed. 
+  \vasily{OK, and what about the decay rate of $A_{z}, A_{\bar z}$? Are they assumed to decay also as fast as $a$, $\phi$ by Foscolo?} \chris{Yes, I think so, as long as we work in the special case for Foscolo where there is no singularity at infinity.}
 \end{definition}
 
 We can promote the holomorphic symplectic pairing on the reduced space $\mc V_{\mr{red}}$ to a hyperk\"ahler structure.  We choose coordinates $x,y$ on $\RR^2 \sub \bb{CP}^1$, and write $A = A_1 \d t + A_2 \d x + A_3 \d y$.  Then for $i=1,2,3$ we define a pairing on the space of fields by
@@ -1739,10 +1734,6 @@ is the adjoint to wedging with the K\"ahler form -- is bounded in a neighbourhoo
 
 Now, to verify the bound on the growth of $|\Lambda F(h_0)|$, we'll use the fact that our framing $g_\infty$ at infinity was regular semisimple.  Because the regular semisimple locus is open in $G$, the group element $g(z)$ is regular semisimple everywhere in a sufficiently small disk around infinity.  We can, therefore, choose a local gauge transformation on the disk making $g(z)$ valued in the maximal torus $T$ centralizing $g_\infty$ in this neighbourhood.  If $g(z)$ is $T$-valued then $\Lambda F(h_0)$ vanishes, so in particular, has the required decay condition.  If $A$ and $A'$ are related to one another by an isomorphism of holomorphic vector bundles on $D \times T^2$ then the functions $|\Lambda F(A)|$ and $|\Lambda F(A')|$ are equal, so the bound on $T$-valued functions implies the same bound on regular semisimple $G$-valued functions.
 
-\vasily{If $g(z)$ is $T$-valued, then $\Lambda F(h_0)$ is zero and $ F(h_0)$ is in $L^2$ (for $F(h_0)$ we have terms $O(1/z^2)$), please could you check?  } \chris{To clarify, say $T = \CC^\times$, so write $\rho(g(z)) = f(z)$, a homomorphic function.  Then to calculate $\Lambda F$ we're supposed to compute something like $\frac {\dd^2}{\dd z \dd \ol z} \log(f(\ol z)^{t/2\pi R} f(z)^{t/2\pi R}) = \frac t{2\pi R}\frac {\dd^2}{\dd z \dd \ol z} (\log(f(\ol z)) + \log(f(z)))$, which clearly vanishes.  Is that the right logic?}
-
-\vasily{In principle yes, but the Laplacian also has the term $\frac{\partial^2}{\partial w \partial \bar w}$ where $w = s + i t$, and we claim it would also vanish for the $h_0(z,t)$ with the diagonal $g(z)$. }
-
 We must also verify analytic stability of the associated vector bundle to our $G$-bundle upon a choice of faithful representation.  To do this, we'll use Charbonneau and Hurtubise's result \cite[Lemma 4.5]{CharbonneauHurtubise}, which says that Mochizuki's definition of degree coincides with the definition from Section \ref{stability_section}.  That is, since $|\Lambda F(h_0)|$ is integrable in a neighbourhood of infinity, we can identify its integral with the algebraic definition of the degree.  Therefore, since our bundle is polystable in the sense of Section \ref{stability_section}, it is analytically polystable, and therefore we can apply Mochizuki's result.
 
 With this established, we can apply the proof of \cite[Proposition 5.2]{Smith} using Mochizuki's theorem in place of Simpson's.  The local analysis at the singularities is independent of the value of $\eps$.
@@ -1845,39 +1836,39 @@ becomes holomorphic symplectic, in the sense that the holomorphic symplectic str
 \end{theorem}
 
 \begin{proof}
-First let us note that the 3-manifolds $\bb{CP}^1 \times_\eps S^1_R$ for varying values of $R$ and $\eps$ are all diffeomorphic (via a diffeomorphism fixing the circle at $\infty$).  This means that we can identify the moduli spaces in question as smooth manifolds by choosing such a diffeomorphism.  
+First let us note that the 3-manifolds $\bb{CP}^1 \times_\eps S^1_R$ for varying values of $R$ and $\eps$ are all canonically diffeomorphic (since there is a canonical flat connection on the $(\eps,R)$ two parameter family of lattices).  This means that we can canonically identify the moduli spaces in question as smooth manifolds.  
 
 Now, according to Theorem \ref{monopole_qconn_comparison_thm} it's enough to show that the complex structure on $\mon_G^{\text{red}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ at the point $\zeta$ converges to the complex structure on the $\eps$-deformation $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_\eps S^1_R,D,\omega^\vee)$.  The key observation that we'll use is that, fixing $2 \pi \zeta R = \eps$ we can identify the rotated lattice with a \emph{sheared} lattice.  Namely, when we rotate the rank one lattice $L_{R,0} = (0,0,2\pi R)\ZZ$ by $\zeta$ we obtain the lattice
-\[\zeta(L_{R,0}) = \frac {1}{1+|\zeta|^2} (\mr{Re}(\eps), \mr{Im}(\eps), 2\pi R (1-|\zeta|^2) )\ZZ.\]
-
-\vasily{I am not sure the factors of 2 are correctly placed. The length
-  of the generator of $\zeta(L_{R,0})$ depends on $\zeta$ in your formula above. Shall we replace $|\zeta|^2$ by $1/4|\zeta|^2$ ? } 
+\[\zeta(L_{R,0}) = \frac {1}{1+|\zeta/2|^2} (\mr{Re}(\eps), \mr{Im}(\eps), 2\pi R (1-|\zeta/2|^2) )\ZZ.\]
 We can view the quotient of $\RR^3$ by the rotated lattice as a sheared lattice with different radius and shear.  Specifically, we identify
-\[\RR^3 / \zeta(L_{R,0}) \iso \RR^2 \times_{\frac{\eps}{1+|\zeta|^2}} S^1_{R \frac {1-|\zeta|^2}{1+|\zeta|^2}}.\]
+\[\RR^3 / \zeta(L_{R,0}) \iso \RR^2 \times_{\frac{\eps}{1+|\zeta/2|^2}} S^1_{R \frac {1-|\zeta/2|^2}{1+|\zeta/2|^2}}.\]
 
 In order to identify the desired complex structures it's enough to identify the full family of symplectic structures on the $\eps$-deformation with the appropriately rotated family of symplectic structures without deforming.  So, if we apply the twistor rotation by $\zeta$ to the holomorphic symplectic structure $\omega_2 + i\omega_3$ on $\mon_G^{\text{red}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ (the argument will be identical for the other points in the $\bb{CP}^1$ family of holomorphic symplectic structures) we obtain the pairing
 \[\omega_\zeta(\delta^{(1)}\mc A, \delta^{(2)}\mc A) = \int_{\RR^3/(\zeta(L_{R,0}))} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol.\]
 On the other hand we can identify the holomorphic symplectic structure on $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_\eps S^1_R,D,\omega^\vee)$ as
 \[\omega_\zeta(\delta^{(1)}\mc A, \delta^{(2)}\mc A) = \int_{\RR^3/(L_{R,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol.\]
-In particular, by tuning the radius and the shear parameter the above calculation means there's a hyperk\"ahler equivalence between the moduli spaces $\mon_G^{\text{red}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ -- after rotating the twistor sphere by $\zeta$ -- and $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_{\frac{\eps}{1+|\zeta|^2}} S^1_{R \frac {1-|\zeta|^2}{1+|\zeta|^2}},D,\omega^\vee)$.  
+In particular, by tuning the radius and the shear parameter the above calculation means there's a hyperk\"ahler equivalence between the moduli spaces $\mon_G^{\text{red}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ -- after rotating the twistor sphere by $\zeta$ -- and $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_{\frac{\eps}{1+|\zeta/2|^2}} S^1_{R \frac {1-|\zeta/2|^2}{1+|\zeta/2|^2}},D,\omega^\vee)$.  
 
 Now, let us consider the large $R$ limit.  We'd like to note that the following difference of symplectic pairings converges to zero pointwise as $R\to \infty$.
-\[ \left\lvert \int_{\RR^3/(L_{R \frac {1-|\zeta|^2}{1+|\zeta|^2},\frac{\eps}{1+|\zeta|^2}})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol - \int_{\RR^3/(L_{R,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert.\]
+\[ \left\lvert \int_{\RR^3/(L_{R \frac {1-|\zeta/2|^2}{1+|\zeta/2|^2},\frac{\eps}{1+|\zeta/2|^2}})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol - \int_{\RR^3/(L_{R,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert.\]
+Note that here we're abusing notation, and using the canonical isomorphism of moduli spaces to identify tangent vectors $\delta \mc A$ to monopoles on $\RR^3/(L_{R,\eps})$, and their images under the canonical isomorphism to the moduli space of monopoles on $\RR^3/(L_{R \frac {1-|\zeta/2|^2}{1+|\zeta/2|^2}})$.
+
 \vasily{Here $\delta^{(i)} \mathcal{A} $ are variations of the solutions to Bogomolny equations, either
-  on $\RR^3/(L_{R \frac {1-|\zeta|^2}{1+|\zeta|^2},\frac{\eps}{1+|\zeta|^2}})$ or on $\RR^3/(L_{R,\eps})$, or, equivalently
+  on $\RR^3/(L_{R \frac {1-|\zeta/2|^2}{1+|\zeta/2|^2},\frac{\eps}{1+|\zeta/2|^2}})$ or on $\RR^3/(L_{R,\eps})$, or, equivalently
   they are elements of the tangent space to the moduli space of monopoles either on
-  $\RR^3/(L_{R \frac {1-|\zeta|^2}{1+|\zeta|^2},\frac{\eps}{1+|\zeta|^2}})$ or on $\RR^3/(L_{R,\eps})$. 
+  $\RR^3/(L_{R \frac {1-|\zeta/2|^2}{1+|\zeta/2|^2},\frac{\eps}{1+|\zeta/2|^2}})$ or on $\RR^3/(L_{R,\eps})$. 
   How do we identify the tangent spaces to the different monopole moduli spaces? 
-  It seems we need to describe a map (an isomorphism) from a tangent space of the moduli space of monopoles on  $\RR^3/(L_{R \frac {1-|\zeta|^2}{1+|\zeta|^2},\frac{\eps}{1+|\zeta|^2}})$ to a tangent space of
+  It seems we need to describe a map (an isomorphism) from a tangent space of the moduli space of monopoles on  $\RR^3/(L_{R \frac {1-|\zeta|^2}{1+|\zeta/2|^2},\frac{\eps}{1+|\zeta/2|^2}})$ to a tangent space of
   the moduli space of monopoles  $\RR^3/(L_{R,\eps})$. What is our strategy to construct this map? 
-}
+} \chris{added a comment above.}
+
 Rescaling the radii of the circles only rescales the pairing by an overall constant, so we can rewrite this as 
-\[ R\left\lvert \frac {1-|\zeta|^2}{1+|\zeta|^2} \int_{\RR^3/(L_{1,\frac{\eps}{1+|\zeta|^2}})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol - \int_{\RR^3/(L_{1,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert\]
-in which we recall that $\zeta = \frac \eps {2\pi R}$.  Write $\delta^{(i)}\mc A_\zeta$ for the image of the deformation $\delta^{(i)}\mc A$ under the diffeomorphism induced by identifying the $\frac{\eps}{1+|\zeta|^2}$-twisted product with the $\eps$-twisted product, so $\delta^{(i)}\mc A_\zeta(z,t) = \delta^{(i)}\mc A(z-\frac{\eps}{1+|\zeta|^2},t)$.  Note that when we perform the integral the pairing between $\delta^{(1)}\mc A$ and $\delta^{(2)}\mc A$ and the pairing between $\delta^{(1)}\mc A_\zeta$ and $\delta^{(2)}\mc A_\zeta$ coincide.  In other words, our difference of pairings becomes
+\[ R\left\lvert \frac {1-|\zeta/2|^2}{1+|\zeta/2|^2} \int_{\RR^3/(L_{1,\frac{\eps}{1+|\zeta/2|^2}})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol - \int_{\RR^3/(L_{1,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert\]
+in which we recall that $\zeta = \frac \eps {2\pi R}$.  Write $\delta^{(i)}\mc A_\zeta$ for the image of the deformation $\delta^{(i)}\mc A$ under the diffeomorphism induced by identifying the $\frac{\eps}{1+|\zeta/2|^2}$-twisted product with the $\eps$-twisted product, so $\delta^{(i)}\mc A_\zeta(z,t) = \delta^{(i)}\mc A(z-\frac{\eps}{1+|\zeta/2|^2},t)$.  Note that when we perform the integral the pairing between $\delta^{(1)}\mc A$ and $\delta^{(2)}\mc A$ and the pairing between $\delta^{(1)}\mc A_\zeta$ and $\delta^{(2)}\mc A_\zeta$ coincide.  In other words, our difference of pairings becomes
 \begin{align*} 
-&R\left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \frac {1-|\zeta|^2}{1+|\zeta|^2} \kappa(\delta^{(1)} \mc A_\zeta, \delta^{(2)} \mc A_\zeta)  -  \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert \\
-&\quad = R \left\lvert \frac {1-|\zeta|^2}{1+|\zeta|^2} - 1 \right\rvert \left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert \\
-&\quad = \left\lvert\frac {2R |\eps|^2}{4 \pi^2 R^2 + |\eps|^2} \right \rvert \left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert.
+&R\left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \frac {1-|\zeta/2|^2}{1+|\zeta/2|^2} \kappa(\delta^{(1)} \mc A_\zeta, \delta^{(2)} \mc A_\zeta)  -  \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert \\
+&\quad = R \left\lvert \frac {1-|\zeta/2|^2}{1+|\zeta/2|^2} - 1 \right\rvert \left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert \\
+&\quad = \left\lvert\frac {2R |\eps|^2}{16 \pi^2 R^2 + |\eps|^2} \right \rvert \left\lvert \int_{\bb{CP}^1 \times_\eps S^1_1} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert.
 \end{align*}
 This converges to zero pointwise as $R \to \infty$.  The same calculation proves convergence for the other symplectic structures in the hyperk\"ahler family, and therefore convergence for the difference of the two complex structures.
 \end{proof}
