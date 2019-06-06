@@ -123,9 +123,6 @@
 \author{Chris Elliott \and Vasily Pestun}
 \date{\today}
 
-\newcommand{\chris}[1]{(\textcolor{red}{Chris: #1})}
-\newcommand{\vasily}[1]{(\textcolor{blue}{Vasily: #1})}
-
 \begin{document}
 
 \maketitle 
@@ -359,7 +356,7 @@ In particular when $q=1$ this recovers the moduli stack of multiplicative Higgs 
   connections we refer the reader to \cite{STSSevostyanov} and \cite{Sauloy}.
 \end{remark}
 
-\subsection{Local Conditions at the Singurities}
+\subsection{Local Conditions at the Singularities}
 These moduli stacks are typically of infinite type.  In order to obtain finite type stacks, and later in order to define symplectic rather than only Poisson structures, we can fix the behaviour of our multiplicative Higgs fields and $q$-difference connections near the punctures $D \sub C$.
 
 We'll write $\bb D$ to denote the \emph{formal disk} $\spec \CC[[z]]$.  Likewise we'll write $\bb D^\times$ for the \emph{formal punctured disk} $\spec \CC(\!(z)\!)$.  We'll then write $\bb B$ for the derived pushout $\bb D \sqcup_{\bb D^\times} \bb D$.  Let $LG = \map(\bb D^\times, G)$ and let $L^+G = \map(\bb D, G)$.
@@ -918,24 +915,17 @@ The left and right derivatives $\nabla_L(\phi_v)(g)$ and $\nabla_R(\phi_v)(g)$ o
   \qquad (X, \nabla_{R}(\phi_u)) \rangle := \left. \frac{\d}{\d t} \phi(g(u) e^{X(u)t})\right|_{t=0}.
 \end{equation}
 
-
 If $g$ is a point in $G_1[[z^{-1}]]$ where $g(v)$ and $g(u)$ both converge, we can calculate the value of the Poisson bracket $\{\phi_u, \psi_v\}$ at $g$, using a choice of basis $\{X^i\}$ for the Lie algebra $\gg$.  
 \begin{align*}
 \{\phi_u, \psi_v\}(g) &= \left\langle \frac \Omega {z-w}, \nabla_L(\phi_u)(g)(z) \otimes \nabla_L(\psi_v)(g)(w) - \nabla_R(\phi_u)(g)(z) \otimes \nabla_R(\psi_v)(g)(w)\right\rangle \\
- &= \sum_{i,j=1}^{\dim \gg} \sum_{k=0}^\infty \left\langle \Omega_{ij}X^i \otimes X^j z^{-k-1}w^k, \nabla_L(\phi_u)(g)(z) \otimes \nabla_L(\psi_v)(g)(w) - \nabla_R(\phi_u)(g)(z) \otimes \nabla_R(\psi_v)(g)(w)\right\rangle \\
+ &= \sum_{i,j=1}^{\dim \gg} \sum_{k=0}^\infty \Big\langle \Omega_{ij}X^i \otimes X^j z^{-k-1}w^k, \nabla_L(\phi_u)(g)(z) \otimes \nabla_L(\psi_v)(g)(w) \\
+ &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad - \nabla_R(\phi_u)(g)(z) \otimes \nabla_R(\psi_v)(g)(w)\Big\rangle \\
  &= \sum_{i,j,k} \Big\langle X^j,\frac{\d}{\d t} \left.\phi \left(e^{\Omega_{ij}u^{-k-1}w^kX^it}g(u)\right)\right|_{t=0} \otimes \nabla_L(\psi_v)(g)(w) \\
  &\qquad\qquad\qquad\qquad\qquad\qquad\qquad -\left.\phi \left(g(u) e^{\Omega_{ij}u^{-k-1}w^kX^it}\right)\right|_{t=0} \otimes \nabla_R(\psi_v)(g)(w)\Big\rangle \\
 &= \sum_{i,j} \frac {\Omega_{ij}}{u-v} \left( \left.\frac{\d}{\d t} \phi(e^{X^i t}g(u))\right|_{t=0} \left.\frac{\d}{\d s} \psi(e^{X^i s}g(v))\right|_{s=0} - \left.\frac{\d}{\d t} \phi(g(u)e^{X^i t})\right|_{t=0} \left.\frac{\d}{\d s} \psi(g(v)e^{X^i s})\right|_{s=0} \right)\\
 &= \frac 1 {u-v} (\kappa(\nabla_L^0(\phi)(g(u)), \nabla_L^0(\psi)(g(v))) - \kappa(\nabla_R^0(\phi)(g(u)), \nabla_R^0(\psi)(g(v)))),
 \end{align*}
 where now $\nabla_L^0$ and $\nabla_R^0$ denote the left and right derivatives on the finite-dimensional group $G$, rather than the infinite-dimensional group $G_1[[z^{-1}]]$, and where we've used the canonical identification between $\gg$ and $\gg^*$.
-
-\vasily{Sorry, I am again confused what does it mean $g(u) \otimes g(v)$, it is an element of what space?
-  We agree that $g(u)$ is evaluation of the series $g \in G_1[[z^{-1}]]$ at $z=u$. Consequently $g(u)$ is an element
-  of $G$, and $g(v)$ is an element of $G$.  What does it meant to take a tensor product of two elements of a group $G$?
-  I am confused with the notation because $G$ is not a vector space or an algebra or a ring. I am having troubles here... } 
-\chris{fair complaints, I had in mind decomposing $\Omega$ as a sum of pure tensors, thought of as elements of $\gg \times \gg$, then applying the exponential map to the group $G \times G$, but from that point of view the expression wasn't clearly well-defined.  I rewrote it as you see above.}
-
 \end{example}
 
 \begin{lemma} \label{evaluation_vector_fields_generate_lemma}
@@ -1057,7 +1047,7 @@ where we've identified $\gg$ and $\gg^*$ using the Killing form $\kappa$.  We mu
 \end{lemma}
 
 \begin{proof}
-  Let us pass to a representative for the Hamiltonian vector field \ref{eq:Xphiz} of the form $(X^{L}, 0)$ using the equivalence relation \ref{eq:equivalence}. We get
+  Let us pass to a representative for the Hamiltonian vector field (\ref{eq:Xphiz}) of the form $(X^{L}, 0)$ using the equivalence relation (\ref{eq:equivalence}). We get
   \begin{equation}
 \label{eq:xlw0}
 (X^L_{\phi_u} (z) , 0) =  \frac{1}{z - u} (\nabla_{L} \phi_u  - \Ad_{g(z)} (\nabla_{R} \phi_{u}), 0 )
@@ -1069,14 +1059,14 @@ where we've identified $\gg$ and $\gg^*$ using the Killing form $\kappa$.  We mu
   \item $X(z) \to 0$ as $z \to \infty$.
   \end{enumerate}
 
-  To check (1) we need to look on the potential singularities as $z \to u$ or as $z \to z_i$.  There is no singularity as $z \to u$ since the representative \ref{eq:xlw0} can be rewritten as
+  To check (1) we need to look on the potential singularities as $z \to u$ or as $z \to z_i$.  There is no singularity as $z \to u$ since the representative (\ref{eq:xlw0}) can be rewritten as
   \begin{equation}
 \label{eq:sklyanin-left}
 (X^L_{\phi_u}(z) , 0)  =     \frac{1}{z - u} (\Ad_{g(u)}(\nabla_{R} \phi_u)  - \Ad_{g(z)} (\nabla_{R} \phi_{u}),0)
   \end{equation}
   and since $g(z)$ is regular in the limit $z \to u$ the ratio is also regular as $z \to u$.
   
-  There is also no singularity as $z \to z_i$ in the original equivalence frame \ref{eq:Xphiz} (or equivalently, the singularity of \ref{eq:xlw0} near $z \to z_i$  is in the image under $\Ad_{g(z)}$ of the space of regular functions by \ref{eq:Xphiz}).
+  There is also no singularity as $z \to z_i$ in the original equivalence frame (\ref{eq:Xphiz}) (or equivalently, the singularity of (\ref{eq:xlw0}) near $z \to z_i$  is in the image under $\Ad_{g(z)}$ of the space of regular functions by (\ref{eq:Xphiz})).
  
  Point (2) is clear since $g(z)$ is regular at $z = \infty$. 
 \end{proof}
@@ -1148,7 +1138,7 @@ overlaps between $U_i$ and $U_0$, and consequently, the original formula is tran
   \Omega(X, X') =   -\frac{1}{2 \pi \imath} \sum_{z_i \in \tilde D} \oint_{\partial U_i}  \d w (
 \langle  X^{R}_{i},  \Ad_{g^{-1}} X_i^{L'} \rangle 
 \end{equation}
-Comparing the expression \ref{eq:drop-left} with \ref{eq:drop-right} we have demonstrated that $\Omega(X,X')$ is anti-symmetric.
+Comparing the expression (\ref{eq:drop-left}) with (\ref{eq:drop-right}) we have demonstrated that $\Omega(X,X')$ is anti-symmetric.
 
 To conclude, we've proven that $\Omega(X,X')$ is invariant under a change of equivalence frame in the second argument, and so by the anti-symmetry we obtain that $\Omega(X, X')$ is also invariant under a change of equivalence frame in the first argument.
 \end{proof}
@@ -1158,12 +1148,12 @@ Note that we don't yet assume that $\Omega$ is non-degenerate: we will demonstra
 \end{remark}
 
 \begin{lemma}\label{lemma:OmegaPi}
-The restriction of the bilinear form (\ref{eq:Omega}) to the $\mr{im}(\pi) \sub T_g \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$  is compatible with Sklyanin's Poisson structure $\pi$ on $G_1[[z^{-1}]]$.
+The restriction of the bilinear form (\ref{eq:Omega}) to the image $\mr{im}(\pi) \sub T_g \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$  is compatible with Sklyanin's Poisson structure $\pi$ on $G_1[[z^{-1}]]$.
 \end{lemma}
 
 \begin{proof}
   Given two evaluation functions $\phi_{u}$ and $\psi_{v}$, where $u$ and $v$ are points in $\CC \bs D$, we'd like to check
-  that Sklyanin's Poisson bracket is compatible (in the sense of \ref{eq:compatibility}) with the bilinear form $\Omega$, so
+  that Sklyanin's Poisson bracket is compatible (in the sense of (\ref{eq:compatibility})) with the bilinear form $\Omega$, so
 \begin{equation}
   \Omega(X_{\psi_{u}}, X_{\phi_{v}})  = - \{\psi_{u}, \phi_{v}\}.
 \end{equation}
@@ -1359,7 +1349,7 @@ Here, as usual, we've identified $\gg$ and $\gg^{*}$ using the Killing form.  Th
     &= ( (\Ad_{g_\infty} - \Ad_{g(w)}) \nabla_{R} \varphi_{\rho, \infty} ,0) \\
     &\sim (\nabla_{L} \varphi_{\rho, \infty}, - \nabla_{R} \varphi_{\rho, \infty})
 \end{align*}
-where the last operation $\sim$ indicates equivalence under the relation \ref{eq:equivalence}. Consequently we've obtained that $X_{\rho, \infty} \sim (\nabla_{L} \varphi_{\rho, \infty}, - \nabla_{R} \varphi_{\rho, \infty})$ is a constant vector field, i.e. is independent of $w$. Moreover, since $\varphi$ is adjoint invariant it follows that $\nabla_{L} \varphi_{\rho, \infty} = \nabla_{R} \varphi_{\rho, \infty}$, and therefore $X_{\rho, \infty}$ generates the constant adjoint action on $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$ generated by the element $\nabla_{L} \varphi_{\rho, \infty} $ of $\gg$. It remains to show that the element $\nabla_{L} \varphi_{\rho, \infty} $ belongs to the Lie
+where the last operation $\sim$ indicates equivalence under the relation (\ref{eq:equivalence}). Consequently we've obtained that $X_{\rho, \infty} \sim (\nabla_{L} \varphi_{\rho, \infty}, - \nabla_{R} \varphi_{\rho, \infty})$ is a constant vector field, i.e. is independent of $w$. Moreover, since $\varphi$ is adjoint invariant it follows that $\nabla_{L} \varphi_{\rho, \infty} = \nabla_{R} \varphi_{\rho, \infty}$, and therefore $X_{\rho, \infty}$ generates the constant adjoint action on $\mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$ generated by the element $\nabla_{L} \varphi_{\rho, \infty} $ of $\gg$. It remains to show that the element $\nabla_{L} \varphi_{\rho, \infty} $ belongs to the Lie
 algebra of the centralizer $T \subset G$ of $g_{\infty}$.  Recall that $\varphi_{\rho, \infty} = \tr \rho(g_\infty)$. By definition, using the Killing form,
 $X = \nabla_{L} \varphi_{\rho, \infty}$ is an element of $\gg$ such that
 \[\tr_{\rho}(Y g_\infty)  = \langle Y, X \rangle \quad \text{ for all } Y \in \gg,\]
@@ -1409,7 +1399,7 @@ Assume that $\rho$ is a finite-dimensional irreducible representation with highe
   We'll pick the highest weight term and recall that the other weights $w'$ of $\rho$ can be related to the highest weight $w_{h}$ by 
   \[w' = w_{h} - \sum {n_i \alpha_i},\]
   where $n_i \geq 0$,  $\sum n_i \geq 1$, and $\alpha_i$ are simple roots dual to coweights $\omega_i^{\vee}$.
-  Therefore, the terms in \ref{eq:Xrho} corresponding to the lower weights $w'$ in the sum will be suppressed in the $\qq_k \to 0$ limit by the coefficient $\prod_{k} \qq_k^{n_k}$.
+  Therefore, the terms in (\ref{eq:Xrho}) corresponding to the lower weights $w'$ in the sum will be suppressed in the $\qq_k \to 0$ limit by the coefficient $\prod_{k} \qq_k^{n_k}$.
   
   More explicitly, take a collection of highest weight irreducible representations $\{\rho_{w}\}$ with linearly independent highest weights $w_{\rho}$ (for example, a set of fundamental weights). Then in the leading order in $\qq_k$, and in the limit $\qq_k \to 0$, the value $X_{\rho}$ is determined by the first term, with highest weight $w_{\rho}$, and the correction terms are given by polynomials in $\qq_k$ with zero constant term, therefore by expressions vanishing in the limit $\qq_k \to 0$. In particular, since the representations $\{\rho_w\}$ are linearly independent, the vector fields $X_{\rho_{w}}$ are also linearly independent in the limit where $\qq \to 0$.  Since linear independence is an open condition, it follows that the Hamiltonian vector fields $X_{\rho_w}$ are linearly independent for sufficiently small $|\qq_k|$.
 \end{proof}
@@ -1542,8 +1532,8 @@ We should emphasise the difference between the Riemannian 3-manifold $M = C \tim
 
 We can rephrase the data of a monopole on $M$ as follows.  Let $C_0 = C \times \{0\}$ be the fiber over $0$ in $S^1$, viewed as a Riemann surface.  Let $P$ be the restriction of the complexified bundle $\bo P_\CC$ to $C_0$.  Consider first the restriction of the complexification of $A$ to a connection $A_{\mr{hol}}$ on $P$ over $C_0$.  The $(0,1)$ part of $A_{\mr{hol}}$ automatically defines a holomorphic structure on $P$.  We can introduce an additional piece of structure on this holomorphic $G$-bundle.  In order to do so we can decompose the Bogomolny equation into one real and one complex equation as follows.
 \begin{align}
-F_{A_{1,0}} - \nabla_t \Phi \dvol_{C_0} &= 0 \label{Bogomolny_equation_real} \\
-[\ol{\del}_{A_{1,0}}, \nabla_t - i\Phi \d t] &= 0 \label{Bogomolny_equation_complex}
+F_{A_{0,1}} - \nabla_t \Phi \dvol_{C_0} &= 0 \label{Bogomolny_equation_real} \\
+[\ol{\del}_{A_{0,1}}, \nabla_t - i\Phi \d t] &= 0 \label{Bogomolny_equation_complex}
 \end{align}
 where $\nabla_t$ is the component of the covariant derivative $\d_A$ normal to $C_0$.  
 
@@ -1597,7 +1587,7 @@ The vector space $\mc V$ admits a holomorphic symplectic structure using the com
 The holomorphic moment map is defined to be the complex part of the Bogomolny equations \ref{Bogomolny_equation_complex}.  That is, we define
 \begin{align*}
 \mu_\CC \colon \mc V &\to \mr{Lie}(\mc G) \otimes_\RR \CC \\
-(A,\Phi) &\mapsto [\ol{\del}_{A_{1,0}}, \dd_t \mc A].
+(A,\Phi) &\mapsto [\ol{\del}_{A_{0,1}}, \dd_t + \mc A].
 \end{align*}
 
 \begin{lemma}
@@ -1615,7 +1605,6 @@ In order to obtain a hyperk\"ahler structure on our moduli space, we will have t
   \Phi &= - \mr{Im}(g_1)z^{-1} + \phi 
   \end{align*}
   where the matrix coefficients of $a$ and $\phi$ in any faithful representation $\rho$ of $G$ have decay rate $O(|z|^{-1-\tau})$ for some $\tau > 0$, i.e. the first order coefficient of the Taylor expansion around $\infty$ should be fixed. 
-  \vasily{OK, and what about the decay rate of $A_{z}, A_{\bar z}$? Are they assumed to decay also as fast as $a$, $\phi$ by Foscolo?} \chris{Yes, I think so, as long as we work in the special case for Foscolo where there is no singularity at infinity.}
 \end{definition}
 
 We can promote the holomorphic symplectic pairing on the reduced space $\mc V_{\mr{red}}$ to a hyperk\"ahler structure.  We choose coordinates $x,y$ on $\RR^2 \sub \bb{CP}^1$, and write $A = A_1 \d t + A_2 \d x + A_3 \d y$.  Then for $i=1,2,3$ we define a pairing on the space of fields by
@@ -1646,7 +1635,7 @@ Suppose that the intersection of $T'$ and the centralizer of $g_1$ is trivial.  
 \begin{proof}
 There is a map of holomorphic symplectic manifolds $\iota \colon \mu_{\mr{HK}}^{-1}(0)/\mc G \to \mon^\fr_G(\bb{CP}^1 \times S^1_R, D', \omega^\vee)$ induced by the inclusion $\mc V_{\mr{red}} \inj \mc V$.  This map lands in the locus $\mu^{-1}_{T'}(c)$ for the moment map of the Hamiltonian $T'$ action, i.e. the map sending $(A_{0,1},\mc A)$ to $\res \varphi_{\rho_w,\infty}(\mc A)$ by definition of the reduced space $\mc V_{\red}$ of fields. Therefore, there is a holomorphic symplectic composite map 
 \[f \colon \mu_{\mr{HK}}^{-1}(0)/\mc G \to \mon^\red_G(\bb{CP}^1 \times S^1_R, D', \omega^\vee)\] 
-between holomorphic symplectic manifolds of the same dimension.  By looking at the $z^{-1}$ terms in the Taylor expansion at $\infty$, we see that the map $\iota$ meets each $T'$ orbit in a single point, so $f$ is an isomorphism. \chris{Second attempt, this is still a sketch but maybe we can see whether it can be fleshed out into a convincing argument?}
+between holomorphic symplectic manifolds of the same dimension.  By looking at the $z^{-1}$ terms in the Taylor expansion at $\infty$, we see that the map $\iota$ meets each $T'$ orbit in a single point, so $f$ is an isomorphism. 
 \end{proof}
 
 \subsection{Deformations of Periodic Monopoles} \label{monopole_def_section}
@@ -1732,7 +1721,9 @@ The result of this choice will then be that the quantity $|\Lambda F(h_0)|$ -- w
 is the adjoint to wedging with the K\"ahler form -- is bounded in a neighbourhood of infinity by $(1 +\|z\|^2)^{-2}$, as required by Mochizuki.  We build our metric using a partition of unity, so away from a neighbourhood of $\infty$, the metric coincides with the metric described by Charbonneau and Hurtubise.  On a neighbourhood of infinity, first let us eliminate the $\eps$ parameter by choosing an analytic isomorphism between $D \times_\eps S^1_R \times S^1$ and $D \times S^1_R \times S^1$, where $D$ is a disk around infinity.  We can describe a hermitian metric on $D^\times \times S^1_R \times S^1$, constant in the second $S^1$ factor, by the formula
 \[h_0(z,t) = (\rho(g(z))^\dagger)^{t/2\pi R}\rho(g(z))^{t/2\pi R}.\]
 
-Now, to verify the bound on the growth of $|\Lambda F(h_0)|$, we'll use the fact that our framing $g_\infty$ at infinity was regular semisimple.  Because the regular semisimple locus is open in $G$, the group element $g(z)$ is regular semisimple everywhere in a sufficiently small disk around infinity.  We can, therefore, choose a local gauge transformation on the disk making $g(z)$ valued in the maximal torus $T$ centralizing $g_\infty$ in this neighbourhood.  If $g(z)$ is $T$-valued then $\Lambda F(h_0)$ vanishes, so in particular, has the required decay condition.  If $A$ and $A'$ are related to one another by an isomorphism of holomorphic vector bundles on $D \times T^2$ then the functions $|\Lambda F(A)|$ and $|\Lambda F(A')|$ are equal, so the bound on $T$-valued functions implies the same bound on regular semisimple $G$-valued functions.
+Now, to verify the bound on the growth of $|\Lambda F(h_0)|$, we'll use the fact that our framing $g_\infty$ at infinity was regular semisimple.  Because the regular semisimple locus is open in $G$, the group element $g(z)$ is regular semisimple everywhere in a sufficiently small disk around infinity.  We can, therefore, choose a local gauge transformation on the disk making $g(z)$ valued in the maximal torus $T$ centralizing $g_\infty$ in this neighbourhood.  If $g(z)$ is $T$-valued then $\Lambda F(h_0)$ vanishes, since in the abelian case $\log h_0$ takes the form
+\[\log(h_0)(z,t) = \frac t{2\pi R}(\log f(\ol z) + \log f(z)),\]
+for a holomorphic function $f$; if we write $s$ for the coordinate on the other copy of $S^1$, and $w = t+is$, then the operator $\frac{\dd^2}{\dd z \dd \ol z} + \frac{\dd^2}{\dd w \ol \dd w}$ annihilates $\log(h_0)$.  In particular, $\Lambda F(h_0)$ has the required decay condition.  If $A$ and $A'$ are related to one another by an isomorphism of holomorphic vector bundles on $D \times T^2$ then the functions $|\Lambda F(A)|$ and $|\Lambda F(A')|$ are equal, so the bound on $T$-valued functions implies the same bound on regular semisimple $G$-valued functions.
 
 We must also verify analytic stability of the associated vector bundle to our $G$-bundle upon a choice of faithful representation.  To do this, we'll use Charbonneau and Hurtubise's result \cite[Lemma 4.5]{CharbonneauHurtubise}, which says that Mochizuki's definition of degree coincides with the definition from Section \ref{stability_section}.  That is, since $|\Lambda F(h_0)|$ is integrable in a neighbourhood of infinity, we can identify its integral with the algebraic definition of the degree.  Therefore, since our bundle is polystable in the sense of Section \ref{stability_section}, it is analytically polystable, and therefore we can apply Mochizuki's result.
 
@@ -1745,16 +1736,16 @@ In \cite{Mochizuki}, Mochizuki establishes a more general result, where rather t
 
 \section{Comparison of Symplectic Structures} \label{symp_comparison_section}
 
-In this section, we'll show that the isomorphism of Theorem \ref{monopole_qconn_comparison_thm} provides an equivalence of holomorphic symplectic moduli spaces, where on the multiplicative Higgs side we have a holomorphic (indeed, algebraic) symplectic structure given in Section \ref{symplectic_leaf_section} (specifically in equation \ref{eq:Omega}), and on the monopole side we have a holomorphic symplectic form of AKSZ type discussed in Section \ref{HK_monopole_section} (specifically in equation \ref{holo_symp_structure_fields}).
+In this section, we'll show that the isomorphism of Theorem \ref{monopole_qconn_comparison_thm} provides an equivalence of holomorphic symplectic moduli spaces, where on the multiplicative Higgs side we have a holomorphic (indeed, algebraic) symplectic structure given in Section \ref{symplectic_leaf_section} (specifically in equation (\ref{eq:Omega})), and on the monopole side we have a holomorphic symplectic form of AKSZ type discussed in Section \ref{HK_monopole_section} (specifically in equation (\ref{holo_symp_structure_fields})).
 
-We'll begin by describing the derivative of the holonomy map $H \colon \mon_G^\fr(\bb{CP}^1 \times S^1, D, \omega^\vee) \to \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$. Let $\{U_0, U_1, \ldots, U_k, U_\infty\}$ be the open cover of $\bb{CP}^1$ defined in Remark \ref{atlas_remark}.  Given a tangent vector $(\delta A_{0,1}, \delta \mc A)$ to the moduli space of periodic monopoles at a point $(A_{1,0},\mc A)$, let $(\delta A_{0,1}, \delta \mc A)_i$ denote its restriction to the open subset $U_i \times (0, 2\pi) \sub \bb{CP}^1 \times S^1$. 
+We'll begin by describing the derivative of the holonomy map $H \colon \mon_G^\fr(\bb{CP}^1 \times S^1, D, \omega^\vee) \to \mhiggs^\fr_G(\bb{CP}^1, D, \omega^\vee)$. Let $\{U_0, U_1, \ldots, U_k, U_\infty\}$ be the open cover of $\bb{CP}^1$ defined in Remark \ref{atlas_remark}.  Given a tangent vector $(\delta A_{0,1}, \delta \mc A)$ to the moduli space of periodic monopoles at a point $(A_{0,1},\mc A)$, let $(\delta A_{0,1}, \delta \mc A)_i$ denote its restriction to the open subset $U_i \times (0, 2\pi) \sub \bb{CP}^1 \times S^1$. 
 
-Choose a local potential $b_i \in \Omega^0(U_i \times (0,2\pi); \gg_\RR)$ for the tangent vector $(\delta A_{1,0}, \delta \mc A)$ on this patch, so that
+Choose a local potential $b_i \in \Omega^0(U_i \times (0,2\pi); \gg_\RR)$ for the tangent vector $(\delta A_{0,1}, \delta \mc A)$ on this patch, so that
 \begin{align*} 
-(\delta A_{0,i}, \delta \mc A_i) &= \d_{\mr{mon}} b_i \\
+(\delta A_{0,1}, \delta \mc A)_i &= \d_{\mr{mon}} b_i \\
 &= (\ol \dd_{A_{0,1}} b_i, \mr d_{\mc A} b_i).
 \end{align*}
-Such a local potential exists because the curvature of the connection $\dd_{A_{0,1}} + d_{\mc A}$ vanishes, because $(A_{0,1}, \mc A)$ solves the Bogomolny equations.  Below we'll use the notation
+Such a local potential exists because the curvature of the connection $\ol \dd_{A_{0,1}} + d_{\mc A}$ vanishes, because $(A_{0,1}, \mc A)$ solves the Bogomolny equations.  Below we'll use the notation
 \[(X^L_i, X^R_i) = (\lim_{t \to 2\pi} b_i(t), - \lim_{t \to 0} b_i(t)).\]
 
 
@@ -1762,7 +1753,7 @@ Such a local potential exists because the curvature of the connection $\dd_{A_{0
 The derivative $\d H$ of the holonomy map $H$ is given on an open patch $U_i \times (0,2\pi)$ by the formula
 \begin{equation}
 \label{local_dH_eq}
-\d H(\delta A_{0,i}, \delta \mc A_i) = \d H(\d_{\mr{mon}} b_i) = (X^L_i, X^R_i).
+\d H(\delta A_{0,1}, \delta \mc A)_i = \d H(\d_{\mr{mon}} b_i) = (X^L_i, X^R_i).
 \end{equation}
 \end{lemma}
 
@@ -1797,13 +1788,13 @@ Now, taking the summands one-by-one, we can write
  \int_{\dd U_i \times (0,2\pi)} \d z \, \kappa (b_i - b_0, \d_{\mc A}b_i')  &= \oint_{\dd U_i} \d z \, \left(\kappa(X_i^L - X_0^L,X_i'^L) - \kappa(X_i^R - X_0^R,X_i'^R)\right)  \nonumber\\
  &= \oint_{\dd U_i} \d z \, \left(-\kappa(X_0^L,X_i'^L) + \kappa(X_0^R,X_i'^R)\right), \label{eq:summand}
 \end{align}
- where the $\kappa( X_i^{L,R}, X_i^{L,R}{}')$ terms vanish  because $X_i, X_i'$ are holomorphic in each $U_i$. 
+ where the $\kappa( X_i^{L,R}, X_i'^{L,R})$ terms vanish  because $X_i, X_i'$ are holomorphic in each $U_i$. 
 
-To conclude, consider the symplectic pairing on the multiplicative Higgs moduli space, evaluated at a pair of tangent vectors of the form $\d H(\delta A_{0}, \delta \mc A)$ as in Lemma \ref{local_derivative_description_lemma}.  This takes the form
+To conclude, consider the symplectic pairing on the multiplicative Higgs moduli space (\ref{eq:Omega}), evaluated at a pair of tangent vectors of the form $\d H(\delta A_{0}, \delta \mc A)$ as in Lemma \ref{local_derivative_description_lemma}.  This takes the form
 \begin{align*}
 \Omega(\d H(\delta A_{0}, \delta \mc A), \d H(\delta A_{0}', \delta \mc A')) &= \sum_{i=1, \ldots, k, \infty} \frac 1{2\pi \imath} \oint_{\dd U_i} \d z - (\kappa(X^{L}_{i}, X^{L'}_{0}) + \kappa(X^{R}_{i}, X^{R'}_{0})).
 \end{align*} 
-This coincides, up to a global rescaling by $2 \pi \imath$, with the sum of the antisymmetric expressions \ref{eq:summand}, as required.
+This coincides, up to a global rescaling by $2 \pi \imath$, with the sum of the antisymmetric expressions (\ref{eq:summand}), as required.
 \end{proof}
 
 We conclude this section by describing the relationships between the the further Hamiltonian reduction by the global torus $T'$ on both sides.
@@ -1818,7 +1809,7 @@ The comparison theorem between multiplicative Higgs bundles and periodic monopol
 
 Recall from Section \ref{HK_monopole_section} that we inherit a hyperk\"ahler structure on the reduced moduli space of periodic monopoles on $\bb{CP}^1 \times S^1_R$ from the hyperk\"ahler structure on the infinite-dimensional reduced space of fields \ref{hyperkahler_structure_fields}.  This description for the hyperk\"ahler structure also tells us what should happen when we perform a rotation in the twistor sphere.  The following statement follows by identifying the holomorphic symplectic structure at $\eps$ in the twistor sphere by applying the corresponding rotation in $\SO(3)$ to the coordinates $x$, $y$ and $t$ on $\RR^3$ in the expression for the holomorphic symplectic structure at $0$.  Note that when we calculate the symplectic form as an integral as above, it's enough to take the integral over just $\RR^2 \times S^1_R$ instead of $\bb{CP}^1 \times S^1_R$.
 
-Notationally, from now on we'll write the holomorphic symplectic pairing in the abbreviated form $\kappa(A_{1,0}, \mc A') - \kappa(\mc A, A_{1,0}') = \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A)$, and we'll write $\dvol$ for the volume form $\d x \wedge \d y \wedge \d t$ on $\CC \times (0,2\pi R)\sub \bb{CP}^1 \times S^1_R$.
+Notationally, from now on we'll write the holomorphic symplectic pairing in the abbreviated form $\kappa(A_{0,1}, \mc A') - \kappa(\mc A, A_{0,1}') = \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A)$, and we'll write $\dvol$ for the volume form $\d x \wedge \d y \wedge \d t$ on $\CC \times (0,2\pi R)\sub \bb{CP}^1 \times S^1_R$.
 
 \begin{prop}
 Let $\zeta$ be a point in the twistor sphere.  The holomorphic symplectic form on the moduli space $\mon_G^{\fr}(\bb{CP}^1 \times S^1_R, D, \omega^\vee)$ of periodic monopoles is given by the formula 
@@ -1836,31 +1827,25 @@ becomes holomorphic symplectic, in the sense that the holomorphic symplectic str
 \end{theorem}
 
 \begin{proof}
-First let us note that the 3-manifolds $\bb{CP}^1 \times_\eps S^1_R$ for varying values of $R$ and $\eps$ are all canonically diffeomorphic (since there is a canonical flat connection on the $(\eps,R)$ two parameter family of lattices).  This means that we can canonically identify the moduli spaces in question as smooth manifolds.  
+First let us note that the 3-manifolds $\bb{CP}^1 \times_\eps S^1_R$ for varying values of $R$ and $\eps$ are all canonically isometric to untwisted products of the form $\bb{CP}^1 \times S^1_{R'}$.  Any two points in the $(\eps,R)$ family of 3-manifolds can therefore be identified by a canonical conformal transformation
+\[f_{(\eps,R),(\eps',R')} \colon \bb{CP}^1 \times_\eps S^1_R \to \bb{CP}^1 \times_{\eps'} S^1_{R'}\]
+This means that we can canonically smoothly identify the moduli spaces of monopoles
+\[\mon_G^{\red}(\bb{CP}^1 \times_\eps S^1_R,D,\omega^\vee) \iso \mon_G^{\red}(\bb{CP}^1 \times_{\eps'} S^1_{R'},f_{(\eps,R),(\eps',R')}(D),\omega^\vee).\]
 
-Now, according to Theorem \ref{monopole_qconn_comparison_thm} it's enough to show that the complex structure on $\mon_G^{\text{red}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ at the point $\zeta$ converges to the complex structure on the $\eps$-deformation $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_\eps S^1_R,D,\omega^\vee)$.  The key observation that we'll use is that, fixing $2 \pi \zeta R = \eps$ we can identify the rotated lattice with a \emph{sheared} lattice.  Namely, when we rotate the rank one lattice $L_{R,0} = (0,0,2\pi R)\ZZ$ by $\zeta$ we obtain the lattice
+Now, according to Theorem \ref{monopole_qconn_comparison_thm} it's enough to show that the complex structure on $\mon_G^{\text{red}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ at the point $\zeta$ converges to the complex structure on the $\eps$-deformation $\mon_G^{\red}(\bb{CP}^1 \times_\eps S^1_R,D,\omega^\vee)$.  The key observation that we'll use is that, fixing $2 \pi \zeta R = \eps$ we can identify the rotated lattice with a \emph{sheared} lattice.  Namely, when we rotate the rank one lattice $L_{R,0} = (0,0,2\pi R)\ZZ$ by $\zeta$ we obtain the lattice
 \[\zeta(L_{R,0}) = \frac {1}{1+|\zeta/2|^2} (\mr{Re}(\eps), \mr{Im}(\eps), 2\pi R (1-|\zeta/2|^2) )\ZZ.\]
 We can view the quotient of $\RR^3$ by the rotated lattice as a sheared lattice with different radius and shear.  Specifically, we identify
 \[\RR^3 / \zeta(L_{R,0}) \iso \RR^2 \times_{\frac{\eps}{1+|\zeta/2|^2}} S^1_{R \frac {1-|\zeta/2|^2}{1+|\zeta/2|^2}}.\]
 
 In order to identify the desired complex structures it's enough to identify the full family of symplectic structures on the $\eps$-deformation with the appropriately rotated family of symplectic structures without deforming.  So, if we apply the twistor rotation by $\zeta$ to the holomorphic symplectic structure $\omega_2 + i\omega_3$ on $\mon_G^{\text{red}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ (the argument will be identical for the other points in the $\bb{CP}^1$ family of holomorphic symplectic structures) we obtain the pairing
 \[\omega_\zeta(\delta^{(1)}\mc A, \delta^{(2)}\mc A) = \int_{\RR^3/(\zeta(L_{R,0}))} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol.\]
-On the other hand we can identify the holomorphic symplectic structure on $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_\eps S^1_R,D,\omega^\vee)$ as
+On the other hand we can identify the holomorphic symplectic structure on $\mon_G^{\red}(\bb{CP}^1 \times_\eps S^1_R,D,\omega^\vee)$ as
 \[\omega_\zeta(\delta^{(1)}\mc A, \delta^{(2)}\mc A) = \int_{\RR^3/(L_{R,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol.\]
-In particular, by tuning the radius and the shear parameter the above calculation means there's a hyperk\"ahler equivalence between the moduli spaces $\mon_G^{\text{red}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ -- after rotating the twistor sphere by $\zeta$ -- and $\mon_G^{\mr{ps},\fr}(\bb{CP}^1 \times_{\frac{\eps}{1+|\zeta/2|^2}} S^1_{R \frac {1-|\zeta/2|^2}{1+|\zeta/2|^2}},D,\omega^\vee)$.  
+In particular, by tuning the radius and the shear parameter the above calculation means there's a hyperk\"ahler equivalence between the moduli spaces $\mon_G^{\text{red}}(\bb{CP}^1 \times S^1_R,D,\omega^\vee)$ -- after rotating the twistor sphere by $\zeta$ -- and $\mon_G^{\red}(\bb{CP}^1 \times_{\frac{\eps}{1+|\zeta/2|^2}} S^1_{R \frac {1-|\zeta/2|^2}{1+|\zeta/2|^2}},f(D),\omega^\vee)$, where the divisors $D$ and $f(D)$ will coincide in the limit $R \to \infty$.  
 
 Now, let us consider the large $R$ limit.  We'd like to note that the following difference of symplectic pairings converges to zero pointwise as $R\to \infty$.
 \[ \left\lvert \int_{\RR^3/(L_{R \frac {1-|\zeta/2|^2}{1+|\zeta/2|^2},\frac{\eps}{1+|\zeta/2|^2}})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol - \int_{\RR^3/(L_{R,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert.\]
 Note that here we're abusing notation, and using the canonical isomorphism of moduli spaces to identify tangent vectors $\delta \mc A$ to monopoles on $\RR^3/(L_{R,\eps})$, and their images under the canonical isomorphism to the moduli space of monopoles on $\RR^3/(L_{R \frac {1-|\zeta/2|^2}{1+|\zeta/2|^2}})$.
-
-\vasily{Here $\delta^{(i)} \mathcal{A} $ are variations of the solutions to Bogomolny equations, either
-  on $\RR^3/(L_{R \frac {1-|\zeta/2|^2}{1+|\zeta/2|^2},\frac{\eps}{1+|\zeta/2|^2}})$ or on $\RR^3/(L_{R,\eps})$, or, equivalently
-  they are elements of the tangent space to the moduli space of monopoles either on
-  $\RR^3/(L_{R \frac {1-|\zeta/2|^2}{1+|\zeta/2|^2},\frac{\eps}{1+|\zeta/2|^2}})$ or on $\RR^3/(L_{R,\eps})$. 
-  How do we identify the tangent spaces to the different monopole moduli spaces? 
-  It seems we need to describe a map (an isomorphism) from a tangent space of the moduli space of monopoles on  $\RR^3/(L_{R \frac {1-|\zeta|^2}{1+|\zeta/2|^2},\frac{\eps}{1+|\zeta/2|^2}})$ to a tangent space of
-  the moduli space of monopoles  $\RR^3/(L_{R,\eps})$. What is our strategy to construct this map? 
-} \chris{added a comment above.}
 
 Rescaling the radii of the circles only rescales the pairing by an overall constant, so we can rewrite this as 
 \[ R\left\lvert \frac {1-|\zeta/2|^2}{1+|\zeta/2|^2} \int_{\RR^3/(L_{1,\frac{\eps}{1+|\zeta/2|^2}})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol - \int_{\RR^3/(L_{1,\eps})} \kappa(\delta^{(1)} \mc A, \delta^{(2)} \mc A) \dvol \right \rvert\]
@@ -2059,6 +2044,8 @@ The meromorphic functions $y_{i}(z)$ can be expressed as ratios of the form $y_{
 
 \appendix
 \section{$q$-Character Calculations for $G=\SO(8)$} \label{D4_appendix}
+
+\allowdisplaybreaks
 
 We will compute the $q$-triangulization of the $p$-twisted multiplicative Hitchin section in the example of where $G = \SO(8)$.  We label the simple roots as $\alpha_i$ with $i = 1, \dots, 4$, and we fix the Cartan matrix to be 
 \[
